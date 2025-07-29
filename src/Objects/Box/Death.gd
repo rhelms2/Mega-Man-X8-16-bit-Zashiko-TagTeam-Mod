@@ -11,13 +11,13 @@ signal death
 func should_execute() -> bool:
 	return true
 
-func _Setup() -> void:
+func _Setup() -> void :
 	collision_shape_2d.disabled = true
-	animated_sprite.modulate = Color(1,1,1,0.01)
+	animated_sprite.modulate = Color(1, 1, 1, 0.01)
 	explosion.emitting = true
 	explosion_sfx.play()
 	break_vfx.frame = 0
 	break_vfx.play()
 	remains_particles.emitting = true
-	Tools.timer(2,"queue_free",self)
+	Tools.timer(2, "queue_free", self)
 	emit_signal("death")

@@ -1,39 +1,52 @@
 extends X8OptionButton
+
+export  var legible_name: String
+export  var description: String
+
+onready var name_display: Label = $"../../Description/name"
+onready var disc_display: Label = $"../../Description/disc"
 onready var equip: AudioStreamPlayer = $"../../../equip"
+onready var unequip: AudioStreamPlayer = $"../../../unequip"
+onready var subtank_holder = get_parent()
 
 
-func setup() -> void:
+func setup() -> void :
 	if get_subtank_count() == 0:
 		visible = false
+		subtank_holder.visible = false
 	dim()
 	display()
-	material.set_shader_param("grayscale",!GameManager.equip_subtanks)
+	material.set_shader_param("grayscale", not GameManager.equip_subtanks)
 
-func on_press() -> void:
+func _on_focus_entered() -> void :
+	._on_focus_entered()
+	display_info()
+
+func on_press() -> void :
 	increase_value()
 	if GameManager.equip_subtanks:
 		equip.play()
 		strong_flash()
 	else:
-		play_sound()
+		unequip.play()
 		flash()
-	material.set_shader_param("grayscale",!GameManager.equip_subtanks)
+	material.set_shader_param("grayscale", not GameManager.equip_subtanks)
 
-func process_inputs() -> void:
+func process_inputs() -> void :
 	pass
 		
-func increase_value() -> void: #override
-	GameManager.equip_subtanks = !GameManager.equip_subtanks
+func increase_value() -> void :
+	GameManager.equip_subtanks = not GameManager.equip_subtanks
 	display()
 
-func decrease_value() -> void: #override
-	GameManager.equip_subtanks = !GameManager.equip_subtanks
+func decrease_value() -> void :
+	GameManager.equip_subtanks = not GameManager.equip_subtanks
 	display()
 
-func display() -> void:
+func display() -> void :
 	if not GameManager.equip_subtanks:
 		value.text = " "
-		self_modulate.a = .7
+		self_modulate.a = 0.7
 	else:
 		value.text = "x" + str(get_subtank_count())
 		self_modulate.a = 1
@@ -45,3 +58,6 @@ func get_subtank_count() -> int:
 			count += 1
 	return count
 
+func display_info() -> void :
+	name_display.text = tr(legible_name)
+	disc_display.text = tr(description)

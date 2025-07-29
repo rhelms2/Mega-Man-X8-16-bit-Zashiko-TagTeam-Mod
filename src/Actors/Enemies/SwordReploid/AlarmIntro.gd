@@ -1,6 +1,6 @@
 extends AttackAbility
 
-var already_executed := false
+var already_executed: = false
 onready var damage_on_touch: Node2D = $"../DamageOnTouch"
 onready var damage: Node2D = $"../Damage"
 var enemy_shield: Node2D
@@ -8,21 +8,21 @@ var enemy_shield: Node2D
 func _StartCondition() -> bool:
 	return not already_executed
 
-func _ready() -> void:
+func _ready() -> void :
 	if "ShieldReploid" in character.name:
-		enemy_shield= $"../EnemyShield"
+		enemy_shield = $"../EnemyShield"
 		
 
-func _Setup() -> void:
+func _Setup() -> void :
 	force_movement_regardless_of_direction(horizontal_velocity * character.get_direction())
-	set_vertical_speed(-jump_velocity)
+	set_vertical_speed( - jump_velocity)
 	already_executed = true
 	damage_on_touch.active = false
 	damage.active = false
 	if "ShieldReploid" in character.name:
 		enemy_shield.active = false
 
-func _Update(delta) -> void:
+func _Update(delta: float) -> void :
 	process_gravity(delta)
 	if attack_stage == 0 and timer > 0.35:
 		activate_receive_damage()
@@ -36,17 +36,17 @@ func _Update(delta) -> void:
 	elif attack_stage == 2 and has_finished_last_animation():
 		EndAbility()
 
-func activate_damage() -> void:
+func activate_damage() -> void :
 	damage_on_touch.active = true
 
-func activate_receive_damage() -> void:
+func activate_receive_damage() -> void :
 	damage.active = true
 
-func activate_shield() -> void:
+func activate_shield() -> void :
 	if "ShieldReploid" in character.name:
 		enemy_shield.active = true
 
-func _Interrupt() -> void:
+func _Interrupt() -> void :
 	activate_damage()
 	activate_receive_damage()
 	activate_shield()

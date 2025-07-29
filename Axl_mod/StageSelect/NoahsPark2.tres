@@ -1,0 +1,16 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://src/Actors/Bosses/BossIntro/StageInfo.gd" type="Script" id=1]
+[ext_resource path="res://Axl_mod/StageSelect/preview/noahspark.png" type="Texture" id=2]
+
+[resource]
+script = ExtResource( 1 )
+save_flag = "noahspark"
+beaten_condition = [  ]
+pointer_position = Vector2( -100, 300 )
+should_play_intro = false
+name_id = "NOAHSPARK"
+collectibles = [ "finished_intro", "k_knuckle_zero" ]
+preview = ExtResource( 2 )
+animation_beats = [  ]
+inverse_sprites = false

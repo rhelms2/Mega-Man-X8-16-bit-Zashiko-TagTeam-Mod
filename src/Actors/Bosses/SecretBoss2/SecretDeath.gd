@@ -33,8 +33,9 @@ signal screen_flash
 signal true_death
 
 func true_end():
+	GlobalVariables.set("serenade_defeated", true)
 	GameManager.start_cutscene()
-	Tools.timer(.25,"turn_player_towards_boss",self)
+	Tools.timer(0.25, "turn_player_towards_boss", self)
 	smoke.emitting = true
 	explosions.emitting = true
 	final_explosion.play()
@@ -42,12 +43,11 @@ func true_end():
 	Tools.timer(2,"set_weak_light",self)
 	golden_particles_2.emitting = false
 	emit_signal("true_death")
-	pass
-	
-func _ready() -> void:
-	get_parent().listen("zero_health",self,"start_death")
-	reset_shader()
 
+func _ready() -> void :
+	dialogue = CharacterManager._set_correct_dialogues("Secret2Defeated", dialogue)
+	get_parent().listen("zero_health", self, "start_death")
+	reset_shader()
 
 func start_death():
 	character.interrupt_all_moves()
@@ -70,11 +70,11 @@ func _Setup():
 	blink()
 	GameManager.pause(character.name + name)
 	if first_death:
-		Tools.timer(0.5,"unpause",self,null,true)
+		Tools.timer(0.5, "unpause", self, null, true)
 	else:
 		break_vfx.visible = true
 		break_vfx.playing = true
-		Tools.timer(1.25,"unpause",self,null,true)
+		Tools.timer(1.25, "unpause", self, null, true)
 	
 func unpause():
 	GameManager.unpause(character.name + name)
@@ -103,9 +103,9 @@ func _Update(delta):
 		play_animation("lotus_start")
 		golden_particles.emitting = true
 		screenshake()
-		Tools.timer(1,"screenshake",self)
-		Tools.timer(2,"screenshake",self)
-		Tools.timer(3,"screenshake",self)
+		Tools.timer(1, "screenshake", self)
+		Tools.timer(2, "screenshake", self)
+		Tools.timer(3, "screenshake", self)
 		vfx.activate()
 		set_vertical_speed(-30)
 		desperation.play()
@@ -178,8 +178,8 @@ func _Update(delta):
 func start_holy_death():
 	holy_death = _holy_death.instance()
 	character.get_parent().add_child(holy_death)
-	Tools.timer(0.1,"activate",holy_death)
-	idle.connect("started",holy_death,"activate")
+	Tools.timer(0.1, "activate", holy_death)
+	idle.connect("started", holy_death, "activate")
 	
 func end_holy_death():
 	holy_death.deactivate()
@@ -215,17 +215,17 @@ func end():
 	Tools.timer_p(1,"go_to_attack_stage",self,9)
 	#go_to_attack_stage(9)
 
-func set_light_alpha(value : float):
-	light.material.set_shader_param("Alpha",value)
+func set_light_alpha(value: float):
+	light.material.set_shader_param("Alpha", value)
 
-func set_light_color(value : float):
-	light.material.set_shader_param("Color",value)
+func set_light_color(value: float):
+	light.material.set_shader_param("Color", value)
 	
-func set_darken(value : float):
-	animatedSprite.material.set_shader_param("Darken",value)
+func set_darken(value: float):
+	animatedSprite.material.set_shader_param("Darken", value)
 
 
-func start_dialog_or_go_to_attack_stage(skip_dialog_stage := 0) -> void:
+func start_dialog_or_go_to_attack_stage(skip_dialog_stage: = 0) -> void :
 	if not seen_dialog():
 		GameManager.start_dialog(dialogue)
 		next_attack_stage()

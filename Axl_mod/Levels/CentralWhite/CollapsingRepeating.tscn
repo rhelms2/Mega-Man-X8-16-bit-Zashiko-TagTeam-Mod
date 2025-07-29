@@ -1,0 +1,149 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://src/Effects/Materials/SonicWave.tres" type="Material" id=1]
+[ext_resource path="res://src/Levels/CentralWhite/SinkStarter.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Enemies/BikeReploid/BikeReploid.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Actors/Enemies/MantaRay/MantaRay.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Levels/Test/test_tileset.tres" type="TileSet" id=5]
+[ext_resource path="res://src/Levels/CentralWhite/Infinite Deathplane.gd" type="Script" id=6]
+[ext_resource path="res://src/Levels/CentralWhite/RepeatingIce.gd" type="Script" id=7]
+[ext_resource path="res://src/Levels/CentralWhite/SinkingIce.gd" type="Script" id=8]
+[ext_resource path="res://src/Sounds/FX - Splash.ogg" type="AudioStream" id=9]
+[ext_resource path="res://src/Effects/Textures/splash.res" type="SpriteFrames" id=10]
+[ext_resource path="res://src/Levels/NoahsPark/NoahsPark.tsx" type="TileSet" id=11]
+[ext_resource path="res://src/Effects/Textures/sonic_wave.png" type="Texture" id=12]
+[ext_resource path="res://src/Levels/CentralWhite/tileset_centralwhite.tsx" type="TileSet" id=13]
+[ext_resource path="res://src/Levels/CentralWhite/SonicWater.gd" type="Script" id=14]
+
+[sub_resource type="RectangleShape2D" id=77]
+extents = Vector2( 435.267, 10 )
+
+[sub_resource type="OpenSimplexNoise" id=73]
+
+[sub_resource type="NoiseTexture" id=74]
+width = 364
+height = 174
+seamless = true
+noise = SubResource( 73 )
+
+[sub_resource type="CanvasItemMaterial" id=78]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 3
+particles_anim_loop = false
+
+[node name="CollapsingRepeating" type="Node2D"]
+position = Vector2( 11472, -206 )
+script = ExtResource( 7 )
+
+[node name="SinkStarter" type="Area2D" parent="."]
+position = Vector2( 738, -306 )
+rotation = -1.0472
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 2 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="SinkStarter"]
+shape = SubResource( 77 )
+
+[node name="Pool" type="Node2D" parent="."]
+position = Vector2( 539, 0 )
+
+[node name="Ice" type="TileMap" parent="Pool"]
+tile_set = ExtResource( 13 )
+cell_size = Vector2( 16, 16 )
+collision_layer = 512
+collision_mask = 512
+format = 1
+tile_data = PoolIntArray( -65536, 652, 0, -65535, 655, 0, -65534, 656, 0, -65533, 657, 0, 0, 684, 0, 1, 687, 0, 2, 688, 0, 3, 689, 0, 65536, 716, 0, 65537, 717, 0, 65538, 720, 0, 65539, 721, 0, 131072, 748, 0, 131073, 749, 0, 131074, 752, 0, 131075, 753, 0 )
+script = ExtResource( 8 )
+biker = ExtResource( 3 )
+
+[node name="water" type="TileMap" parent="Pool/Ice"]
+physics_interpolation_mode = 1
+visible = false
+position = Vector2( -763, -429 )
+z_index = 20
+tile_set = ExtResource( 11 )
+cell_size = Vector2( 16, 16 )
+compatibility_mode = true
+collision_layer = 0
+collision_mask = 0
+format = 1
+tile_data = PoolIntArray( 1769519, 477, 0, 1769520, 536871390, 0, 1769521, 478, 0, 1769522, 478, 0, 1769523, 478, 0, 1769524, 536871390, 0, 1769525, 478, 0, 1769526, 478, 0, 1769527, 536871390, 0, 1769528, 479, 0, 1835055, 509, 0, 1835056, 510, 0, 1835057, 510, 0, 1835058, 510, 0, 1835059, 510, 0, 1835060, 510, 0, 1835061, 510, 0, 1835062, 510, 0, 1835063, 510, 0, 1835064, 511, 0, 1900591, 541, 0, 1900592, 542, 0, 1900593, 542, 0, 1900594, 542, 0, 1900595, 542, 0, 1900596, 542, 0, 1900597, 542, 0, 1900598, 542, 0, 1900599, 542, 0, 1900600, 543, 0 )
+
+[node name="rigidBody2D" type="RigidBody2D" parent="Pool/Ice"]
+mode = 1
+
+[node name="collisionPolygon2D" type="CollisionPolygon2D" parent="Pool/Ice/rigidBody2D"]
+position = Vector2( 16, 2 )
+scale = Vector2( 2, 1 )
+z_index = 9
+polygon = PoolVector2Array( 55.5, 158, -8, 157, -8, 8, 24, -2, 56, -2 )
+
+[node name="splash2" type="AnimatedSprite" parent="Pool/Ice"]
+position = Vector2( 64, 21 )
+frames = ExtResource( 10 )
+frame = 23
+playing = true
+flip_h = true
+
+[node name="Infinite Deathplane" type="Node2D" parent="."]
+position = Vector2( -95, 57 )
+script = ExtResource( 6 )
+
+[node name="splashaudio" type="AudioStreamPlayer2D" parent="Infinite Deathplane"]
+position = Vector2( -5989, -116 )
+stream = ExtResource( 9 )
+volume_db = -4.0
+pitch_scale = 0.45
+bus = "SFX"
+
+[node name="splash" type="AnimatedSprite" parent="Infinite Deathplane"]
+position = Vector2( -5989, -116 )
+frames = ExtResource( 10 )
+frame = 22
+
+[node name="splash2" type="AnimatedSprite" parent="Infinite Deathplane"]
+position = Vector2( -5989, -116 )
+frames = ExtResource( 10 )
+frame = 22
+flip_h = true
+
+[node name="Boss" type="Sprite" parent="."]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 765, -100 )
+texture = SubResource( 74 )
+
+[node name="MantaRay" parent="Boss" instance=ExtResource( 4 )]
+position = Vector2( -383, 0 )
+spawn_direction = 1
+
+[node name="SonicWaves" type="Particles2D" parent="Boss"]
+modulate = Color( 1, 1, 1, 0.709804 )
+material = SubResource( 78 )
+position = Vector2( -431, 121 )
+z_index = 10
+z_as_relative = false
+amount = 18
+lifetime = 1.6
+visibility_rect = Rect2( -1600, -100, 2000, 200 )
+local_coords = false
+process_material = ExtResource( 1 )
+texture = ExtResource( 12 )
+script = ExtResource( 14 )
+
+[node name="UnclimbableWalls" type="TileMap" parent="Boss"]
+visible = false
+modulate = Color( 1, 0, 0, 1 )
+position = Vector2( 357, 100 )
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 16, 16 )
+collision_layer = 256
+collision_mask = 256
+format = 1
+tile_data = PoolIntArray( -4587520, 7, 0, -4521984, 7, 0, -4456448, 7, 0, -4390912, 7, 0, -4325376, 7, 0, -4259840, 7, 0, -4194304, 7, 0, -4128768, 7, 0, -4063232, 7, 0, -3997696, 7, 0, -3932160, 7, 0, -3866624, 7, 0, -3801088, 7, 0, -3735552, 7, 0, -3670016, 7, 0, -3604480, 7, 0, -3538944, 7, 0, -3473408, 7, 0, -3407872, 7, 0, -3342336, 7, 0, -3276800, 7, 0, -3211264, 7, 0, -3145728, 7, 0, -3080192, 7, 0, -3014656, 7, 0, -2949120, 7, 0, -2883584, 7, 0, -2818048, 7, 0, -2752512, 7, 0, -2686976, 7, 0, -2621440, 7, 0, -2555904, 7, 0, -2490368, 7, 0, -2424832, 7, 0, -2359296, 7, 0, -2293760, 7, 0, -2228224, 7, 0, -2162688, 7, 0, -2097152, 7, 0, -2031616, 7, 0, -1966080, 7, 0, -1900544, 7, 0, -1835008, 7, 0, -1769472, 7, 0, -1703936, 7, 0, -1638400, 7, 0, -1572864, 7, 0, -1507328, 7, 0, -1441792, 7, 0, -1376256, 7, 0, -1310720, 7, 0, -1245184, 7, 0, -1179648, 7, 0, -1114112, 7, 0, -1048576, 7, 0, -983040, 7, 0, -917504, 7, 0, -851968, 7, 0, -786432, 7, 0, -720896, 7, 0, -655360, 7, 0, -589824, 7, 0, -524288, 7, 0, -458752, 7, 0, -393216, 7, 0, -327680, 7, 0, -262144, 7, 0, -196608, 7, 0, -131072, 7, 0, -65536, 7, 0, 0, 7, 0, 65536, 7, 0, 131072, 7, 0, 196608, 7, 0 )
+
+[connection signal="body_entered" from="SinkStarter" to="SinkStarter" method="_on_SinkStarter_body_entered"]
+[connection signal="spawned" from="Boss/MantaRay" to="." method="add_spawn_to_list"]
+[connection signal="zero_health" from="Boss/MantaRay" to="." method="_on_MantaRay_zero_health"]

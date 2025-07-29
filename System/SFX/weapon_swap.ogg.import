@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/weapon_swap.ogg-8562362b3f7ddd0efcf7c8941afb1d00.oggstr"
+
+[deps]
+
+source_file="res://System/SFX/weapon_swap.ogg"
+dest_files=[ "res://.import/weapon_swap.ogg-8562362b3f7ddd0efcf7c8941afb1d00.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

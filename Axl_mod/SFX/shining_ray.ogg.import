@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/shining_ray.ogg-2211d608403c72e2f777b0149dc7ac0c.oggstr"
+
+[deps]
+
+source_file="res://Axl_mod/SFX/shining_ray.ogg"
+dest_files=[ "res://.import/shining_ray.ogg-2211d608403c72e2f777b0149dc7ac0c.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

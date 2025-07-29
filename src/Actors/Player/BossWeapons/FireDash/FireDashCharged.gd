@@ -10,24 +10,24 @@ onready var wallhit: AudioStreamPlayer2D = $wallhit
 
 signal wallhit(side)
 
-func _Update(_delta) -> void:
+func _Update(_delta: float) -> void :
 	set_visual_direction()
 	if ending and timer > 1:
 		finish()
 	else:
 		signal_collisions()
 	
-func signal_collisions() -> void:
+func signal_collisions() -> void :
 	for check in wallchecks:
 		if check.is_colliding():
-			emit_signal("wallhit",check.name.trim_prefix("wallCheck_"))
+			emit_signal("wallhit", check.name.trim_prefix("wallCheck_"))
 			return
 
-func explode() -> void:
+func explode() -> void :
 	fire.restart()
 	fire.emitting = true
 	explosion.restart()
 	explosion.emitting = true
 	wallhit.play()
-	wallhit.pitch_scale += .12
-	Event.emit_signal("screenshake",0.7)
+	wallhit.pitch_scale += 0.12
+	Event.emit_signal("screenshake", 0.7)

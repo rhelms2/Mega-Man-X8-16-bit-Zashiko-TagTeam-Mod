@@ -43,7 +43,7 @@ script = ExtResource( 1 )
 [node name="animatedSprite" type="AnimatedSprite" parent="."]
 pause_mode = 2
 frames = SubResource( 6 )
-frame = 4
+frame = 1
 playing = true
 
 [node name="area2D" type="Area2D" parent="."]

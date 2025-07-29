@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/WeaponGet/lines.gd" type="Script" id=1]
+[ext_resource path="res://src/WeaponGet/Line.gd" type="Script" id=2]
+
+[node name="LineBackground" type="Node2D"]
+position = Vector2( 199, 112 )
+script = ExtResource( 1 )
+initial_color = Color( 0.0431373, 0.00784314, 0.447059, 1 )
+middle_color = Color( 1, 0.988235, 0.858824, 1 )
+middle_color2 = Color( 0.862745, 0.466667, 0.0431373, 1 )
+final_color = Color( 0.658824, 0.0823529, 0.0666667, 0 )
+
+[node name="HLine" type="Line2D" parent="."]
+position = Vector2( -200, -339 )
+points = PoolVector2Array( -256, 0, 654, 0 )
+width = 0.5
+default_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 2 )
+
+[node name="VLine" type="Line2D" parent="."]
+position = Vector2( -418, -114.5 )
+points = PoolVector2Array( 0, -256, 0, 480 )
+width = 0.5
+default_color = Color( 1, 1, 1, 1 )
+script = ExtResource( 2 )

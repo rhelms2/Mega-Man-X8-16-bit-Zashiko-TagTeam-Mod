@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/blast_launcher.ogg-89778d375c76e45eeafed847b52d0bdb.oggstr"
+
+[deps]
+
+source_file="res://Axl_mod/SFX/blast_launcher.ogg"
+dest_files=[ "res://.import/blast_launcher.ogg-89778d375c76e45eeafed847b52d0bdb.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

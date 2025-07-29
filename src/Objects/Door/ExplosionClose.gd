@@ -1,21 +1,22 @@
 extends Area2D
 
-var fired_signal := false
+var fired_signal: = false
 onready var door: = $".."
 
 signal player_enter
 
-func activate(_d) -> void:
+func activate(_d) -> void :
 	var boss_spawner = door.get_node_or_null(door.boss_spawner)
 	if boss_spawner and boss_spawner.active:
-		print_debug(get_parent().name + ".ExplosionCloser: Activated")
+		
 		monitoring = true
 	else:
-		print_debug(get_parent().name + ".ExplosionCloser: Inactive due to boss_spawner not activated")
+		pass
+		
 	
 
 
-func _on_area2D_body_entered(body: Node) -> void:
+func _on_area2D_body_entered(body: Node) -> void :
 	if not fired_signal and body.is_in_group("Player"):
 		emit_signal("player_enter")
 		fired_signal = true

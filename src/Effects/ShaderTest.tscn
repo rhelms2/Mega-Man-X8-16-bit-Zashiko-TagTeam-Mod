@@ -2,7 +2,7 @@
 
 [ext_resource path="res://src/Actors/Player/x_sprites/x.png" type="Texture" id=1]
 [ext_resource path="res://src/Actors/recolor_shader.tres" type="Shader" id=2]
-[ext_resource path="res://src/Actors/charge_shader.tres" type="Shader" id=3]
+[ext_resource path="res://src/Actors/Player/charge_shader.tres" type="Shader" id=3]
 
 [sub_resource type="ShaderMaterial" id=1]
 shader = ExtResource( 2 )

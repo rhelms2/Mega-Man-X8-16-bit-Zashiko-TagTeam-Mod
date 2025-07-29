@@ -1,5 +1,5 @@
-extends "res://src/Actors/Bosses/Vile/VileMissiles.gd"
+extends VileShot
 
 
-func _ready() -> void:
+func _ready() -> void :
 	pass

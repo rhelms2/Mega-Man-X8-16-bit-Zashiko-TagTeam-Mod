@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Boss Battle - Loop.ogg-0a0274281515acd70b5fb840e2534da3.oggstr"
+
+[deps]
+
+source_file="res://Remix/Songs/Boss Battle - Loop.ogg"
+dest_files=[ "res://.import/Boss Battle - Loop.ogg-0a0274281515acd70b5fb840e2534da3.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

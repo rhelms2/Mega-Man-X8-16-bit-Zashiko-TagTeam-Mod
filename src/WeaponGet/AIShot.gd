@@ -1,6 +1,6 @@
 extends PrimaryShot
 
-#Overriding action listeners for method that does not give bugs when moving window
+
 func get_action_just_pressed(_element) -> bool:
 	if just_pressed:
 		just_pressed = false
@@ -17,16 +17,12 @@ func set_current_weapon(weapon):
 	Log("Changed Weapon to " + current_weapon.name)
 	Event.emit_signal("changed_weapon", current_weapon)
 	next_shot_ready = false
-	
-	#if current_weapon.name == "FireDash":
-	#	$"../Damage".activate()
-	#	pass
 
-var just_pressed := false
-var just_released := false
-var pressed := false
+var just_pressed: = false
+var just_released: = false
+var pressed: = false
 
-func _input(event: InputEvent) -> void:
+func _input(event: InputEvent) -> void :
 	if event.is_action_pressed("fire_emulated"):
 		just_pressed = true
 		pressed = true

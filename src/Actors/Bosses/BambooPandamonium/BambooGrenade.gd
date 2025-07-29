@@ -1,4 +1,5 @@
 extends GenericProjectile
+class_name BambooGrenade
 
 export var blast_area : PackedScene
 

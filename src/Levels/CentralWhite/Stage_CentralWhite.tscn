@@ -1,7 +1,7 @@
-[gd_scene load_steps=127 format=2]
+[gd_scene load_steps=102 format=2]
 
 [ext_resource path="res://src/Levels/CentralWhite/Music Player.gd" type="Script" id=1]
-[ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://System/Character_Spawner.gd" type="Script" id=2]
 [ext_resource path="res://src/System/StateCamera.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/HUD/Hud.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Sounds/OST - AngryBoss - Intro.ogg" type="AudioStream" id=5]
@@ -20,33 +20,21 @@
 [ext_resource path="res://src/Levels/CentralWhite/new_parallax_1.png" type="Texture" id=18]
 [ext_resource path="res://src/Levels/CentralWhite/parallax_3.png" type="Texture" id=19]
 [ext_resource path="res://src/Levels/CentralWhite/new_parallax_4.png" type="Texture" id=20]
-[ext_resource path="res://src/Levels/CentralWhite/RepeatingIce.gd" type="Script" id=21]
-[ext_resource path="res://src/Levels/CentralWhite/SinkingIce.gd" type="Script" id=22]
+[ext_resource path="res://Axl_mod/Enemies/SnowThrower/SnowThrower.tscn" type="PackedScene" id=21]
 [ext_resource path="res://src/Effects/Textures/small_snow.png" type="Texture" id=23]
 [ext_resource path="res://src/Levels/CentralWhite/map_5.tscn" type="PackedScene" id=24]
-[ext_resource path="res://src/Levels/CentralWhite/Infinite Deathplane.gd" type="Script" id=25]
-[ext_resource path="res://src/Effects/Textures/splash.res" type="SpriteFrames" id=26]
 [ext_resource path="res://src/Objects/Door/NewBossDoor.tscn" type="PackedScene" id=27]
-[ext_resource path="res://src/Levels/NoahsPark/NoahsPark.tsx" type="TileSet" id=28]
 [ext_resource path="res://src/Levels/CentralWhite/map_1.tscn" type="PackedScene" id=29]
-[ext_resource path="res://src/Sounds/FX - Splash.ogg" type="AudioStream" id=30]
 [ext_resource path="res://src/System/CameraLimits.gd" type="Script" id=31]
-[ext_resource path="res://src/Actors/Enemies/MantaRay/MantaRay.tscn" type="PackedScene" id=32]
-[ext_resource path="res://src/Effects/Textures/blue_screen.png" type="Texture" id=33]
-[ext_resource path="res://src/Levels/CentralWhite/teleport_light.gd" type="Script" id=34]
-[ext_resource path="res://src/Levels/CentralWhite/SinkStarter.gd" type="Script" id=35]
 [ext_resource path="res://src/Sounds/OST - MiniBoss - Loop.ogg" type="AudioStream" id=36]
 [ext_resource path="res://src/Sounds/OST - MiniBoss - Intro.ogg" type="AudioStream" id=37]
 [ext_resource path="res://src/Levels/CentralWhite/_cache_centralwhite.tscn" type="PackedScene" id=38]
-[ext_resource path="res://src/Effects/Materials/SonicWave.tres" type="Material" id=39]
-[ext_resource path="res://src/Effects/Textures/sonic_wave.png" type="Texture" id=40]
-[ext_resource path="res://src/Actors/Spawner.tscn" type="PackedScene" id=41]
+[ext_resource path="res://src/Actors/Spawners/Spawner.tscn" type="PackedScene" id=41]
 [ext_resource path="res://src/Objects/Door/CameraTranslator.gd" type="Script" id=42]
-[ext_resource path="res://src/Actors/Bosses/Yeti.tscn" type="PackedScene" id=43]
+[ext_resource path="res://src/Actors/Bosses/AvalancheYeti/Yeti.tscn" type="PackedScene" id=43]
 [ext_resource path="res://src/Objects/Pickups/SubTank.tscn" type="PackedScene" id=44]
 [ext_resource path="res://src/DialogSystem/Dialogs/Capsules/HermesHead.tres" type="Resource" id=45]
 [ext_resource path="res://src/Objects/Light Capsule/LightCapsule.tscn" type="PackedScene" id=46]
-[ext_resource path="res://src/Levels/CentralWhite/SonicWater.gd" type="Script" id=47]
 [ext_resource path="res://src/HUD/intro_text.gd" type="Script" id=48]
 [ext_resource path="res://src/Objects/Door/NewDoor.tscn" type="PackedScene" id=49]
 [ext_resource path="res://src/Levels/Checkpoint.tscn" type="PackedScene" id=50]
@@ -58,7 +46,6 @@
 [ext_resource path="res://src/Actors/Enemies/Servbot/Servbot.tscn" type="PackedScene" id=56]
 [ext_resource path="res://src/Actors/Enemies/Drone/Drone.tscn" type="PackedScene" id=57]
 [ext_resource path="res://src/Actors/Enemies/Conjuntivite/Conjuntivite.tscn" type="PackedScene" id=58]
-[ext_resource path="res://src/Actors/Enemies/Throwers/BaseThrower.tscn" type="PackedScene" id=59]
 [ext_resource path="res://src/Levels/CentralWhite/WaterParallaxCreator.gd" type="Script" id=60]
 [ext_resource path="res://src/Levels/CentralWhite/water_parallax_new.png" type="Texture" id=61]
 [ext_resource path="res://src/Levels/CentralWhite/new_parallax_3.png" type="Texture" id=62]
@@ -85,7 +72,6 @@
 [ext_resource path="res://src/Levels/Primrose/portal.png" type="Texture" id=83]
 [ext_resource path="res://src/Levels/Primrose/portal_deactivated.png" type="Texture" id=84]
 [ext_resource path="res://src/Levels/Gateway/Portal.tscn" type="PackedScene" id=85]
-[ext_resource path="res://src/Levels/IGTimer.tscn" type="PackedScene" id=86]
 
 [sub_resource type="CanvasItemMaterial" id=94]
 particles_animation = true
@@ -124,105 +110,6 @@ angle_random = 1.0
 scale = 0.5
 scale_curve = SubResource( 99 )
 color_ramp = SubResource( 98 )
-
-[sub_resource type="VisualShaderNodeTexture" id=20]
-source = 2
-
-[sub_resource type="VisualShaderNodeVectorOp" id=21]
-
-[sub_resource type="VisualShaderNodeScalarUniform" id=22]
-uniform_name = "Color"
-
-[sub_resource type="VisualShaderNodeScalarOp" id=11]
-operator = 2
-
-[sub_resource type="VisualShaderNodeScalarUniform" id=23]
-uniform_name = "Alpha"
-
-[sub_resource type="VisualShader" id=24]
-code = "shader_type canvas_item;
-render_mode blend_add;
-
-uniform float Color;
-uniform float Alpha;
-
-
-
-void vertex() {
-// Output:0
-
-}
-
-void fragment() {
-// ScalarUniform:4
-	float n_out4p0 = Color;
-
-// Texture:2
-	vec3 n_out2p0;
-	float n_out2p1;
-	{
-		vec4 _tex_read = texture(TEXTURE , UV.xy);
-		n_out2p0 = _tex_read.rgb;
-		n_out2p1 = _tex_read.a;
-	}
-
-// VectorOp:3
-	vec3 n_out3p0 = vec3(n_out4p0) + n_out2p0;
-
-// ScalarUniform:6
-	float n_out6p0 = Alpha;
-
-// ScalarOp:5
-	float n_out5p0 = n_out2p1 * n_out6p0;
-
-// Output:0
-	COLOR.rgb = n_out3p0;
-	COLOR.a = n_out5p0;
-
-}
-
-void light() {
-// Output:0
-
-}
-"
-graph_offset = Vector2( -350.55, -59.4587 )
-mode = 1
-modes/blend = 1
-flags/light_only = false
-nodes/fragment/2/node = SubResource( 20 )
-nodes/fragment/2/position = Vector2( -60, 120 )
-nodes/fragment/3/node = SubResource( 21 )
-nodes/fragment/3/position = Vector2( 180, 60 )
-nodes/fragment/4/node = SubResource( 22 )
-nodes/fragment/4/position = Vector2( -60, 20 )
-nodes/fragment/5/node = SubResource( 11 )
-nodes/fragment/5/position = Vector2( 200, 200 )
-nodes/fragment/6/node = SubResource( 23 )
-nodes/fragment/6/position = Vector2( -100, 300 )
-nodes/fragment/connections = PoolIntArray( 2, 0, 3, 1, 3, 0, 0, 0, 4, 0, 3, 0, 6, 0, 5, 1, 2, 1, 5, 0, 5, 0, 0, 1 )
-
-[sub_resource type="ShaderMaterial" id=76]
-shader = SubResource( 24 )
-shader_param/Color = 1.0
-shader_param/Alpha = 0.0
-
-[sub_resource type="RectangleShape2D" id=77]
-extents = Vector2( 435.267, 10 )
-
-[sub_resource type="OpenSimplexNoise" id=73]
-
-[sub_resource type="NoiseTexture" id=74]
-width = 364
-height = 174
-seamless = true
-noise = SubResource( 73 )
-
-[sub_resource type="CanvasItemMaterial" id=78]
-particles_animation = true
-particles_anim_h_frames = 4
-particles_anim_v_frames = 3
-particles_anim_loop = false
 
 [sub_resource type="RectangleShape2D" id=87]
 extents = Vector2( 78, 85 )
@@ -310,6 +197,7 @@ extents = Vector2( 610, 151.5 )
 extents = Vector2( 197.5, 112 )
 
 [node name="CentralWhite" type="Node2D"]
+script = ExtResource( 2 )
 
 [node name="Hud" parent="." instance=ExtResource( 4 )]
 
@@ -356,17 +244,11 @@ stream = ExtResource( 71 )
 volume_db = -10.0
 bus = "SFX"
 
-[node name="X" parent="." instance=ExtResource( 2 )]
-visible = false
+[node name="CharacterPosition" type="Position2D" parent="."]
 position = Vector2( 199, 199 )
 
-[node name="teleport_light" type="Sprite" parent="X"]
-material = SubResource( 76 )
-scale = Vector2( 200, 100 )
-z_index = 100
-z_as_relative = false
-texture = ExtResource( 33 )
-script = ExtResource( 34 )
+[node name="CharacterPosition2" type="Position2D" parent="."]
+position = Vector2( 11282, -565 )
 
 [node name="Scenery" type="Node" parent="."]
 
@@ -485,118 +367,6 @@ motion_mirroring = Vector2( 960, 0 )
 texture = ExtResource( 18 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 960, 41 )
-
-[node name="CollapsingRepeating" type="Node2D" parent="Scenery"]
-position = Vector2( 11472, -206 )
-script = ExtResource( 21 )
-
-[node name="SinkStarter" type="Area2D" parent="Scenery/CollapsingRepeating"]
-position = Vector2( 738, -306 )
-rotation = -1.0472
-collision_layer = 0
-collision_mask = 2
-script = ExtResource( 35 )
-
-[node name="collisionShape2D" type="CollisionShape2D" parent="Scenery/CollapsingRepeating/SinkStarter"]
-shape = SubResource( 77 )
-
-[node name="Pool" type="Node2D" parent="Scenery/CollapsingRepeating"]
-position = Vector2( 539, 0 )
-
-[node name="Ice" type="TileMap" parent="Scenery/CollapsingRepeating/Pool"]
-tile_set = ExtResource( 67 )
-cell_size = Vector2( 16, 16 )
-collision_layer = 512
-collision_mask = 512
-format = 1
-tile_data = PoolIntArray( -65536, 652, 0, -65535, 655, 0, -65534, 656, 0, -65533, 657, 0, 0, 684, 0, 1, 687, 0, 2, 688, 0, 3, 689, 0, 65536, 716, 0, 65537, 717, 0, 65538, 720, 0, 65539, 721, 0, 131072, 748, 0, 131073, 749, 0, 131074, 752, 0, 131075, 753, 0 )
-script = ExtResource( 22 )
-biker = ExtResource( 66 )
-
-[node name="water" type="TileMap" parent="Scenery/CollapsingRepeating/Pool/Ice"]
-physics_interpolation_mode = 1
-visible = false
-position = Vector2( -763, -429 )
-z_index = 20
-tile_set = ExtResource( 28 )
-cell_size = Vector2( 16, 16 )
-compatibility_mode = true
-collision_layer = 0
-collision_mask = 0
-format = 1
-tile_data = PoolIntArray( 1769519, 477, 0, 1769520, 536871390, 0, 1769521, 478, 0, 1769522, 478, 0, 1769523, 478, 0, 1769524, 536871390, 0, 1769525, 478, 0, 1769526, 478, 0, 1769527, 536871390, 0, 1769528, 479, 0, 1835055, 509, 0, 1835056, 510, 0, 1835057, 510, 0, 1835058, 510, 0, 1835059, 510, 0, 1835060, 510, 0, 1835061, 510, 0, 1835062, 510, 0, 1835063, 510, 0, 1835064, 511, 0, 1900591, 541, 0, 1900592, 542, 0, 1900593, 542, 0, 1900594, 542, 0, 1900595, 542, 0, 1900596, 542, 0, 1900597, 542, 0, 1900598, 542, 0, 1900599, 542, 0, 1900600, 543, 0 )
-
-[node name="rigidBody2D" type="RigidBody2D" parent="Scenery/CollapsingRepeating/Pool/Ice"]
-mode = 1
-
-[node name="collisionPolygon2D" type="CollisionPolygon2D" parent="Scenery/CollapsingRepeating/Pool/Ice/rigidBody2D"]
-position = Vector2( 16, 2 )
-scale = Vector2( 2, 1 )
-z_index = 9
-polygon = PoolVector2Array( 55.5, 158, -8, 157, -8, 8, 24, -2, 56, -2 )
-
-[node name="splash2" type="AnimatedSprite" parent="Scenery/CollapsingRepeating/Pool/Ice"]
-position = Vector2( 64, 21 )
-frames = ExtResource( 26 )
-frame = 23
-playing = true
-flip_h = true
-
-[node name="Infinite Deathplane" type="Node2D" parent="Scenery/CollapsingRepeating"]
-position = Vector2( -95, 57 )
-script = ExtResource( 25 )
-
-[node name="splashaudio" type="AudioStreamPlayer2D" parent="Scenery/CollapsingRepeating/Infinite Deathplane"]
-position = Vector2( -5989, -116 )
-stream = ExtResource( 30 )
-volume_db = -4.0
-pitch_scale = 0.45
-bus = "SFX"
-
-[node name="splash" type="AnimatedSprite" parent="Scenery/CollapsingRepeating/Infinite Deathplane"]
-position = Vector2( -5989, -116 )
-frames = ExtResource( 26 )
-frame = 22
-
-[node name="splash2" type="AnimatedSprite" parent="Scenery/CollapsingRepeating/Infinite Deathplane"]
-position = Vector2( -5989, -116 )
-frames = ExtResource( 26 )
-frame = 22
-flip_h = true
-
-[node name="Boss" type="Sprite" parent="Scenery/CollapsingRepeating"]
-self_modulate = Color( 1, 1, 1, 0 )
-position = Vector2( 765, -100 )
-texture = SubResource( 74 )
-
-[node name="MantaRay" parent="Scenery/CollapsingRepeating/Boss" instance=ExtResource( 32 )]
-position = Vector2( -383, 0 )
-spawn_direction = 1
-
-[node name="SonicWaves" type="Particles2D" parent="Scenery/CollapsingRepeating/Boss"]
-modulate = Color( 1, 1, 1, 0.709804 )
-material = SubResource( 78 )
-position = Vector2( -431, 121 )
-z_index = 10
-z_as_relative = false
-amount = 18
-lifetime = 1.6
-visibility_rect = Rect2( -1600, -100, 2000, 200 )
-local_coords = false
-process_material = ExtResource( 39 )
-texture = ExtResource( 40 )
-script = ExtResource( 47 )
-
-[node name="UnclimbableWalls" type="TileMap" parent="Scenery/CollapsingRepeating/Boss"]
-visible = false
-modulate = Color( 1, 0, 0, 1 )
-position = Vector2( 357, 100 )
-tile_set = ExtResource( 11 )
-cell_size = Vector2( 16, 16 )
-collision_layer = 256
-collision_mask = 256
-format = 1
-tile_data = PoolIntArray( -4587520, 7, 0, -4521984, 7, 0, -4456448, 7, 0, -4390912, 7, 0, -4325376, 7, 0, -4259840, 7, 0, -4194304, 7, 0, -4128768, 7, 0, -4063232, 7, 0, -3997696, 7, 0, -3932160, 7, 0, -3866624, 7, 0, -3801088, 7, 0, -3735552, 7, 0, -3670016, 7, 0, -3604480, 7, 0, -3538944, 7, 0, -3473408, 7, 0, -3407872, 7, 0, -3342336, 7, 0, -3276800, 7, 0, -3211264, 7, 0, -3145728, 7, 0, -3080192, 7, 0, -3014656, 7, 0, -2949120, 7, 0, -2883584, 7, 0, -2818048, 7, 0, -2752512, 7, 0, -2686976, 7, 0, -2621440, 7, 0, -2555904, 7, 0, -2490368, 7, 0, -2424832, 7, 0, -2359296, 7, 0, -2293760, 7, 0, -2228224, 7, 0, -2162688, 7, 0, -2097152, 7, 0, -2031616, 7, 0, -1966080, 7, 0, -1900544, 7, 0, -1835008, 7, 0, -1769472, 7, 0, -1703936, 7, 0, -1638400, 7, 0, -1572864, 7, 0, -1507328, 7, 0, -1441792, 7, 0, -1376256, 7, 0, -1310720, 7, 0, -1245184, 7, 0, -1179648, 7, 0, -1114112, 7, 0, -1048576, 7, 0, -983040, 7, 0, -917504, 7, 0, -851968, 7, 0, -786432, 7, 0, -720896, 7, 0, -655360, 7, 0, -589824, 7, 0, -524288, 7, 0, -458752, 7, 0, -393216, 7, 0, -327680, 7, 0, -262144, 7, 0, -196608, 7, 0, -131072, 7, 0, -65536, 7, 0, 0, 7, 0, 65536, 7, 0, 131072, 7, 0, 196608, 7, 0 )
 
 [node name="HiddenPathway" parent="Scenery" instance=ExtResource( 63 )]
 position = Vector2( 2272, -1144 )
@@ -967,26 +737,26 @@ position = Vector2( 9899, -1026 )
 [node name="MissileTractor5" parent="Spawners/Section1" instance=ExtResource( 53 )]
 position = Vector2( 11031, -952 )
 
-[node name="FlameThrower" parent="Spawners/Section1" instance=ExtResource( 59 )]
+[node name="SnowThrower" parent="Spawners/Section1" instance=ExtResource( 21 )]
 position = Vector2( 7181, -315 )
 
-[node name="FlameThrower2" parent="Spawners/Section1" instance=ExtResource( 59 )]
+[node name="SnowThrower2" parent="Spawners/Section1" instance=ExtResource( 21 )]
 position = Vector2( 9003, -489 )
 
-[node name="FlameThrower3" parent="Spawners/Section1" instance=ExtResource( 59 )]
+[node name="SnowThrower3" parent="Spawners/Section1" instance=ExtResource( 21 )]
 position = Vector2( 9039, -857 )
 
-[node name="FlameThrower6" parent="Spawners/Section1" instance=ExtResource( 59 )]
+[node name="SnowThrower6" parent="Spawners/Section1" instance=ExtResource( 21 )]
 position = Vector2( 9391, -954 )
 
-[node name="FlameThrower7" parent="Spawners/Section1" instance=ExtResource( 59 )]
+[node name="SnowThrower7" parent="Spawners/Section1" instance=ExtResource( 21 )]
 position = Vector2( 10319, -1083 )
 
-[node name="FlameThrower4" parent="Spawners/Section1" instance=ExtResource( 59 )]
+[node name="SnowThrower4" parent="Spawners/Section1" instance=ExtResource( 21 )]
 position = Vector2( 10936, -808 )
 spawn_direction = 1
 
-[node name="FlameThrower5" parent="Spawners/Section1" instance=ExtResource( 59 )]
+[node name="SnowThrower5" parent="Spawners/Section1" instance=ExtResource( 21 )]
 position = Vector2( 10719, -681 )
 spawn_direction = 1
 
@@ -1155,21 +925,17 @@ position = Vector2( 10666, -999 )
 script = ExtResource( 78 )
 next_checkpoint = 3
 
-[node name="FlameThrower" parent="Spawners/Section2" instance=ExtResource( 59 )]
+[node name="SnowThrower" parent="Spawners/Section2" instance=ExtResource( 21 )]
 position = Vector2( -59, -1386 )
-spawn_direction = 1
 
-[node name="FlameThrower2" parent="Spawners/Section2" instance=ExtResource( 59 )]
+[node name="SnowThrower2" parent="Spawners/Section2" instance=ExtResource( 21 )]
 position = Vector2( 728, -1431 )
-spawn_direction = 1
 
-[node name="FlameThrower3" parent="Spawners/Section2" instance=ExtResource( 59 )]
+[node name="SnowThrower3" parent="Spawners/Section2" instance=ExtResource( 21 )]
 position = Vector2( 2097, -1593 )
-spawn_direction = 1
 
-[node name="FlameThrower4" parent="Spawners/Section2" instance=ExtResource( 59 )]
+[node name="SnowThrower4" parent="Spawners/Section2" instance=ExtResource( 21 )]
 position = Vector2( -950, -1209 )
-spawn_direction = 1
 
 [node name="Wheeler" parent="Spawners/Section2" instance=ExtResource( 52 )]
 position = Vector2( -3381, -409 )
@@ -1278,12 +1044,6 @@ object_to_spawn = ExtResource( 43 )
 set_direction_to_right = false
 despawnable = false
 
-[node name="IGTimer" parent="." instance=ExtResource( 86 )]
-section = "Central White"
-
 [connection signal="animation_finished" from="StateCamera/Ready Warning Text" to="StateCamera/Ready Warning Text" method="_on_animatedSprite_animation_finished"]
-[connection signal="body_entered" from="Scenery/CollapsingRepeating/SinkStarter" to="Scenery/CollapsingRepeating/SinkStarter" method="_on_SinkStarter_body_entered"]
-[connection signal="spawned" from="Scenery/CollapsingRepeating/Boss/MantaRay" to="Scenery/CollapsingRepeating" method="add_spawn_to_list"]
-[connection signal="zero_health" from="Scenery/CollapsingRepeating/Boss/MantaRay" to="Scenery/CollapsingRepeating" method="_on_MantaRay_zero_health"]
 [connection signal="explode" from="Objects/Door" to="Objects/Door/AchievementUnlocker" method="fire_achievement"]
 [connection signal="teleport_start" from="Objects/StartPortal" to="Objects/WallOfIce" method="_on_teleport_start"]

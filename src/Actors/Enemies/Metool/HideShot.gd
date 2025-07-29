@@ -1,4 +1,4 @@
-extends "res://src/Actors/Enemies/Metool/Hide.gd"
+extends MetoolHide
 
 
 func _StartCondition() -> bool:

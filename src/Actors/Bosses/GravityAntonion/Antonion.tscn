@@ -131,6 +131,7 @@ low_height_segments = 3
 [node name="BossAI" type="Node2D" parent="."]
 script = ExtResource( 23 )
 time_between_attacks = Vector2( 0.25, 0.85 )
+desperation_chance = 0.0
 
 [node name="collisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 3.5 )
@@ -174,7 +175,7 @@ animation = "idle"
 script = ExtResource( 26 )
 invulnerability_time = 0.1
 max_flash_time = 0.35
-weakenesses = [ "DarkArrow" ]
+weakenesses = [ "DarkArrow", "BlackArrow", "Rasetsusen" ]
 
 [node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
 pause_mode = 2

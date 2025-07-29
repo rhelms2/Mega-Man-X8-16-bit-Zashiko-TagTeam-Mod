@@ -14,7 +14,6 @@ func _physics_process(delta: float) -> void:
 	global_position.x += h_speed * delta
 	global_position.y += v_speed * delta
 	
-	#process_coliision()
 	process_coliision()
 	
 func process_coliision(collision_layer := 1):

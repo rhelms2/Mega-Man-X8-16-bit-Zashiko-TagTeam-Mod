@@ -1,16 +1,15 @@
 [remap]
 
-importer="aseprite_animation_importer"
+importer="aseprite_wizard.plugin"
 type="SpriteFrames"
-path="res://.import/better_lemon.ase-6c471b98779702282a3ec477b53bb7fa.res"
+valid=false
 
 [deps]
 
 source_file="res://src/Actors/Weapons/better_lemon.ase"
-dest_files=[ "res://.import/better_lemon.ase-6c471b98779702282a3ec477b53bb7fa.res" ]
-
 [params]
 
-extrude=false
-default_direction="Forward"
-default_loop=false
+split_layers=false
+exclude_layers_pattern=""
+only_visible_layers=false
+sheet_type="Packed"

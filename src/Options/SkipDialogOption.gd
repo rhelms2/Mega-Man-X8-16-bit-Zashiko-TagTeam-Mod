@@ -1,20 +1,21 @@
 extends X8OptionButton
 
 
-func _ready() -> void:
-	Event.connect("translation_updated",self,"display_skip_dialog")
+func _ready() -> void :
+	Event.connect("translation_updated", self, "display_skip_dialog")
 	
-func setup() -> void:
+func setup() -> void :
 	set_skip_dialog(get_skip_dialog())
 
-func increase_value() -> void: #override
-	set_skip_dialog(!get_skip_dialog())
+func increase_value() -> void :
+	set_skip_dialog( not get_skip_dialog())
 
-func decrease_value() -> void: #override
-	set_skip_dialog(!get_skip_dialog())
+func decrease_value() -> void :
+	set_skip_dialog( not get_skip_dialog())
 
-func set_skip_dialog(value:bool) -> void:
-	Configurations.set("SkipDialog",value)
+func set_skip_dialog(value: bool) -> void :
+	Configurations.set("SkipDialog", value)
+	
 	display_skip_dialog()
 
 func get_skip_dialog():

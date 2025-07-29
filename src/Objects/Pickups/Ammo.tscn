@@ -15,7 +15,7 @@ collision_mask = 66049
 script = ExtResource( 2 )
 
 [node name="area2D" type="Area2D" parent="."]
-collision_layer = 0
+collision_layer = 32
 collision_mask = 2
 
 [node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]

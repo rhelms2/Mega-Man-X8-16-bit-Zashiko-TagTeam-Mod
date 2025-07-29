@@ -1,4 +1,4 @@
 extends TileMap
 
-func disappear() -> void:
+func disappear() -> void :
 	visible = false

@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=1]
 [ext_resource path="res://src/Actors/Enemies/ProjectileDoT.gd" type="Script" id=2]
@@ -10,6 +10,10 @@
 [ext_resource path="res://src/Effects/Fire/pinkfire3.png" type="Texture" id=8]
 [ext_resource path="res://src/Effects/Materials/pinkfire_mat.tres" type="Material" id=9]
 [ext_resource path="res://src/Effects/Materials/pinkfire_particles.tres" type="Material" id=10]
+[ext_resource path="res://Zero_mod/Boss/enkoujin_projectile_small.tres" type="SpriteFrames" id=11]
+[ext_resource path="res://Zero_mod/Boss/fire2.png" type="Texture" id=12]
+[ext_resource path="res://Zero_mod/Boss/fire3.png" type="Texture" id=13]
+[ext_resource path="res://Zero_mod/Boss/fire1.png" type="Texture" id=14]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 4 )
@@ -84,7 +88,7 @@ damage = 8.0
 position = Vector2( 0, 11 )
 frames = SubResource( 12 )
 animation = "idle"
-frame = 1
+frame = 3
 playing = true
 
 [node name="fire1" type="Particles2D" parent="animatedSprite"]
@@ -113,6 +117,43 @@ amount = 1
 local_coords = false
 process_material = ExtResource( 10 )
 texture = ExtResource( 8 )
+
+[node name="animatedSprite_zero" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 0, 11 )
+frames = ExtResource( 11 )
+animation = "idle"
+playing = true
+
+[node name="fire1" type="Particles2D" parent="animatedSprite_zero"]
+material = ExtResource( 9 )
+position = Vector2( -8, -11 )
+z_index = 1
+emitting = false
+amount = 2
+local_coords = false
+process_material = ExtResource( 10 )
+texture = ExtResource( 14 )
+
+[node name="fire2" type="Particles2D" parent="animatedSprite_zero"]
+material = ExtResource( 9 )
+position = Vector2( -8, -11 )
+z_index = 1
+emitting = false
+amount = 3
+local_coords = false
+process_material = ExtResource( 10 )
+texture = ExtResource( 12 )
+
+[node name="fire3" type="Particles2D" parent="animatedSprite_zero"]
+material = ExtResource( 9 )
+position = Vector2( -8, -11 )
+z_index = 1
+emitting = false
+amount = 1
+local_coords = false
+process_material = ExtResource( 10 )
+texture = ExtResource( 13 )
 
 [node name="collisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 1 )

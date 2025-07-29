@@ -1,20 +1,30 @@
 extends GenericIntro
+
+export  var song_intro: AudioStream
+export  var song_loop: AudioStream
+export  var boss_bar: Texture
+
 onready var sprite: AnimatedSprite = $"../animatedSprite"
-onready var tween := TweenController.new(self,false)
+onready var tween: TweenController = TweenController.new(self, false)
 onready var space: Node = $"../Space"
 onready var rotating_crystals: Node2D = $"../RotatingCrystals"
+onready var song_remix_loop: AudioStream = preload("res://Remix/Songs/Lumine Battle 1 - Loop.ogg")
 
-export var song_intro : AudioStream
-export var song_loop : AudioStream
-export var boss_bar : Texture
 
-func connect_start_events() -> void:
+func _ready() -> void :
+	if Configurations.exists("SongRemix"):
+		if Configurations.get("SongRemix"):
+			song_intro = load("")
+			song_loop = song_remix_loop
+			song_loop.loop = true
+
+func connect_start_events() -> void :
 	call_deferred("prepare_for_intro")
-	Tools.timer(1,"execute_intro",self)
-	#call_deferred("execute_intro")
+	Tools.timer(1, "execute_intro", self)
+	
 
-func prepare_for_intro() -> void:
-	sprite.position.y = -250
+func prepare_for_intro() -> void :
+	sprite.position.y = - 250
 	character.global_position.y = raycast_downward(256)["position"].y
 	Log("Preparing for Intro")
 
@@ -31,15 +41,15 @@ func _Update(delta):
 	elif attack_stage == 2:
 		play_animation("intro_idle")
 		next_attack_stage()
-	
+		
 	elif attack_stage == 3 and timer > 1:
 		play_animation("open")
 		start_dialog_or_go_to_attack_stage(5)
-	
+		
 	elif attack_stage == 4:
 		if seen_dialog():
 			next_attack_stage()
-
+			
 	elif attack_stage == 5 and timer > 0.75:
 		play_animation("fly_start")
 		go_to_center()

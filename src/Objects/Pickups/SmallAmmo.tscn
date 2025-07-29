@@ -4,7 +4,6 @@
 [ext_resource path="res://src/Objects/Pickups/sammo.tres" type="SpriteFrames" id=2]
 
 [node name="SmallAmmoPickup" instance=ExtResource( 1 )]
-collision_mask = 66049
 ammo = 2
 
 [node name="animatedSprite" parent="." index="1"]

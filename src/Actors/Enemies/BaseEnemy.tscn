@@ -13,7 +13,7 @@
 [ext_resource path="res://src/IA/BaseEnemyIA.tscn" type="PackedScene" id=11]
 [ext_resource path="res://src/Actors/Enemies/Sprites/green_cannon.res" type="SpriteFrames" id=12]
 [ext_resource path="res://src/Actors/Enemies/EnemyMissile.tscn" type="PackedScene" id=13]
-[ext_resource path="res://Idle.gd" type="Script" id=14]
+[ext_resource path="res://src/Actors/Player/Idle.gd" type="Script" id=14]
 [ext_resource path="res://src/Sounds/60 - MMX - Enemy Missile Fire.wav" type="AudioStream" id=15]
 [ext_resource path="res://Turn.gd" type="Script" id=16]
 [ext_resource path="res://src/Sounds/MISSILE_MOUNT.wav" type="AudioStream" id=17]

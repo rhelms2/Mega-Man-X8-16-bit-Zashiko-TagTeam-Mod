@@ -11,11 +11,11 @@ func get_action_pressed(_element) -> bool:
 func get_action_just_released(_element) -> bool:
 	return just_released
 
-var just_pressed := false
-var just_released := false
-var pressed := false
+var just_pressed: = false
+var just_released: = false
+var pressed: = false
 
-func _input(event: InputEvent) -> void:
+func _input(event: InputEvent) -> void :
 	if event.is_action_pressed(actions[0]):
 		just_pressed = true
 		pressed = true

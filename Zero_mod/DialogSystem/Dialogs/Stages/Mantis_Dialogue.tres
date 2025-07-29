@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://src/DialogSystem/Profiles/DialogueText.gd" type="Script" id=1]
+[ext_resource path="res://Zero_mod/DialogSystem/Profiles/Zero.tres" type="Resource" id=2]
+[ext_resource path="res://src/DialogSystem/Profiles/Mantis.tres" type="Resource" id=3]
+
+[resource]
+script = ExtResource( 1 )
+dialog = [ ExtResource( 3 ), "MANTIS1_ZERO", ExtResource( 2 ), "MANTIS2_ZERO", ExtResource( 3 ), "MANTIS3_ZERO", ExtResource( 2 ), "MANTIS4_ZERO", ExtResource( 3 ), "MANTIS5_ZERO", ExtResource( 2 ), "MANTIS6_ZERO", "MANTIS7_ZERO" ]

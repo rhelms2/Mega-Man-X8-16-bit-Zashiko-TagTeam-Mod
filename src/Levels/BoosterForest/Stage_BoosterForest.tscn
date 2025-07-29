@@ -1,4 +1,4 @@
-[gd_scene load_steps=133 format=2]
+[gd_scene load_steps=125 format=2]
 
 [ext_resource path="res://src/Levels/base_stage.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Levels/Test/test_tileset.tres" type="TileSet" id=2]
@@ -11,9 +11,8 @@
 [ext_resource path="res://src/Objects/Light Capsule/LightCapsule.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/Actors/Bosses/Vile/Vile.tscn" type="PackedScene" id=10]
 [ext_resource path="res://src/System/CameraLimits.gd" type="Script" id=11]
-[ext_resource path="res://src/Effects/enemy_shader.tres" type="Shader" id=12]
-[ext_resource path="res://src/Actors/charge_shader.tres" type="Shader" id=13]
-[ext_resource path="res://src/Actors/Spawner.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/Actors/Player/Player.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/Actors/Spawners/Spawner.tscn" type="PackedScene" id=14]
 [ext_resource path="res://src/Objects/Pickups/Ammo.tscn" type="PackedScene" id=15]
 [ext_resource path="res://src/Sounds/OST - Vile - Loop.ogg" type="AudioStream" id=16]
 [ext_resource path="res://src/Sounds/OST - Vile - Intro.ogg" type="AudioStream" id=17]
@@ -38,7 +37,7 @@
 [ext_resource path="res://src/Objects/Spikes/spike_01.png" type="Texture" id=36]
 [ext_resource path="res://src/Objects/Spikes/spike_03.png" type="Texture" id=37]
 [ext_resource path="res://src/Objects/Spikes/DestructibleSpike.tscn" type="PackedScene" id=38]
-[ext_resource path="res://src/Levels/IGTimer.tscn" type="PackedScene" id=39]
+[ext_resource path="res://System/Character_Spawner.gd" type="Script" id=39]
 [ext_resource path="res://src/Objects/Door/CameraTranslator.gd" type="Script" id=40]
 [ext_resource path="res://src/Levels/Checkpoint.tscn" type="PackedScene" id=41]
 [ext_resource path="res://src/Levels/BoosterForest/bg0.png" type="Texture" id=42]
@@ -56,7 +55,6 @@
 [ext_resource path="res://src/Effects/leaves/leaves_booster.png" type="Texture" id=54]
 [ext_resource path="res://src/Sounds/OST - BoosterForest - Loop.ogg" type="AudioStream" id=55]
 [ext_resource path="res://src/Sounds/OST - BoosterForest - Intro.ogg" type="AudioStream" id=56]
-[ext_resource path="res://src/Actors/Props/RideArmor/RideArmor.tscn" type="PackedScene" id=57]
 [ext_resource path="res://src/Levels/NoahsPark/Passarins.tscn" type="PackedScene" id=58]
 [ext_resource path="res://src/Levels/BoosterForest/CameraTranslatorVileExitDoor.gd" type="Script" id=59]
 [ext_resource path="res://src/Actors/Enemies/Metool/MetoolQueAtira.tscn" type="PackedScene" id=60]
@@ -88,155 +86,6 @@ particles_animation = true
 particles_anim_h_frames = 2
 particles_anim_v_frames = 2
 particles_anim_loop = true
-
-[sub_resource type="ShaderMaterial" id=3]
-resource_local_to_scene = true
-shader = ExtResource( 13 )
-shader_param/Flash = 0.0
-shader_param/Charge = 0.0
-shader_param/Color = Color( 0, 0, 0, 1 )
-shader_param/MainColor1 = Color( 0, 0.501961, 0.972549, 1 )
-shader_param/MainColor2 = Color( 0, 0.25098, 0.941176, 1 )
-shader_param/MainColor3 = Color( 0.12549, 0.188235, 0.501961, 1 )
-shader_param/MainColor4 = Color( 0.470588, 0.847059, 0.941176, 1 )
-shader_param/MainColor5 = Color( 0.313726, 0.627451, 0.941176, 1 )
-shader_param/MainColor6 = Color( 0.0941176, 0.345098, 0.690196, 1 )
-shader_param/R_MainColor1 = Color( 0, 0.501961, 0.972549, 1 )
-shader_param/R_MainColor2 = Color( 0, 0.25098, 0.941176, 1 )
-shader_param/R_MainColor3 = Color( 0.12549, 0.188235, 0.501961, 1 )
-shader_param/R_MainColor4 = Color( 0.470588, 0.847059, 0.941176, 1 )
-shader_param/R_MainColor5 = Color( 0.313726, 0.627451, 0.941176, 1 )
-shader_param/R_MainColor6 = Color( 0.0941176, 0.345098, 0.690196, 1 )
-shader_param/CrystalColor1 = Color( 0.909804, 1, 0.733333, 1 )
-shader_param/CrystalColor2 = Color( 0.541176, 0.854902, 0.341176, 1 )
-shader_param/CrystalColor3 = Color( 0.207843, 0.619608, 0.415686, 1 )
-shader_param/R_CrystalColor1 = Color( 0.941176, 0.941176, 0.941176, 1 )
-shader_param/Alert = 0.0
-shader_param/R_CrystalColor2 = Color( 0.941176, 0.25098, 0.0627451, 1 )
-shader_param/R_CrystalColor3 = Color( 0.447059, 0.133333, 0.215686, 1 )
-shader_param/tolerance = 0.01
-shader_param/Alpha = 1.0
-
-[sub_resource type="ShaderMaterial" id=4]
-resource_local_to_scene = true
-shader = ExtResource( 13 )
-shader_param/Flash = null
-shader_param/Charge = 0.0
-shader_param/Color = Color( 0, 0, 0, 1 )
-shader_param/MainColor1 = Color( 0.501961, 0.501961, 0.501961, 1 )
-shader_param/MainColor2 = Color( 0.52549, 0.345098, 0.458824, 1 )
-shader_param/MainColor3 = Color( 0.34902, 0.211765, 0.298039, 1 )
-shader_param/MainColor4 = Color( 0.909804, 0.878431, 0.25098, 1 )
-shader_param/MainColor5 = Color( 0.945098, 0.6, 0.27451, 1 )
-shader_param/MainColor6 = Color( 0.670588, 0.313726, 0.266667, 1 )
-shader_param/R_MainColor1 = Color( 0.501961, 0.501961, 0.501961, 1 )
-shader_param/R_MainColor2 = Color( 0.52549, 0.345098, 0.458824, 1 )
-shader_param/R_MainColor3 = Color( 0.34902, 0.211765, 0.298039, 1 )
-shader_param/R_MainColor4 = Color( 0.909804, 0.878431, 0.25098, 1 )
-shader_param/R_MainColor5 = Color( 0.945098, 0.6, 0.27451, 1 )
-shader_param/R_MainColor6 = Color( 0.670588, 0.313726, 0.266667, 1 )
-shader_param/CrystalColor1 = Color( 0.909804, 1, 0.733333, 1 )
-shader_param/CrystalColor2 = Color( 0.541176, 0.854902, 0.341176, 1 )
-shader_param/CrystalColor3 = Color( 0.207843, 0.619608, 0.415686, 1 )
-shader_param/R_CrystalColor1 = Color( 0.941176, 0.941176, 0.941176, 1 )
-shader_param/Alert = 0.0
-shader_param/R_CrystalColor2 = Color( 0.941176, 0.25098, 0.0627451, 1 )
-shader_param/R_CrystalColor3 = Color( 0.447059, 0.133333, 0.215686, 1 )
-shader_param/tolerance = 0.01
-shader_param/Alpha = 1.0
-
-[sub_resource type="ShaderMaterial" id=5]
-resource_local_to_scene = true
-shader = ExtResource( 13 )
-shader_param/Flash = null
-shader_param/Charge = 0.0
-shader_param/Color = Color( 0, 0, 0, 1 )
-shader_param/MainColor1 = Color( 0.501961, 0.501961, 0.501961, 1 )
-shader_param/MainColor2 = Color( 0.52549, 0.345098, 0.458824, 1 )
-shader_param/MainColor3 = Color( 0.34902, 0.211765, 0.298039, 1 )
-shader_param/MainColor4 = Color( 0.909804, 0.878431, 0.25098, 1 )
-shader_param/MainColor5 = Color( 0.945098, 0.6, 0.27451, 1 )
-shader_param/MainColor6 = Color( 0.670588, 0.313726, 0.266667, 1 )
-shader_param/R_MainColor1 = Color( 0.501961, 0.501961, 0.501961, 1 )
-shader_param/R_MainColor2 = Color( 0.52549, 0.345098, 0.458824, 1 )
-shader_param/R_MainColor3 = Color( 0.34902, 0.211765, 0.298039, 1 )
-shader_param/R_MainColor4 = Color( 0.909804, 0.878431, 0.25098, 1 )
-shader_param/R_MainColor5 = Color( 0.945098, 0.6, 0.27451, 1 )
-shader_param/R_MainColor6 = Color( 0.670588, 0.313726, 0.266667, 1 )
-shader_param/CrystalColor1 = Color( 0.909804, 1, 0.733333, 1 )
-shader_param/CrystalColor2 = Color( 0.541176, 0.854902, 0.341176, 1 )
-shader_param/CrystalColor3 = Color( 0.207843, 0.619608, 0.415686, 1 )
-shader_param/R_CrystalColor1 = Color( 0.941176, 0.941176, 0.941176, 1 )
-shader_param/Alert = 0.0
-shader_param/R_CrystalColor2 = Color( 0.941176, 0.25098, 0.0627451, 1 )
-shader_param/R_CrystalColor3 = Color( 0.447059, 0.133333, 0.215686, 1 )
-shader_param/tolerance = 0.01
-shader_param/Alpha = 1.0
-
-[sub_resource type="ShaderMaterial" id=6]
-resource_local_to_scene = true
-shader = ExtResource( 13 )
-shader_param/Flash = null
-shader_param/Charge = 0.0
-shader_param/Color = Color( 0, 0, 0, 1 )
-shader_param/MainColor1 = Color( 0.501961, 0.501961, 0.501961, 1 )
-shader_param/MainColor2 = Color( 0.52549, 0.345098, 0.458824, 1 )
-shader_param/MainColor3 = Color( 0.34902, 0.211765, 0.298039, 1 )
-shader_param/MainColor4 = Color( 0.909804, 0.878431, 0.25098, 1 )
-shader_param/MainColor5 = Color( 0.945098, 0.6, 0.27451, 1 )
-shader_param/MainColor6 = Color( 0.670588, 0.313726, 0.266667, 1 )
-shader_param/R_MainColor1 = Color( 0.501961, 0.501961, 0.501961, 1 )
-shader_param/R_MainColor2 = Color( 0.52549, 0.345098, 0.458824, 1 )
-shader_param/R_MainColor3 = Color( 0.34902, 0.211765, 0.298039, 1 )
-shader_param/R_MainColor4 = Color( 0.909804, 0.878431, 0.25098, 1 )
-shader_param/R_MainColor5 = Color( 0.945098, 0.6, 0.27451, 1 )
-shader_param/R_MainColor6 = Color( 0.670588, 0.313726, 0.266667, 1 )
-shader_param/CrystalColor1 = Color( 0.909804, 1, 0.733333, 1 )
-shader_param/CrystalColor2 = Color( 0.541176, 0.854902, 0.341176, 1 )
-shader_param/CrystalColor3 = Color( 0.207843, 0.619608, 0.415686, 1 )
-shader_param/R_CrystalColor1 = Color( 0.941176, 0.941176, 0.941176, 1 )
-shader_param/Alert = 0.0
-shader_param/R_CrystalColor2 = Color( 0.941176, 0.25098, 0.0627451, 1 )
-shader_param/R_CrystalColor3 = Color( 0.447059, 0.133333, 0.215686, 1 )
-shader_param/tolerance = 0.01
-shader_param/Alpha = 1.0
-
-[sub_resource type="ShaderMaterial" id=7]
-resource_local_to_scene = true
-shader = ExtResource( 13 )
-shader_param/Flash = null
-shader_param/Charge = 0.0
-shader_param/Color = Color( 0, 0, 0, 1 )
-shader_param/MainColor1 = Color( 0.501961, 0.501961, 0.501961, 1 )
-shader_param/MainColor2 = Color( 0.52549, 0.345098, 0.458824, 1 )
-shader_param/MainColor3 = Color( 0.34902, 0.211765, 0.298039, 1 )
-shader_param/MainColor4 = Color( 0.909804, 0.878431, 0.25098, 1 )
-shader_param/MainColor5 = Color( 0.945098, 0.6, 0.27451, 1 )
-shader_param/MainColor6 = Color( 0.670588, 0.313726, 0.266667, 1 )
-shader_param/R_MainColor1 = Color( 0.501961, 0.501961, 0.501961, 1 )
-shader_param/R_MainColor2 = Color( 0.52549, 0.345098, 0.458824, 1 )
-shader_param/R_MainColor3 = Color( 0.34902, 0.211765, 0.298039, 1 )
-shader_param/R_MainColor4 = Color( 0.909804, 0.878431, 0.25098, 1 )
-shader_param/R_MainColor5 = Color( 0.945098, 0.6, 0.27451, 1 )
-shader_param/R_MainColor6 = Color( 0.670588, 0.313726, 0.266667, 1 )
-shader_param/CrystalColor1 = Color( 0.909804, 1, 0.733333, 1 )
-shader_param/CrystalColor2 = Color( 0.541176, 0.854902, 0.341176, 1 )
-shader_param/CrystalColor3 = Color( 0.207843, 0.619608, 0.415686, 1 )
-shader_param/R_CrystalColor1 = Color( 0.941176, 0.941176, 0.941176, 1 )
-shader_param/Alert = 0.0
-shader_param/R_CrystalColor2 = Color( 0.941176, 0.25098, 0.0627451, 1 )
-shader_param/R_CrystalColor3 = Color( 0.447059, 0.133333, 0.215686, 1 )
-shader_param/tolerance = 0.01
-shader_param/Alpha = 1.0
-
-[sub_resource type="ShaderMaterial" id=8]
-resource_local_to_scene = true
-shader = ExtResource( 12 )
-shader_param/Flash = 0.0
-shader_param/Should_Blink = 0.0
-shader_param/Darken = 0.5
-shader_param/Alpha = 1.0
-shader_param/Alpha_Blink = 0.0
 
 [sub_resource type="ShaderMaterial" id=63]
 shader = ExtResource( 50 )
@@ -16681,9 +16530,11 @@ extents = Vector2( 199, 183 )
 extents = Vector2( 199, 241 )
 
 [node name="BoosterForest" instance=ExtResource( 1 )]
+script = ExtResource( 39 )
 __meta__ = {
 "_edit_vertical_guides_": [  ]
 }
+player = ExtResource( 12 )
 
 [node name="Music Player" parent="." index="1"]
 stage_intro = ExtResource( 56 )
@@ -16701,33 +16552,11 @@ local_coords = false
 process_material = ExtResource( 53 )
 texture = ExtResource( 54 )
 
-[node name="X" parent="." index="3"]
+[node name="CharacterPosition" parent="." index="3"]
 position = Vector2( 0, 95 )
 
-[node name="animatedSprite" parent="X" index="3"]
-material = SubResource( 3 )
-frame = 23
-
-[node name="head_armor" parent="X/animatedSprite" index="0"]
-material = SubResource( 4 )
-
-[node name="body_armor" parent="X/animatedSprite" index="1"]
-material = SubResource( 5 )
-
-[node name="arms_armor" parent="X/animatedSprite" index="2"]
-material = SubResource( 6 )
-
-[node name="cannon_armor" parent="X/animatedSprite" index="3"]
-material = SubResource( 6 )
-
-[node name="legs_armor" parent="X/animatedSprite" index="4"]
-material = SubResource( 7 )
-
-[node name="duringImage" parent="X/AirDash" index="2"]
-material = SubResource( 8 )
-
-[node name="duringImage" parent="X/Dash" index="2"]
-material = SubResource( 8 )
+[node name="Collision" parent="Scenery" index="0"]
+visible = false
 
 [node name="Collision2" type="TileMap" parent="Scenery" index="1"]
 visible = false
@@ -16948,7 +16777,6 @@ next_checkpoint = 1
 
 [node name="MetoolQueatira" parent="Objects/Spawners/Section1" index="0" instance=ExtResource( 60 )]
 position = Vector2( 595, 121 )
-spawn_at_start = true
 
 [node name="MetoolQueatira2" parent="Objects/Spawners/Section1" index="1" instance=ExtResource( 60 )]
 position = Vector2( 3722, -134 )
@@ -18699,8 +18527,8 @@ position = Vector2( 10798, -806 )
 [node name="AmmoPickup2" parent="Objects" index="41" instance=ExtResource( 15 )]
 position = Vector2( 11631, -806 )
 
-[node name="RideArmor" parent="Objects" index="42" instance=ExtResource( 57 )]
-position = Vector2( 1835, 101 )
+[node name="Limits" parent="." index="7"]
+visible = false
 
 [node name="1" type="Area2D" parent="Limits" index="0"]
 position = Vector2( 9, 48 )
@@ -18881,9 +18709,6 @@ script = ExtResource( 11 )
 position = Vector2( 913, 158 )
 shape = SubResource( 79 )
 
-[node name="IGTimer" parent="." index="8" instance=ExtResource( 39 )]
-section = "Booster Forest"
-
 [connection signal="button_press" from="Objects/Button" to="Objects/rising_platform" method="_on_Button_button_press"]
 [connection signal="reset" from="Objects/rising_platform" to="Objects/Button" method="unpress"]
 [connection signal="button_press" from="Objects/Button2" to="Objects/rising_platform2" method="_on_Button_button_press"]
@@ -18904,7 +18729,6 @@ section = "Booster Forest"
 [connection signal="finish" from="Objects/VileDoor" to="Objects/VileSpawner" method="_on_VileDoor_finish"]
 [connection signal="object_death" from="Objects/VileSpawner" to="Objects/VileExitDoor" method="_on_Unlock_and_able_to_explode"]
 
-[editable path="X"]
 [editable path="Objects/ConveyorBelts/Conveyor Belt"]
 [editable path="Objects/ConveyorBelts/Conveyor Belt2"]
 [editable path="Objects/ConveyorBelts/Conveyor Belt3"]

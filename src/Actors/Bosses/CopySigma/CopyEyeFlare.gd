@@ -7,13 +7,19 @@ onready var beam: AudioStreamPlayer2D = $beam
 onready var flash: Sprite = $flash
 onready var copy_dash: Node2D = $"../CopyDash"
 
-func _Setup() -> void:
-	character.emit_signal("damage_reduction", 0.5)
+var desperation_damage_reduction = 0.5
+
+func set_game_modes():
+	desperation_damage_reduction = CharacterManager.boss_damage_reduction
+	
+func _Setup():
+	set_game_modes()
+	character.emit_signal("damage_reduction", desperation_damage_reduction)
 	turn_and_face_player()
 	copy_dash.deactivate()
 	stun.deactivate()
 
-func _Update(_delta) -> void:
+func _Update(_delta: float) -> void :
 	process_gravity(_delta)
 
 	if attack_stage == 0:
@@ -53,4 +59,4 @@ func _Interrupt():
 	eye2.end()
 	beam.stop()
 	stun.activate()
-	character.emit_signal("damage_reduction", 1)
+	character.emit_signal("damage_reduction", 1.0)

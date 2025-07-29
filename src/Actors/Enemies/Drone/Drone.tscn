@@ -90,6 +90,7 @@ damage = 3.0
 
 [node name="Damage" type="Node2D" parent="."]
 script = ExtResource( 2 )
+max_freeze_hits = 1
 
 [node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
 stream = ExtResource( 10 )

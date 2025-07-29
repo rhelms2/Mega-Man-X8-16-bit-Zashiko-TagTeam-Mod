@@ -1,4 +1,5 @@
-extends "res://src/Actors/Enemies/GroundPizza/JuggleAndMove.gd"
+extends PizzaJuggleAndMove
+
 
 func set_projectile() -> void:
 	pass

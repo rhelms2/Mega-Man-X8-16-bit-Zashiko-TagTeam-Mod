@@ -2,14 +2,14 @@
 
 [ext_resource path="res://src/Effects/Materials/ExplosionParticles.tres" type="Material" id=1]
 [ext_resource path="res://src/Effects/Materials/RemainsParticle.tres" type="Material" id=2]
-[ext_resource path="res://src/Effects/Textures/explosion.png" type="Texture" id=4]
-[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=5]
-[ext_resource path="res://src/Sounds/Ice Break.wav" type="AudioStream" id=11]
-[ext_resource path="res://src/Sounds/Trilobyte - Create Crystal.ogg" type="AudioStream" id=14]
-[ext_resource path="res://src/Effects/Textures/remains_purple.png" type="Texture" id=15]
-[ext_resource path="res://src/Actors/Player/BossWeapons/CrystalBouncer/CrystalBouncerCharged.gd" type="Script" id=16]
-[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=17]
-[ext_resource path="res://src/Actors/Player/BossWeapons/CrystalBouncer/crystalwall.res" type="SpriteFrames" id=18]
+[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/Player/BossWeapons/CrystalBouncer/CrystalBouncerCharged.gd" type="Script" id=4]
+[ext_resource path="res://src/Effects/Textures/explosion.png" type="Texture" id=5]
+[ext_resource path="res://src/Sounds/Ice Break.wav" type="AudioStream" id=6]
+[ext_resource path="res://src/Sounds/Trilobyte - Create Crystal.ogg" type="AudioStream" id=7]
+[ext_resource path="res://src/Effects/Textures/remains_purple.png" type="Texture" id=8]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=9]
+[ext_resource path="res://src/Actors/Player/BossWeapons/CrystalBouncer/crystalwall.res" type="SpriteFrames" id=10]
 
 [sub_resource type="RectangleShape2D" id=9]
 extents = Vector2( 17, 32 )
@@ -36,7 +36,7 @@ particles_anim_loop = false
 [node name="CrystalBouncerCharged" type="KinematicBody2D" groups=["Player Projectile"]]
 z_index = 4
 collision_layer = 4
-script = ExtResource( 16 )
+script = ExtResource( 4 )
 active = true
 damage = 40.0
 damage_to_bosses = 10.0
@@ -78,7 +78,7 @@ one_shot = true
 explosiveness = 1.0
 visibility_rect = Rect2( -600, -100, 1200, 200 )
 process_material = ExtResource( 2 )
-texture = ExtResource( 15 )
+texture = ExtResource( 8 )
 
 [node name="platform" type="RigidBody2D" parent="."]
 position = Vector2( 0, -31 )
@@ -121,7 +121,7 @@ disabled = true
 
 [node name="animatedSprite" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -34 )
-frames = ExtResource( 18 )
+frames = ExtResource( 10 )
 animation = "start"
 frame = 7
 playing = true
@@ -138,21 +138,21 @@ shape = SubResource( 11 )
 disabled = true
 
 [node name="break" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 11 )
+stream = ExtResource( 6 )
 volume_db = -12.0
 max_distance = 600.0
 bus = "SFX"
-script = ExtResource( 5 )
+script = ExtResource( 9 )
 
 [node name="appear" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 14 )
+stream = ExtResource( 7 )
 volume_db = -12.0
 max_distance = 600.0
 bus = "SFX"
-script = ExtResource( 5 )
+script = ExtResource( 9 )
 
 [node name="disabler" type="Node" parent="."]
-script = ExtResource( 17 )
+script = ExtResource( 3 )
 fade_out = true
 delete_after_fade = true
 undo_on_rotation_end = false
@@ -167,7 +167,7 @@ one_shot = true
 explosiveness = 0.9
 local_coords = false
 process_material = ExtResource( 1 )
-texture = ExtResource( 4 )
+texture = ExtResource( 5 )
 
 [connection signal="body_entered" from="playerDetector_left" to="." method="_on_playerDetector_left_body_entered"]
 [connection signal="body_exited" from="playerDetector_left" to="." method="_on_playerDetector_left_body_exited"]

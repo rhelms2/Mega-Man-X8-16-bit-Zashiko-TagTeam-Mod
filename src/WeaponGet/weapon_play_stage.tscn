@@ -1,4 +1,4 @@
-[gd_scene load_steps=83 format=2]
+[gd_scene load_steps=78 format=2]
 
 [ext_resource path="res://src/Levels/StageSegmentManager.gd" type="Script" id=1]
 [ext_resource path="res://src/Levels/music_player.gd" type="Script" id=2]
@@ -15,8 +15,8 @@
 [ext_resource path="res://src/Sounds/OST - Stage Clear.ogg" type="AudioStream" id=13]
 [ext_resource path="res://src/Sounds/OST - boss - Intro.ogg" type="AudioStream" id=14]
 [ext_resource path="res://src/Levels/skip_ready.gd" type="Script" id=15]
-[ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=16]
-[ext_resource path="res://src/Actors/charge_shader.tres" type="Shader" id=17]
+[ext_resource path="res://src/Actors/Player/Player.tscn" type="PackedScene" id=16]
+[ext_resource path="res://src/Actors/Player/charge_shader.tres" type="Shader" id=17]
 [ext_resource path="res://src/Objects/Spikes/spike_01.png" type="Texture" id=18]
 [ext_resource path="res://src/Objects/Spikes/spike_02.png" type="Texture" id=19]
 [ext_resource path="res://src/Objects/Spikes/spike_00.png" type="Texture" id=20]
@@ -104,146 +104,6 @@ shader_param/R_MainColor3 = Color( 0.12549, 0.188235, 0.501961, 1 )
 shader_param/R_MainColor4 = Color( 0.470588, 0.847059, 0.941176, 1 )
 shader_param/R_MainColor5 = Color( 0.313726, 0.627451, 0.941176, 1 )
 shader_param/R_MainColor6 = Color( 0.0941176, 0.345098, 0.690196, 1 )
-shader_param/CrystalColor1 = Color( 0.909804, 1, 0.733333, 1 )
-shader_param/CrystalColor2 = Color( 0.541176, 0.854902, 0.341176, 1 )
-shader_param/CrystalColor3 = Color( 0.207843, 0.619608, 0.415686, 1 )
-shader_param/R_CrystalColor1 = Color( 0.941176, 0.941176, 0.941176, 1 )
-shader_param/Alert = 0.0
-shader_param/R_CrystalColor2 = Color( 0.941176, 0.25098, 0.0627451, 1 )
-shader_param/R_CrystalColor3 = Color( 0.447059, 0.133333, 0.215686, 1 )
-shader_param/tolerance = 0.01
-shader_param/Alpha = 1.0
-
-[sub_resource type="ShaderMaterial" id=69]
-resource_local_to_scene = true
-shader = ExtResource( 17 )
-shader_param/Flash = null
-shader_param/Charge = 0.0
-shader_param/Color = Color( 0, 0, 0, 1 )
-shader_param/MainColor1 = Color( 0.501961, 0.501961, 0.501961, 1 )
-shader_param/MainColor2 = Color( 0.52549, 0.345098, 0.458824, 1 )
-shader_param/MainColor3 = Color( 0.34902, 0.211765, 0.298039, 1 )
-shader_param/MainColor4 = Color( 0.909804, 0.878431, 0.25098, 1 )
-shader_param/MainColor5 = Color( 0.945098, 0.6, 0.27451, 1 )
-shader_param/MainColor6 = Color( 0.670588, 0.313726, 0.266667, 1 )
-shader_param/R_MainColor1 = Color( 0.501961, 0.501961, 0.501961, 1 )
-shader_param/R_MainColor2 = Color( 0.52549, 0.345098, 0.458824, 1 )
-shader_param/R_MainColor3 = Color( 0.34902, 0.211765, 0.298039, 1 )
-shader_param/R_MainColor4 = Color( 0.909804, 0.878431, 0.25098, 1 )
-shader_param/R_MainColor5 = Color( 0.945098, 0.6, 0.27451, 1 )
-shader_param/R_MainColor6 = Color( 0.670588, 0.313726, 0.266667, 1 )
-shader_param/CrystalColor1 = Color( 0.909804, 1, 0.733333, 1 )
-shader_param/CrystalColor2 = Color( 0.541176, 0.854902, 0.341176, 1 )
-shader_param/CrystalColor3 = Color( 0.207843, 0.619608, 0.415686, 1 )
-shader_param/R_CrystalColor1 = Color( 0.941176, 0.941176, 0.941176, 1 )
-shader_param/Alert = 0.0
-shader_param/R_CrystalColor2 = Color( 0.941176, 0.25098, 0.0627451, 1 )
-shader_param/R_CrystalColor3 = Color( 0.447059, 0.133333, 0.215686, 1 )
-shader_param/tolerance = 0.01
-shader_param/Alpha = 1.0
-
-[sub_resource type="ShaderMaterial" id=70]
-resource_local_to_scene = true
-shader = ExtResource( 17 )
-shader_param/Flash = null
-shader_param/Charge = 0.0
-shader_param/Color = Color( 0, 0, 0, 1 )
-shader_param/MainColor1 = Color( 0.501961, 0.501961, 0.501961, 1 )
-shader_param/MainColor2 = Color( 0.52549, 0.345098, 0.458824, 1 )
-shader_param/MainColor3 = Color( 0.34902, 0.211765, 0.298039, 1 )
-shader_param/MainColor4 = Color( 0.909804, 0.878431, 0.25098, 1 )
-shader_param/MainColor5 = Color( 0.945098, 0.6, 0.27451, 1 )
-shader_param/MainColor6 = Color( 0.670588, 0.313726, 0.266667, 1 )
-shader_param/R_MainColor1 = Color( 0.501961, 0.501961, 0.501961, 1 )
-shader_param/R_MainColor2 = Color( 0.52549, 0.345098, 0.458824, 1 )
-shader_param/R_MainColor3 = Color( 0.34902, 0.211765, 0.298039, 1 )
-shader_param/R_MainColor4 = Color( 0.909804, 0.878431, 0.25098, 1 )
-shader_param/R_MainColor5 = Color( 0.945098, 0.6, 0.27451, 1 )
-shader_param/R_MainColor6 = Color( 0.670588, 0.313726, 0.266667, 1 )
-shader_param/CrystalColor1 = Color( 0.909804, 1, 0.733333, 1 )
-shader_param/CrystalColor2 = Color( 0.541176, 0.854902, 0.341176, 1 )
-shader_param/CrystalColor3 = Color( 0.207843, 0.619608, 0.415686, 1 )
-shader_param/R_CrystalColor1 = Color( 0.941176, 0.941176, 0.941176, 1 )
-shader_param/Alert = 0.0
-shader_param/R_CrystalColor2 = Color( 0.941176, 0.25098, 0.0627451, 1 )
-shader_param/R_CrystalColor3 = Color( 0.447059, 0.133333, 0.215686, 1 )
-shader_param/tolerance = 0.01
-shader_param/Alpha = 1.0
-
-[sub_resource type="ShaderMaterial" id=71]
-resource_local_to_scene = true
-shader = ExtResource( 17 )
-shader_param/Flash = null
-shader_param/Charge = 0.0
-shader_param/Color = Color( 0, 0, 0, 1 )
-shader_param/MainColor1 = Color( 0.501961, 0.501961, 0.501961, 1 )
-shader_param/MainColor2 = Color( 0.52549, 0.345098, 0.458824, 1 )
-shader_param/MainColor3 = Color( 0.34902, 0.211765, 0.298039, 1 )
-shader_param/MainColor4 = Color( 0.909804, 0.878431, 0.25098, 1 )
-shader_param/MainColor5 = Color( 0.945098, 0.6, 0.27451, 1 )
-shader_param/MainColor6 = Color( 0.670588, 0.313726, 0.266667, 1 )
-shader_param/R_MainColor1 = Color( 0.501961, 0.501961, 0.501961, 1 )
-shader_param/R_MainColor2 = Color( 0.52549, 0.345098, 0.458824, 1 )
-shader_param/R_MainColor3 = Color( 0.34902, 0.211765, 0.298039, 1 )
-shader_param/R_MainColor4 = Color( 0.909804, 0.878431, 0.25098, 1 )
-shader_param/R_MainColor5 = Color( 0.945098, 0.6, 0.27451, 1 )
-shader_param/R_MainColor6 = Color( 0.670588, 0.313726, 0.266667, 1 )
-shader_param/CrystalColor1 = Color( 0.909804, 1, 0.733333, 1 )
-shader_param/CrystalColor2 = Color( 0.541176, 0.854902, 0.341176, 1 )
-shader_param/CrystalColor3 = Color( 0.207843, 0.619608, 0.415686, 1 )
-shader_param/R_CrystalColor1 = Color( 0.941176, 0.941176, 0.941176, 1 )
-shader_param/Alert = 0.0
-shader_param/R_CrystalColor2 = Color( 0.941176, 0.25098, 0.0627451, 1 )
-shader_param/R_CrystalColor3 = Color( 0.447059, 0.133333, 0.215686, 1 )
-shader_param/tolerance = 0.01
-shader_param/Alpha = 1.0
-
-[sub_resource type="ShaderMaterial" id=72]
-resource_local_to_scene = true
-shader = ExtResource( 17 )
-shader_param/Flash = null
-shader_param/Charge = 0.0
-shader_param/Color = Color( 0, 0, 0, 1 )
-shader_param/MainColor1 = Color( 0.501961, 0.501961, 0.501961, 1 )
-shader_param/MainColor2 = Color( 0.52549, 0.345098, 0.458824, 1 )
-shader_param/MainColor3 = Color( 0.34902, 0.211765, 0.298039, 1 )
-shader_param/MainColor4 = Color( 0.909804, 0.878431, 0.25098, 1 )
-shader_param/MainColor5 = Color( 0.945098, 0.6, 0.27451, 1 )
-shader_param/MainColor6 = Color( 0.670588, 0.313726, 0.266667, 1 )
-shader_param/R_MainColor1 = Color( 0.501961, 0.501961, 0.501961, 1 )
-shader_param/R_MainColor2 = Color( 0.52549, 0.345098, 0.458824, 1 )
-shader_param/R_MainColor3 = Color( 0.34902, 0.211765, 0.298039, 1 )
-shader_param/R_MainColor4 = Color( 0.909804, 0.878431, 0.25098, 1 )
-shader_param/R_MainColor5 = Color( 0.945098, 0.6, 0.27451, 1 )
-shader_param/R_MainColor6 = Color( 0.670588, 0.313726, 0.266667, 1 )
-shader_param/CrystalColor1 = Color( 0.909804, 1, 0.733333, 1 )
-shader_param/CrystalColor2 = Color( 0.541176, 0.854902, 0.341176, 1 )
-shader_param/CrystalColor3 = Color( 0.207843, 0.619608, 0.415686, 1 )
-shader_param/R_CrystalColor1 = Color( 0.941176, 0.941176, 0.941176, 1 )
-shader_param/Alert = 0.0
-shader_param/R_CrystalColor2 = Color( 0.941176, 0.25098, 0.0627451, 1 )
-shader_param/R_CrystalColor3 = Color( 0.447059, 0.133333, 0.215686, 1 )
-shader_param/tolerance = 0.01
-shader_param/Alpha = 1.0
-
-[sub_resource type="ShaderMaterial" id=73]
-resource_local_to_scene = true
-shader = ExtResource( 17 )
-shader_param/Flash = null
-shader_param/Charge = 0.0
-shader_param/Color = Color( 0, 0, 0, 1 )
-shader_param/MainColor1 = Color( 0.501961, 0.501961, 0.501961, 1 )
-shader_param/MainColor2 = Color( 0.52549, 0.345098, 0.458824, 1 )
-shader_param/MainColor3 = Color( 0.34902, 0.211765, 0.298039, 1 )
-shader_param/MainColor4 = Color( 0.909804, 0.878431, 0.25098, 1 )
-shader_param/MainColor5 = Color( 0.945098, 0.6, 0.27451, 1 )
-shader_param/MainColor6 = Color( 0.670588, 0.313726, 0.266667, 1 )
-shader_param/R_MainColor1 = Color( 0.501961, 0.501961, 0.501961, 1 )
-shader_param/R_MainColor2 = Color( 0.52549, 0.345098, 0.458824, 1 )
-shader_param/R_MainColor3 = Color( 0.34902, 0.211765, 0.298039, 1 )
-shader_param/R_MainColor4 = Color( 0.909804, 0.878431, 0.25098, 1 )
-shader_param/R_MainColor5 = Color( 0.945098, 0.6, 0.27451, 1 )
-shader_param/R_MainColor6 = Color( 0.670588, 0.313726, 0.266667, 1 )
 shader_param/CrystalColor1 = Color( 0.909804, 1, 0.733333, 1 )
 shader_param/CrystalColor2 = Color( 0.541176, 0.854902, 0.341176, 1 )
 shader_param/CrystalColor3 = Color( 0.207843, 0.619608, 0.415686, 1 )
@@ -588,22 +448,7 @@ skip_intro = true
 
 [node name="animatedSprite" parent="X" index="3"]
 material = SubResource( 68 )
-frame = 58
-
-[node name="head_armor" parent="X/animatedSprite" index="0"]
-material = SubResource( 69 )
-
-[node name="body_armor" parent="X/animatedSprite" index="1"]
-material = SubResource( 70 )
-
-[node name="arms_armor" parent="X/animatedSprite" index="2"]
-material = SubResource( 71 )
-
-[node name="cannon_armor" parent="X/animatedSprite" index="3"]
-material = SubResource( 72 )
-
-[node name="legs_armor" parent="X/animatedSprite" index="4"]
-material = SubResource( 73 )
+frame = 41
 
 [node name="Damage" parent="X" index="16"]
 active = false
@@ -701,7 +546,6 @@ position = Vector2( 0, -16 )
 z_index = 1
 frames = ExtResource( 152 )
 animation = "idle"
-frame = 12
 playing = true
 flip_h = true
 

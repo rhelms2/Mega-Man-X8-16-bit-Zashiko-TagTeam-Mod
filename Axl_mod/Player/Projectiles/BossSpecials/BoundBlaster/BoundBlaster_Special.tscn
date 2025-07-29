@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossSpecials/BoundBlaster/BoundBlaster_Special.gd" type="Script" id=1]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossSpecials/BoundBlaster/Crystal_Shield.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://src/Sounds/MMX - Enemy Helmet Hit.ogg" type="AudioStream" id=3]
+[ext_resource path="res://src/Sounds/Trilobyte - Create Crystal.ogg" type="AudioStream" id=4]
+[ext_resource path="res://Axl_mod/SFX/shield.ogg" type="AudioStream" id=5]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 24.0832
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 24.0
+
+[node name="BoundBlaster" type="KinematicBody2D" groups=["Player Projectile"]]
+collision_layer = 68
+collision_mask = 0
+script = ExtResource( 1 )
+disable_base_ready = true
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+visible = false
+frames = ExtResource( 2 )
+animation = "shield_loop"
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 24
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+shape = SubResource( 2 )
+
+[node name="deflectSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="sfx_create" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+volume_db = -4.0
+max_distance = 600.0
+bus = "SFX"
+
+[node name="sfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
+volume_db = -16.0
+max_distance = 600.0
+bus = "SFX"
+
+[connection signal="area_entered" from="area2D" to="." method="_on_area2D_body_entered"]
+[connection signal="body_entered" from="area2D" to="." method="_on_area2D_body_entered"]

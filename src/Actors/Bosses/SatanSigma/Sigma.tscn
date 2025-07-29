@@ -14558,7 +14558,7 @@ material = ExtResource( 19 )
 z_index = 1
 frames = ExtResource( 2 )
 animation = "idle"
-frame = 13
+frame = 12
 playing = true
 flip_h = true
 
@@ -14664,7 +14664,7 @@ should_turn = false
 script = ExtResource( 34 )
 invulnerability_time = 0.1
 max_flash_time = 0.35
-weakenesses = [ "OpticShield" ]
+weakenesses = [ "OpticShield", "RayGun" ]
 weakness_multiplier = 1.25
 
 [node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
@@ -14930,7 +14930,6 @@ visible = false
 scale = Vector2( 24.8125, 1 )
 frames = SubResource( 68 )
 animation = "ready"
-frame = 7
 speed_scale = 2.0
 playing = true
 offset = Vector2( 16, 0 )

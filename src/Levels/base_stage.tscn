@@ -1,10 +1,9 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://src/Levels/music_player.gd" type="Script" id=1]
 [ext_resource path="res://src/System/StateCamera.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Sounds/OST - AngryBoss - Intro.ogg" type="AudioStream" id=3]
 [ext_resource path="res://src/Sounds/OST - AngryBoss - Loop.ogg" type="AudioStream" id=4]
-[ext_resource path="res://src/Actors/Player.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/HUD/Hud.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Sounds/OST - Capsule.ogg" type="AudioStream" id=7]
 [ext_resource path="res://src/Sounds/OST - boss.ogg" type="AudioStream" id=8]
@@ -43,7 +42,7 @@ stream = ExtResource( 13 )
 volume_db = -10.0
 bus = "SFX"
 
-[node name="X" parent="." instance=ExtResource( 5 )]
+[node name="CharacterPosition" type="Position2D" parent="."]
 
 [node name="Scenery" type="Node" parent="."]
 

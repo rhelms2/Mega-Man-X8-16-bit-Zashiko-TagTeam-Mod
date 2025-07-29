@@ -1,10 +1,10 @@
 extends NewAbility
 
-#onready var physics := Physics.new($"..")
 
-func _ready() -> void:
-	#execute()
+
+func _ready() -> void :
+	
 	pass
 
-#func _Update(delta):
-		#physics.process_gravity(delta)
+
+		

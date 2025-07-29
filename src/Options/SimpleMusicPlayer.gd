@@ -1,26 +1,26 @@
 extends AudioStreamPlayer
+class_name SimpleMusicPlayer
 
-export var loop : AudioStream
-export var play_on_start := true
-var started_loop := false
+export  var loop: AudioStream
+export  var play_on_start: bool = true
 
-func _ready() -> void:
+var started_loop: bool = false
+
+func _ready() -> void :
 	if play_on_start:
 		play()
 	if loop:
-		connect("finished",self,"play_loop")
+		connect("finished", self, "play_loop")
 
-func play_loop() -> void:
+func play_loop() -> void :
 	if loop and not started_loop:
 		started_loop = true
 		stream = loop
 		play()
 
-func fade_out() -> void:
-	print_debug("Starting song fadeout")
+func fade_out() -> void :
 	var t = create_tween()
-	t.tween_property(self,"volume_db",-80,1.5)
+	t.tween_property(self, "volume_db", - 80, 1.5)
 
-func play(from_position: float = 0.0) -> void:
-	print_debug("playing")
+func play(_from_position: float = 0.0) -> void :
 	.play()

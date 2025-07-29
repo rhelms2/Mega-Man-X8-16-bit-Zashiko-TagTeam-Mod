@@ -1,0 +1,117 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://X_mod/UltimateX/Player/Projectiles/Ultimate_Shot.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://X_mod/UltimateX/Player/Projectiles/Ultimate_Shot.gd" type="Script" id=2]
+[ext_resource path="res://src/Effects/Textures/follow_shot.png" type="Texture" id=3]
+[ext_resource path="res://SpriteEffect.gd" type="Script" id=4]
+[ext_resource path="res://src/Effects/Materials/buster_aux_particles.tres" type="Material" id=5]
+[ext_resource path="res://src/Effects/Deflect/heavy_deflect.png" type="Texture" id=6]
+[ext_resource path="res://src/Effects/Big Hit.tscn" type="PackedScene" id=7]
+[ext_resource path="res://X_mod/UltimateX/Player/Projectiles/Ultimate_Continue.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=9]
+[ext_resource path="res://src/Sounds/TRIPLE_SHOT.wav" type="AudioStream" id=10]
+[ext_resource path="res://X_mod/UltimateX/Player/Projectiles/Deflectable.gd" type="Script" id=11]
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 30.5, 28 )
+
+[sub_resource type="CanvasItemMaterial" id=6]
+particles_animation = true
+particles_anim_h_frames = 2
+particles_anim_v_frames = 2
+particles_anim_loop = false
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 30, 28 )
+
+[node name="Ultimate Buster" type="KinematicBody2D" groups=["Player Projectile"]]
+z_index = 4
+collision_layer = 4
+collision_mask = 0
+script = ExtResource( 2 )
+damage = 15.0
+damage_to_bosses = 15.0
+damage_to_weakness = 30.0
+horizontal_velocity = 500.0
+vertical_velocity = 500.0
+fire_sound = ExtResource( 10 )
+continue_shot = ExtResource( 8 )
+
+[node name="rayCast2D" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 50, 0 )
+collision_mask = 8
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 24, 0 )
+z_index = 4
+shape = SubResource( 8 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 8, 0 )
+z_index = 2
+frames = ExtResource( 1 )
+animation = "Tag"
+frame = 4
+playing = true
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( -3, -2.98023e-07 )
+scale = Vector2( 1, 0.3 )
+
+[node name="particles2D" type="Particles2D" parent="."]
+material = SubResource( 6 )
+amount = 12
+lifetime = 0.6
+local_coords = false
+process_material = ExtResource( 5 )
+texture = ExtResource( 3 )
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
+visible = false
+volume_db = -10.22
+pitch_scale = 0.41
+bus = "SFX"
+
+[node name="Hit Particle" parent="." instance=ExtResource( 7 )]
+
+[node name="disabler" type="Node" parent="Hit Particle"]
+script = ExtResource( 9 )
+fade_out = true
+undo_on_rotation_end = false
+
+[node name="deflect_particle" type="Sprite" parent="."]
+visible = false
+position = Vector2( 14, -1 )
+z_index = 10
+z_as_relative = false
+texture = ExtResource( 6 )
+hframes = 3
+vframes = 3
+script = ExtResource( 4 )
+animation_speed = 32.0
+one_shot = true
+
+[node name="disabler" type="Node" parent="deflect_particle"]
+script = ExtResource( 9 )
+fade_out = true
+undo_on_rotation_end = false
+
+[node name="disabler" type="Node" parent="."]
+script = ExtResource( 9 )
+disable_or_deactivate = true
+fade_out = true
+delete_after_fade = true
+undo_on_rotation_end = false
+
+[node name="Deflectable" type="RigidBody2D" parent="." groups=["Deflectable", "Player Projectile"]]
+collision_layer = 4
+collision_mask = 0
+mode = 3
+script = ExtResource( 11 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="Deflectable"]
+position = Vector2( 24, 0 )
+z_index = 3
+shape = SubResource( 9 )

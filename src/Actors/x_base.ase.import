@@ -1,16 +1,15 @@
 [remap]
 
-importer="aseprite_animation_importer"
+importer="aseprite_wizard.plugin"
 type="SpriteFrames"
-path="res://.import/x_base.ase-890e25824bdb6f64bcbdeb5ba9461d3c.res"
+valid=false
 
 [deps]
 
 source_file="res://src/Actors/x_base.ase"
-dest_files=[ "res://.import/x_base.ase-890e25824bdb6f64bcbdeb5ba9461d3c.res" ]
-
 [params]
 
-extrude=false
-default_direction="Forward"
-default_loop=false
+split_layers=false
+exclude_layers_pattern=""
+only_visible_layers=false
+sheet_type="Packed"

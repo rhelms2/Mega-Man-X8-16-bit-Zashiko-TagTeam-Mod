@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=2]
+[gd_scene load_steps=144 format=2]
 
 [ext_resource path="res://src/Options/pause.png" type="Texture" id=1]
 [ext_resource path="res://src/Options/pause_bg.png" type="Texture" id=2]
@@ -43,7 +43,7 @@
 [ext_resource path="res://src/Options/selectable_weapon_09.png" type="Texture" id=41]
 [ext_resource path="res://src/Options/Weapon.gd" type="Script" id=42]
 [ext_resource path="res://src/Options/Weapons.gd" type="Script" id=43]
-[ext_resource path="res://src/Sounds/FX - Menu Switch.ogg" type="AudioStream" id=44]
+[ext_resource path="res://System/SFX/option_b_select.ogg" type="AudioStream" id=44]
 [ext_resource path="res://src/Options/ArmorDisplay.gd" type="Script" id=45]
 [ext_resource path="res://src/Options/PauseSubtank.gd" type="Script" id=46]
 [ext_resource path="res://src/Objects/Pickups/Subtanks/subtank_MetalValley.tres" type="Resource" id=47]
@@ -76,6 +76,71 @@
 [ext_resource path="res://src/Options/ExitDisablerReceiver.gd" type="Script" id=74]
 [ext_resource path="res://src/Options/selectable_achiev.png" type="Texture" id=75]
 [ext_resource path="res://src/AchievementSystem/AchievementsScreen.tscn" type="PackedScene" id=76]
+[ext_resource path="res://Axl_mod/HUD/Pause/Axl_base.png" type="Texture" id=77]
+[ext_resource path="res://Axl_mod/HUD/lives_axl.png" type="Texture" id=78]
+[ext_resource path="res://Axl_mod/Pause/WeaponsAxl.gd" type="Script" id=79]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/GigaCrash/GigaCrash.tres" type="Resource" id=80]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/FlameBurner/FlameBurner.tres" type="Resource" id=81]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/IceGattling/IceGattling.tres" type="Resource" id=82]
+[ext_resource path="res://Axl_mod/Pause/WeaponAxl.gd" type="Script" id=83]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/BlastLauncher/BlastLauncher.tres" type="Resource" id=84]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/PlasmaGun/PlasmaGun.tres" type="Resource" id=85]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/BoundBlaster/BoundBlaster.tres" type="Resource" id=86]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/BlackArrow/BlackArrow.tres" type="Resource" id=87]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/SpiralMagnum/SpiralMagnum.tres" type="Resource" id=88]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/RayGun/RayGun.tres" type="Resource" id=89]
+[ext_resource path="res://Axl_mod/HUD/BossWeapons/selectable_weapon_00.png" type="Texture" id=90]
+[ext_resource path="res://Axl_mod/HUD/BossWeapons/selectable_weapon_05.png" type="Texture" id=91]
+[ext_resource path="res://Axl_mod/HUD/BossWeapons/selectable_weapon_01.png" type="Texture" id=92]
+[ext_resource path="res://Axl_mod/HUD/BossWeapons/selectable_weapon_03.png" type="Texture" id=93]
+[ext_resource path="res://Axl_mod/HUD/giga_attack_icon.png" type="Texture" id=94]
+[ext_resource path="res://Axl_mod/HUD/BossWeapons/selectable_weapon_06.png" type="Texture" id=95]
+[ext_resource path="res://Axl_mod/HUD/BossWeapons/selectable_weapon_02.png" type="Texture" id=96]
+[ext_resource path="res://Axl_mod/HUD/BossWeapons/selectable_weapon_04.png" type="Texture" id=97]
+[ext_resource path="res://Axl_mod/HUD/BossWeapons/selectable_weapon_07.png" type="Texture" id=98]
+[ext_resource path="res://Axl_mod/HUD/BossWeapons/selectable_weapon_08.png" type="Texture" id=99]
+[ext_resource path="res://Axl_mod/Player/Axl_Material_Shader.tres" type="Material" id=100]
+[ext_resource path="res://Zero_mod/HUD/ZeroX8_base.png" type="Texture" id=101]
+[ext_resource path="res://Zero_mod/HUD/lives_zero.png" type="Texture" id=102]
+[ext_resource path="res://Zero_mod/HUD/Weapons/Z-Saber.png" type="Texture" id=103]
+[ext_resource path="res://Zero_mod/HUD/Pause/WeaponsZero.gd" type="Script" id=104]
+[ext_resource path="res://Zero_mod/HUD/Pause/WeaponZero.gd" type="Script" id=105]
+[ext_resource path="res://Zero_mod/HUD/Pause/selectable_weapon_05.png" type="Texture" id=107]
+[ext_resource path="res://Zero_mod/HUD/Pause/selectable_weapon_06.png" type="Texture" id=108]
+[ext_resource path="res://Zero_mod/HUD/Pause/selectable_weapon_07.png" type="Texture" id=109]
+[ext_resource path="res://Zero_mod/HUD/Pause/selectable_weapon_08.png" type="Texture" id=110]
+[ext_resource path="res://Zero_mod/HUD/Pause/selectable_weapon_03.png" type="Texture" id=111]
+[ext_resource path="res://Zero_mod/HUD/Pause/selectable_weapon_01.png" type="Texture" id=112]
+[ext_resource path="res://Zero_mod/HUD/Pause/selectable_weapon_04.png" type="Texture" id=113]
+[ext_resource path="res://Zero_mod/HUD/Pause/selectable_weapon_02.png" type="Texture" id=114]
+[ext_resource path="res://Zero_mod/HUD/Pause/ZeroAbilityDisplay.gd" type="Script" id=115]
+[ext_resource path="res://Zero_mod/HUD/Weapons/K-Knuckle.png" type="Texture" id=116]
+[ext_resource path="res://Zero_mod/HUD/Weapons/T-Breaker.png" type="Texture" id=117]
+[ext_resource path="res://Zero_mod/HUD/Weapons/D-Glaive.png" type="Texture" id=118]
+[ext_resource path="res://Zero_mod/HUD/Weapons/V-Hanger.png" type="Texture" id=119]
+[ext_resource path="res://Zero_mod/HUD/Weapons/B-Fan.png" type="Texture" id=120]
+[ext_resource path="res://Zero_mod/HUD/Weapons/Sigma-Blade.png" type="Texture" id=121]
+[ext_resource path="res://Zero_mod/Player/Weapons/B-Fan.tres" type="Resource" id=122]
+[ext_resource path="res://Zero_mod/Player/Weapons/K-Knuckle.tres" type="Resource" id=123]
+[ext_resource path="res://Zero_mod/Player/Weapons/D-Glaive.tres" type="Resource" id=124]
+[ext_resource path="res://Zero_mod/Player/Weapons/Sigma-Blade.tres" type="Resource" id=125]
+[ext_resource path="res://Zero_mod/Player/Weapons/V-Hanger.tres" type="Resource" id=126]
+[ext_resource path="res://Zero_mod/Player/Weapons/T-Breaker.tres" type="Resource" id=127]
+[ext_resource path="res://Zero_mod/Player/Weapons/Z-Saber.tres" type="Resource" id=128]
+[ext_resource path="res://Zero_mod/HUD/Pause/black_zero_collectible.png" type="Texture" id=129]
+[ext_resource path="res://Zero_mod/HUD/Pause/AbilityZero.gd" type="Script" id=130]
+[ext_resource path="res://Zero_mod/Player/BossAbilities/Tenshouha.tres" type="Resource" id=131]
+[ext_resource path="res://Zero_mod/Player/BossAbilities/Youdantotsu.tres" type="Resource" id=132]
+[ext_resource path="res://Zero_mod/Player/BossAbilities/Hyouryuushou.tres" type="Resource" id=133]
+[ext_resource path="res://Zero_mod/Player/BossAbilities/Juuhazan.tres" type="Resource" id=134]
+[ext_resource path="res://Zero_mod/Player/BossAbilities/Raikousen.tres" type="Resource" id=135]
+[ext_resource path="res://Zero_mod/Player/BossAbilities/Rekkyoudan.tres" type="Resource" id=136]
+[ext_resource path="res://Zero_mod/Player/BossAbilities/Rasetsusen.tres" type="Resource" id=137]
+[ext_resource path="res://Zero_mod/Player/BossAbilities/Enkoujin.tres" type="Resource" id=138]
+[ext_resource path="res://Zero_mod/HUD/Pause/weapon_deactivated.png" type="Texture" id=139]
+[ext_resource path="res://Zero_mod/X8/Sprites/ZeroX8_Material_Shader.tres" type="Material" id=140]
+[ext_resource path="res://X_mod/UltimateX/Player/NovaStrike/NovaStrike.tres" type="Resource" id=141]
+[ext_resource path="res://System/SFX/open_option.ogg" type="AudioStream" id=142]
 
 [sub_resource type="ShortCut" id=1]
 
@@ -108,6 +173,11 @@ stream = ExtResource( 44 )
 volume_db = -4.0
 bus = "SFX"
 
+[node name="open_options" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 142 )
+volume_db = -4.0
+bus = "SFX"
+
 [node name="bg" type="TextureRect" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
@@ -123,6 +193,20 @@ margin_top = -107.0
 margin_right = 142.0
 margin_bottom = 109.0
 texture = ExtResource( 1 )
+
+[node name="game_mode" type="Label" parent="pause"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -197.0
+margin_top = -113.0
+margin_right = 197.0
+margin_bottom = 113.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 54 )
+align = 1
+valign = 2
 
 [node name="Subtank Group" type="Control" parent="pause"]
 margin_left = 146.0
@@ -240,6 +324,7 @@ margin_top = 22.0
 margin_right = 40.0
 margin_bottom = 40.0
 rect_min_size = Vector2( 18, 18 )
+focus_neighbour_right = NodePath("../../../Options Group/OPTIONS_ABV")
 action_mode = 0
 shortcut = SubResource( 1 )
 texture_normal = ExtResource( 5 )
@@ -279,6 +364,7 @@ margin_top = 5.0
 margin_right = -3.0
 margin_bottom = 23.0
 rect_min_size = Vector2( 18, 18 )
+focus_neighbour_left = NodePath("../../Subtank Group/gridContainer/Subtank2")
 action_mode = 0
 shortcut = SubResource( 1 )
 texture_normal = ExtResource( 8 )
@@ -303,6 +389,7 @@ shortcut = SubResource( 1 )
 texture_normal = ExtResource( 58 )
 script = ExtResource( 59 )
 menu_path = NodePath("../../..")
+pick_sound = NodePath("../../../open_options")
 method = "start_keyconfig"
 
 [node name="OPTIONS_ABV" type="TextureButton" parent="pause/Options Group"]
@@ -314,11 +401,13 @@ margin_top = 26.0
 margin_right = -3.0
 margin_bottom = 44.0
 rect_min_size = Vector2( 18, 18 )
+focus_neighbour_left = NodePath("../../Subtank Group/gridContainer/Subtank4")
 action_mode = 0
 shortcut = SubResource( 1 )
 texture_normal = ExtResource( 60 )
 script = ExtResource( 59 )
 menu_path = NodePath("../../..")
+pick_sound = NodePath("../../../open_options")
 method = "start_options"
 
 [node name="ACHIEV_ABV" type="TextureButton" parent="pause/Options Group"]
@@ -335,6 +424,7 @@ shortcut = SubResource( 1 )
 texture_normal = ExtResource( 75 )
 script = ExtResource( 59 )
 menu_path = NodePath("../../..")
+pick_sound = NodePath("../../../open_options")
 method = "start_achievements"
 
 [node name="OptionsText" type="Label" parent="pause/Options Group"]
@@ -349,11 +439,12 @@ custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
 custom_fonts/font = ExtResource( 54 )
-text = "options"
+text = "OPTIONS_ABV"
 align = 1
 uppercase = true
 
 [node name="Armor Group" type="Control" parent="pause"]
+visible = false
 margin_left = 146.0
 margin_top = 140.0
 margin_right = 275.0
@@ -449,6 +540,7 @@ margin_right = 275.0
 margin_bottom = 68.0
 
 [node name="lives_icon" type="TextureRect" parent="pause/Lives"]
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -458,6 +550,32 @@ margin_top = -11.5
 margin_right = -24.5
 margin_bottom = 4.5
 texture = ExtResource( 18 )
+
+[node name="Axl_lives_icon" type="TextureRect" parent="pause/Lives"]
+visible = false
+material = ExtResource( 100 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -41.5
+margin_top = -11.5
+margin_right = -23.5
+margin_bottom = 4.5
+texture = ExtResource( 78 )
+
+[node name="Zero_lives_icon" type="TextureRect" parent="pause/Lives"]
+visible = false
+material = ExtResource( 140 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -40.5
+margin_top = -11.5
+margin_right = -24.5
+margin_bottom = 4.5
+texture = ExtResource( 102 )
 
 [node name="lives_number" type="Label" parent="pause/Lives"]
 margin_left = 45.0
@@ -471,6 +589,7 @@ text = "2"
 script = ExtResource( 67 )
 
 [node name="X_icon" type="TextureRect" parent="pause/Lives"]
+visible = false
 material = ExtResource( 53 )
 anchor_left = 0.5
 anchor_top = 0.5
@@ -588,6 +707,33 @@ margin_bottom = 19.0
 texture = ExtResource( 27 )
 flip_h = true
 
+[node name="Axl_icon" type="TextureRect" parent="pause/Lives"]
+visible = false
+material = ExtResource( 100 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -7.5
+margin_top = -40.5
+margin_right = 56.5
+margin_bottom = 23.5
+texture = ExtResource( 77 )
+flip_h = true
+
+[node name="Zero_icon" type="TextureRect" parent="pause/Lives"]
+material = ExtResource( 140 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -7.5
+margin_top = -38.5
+margin_right = 56.5
+margin_bottom = 25.5
+texture = ExtResource( 101 )
+flip_h = true
+
 [node name="lifebar" type="NinePatchRect" parent="pause/Lives"]
 margin_left = 43.0
 margin_top = 46.0
@@ -610,6 +756,7 @@ value = 16.0
 texture_progress = ExtResource( 20 )
 
 [node name="Weapons" type="VBoxContainer" parent="pause"]
+visible = false
 margin_left = 27.0
 margin_top = 14.0
 margin_right = 139.0
@@ -700,7 +847,7 @@ custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
 custom_fonts/font = ExtResource( 54 )
-text = "S. Shield"
+text = "SUNFLOWER_WPNMENU"
 uppercase = true
 
 [node name="antonion_weapon" type="TextureButton" parent="pause/Weapons"]
@@ -744,7 +891,7 @@ custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
 custom_fonts/font = ExtResource( 54 )
-text = "G. bomb"
+text = "ANTONION_WPNMENU"
 uppercase = true
 
 [node name="mantis_weapon" type="TextureButton" parent="pause/Weapons"]
@@ -788,7 +935,7 @@ custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
 custom_fonts/font = ExtResource( 54 )
-text = "B. Arrow"
+text = "MANTIS_WPNMENU"
 uppercase = true
 
 [node name="manowar_weapon" type="TextureButton" parent="pause/Weapons"]
@@ -832,7 +979,7 @@ custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
 custom_fonts/font = ExtResource( 54 )
-text = "T. Dancer"
+text = "MANOWAR_WPNMENU"
 uppercase = true
 
 [node name="panda_weapon" type="TextureButton" parent="pause/Weapons"]
@@ -876,7 +1023,7 @@ custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
 custom_fonts/font = ExtResource( 54 )
-text = "B. Launcher"
+text = "PANDA_WPNMENU"
 uppercase = true
 
 [node name="trilobyte_weapon" type="TextureButton" parent="pause/Weapons"]
@@ -920,7 +1067,7 @@ custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
 custom_fonts/font = ExtResource( 54 )
-text = "C. Bouncer"
+text = "TRILOBYTE_WPNMENU"
 uppercase = true
 
 [node name="yeti_weapon" type="TextureButton" parent="pause/Weapons"]
@@ -964,7 +1111,7 @@ custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
 custom_fonts/font = ExtResource( 54 )
-text = "D. Diamond"
+text = "YETI_WPNMENU"
 uppercase = true
 
 [node name="rooster_weapon" type="TextureButton" parent="pause/Weapons"]
@@ -1008,7 +1155,7 @@ custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
 custom_fonts/font = ExtResource( 54 )
-text = "F. Dash"
+text = "ROOSTER_WPNMENU"
 uppercase = true
 
 [node name="X Drive" type="TextureButton" parent="pause/Weapons"]
@@ -1097,6 +1244,1020 @@ custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
 custom_fonts/font = ExtResource( 54 )
 text = "G. Impact"
+uppercase = true
+
+[node name="Nova Strike" type="TextureButton" parent="pause/Weapons"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+margin_top = 209.0
+margin_right = 112.0
+margin_bottom = 227.0
+rect_min_size = Vector2( 18, 18 )
+action_mode = 0
+texture_normal = ExtResource( 56 )
+script = ExtResource( 42 )
+menu_path = NodePath("../../..")
+weapon_resource = ExtResource( 141 )
+
+[node name="ammo" type="NinePatchRect" parent="pause/Weapons/Nova Strike"]
+margin_left = 19.0
+margin_top = 9.0
+margin_right = 82.0
+margin_bottom = 16.0
+texture = ExtResource( 21 )
+patch_margin_left = 4
+patch_margin_right = 3
+axis_stretch_horizontal = 1
+
+[node name="current" type="TextureProgress" parent="pause/Weapons/Nova Strike/ammo"]
+margin_left = 4.0
+margin_top = 1.0
+margin_right = 68.0
+margin_bottom = 6.0
+max_value = 32.0
+value = 28.0
+texture_progress = ExtResource( 20 )
+
+[node name="weapon_name" type="Label" parent="pause/Weapons/Nova Strike"]
+margin_left = 23.0
+margin_top = -4.0
+margin_right = 82.0
+margin_bottom = -3.0
+custom_colors/font_color = Color( 1, 0.913725, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 54 )
+text = "Nova Strike"
+uppercase = true
+
+[node name="WeaponsAxl" type="VBoxContainer" parent="pause"]
+visible = false
+margin_left = 12.0
+margin_top = 14.0
+margin_right = 139.0
+margin_bottom = 203.0
+custom_constants/separation = 1
+script = ExtResource( 79 )
+
+[node name="Pistol" type="TextureButton" parent="pause/WeaponsAxl"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+margin_right = 127.0
+margin_bottom = 18.0
+rect_min_size = Vector2( 18, 18 )
+action_mode = 0
+texture_normal = ExtResource( 90 )
+script = ExtResource( 83 )
+menu_path = NodePath("../../..")
+
+[node name="ammo" type="NinePatchRect" parent="pause/WeaponsAxl/Pistol"]
+visible = false
+margin_left = 19.0
+margin_top = 9.0
+margin_right = 82.0
+margin_bottom = 16.0
+texture = ExtResource( 21 )
+patch_margin_left = 4
+patch_margin_right = 3
+axis_stretch_horizontal = 1
+
+[node name="current" type="TextureProgress" parent="pause/WeaponsAxl/Pistol/ammo"]
+margin_left = 4.0
+margin_top = 1.0
+margin_right = 68.0
+margin_bottom = 6.0
+max_value = 32.0
+value = 28.0
+texture_progress = ExtResource( 20 )
+
+[node name="weapon_name" type="Label" parent="pause/WeaponsAxl/Pistol"]
+margin_left = 19.0
+margin_top = -1.0
+margin_right = 88.0
+margin_bottom = 9.0
+custom_colors/font_color = Color( 1, 0.913725, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 54 )
+text = "AXL_WPNMENU"
+uppercase = true
+
+[node name="sunflower_weapon" type="TextureButton" parent="pause/WeaponsAxl"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+margin_top = 19.0
+margin_right = 127.0
+margin_bottom = 37.0
+rect_min_size = Vector2( 18, 18 )
+action_mode = 0
+texture_normal = ExtResource( 92 )
+script = ExtResource( 83 )
+menu_path = NodePath("../../..")
+weapon_resource = ExtResource( 89 )
+
+[node name="ammo" type="NinePatchRect" parent="pause/WeaponsAxl/sunflower_weapon"]
+visible = false
+margin_left = 19.0
+margin_top = 9.0
+margin_right = 82.0
+margin_bottom = 16.0
+texture = ExtResource( 21 )
+patch_margin_left = 4
+patch_margin_right = 3
+axis_stretch_horizontal = 1
+
+[node name="current" type="TextureProgress" parent="pause/WeaponsAxl/sunflower_weapon/ammo"]
+margin_left = 4.0
+margin_top = 1.0
+margin_right = 68.0
+margin_bottom = 6.0
+max_value = 32.0
+value = 28.0
+texture_progress = ExtResource( 20 )
+
+[node name="weapon_name" type="Label" parent="pause/WeaponsAxl/sunflower_weapon"]
+margin_left = 19.0
+margin_top = -1.0
+margin_right = 85.0
+margin_bottom = -3.0
+custom_colors/font_color = Color( 1, 0.913725, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 54 )
+text = "Ray Gun"
+uppercase = true
+
+[node name="antonion_weapon" type="TextureButton" parent="pause/WeaponsAxl"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+margin_top = 38.0
+margin_right = 127.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 18, 18 )
+action_mode = 0
+texture_normal = ExtResource( 96 )
+script = ExtResource( 83 )
+menu_path = NodePath("../../..")
+weapon_resource = ExtResource( 88 )
+
+[node name="ammo" type="NinePatchRect" parent="pause/WeaponsAxl/antonion_weapon"]
+visible = false
+margin_left = 19.0
+margin_top = 9.0
+margin_right = 82.0
+margin_bottom = 16.0
+texture = ExtResource( 21 )
+patch_margin_left = 4
+patch_margin_right = 3
+axis_stretch_horizontal = 1
+
+[node name="current" type="TextureProgress" parent="pause/WeaponsAxl/antonion_weapon/ammo"]
+margin_left = 4.0
+margin_top = 1.0
+margin_right = 68.0
+margin_bottom = 6.0
+max_value = 32.0
+value = 28.0
+texture_progress = ExtResource( 20 )
+
+[node name="weapon_name" type="Label" parent="pause/WeaponsAxl/antonion_weapon"]
+margin_left = 19.0
+margin_top = -1.0
+margin_right = 82.0
+margin_bottom = -3.0
+custom_colors/font_color = Color( 1, 0.913725, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 54 )
+text = "Spiral Magnum"
+uppercase = true
+
+[node name="mantis_weapon" type="TextureButton" parent="pause/WeaponsAxl"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+margin_top = 57.0
+margin_right = 127.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 18, 18 )
+action_mode = 0
+texture_normal = ExtResource( 93 )
+script = ExtResource( 83 )
+menu_path = NodePath("../../..")
+weapon_resource = ExtResource( 87 )
+
+[node name="ammo" type="NinePatchRect" parent="pause/WeaponsAxl/mantis_weapon"]
+visible = false
+margin_left = 19.0
+margin_top = 9.0
+margin_right = 82.0
+margin_bottom = 16.0
+texture = ExtResource( 21 )
+patch_margin_left = 4
+patch_margin_right = 3
+axis_stretch_horizontal = 1
+
+[node name="current" type="TextureProgress" parent="pause/WeaponsAxl/mantis_weapon/ammo"]
+margin_left = 4.0
+margin_top = 1.0
+margin_right = 68.0
+margin_bottom = 6.0
+max_value = 32.0
+value = 28.0
+texture_progress = ExtResource( 20 )
+
+[node name="weapon_name" type="Label" parent="pause/WeaponsAxl/mantis_weapon"]
+margin_left = 19.0
+margin_top = -1.0
+margin_right = 82.0
+margin_bottom = -3.0
+custom_colors/font_color = Color( 1, 0.913725, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 54 )
+text = "Black Arrow"
+uppercase = true
+
+[node name="manowar_weapon" type="TextureButton" parent="pause/WeaponsAxl"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+margin_top = 76.0
+margin_right = 127.0
+margin_bottom = 94.0
+rect_min_size = Vector2( 18, 18 )
+action_mode = 0
+texture_normal = ExtResource( 97 )
+script = ExtResource( 83 )
+menu_path = NodePath("../../..")
+weapon_resource = ExtResource( 85 )
+
+[node name="ammo" type="NinePatchRect" parent="pause/WeaponsAxl/manowar_weapon"]
+visible = false
+margin_left = 19.0
+margin_top = 9.0
+margin_right = 82.0
+margin_bottom = 16.0
+texture = ExtResource( 21 )
+patch_margin_left = 4
+patch_margin_right = 3
+axis_stretch_horizontal = 1
+
+[node name="current" type="TextureProgress" parent="pause/WeaponsAxl/manowar_weapon/ammo"]
+margin_left = 4.0
+margin_top = 1.0
+margin_right = 68.0
+margin_bottom = 6.0
+max_value = 32.0
+value = 28.0
+texture_progress = ExtResource( 20 )
+
+[node name="weapon_name" type="Label" parent="pause/WeaponsAxl/manowar_weapon"]
+margin_left = 19.0
+margin_top = -1.0
+margin_right = 87.0
+margin_bottom = -3.0
+custom_colors/font_color = Color( 1, 0.913725, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 54 )
+text = "Plasma Gun"
+uppercase = true
+
+[node name="panda_weapon" type="TextureButton" parent="pause/WeaponsAxl"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+margin_top = 95.0
+margin_right = 127.0
+margin_bottom = 113.0
+rect_min_size = Vector2( 18, 18 )
+action_mode = 0
+texture_normal = ExtResource( 91 )
+script = ExtResource( 83 )
+menu_path = NodePath("../../..")
+weapon_resource = ExtResource( 84 )
+
+[node name="ammo" type="NinePatchRect" parent="pause/WeaponsAxl/panda_weapon"]
+visible = false
+margin_left = 19.0
+margin_top = 9.0
+margin_right = 82.0
+margin_bottom = 16.0
+texture = ExtResource( 21 )
+patch_margin_left = 4
+patch_margin_right = 3
+axis_stretch_horizontal = 1
+
+[node name="current" type="TextureProgress" parent="pause/WeaponsAxl/panda_weapon/ammo"]
+margin_left = 4.0
+margin_top = 1.0
+margin_right = 68.0
+margin_bottom = 6.0
+max_value = 32.0
+value = 28.0
+texture_progress = ExtResource( 20 )
+
+[node name="weapon_name" type="Label" parent="pause/WeaponsAxl/panda_weapon"]
+margin_left = 19.0
+margin_top = -1.0
+margin_right = 103.0
+margin_bottom = -3.0
+custom_colors/font_color = Color( 1, 0.913725, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 54 )
+text = "Blast Launcher"
+uppercase = true
+
+[node name="trilobyte_weapon" type="TextureButton" parent="pause/WeaponsAxl"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+margin_top = 114.0
+margin_right = 127.0
+margin_bottom = 132.0
+rect_min_size = Vector2( 18, 18 )
+action_mode = 0
+texture_normal = ExtResource( 95 )
+script = ExtResource( 83 )
+menu_path = NodePath("../../..")
+weapon_resource = ExtResource( 86 )
+
+[node name="ammo" type="NinePatchRect" parent="pause/WeaponsAxl/trilobyte_weapon"]
+visible = false
+margin_left = 19.0
+margin_top = 9.0
+margin_right = 82.0
+margin_bottom = 16.0
+texture = ExtResource( 21 )
+patch_margin_left = 4
+patch_margin_right = 3
+axis_stretch_horizontal = 1
+
+[node name="current" type="TextureProgress" parent="pause/WeaponsAxl/trilobyte_weapon/ammo"]
+margin_left = 4.0
+margin_top = 1.0
+margin_right = 68.0
+margin_bottom = 6.0
+max_value = 32.0
+value = 28.0
+texture_progress = ExtResource( 20 )
+
+[node name="weapon_name" type="Label" parent="pause/WeaponsAxl/trilobyte_weapon"]
+margin_left = 19.0
+margin_top = -1.0
+margin_right = 95.0
+margin_bottom = -3.0
+custom_colors/font_color = Color( 1, 0.913725, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 54 )
+text = "Bound Blaster"
+uppercase = true
+
+[node name="yeti_weapon" type="TextureButton" parent="pause/WeaponsAxl"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+margin_top = 133.0
+margin_right = 127.0
+margin_bottom = 151.0
+rect_min_size = Vector2( 18, 18 )
+action_mode = 0
+texture_normal = ExtResource( 98 )
+script = ExtResource( 83 )
+menu_path = NodePath("../../..")
+weapon_resource = ExtResource( 82 )
+
+[node name="ammo" type="NinePatchRect" parent="pause/WeaponsAxl/yeti_weapon"]
+visible = false
+margin_left = 19.0
+margin_top = 9.0
+margin_right = 82.0
+margin_bottom = 16.0
+texture = ExtResource( 21 )
+patch_margin_left = 4
+patch_margin_right = 3
+axis_stretch_horizontal = 1
+
+[node name="current" type="TextureProgress" parent="pause/WeaponsAxl/yeti_weapon/ammo"]
+margin_left = 4.0
+margin_top = 1.0
+margin_right = 68.0
+margin_bottom = 6.0
+max_value = 32.0
+value = 28.0
+texture_progress = ExtResource( 20 )
+
+[node name="weapon_name" type="Label" parent="pause/WeaponsAxl/yeti_weapon"]
+margin_left = 19.0
+margin_top = -1.0
+margin_right = 92.0
+margin_bottom = -3.0
+custom_colors/font_color = Color( 1, 0.913725, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 54 )
+text = "Ice Gattling"
+uppercase = true
+
+[node name="rooster_weapon" type="TextureButton" parent="pause/WeaponsAxl"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+margin_top = 152.0
+margin_right = 127.0
+margin_bottom = 170.0
+rect_min_size = Vector2( 18, 18 )
+action_mode = 0
+texture_normal = ExtResource( 99 )
+script = ExtResource( 83 )
+menu_path = NodePath("../../..")
+weapon_resource = ExtResource( 81 )
+
+[node name="ammo" type="NinePatchRect" parent="pause/WeaponsAxl/rooster_weapon"]
+visible = false
+margin_left = 19.0
+margin_top = 9.0
+margin_right = 82.0
+margin_bottom = 16.0
+texture = ExtResource( 21 )
+patch_margin_left = 4
+patch_margin_right = 3
+axis_stretch_horizontal = 1
+
+[node name="current" type="TextureProgress" parent="pause/WeaponsAxl/rooster_weapon/ammo"]
+margin_left = 4.0
+margin_top = 1.0
+margin_right = 68.0
+margin_bottom = 6.0
+max_value = 32.0
+value = 28.0
+texture_progress = ExtResource( 20 )
+
+[node name="weapon_name" type="Label" parent="pause/WeaponsAxl/rooster_weapon"]
+margin_left = 19.0
+margin_top = -1.0
+margin_right = 82.0
+margin_bottom = -3.0
+custom_colors/font_color = Color( 1, 0.913725, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 54 )
+text = "Flame Burner"
+uppercase = true
+
+[node name="Giga Impact" type="TextureButton" parent="pause/WeaponsAxl"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+margin_top = 171.0
+margin_right = 127.0
+margin_bottom = 189.0
+rect_min_size = Vector2( 18, 18 )
+action_mode = 0
+texture_normal = ExtResource( 94 )
+script = ExtResource( 83 )
+menu_path = NodePath("../../..")
+weapon_resource = ExtResource( 80 )
+
+[node name="ammo" type="NinePatchRect" parent="pause/WeaponsAxl/Giga Impact"]
+margin_left = 19.0
+margin_top = 9.0
+margin_right = 82.0
+margin_bottom = 16.0
+texture = ExtResource( 21 )
+patch_margin_left = 4
+patch_margin_right = 3
+axis_stretch_horizontal = 1
+
+[node name="current" type="TextureProgress" parent="pause/WeaponsAxl/Giga Impact/ammo"]
+margin_left = 4.0
+margin_top = 1.0
+margin_right = 68.0
+margin_bottom = 6.0
+max_value = 32.0
+value = 28.0
+texture_progress = ExtResource( 20 )
+
+[node name="weapon_name" type="Label" parent="pause/WeaponsAxl/Giga Impact"]
+margin_left = 19.0
+margin_top = -4.0
+margin_right = 82.0
+margin_bottom = -3.0
+custom_colors/font_color = Color( 1, 0.913725, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 54 )
+text = "Giga Attack"
+uppercase = true
+
+[node name="AbilitiesZero" type="GridContainer" parent="pause"]
+visible = false
+margin_left = 152.0
+margin_top = 145.0
+margin_right = 236.0
+margin_bottom = 185.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_constants/vseparation = 2
+custom_constants/hseparation = 5
+columns = 4
+script = ExtResource( 115 )
+
+[node name="sunflower_weapon" type="TextureButton" parent="pause/AbilitiesZero"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+margin_right = 18.0
+margin_bottom = 18.0
+rect_min_size = Vector2( 18, 18 )
+action_mode = 0
+texture_normal = ExtResource( 112 )
+script = ExtResource( 130 )
+menu_path = NodePath("../../..")
+weapon_resource = ExtResource( 131 )
+
+[node name="deactivated" type="TextureRect" parent="pause/AbilitiesZero/sunflower_weapon"]
+visible = false
+margin_right = 16.0
+margin_bottom = 16.0
+texture = ExtResource( 139 )
+
+[node name="antonion_weapon" type="TextureButton" parent="pause/AbilitiesZero"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+margin_left = 23.0
+margin_right = 41.0
+margin_bottom = 18.0
+rect_min_size = Vector2( 18, 18 )
+action_mode = 0
+texture_normal = ExtResource( 114 )
+script = ExtResource( 130 )
+menu_path = NodePath("../../..")
+weapon_resource = ExtResource( 134 )
+
+[node name="deactivated" type="TextureRect" parent="pause/AbilitiesZero/antonion_weapon"]
+visible = false
+margin_right = 16.0
+margin_bottom = 16.0
+texture = ExtResource( 139 )
+
+[node name="mantis_weapon" type="TextureButton" parent="pause/AbilitiesZero"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+margin_left = 46.0
+margin_right = 64.0
+margin_bottom = 18.0
+rect_min_size = Vector2( 18, 18 )
+action_mode = 0
+texture_normal = ExtResource( 111 )
+script = ExtResource( 130 )
+menu_path = NodePath("../../..")
+weapon_resource = ExtResource( 137 )
+
+[node name="deactivated" type="TextureRect" parent="pause/AbilitiesZero/mantis_weapon"]
+visible = false
+margin_right = 16.0
+margin_bottom = 16.0
+texture = ExtResource( 139 )
+
+[node name="manowar_weapon" type="TextureButton" parent="pause/AbilitiesZero"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+margin_left = 69.0
+margin_right = 87.0
+margin_bottom = 18.0
+rect_min_size = Vector2( 18, 18 )
+action_mode = 0
+texture_normal = ExtResource( 113 )
+script = ExtResource( 130 )
+menu_path = NodePath("../../..")
+weapon_resource = ExtResource( 135 )
+
+[node name="deactivated" type="TextureRect" parent="pause/AbilitiesZero/manowar_weapon"]
+visible = false
+margin_right = 16.0
+margin_bottom = 16.0
+texture = ExtResource( 139 )
+
+[node name="panda_weapon" type="TextureButton" parent="pause/AbilitiesZero"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+margin_top = 20.0
+margin_right = 18.0
+margin_bottom = 38.0
+rect_min_size = Vector2( 18, 18 )
+action_mode = 0
+texture_normal = ExtResource( 107 )
+script = ExtResource( 130 )
+menu_path = NodePath("../../..")
+weapon_resource = ExtResource( 132 )
+
+[node name="deactivated" type="TextureRect" parent="pause/AbilitiesZero/panda_weapon"]
+visible = false
+margin_right = 16.0
+margin_bottom = 16.0
+texture = ExtResource( 139 )
+
+[node name="trilobyte_weapon" type="TextureButton" parent="pause/AbilitiesZero"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+margin_left = 23.0
+margin_top = 20.0
+margin_right = 41.0
+margin_bottom = 38.0
+rect_min_size = Vector2( 18, 18 )
+action_mode = 0
+texture_normal = ExtResource( 108 )
+script = ExtResource( 130 )
+menu_path = NodePath("../../..")
+weapon_resource = ExtResource( 136 )
+
+[node name="deactivated" type="TextureRect" parent="pause/AbilitiesZero/trilobyte_weapon"]
+visible = false
+margin_right = 16.0
+margin_bottom = 16.0
+texture = ExtResource( 139 )
+
+[node name="yeti_weapon" type="TextureButton" parent="pause/AbilitiesZero"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+margin_left = 46.0
+margin_top = 20.0
+margin_right = 64.0
+margin_bottom = 38.0
+rect_min_size = Vector2( 18, 18 )
+action_mode = 0
+texture_normal = ExtResource( 109 )
+script = ExtResource( 130 )
+menu_path = NodePath("../../..")
+weapon_resource = ExtResource( 133 )
+
+[node name="deactivated" type="TextureRect" parent="pause/AbilitiesZero/yeti_weapon"]
+visible = false
+margin_right = 16.0
+margin_bottom = 16.0
+texture = ExtResource( 139 )
+
+[node name="rooster_weapon" type="TextureButton" parent="pause/AbilitiesZero"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+margin_left = 69.0
+margin_top = 20.0
+margin_right = 87.0
+margin_bottom = 38.0
+rect_min_size = Vector2( 18, 18 )
+action_mode = 0
+texture_normal = ExtResource( 110 )
+script = ExtResource( 130 )
+menu_path = NodePath("../../..")
+weapon_resource = ExtResource( 138 )
+
+[node name="deactivated" type="TextureRect" parent="pause/AbilitiesZero/rooster_weapon"]
+visible = false
+margin_right = 16.0
+margin_bottom = 16.0
+texture = ExtResource( 139 )
+
+[node name="WeaponsZero" type="VBoxContainer" parent="pause"]
+visible = false
+margin_left = 22.0
+margin_top = 20.0
+margin_right = 129.0
+margin_bottom = 197.0
+custom_constants/separation = 1
+script = ExtResource( 104 )
+
+[node name="Saber" type="TextureButton" parent="pause/WeaponsZero"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+margin_right = 107.0
+margin_bottom = 18.0
+rect_min_size = Vector2( 18, 18 )
+action_mode = 0
+texture_normal = ExtResource( 103 )
+script = ExtResource( 105 )
+menu_path = NodePath("../../..")
+weapon_resource = ExtResource( 128 )
+
+[node name="ammo" type="NinePatchRect" parent="pause/WeaponsZero/Saber"]
+visible = false
+margin_left = 19.0
+margin_top = 9.0
+margin_right = 82.0
+margin_bottom = 16.0
+texture = ExtResource( 21 )
+patch_margin_left = 4
+patch_margin_right = 3
+axis_stretch_horizontal = 1
+
+[node name="current" type="TextureProgress" parent="pause/WeaponsZero/Saber/ammo"]
+margin_left = 4.0
+margin_top = 1.0
+margin_right = 68.0
+margin_bottom = 6.0
+max_value = 32.0
+value = 28.0
+texture_progress = ExtResource( 20 )
+
+[node name="weapon_name" type="Label" parent="pause/WeaponsZero/Saber"]
+margin_left = 19.0
+margin_top = -1.0
+margin_right = 88.0
+margin_bottom = 9.0
+custom_colors/font_color = Color( 1, 0.913725, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 54 )
+text = "ZERO_WPNMENU"
+uppercase = true
+
+[node name="B-Fan" type="TextureButton" parent="pause/WeaponsZero"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+margin_top = 19.0
+margin_right = 107.0
+margin_bottom = 37.0
+rect_min_size = Vector2( 18, 18 )
+action_mode = 0
+texture_normal = ExtResource( 120 )
+script = ExtResource( 105 )
+menu_path = NodePath("../../..")
+weapon_resource = ExtResource( 122 )
+
+[node name="ammo" type="NinePatchRect" parent="pause/WeaponsZero/B-Fan"]
+visible = false
+margin_left = 19.0
+margin_top = 9.0
+margin_right = 82.0
+margin_bottom = 16.0
+texture = ExtResource( 21 )
+patch_margin_left = 4
+patch_margin_right = 3
+axis_stretch_horizontal = 1
+
+[node name="current" type="TextureProgress" parent="pause/WeaponsZero/B-Fan/ammo"]
+margin_left = 4.0
+margin_top = 1.0
+margin_right = 68.0
+margin_bottom = 6.0
+max_value = 32.0
+value = 28.0
+texture_progress = ExtResource( 20 )
+
+[node name="weapon_name" type="Label" parent="pause/WeaponsZero/B-Fan"]
+margin_left = 19.0
+margin_top = -1.0
+margin_right = 85.0
+margin_bottom = -3.0
+custom_colors/font_color = Color( 1, 0.913725, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 54 )
+text = "BFAN_WPNMENU"
+uppercase = true
+
+[node name="D-Glaive" type="TextureButton" parent="pause/WeaponsZero"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+margin_top = 38.0
+margin_right = 107.0
+margin_bottom = 56.0
+rect_min_size = Vector2( 18, 18 )
+action_mode = 0
+texture_normal = ExtResource( 118 )
+script = ExtResource( 105 )
+menu_path = NodePath("../../..")
+weapon_resource = ExtResource( 124 )
+
+[node name="ammo" type="NinePatchRect" parent="pause/WeaponsZero/D-Glaive"]
+visible = false
+margin_left = 19.0
+margin_top = 9.0
+margin_right = 82.0
+margin_bottom = 16.0
+texture = ExtResource( 21 )
+patch_margin_left = 4
+patch_margin_right = 3
+axis_stretch_horizontal = 1
+
+[node name="current" type="TextureProgress" parent="pause/WeaponsZero/D-Glaive/ammo"]
+margin_left = 4.0
+margin_top = 1.0
+margin_right = 68.0
+margin_bottom = 6.0
+max_value = 32.0
+value = 28.0
+texture_progress = ExtResource( 20 )
+
+[node name="weapon_name" type="Label" parent="pause/WeaponsZero/D-Glaive"]
+margin_left = 19.0
+margin_top = -1.0
+margin_right = 85.0
+margin_bottom = -3.0
+custom_colors/font_color = Color( 1, 0.913725, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 54 )
+text = "DGLAIVE_WPNMENU"
+uppercase = true
+
+[node name="K-Knuckle" type="TextureButton" parent="pause/WeaponsZero"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+margin_top = 57.0
+margin_right = 107.0
+margin_bottom = 75.0
+rect_min_size = Vector2( 18, 18 )
+action_mode = 0
+texture_normal = ExtResource( 116 )
+script = ExtResource( 105 )
+menu_path = NodePath("../../..")
+weapon_resource = ExtResource( 123 )
+
+[node name="ammo" type="NinePatchRect" parent="pause/WeaponsZero/K-Knuckle"]
+visible = false
+margin_left = 19.0
+margin_top = 9.0
+margin_right = 82.0
+margin_bottom = 16.0
+texture = ExtResource( 21 )
+patch_margin_left = 4
+patch_margin_right = 3
+axis_stretch_horizontal = 1
+
+[node name="current" type="TextureProgress" parent="pause/WeaponsZero/K-Knuckle/ammo"]
+margin_left = 4.0
+margin_top = 1.0
+margin_right = 68.0
+margin_bottom = 6.0
+max_value = 32.0
+value = 28.0
+texture_progress = ExtResource( 20 )
+
+[node name="weapon_name" type="Label" parent="pause/WeaponsZero/K-Knuckle"]
+margin_left = 19.0
+margin_top = -1.0
+margin_right = 82.0
+margin_bottom = -3.0
+custom_colors/font_color = Color( 1, 0.913725, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 54 )
+text = "KKNUCKLE_WPNMENU"
+uppercase = true
+
+[node name="T-Breaker" type="TextureButton" parent="pause/WeaponsZero"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+margin_top = 76.0
+margin_right = 107.0
+margin_bottom = 94.0
+rect_min_size = Vector2( 18, 18 )
+action_mode = 0
+texture_normal = ExtResource( 117 )
+script = ExtResource( 105 )
+menu_path = NodePath("../../..")
+weapon_resource = ExtResource( 127 )
+
+[node name="ammo" type="NinePatchRect" parent="pause/WeaponsZero/T-Breaker"]
+visible = false
+margin_left = 19.0
+margin_top = 9.0
+margin_right = 82.0
+margin_bottom = 16.0
+texture = ExtResource( 21 )
+patch_margin_left = 4
+patch_margin_right = 3
+axis_stretch_horizontal = 1
+
+[node name="current" type="TextureProgress" parent="pause/WeaponsZero/T-Breaker/ammo"]
+margin_left = 4.0
+margin_top = 1.0
+margin_right = 68.0
+margin_bottom = 6.0
+max_value = 32.0
+value = 28.0
+texture_progress = ExtResource( 20 )
+
+[node name="weapon_name" type="Label" parent="pause/WeaponsZero/T-Breaker"]
+margin_left = 19.0
+margin_top = -1.0
+margin_right = 82.0
+margin_bottom = -3.0
+custom_colors/font_color = Color( 1, 0.913725, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 54 )
+text = "TBREAKER_WPNMENU"
+uppercase = true
+
+[node name="V-Hanger" type="TextureButton" parent="pause/WeaponsZero"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+margin_top = 95.0
+margin_right = 107.0
+margin_bottom = 113.0
+rect_min_size = Vector2( 18, 18 )
+action_mode = 0
+texture_normal = ExtResource( 119 )
+script = ExtResource( 105 )
+menu_path = NodePath("../../..")
+weapon_resource = ExtResource( 126 )
+
+[node name="ammo" type="NinePatchRect" parent="pause/WeaponsZero/V-Hanger"]
+visible = false
+margin_left = 19.0
+margin_top = 9.0
+margin_right = 82.0
+margin_bottom = 16.0
+texture = ExtResource( 21 )
+patch_margin_left = 4
+patch_margin_right = 3
+axis_stretch_horizontal = 1
+
+[node name="current" type="TextureProgress" parent="pause/WeaponsZero/V-Hanger/ammo"]
+margin_left = 4.0
+margin_top = 1.0
+margin_right = 68.0
+margin_bottom = 6.0
+max_value = 32.0
+value = 28.0
+texture_progress = ExtResource( 20 )
+
+[node name="weapon_name" type="Label" parent="pause/WeaponsZero/V-Hanger"]
+margin_left = 19.0
+margin_top = -1.0
+margin_right = 103.0
+margin_bottom = -3.0
+custom_colors/font_color = Color( 1, 0.913725, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 54 )
+text = "VHANGER_WPNMENU"
+uppercase = true
+
+[node name="Sigma-Blade" type="TextureButton" parent="pause/WeaponsZero"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+margin_top = 114.0
+margin_right = 107.0
+margin_bottom = 132.0
+rect_min_size = Vector2( 18, 18 )
+action_mode = 0
+texture_normal = ExtResource( 121 )
+script = ExtResource( 105 )
+menu_path = NodePath("../../..")
+weapon_resource = ExtResource( 125 )
+
+[node name="ammo" type="NinePatchRect" parent="pause/WeaponsZero/Sigma-Blade"]
+visible = false
+margin_left = 19.0
+margin_top = 9.0
+margin_right = 82.0
+margin_bottom = 16.0
+texture = ExtResource( 21 )
+patch_margin_left = 4
+patch_margin_right = 3
+axis_stretch_horizontal = 1
+
+[node name="current" type="TextureProgress" parent="pause/WeaponsZero/Sigma-Blade/ammo"]
+margin_left = 4.0
+margin_top = 1.0
+margin_right = 68.0
+margin_bottom = 6.0
+max_value = 32.0
+value = 28.0
+texture_progress = ExtResource( 20 )
+
+[node name="weapon_name" type="Label" parent="pause/WeaponsZero/Sigma-Blade"]
+margin_left = 19.0
+margin_top = -1.0
+margin_right = 87.0
+margin_bottom = -3.0
+custom_colors/font_color = Color( 1, 0.913725, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 54 )
+text = "SIGMABLADE_WPNMENU"
+uppercase = true
+
+[node name="BlackZeroArmor" type="TextureRect" parent="pause"]
+visible = false
+margin_left = 240.0
+margin_top = 145.0
+margin_right = 270.0
+margin_bottom = 202.0
+texture = ExtResource( 129 )
+
+[node name="Title" type="Label" parent="pause"]
+margin_left = 148.0
+margin_top = 179.0
+margin_right = 235.0
+margin_bottom = 193.0
+custom_colors/font_color = Color( 1, 0.913725, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 54 )
+align = 1
+
+[node name="Desc" type="Label" parent="pause"]
+margin_left = 148.0
+margin_top = 190.0
+margin_right = 235.0
+margin_bottom = 204.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 54 )
+align = 1
 uppercase = true
 
 [node name="OptionsMenu" parent="." instance=ExtResource( 61 )]
@@ -1219,3 +2380,133 @@ anims/asfdsa = SubResource( 2 )
 [connection signal="mouse_entered" from="pause/Weapons/Giga Impact" to="pause/Weapons/Giga Impact" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="pause/Weapons/Giga Impact" to="pause/Weapons/Giga Impact" method="_on_mouse_exited"]
 [connection signal="pressed" from="pause/Weapons/Giga Impact" to="pause/Weapons/Giga Impact" method="_on_pressed"]
+[connection signal="focus_entered" from="pause/Weapons/Nova Strike" to="pause/Weapons/Nova Strike" method="_on_focus_entered"]
+[connection signal="focus_exited" from="pause/Weapons/Nova Strike" to="pause/Weapons/Nova Strike" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="pause/Weapons/Nova Strike" to="pause/Weapons/Nova Strike" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="pause/Weapons/Nova Strike" to="pause/Weapons/Nova Strike" method="_on_mouse_exited"]
+[connection signal="pressed" from="pause/Weapons/Nova Strike" to="pause/Weapons/Nova Strike" method="_on_pressed"]
+[connection signal="focus_entered" from="pause/WeaponsAxl/Pistol" to="pause/WeaponsAxl/Pistol" method="_on_focus_entered"]
+[connection signal="focus_exited" from="pause/WeaponsAxl/Pistol" to="pause/WeaponsAxl/Pistol" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="pause/WeaponsAxl/Pistol" to="pause/WeaponsAxl/Pistol" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="pause/WeaponsAxl/Pistol" to="pause/WeaponsAxl/Pistol" method="_on_mouse_exited"]
+[connection signal="pressed" from="pause/WeaponsAxl/Pistol" to="pause/WeaponsAxl/Pistol" method="_on_pressed"]
+[connection signal="focus_entered" from="pause/WeaponsAxl/sunflower_weapon" to="pause/WeaponsAxl/sunflower_weapon" method="_on_focus_entered"]
+[connection signal="focus_exited" from="pause/WeaponsAxl/sunflower_weapon" to="pause/WeaponsAxl/sunflower_weapon" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="pause/WeaponsAxl/sunflower_weapon" to="pause/WeaponsAxl/sunflower_weapon" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="pause/WeaponsAxl/sunflower_weapon" to="pause/WeaponsAxl/sunflower_weapon" method="_on_mouse_exited"]
+[connection signal="pressed" from="pause/WeaponsAxl/sunflower_weapon" to="pause/WeaponsAxl/sunflower_weapon" method="_on_pressed"]
+[connection signal="focus_entered" from="pause/WeaponsAxl/antonion_weapon" to="pause/WeaponsAxl/antonion_weapon" method="_on_focus_entered"]
+[connection signal="focus_exited" from="pause/WeaponsAxl/antonion_weapon" to="pause/WeaponsAxl/antonion_weapon" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="pause/WeaponsAxl/antonion_weapon" to="pause/WeaponsAxl/antonion_weapon" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="pause/WeaponsAxl/antonion_weapon" to="pause/WeaponsAxl/antonion_weapon" method="_on_mouse_exited"]
+[connection signal="pressed" from="pause/WeaponsAxl/antonion_weapon" to="pause/WeaponsAxl/antonion_weapon" method="_on_pressed"]
+[connection signal="focus_entered" from="pause/WeaponsAxl/mantis_weapon" to="pause/WeaponsAxl/mantis_weapon" method="_on_focus_entered"]
+[connection signal="focus_exited" from="pause/WeaponsAxl/mantis_weapon" to="pause/WeaponsAxl/mantis_weapon" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="pause/WeaponsAxl/mantis_weapon" to="pause/WeaponsAxl/mantis_weapon" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="pause/WeaponsAxl/mantis_weapon" to="pause/WeaponsAxl/mantis_weapon" method="_on_mouse_exited"]
+[connection signal="pressed" from="pause/WeaponsAxl/mantis_weapon" to="pause/WeaponsAxl/mantis_weapon" method="_on_pressed"]
+[connection signal="focus_entered" from="pause/WeaponsAxl/manowar_weapon" to="pause/WeaponsAxl/manowar_weapon" method="_on_focus_entered"]
+[connection signal="focus_exited" from="pause/WeaponsAxl/manowar_weapon" to="pause/WeaponsAxl/manowar_weapon" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="pause/WeaponsAxl/manowar_weapon" to="pause/WeaponsAxl/manowar_weapon" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="pause/WeaponsAxl/manowar_weapon" to="pause/WeaponsAxl/manowar_weapon" method="_on_mouse_exited"]
+[connection signal="pressed" from="pause/WeaponsAxl/manowar_weapon" to="pause/WeaponsAxl/manowar_weapon" method="_on_pressed"]
+[connection signal="focus_entered" from="pause/WeaponsAxl/panda_weapon" to="pause/WeaponsAxl/panda_weapon" method="_on_focus_entered"]
+[connection signal="focus_exited" from="pause/WeaponsAxl/panda_weapon" to="pause/WeaponsAxl/panda_weapon" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="pause/WeaponsAxl/panda_weapon" to="pause/WeaponsAxl/panda_weapon" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="pause/WeaponsAxl/panda_weapon" to="pause/WeaponsAxl/panda_weapon" method="_on_mouse_exited"]
+[connection signal="pressed" from="pause/WeaponsAxl/panda_weapon" to="pause/WeaponsAxl/panda_weapon" method="_on_pressed"]
+[connection signal="focus_entered" from="pause/WeaponsAxl/trilobyte_weapon" to="pause/WeaponsAxl/trilobyte_weapon" method="_on_focus_entered"]
+[connection signal="focus_exited" from="pause/WeaponsAxl/trilobyte_weapon" to="pause/WeaponsAxl/trilobyte_weapon" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="pause/WeaponsAxl/trilobyte_weapon" to="pause/WeaponsAxl/trilobyte_weapon" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="pause/WeaponsAxl/trilobyte_weapon" to="pause/WeaponsAxl/trilobyte_weapon" method="_on_mouse_exited"]
+[connection signal="pressed" from="pause/WeaponsAxl/trilobyte_weapon" to="pause/WeaponsAxl/trilobyte_weapon" method="_on_pressed"]
+[connection signal="focus_entered" from="pause/WeaponsAxl/yeti_weapon" to="pause/WeaponsAxl/yeti_weapon" method="_on_focus_entered"]
+[connection signal="focus_exited" from="pause/WeaponsAxl/yeti_weapon" to="pause/WeaponsAxl/yeti_weapon" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="pause/WeaponsAxl/yeti_weapon" to="pause/WeaponsAxl/yeti_weapon" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="pause/WeaponsAxl/yeti_weapon" to="pause/WeaponsAxl/yeti_weapon" method="_on_mouse_exited"]
+[connection signal="pressed" from="pause/WeaponsAxl/yeti_weapon" to="pause/WeaponsAxl/yeti_weapon" method="_on_pressed"]
+[connection signal="focus_entered" from="pause/WeaponsAxl/rooster_weapon" to="pause/WeaponsAxl/rooster_weapon" method="_on_focus_entered"]
+[connection signal="focus_exited" from="pause/WeaponsAxl/rooster_weapon" to="pause/WeaponsAxl/rooster_weapon" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="pause/WeaponsAxl/rooster_weapon" to="pause/WeaponsAxl/rooster_weapon" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="pause/WeaponsAxl/rooster_weapon" to="pause/WeaponsAxl/rooster_weapon" method="_on_mouse_exited"]
+[connection signal="pressed" from="pause/WeaponsAxl/rooster_weapon" to="pause/WeaponsAxl/rooster_weapon" method="_on_pressed"]
+[connection signal="focus_entered" from="pause/WeaponsAxl/Giga Impact" to="pause/WeaponsAxl/Giga Impact" method="_on_focus_entered"]
+[connection signal="focus_exited" from="pause/WeaponsAxl/Giga Impact" to="pause/WeaponsAxl/Giga Impact" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="pause/WeaponsAxl/Giga Impact" to="pause/WeaponsAxl/Giga Impact" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="pause/WeaponsAxl/Giga Impact" to="pause/WeaponsAxl/Giga Impact" method="_on_mouse_exited"]
+[connection signal="pressed" from="pause/WeaponsAxl/Giga Impact" to="pause/WeaponsAxl/Giga Impact" method="_on_pressed"]
+[connection signal="focus_entered" from="pause/AbilitiesZero/sunflower_weapon" to="pause/AbilitiesZero/sunflower_weapon" method="_on_focus_entered"]
+[connection signal="focus_exited" from="pause/AbilitiesZero/sunflower_weapon" to="pause/AbilitiesZero/sunflower_weapon" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="pause/AbilitiesZero/sunflower_weapon" to="pause/AbilitiesZero/sunflower_weapon" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="pause/AbilitiesZero/sunflower_weapon" to="pause/AbilitiesZero/sunflower_weapon" method="_on_mouse_exited"]
+[connection signal="pressed" from="pause/AbilitiesZero/sunflower_weapon" to="pause/AbilitiesZero/sunflower_weapon" method="_on_pressed"]
+[connection signal="focus_entered" from="pause/AbilitiesZero/antonion_weapon" to="pause/AbilitiesZero/antonion_weapon" method="_on_focus_entered"]
+[connection signal="focus_exited" from="pause/AbilitiesZero/antonion_weapon" to="pause/AbilitiesZero/antonion_weapon" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="pause/AbilitiesZero/antonion_weapon" to="pause/AbilitiesZero/antonion_weapon" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="pause/AbilitiesZero/antonion_weapon" to="pause/AbilitiesZero/antonion_weapon" method="_on_mouse_exited"]
+[connection signal="pressed" from="pause/AbilitiesZero/antonion_weapon" to="pause/AbilitiesZero/antonion_weapon" method="_on_pressed"]
+[connection signal="focus_entered" from="pause/AbilitiesZero/mantis_weapon" to="pause/AbilitiesZero/mantis_weapon" method="_on_focus_entered"]
+[connection signal="focus_exited" from="pause/AbilitiesZero/mantis_weapon" to="pause/AbilitiesZero/mantis_weapon" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="pause/AbilitiesZero/mantis_weapon" to="pause/AbilitiesZero/mantis_weapon" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="pause/AbilitiesZero/mantis_weapon" to="pause/AbilitiesZero/mantis_weapon" method="_on_mouse_exited"]
+[connection signal="pressed" from="pause/AbilitiesZero/mantis_weapon" to="pause/AbilitiesZero/mantis_weapon" method="_on_pressed"]
+[connection signal="focus_entered" from="pause/AbilitiesZero/manowar_weapon" to="pause/AbilitiesZero/manowar_weapon" method="_on_focus_entered"]
+[connection signal="focus_exited" from="pause/AbilitiesZero/manowar_weapon" to="pause/AbilitiesZero/manowar_weapon" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="pause/AbilitiesZero/manowar_weapon" to="pause/AbilitiesZero/manowar_weapon" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="pause/AbilitiesZero/manowar_weapon" to="pause/AbilitiesZero/manowar_weapon" method="_on_mouse_exited"]
+[connection signal="pressed" from="pause/AbilitiesZero/manowar_weapon" to="pause/AbilitiesZero/manowar_weapon" method="_on_pressed"]
+[connection signal="focus_entered" from="pause/AbilitiesZero/panda_weapon" to="pause/AbilitiesZero/panda_weapon" method="_on_focus_entered"]
+[connection signal="focus_exited" from="pause/AbilitiesZero/panda_weapon" to="pause/AbilitiesZero/panda_weapon" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="pause/AbilitiesZero/panda_weapon" to="pause/AbilitiesZero/panda_weapon" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="pause/AbilitiesZero/panda_weapon" to="pause/AbilitiesZero/panda_weapon" method="_on_mouse_exited"]
+[connection signal="pressed" from="pause/AbilitiesZero/panda_weapon" to="pause/AbilitiesZero/panda_weapon" method="_on_pressed"]
+[connection signal="focus_entered" from="pause/AbilitiesZero/trilobyte_weapon" to="pause/AbilitiesZero/trilobyte_weapon" method="_on_focus_entered"]
+[connection signal="focus_exited" from="pause/AbilitiesZero/trilobyte_weapon" to="pause/AbilitiesZero/trilobyte_weapon" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="pause/AbilitiesZero/trilobyte_weapon" to="pause/AbilitiesZero/trilobyte_weapon" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="pause/AbilitiesZero/trilobyte_weapon" to="pause/AbilitiesZero/trilobyte_weapon" method="_on_mouse_exited"]
+[connection signal="pressed" from="pause/AbilitiesZero/trilobyte_weapon" to="pause/AbilitiesZero/trilobyte_weapon" method="_on_pressed"]
+[connection signal="focus_entered" from="pause/AbilitiesZero/yeti_weapon" to="pause/AbilitiesZero/yeti_weapon" method="_on_focus_entered"]
+[connection signal="focus_exited" from="pause/AbilitiesZero/yeti_weapon" to="pause/AbilitiesZero/yeti_weapon" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="pause/AbilitiesZero/yeti_weapon" to="pause/AbilitiesZero/yeti_weapon" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="pause/AbilitiesZero/yeti_weapon" to="pause/AbilitiesZero/yeti_weapon" method="_on_mouse_exited"]
+[connection signal="pressed" from="pause/AbilitiesZero/yeti_weapon" to="pause/AbilitiesZero/yeti_weapon" method="_on_pressed"]
+[connection signal="focus_entered" from="pause/AbilitiesZero/rooster_weapon" to="pause/AbilitiesZero/rooster_weapon" method="_on_focus_entered"]
+[connection signal="focus_exited" from="pause/AbilitiesZero/rooster_weapon" to="pause/AbilitiesZero/rooster_weapon" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="pause/AbilitiesZero/rooster_weapon" to="pause/AbilitiesZero/rooster_weapon" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="pause/AbilitiesZero/rooster_weapon" to="pause/AbilitiesZero/rooster_weapon" method="_on_mouse_exited"]
+[connection signal="pressed" from="pause/AbilitiesZero/rooster_weapon" to="pause/AbilitiesZero/rooster_weapon" method="_on_pressed"]
+[connection signal="focus_entered" from="pause/WeaponsZero/Saber" to="pause/WeaponsZero/Saber" method="_on_focus_entered"]
+[connection signal="focus_exited" from="pause/WeaponsZero/Saber" to="pause/WeaponsZero/Saber" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="pause/WeaponsZero/Saber" to="pause/WeaponsZero/Saber" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="pause/WeaponsZero/Saber" to="pause/WeaponsZero/Saber" method="_on_mouse_exited"]
+[connection signal="pressed" from="pause/WeaponsZero/Saber" to="pause/WeaponsZero/Saber" method="_on_pressed"]
+[connection signal="focus_entered" from="pause/WeaponsZero/B-Fan" to="pause/WeaponsZero/B-Fan" method="_on_focus_entered"]
+[connection signal="focus_exited" from="pause/WeaponsZero/B-Fan" to="pause/WeaponsZero/B-Fan" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="pause/WeaponsZero/B-Fan" to="pause/WeaponsZero/B-Fan" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="pause/WeaponsZero/B-Fan" to="pause/WeaponsZero/B-Fan" method="_on_mouse_exited"]
+[connection signal="pressed" from="pause/WeaponsZero/B-Fan" to="pause/WeaponsZero/B-Fan" method="_on_pressed"]
+[connection signal="focus_entered" from="pause/WeaponsZero/D-Glaive" to="pause/WeaponsZero/D-Glaive" method="_on_focus_entered"]
+[connection signal="focus_exited" from="pause/WeaponsZero/D-Glaive" to="pause/WeaponsZero/D-Glaive" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="pause/WeaponsZero/D-Glaive" to="pause/WeaponsZero/D-Glaive" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="pause/WeaponsZero/D-Glaive" to="pause/WeaponsZero/D-Glaive" method="_on_mouse_exited"]
+[connection signal="pressed" from="pause/WeaponsZero/D-Glaive" to="pause/WeaponsZero/D-Glaive" method="_on_pressed"]
+[connection signal="focus_entered" from="pause/WeaponsZero/K-Knuckle" to="pause/WeaponsZero/K-Knuckle" method="_on_focus_entered"]
+[connection signal="focus_exited" from="pause/WeaponsZero/K-Knuckle" to="pause/WeaponsZero/K-Knuckle" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="pause/WeaponsZero/K-Knuckle" to="pause/WeaponsZero/K-Knuckle" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="pause/WeaponsZero/K-Knuckle" to="pause/WeaponsZero/K-Knuckle" method="_on_mouse_exited"]
+[connection signal="pressed" from="pause/WeaponsZero/K-Knuckle" to="pause/WeaponsZero/K-Knuckle" method="_on_pressed"]
+[connection signal="focus_entered" from="pause/WeaponsZero/T-Breaker" to="pause/WeaponsZero/T-Breaker" method="_on_focus_entered"]
+[connection signal="focus_exited" from="pause/WeaponsZero/T-Breaker" to="pause/WeaponsZero/T-Breaker" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="pause/WeaponsZero/T-Breaker" to="pause/WeaponsZero/T-Breaker" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="pause/WeaponsZero/T-Breaker" to="pause/WeaponsZero/T-Breaker" method="_on_mouse_exited"]
+[connection signal="pressed" from="pause/WeaponsZero/T-Breaker" to="pause/WeaponsZero/T-Breaker" method="_on_pressed"]
+[connection signal="focus_entered" from="pause/WeaponsZero/V-Hanger" to="pause/WeaponsZero/V-Hanger" method="_on_focus_entered"]
+[connection signal="focus_exited" from="pause/WeaponsZero/V-Hanger" to="pause/WeaponsZero/V-Hanger" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="pause/WeaponsZero/V-Hanger" to="pause/WeaponsZero/V-Hanger" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="pause/WeaponsZero/V-Hanger" to="pause/WeaponsZero/V-Hanger" method="_on_mouse_exited"]
+[connection signal="pressed" from="pause/WeaponsZero/V-Hanger" to="pause/WeaponsZero/V-Hanger" method="_on_pressed"]
+[connection signal="focus_entered" from="pause/WeaponsZero/Sigma-Blade" to="pause/WeaponsZero/Sigma-Blade" method="_on_focus_entered"]
+[connection signal="focus_exited" from="pause/WeaponsZero/Sigma-Blade" to="pause/WeaponsZero/Sigma-Blade" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="pause/WeaponsZero/Sigma-Blade" to="pause/WeaponsZero/Sigma-Blade" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="pause/WeaponsZero/Sigma-Blade" to="pause/WeaponsZero/Sigma-Blade" method="_on_mouse_exited"]
+[connection signal="pressed" from="pause/WeaponsZero/Sigma-Blade" to="pause/WeaponsZero/Sigma-Blade" method="_on_pressed"]

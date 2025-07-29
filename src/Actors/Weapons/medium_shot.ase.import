@@ -1,16 +1,15 @@
 [remap]
 
-importer="aseprite_animation_importer"
+importer="aseprite_wizard.plugin"
 type="SpriteFrames"
-path="res://.import/medium_shot.ase-d7aa63f710a07bb87271534168c40f14.res"
+valid=false
 
 [deps]
 
 source_file="res://src/Actors/Weapons/medium_shot.ase"
-dest_files=[ "res://.import/medium_shot.ase-d7aa63f710a07bb87271534168c40f14.res" ]
-
 [params]
 
-extrude=false
-default_direction="Forward"
-default_loop=false
+split_layers=false
+exclude_layers_pattern=""
+only_visible_layers=false
+sheet_type="Packed"

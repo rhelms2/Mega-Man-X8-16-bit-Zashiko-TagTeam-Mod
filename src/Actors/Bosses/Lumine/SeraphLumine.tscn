@@ -335,6 +335,7 @@ low_height_segments = 3
 script = ExtResource( 42 )
 time_between_attacks = Vector2( 0.1, 0.1 )
 desperation_threshold = 0.25
+desperation_chance = 0
 
 [node name="collisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 6 )
@@ -343,7 +344,7 @@ shape = SubResource( 49 )
 [node name="backWings" type="AnimatedSprite" parent="."]
 frames = ExtResource( 7 )
 animation = "idle"
-frame = 9
+frame = 5
 playing = true
 flip_h = true
 script = ExtResource( 32 )
@@ -440,7 +441,7 @@ playing = true
 z_index = 2
 frames = ExtResource( 8 )
 animation = "idle"
-frame = 10
+frame = 6
 playing = true
 flip_h = true
 script = ExtResource( 32 )
@@ -775,7 +776,7 @@ duration = 0.064
 script = ExtResource( 44 )
 invulnerability_time = 0.1
 max_flash_time = 0.35
-weakenesses = [ "SqueezeBomb" ]
+weakenesses = [ "SqueezeBomb", "SpiralMagnum", "Juuhazan" ]
 weakness_multiplier = 1.3
 
 [node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]

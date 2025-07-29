@@ -99,7 +99,6 @@ damage = 15.0
 active = false
 
 [node name="ArrowDetector" type="Area2D" parent="." index="18"]
-visible = false
 collision_layer = 0
 collision_mask = 4
 script = ExtResource( 8 )

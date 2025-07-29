@@ -1,21 +1,25 @@
 extends PizzaAbility
-export var frequency := 6
-var up_and_down : SceneTreeTween
+class_name PizzaJuggleAndMove
+
+export  var frequency: int = 6
+
 onready var ray_left: RayCast2D = $cast_left
 onready var ray_right: RayCast2D = $cast_right
 onready var cast_left: RayCast2D = $cast_left2
 onready var cast_right: RayCast2D = $cast_right2
 
-var initial_position : Vector2
+var up_and_down: SceneTreeTween
+var initial_position: Vector2
 
-func _ready() -> void:
+
+func _ready() -> void :
 	initial_position = global_position
 
-func _Setup() -> void:
+func _Setup() -> void :
 	attack_stage = 0
 
-func _Update(_delta) -> void:
-	if character.scale.y == -1:
+func _Update(_delta: float) -> void :
+	if character.scale.y == - 1:
 		process_inverted_gravity(_delta)
 	else:
 		process_gravity(_delta)
@@ -79,9 +83,7 @@ func check_for_ledges() -> int:
 		return 1
 	return 0
 
-func process_gravity(_delta:float, gravity := default_gravity) -> void:
+func process_gravity(_delta: float, gravity: float = default_gravity) -> void :
 	character.add_vertical_speed(gravity * _delta)
 	if character.get_vertical_speed() > character.maximum_fall_velocity:
-		character.set_vertical_speed(character.maximum_fall_velocity) 
-
-
+		character.set_vertical_speed(character.maximum_fall_velocity)

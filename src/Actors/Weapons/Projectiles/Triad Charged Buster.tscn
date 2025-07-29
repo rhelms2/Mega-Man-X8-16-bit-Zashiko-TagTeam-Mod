@@ -1,42 +1,42 @@
 [gd_scene load_steps=22 format=2]
 
-[ext_resource path="res://src/Actors/Weapons/Projectiles/TripleBuster.gd" type="Script" id=1]
-[ext_resource path="res://src/Effects/Textures/mega_blast.png" type="Texture" id=2]
-[ext_resource path="res://src/Actors/Weapons/Projectiles/Auxiliary Heavy Buster.tscn" type="PackedScene" id=3]
-[ext_resource path="res://src/Sounds/TRIPLE_SHOT.wav" type="AudioStream" id=4]
-[ext_resource path="res://src/Effects/Big Hit.tscn" type="PackedScene" id=5]
-[ext_resource path="res://src/Effects/Textures/follow_shot.png" type="Texture" id=6]
-[ext_resource path="res://SpriteEffect.gd" type="Script" id=7]
+[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=1]
+[ext_resource path="res://SpriteEffect.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Weapons/Projectiles/Deflectable.gd" type="Script" id=3]
+[ext_resource path="res://src/Effects/Big Hit.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Actors/Weapons/Projectiles/Auxiliary Heavy Buster.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Actors/Weapons/Projectiles/TripleBuster.gd" type="Script" id=6]
+[ext_resource path="res://src/Effects/Textures/follow_shot.png" type="Texture" id=7]
 [ext_resource path="res://src/Effects/Deflect/heavy_deflect.png" type="Texture" id=8]
-[ext_resource path="res://src/Effects/Materials/megabuster_particles.tres" type="Material" id=9]
-[ext_resource path="res://src/Actors/Weapons/Projectiles/Deflectable.gd" type="Script" id=10]
-[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=11]
+[ext_resource path="res://src/Effects/Textures/mega_blast.png" type="Texture" id=9]
+[ext_resource path="res://src/Sounds/TRIPLE_SHOT.wav" type="AudioStream" id=10]
+[ext_resource path="res://src/Effects/Materials/megabuster_particles.tres" type="Material" id=11]
 
 [sub_resource type="RectangleShape2D" id=21]
 extents = Vector2( 23, 19 )
 
 [sub_resource type="AtlasTexture" id=12]
-atlas = ExtResource( 2 )
+atlas = ExtResource( 9 )
 region = Rect2( 0, 0, 96, 96 )
 
 [sub_resource type="AtlasTexture" id=13]
-atlas = ExtResource( 2 )
+atlas = ExtResource( 9 )
 region = Rect2( 96, 0, 96, 96 )
 
 [sub_resource type="AtlasTexture" id=14]
-atlas = ExtResource( 2 )
+atlas = ExtResource( 9 )
 region = Rect2( 192, 0, 96, 96 )
 
 [sub_resource type="AtlasTexture" id=15]
-atlas = ExtResource( 2 )
+atlas = ExtResource( 9 )
 region = Rect2( 0, 96, 96, 96 )
 
 [sub_resource type="AtlasTexture" id=16]
-atlas = ExtResource( 2 )
+atlas = ExtResource( 9 )
 region = Rect2( 96, 96, 96, 96 )
 
 [sub_resource type="AtlasTexture" id=17]
-atlas = ExtResource( 2 )
+atlas = ExtResource( 9 )
 region = Rect2( 192, 96, 96, 96 )
 
 [sub_resource type="SpriteFrames" id=18]
@@ -60,21 +60,21 @@ particles_anim_loop = false
 z_index = 5
 collision_layer = 4
 collision_mask = 0
-script = ExtResource( 1 )
+script = ExtResource( 6 )
 damage = 15.0
 damage_to_bosses = 12.0
 damage_to_weakness = 20.0
 horizontal_velocity = 350.0
 time_outside_screen = 0.6
-fire_sound = ExtResource( 4 )
+fire_sound = ExtResource( 10 )
 break_guards = true
-auxiliary_projectiles = ExtResource( 3 )
+auxiliary_projectiles = ExtResource( 5 )
 
 [node name="Deflectable" type="RigidBody2D" parent="." groups=["Deflectable", "Player Projectile"]]
 collision_layer = 4
 collision_mask = 0
 mode = 3
-script = ExtResource( 10 )
+script = ExtResource( 3 )
 deflect_particle = NodePath("../deflect_particle")
 
 [node name="collisionShape2D" type="CollisionShape2D" parent="Deflectable"]
@@ -86,6 +86,7 @@ shape = SubResource( 21 )
 z_index = 2
 frames = SubResource( 18 )
 animation = "Tag"
+frame = 4
 playing = true
 
 [node name="collisionShape2D" type="CollisionShape2D" parent="."]
@@ -103,8 +104,8 @@ position = Vector2( -8, 0 )
 amount = 12
 lifetime = 0.6
 local_coords = false
-process_material = ExtResource( 9 )
-texture = ExtResource( 6 )
+process_material = ExtResource( 11 )
+texture = ExtResource( 7 )
 __meta__ = {
 "_editor_description_": ""
 }
@@ -116,7 +117,7 @@ volume_db = -9.0
 pitch_scale = 0.5
 bus = "SFX"
 
-[node name="Hit Particle" parent="." instance=ExtResource( 5 )]
+[node name="Hit Particle" parent="." instance=ExtResource( 4 )]
 
 [node name="deflect_particle" type="Sprite" parent="."]
 visible = false
@@ -126,12 +127,12 @@ z_as_relative = false
 texture = ExtResource( 8 )
 hframes = 3
 vframes = 3
-script = ExtResource( 7 )
+script = ExtResource( 2 )
 animation_speed = 32.0
 one_shot = true
 
 [node name="disabler" type="Node" parent="."]
-script = ExtResource( 11 )
+script = ExtResource( 1 )
 disable_or_deactivate = true
 fade_out = true
 delete_after_fade = true

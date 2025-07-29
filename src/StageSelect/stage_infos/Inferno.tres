@@ -1,6 +1,6 @@
 [gd_resource type="Resource" load_steps=4 format=2]
 
-[ext_resource path="res://src/BossIntro/StageInfo.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Bosses/BossIntro/StageInfo.gd" type="Script" id=1]
 [ext_resource path="res://src/Actors/Bosses/BurnRooster/rooster.res" type="SpriteFrames" id=2]
 [ext_resource path="res://src/StageSelect/preview/stage_8.png" type="Texture" id=3]
 
@@ -11,7 +11,7 @@ beaten_condition = [  ]
 pointer_position = Vector2( 54, 239 )
 should_play_intro = true
 name_id = "ROOSTER"
-collectibles = [ "rooster_weapon", "subtank_rooster", "life_up_rooster", "hermes_legs" ]
+collectibles = [ "rooster_weapon", "subtank_rooster", "life_up_rooster", "hermes_legs", "d_glaive_zero" ]
 preview = ExtResource( 3 )
 sprite_frames = ExtResource( 2 )
 animation_beats = [ "knee_prepare_loop", "roundhouse", "jump_backwards", "highkick" ]

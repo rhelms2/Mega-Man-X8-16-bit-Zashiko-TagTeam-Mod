@@ -2,31 +2,31 @@
 
 [ext_resource path="res://src/Actors/Player/BossWeapons/OpticShield/optic_shield.res" type="SpriteFrames" id=1]
 [ext_resource path="res://src/Actors/Player/BossWeapons/OpticShield/Shield.gd" type="Script" id=2]
-[ext_resource path="res://src/Actors/Player/BossWeapons/OpticShield/OpticShield.tscn" type="PackedScene" id=3]
-[ext_resource path="res://src/Levels/PitchBlack/X_Lightsource.gd" type="Script" id=4]
-[ext_resource path="res://src/Levels/PitchBlack/light.png" type="Texture" id=5]
+[ext_resource path="res://src/Levels/PitchBlack/light.png" type="Texture" id=3]
+[ext_resource path="res://src/Sounds/Sunflower - Orb.ogg" type="AudioStream" id=4]
+[ext_resource path="res://src/Sounds/FX - GenesisLaser.wav" type="AudioStream" id=5]
 [ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=6]
-[ext_resource path="res://src/Sounds/FX - GenesisLaser.wav" type="AudioStream" id=7]
-[ext_resource path="res://src/Sounds/Sunflower - Orb.ogg" type="AudioStream" id=8]
+[ext_resource path="res://src/Levels/PitchBlack/X_Lightsource.gd" type="Script" id=7]
+[ext_resource path="res://src/Actors/Player/BossWeapons/OpticShield/OpticShield.tscn" type="PackedScene" id=8]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 40.0
 
 [node name="Shield" type="Node2D"]
 script = ExtResource( 2 )
-projectile = ExtResource( 3 )
+projectile = ExtResource( 8 )
 
 [node name="front_shield" type="AnimatedSprite" parent="."]
 z_index = 12
 frames = ExtResource( 1 )
 animation = "idle"
-frame = 6
+frame = 7
 playing = true
 
 [node name="back_shield" type="AnimatedSprite" parent="."]
 frames = ExtResource( 1 )
 animation = "idle"
-frame = 1
+frame = 2
 playing = true
 flip_h = true
 
@@ -40,15 +40,15 @@ shape = SubResource( 1 )
 [node name="light" type="Light2D" parent="."]
 scale = Vector2( 6, 3 )
 z_index = 277
-texture = ExtResource( 5 )
+texture = ExtResource( 3 )
 color = Color( 0.690196, 1, 0.698039, 1 )
 energy = 0.55
 range_layer_min = -2
 range_layer_max = -1
-script = ExtResource( 4 )
+script = ExtResource( 7 )
 
 [node name="shot_sound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 7 )
+stream = ExtResource( 5 )
 volume_db = -8.0
 max_distance = 600.0
 attenuation = 1.93187
@@ -56,7 +56,7 @@ bus = "SFX"
 script = ExtResource( 6 )
 
 [node name="start_sound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 8 )
+stream = ExtResource( 4 )
 volume_db = 2.0
 autoplay = true
 max_distance = 600.0

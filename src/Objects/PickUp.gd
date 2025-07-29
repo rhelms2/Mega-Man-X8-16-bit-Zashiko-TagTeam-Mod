@@ -1,32 +1,35 @@
 extends KinematicBody2D
 class_name PickUp
 
-export var heal := 2
-var amount_to_heal := 2
-export var duration := 4
-var expirable := false
-var groundcheck_distance := 6.0
-var time_since_spawn := 0.0
-var timer := 0.0
-var last_time_increased := 0.0
-var executing := false
-var emitted_signal := false
+export  var heal: = 2
+export  var duration: = 4
+
+onready var animated_sprite = $animatedSprite
+
+var amount_to_heal: = 2
+var expirable: = false
+var groundcheck_distance: = 6.0
+var time_since_spawn: = 0.0
+var timer: = 0.0
+var last_time_increased: = 0.0
+var executing: = false
+var emitted_signal: = false
 var player
 var velocity = Vector2.ZERO
 var bonus_velocity = Vector2.ZERO
 var final_velocity = Vector2.ZERO
-onready var animated_sprite = $animatedSprite
 
-func _ready() -> void:
+
+func _ready() -> void :
 	amount_to_heal = heal
 
-func _physics_process(delta: float) -> void:
+func _physics_process(delta: float) -> void :
 	process_gravity(delta)
 	process_movement()
 	process_state(delta)
 	process_effect(delta)
 
-func process_effect(delta) -> void:
+func process_effect(delta: float) -> void :
 	if executing:
 		timer += delta
 		if player.current_health < player.max_health:
@@ -37,7 +40,7 @@ func process_effect(delta) -> void:
 		if amount_to_heal == 0:
 			timer = 0
 			GameManager.unpause(name)
-			amount_to_heal = -1
+			amount_to_heal = - 1
 		if amount_to_heal < 0:
 			if not emitted_signal:
 				player.emit_signal("collected_health", heal)
@@ -45,7 +48,7 @@ func process_effect(delta) -> void:
 			if not $audioStreamPlayer2D.playing:
 				queue_free()
 
-func process_state(delta) -> void:
+func process_state(delta: float) -> void :
 	if is_on_floor():
 		time_since_spawn += delta
 		if animated_sprite.animation != "idle":
@@ -55,7 +58,7 @@ func process_state(delta) -> void:
 				queue_free()
 			else:
 				if time_since_spawn > duration * 0.75:
-					set_modulate(Color(1,1,1,abs(round(cos(time_since_spawn*500)))))
+					set_modulate(Color(1, 1, 1, abs(round(cos(time_since_spawn * 500)))))
 				if time_since_spawn > duration:
 					queue_free()
 
@@ -73,7 +76,7 @@ func do_heal():
 		amount_to_heal -= 1
 		$audioStreamPlayer2D.play()
 
-func _on_area2D_body_entered(body: Node) -> void:
+func _on_area2D_body_entered(body: Node) -> void :
 	if not executing:
 		if body.is_in_group("Player"):
 			if body.is_in_group("Props") and not GameManager.player.ride:
@@ -89,21 +92,19 @@ func _on_area2D_body_entered(body: Node) -> void:
 			visible = false
 			player = GameManager.player
 
-func raycast(target_position : Vector2) -> Dictionary:
+func raycast(target_position: Vector2) -> Dictionary:
 	var space_state = get_world_2d().direct_space_state
 	return space_state.intersect_ray(global_position, target_position, [self], collision_mask)
-	
+
 func process_movement():
-	if velocity != Vector2.ZERO:
-		final_velocity = velocity + bonus_velocity
-										# warning-ignore:return_value_discarded
-		move_and_collide(Vector2.ZERO) 	# Bandaid for being pushed bug
-		final_velocity = process_final_velocity()
-		velocity.y = final_velocity.y
+	final_velocity = velocity + bonus_velocity
+	move_and_collide(Vector2.ZERO)
+	final_velocity = process_final_velocity()
+	velocity.y = final_velocity.y
 
 func process_final_velocity() -> Vector2:
-	return move_and_slide_with_snap(final_velocity, Vector2.DOWN * 8, Vector2.UP,true)
-	
-func process_gravity(_delta:float, gravity := 800) -> void:
-	#if not is_on_floor():
-	velocity.y = velocity.y + (gravity * _delta)
+	return move_and_slide_with_snap(final_velocity, Vector2.DOWN * 8, Vector2.UP, true)
+
+func process_gravity(_delta: float, gravity: = 800) -> void :
+	if not is_on_floor():
+		velocity.y = velocity.y + (gravity * _delta)

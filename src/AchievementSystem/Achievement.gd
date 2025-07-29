@@ -24,3 +24,7 @@ func unlock() -> void:
 		date = Time.get_datetime_string_from_system(false,true)
 		print ("Achievements: unlocked " + get_id())
 	
+func lock() -> void :
+	if not disabled:
+		unlocked = false
+		date = "locked"

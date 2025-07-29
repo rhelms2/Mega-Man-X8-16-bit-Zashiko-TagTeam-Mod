@@ -89,7 +89,7 @@ texture = ExtResource( 4 )
 [node name="active" type="AnimatedSprite" parent="."]
 pause_mode = 2
 frames = SubResource( 10 )
-frame = 6
+frame = 4
 playing = true
 
 [node name="particles2D" type="Particles2D" parent="active"]

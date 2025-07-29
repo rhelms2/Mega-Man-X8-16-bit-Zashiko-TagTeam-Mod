@@ -49,6 +49,7 @@ damage = 2.0
 
 [node name="animatedSprite" type="AnimatedSprite" parent="."]
 frames = ExtResource( 9 )
+frame = 3
 playing = true
 flip_h = true
 

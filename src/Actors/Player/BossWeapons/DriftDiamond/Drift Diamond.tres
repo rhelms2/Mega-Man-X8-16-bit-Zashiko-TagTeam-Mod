@@ -1,4 +1,4 @@
-[gd_resource type="Resource" load_steps=12 format=2]
+[gd_resource type="Resource" load_steps=11 format=2]
 
 [ext_resource path="res://src/Actors/Player/BossWeapons/DriftDiamond/DriftDiamond.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Actors/Player/BossWeapons/WeaponResource.gd" type="Script" id=2]
@@ -10,7 +10,6 @@
 [ext_resource path="res://src/WeaponGet/palettes/driftdiamond_i.png" type="Texture" id=8]
 [ext_resource path="res://src/WeaponGet/palettes/driftdiamond_h.png" type="Texture" id=9]
 [ext_resource path="res://src/WeaponGet/Videos/sequence_driftdiamond.tres" type="Resource" id=10]
-[ext_resource path="res://src/Sounds/JUMP.wav" type="AudioStream" id=11]
 
 [resource]
 script = ExtResource( 2 )
@@ -25,7 +24,6 @@ charged_shot = ExtResource( 6 )
 charged_ammo_cost = 4.0
 cooldown = 0.3
 sound = ExtResource( 5 )
-charged_sound = ExtResource( 11 )
 input_sequence = ExtResource( 10 )
 MainColor1 = Color( 0.941176, 0.941176, 0.941176, 1 )
 MainColor2 = Color( 0.592157, 0.658824, 0.74902, 1 )

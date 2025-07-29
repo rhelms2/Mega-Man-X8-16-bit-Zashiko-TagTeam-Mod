@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://src/Sounds/Text Letter.ogg" type="AudioStream" id=1]
 [ext_resource path="res://src/Effects/Materials/TextColorSwap.tres" type="Material" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://src/DialogSystem/portraits/x_dialogue.res" type="SpriteFrames" id=4]
 [ext_resource path="res://src/DialogSystem/next_dialogue.res" type="SpriteFrames" id=5]
 [ext_resource path="res://src/Fonts/X8bitmapfont.fnt" type="BitmapFont" id=6]
+[ext_resource path="res://Zero_mod/DialogSystem/portraits/zero_dialogue.res" type="SpriteFrames" id=7]
 [ext_resource path="res://src/DialogSystem/AnimatedText.gd" type="Script" id=8]
 
 [sub_resource type="GradientTexture2D" id=45]
@@ -20,7 +21,7 @@ margin_bottom = 69.0
 mouse_filter = 0
 size_flags_vertical = 1
 custom_fonts/font = ExtResource( 6 )
-text = "E ae é... Español. Andale arriba muchachos!???? ¿Qué? asdasdasd"
+text = "test test test test test test test test test test test test"
 autowrap = true
 max_lines_visible = 3
 script = ExtResource( 8 )
@@ -45,8 +46,8 @@ texture = SubResource( 45 )
 position = Vector2( 16, 59 )
 z_index = 44
 frames = ExtResource( 4 )
-animation = "talk"
-frame = 26
+animation = "idle"
+frame = 95
 playing = true
 
 [node name="Portrait2" type="AnimatedSprite" parent="."]
@@ -54,7 +55,7 @@ position = Vector2( 175, 59 )
 z_index = 44
 frames = ExtResource( 3 )
 animation = "idle"
-frame = 23
+frame = 18
 playing = true
 
 [node name="next_dialogue" type="AnimatedSprite" parent="."]
@@ -62,7 +63,7 @@ position = Vector2( 95, 74 )
 z_index = 44
 frames = ExtResource( 5 )
 animation = "Tag"
-frame = 6
+frame = 7
 playing = true
 
 [node name="portrait_side" type="Label" parent="."]
@@ -79,3 +80,8 @@ autowrap = true
 __meta__ = {
 "_editor_description_": ""
 }
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+visible = false
+frames = ExtResource( 7 )
+animation = "talk"

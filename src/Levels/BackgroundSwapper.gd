@@ -1,4 +1,5 @@
 extends Area2D
+class_name BackgroundSwapper
 
 export var debug := false
 export var _backgrounds : Array

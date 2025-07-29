@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/saber_2.ogg-d10ed11ff38f257ceb47226b8a009e67.oggstr"
+
+[deps]
+
+source_file="res://Zero_mod/SFX/saber_2.ogg"
+dest_files=[ "res://.import/saber_2.ogg-d10ed11ff38f257ceb47226b8a009e67.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

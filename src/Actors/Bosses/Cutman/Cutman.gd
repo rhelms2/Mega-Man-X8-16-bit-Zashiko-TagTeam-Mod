@@ -6,7 +6,7 @@ onready var tween := TweenController.new(self,false)
 func _ready() -> void:
 	pass
 	
-func set_direction(dir: int, update := false):
+func set_direction(dir: int, _update := false):
 	direction.x = dir
 	emit_signal("new_direction", dir)
 	#if update:

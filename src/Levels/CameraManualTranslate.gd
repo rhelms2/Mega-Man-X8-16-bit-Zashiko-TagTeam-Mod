@@ -1,5 +1,5 @@
 extends CameraMode
-class_name TranslateCameraMode
+class_name TranslateCameraMode2
 
 const translate_time := 2
 var initial_camera_position : Vector2

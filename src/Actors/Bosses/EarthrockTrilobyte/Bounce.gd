@@ -1,4 +1,5 @@
 extends AttackAbility
+class_name TrilobyteBounce
 
 var bounce_direction := 0
 var saved_vertical_speed := 0.0
@@ -53,7 +54,7 @@ func peleh() -> void:
 	saved_vertical_speed = jump_velocity
 	var s_speed = -character.get_actual_horizontal_speed()
 	force_movement_regardless_of_direction(s_speed)
-	
+
 func bounce(horizontal_decay:=2.0, vertical_decay := 1.5) -> void:
 	if timer > last_bounce + 0.017:
 		last_speed = last_speed.bounce(character.get_slide_collision(0).normal)

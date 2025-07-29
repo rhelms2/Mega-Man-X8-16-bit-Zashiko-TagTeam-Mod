@@ -1,9 +1,10 @@
-extends "res://src/Objects/Box/StaticFallingBody.gd"
+extends NewBox
 
-func _ready() -> void:
-	Tools.timer(11.5,"destroy",self)
 
-func _physics_process(delta: float) -> void:
+func _ready() -> void :
+	Tools.timer(11.5, "destroy", self)
+
+func _physics_process(delta: float) -> void :
 	if active:
 		if is_colliding_with_ground():
 			process_horizontal_velocity(delta)
@@ -12,21 +13,19 @@ func _physics_process(delta: float) -> void:
 		process_gravity(delta)
 		process_vertical_velocity(delta)
 
-func void_touch() -> void:
+func void_touch() -> void :
 	destroy()
 
-func deactivate_ground_checks_if_colliding_with_wall() -> void:
+func deactivate_ground_checks_if_colliding_with_wall() -> void :
 	pass
-	#ground_check.enabled = not left_wall_check.is_colliding()
-	#ground_check_2.enabled = not right_wall_check.is_colliding()
-	
-func process_horizontal_velocity(delta: float) -> void:
-	global_position.x += -35 * delta
 
-func process_gravity(delta: float) -> void:
+func process_horizontal_velocity(delta: float) -> void :
+	global_position.x += - 35 * delta
+
+func process_gravity(delta: float) -> void :
 	velocity.y += 250 * delta
 
-func _on_zero_health() -> void:
-	collider.set_deferred("disabled",true)
-	$kinematicBody2D/collisionShape2D.set_deferred("disabled",true)
-	Tools.timer(1.5,"destroy",self)
+func _on_zero_health() -> void :
+	collider.set_deferred("disabled", true)
+	$kinematicBody2D / collisionShape2D.set_deferred("disabled", true)
+	Tools.timer(1.5, "destroy", self)

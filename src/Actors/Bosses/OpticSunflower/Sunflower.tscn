@@ -87,6 +87,7 @@ low_height_segments = 3
 script = ExtResource( 2 )
 time_between_attacks = Vector2( 0.5, 0.5 )
 order_size = 48
+desperation_chance = 0
 
 [node name="collisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 18.5 )
@@ -97,7 +98,7 @@ material = ExtResource( 13 )
 z_index = 1
 frames = ExtResource( 6 )
 animation = "idle"
-frame = 13
+frame = 9
 playing = true
 flip_h = true
 
@@ -216,7 +217,7 @@ visible = false
 script = ExtResource( 3 )
 invulnerability_time = 0.1
 max_flash_time = 0.35
-weakenesses = [ "BlastLaunch" ]
+weakenesses = [ "BlastLaunch", "BlastLauncher", "Youdantotsu" ]
 
 [node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
 pause_mode = 2
@@ -282,7 +283,7 @@ naked = ExtResource( 41 )
 [connection signal="beam" from="OpticCrush" to="Optic360Ray" method="deactivate"]
 [connection signal="beam" from="OpticCrush" to="OpticGun" method="deactivate"]
 [connection signal="beam" from="OpticCrush" to="OpticShield" method="deactivate"]
-[connection signal="beam" from="OpticCrush" to="OpticCrush/LaserBeamManager" method="_on_signal"]
+[connection signal="laser" from="OpticCrush" to="OpticCrush/LaserBeamManager" method="_on_signal"]
 [connection signal="ready_for_stun" from="OpticCrush" to="BossStun" method="reactivate"]
 [connection signal="dps" from="Damage" to="Damage/dps" method="_on_Damage_dps"]
 

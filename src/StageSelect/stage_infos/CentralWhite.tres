@@ -1,7 +1,7 @@
 [gd_resource type="Resource" load_steps=4 format=2]
 
-[ext_resource path="res://src/BossIntro/StageInfo.gd" type="Script" id=1]
-[ext_resource path="res://src/Actors/Bosses/boss_sprites/yeti.res" type="SpriteFrames" id=2]
+[ext_resource path="res://src/Actors/Bosses/BossIntro/StageInfo.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Bosses/AvalancheYeti/yeti.res" type="SpriteFrames" id=2]
 [ext_resource path="res://src/StageSelect/preview/stage_7.png" type="Texture" id=3]
 
 [resource]

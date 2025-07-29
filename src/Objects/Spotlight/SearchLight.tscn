@@ -53,3 +53,4 @@ process_parent = true
 physics_process_parent = true
 
 [connection signal="body_entered" from="Spotlight1/pathFollow2D/playerDetector" to="." method="_on_playerDetector_body_entered"]
+[connection signal="body_exited" from="Spotlight1/pathFollow2D/playerDetector" to="." method="_on_playerDetector_body_exited"]

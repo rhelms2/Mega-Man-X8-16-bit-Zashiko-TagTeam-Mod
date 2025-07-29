@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Primrose - Loop.ogg-3994192e7b60c7ba8638eacac452b5b3.oggstr"
+
+[deps]
+
+source_file="res://Remix/Songs/Primrose - Loop.ogg"
+dest_files=[ "res://.import/Primrose - Loop.ogg-3994192e7b60c7ba8638eacac452b5b3.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

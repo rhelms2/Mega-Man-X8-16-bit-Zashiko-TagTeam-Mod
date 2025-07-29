@@ -1,0 +1,21 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://src/Actors/Player/BossWeapons/WeaponResource.gd" type="Script" id=1]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/GigaCrash/palette.png" type="Texture" id=2]
+[ext_resource path="res://Axl_mod/HUD/giga_attack_icon.png" type="Texture" id=3]
+
+[resource]
+script = ExtResource( 1 )
+short_name = "G. Impact"
+collectible = ""
+icon = ExtResource( 3 )
+palette = ExtResource( 2 )
+regular_ammo_cost = 1.0
+charged_ammo_cost = 4.0
+cooldown = 0.1
+MainColor1 = Color( 1, 1, 1, 0 )
+MainColor2 = Color( 0.784314, 0.784314, 0.784314, 0.196078 )
+MainColor3 = Color( 0.588235, 0.588235, 0.588235, 0.196078 )
+MainColor4 = Color( 0.470588, 0.941176, 0.917647, 1 )
+MainColor5 = Color( 0.239216, 0.698039, 0.756863, 1 )
+MainColor6 = Color( 0.0784314, 0.439216, 0.490196, 1 )

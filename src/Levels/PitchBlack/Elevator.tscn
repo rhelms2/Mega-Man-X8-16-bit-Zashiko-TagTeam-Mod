@@ -4,7 +4,7 @@
 
 [sub_resource type="Curve2D" id=4]
 _data = {
-"points": PoolVector2Array( 0, 0, 0, 0, 19, -492, 0, 0, 0, 0, 19, 752 )
+"points": PoolVector2Array( 0, 0, 0, 0, 19, -703, 0, 0, 0, 0, 19, 752 )
 }
 
 [node name="Elevator" type="Node2D"]
@@ -14,44 +14,49 @@ pause_mode = 1
 curve = SubResource( 4 )
 
 [node name="FlyingPlatform" parent="path2D" instance=ExtResource( 1 )]
-position = Vector2( 19, -492 )
+position = Vector2( 19, -703 )
 loop = true
 
 [node name="FlyingPlatform2" parent="path2D" instance=ExtResource( 1 )]
-position = Vector2( 19, -336.471 )
+position = Vector2( 19, -546.547 )
 offset = 156.002
 loop = true
 
 [node name="FlyingPlatform3" parent="path2D" instance=ExtResource( 1 )]
-position = Vector2( 19, -180.96 )
+position = Vector2( 19, -389.917 )
 offset = 311.896
 loop = true
 
 [node name="FlyingPlatform4" parent="path2D" instance=ExtResource( 1 )]
-position = Vector2( 19, -26.3131 )
+position = Vector2( 19, -232.574 )
 offset = 467.898
 loop = true
 
 [node name="FlyingPlatform5" parent="path2D" instance=ExtResource( 1 )]
-position = Vector2( 19, 127.705 )
+position = Vector2( 19, -73.6818 )
 offset = 623.791
 loop = true
 
 [node name="FlyingPlatform6" parent="path2D" instance=ExtResource( 1 )]
-position = Vector2( 19, 281.764 )
+position = Vector2( 19, 83.1642 )
 offset = 779.794
 loop = true
 
 [node name="FlyingPlatform7" parent="path2D" instance=ExtResource( 1 )]
-position = Vector2( 19, 437.965 )
+position = Vector2( 19, 242.987 )
 offset = 935.687
 loop = true
 
 [node name="FlyingPlatform8" parent="path2D" instance=ExtResource( 1 )]
-position = Vector2( 19, 593.779 )
+position = Vector2( 19, 400.244 )
 offset = 1091.68
 loop = true
 
+[node name="FlyingPlatform9" parent="path2D" instance=ExtResource( 1 )]
+position = Vector2( 19, 560.212 )
+offset = 1251.68
+loop = true
+
 [node name="visibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
-position = Vector2( 28.5, 90.5 )
-scale = Vector2( 17.95, 64.55 )
+position = Vector2( 28.5, -12.9999 )
+scale = Vector2( 17.95, 74.9 )

@@ -1,10 +1,10 @@
 extends Node2D
 
 onready var warning: AnimatedSprite = $warning
-onready var prepare: AudioStreamPlayer2D = $prepare
+onready var prepare_sfx: PitchStreamPlayer2D = $prepare
 onready var damage: Node2D = $DamageOnTouch
 onready var explosion: AnimatedSprite = $explosion
-onready var explosion_sfx: AudioStreamPlayer2D = $explosion_sfx
+onready var explosion_sfx: PitchStreamPlayer2D = $explosion_sfx
 
 var expiring := false
 
@@ -17,7 +17,7 @@ func expire():
 	
 func prepare():
 	warning.frame = 0
-	prepare.play_r()
+	prepare_sfx.play_r()
 	Tools.timer(.45,"deal_damage",self)
 	
 

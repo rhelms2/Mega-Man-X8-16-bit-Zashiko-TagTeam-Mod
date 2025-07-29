@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://src/Actors/IcarusHeadArea.gd" type="Script" id=1]
-[ext_resource path="res://src/Actors/Modules/JumpDamage.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Player/X/IcarusHeadArea.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Player/Modules/JumpDamage.gd" type="Script" id=2]
 [ext_resource path="res://src/Effects/Textures/area_shield.tres" type="SpriteFrames" id=3]
 
 [sub_resource type="CapsuleShape2D" id=35]
@@ -25,7 +25,6 @@ visible = false
 scale = Vector2( 0.8, 0.8 )
 frames = ExtResource( 3 )
 animation = "New Anim"
-frame = 5
 playing = true
 
 [node name="DamageArea" type="RigidBody2D" parent="." groups=["Player Projectile"]]

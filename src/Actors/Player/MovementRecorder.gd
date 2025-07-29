@@ -3,36 +3,36 @@ class_name MovementRecorder
 onready var x: KinematicBody2D = $".."
 onready var a: AnimatedSprite = $"../animatedSprite"
 
-var recording := false
+var recording: = false
 
 var recorded_positions = []
 
-func _ready() -> void:
+func _ready() -> void :
 	if GameManager.time_attack:
-		Event.listen("gameplay_start",self,"start_recording")
-		Event.listen("player_death",self,"cancel_recording")
-		Event.listen("boss_door_open",self,"finish_recording")
+		Event.listen("gameplay_start", self, "start_recording")
+		Event.listen("player_death", self, "cancel_recording")
+		Event.listen("boss_door_open", self, "finish_recording")
 
-func start_recording() -> void:
+func start_recording() -> void :
 	recording = true
-	print_debug("Recorder: Starting Recording.")
+	
 
-func cancel_recording() -> void:
+func cancel_recording() -> void :
 	recording = false
 	recorded_positions.clear()
-	print_debug("Recorder: Cancelled Recording.")
+	
 
-func finish_recording() -> void:
+func finish_recording() -> void :
 	recording = false
-	print_debug("Recorder: Finished Recording. Saving...")
+	
 	GameManager.save_recording(recorded_positions)
 
-func _physics_process(_delta: float) -> void:
+func _physics_process(_delta: float) -> void :
 	if recording:
-		recorded_positions.append( Locale.new(x.global_position, a.animation, get_ms()) )
+		recorded_positions.append(Locale.new(x.global_position, a.animation, get_ms()))
 
 func get_ms() -> float:
-	return OS.get_ticks_msec() - GameManager.get_stage_start_msec() 
+	return OS.get_ticks_msec() - GameManager.get_stage_start_msec()
 
 func get_resource() -> int:
 	if a.frames.resource_name != "":

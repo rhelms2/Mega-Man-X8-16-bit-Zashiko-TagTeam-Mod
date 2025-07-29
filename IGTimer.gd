@@ -1,16 +1,7 @@
 extends Node
 
-export var section := "section_name"
+onready var section: String = "IGT_" + get_parent().name
 
-var running := true
 
-func _ready() -> void:
-	Event.connect("beat_seraph_lumine",self,"stop")
-	running = true
-
-func _physics_process(delta: float) -> void:
-	if running:
-		IGT.add(section,delta)
-
-func stop() -> void:
-	running = false
+func _physics_process(delta: float) -> void :
+	GlobalVariables.add(section, delta)

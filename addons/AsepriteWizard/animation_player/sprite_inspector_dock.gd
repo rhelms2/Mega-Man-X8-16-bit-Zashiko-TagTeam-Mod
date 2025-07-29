@@ -1,4 +1,4 @@
-tool
+tool 
 extends PanelContainer
 
 const wizard_config = preload("../config/wizard_config.gd")
@@ -16,21 +16,21 @@ var _source: String = ""
 var _animation_player_path: String
 var _file_dialog_aseprite: FileDialog
 var _output_folder_dialog: FileDialog
-var _importing := false
+var _importing: = false
 
-var _output_folder := ""
-var _out_folder_default := "[Same as scene]"
-var _layer_default := "[all]"
+var _output_folder: = ""
+var _out_folder_default: = "[Same as scene]"
+var _layer_default: = "[all]"
 
-onready var _options_field = $margin/VBoxContainer/animation_player/options
-onready var _source_field = $margin/VBoxContainer/source/button
-onready var _layer_field = $margin/VBoxContainer/layer/options
-onready var _options_title = $margin/VBoxContainer/options_title/options_title
-onready var _options_container = $margin/VBoxContainer/options
-onready var _out_folder_field = $margin/VBoxContainer/options/out_folder/button
-onready var _out_filename_field = $margin/VBoxContainer/options/out_filename/LineEdit
-onready var _visible_layers_field =  $margin/VBoxContainer/options/visible_layers/CheckButton
-onready var _ex_pattern_field = $margin/VBoxContainer/options/ex_pattern/LineEdit
+onready var _options_field = $margin / VBoxContainer / animation_player / options
+onready var _source_field = $margin / VBoxContainer / source / button
+onready var _layer_field = $margin / VBoxContainer / layer / options
+onready var _options_title = $margin / VBoxContainer / options_title / options_title
+onready var _options_container = $margin / VBoxContainer / options
+onready var _out_folder_field = $margin / VBoxContainer / options / out_folder / button
+onready var _out_filename_field = $margin / VBoxContainer / options / out_filename / LineEdit
+onready var _visible_layers_field = $margin / VBoxContainer / options / visible_layers / CheckButton
+onready var _ex_pattern_field = $margin / VBoxContainer / options / ex_pattern / LineEdit
 
 func _ready():
 	var cfg = wizard_config.decode(sprite.editor_description)
@@ -166,11 +166,11 @@ func _on_import_pressed():
 		return
 
 	var options = {
-		"source": ProjectSettings.globalize_path(_source),
-		"output_folder": _output_folder if _output_folder != "" else root.filename.get_base_dir(),
-		"exception_pattern": _ex_pattern_field.text,
-		"only_visible_layers": _visible_layers_field.pressed,
-		"output_filename": _out_filename_field.text,
+		"source": ProjectSettings.globalize_path(_source), 
+		"output_folder": _output_folder if _output_folder != "" else root.filename.get_base_dir(), 
+		"exception_pattern": _ex_pattern_field.text, 
+		"only_visible_layers": _visible_layers_field.pressed, 
+		"output_filename": _out_filename_field.text, 
 		"layer": _layer
 	}
 
@@ -182,13 +182,13 @@ func _on_import_pressed():
 
 func _save_config():
 	sprite.editor_description = wizard_config.encode({
-		"player": _animation_player_path,
-		"source": _source,
-		"layer": _layer,
-		"op_exp": _options_title.pressed,
-		"o_folder": _output_folder,
-		"o_name": _out_filename_field.text,
-		"only_visible": _visible_layers_field.pressed,
+		"player": _animation_player_path, 
+		"source": _source, 
+		"layer": _layer, 
+		"op_exp": _options_title.pressed, 
+		"o_folder": _output_folder, 
+		"o_name": _out_filename_field.text, 
+		"only_visible": _visible_layers_field.pressed, 
 		"o_ex_p": _ex_pattern_field.text
 	})
 
@@ -206,7 +206,7 @@ func _create_aseprite_file_selection():
 	file_dialog.mode = FileDialog.MODE_OPEN_FILE
 	file_dialog.access = FileDialog.ACCESS_FILESYSTEM
 	file_dialog.connect("file_selected", self, "_on_aseprite_file_selected")
-	file_dialog.set_filters(PoolStringArray(["*.ase","*.aseprite"]))
+	file_dialog.set_filters(PoolStringArray(["*.ase", "*.aseprite"]))
 	return file_dialog
 
 

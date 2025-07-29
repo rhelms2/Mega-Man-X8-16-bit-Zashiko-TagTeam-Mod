@@ -1,25 +1,23 @@
-tool
+tool 
 extends EditorInspectorPlugin
 
-const InspectorDock = preload("sprite_inspector_dock.tscn")
+const AsepriteInspectorDock = preload("./docks/animation_player_inspector_dock.tscn")
 
 var config
 var file_system: EditorFileSystem
-
-var _sprite: Sprite
+var _target_node: Node
 
 func can_handle(object):
-	return object is Sprite
+	return object is Sprite or object is Sprite3D or object is TextureRect
 
 
 func parse_begin(object):
-	_sprite = object
+	_target_node = object
 
 
 func parse_end():
-	var dock = InspectorDock.instance()
-	dock.sprite = _sprite
+	var dock = AsepriteInspectorDock.instance()
+	dock.target_node = _target_node
 	dock.config = config
 	dock.file_system = file_system
-	
 	add_custom_control(dock)

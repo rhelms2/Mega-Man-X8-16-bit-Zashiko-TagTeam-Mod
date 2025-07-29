@@ -2,16 +2,16 @@ extends Reference
 class_name AbilityStage
 
 var ability
-var current_stage := 0
-var _check := 1
-var ended := false
+var current_stage: = 0
+var _check: = 1
+var ended: = false
 
-func _init(_ability, connect := true) -> void:
+func _init(_ability, connect: = true) -> void :
 	ability = _ability
 	if connect:
-		ability.connect("stop",self,"reset")
+		ability.connect("stop", self, "reset")
 
-func reset(_d = null) -> void:
+func reset(_d = null) -> void :
 	current_stage = 0
 	ended = false
 	reset_check()
@@ -31,7 +31,7 @@ func on_next() -> bool:
 		_check += 1
 	return false
 
-func currently_is(stage : int) -> bool:
+func currently_is(stage: int) -> bool:
 	_check = stage + 1
 	Log("Manual stage check. Stage " + str(current_stage))
 	return current_stage == stage
@@ -45,23 +45,23 @@ func next():
 	reset_check()
 	Log("proceeding to stage " + str(current_stage))
 
-func end() -> void:
+func end() -> void :
 	current_stage += 1
 	Log("ending on stage " + str(current_stage))
 	ended = true
 
-func resume() -> void:
+func resume() -> void :
 	ended = false
 	Log("resuming")
 	
 
-func previous_attack_stage() -> void:
+func previous_attack_stage() -> void :
 	current_stage -= 1
 	reset_timer()
 	reset_check()
 	Log("proceeding to stage " + str(current_stage))
 	
-func go_to_stage(new_stage : int) -> void:
+func go_to_stage(new_stage: int) -> void :
 	current_stage = new_stage
 	reset_timer()
 	reset_check()
@@ -70,14 +70,14 @@ func go_to_stage(new_stage : int) -> void:
 func deferred_next():
 	call_deferred("next")
 	
-func deferred_go_to_stage(new_stage : int) -> void:
-	call_deferred("go_to_stage",new_stage)
+func deferred_go_to_stage(new_stage: int) -> void :
+	call_deferred("go_to_stage", new_stage)
 
-func reset_timer() -> void:
+func reset_timer() -> void :
 	ability.timer = 0
 
-func reset_check() -> void:
+func reset_check() -> void :
 	_check = 1
 
-func Log(message) -> void:
+func Log(message) -> void :
 	ability.Log(message)

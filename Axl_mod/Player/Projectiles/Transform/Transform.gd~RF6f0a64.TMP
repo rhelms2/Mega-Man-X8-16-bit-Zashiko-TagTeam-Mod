@@ -1,0 +1,86 @@
+#extends WeaponAxl
+extends Node2D
+
+
+export  var active: = true
+export  var logs = false
+export  var chargeable_without_ammo: = false
+export  var shots:Array
+export  var max_shots_alive: = 99
+export  var max_charged_shots_alive: = 99
+export  var recharge_rate: = 1.0
+export  var weapon:Resource
+
+
+onready var parent: = get_parent()
+onready var animatedsprite:AnimatedSprite = $"../../animatedSprite"
+onready var weapon_stasis:Node2D = $"../../WeaponStasis"
+onready var jump_damage:Node2D = $"../../JumpDamage"
+
+onready var character: = get_parent().get_parent()
+
+var timer: = 0.0
+var last_time_hit: = 0.0
+const minimum_time_between_recharges: = 0.2
+
+#func _input(event:InputEvent)->void :
+#	if active and has_ammo() and character.has_control() and not character.is_riding():
+#		if event.is_action_pressed("select_special"):
+#			var _shot_node = character.get_node("Shot")
+#			if _shot_node != null:
+#				var _main_weapon = _shot_node.weapons[_shot_node.weapons.find(_shot_node.current_weapon)]
+#				if "Pistol" in _main_weapon.name:
+#					fire()
+
+func _ready()->void :
+	character.listen("equipped_armor", self, "on_equip")
+	character.listen("zero_health", self, "on_zero_health")
+	Event.listen("hit_enemy", self, "recharge")
+	Event.listen("enemy_kill", self, "recharge")
+
+func recharge(_d = null):
+	if active and current_ammo < max_ammo:
+		if timer > last_time_hit + minimum_time_between_recharges:
+			last_time_hit = timer
+			current_ammo = clamp(current_ammo + 1.0, 0.0, max_ammo)
+
+func on_equip():
+	if character.is_full_armor() == "axl":
+		active = true
+		current_ammo = max_ammo
+		Event.emit_signal("special_activated", self)
+	else :
+		active = false
+	parent.update_list_of_weapons()
+	set_physics_process(active)
+
+func has_ammo()->bool:
+	return current_ammo >= max_ammo
+
+func fire(_charge_level: = 0)->void :
+	.fire(0)
+	weapon_stasis.ExecuteOnce()
+	jump_damage.effect.visible = false
+	animatedsprite.modulate = Color(1, 1, 1, 0.01)
+	character.add_invulnerability("GigaCrash")
+	parent.set_pistol_as_weapon()
+	
+func connect_shot_event(_shot):
+	_shot.connect("projectile_end", self, "on_shot_end")
+	character.listen("zero_health", _shot, "on_death")
+
+func on_zero_health()->void :
+	animatedsprite.modulate = Color.white
+
+func position_shot(shot)->void :
+	shot.transform = global_transform
+	shot.scale.x = character.get_facing_direction()
+
+func on_shot_end(_shot):
+	character.remove_invulnerability("GigaCrash")
+	weapon_stasis.play_animation("fall")
+	weapon_stasis.EndAbility()
+	animatedsprite.modulate = Color.white
+
+func _physics_process(delta:float)->void :
+	timer += delta

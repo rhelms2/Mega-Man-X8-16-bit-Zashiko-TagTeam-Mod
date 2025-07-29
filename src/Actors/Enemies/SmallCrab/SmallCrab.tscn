@@ -17,7 +17,7 @@ extents = Vector2( 5, 2 )
 extents = Vector2( 12, 10 )
 
 [sub_resource type="RectangleShape2D" id=48]
-extents = Vector2( 18, 2.5 )
+extents = Vector2( 12, 10 )
 
 [node name="SmallCrab" type="KinematicBody2D" groups=["Enemies"]]
 z_index = 2
@@ -46,7 +46,6 @@ playing = true
 flip_h = true
 
 [node name="collisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 shape = SubResource( 15 )
 
 [node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
@@ -55,13 +54,11 @@ scale = Vector2( 2, 2 )
 rect = Rect2( -5, -5, 10, 10 )
 
 [node name="area2D" type="Area2D" parent="."]
-visible = false
 collision_layer = 0
 collision_mask = 6
 input_pickable = false
 
 [node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
-position = Vector2( 0, 7.5 )
 shape = SubResource( 48 )
 
 [node name="DamageOnTouch" type="Node2D" parent="."]
@@ -69,6 +66,7 @@ script = ExtResource( 13 )
 
 [node name="Damage" type="Node2D" parent="."]
 script = ExtResource( 8 )
+max_freeze_hits = 1
 
 [node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
 stream = ExtResource( 6 )

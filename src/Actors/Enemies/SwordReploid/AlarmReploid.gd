@@ -1,6 +1,6 @@
 extends Enemy
 
-export var initial_x_direction := 0.0
+export  var initial_x_direction: = 0.0
 
-func _ready() -> void:
+func _ready() -> void :
 	pass

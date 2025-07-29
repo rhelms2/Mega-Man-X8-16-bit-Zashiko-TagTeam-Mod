@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://src/AchievementSystem/AchievementHolder.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Options/KeyBinder/KeyConfig.gd" type="Script" id=2]
@@ -16,6 +16,9 @@
 [ext_resource path="res://src/AchievementSystem/Screen/Lead.gd" type="Script" id=14]
 [ext_resource path="res://src/AchievementSystem/Screen/ActionHolder.gd" type="Script" id=15]
 [ext_resource path="res://src/AchievementSystem/Screen/scrollContainer.gd" type="Script" id=16]
+[ext_resource path="res://src/Sounds/MM - Equip.wav" type="AudioStream" id=17]
+[ext_resource path="res://System/SFX/window_open.ogg" type="AudioStream" id=18]
+[ext_resource path="res://src/Sounds/FX - Cancel.ogg" type="AudioStream" id=19]
 
 [sub_resource type="DynamicFont" id=1]
 size = 12
@@ -45,7 +48,8 @@ layer = 2
 script = ExtResource( 2 )
 menu_path = NodePath("Menu")
 initial_focus = NodePath("Menu/exit")
-exit_action = "select"
+exit_action = "ui_cancel"
+exit_action_2 = "pause"
 
 [node name="Menu" type="Control" parent="."]
 margin_right = 40.0
@@ -334,6 +338,21 @@ mouse_filter = 2
 color = Color( 0, 0, 0, 0 )
 script = ExtResource( 3 )
 menu = NodePath("../Menu")
+
+[node name="pick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 18 )
+volume_db = -10.0
+bus = "SFX"
+
+[node name="equip" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 17 )
+volume_db = -4.0
+bus = "SFX"
+
+[node name="cancel" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 19 )
+volume_db = -4.0
+bus = "SFX"
 
 [connection signal="initialize" from="." to="Menu/scrollContainer/ActionHolder" method="_on_initialize"]
 [connection signal="initialize" from="." to="Menu/Lead" method="_on_initialize"]

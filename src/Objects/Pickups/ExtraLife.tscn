@@ -1,28 +1,12 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://src/Objects/Pickups/ExtraLife.gd" type="Script" id=1]
 [ext_resource path="res://src/Sounds/FX - Extra Life.ogg" type="AudioStream" id=2]
-[ext_resource path="res://src/Objects/Pickups/life.png" type="Texture" id=3]
+[ext_resource path="res://src/Objects/Pickups/ExtraLife.tres" type="SpriteFrames" id=3]
 [ext_resource path="res://src/Levels/Primrose/rotator.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 6, 6 )
-
-[sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 3 )
-region = Rect2( 0, 0, 16, 16 )
-
-[sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 3 )
-region = Rect2( 16, 0, 16, 16 )
-
-[sub_resource type="SpriteFrames" id=4]
-animations = [ {
-"frames": [ SubResource( 2 ), SubResource( 3 ) ],
-"loop": true,
-"name": "default",
-"speed": 24.0
-} ]
 
 [sub_resource type="RectangleShape2D" id=5]
 extents = Vector2( 7, 7 )
@@ -36,7 +20,7 @@ heal = 0
 duration = 5
 
 [node name="area2D" type="Area2D" parent="."]
-collision_layer = 0
+collision_layer = 32
 collision_mask = 2
 
 [node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
@@ -44,13 +28,14 @@ shape = SubResource( 1 )
 
 [node name="animatedSprite" type="AnimatedSprite" parent="."]
 pause_mode = 1
-frames = SubResource( 4 )
+frames = ExtResource( 3 )
+frame = 1
 playing = true
 
 [node name="sound" type="AudioStreamPlayer2D" parent="."]
 pause_mode = 2
 stream = ExtResource( 2 )
-volume_db = -10.0
+volume_db = -5.0
 pitch_scale = 0.99
 max_distance = 600.0
 bus = "SFX"

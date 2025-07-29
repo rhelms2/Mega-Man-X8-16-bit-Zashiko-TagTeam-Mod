@@ -1,16 +1,15 @@
 [remap]
 
-importer="aseprite_animation_importer"
+importer="aseprite_wizard.plugin"
 type="SpriteFrames"
-path="res://.import/laser_shot_beam.ase-ce7e2c430a51eada19f5590c61a0a1d2.res"
+valid=false
 
 [deps]
 
 source_file="res://src/Actors/Weapons/laser_shot_beam.ase"
-dest_files=[ "res://.import/laser_shot_beam.ase-ce7e2c430a51eada19f5590c61a0a1d2.res" ]
-
 [params]
 
-extrude=false
-default_direction="Forward"
-default_loop=false
+split_layers=false
+exclude_layers_pattern=""
+only_visible_layers=false
+sheet_type="Packed"

@@ -1,0 +1,37 @@
+[gd_resource type="Resource" load_steps=12 format=2]
+
+[ext_resource path="res://Axl_mod/WeaponGet/Videos/sequence_sprialmagnum.tres" type="Resource" id=1]
+[ext_resource path="res://src/Sounds/Mantis - DarkArrow.ogg" type="AudioStream" id=2]
+[ext_resource path="res://src/Actors/Player/BossWeapons/WeaponResource.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/swipe.wav" type="AudioStream" id=4]
+[ext_resource path="res://src/Actors/Player/BossWeapons/squeeze_palette.png" type="Texture" id=5]
+[ext_resource path="res://src/WeaponGet/palettes/squeezebomb_h.png" type="Texture" id=6]
+[ext_resource path="res://src/WeaponGet/palettes/squeezebomb_i.png" type="Texture" id=7]
+[ext_resource path="res://Axl_mod/HUD/BossWeapons/faded/selectable_weapon_02.png" type="Texture" id=8]
+[ext_resource path="res://Axl_mod/HUD/BossWeapons/selectable_weapon_02.png" type="Texture" id=9]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/SpiralMagnum/SpiralMagnum.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/Actors/Player/BossWeapons/SqueezeBomb/SqueezeBombCharged.tscn" type="PackedScene" id=11]
+
+[resource]
+script = ExtResource( 3 )
+short_name = "ANTONION_AXL_WPNMENU"
+collectible = "antonion_weapon"
+icon = ExtResource( 9 )
+faded_icon = ExtResource( 8 )
+palette = ExtResource( 5 )
+regular_shot = ExtResource( 10 )
+regular_ammo_cost = 1.0
+charged_shot = ExtResource( 11 )
+charged_ammo_cost = 4.0
+cooldown = 1.0
+sound = ExtResource( 2 )
+charged_sound = ExtResource( 4 )
+input_sequence = ExtResource( 1 )
+MainColor1 = Color( 0.835294, 0.572549, 0.945098, 1 )
+MainColor2 = Color( 0.611765, 0.32549, 0.803922, 1 )
+MainColor3 = Color( 0.266667, 0.227451, 0.509804, 1 )
+MainColor4 = Color( 0.996078, 0.745098, 0.764706, 1 )
+MainColor5 = Color( 0.92549, 0.439216, 0.521569, 1 )
+MainColor6 = Color( 0.533333, 0.266667, 0.333333, 1 )
+hermes_palette = ExtResource( 6 )
+icarus_palette = ExtResource( 7 )

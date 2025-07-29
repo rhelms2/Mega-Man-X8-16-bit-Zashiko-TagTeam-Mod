@@ -1,16 +1,15 @@
 [remap]
 
-importer="aseprite_animation_importer"
+importer="aseprite_wizard.plugin"
 type="SpriteFrames"
-path="res://.import/pandamon.ase-59d81b41d9418f5badb3e161103e7a77.res"
+valid=false
 
 [deps]
 
 source_file="res://src/Actors/pandamon.ase"
-dest_files=[ "res://.import/pandamon.ase-59d81b41d9418f5badb3e161103e7a77.res" ]
-
 [params]
 
-extrude=false
-default_direction="Forward"
-default_loop=false
+split_layers=false
+exclude_layers_pattern=""
+only_visible_layers=false
+sheet_type="Packed"

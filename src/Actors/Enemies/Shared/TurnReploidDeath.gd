@@ -3,10 +3,19 @@ signal screen_flash
 onready var reploid: AnimatedSprite = $reploid
 
 func get_spawn_item():
-	return GameManager.get_next_spawn_item(100,0,100,0,0,0)
+	if CharacterManager.game_mode < 0:
+		return GameManager.get_next_spawn_item(100, 0, 100, 0, 0, 0)
+	elif CharacterManager.game_mode == 0:
+		return GameManager.get_next_spawn_item(100, 0, 100, 0, 0, 0)
+	elif CharacterManager.game_mode == 1:
+		return GameManager.get_next_spawn_item(75, 0, 100, 0, 0, 0)
+	elif CharacterManager.game_mode == 2:
+		return GameManager.get_next_spawn_item(50, 50, 0, 50, 0, 0)
+	elif CharacterManager.game_mode >= 3:
+		return GameManager.get_next_spawn_item(0, 0, 0, 0, 0, 0)
 
-func _ready() -> void:
-	Tools.timer(0.1,"rename",self)
+func _ready() -> void :
+	Tools.timer(0.1, "rename", self)
 
 func rename():
 	name = "BossDeath"

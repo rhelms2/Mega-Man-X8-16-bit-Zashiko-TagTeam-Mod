@@ -31,6 +31,8 @@ func set_language(locale : String):
 func display_value(new_value) -> void:
 	if new_value == "pr":
 		new_value = "huebr"
+	if new_value == "ja_JP":
+		new_value = "jp"
 	value.text = tr(str(new_value))
 
 func get_current_language():

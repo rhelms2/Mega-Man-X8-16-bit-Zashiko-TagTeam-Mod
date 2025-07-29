@@ -1,4 +1,4 @@
-[gd_scene load_steps=132 format=2]
+[gd_scene load_steps=131 format=2]
 
 [ext_resource path="res://src/Actors/Player/x_sprites/x.res" type="SpriteFrames" id=1]
 [ext_resource path="res://src/Actors/Player.gd" type="Script" id=2]
@@ -7,12 +7,11 @@
 [ext_resource path="res://Dash.gd" type="Script" id=5]
 [ext_resource path="res://src/Sounds/DASH.wav" type="AudioStream" id=6]
 [ext_resource path="res://Walk.gd" type="Script" id=7]
-[ext_resource path="res://WeaponChanger.gd" type="Script" id=8]
+[ext_resource path="res://src/Actors/Player/WeaponChanger.gd" type="Script" id=8]
 [ext_resource path="res://Walljump.gd" type="Script" id=9]
 [ext_resource path="res://src/Actors/Player/x_sprites/x_leftarm.res" type="SpriteFrames" id=10]
 [ext_resource path="res://Wallslide.gd" type="Script" id=11]
 [ext_resource path="res://src/Actors/Player/BossWeapons/DriftDiamond/DriftShoryukenDiamondWeapon.gd" type="Script" id=12]
-[ext_resource path="res://src/Sounds/SLIDE.wav" type="AudioStream" id=13]
 [ext_resource path="res://src/Actors/Player/Modules/Idle.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Damage.gd" type="Script" id=15]
 [ext_resource path="res://src/Sounds/DAMAGE.wav" type="AudioStream" id=16]
@@ -279,7 +278,7 @@ position = Vector2( 0, -4 )
 z_index = 5
 frames = ExtResource( 1 )
 animation = "idle"
-frame = 69
+frame = 40
 playing = true
 
 [node name="head_armor" type="AnimatedSprite" parent="animatedSprite"]
@@ -936,12 +935,6 @@ text = "3w"
 
 [node name="WallSlide" type="Node2D" parent="."]
 script = ExtResource( 11 )
-conflicting_moves = [ "WallJump", "DashWallJump", "Walk" ]
-actions = [ "move_right", "move_left" ]
-animation = "slide"
-sound = ExtResource( 13 )
-horizontal_velocity = 0.0
-jump_velocity = 90.0
 
 [node name="audioStreamPlayer" type="AudioStreamPlayer" parent="WallSlide"]
 pause_mode = 2

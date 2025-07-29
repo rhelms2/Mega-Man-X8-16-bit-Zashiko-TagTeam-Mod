@@ -1,0 +1,2 @@
+extends SaberZeroHitbox
+class_name RekkyoudanZeroHitbox

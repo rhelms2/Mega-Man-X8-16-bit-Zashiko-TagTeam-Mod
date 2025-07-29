@@ -1,0 +1,134 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://src/Sounds/OST - Stage Start.ogg" type="AudioStream" id=1]
+[ext_resource path="res://src/Effects/Textures/boss_intro_sigma.png" type="Texture" id=2]
+[ext_resource path="res://src/Effects/Textures/boss_intro_circle.png" type="Texture" id=3]
+[ext_resource path="res://src/Effects/Textures/boss_intro_triangle.png" type="Texture" id=4]
+[ext_resource path="res://src/Title/title_bg.png" type="Texture" id=5]
+[ext_resource path="res://src/Actors/Bosses/BossIntro/BossIntro.gd" type="Script" id=6]
+[ext_resource path="res://src/Effects/Textures/boss_intro_sparks.res" type="SpriteFrames" id=7]
+[ext_resource path="res://src/Effects/Textures/boss_intro_bg.res" type="SpriteFrames" id=8]
+[ext_resource path="res://src/Actors/Bosses/OpticSunflower/sunflower.res" type="SpriteFrames" id=9]
+[ext_resource path="res://src/Fonts/bossFont.tres" type="BitmapFont" id=10]
+[ext_resource path="res://src/StageSelect/stage_infos/Dynasty.tres" type="Resource" id=11]
+[ext_resource path="res://src/Effects/Materials/BossIntroTextPaletteSwap.tres" type="Material" id=12]
+
+[sub_resource type="Animation" id=1]
+resource_name = "screenshake"
+length = 0.35
+step = 0.032
+tracks/0/type = "value"
+tracks/0/path = NodePath("objects:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.032, 0.096, 0.16, 0.256, 0.352 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 4 ), Vector2( 0, -2 ), Vector2( 0, 1 ), Vector2( 0, -1 ), Vector2( 0, 1 ), Vector2( 0, 0 ) ]
+}
+
+[node name="BossIntro" type="Node2D"]
+script = ExtResource( 6 )
+stage_info = ExtResource( 11 )
+
+[node name="black" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 199, 112 )
+z_index = -1000
+texture = ExtResource( 5 )
+
+[node name="white_flash" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 199, 112 )
+texture = ExtResource( 5 )
+
+[node name="fadeout" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 199, 112 )
+texture = ExtResource( 5 )
+
+[node name="red_bg" type="AnimatedSprite" parent="."]
+position = Vector2( 199, 112 )
+z_index = -1
+frames = ExtResource( 8 )
+animation = " tag"
+frame = 1
+playing = true
+
+[node name="sparks" type="AnimatedSprite" parent="."]
+position = Vector2( 199, 112 )
+z_index = -1
+frames = ExtResource( 7 )
+animation = " tag"
+frame = 9
+playing = true
+
+[node name="boss" type="AnimatedSprite" parent="."]
+position = Vector2( 198, 100 )
+z_index = 5
+frames = ExtResource( 9 )
+animation = "idle"
+frame = 15
+playing = true
+
+[node name="objects" type="Node2D" parent="."]
+position = Vector2( 0, 4 )
+
+[node name="ring" type="Sprite" parent="objects"]
+position = Vector2( 199, 112 )
+texture = ExtResource( 3 )
+
+[node name="triangle" type="Sprite" parent="objects"]
+position = Vector2( 199, 112 )
+texture = ExtResource( 4 )
+
+[node name="sigma" type="Sprite" parent="objects"]
+position = Vector2( 199, 112 )
+texture = ExtResource( 2 )
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 1 )
+volume_db = -6.0
+bus = "Music"
+
+[node name="ui_anchor" type="Control" parent="."]
+margin_right = 398.0
+margin_bottom = 224.0
+
+[node name="shadow" type="Label" parent="ui_anchor"]
+modulate = Color( 0.439216, 0.192157, 0.0392157, 1 )
+material = ExtResource( 12 )
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -63.0
+margin_top = -41.0
+margin_right = 65.0
+margin_bottom = -34.0
+custom_fonts/font = ExtResource( 10 )
+text = "Optic Sunflower"
+align = 1
+uppercase = true
+
+[node name="boss_name" type="Label" parent="ui_anchor"]
+material = ExtResource( 12 )
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -64.0
+margin_top = -42.0
+margin_right = 64.0
+margin_bottom = -35.0
+custom_fonts/font = ExtResource( 10 )
+text = "Optic Sunflower"
+align = 1
+uppercase = true
+
+[node name="animationPlayer" type="AnimationPlayer" parent="."]
+anims/screenshake = SubResource( 1 )

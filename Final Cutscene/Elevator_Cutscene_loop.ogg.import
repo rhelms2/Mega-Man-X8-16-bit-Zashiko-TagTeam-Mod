@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Elevator_Cutscene_loop.ogg-77c8edebf12d930626b527f7422d6e07.oggstr"
+
+[deps]
+
+source_file="res://Final Cutscene/Elevator_Cutscene_loop.ogg"
+dest_files=[ "res://.import/Elevator_Cutscene_loop.ogg-77c8edebf12d930626b527f7422d6e07.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

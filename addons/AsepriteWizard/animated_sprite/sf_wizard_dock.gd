@@ -1,4 +1,4 @@
-tool
+tool 
 extends PanelContainer
 
 signal importer_state_changed
@@ -70,7 +70,7 @@ func _create_aseprite_file_selection():
 	file_dialog.mode = FileDialog.MODE_OPEN_FILE
 	file_dialog.access = FileDialog.ACCESS_FILESYSTEM
 	file_dialog.connect("file_selected", self, "_on_aseprite_file_selected")
-	file_dialog.set_filters(PoolStringArray(["*.ase","*.aseprite"]))
+	file_dialog.set_filters(PoolStringArray(["*.ase", "*.aseprite"]))
 	return file_dialog
 
 
@@ -99,11 +99,11 @@ func _on_next_btn_up():
 
 	var export_mode = _sf_creator.LAYERS_EXPORT_MODE if split_layers else _sf_creator.FILE_EXPORT_MODE
 	var options = {
-		"export_mode": export_mode,
-		"exception_pattern": _exception_pattern_field().text,
-		"only_visible_layers": _only_visible_layers_field().pressed,
-		"output_filename": _custom_name_field().text,
-		"do_not_create_resource": _do_not_create_res_field().pressed,
+		"export_mode": export_mode, 
+		"exception_pattern": _exception_pattern_field().text, 
+		"only_visible_layers": _only_visible_layers_field().pressed, 
+		"output_filename": _custom_name_field().text, 
+		"do_not_create_resource": _do_not_create_res_field().pressed, 
 		"remove_source_files_allowed": true
 	}
 	var exit_code = _sf_creator.create_resource(aseprite_file, output_location, options)
@@ -150,29 +150,29 @@ func _show_import_success_message():
 
 
 func _file_location_field() -> LineEdit:
-	return $container/options/file_location/HBoxContainer/file_location_path as LineEdit
+	return $container / options / file_location / HBoxContainer / file_location_path as LineEdit
 
 
 func _output_folder_field() -> LineEdit:
-	return $container/options/output_folder/HBoxContainer/file_location_path as LineEdit
+	return $container / options / output_folder / HBoxContainer / file_location_path as LineEdit
 
 
 func _exception_pattern_field() -> LineEdit:
-	return $container/options/exclude_pattern/pattern as LineEdit
+	return $container / options / exclude_pattern / pattern as LineEdit
 
 
 func _split_mode_field() -> CheckBox:
-	return $container/options/layer_importing_mode/split_layers/field as CheckBox
+	return $container / options / layer_importing_mode / split_layers / field as CheckBox
 
 
 func _only_visible_layers_field() -> CheckBox:
-	return $container/options/layer_importing_mode/visible_layers/field as CheckBox
+	return $container / options / layer_importing_mode / visible_layers / field as CheckBox
 
 
 func _custom_name_field() -> LineEdit:
-	return $container/options/custom_filename/pattern as LineEdit
+	return $container / options / custom_filename / pattern as LineEdit
 
 
 func _do_not_create_res_field() -> CheckBox:
-	return $container/options/layer_importing_mode/disable_resource_creation/field as CheckBox
+	return $container / options / layer_importing_mode / disable_resource_creation / field as CheckBox
 

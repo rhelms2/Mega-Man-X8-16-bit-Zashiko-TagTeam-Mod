@@ -23,7 +23,6 @@ z_index = 32
 z_as_relative = false
 frames = ExtResource( 1 )
 animation = "flying"
-frame = 1
 playing = true
 
 [node name="player_detector" type="Area2D" parent="."]

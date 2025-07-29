@@ -1,10 +1,10 @@
-extends "res://src/Actors/Bosses/BambooPandamonium/BambooGrenade.gd"
+extends BambooGrenade
 
-func _ready() -> void:
+
+func _ready() -> void :
 	animatedSprite.playing = true
 
-func _Update(delta) -> void:
+func _Update(delta: float) -> void :
 	process_gravity(delta)
-	
 	if is_on_floor():
 		explode()

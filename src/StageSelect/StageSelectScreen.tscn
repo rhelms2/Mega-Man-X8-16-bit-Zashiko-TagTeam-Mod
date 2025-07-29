@@ -1,4 +1,4 @@
-[gd_scene load_steps=109 format=2]
+[gd_scene load_steps=119 format=2]
 
 [ext_resource path="res://src/Options/KeyConfig.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Options/Options.tscn" type="PackedScene" id=2]
@@ -10,7 +10,7 @@
 [ext_resource path="res://src/Sounds/OST - StageSelect2 - Intro.ogg" type="AudioStream" id=8]
 [ext_resource path="res://src/Sounds/16 - MMX - X Upgrade Complete.wav" type="AudioStream" id=9]
 [ext_resource path="res://src/StageSelect/stage_infos/PitchBlack.tres" type="Resource" id=10]
-[ext_resource path="res://src/Sounds/FX - Menu Switch.ogg" type="AudioStream" id=11]
+[ext_resource path="res://System/SFX/stage_select.ogg" type="AudioStream" id=11]
 [ext_resource path="res://src/Options/selectable_options.png" type="Texture" id=12]
 [ext_resource path="res://src/Options/selectable_keyconfig.png" type="Texture" id=13]
 [ext_resource path="res://src/Sounds/OST - StageSelect2 - Loop.ogg" type="AudioStream" id=14]
@@ -39,12 +39,12 @@
 [ext_resource path="res://src/StageSelect/selectables/selectable_manowar.res" type="SpriteFrames" id=37]
 [ext_resource path="res://src/StageSelect/selectables/selectable_panda.res" type="SpriteFrames" id=38]
 [ext_resource path="res://src/StageSelect/selectables/selectable_trilobyte.res" type="SpriteFrames" id=39]
-[ext_resource path="res://src/StageSelect/selectables/selectable_yeti.res" type="SpriteFrames" id=40]
+[ext_resource path="res://Axl_mod/StageSelect/selectable_noahspark.png" type="Texture" id=40]
 [ext_resource path="res://src/StageSelect/frame.gd" type="Script" id=41]
 [ext_resource path="res://src/StageSelect/armor_setup/ArmorSetup.tscn" type="PackedScene" id=42]
 [ext_resource path="res://src/StageSelect/ArmorSetupButton.gd" type="Script" id=43]
-[ext_resource path="res://src/StageSelect/ss_cursor2.png" type="Texture" id=44]
-[ext_resource path="res://src/StageSelect/ss_cursor3.png" type="Texture" id=45]
+[ext_resource path="res://src/StageSelect/Icon.tres" type="SpriteFrames" id=44]
+[ext_resource path="res://Axl_mod/StageSelect/NoahsPark2.tres" type="Resource" id=45]
 [ext_resource path="res://src/StageSelect/ss_previewborder.png" type="Texture" id=46]
 [ext_resource path="res://src/Fonts/X8bitmapfont.fnt" type="BitmapFont" id=47]
 [ext_resource path="res://src/Effects/Materials/TextColorSwap.tres" type="Material" id=48]
@@ -59,7 +59,37 @@
 [ext_resource path="res://src/StageSelect/PreviewBox.gd" type="Script" id=57]
 [ext_resource path="res://src/AchievementSystem/AchievementsScreen.tscn" type="PackedScene" id=58]
 [ext_resource path="res://src/Options/selectable_achiev.png" type="Texture" id=59]
-[ext_resource path="res://src/Levels/IGTimer.tscn" type="PackedScene" id=60]
+[ext_resource path="res://Axl_mod/StageSelect/StageButtonSmall.gd" type="Script" id=60]
+[ext_resource path="res://Axl_mod/StageSelect/selectable_crab_dim.png" type="Texture" id=61]
+[ext_resource path="res://System/IGT/StageSelect/StageSelect_Timer.tscn" type="PackedScene" id=62]
+[ext_resource path="res://src/Fonts/Xclassicfont.fnt" type="BitmapFont" id=63]
+[ext_resource path="res://System/SFX/window_open.ogg" type="AudioStream" id=64]
+[ext_resource path="res://System/SFX/open_option.ogg" type="AudioStream" id=65]
+
+[sub_resource type="AtlasTexture" id=59]
+atlas = ExtResource( 61 )
+region = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=60]
+atlas = ExtResource( 61 )
+region = Rect2( 16, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=61]
+atlas = ExtResource( 61 )
+region = Rect2( 32, 0, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=58]
+animations = [ {
+"frames": [ SubResource( 59 ), SubResource( 60 ), SubResource( 59 ), SubResource( 61 ) ],
+"loop": true,
+"name": "blink",
+"speed": 31.0
+}, {
+"frames": [ SubResource( 59 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
 
 [sub_resource type="ShortCut" id=1]
 
@@ -219,57 +249,70 @@ animations = [ {
 "speed": 14.0
 } ]
 
+[sub_resource type="StreamTexture" id=49]
+load_path = "res://.import/selectable_yeti.png-82861baf08448a180f5ca7440c356b71.stex"
+
 [sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 44 )
-region = Rect2( 0, 0, 40, 40 )
+atlas = SubResource( 49 )
+region = Rect2( 0, 40, 40, 40 )
 
 [sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 44 )
-region = Rect2( 40, 0, 40, 40 )
+atlas = SubResource( 49 )
+region = Rect2( 40, 40, 40, 40 )
 
 [sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 44 )
-region = Rect2( 80, 0, 40, 40 )
+atlas = SubResource( 49 )
+region = Rect2( 0, 40, 40, 40 )
 
 [sub_resource type="AtlasTexture" id=5]
-atlas = ExtResource( 44 )
-region = Rect2( 120, 0, 40, 40 )
+atlas = SubResource( 49 )
+region = Rect2( 80, 40, 40, 40 )
 
 [sub_resource type="AtlasTexture" id=6]
-atlas = ExtResource( 44 )
-region = Rect2( 160, 0, 40, 40 )
+atlas = SubResource( 49 )
+region = Rect2( 0, 40, 40, 40 )
 
-[sub_resource type="AtlasTexture" id=17]
-atlas = ExtResource( 45 )
-region = Rect2( 0, 0, 40, 136 )
+[sub_resource type="AtlasTexture" id=7]
+atlas = SubResource( 49 )
+region = Rect2( 0, 0, 40, 40 )
 
-[sub_resource type="AtlasTexture" id=18]
-atlas = ExtResource( 45 )
-region = Rect2( 40, 0, 40, 136 )
+[sub_resource type="AtlasTexture" id=50]
+atlas = SubResource( 49 )
+region = Rect2( 40, 0, 40, 40 )
 
-[sub_resource type="AtlasTexture" id=19]
-atlas = ExtResource( 45 )
-region = Rect2( 80, 0, 40, 136 )
+[sub_resource type="AtlasTexture" id=51]
+atlas = SubResource( 49 )
+region = Rect2( 0, 0, 40, 40 )
 
-[sub_resource type="AtlasTexture" id=20]
-atlas = ExtResource( 45 )
-region = Rect2( 120, 0, 40, 136 )
+[sub_resource type="AtlasTexture" id=52]
+atlas = SubResource( 49 )
+region = Rect2( 80, 0, 40, 40 )
 
-[sub_resource type="AtlasTexture" id=21]
-atlas = ExtResource( 45 )
-region = Rect2( 160, 0, 40, 136 )
+[sub_resource type="AtlasTexture" id=53]
+atlas = SubResource( 49 )
+region = Rect2( 0, 0, 40, 40 )
 
-[sub_resource type="SpriteFrames" id=7]
+[sub_resource type="SpriteFrames" id=54]
 animations = [ {
-"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
 "loop": true,
-"name": "default",
-"speed": 18.0
+"name": "defeated_idle",
+"speed": 31.0
 }, {
-"frames": [ SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
+"frames": [ SubResource( 6 ) ],
+"loop": false,
+"name": "defeated_selected",
+"speed": 31.0
+}, {
+"frames": [ SubResource( 7 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ) ],
 "loop": true,
-"name": "long",
-"speed": 18.0
+"name": "idle",
+"speed": 31.0
+}, {
+"frames": [ SubResource( 53 ) ],
+"loop": false,
+"name": "selected",
+"speed": 31.0
 } ]
 
 [node name="StageSelectScreen" type="Node2D"]
@@ -286,6 +329,20 @@ pause_mode = 2
 layer = 2
 script = ExtResource( 5 )
 initial_focus = NodePath("Menu/ArmorSetup")
+
+[node name="game_mode" type="Label" parent="StageSelectUI"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -197.0
+margin_top = -115.0
+margin_right = 197.0
+margin_bottom = 113.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 63 )
+align = 1
+valign = 2
 
 [node name="Menu" type="Control" parent="StageSelectUI"]
 anchor_right = 1.0
@@ -351,6 +408,7 @@ margin_top = 166.0
 margin_right = 124.0
 margin_bottom = 207.0
 rect_min_size = Vector2( 8, 8 )
+focus_neighbour_left = NodePath("../NoahsPark")
 action_mode = 0
 script = ExtResource( 7 )
 menu_path = NodePath("../..")
@@ -421,7 +479,8 @@ margin_bottom = 181.0
 rect_min_size = Vector2( 8, 8 )
 focus_neighbour_left = NodePath("../Gateway")
 focus_neighbour_top = NodePath("../TroiaBase")
-focus_neighbour_bottom = NodePath("../BoosterForest")
+focus_neighbour_right = NodePath("../BoosterForest")
+focus_neighbour_bottom = NodePath("../NoahsPark")
 action_mode = 0
 script = ExtResource( 7 )
 menu_path = NodePath("../..")
@@ -447,6 +506,29 @@ stage_info = ExtResource( 26 )
 frame = 2
 intensity = 2
 
+[node name="NoahsPark" type="TextureButton" parent="StageSelectUI/Menu"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -144.0
+margin_top = 192.0
+margin_right = -124.0
+margin_bottom = 210.0
+rect_min_size = Vector2( 18, 18 )
+focus_neighbour_top = NodePath("../JacobElevator")
+focus_neighbour_right = NodePath("../BoosterForest")
+action_mode = 0
+texture_normal = ExtResource( 40 )
+script = ExtResource( 60 )
+menu_path = NodePath("../..")
+stage_info = ExtResource( 45 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="StageSelectUI/Menu/NoahsPark"]
+position = Vector2( 8, 8 )
+frames = SubResource( 58 )
+animation = "blink"
+playing = true
+
 [node name="Keycfg" type="TextureButton" parent="StageSelectUI/Menu"]
 modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
 anchor_left = 0.5
@@ -461,7 +543,7 @@ shortcut = SubResource( 1 )
 texture_normal = ExtResource( 13 )
 script = ExtResource( 3 )
 menu_path = NodePath("../..")
-pick_sound = NodePath("../../pick")
+pick_sound = NodePath("../../open_options")
 
 [node name="KeyConfig" parent="StageSelectUI/Menu/Keycfg" instance=ExtResource( 1 )]
 layer = 5
@@ -481,7 +563,7 @@ shortcut = SubResource( 1 )
 texture_normal = ExtResource( 12 )
 script = ExtResource( 3 )
 menu_path = NodePath("../..")
-pick_sound = NodePath("../../pick")
+pick_sound = NodePath("../../open_options")
 
 [node name="OptionsMenu" parent="StageSelectUI/Menu/Options" instance=ExtResource( 2 )]
 layer = 5
@@ -501,7 +583,7 @@ shortcut = SubResource( 1 )
 texture_normal = ExtResource( 59 )
 script = ExtResource( 3 )
 menu_path = NodePath("../..")
-pick_sound = NodePath("../../pick")
+pick_sound = NodePath("../../open_options")
 
 [node name="AchievementsScreen" parent="StageSelectUI/Menu/Achievements" instance=ExtResource( 58 )]
 layer = 127
@@ -520,10 +602,9 @@ action_mode = 0
 shortcut = SubResource( 1 )
 script = ExtResource( 3 )
 menu_path = NodePath("../..")
-pick_sound = NodePath("../../pick")
+pick_sound = NodePath("../../open_window")
 
 [node name="ArmorSetup" parent="StageSelectUI/Menu/ArmorSetup" instance=ExtResource( 42 )]
-pause_mode = 2
 visible = false
 
 [node name="Shadow" type="Label" parent="StageSelectUI/Menu"]
@@ -574,6 +655,16 @@ stream = ExtResource( 9 )
 volume_db = -12.849
 bus = "SFX"
 
+[node name="open_window" type="AudioStreamPlayer" parent="StageSelectUI"]
+stream = ExtResource( 64 )
+volume_db = -4.0
+bus = "SFX"
+
+[node name="open_options" type="AudioStreamPlayer" parent="StageSelectUI"]
+stream = ExtResource( 65 )
+volume_db = -4.0
+bus = "SFX"
+
 [node name="Fader" type="ColorRect" parent="StageSelectUI"]
 visible = false
 margin_right = 398.0
@@ -585,12 +676,13 @@ color = Color( 0, 0, 0, 1 )
 position = Vector2( 199, -139 )
 z_index = -50
 frames = SubResource( 38 )
-frame = 15
+frame = 8
 playing = true
 
 [node name="pointer" type="AnimatedSprite" parent="map"]
 position = Vector2( 0, 322 )
 frames = SubResource( 16 )
+frame = 4
 playing = true
 script = ExtResource( 16 )
 button_sprites = NodePath("../../button_sprites")
@@ -646,6 +738,7 @@ script = ExtResource( 41 )
 
 [node name="TroiaBase" parent="button_sprites" instance=ExtResource( 22 )]
 frames = ExtResource( 33 )
+frame = 2
 
 [node name="Primrose" parent="button_sprites" instance=ExtResource( 22 )]
 position = Vector2( 151, 38 )
@@ -660,6 +753,7 @@ frame = 1
 [node name="PitchBlack" parent="button_sprites" instance=ExtResource( 22 )]
 position = Vector2( 247, 38 )
 frames = ExtResource( 15 )
+frame = 2
 
 [node name="Dynasty" parent="button_sprites" instance=ExtResource( 22 )]
 position = Vector2( 295, 38 )
@@ -669,34 +763,33 @@ frame = 1
 [node name="BoosterForest" parent="button_sprites" instance=ExtResource( 22 )]
 position = Vector2( 103, 186 )
 frames = ExtResource( 38 )
-frame = 0
+frame = 1
 
 [node name="MetalValley" parent="button_sprites" instance=ExtResource( 22 )]
 position = Vector2( 151, 186 )
 frames = ExtResource( 39 )
+frame = 2
 
 [node name="CentralWhite" parent="button_sprites" instance=ExtResource( 22 )]
 position = Vector2( 247, 186 )
-frames = ExtResource( 40 )
+frames = SubResource( 54 )
 frame = 1
 
-[node name="ArmorSetup" type="AnimatedSprite" parent="button_sprites"]
-visible = false
+[node name="ArmorSetup" parent="button_sprites" instance=ExtResource( 22 )]
 position = Vector2( 199, 186 )
-z_index = 11
-frames = SubResource( 7 )
-frame = 1
-playing = true
+frames = ExtResource( 44 )
+animation = "X"
+frame = 0
 script = ExtResource( 43 )
 
 [node name="Inferno" parent="button_sprites" instance=ExtResource( 22 )]
 position = Vector2( 295, 186 )
-frame = 3
+frame = 0
 
 [node name="JacobElevator" parent="button_sprites" instance=ExtResource( 22 )]
 position = Vector2( 55, 112 )
 frames = ExtResource( 19 )
-frame = 3
+frame = 0
 
 [node name="cursor" parent="button_sprites/JacobElevator" index="0"]
 animation = "long"
@@ -705,7 +798,7 @@ frame = 2
 [node name="Gateway" parent="button_sprites" instance=ExtResource( 22 )]
 position = Vector2( 343, 112 )
 frames = ExtResource( 34 )
-frame = 3
+frame = 0
 
 [node name="cursor" parent="button_sprites/Gateway" index="0"]
 animation = "long"
@@ -715,8 +808,10 @@ frame = 2
 script = ExtResource( 51 )
 subtanks = [ ExtResource( 53 ), ExtResource( 52 ), ExtResource( 54 ), ExtResource( 55 ) ]
 
-[node name="IGTimer" parent="." instance=ExtResource( 60 )]
-section = "Misc."
+[node name="TimerBG" parent="." instance=ExtResource( 62 )]
+visible = false
+margin_left = 333.0
+margin_right = 398.0
 
 [connection signal="finished" from="music" to="music" method="_on_music_finished"]
 [connection signal="focus_entered" from="StageSelectUI/Menu/TroiaBase" to="StageSelectUI/Menu/TroiaBase" method="_on_focus_entered"]
@@ -774,6 +869,11 @@ section = "Misc."
 [connection signal="mouse_entered" from="StageSelectUI/Menu/Gateway" to="StageSelectUI/Menu/Gateway" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="StageSelectUI/Menu/Gateway" to="StageSelectUI/Menu/Gateway" method="_on_mouse_exited"]
 [connection signal="pressed" from="StageSelectUI/Menu/Gateway" to="StageSelectUI/Menu/Gateway" method="_on_pressed"]
+[connection signal="focus_entered" from="StageSelectUI/Menu/NoahsPark" to="StageSelectUI/Menu/NoahsPark" method="_on_focus_entered"]
+[connection signal="focus_exited" from="StageSelectUI/Menu/NoahsPark" to="StageSelectUI/Menu/NoahsPark" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="StageSelectUI/Menu/NoahsPark" to="StageSelectUI/Menu/NoahsPark" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="StageSelectUI/Menu/NoahsPark" to="StageSelectUI/Menu/NoahsPark" method="_on_mouse_exited"]
+[connection signal="pressed" from="StageSelectUI/Menu/NoahsPark" to="StageSelectUI/Menu/NoahsPark" method="_on_pressed"]
 [connection signal="focus_entered" from="StageSelectUI/Menu/Keycfg" to="StageSelectUI/Menu/Keycfg" method="_on_focus_entered"]
 [connection signal="focus_exited" from="StageSelectUI/Menu/Keycfg" to="StageSelectUI/Menu/Keycfg" method="_on_focus_exited"]
 [connection signal="mouse_entered" from="StageSelectUI/Menu/Keycfg" to="StageSelectUI/Menu/Keycfg" method="_on_mouse_entered"]
@@ -790,9 +890,7 @@ section = "Misc."
 [connection signal="mouse_exited" from="StageSelectUI/Menu/Achievements" to="StageSelectUI/Menu/Achievements" method="_on_mouse_exited"]
 [connection signal="pressed" from="StageSelectUI/Menu/Achievements" to="StageSelectUI/Menu/Achievements" method="_on_pressed"]
 [connection signal="focus_entered" from="StageSelectUI/Menu/ArmorSetup" to="StageSelectUI/Menu/ArmorSetup" method="_on_focus_entered"]
-[connection signal="focus_entered" from="StageSelectUI/Menu/ArmorSetup" to="button_sprites/ArmorSetup" method="_on_ArmorSetup_focus_entered"]
 [connection signal="focus_exited" from="StageSelectUI/Menu/ArmorSetup" to="StageSelectUI/Menu/ArmorSetup" method="_on_focus_exited"]
-[connection signal="focus_exited" from="StageSelectUI/Menu/ArmorSetup" to="button_sprites/ArmorSetup" method="_on_ArmorSetup_focus_exited"]
 [connection signal="mouse_entered" from="StageSelectUI/Menu/ArmorSetup" to="StageSelectUI/Menu/ArmorSetup" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="StageSelectUI/Menu/ArmorSetup" to="StageSelectUI/Menu/ArmorSetup" method="_on_mouse_exited"]
 [connection signal="pressed" from="StageSelectUI/Menu/ArmorSetup" to="StageSelectUI/Menu/ArmorSetup" method="_on_pressed"]

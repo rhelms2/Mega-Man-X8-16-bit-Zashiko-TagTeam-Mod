@@ -1,0 +1,59 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossSpecials/FlameBurner/burn_effects.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossSpecials/FlameBurner/FlameBurner_Special.gd" type="Script" id=2]
+[ext_resource path="res://Axl_mod/SFX/Hover.wav" type="AudioStream" id=3]
+[ext_resource path="res://src/Effects/Textures/smoke.png" type="Texture" id=4]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossSpecials/FlameBurner/smoke_material.tres" type="Material" id=5]
+[ext_resource path="res://src/Levels/PitchBlack/X_Lightsource.gd" type="Script" id=6]
+[ext_resource path="res://src/Levels/PitchBlack/light.png" type="Texture" id=7]
+[ext_resource path="res://src/Sounds/DAMAGE.wav" type="AudioStream" id=8]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 3
+particles_anim_loop = true
+
+[node name="FlameBurner Special" type="Node2D"]
+script = ExtResource( 2 )
+disable_base_ready = true
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.694118 )
+position = Vector2( 0, -4 )
+frames = ExtResource( 1 )
+animation = "aura_flame"
+frame = 5
+playing = true
+
+[node name="sfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+max_distance = 600.0
+bus = "SFX"
+
+[node name="smoke" type="Particles2D" parent="."]
+material = SubResource( 1 )
+z_index = 2
+emitting = false
+amount = 15
+lifetime = 0.5
+speed_scale = 0.5
+process_material = ExtResource( 5 )
+texture = ExtResource( 4 )
+
+[node name="light" type="Light2D" parent="."]
+position = Vector2( 9, 0 )
+scale = Vector2( 0.75, 0.75 )
+z_index = 277
+texture = ExtResource( 7 )
+energy = 0.35
+range_layer_min = -2
+range_layer_max = -1
+script = ExtResource( 6 )
+
+[node name="damage" type="AudioStreamPlayer" parent="."]
+pause_mode = 1
+stream = ExtResource( 8 )
+bus = "SFX"

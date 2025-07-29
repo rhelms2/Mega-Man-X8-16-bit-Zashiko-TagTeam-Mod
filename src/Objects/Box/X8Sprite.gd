@@ -1,8 +1,10 @@
 extends AnimatedSprite
+class_name BoxSprite
 
-func make_invisible() -> void:
+
+func make_invisible() -> void :
 	visible = false
 
-func restart() -> void:
+func restart() -> void :
 	playing = true
 	frame = 0

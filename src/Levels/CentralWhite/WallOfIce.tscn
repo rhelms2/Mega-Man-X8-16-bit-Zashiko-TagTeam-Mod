@@ -29,7 +29,7 @@ animations = [ {
 extents = Vector2( 26, 73 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 131, 92 )
+extents = Vector2( 131, 73 )
 
 [sub_resource type="CanvasItemMaterial" id=5]
 particles_animation = true
@@ -84,7 +84,7 @@ collision_layer = 0
 collision_mask = 6
 
 [node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
-position = Vector2( 79, -65 )
+position = Vector2( 79, -46 )
 shape = SubResource( 4 )
 
 [node name="Explosion Particles" type="Particles2D" parent="."]

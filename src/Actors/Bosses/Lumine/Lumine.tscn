@@ -56,8 +56,8 @@
 [ext_resource path="res://src/Sounds/Drone - Rotate.ogg" type="AudioStream" id=54]
 [ext_resource path="res://src/Sounds/Panda - Claw Appear.ogg" type="AudioStream" id=55]
 [ext_resource path="res://src/Actors/Bosses/BambooPandamonium/BambooSlash.gd" type="Script" id=56]
-[ext_resource path="res://src/Actors/Bosses/IceShooter.gd" type="Script" id=57]
-[ext_resource path="res://src/Actors/Bosses/IceStorm.gd" type="Script" id=58]
+[ext_resource path="res://src/Actors/Bosses/AvalancheYeti/IceShooter.gd" type="Script" id=57]
+[ext_resource path="res://src/Actors/Bosses/AvalancheYeti/IceStorm.gd" type="Script" id=58]
 [ext_resource path="res://src/Actors/Bosses/GigaboltManowar/GigaStorm.gd" type="Script" id=59]
 [ext_resource path="res://src/Actors/Bosses/OpticSunflower/OpticCrush.gd" type="Script" id=60]
 [ext_resource path="res://src/Actors/Bosses/OpticSunflower/LaserBeams.gd" type="Script" id=61]
@@ -66,7 +66,7 @@
 [ext_resource path="res://src/Actors/Bosses/GravityAntonion/GravityCrash.gd" type="Script" id=64]
 [ext_resource path="res://src/Actors/Bosses/GigaboltManowar/manowar.res" type="SpriteFrames" id=65]
 [ext_resource path="res://src/Actors/Bosses/BambooPandamonium/panda.res" type="SpriteFrames" id=66]
-[ext_resource path="res://src/Actors/Bosses/boss_sprites/yeti.res" type="SpriteFrames" id=67]
+[ext_resource path="res://src/Actors/Bosses/AvalancheYeti/yeti.res" type="SpriteFrames" id=67]
 [ext_resource path="res://src/Actors/Bosses/EarthrockTrilobyte/trilobyte.res" type="SpriteFrames" id=68]
 [ext_resource path="res://src/Actors/Bosses/GravityAntonion/antonion.res" type="SpriteFrames" id=69]
 [ext_resource path="res://src/Actors/Bosses/OpticSunflower/sunflower.res" type="SpriteFrames" id=70]
@@ -533,6 +533,7 @@ _desperation = NodePath("../IceStorm")
 _collider = NodePath("../YetiCollider")
 boss_sprites = ExtResource( 67 )
 weakness = "ThunderDancer"
+weaknesses = [ "ThunderDancer", "PlasmaGun", "Raikousen" ]
 
 [node name="Mantis" type="Node2D" parent="."]
 script = ExtResource( 11 )
@@ -541,6 +542,7 @@ _desperation = NodePath("../DarkSlash")
 _collider = NodePath("../MantisCollider")
 boss_sprites = ExtResource( 30 )
 weakness = "OpticShield"
+weaknesses = [ "OpticShield", "RayGun" ]
 
 [node name="Sunflower" type="Node2D" parent="."]
 script = ExtResource( 11 )
@@ -549,6 +551,7 @@ _desperation = NodePath("../OpticCrush")
 _collider = NodePath("../SunflowerCollider")
 boss_sprites = ExtResource( 70 )
 weakness = "BlastLaunch"
+weaknesses = [ "BlastLaunch", "BlastLauncher", "Youdantotsu" ]
 
 [node name="Panda" type="Node2D" parent="."]
 script = ExtResource( 11 )
@@ -556,6 +559,7 @@ _desperation = NodePath("../BambooSlash")
 _collider = NodePath("../PandaCollider")
 boss_sprites = ExtResource( 66 )
 weakness = "FireDash"
+weaknesses = [ "FireDash", "FlameBurner", "Enkoujin" ]
 
 [node name="Rooster" type="Node2D" parent="."]
 script = ExtResource( 11 )
@@ -564,6 +568,7 @@ _desperation = NodePath("../FireWalls")
 _collider = NodePath("../RoosterCollider")
 boss_sprites = ExtResource( 16 )
 weakness = "DriftDiamond"
+weaknesses = [ "DriftDiamond", "IceGattling", "Hyouryuushou" ]
 
 [node name="Manowar" type="Node2D" parent="."]
 script = ExtResource( 11 )
@@ -571,6 +576,7 @@ _desperation = NodePath("../GigaStorm")
 _collider = NodePath("../ManowarCollider")
 boss_sprites = ExtResource( 65 )
 weakness = "CrystalBouncer"
+weaknesses = [ "CrystalBouncer", "BoundBlaster", "Rekkyoudan" ]
 
 [node name="Trilobyte" type="Node2D" parent="."]
 script = ExtResource( 11 )
@@ -578,6 +584,7 @@ _desperation = NodePath("../EarthWave")
 _collider = NodePath("../TrilobyteCollider")
 boss_sprites = ExtResource( 68 )
 weakness = "SqueezeBomb"
+weaknesses = [ "SqueezeBomb", "SpiralMagnum", "Juuhazan" ]
 
 [node name="Antonion" type="Node2D" parent="."]
 script = ExtResource( 11 )
@@ -586,6 +593,7 @@ _desperation = NodePath("../GravityCrash")
 _collider = NodePath("../AntonionCollider")
 boss_sprites = ExtResource( 69 )
 weakness = "DarkArrow"
+weaknesses = [ "DarkArrow", "BlackArrow", "Rasetsusen" ]
 
 [node name="move" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 71 )
@@ -1066,7 +1074,7 @@ naked = ExtResource( 99 )
 [connection signal="ended_transform" from="Trilobyte" to="GuardBreak" method="_on_Trilobyte_ended_transform"]
 [connection signal="ended_transform" from="Trilobyte" to="TrilobyteGarments" method="_on_Trilobyte_ended_transform"]
 [connection signal="transformed" from="Trilobyte" to="TrilobyteGarments" method="_on_Trilobyte_transformed"]
-[connection signal="beam" from="OpticCrush" to="OpticCrush/LaserBeamManager" method="_on_signal"]
+[connection signal="laser" from="OpticCrush" to="OpticCrush/LaserBeamManager" method="_on_signal"]
 [connection signal="start_desperation" from="GravityCrash" to="GravityCrash/DesperationAttack" method="_on_start_desperation"]
 [connection signal="armor_catch" from="ArmorDetector" to="EnemyShield" method="_on_armor_catch"]
 [connection signal="body_entered" from="ArmorDetector" to="ArmorDetector" method="_on_body_entered"]

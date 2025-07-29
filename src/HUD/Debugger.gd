@@ -1,8 +1,8 @@
 extends Control
 
-onready var character = get_tree().current_scene.find_node("X")
+var character
 
-const bike = preload("res://src/Actors/Props/RideChaser.tscn")
+const bike = preload("res://src/Actors/Props/RideChaser/RideChaser.tscn")
 const ridearmor = preload("res://src/Actors/Props/RideArmor/RideArmor.tscn")
 const ridearmor2 = preload("res://src/Actors/Props/RideArmor/RideArmorNoCannon.tscn")
 var last_checkpoint : Node2D
@@ -14,8 +14,13 @@ onready var cheat_buttons: HBoxContainer = $vBoxContainer/hBoxContainer
 
 signal cheat_pressed(visibility)
 
+
+func _set_character_node() -> void :
+	var char_node = CharacterManager.player_character
+	character = get_tree().current_scene.get_node(char_node)
+
 func _ready() -> void:
-	
+	call_deferred("_set_character_node")
 	hide_totally()
 	show_cheats()
 	
@@ -29,7 +34,7 @@ func _ready() -> void:
 			last_checkpoint = checkpoints.get_child(checkpoints.get_child_count()-1)
 
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if visible:
 		if Input.is_action_pressed("debug") and Input.is_action_pressed("debug2"):
 			_on_reset_checkpoint_pressed()

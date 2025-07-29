@@ -3,15 +3,15 @@ extends Node2D
 onready var sprite = $kinematicBody2D.get_node("animatedSprite")
 onready var path = $path2D.get_node("pathFollow2D")
 onready var kinematic_body = $kinematicBody2D
-var reparented := false
+var reparented: = false
 
 
-func _ready() -> void:
+func _ready() -> void :
 	$animationPlayer.play("New Anim")
-	Event.listen("stage_rotate",self,"change_sprite_parent")
-	Event.listen("land",self,"undo_sprite_parent")
-	Event.listen("cutscene_start",self,"pause")
-	Event.listen("cutscene_over",self,"start")
+	Event.listen("stage_rotate", self, "change_sprite_parent")
+	Event.listen("land", self, "undo_sprite_parent")
+	Event.listen("cutscene_start", self, "pause")
+	Event.listen("cutscene_over", self, "start")
 
 func pause():
 	$animationPlayer.stop(false)

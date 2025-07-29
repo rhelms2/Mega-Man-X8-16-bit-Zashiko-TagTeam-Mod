@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/x_vs_zero_loop.ogg-521bdd0d6efb2c15ca9cd2536856f580.oggstr"
+
+[deps]
+
+source_file="res://System/BossMusic/x_vs_zero_loop.ogg"
+dest_files=[ "res://.import/x_vs_zero_loop.ogg-521bdd0d6efb2c15ca9cd2536856f580.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

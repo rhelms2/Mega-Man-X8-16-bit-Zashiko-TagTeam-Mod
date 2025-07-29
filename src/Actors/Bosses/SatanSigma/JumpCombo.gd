@@ -6,20 +6,20 @@ onready var slash_2_sfx: AudioStreamPlayer2D = $slash2_sfx
 onready var land: AudioStreamPlayer2D = $land
 onready var particles: Particles2D = $"../animatedSprite/particles"
 
-func _Setup() -> void:
+func _Setup() -> void :
 	turn_and_face_player()
 	slash_1.handle_direction()
 	slash_2.handle_direction()
 	play_animation("slashjump_prepare")
 
-func _Update(delta) -> void:
+func _Update(delta: float) -> void :
 	process_gravity(delta)
 	
 	if attack_stage == 0 and has_finished_last_animation():
 		play_animation("slashjump_prepare_loop")
 		next_attack_stage()
 	
-	elif attack_stage == 1 and timer >0.1:
+	elif attack_stage == 1 and timer > 0.1:
 		play_animation("slashjump_start")
 		force_movement(40)
 		next_attack_stage()
@@ -36,7 +36,7 @@ func _Update(delta) -> void:
 	elif attack_stage == 3 and has_finished_last_animation():
 		play_animation("slashjump_jump")
 		slash_2_sfx.play_rp()
-		tween_speed(get_initial_jump_speed(),150,.7)
+		tween_speed(get_initial_jump_speed(), 150, 0.7)
 		set_vertical_speed(get_jump_height())
 		next_attack_stage()
 		
@@ -64,7 +64,7 @@ func _Update(delta) -> void:
 		play_animation("slashjump_land_loop")
 		next_attack_stage()
 
-	elif attack_stage == 7 and timer >.25:
+	elif attack_stage == 7 and timer > 0.25:
 		play_animation("slashjump_end")
 		next_attack_stage()
 		
@@ -78,7 +78,7 @@ func _Interrupt():
 func get_initial_jump_speed() -> float:
 	var h_speed = abs(get_distance_to_player())
 	if abs(get_distance_to_player()) > 150:
-		h_speed = h_speed*2
+		h_speed = h_speed * 2
 	return h_speed
 
 func get_jump_height() -> float:
@@ -89,5 +89,5 @@ func get_jump_height() -> float:
 func get_total_distance_to_player() -> float:
 	return character.global_position.distance_to(GameManager.get_player_position())
 
-func process_gravity(_delta:float, gravity := default_gravity) -> void:
+func process_gravity(_delta: float, gravity: = default_gravity) -> void :
 	character.add_vertical_speed(gravity * _delta)

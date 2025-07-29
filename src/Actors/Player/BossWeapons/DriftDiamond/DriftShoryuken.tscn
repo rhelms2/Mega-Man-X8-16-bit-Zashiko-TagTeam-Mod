@@ -1,19 +1,19 @@
 [gd_scene load_steps=17 format=2]
 
-[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=1]
-[ext_resource path="res://SpriteEffect.gd" type="Script" id=2]
-[ext_resource path="res://src/Actors/Player/BossWeapons/DriftDiamond/DriftShoryuken.gd" type="Script" id=3]
-[ext_resource path="res://src/Sounds/Yeti - Stomp.ogg" type="AudioStream" id=4]
-[ext_resource path="res://src/Actors/Player/BossWeapons/DriftDiamond/shoryuken.png" type="Texture" id=5]
-[ext_resource path="res://src/Actors/Bosses/boss_sprites/icejump.png" type="Texture" id=6]
-[ext_resource path="res://src/Effects/Materials/drift_diamond_particles.tres" type="Material" id=7]
-[ext_resource path="res://src/Effects/Materials/IceRemains.tres" type="Material" id=8]
-[ext_resource path="res://src/Effects/Textures/snow_sparkle.png" type="Texture" id=9]
-[ext_resource path="res://src/Actors/Bosses/AvalancheYeti/ice_remains.png" type="Texture" id=10]
-[ext_resource path="res://src/Sounds/Ice Break.wav" type="AudioStream" id=11]
+[ext_resource path="res://src/Effects/Materials/IceRemains.tres" type="Material" id=1]
+[ext_resource path="res://src/Effects/Materials/drift_diamond_particles.tres" type="Material" id=2]
+[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=3]
+[ext_resource path="res://SpriteEffect.gd" type="Script" id=4]
+[ext_resource path="res://src/Actors/Bosses/AvalancheYeti/ice_remains.png" type="Texture" id=5]
+[ext_resource path="res://src/Sounds/Ice Break.wav" type="AudioStream" id=6]
+[ext_resource path="res://src/Effects/Textures/snow_sparkle.png" type="Texture" id=7]
+[ext_resource path="res://src/Sounds/Yeti - Stomp.ogg" type="AudioStream" id=8]
+[ext_resource path="res://src/Actors/Bosses/boss_sprites/icejump.png" type="Texture" id=9]
+[ext_resource path="res://src/Actors/Player/BossWeapons/DriftDiamond/shoryuken.png" type="Texture" id=10]
+[ext_resource path="res://src/Actors/Player/BossWeapons/DriftDiamond/DriftShoryuken.gd" type="Script" id=11]
 
 [sub_resource type="AtlasTexture" id=24]
-atlas = ExtResource( 5 )
+atlas = ExtResource( 10 )
 region = Rect2( 0, 0, 64, 64 )
 
 [sub_resource type="SpriteFrames" id=25]
@@ -45,7 +45,7 @@ pause_mode = 2
 z_index = 10
 collision_layer = 4
 collision_mask = 0
-script = ExtResource( 3 )
+script = ExtResource( 11 )
 damage = 40.0
 damage_to_bosses = 10.0
 damage_to_weakness = 20.0
@@ -67,10 +67,10 @@ pause_mode = 2
 visible = false
 position = Vector2( 14, -33 )
 z_index = 45
-texture = ExtResource( 6 )
+texture = ExtResource( 9 )
 hframes = 7
 vframes = 2
-script = ExtResource( 2 )
+script = ExtResource( 4 )
 animation_speed = 32.0
 one_shot = true
 
@@ -85,11 +85,11 @@ one_shot = true
 explosiveness = 1.0
 visibility_rect = Rect2( -600, -100, 1200, 200 )
 local_coords = false
-process_material = ExtResource( 8 )
-texture = ExtResource( 10 )
+process_material = ExtResource( 1 )
+texture = ExtResource( 5 )
 
 [node name="disabler" type="Node" parent="remains_particles"]
-script = ExtResource( 1 )
+script = ExtResource( 3 )
 make_invisible = true
 undo_on_rotation_end = false
 
@@ -101,11 +101,11 @@ z_index = -1
 amount = 13
 lifetime = 0.45
 local_coords = false
-process_material = ExtResource( 7 )
-texture = ExtResource( 9 )
+process_material = ExtResource( 2 )
+texture = ExtResource( 7 )
 
 [node name="stomp" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 4 )
+stream = ExtResource( 8 )
 volume_db = -20.0
 pitch_scale = 1.25
 autoplay = true
@@ -114,7 +114,7 @@ bus = "SFX"
 
 [node name="icebreak" type="AudioStreamPlayer2D" parent="."]
 pause_mode = 2
-stream = ExtResource( 11 )
+stream = ExtResource( 6 )
 volume_db = -20.0
 pitch_scale = 0.77
 autoplay = true

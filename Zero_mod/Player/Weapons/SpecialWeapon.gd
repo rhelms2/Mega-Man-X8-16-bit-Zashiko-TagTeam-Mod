@@ -1,0 +1,2 @@
+extends ZeroWeapon
+class_name ZeroSpecialWeapon

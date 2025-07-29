@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=1]
+[ext_resource path="res://Zero_mod/X8/Player/Hitboxes/Enkoukyaku_Hitbox.gd" type="Script" id=2]
+[ext_resource path="res://src/Sounds/MMX - Enemy Helmet Hit.ogg" type="AudioStream" id=3]
+[ext_resource path="res://src/Levels/PitchBlack/X_Lightsource.gd" type="Script" id=5]
+[ext_resource path="res://src/Levels/PitchBlack/light.png" type="Texture" id=6]
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 1, 1 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+[node name="Enkoujin_Charged_B" type="KinematicBody2D" groups=["Player Projectile"]]
+z_index = 6
+collision_layer = 4
+collision_mask = 0
+script = ExtResource( 2 )
+
+[node name="light" type="Light2D" parent="."]
+position = Vector2( 0, 1.90735e-06 )
+scale = Vector2( 0.453125, 0.4375 )
+z_index = 277
+texture = ExtResource( 6 )
+energy = 0.35
+range_layer_min = -2
+range_layer_max = -1
+script = ExtResource( 5 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 5 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 3 )
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 24
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+shape = SubResource( 4 )
+
+[node name="deflectSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="disabler" type="Node" parent="."]
+script = ExtResource( 1 )
+fade_out = true
+delete_after_fade = true
+queue_free = true
+undo_on_rotation_end = false
+
+[connection signal="area_entered" from="area2D" to="." method="_on_area2D_body_entered"]
+[connection signal="body_entered" from="area2D" to="." method="_on_area2D_body_entered"]

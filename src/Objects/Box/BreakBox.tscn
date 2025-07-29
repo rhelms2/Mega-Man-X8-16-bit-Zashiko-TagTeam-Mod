@@ -26,7 +26,7 @@ extents = Vector2( 24, 24 )
 extents = Vector2( 29, 24 )
 
 [sub_resource type="RectangleShape2D" id=211]
-extents = Vector2( 52, 20.5 )
+extents = Vector2( 57, 20.5 )
 
 [sub_resource type="CanvasItemMaterial" id=4]
 render_priority = -1
@@ -52,7 +52,6 @@ collision_layer = 66048
 script = ExtResource( 3 )
 
 [node name="collisionShape2D" type="CollisionShape2D" parent="."]
-visible = false
 z_index = 1
 shape = SubResource( 1 )
 

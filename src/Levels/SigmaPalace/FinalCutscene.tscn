@@ -1,6 +1,6 @@
-[gd_scene load_steps=114 format=2]
+[gd_scene load_steps=148 format=2]
 
-[ext_resource path="res://src/DialogSystem/Dialogs/Stages/Lumine_End_Dialogue.tres" type="Resource" id=1]
+[ext_resource path="res://Final Cutscene/Final_Dialogue.tres" type="Resource" id=1]
 [ext_resource path="res://src/DialogSystem/DialogBox.tscn" type="PackedScene" id=2]
 [ext_resource path="res://src/Actors/Bosses/Lumine/lumine.res" type="SpriteFrames" id=3]
 [ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=4]
@@ -10,12 +10,12 @@
 [ext_resource path="res://src/Actors/Player/x_sprites/x.res" type="SpriteFrames" id=8]
 [ext_resource path="res://src/Sounds/56 - MMX - Enemy Death.wav" type="AudioStream" id=9]
 [ext_resource path="res://src/Sounds/18 - MMX - X Fade Out.wav" type="AudioStream" id=10]
-[ext_resource path="res://src/DialogSystem/Dialogs/Stages/Lumine_End_Dialogue2.tres" type="Resource" id=11]
+[ext_resource path="res://Final Cutscene/Lumine_End_Dialogue.tres" type="Resource" id=11]
 [ext_resource path="res://src/Levels/SigmaPalace/neutral_remains.png" type="Texture" id=12]
 [ext_resource path="res://src/Levels/SigmaPalace/sigmapalace_tileset.png" type="Texture" id=13]
 [ext_resource path="res://src/Levels/SigmaPalace/ArmorRemains.gd" type="Script" id=14]
 [ext_resource path="res://src/Effects/Textures/charge_1.png" type="Texture" id=15]
-[ext_resource path="res://src/Actors/charge_shader.tres" type="Shader" id=16]
+[ext_resource path="res://src/Actors/Player/charge_shader.tres" type="Shader" id=16]
 [ext_resource path="res://src/Effects/Materials/Finalstage_introparticles.tres" type="Material" id=17]
 [ext_resource path="res://addons/PaletteSwap/PaletteSwap.gdshader" type="Shader" id=18]
 [ext_resource path="res://src/Levels/SigmaPalace/sigmapalace_skypalette.png" type="Texture" id=19]
@@ -55,6 +55,13 @@
 [ext_resource path="res://src/Effects/Textures/intro_fire1.png" type="Texture" id=53]
 [ext_resource path="res://src/Effects/Materials/intro_fire_particles.tres" type="Material" id=54]
 [ext_resource path="res://src/Sounds/SFX - Ambientfire.wav" type="AudioStream" id=55]
+[ext_resource path="res://Axl_mod/SFX/pistol_bullet.wav" type="AudioStream" id=56]
+[ext_resource path="res://Zero_mod/X8/Sprites/zerox8.tres" type="SpriteFrames" id=57]
+[ext_resource path="res://Axl_mod/Player/Sprites/axl.tres" type="SpriteFrames" id=58]
+[ext_resource path="res://src/Actors/Player/x_sprites/x_leftarm.res" type="SpriteFrames" id=61]
+[ext_resource path="res://src/Sounds/DAMAGE.wav" type="AudioStream" id=62]
+[ext_resource path="res://Zero_mod/SFX/saber_2.ogg" type="AudioStream" id=63]
+[ext_resource path="res://Final Cutscene/lumine_tentacle.png" type="Texture" id=64]
 
 [sub_resource type="ShaderMaterial" id=4]
 resource_local_to_scene = true
@@ -65,6 +72,9 @@ shader_param/Darken = 1.0
 shader_param/Alpha = 1.0
 shader_param/Alpha_Blink = 0.0
 
+[sub_resource type="RectangleShape2D" id=64]
+extents = Vector2( 12, 12 )
+
 [sub_resource type="ParticlesMaterial" id=5]
 emission_shape = 1
 emission_sphere_radius = 24.0
@@ -73,12 +83,6 @@ gravity = Vector3( 0, 0, 0 )
 orbit_velocity = 0.0
 orbit_velocity_random = 0.0
 anim_speed = 1.0
-
-[sub_resource type="CanvasItemMaterial" id=39]
-particles_animation = true
-particles_anim_h_frames = 2
-particles_anim_v_frames = 2
-particles_anim_loop = false
 
 [sub_resource type="ShaderMaterial" id=3]
 resource_local_to_scene = true
@@ -246,6 +250,120 @@ animations = [ {
 "frames": [ SubResource( 62 ), SubResource( 63 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ) ],
 "loop": true,
 "name": "default",
+"speed": 60.0
+} ]
+
+[sub_resource type="CanvasItemMaterial" id=39]
+particles_animation = true
+particles_anim_h_frames = 2
+particles_anim_v_frames = 2
+particles_anim_loop = false
+
+[sub_resource type="RectangleShape2D" id=65]
+extents = Vector2( 13.5, 10 )
+
+[sub_resource type="AtlasTexture" id=67]
+atlas = ExtResource( 64 )
+region = Rect2( 0, 0, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=68]
+atlas = ExtResource( 64 )
+region = Rect2( 160, 0, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=69]
+atlas = ExtResource( 64 )
+region = Rect2( 320, 0, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=70]
+atlas = ExtResource( 64 )
+region = Rect2( 480, 0, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=71]
+atlas = ExtResource( 64 )
+region = Rect2( 0, 0, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=72]
+atlas = ExtResource( 64 )
+region = Rect2( 160, 0, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=73]
+atlas = ExtResource( 64 )
+region = Rect2( 320, 0, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=74]
+atlas = ExtResource( 64 )
+region = Rect2( 480, 0, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=75]
+atlas = ExtResource( 64 )
+region = Rect2( 640, 0, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=76]
+atlas = ExtResource( 64 )
+region = Rect2( 800, 0, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=77]
+atlas = ExtResource( 64 )
+region = Rect2( 960, 0, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=78]
+atlas = ExtResource( 64 )
+region = Rect2( 1120, 0, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=79]
+atlas = ExtResource( 64 )
+region = Rect2( 1280, 0, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=80]
+atlas = ExtResource( 64 )
+region = Rect2( 1440, 0, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=81]
+atlas = ExtResource( 64 )
+region = Rect2( 1600, 0, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=82]
+atlas = ExtResource( 64 )
+region = Rect2( 1760, 0, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=83]
+atlas = ExtResource( 64 )
+region = Rect2( 1920, 0, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=84]
+atlas = ExtResource( 64 )
+region = Rect2( 2080, 0, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=85]
+atlas = ExtResource( 64 )
+region = Rect2( 2240, 0, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=86]
+atlas = ExtResource( 64 )
+region = Rect2( 2400, 0, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=87]
+atlas = ExtResource( 64 )
+region = Rect2( 2560, 0, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=88]
+atlas = ExtResource( 64 )
+region = Rect2( 2720, 0, 160, 160 )
+
+[sub_resource type="AtlasTexture" id=89]
+atlas = ExtResource( 64 )
+region = Rect2( 2880, 0, 160, 160 )
+
+[sub_resource type="SpriteFrames" id=66]
+animations = [ {
+"frames": [ SubResource( 67 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ), SubResource( 69 ), SubResource( 68 ) ],
+"loop": true,
+"name": "default",
+"speed": 15.0
+}, {
+"frames": [ SubResource( 71 ), SubResource( 72 ), SubResource( 73 ), SubResource( 74 ), SubResource( 75 ), SubResource( 76 ), SubResource( 77 ), SubResource( 78 ), SubResource( 79 ), SubResource( 80 ), SubResource( 81 ), SubResource( 82 ), SubResource( 83 ), SubResource( 84 ), SubResource( 85 ), SubResource( 86 ), SubResource( 87 ), SubResource( 88 ), SubResource( 89 ) ],
+"loop": false,
+"name": "tentacle_attack",
 "speed": 60.0
 } ]
 
@@ -14588,16 +14706,6 @@ resource_name = "SigmaPalace"
 1024/shapes = [  ]
 1024/z_index = 0
 
-[sub_resource type="CanvasItemMaterial" id=40]
-blend_mode = 1
-
-[sub_resource type="ShaderMaterial" id=2]
-shader = ExtResource( 18 )
-shader_param/skip_first_row = false
-shader_param/use_palette_alpha = false
-shader_param/fps = 7.0
-shader_param/palette = ExtResource( 19 )
-
 [sub_resource type="AtlasTexture" id=41]
 atlas = ExtResource( 53 )
 region = Rect2( 0, 0, 37, 40 )
@@ -14678,13 +14786,30 @@ animations = [ {
 "speed": 12.0
 } ]
 
+[sub_resource type="CanvasItemMaterial" id=40]
+blend_mode = 1
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 18 )
+shader_param/skip_first_row = false
+shader_param/use_palette_alpha = false
+shader_param/fps = 7.0
+shader_param/palette = ExtResource( 19 )
+
+[sub_resource type="ParticlesMaterial" id=90]
+flag_disable_z = true
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+anim_speed = 1.0
+
 [node name="FinalCutscene" type="Node2D"]
 script = ExtResource( 25 )
 charge_color1 = Color( 0, 0.25098, 0.941176, 1 )
 charge_color2 = Color( 0.282353, 0.533333, 0.698039, 1 )
 song_intro = ExtResource( 26 )
 song_loop = ExtResource( 40 )
-text_second_dialog = ExtResource( 11 )
+text_second_dialog = ExtResource( 1 )
 
 [node name="DialogBox" parent="." instance=ExtResource( 2 )]
 margin_left = 108.0
@@ -14692,15 +14817,22 @@ margin_top = 35.0
 margin_right = 299.0
 margin_bottom = 102.0
 text = ""
-dialog_tree = ExtResource( 1 )
+dialog_tree = ExtResource( 11 )
 resume_character_inputs = false
 
 [node name="Lumine" type="AnimatedSprite" parent="."]
 material = SubResource( 4 )
-position = Vector2( 246, 188 )
+position = Vector2( 300, 187 )
 z_index = 2
 frames = ExtResource( 3 )
 animation = "dead"
+playing = true
+
+[node name="area2D" type="Area2D" parent="Lumine"]
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="Lumine/area2D"]
+position = Vector2( 2, 10 )
+shape = SubResource( 64 )
 
 [node name="flash" type="Sprite" parent="Lumine"]
 pause_mode = 2
@@ -14777,13 +14909,91 @@ local_coords = false
 process_material = ExtResource( 48 )
 texture = ExtResource( 41 )
 
+[node name="X" type="AnimatedSprite" parent="."]
+material = SubResource( 3 )
+position = Vector2( 149, 189 )
+z_index = 1
+frames = ExtResource( 8 )
+animation = "weak"
+frame = 3
+playing = true
+
+[node name="charge" type="AudioStreamPlayer2D" parent="X"]
+stream = ExtResource( 7 )
+volume_db = -10.0
+max_distance = 600.0
+bus = "SFX"
+
+[node name="beam_out" type="AudioStreamPlayer2D" parent="X"]
+stream = ExtResource( 10 )
+volume_db = -10.0
+max_distance = 600.0
+bus = "SFX"
+
+[node name="ChargeVFX" type="AnimatedSprite" parent="X"]
+visible = false
+position = Vector2( 2, 2 )
+frames = SubResource( 38 )
+frame = 2
+playing = true
+
+[node name="shot" type="AudioStreamPlayer2D" parent="X"]
+pause_mode = 2
+stream = ExtResource( 6 )
+volume_db = -11.0
+pitch_scale = 0.41
+max_distance = 600.0
+bus = "SFX"
+
+[node name="axlshot" type="AudioStreamPlayer2D" parent="X"]
+pause_mode = 2
+stream = ExtResource( 56 )
+volume_db = -11.0
+pitch_scale = 0.41
+max_distance = 600.0
+bus = "SFX"
+
+[node name="ArmorRemains" type="Sprite" parent="X"]
+position = Vector2( 5, 17 )
+z_index = 2
+texture = ExtResource( 12 )
+flip_h = true
+script = ExtResource( 14 )
+
+[node name="X_Fire" type="AnimatedSprite" parent="."]
+visible = false
+material = SubResource( 3 )
+position = Vector2( 149, 189 )
+z_index = 1
+frames = ExtResource( 61 )
+animation = "crouch"
+frame = 12
+playing = true
+
+[node name="Zero" type="AnimatedSprite" parent="."]
+position = Vector2( 116, 188 )
+z_index = 1
+frames = ExtResource( 57 )
+animation = "weak"
+frame = 2
+playing = true
+offset = Vector2( 0, -1 )
+
+[node name="Axl" type="AnimatedSprite" parent="."]
+position = Vector2( 78, 188 )
+z_index = 1
+frames = ExtResource( 58 )
+animation = "weak"
+frame = 1
+playing = true
+
 [node name="ChargeShot" type="AnimatedSprite" parent="."]
 visible = false
-position = Vector2( 163, 191 )
+position = Vector2( 189, 195 )
 z_index = 1
 frames = ExtResource( 27 )
 animation = "Tag"
-frame = 1
+frame = 5
 playing = true
 
 [node name="shot" type="AudioStreamPlayer2D" parent="ChargeShot"]
@@ -14804,41 +15014,25 @@ local_coords = false
 process_material = ExtResource( 37 )
 texture = ExtResource( 38 )
 
-[node name="X" type="AnimatedSprite" parent="."]
-material = SubResource( 3 )
-position = Vector2( 149, 189 )
-z_index = 1
-frames = ExtResource( 8 )
-animation = "weak"
-frame = 1
-playing = true
+[node name="Shot_Body" type="KinematicBody2D" parent="ChargeShot"]
 
-[node name="charge" type="AudioStreamPlayer2D" parent="X"]
-stream = ExtResource( 7 )
-volume_db = -10.0
-max_distance = 600.0
-bus = "SFX"
+[node name="collisionShape2D" type="CollisionShape2D" parent="ChargeShot/Shot_Body"]
+position = Vector2( 3.5, 0 )
+shape = SubResource( 65 )
 
-[node name="beam_out" type="AudioStreamPlayer2D" parent="X"]
-stream = ExtResource( 10 )
-volume_db = -10.0
-max_distance = 600.0
-bus = "SFX"
-
-[node name="ChargeVFX" type="AnimatedSprite" parent="X"]
+[node name="LumineTentacles" type="AnimatedSprite" parent="."]
 visible = false
-position = Vector2( 2, 2 )
-frames = SubResource( 38 )
-frame = 9
+modulate = Color( 1, 1, 1, 0.784314 )
+position = Vector2( 303, 196 )
+scale = Vector2( 0.7, 0.7 )
+z_index = 3
+frames = SubResource( 66 )
+frame = 4
 playing = true
+offset = Vector2( -80, -80 )
 
-[node name="shot" type="AudioStreamPlayer2D" parent="X"]
-pause_mode = 2
-stream = ExtResource( 6 )
-volume_db = -11.0
-pitch_scale = 0.41
-max_distance = 600.0
-bus = "SFX"
+[node name="axl_first_pos" type="Position2D" parent="."]
+position = Vector2( 185, 185 )
 
 [node name="final_cutscene" type="Node2D" parent="."]
 position = Vector2( -1, -16 )
@@ -14868,39 +15062,108 @@ compatibility_mode = true
 format = 1
 tile_data = PoolIntArray( 851968, 2, 0, 851969, 3, 0, 851970, 4, 0, 851971, 5, 0, 851972, 6, 0, 851973, 14, 0, 851974, 536870926, 0, 851975, 2, 0, 851976, 3, 0, 851977, 4, 0, 851978, 5, 0, 851979, 6, 0, 851980, 536870926, 0, 851981, 2, 0, 851982, 3, 0, 851983, 4, 0, 851984, 5, 0, 851985, 6, 0, 851986, 14, 0, 851987, 536870926, 0, 851988, 2, 0, 851989, 3, 0, 851990, 4, 0, 851991, 5, 0, 851992, 6, 0, 917504, 34, 0, 917505, 35, 0, 917506, 36, 0, 917507, 37, 0, 917508, 38, 0, 917509, 46, 0, 917510, 536870958, 0, 917511, 34, 0, 917512, 35, 0, 917513, 36, 0, 917514, 37, 0, 917515, 38, 0, 917516, 536870958, 0, 917517, 34, 0, 917518, 35, 0, 917519, 36, 0, 917520, 37, 0, 917521, 38, 0, 917522, 46, 0, 917523, 536870958, 0, 917524, 34, 0, 917525, 35, 0, 917526, 36, 0, 917527, 37, 0, 917528, 38, 0, 983040, 98, 0, 983041, 99, 0, 983042, 100, 0, 983043, 101, 0, 983044, 102, 0, 983045, 536871022, 0, 983046, 110, 0, 983047, 98, 0, 983048, 99, 0, 983049, 100, 0, 983050, 101, 0, 983051, 102, 0, 983052, 1073741935, 0, 983053, 98, 0, 983054, 99, 0, 983055, 100, 0, 983056, 101, 0, 983057, 102, 0, 983058, 536871022, 0, 983059, 110, 0, 983060, 98, 0, 983061, 99, 0, 983062, 100, 0, 983063, 101, 0, 983064, 102, 0 )
 
-[node name="smoke" type="Particles2D" parent="final_cutscene"]
+[node name="Effects" type="Node2D" parent="final_cutscene"]
+position = Vector2( 1, 16 )
+
+[node name="fire" type="AnimatedSprite" parent="final_cutscene/Effects"]
+modulate = Color( 1, 1, 1, 0.4 )
+position = Vector2( 333, 146 )
+z_index = -2
+frames = SubResource( 49 )
+frame = 6
+playing = true
+
+[node name="fire2" type="AnimatedSprite" parent="final_cutscene/Effects"]
+modulate = Color( 1, 1, 1, 0.619608 )
+position = Vector2( 365, 20 )
+z_index = -1
+frames = SubResource( 49 )
+frame = 3
+playing = true
+
+[node name="fire3" type="AnimatedSprite" parent="final_cutscene/Effects"]
+modulate = Color( 1, 1, 1, 0.529412 )
+position = Vector2( 16, 189 )
+z_index = 4
+frames = SubResource( 49 )
+frame = 5
+playing = true
+flip_h = true
+
+[node name="small_fire" type="AnimatedSprite" parent="final_cutscene/Effects"]
+modulate = Color( 1, 1, 1, 0.686275 )
+position = Vector2( 21, 144 )
+z_index = 2
+frames = SubResource( 58 )
+frame = 7
+playing = true
+
+[node name="small_fire3" type="AnimatedSprite" parent="final_cutscene/Effects"]
+modulate = Color( 1, 1, 1, 0.423529 )
+position = Vector2( 49, 73 )
+frames = SubResource( 58 )
+frame = 7
+playing = true
+flip_h = true
+
+[node name="small_fire2" type="AnimatedSprite" parent="final_cutscene/Effects"]
+modulate = Color( 1, 1, 1, 0.529412 )
+position = Vector2( 362, 200 )
+z_index = 4
+frames = SubResource( 58 )
+frame = 2
+playing = true
+flip_h = true
+
+[node name="particles" type="Particles2D" parent="final_cutscene/Effects"]
+position = Vector2( 306, 208 )
+z_index = -2
+lifetime = 2.5
+visibility_rect = Rect2( -250, -100, 500, 200 )
+local_coords = false
+process_material = ExtResource( 54 )
+
+[node name="particles2" type="Particles2D" parent="final_cutscene/Effects"]
+position = Vector2( 76, 208 )
+z_index = -2
+lifetime = 2.5
+visibility_rect = Rect2( -250, -100, 500, 200 )
+local_coords = false
+process_material = ExtResource( 54 )
+
+[node name="smoke" type="Particles2D" parent="final_cutscene/Effects"]
 modulate = Color( 0.662745, 0.662745, 0.662745, 1 )
 material = ExtResource( 49 )
-position = Vector2( 37, 81 )
+position = Vector2( 36, 65 )
 z_index = 1
 amount = 4
 local_coords = false
 process_material = ExtResource( 48 )
 texture = ExtResource( 41 )
 
-[node name="smoke4" type="Particles2D" parent="final_cutscene"]
+[node name="smoke4" type="Particles2D" parent="final_cutscene/Effects"]
 modulate = Color( 0.713726, 0.713726, 0.713726, 1 )
 material = ExtResource( 49 )
-position = Vector2( 374, 218 )
+position = Vector2( 373, 202 )
 z_index = 1
 amount = 4
 local_coords = false
 process_material = ExtResource( 48 )
 texture = ExtResource( 41 )
 
-[node name="smoke2" type="Particles2D" parent="final_cutscene"]
+[node name="smoke2" type="Particles2D" parent="final_cutscene/Effects"]
 modulate = Color( 0.556863, 0.556863, 0.556863, 1 )
 material = ExtResource( 49 )
-position = Vector2( 84, 240 )
+position = Vector2( 83, 224 )
 amount = 4
 local_coords = false
 process_material = ExtResource( 48 )
 texture = ExtResource( 41 )
 
-[node name="smoke3" type="Particles2D" parent="final_cutscene"]
+[node name="smoke3" type="Particles2D" parent="final_cutscene/Effects"]
 modulate = Color( 0.556863, 0.556863, 0.556863, 1 )
 material = ExtResource( 49 )
-position = Vector2( 333, 170 )
+position = Vector2( 332, 154 )
 amount = 4
 local_coords = false
 process_material = ExtResource( 48 )
@@ -14999,13 +15262,6 @@ flip_h = true
 region_enabled = true
 region_rect = Rect2( 0, 0, 400, 256 )
 
-[node name="ArmorRemains" type="Sprite" parent="."]
-position = Vector2( 154, 206 )
-z_index = 2
-texture = ExtResource( 12 )
-flip_h = true
-script = ExtResource( 14 )
-
 [node name="Music Player" type="AudioStreamPlayer" parent="."]
 pause_mode = 2
 bus = "Music"
@@ -15020,71 +15276,6 @@ miniboss_intro = ExtResource( 45 )
 miniboss_song = ExtResource( 44 )
 play_angry_boss_theme = false
 
-[node name="fire" type="AnimatedSprite" parent="."]
-modulate = Color( 1, 1, 1, 0.4 )
-position = Vector2( 333, 146 )
-z_index = -2
-frames = SubResource( 49 )
-frame = 3
-playing = true
-
-[node name="fire2" type="AnimatedSprite" parent="."]
-modulate = Color( 1, 1, 1, 0.619608 )
-position = Vector2( 365, 20 )
-z_index = -1
-frames = SubResource( 49 )
-playing = true
-
-[node name="fire3" type="AnimatedSprite" parent="."]
-modulate = Color( 1, 1, 1, 0.529412 )
-position = Vector2( 16, 189 )
-z_index = 4
-frames = SubResource( 49 )
-frame = 2
-playing = true
-flip_h = true
-
-[node name="small_fire" type="AnimatedSprite" parent="."]
-modulate = Color( 1, 1, 1, 0.686275 )
-position = Vector2( 21, 144 )
-z_index = 2
-frames = SubResource( 58 )
-frame = 4
-playing = true
-
-[node name="small_fire3" type="AnimatedSprite" parent="."]
-modulate = Color( 1, 1, 1, 0.423529 )
-position = Vector2( 49, 73 )
-frames = SubResource( 58 )
-frame = 4
-playing = true
-flip_h = true
-
-[node name="small_fire2" type="AnimatedSprite" parent="."]
-modulate = Color( 1, 1, 1, 0.529412 )
-position = Vector2( 362, 200 )
-z_index = 4
-frames = SubResource( 58 )
-frame = 7
-playing = true
-flip_h = true
-
-[node name="particles" type="Particles2D" parent="."]
-position = Vector2( 306, 208 )
-z_index = -2
-lifetime = 2.5
-visibility_rect = Rect2( -250, -100, 500, 200 )
-local_coords = false
-process_material = ExtResource( 54 )
-
-[node name="particles2" type="Particles2D" parent="."]
-position = Vector2( 76, 208 )
-z_index = -2
-lifetime = 2.5
-visibility_rect = Rect2( -250, -100, 500, 200 )
-local_coords = false
-process_material = ExtResource( 54 )
-
 [node name="firenoise" type="AudioStreamPlayer2D" parent="."]
 position = Vector2( 246, 214 )
 stream = ExtResource( 55 )
@@ -15093,4 +15284,28 @@ autoplay = true
 max_distance = 600.0
 bus = "SFX"
 
+[node name="damage" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 62 )
+bus = "SFX"
+
+[node name="saber" type="AudioStreamPlayer" parent="."]
+pause_mode = 1
+stream = ExtResource( 63 )
+volume_db = -8.0
+pitch_scale = 0.94
+bus = "SFX"
+
+[node name="explosion" type="Particles2D" parent="."]
+material = ExtResource( 34 )
+position = Vector2( 270, 174 )
+z_index = 4
+emitting = false
+amount = 1
+lifetime = 0.7
+one_shot = true
+process_material = SubResource( 90 )
+texture = ExtResource( 33 )
+
 [connection signal="dialog_concluded" from="DialogBox" to="." method="_on_dialog_concluded"]
+[connection signal="body_entered" from="Lumine/area2D" to="." method="_on_area2D_body_entered"]

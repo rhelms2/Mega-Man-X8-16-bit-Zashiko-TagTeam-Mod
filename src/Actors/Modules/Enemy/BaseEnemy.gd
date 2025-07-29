@@ -1,5 +1,6 @@
-extends "res://src/Actors/Panda.gd"
+extends Panda
 
-func process_death(delta: float):
-	Event.emit_signal("enemy_kill",self)
+
+func process_death(delta):
+	Event.emit_signal("enemy_kill", self)
 	queue_free()

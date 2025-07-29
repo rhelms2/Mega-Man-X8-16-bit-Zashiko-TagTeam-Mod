@@ -3,7 +3,7 @@
 [ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=1]
 [ext_resource path="res://src/Actors/Enemies/EnemyIdle.gd" type="Script" id=2]
 [ext_resource path="res://src/Actors/Bosses/BossIntro.gd" type="Script" id=3]
-[ext_resource path="res://src/Actors/Bosses/boss_sprites/yeti.res" type="SpriteFrames" id=7]
+[ext_resource path="res://src/Actors/Bosses/AvalancheYeti/yeti.res" type="SpriteFrames" id=7]
 [ext_resource path="res://src/Effects/Remains Particle.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/Effects/Smoke Particles.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/Effects/Explosion Particles.tscn" type="PackedScene" id=10]

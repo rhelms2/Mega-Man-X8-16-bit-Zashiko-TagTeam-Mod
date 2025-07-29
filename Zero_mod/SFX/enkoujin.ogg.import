@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/enkoujin.ogg-a4085fbe1f79e4a85eba9a950b9d098c.oggstr"
+
+[deps]
+
+source_file="res://Zero_mod/SFX/enkoujin.ogg"
+dest_files=[ "res://.import/enkoujin.ogg-a4085fbe1f79e4a85eba9a950b9d098c.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

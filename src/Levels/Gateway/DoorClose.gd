@@ -1,8 +1,8 @@
-extends "res://src/Objects/Door/Close.gd"
+extends DoorClose
 
 
-func _Interrupt() -> void:
+func _Interrupt() -> void :
 	if character.close_after_freeway:
-		collider.set_deferred("disabled",false)
+		collider.set_deferred("disabled", false)
 	else:
 		._Interrupt()

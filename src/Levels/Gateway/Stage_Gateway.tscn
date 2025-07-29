@@ -1,10 +1,10 @@
-[gd_scene load_steps=122 format=2]
+[gd_scene load_steps=120 format=2]
 
 [ext_resource path="res://src/Levels/base_stage.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/System/CameraLimits.gd" type="Script" id=2]
 [ext_resource path="res://src/Actors/Bosses/CopySigma/CopySigma.tscn" type="PackedScene" id=3]
 [ext_resource path="res://src/Actors/BossSpawner.gd" type="Script" id=4]
-[ext_resource path="res://src/Actors/Spawner.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Actors/Spawners/Spawner.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Sounds/OST - CopySigma - Intro.ogg" type="AudioStream" id=6]
 [ext_resource path="res://src/Sounds/OST - CopySigma - Loop.ogg" type="AudioStream" id=7]
 [ext_resource path="res://addons/PaletteSwap/PaletteSwap.gdshader" type="Shader" id=8]
@@ -38,7 +38,6 @@
 [ext_resource path="res://src/Levels/Gateway/gateway_ant.tscn" type="PackedScene" id=36]
 [ext_resource path="res://src/Levels/Gateway/gateway_roost.tscn" type="PackedScene" id=37]
 [ext_resource path="res://src/Levels/Gateway/GatewayLava.tscn" type="PackedScene" id=38]
-[ext_resource path="res://src/Levels/Primrose/invulnerability_on_rotation.gd" type="Script" id=39]
 [ext_resource path="res://src/Levels/Gateway/Portal.tscn" type="PackedScene" id=40]
 [ext_resource path="res://src/Levels/Gateway/GateCrystal.tscn" type="PackedScene" id=41]
 [ext_resource path="res://src/Levels/Gateway/BossWatcher.tscn" type="PackedScene" id=42]
@@ -50,7 +49,7 @@
 [ext_resource path="res://src/Actors/Bosses/EarthrockTrilobyte/Trilobyte.tscn" type="PackedScene" id=48]
 [ext_resource path="res://src/Actors/Bosses/DarkMantis/Mantis.tscn" type="PackedScene" id=49]
 [ext_resource path="res://src/Actors/Bosses/GigaboltManowar/Manowar.tscn" type="PackedScene" id=50]
-[ext_resource path="res://src/Actors/Bosses/Yeti.tscn" type="PackedScene" id=51]
+[ext_resource path="res://src/Actors/Bosses/AvalancheYeti/Yeti.tscn" type="PackedScene" id=51]
 [ext_resource path="res://src/Actors/Bosses/GravityAntonion/Antonion.tscn" type="PackedScene" id=52]
 [ext_resource path="res://src/Levels/Gateway/GatewayBossDoor.tscn" type="PackedScene" id=53]
 [ext_resource path="res://src/Levels/Gateway/CameraTranslator.gd" type="Script" id=54]
@@ -60,7 +59,6 @@
 [ext_resource path="res://src/Levels/Gateway/gateway_panda.tscn" type="PackedScene" id=58]
 [ext_resource path="res://src/Levels/Gateway/gateway_manowar.tscn" type="PackedScene" id=59]
 [ext_resource path="res://src/Levels/Gateway/gateway_mantis.tscn" type="PackedScene" id=60]
-[ext_resource path="res://src/Levels/PitchBlack/X_Lightsource.gd" type="Script" id=61]
 [ext_resource path="res://src/Levels/PitchBlack/light.png" type="Texture" id=62]
 [ext_resource path="res://src/Sounds/OST - GatewayEscape - Intro.ogg" type="AudioStream" id=63]
 [ext_resource path="res://src/Sounds/OST - GatewayEscape - Loop.ogg" type="AudioStream" id=64]
@@ -88,7 +86,7 @@
 [ext_resource path="res://src/Levels/Gateway/AlarmButton.gd" type="Script" id=86]
 [ext_resource path="res://src/Levels/Gateway/sigma_door.png" type="Texture" id=87]
 [ext_resource path="res://src/Levels/Gateway/GuideEmitter.gd" type="Script" id=88]
-[ext_resource path="res://src/Levels/IGTimer.tscn" type="PackedScene" id=89]
+[ext_resource path="res://System/Character_Spawner.gd" type="Script" id=89]
 
 [sub_resource type="CanvasItemMaterial" id=32]
 particles_animation = true
@@ -219,6 +217,7 @@ extents = Vector2( 256, 98 )
 extents = Vector2( 296, 351.5 )
 
 [node name="Gateway" instance=ExtResource( 1 )]
+script = ExtResource( 89 )
 
 [node name="Music Player" parent="." index="1"]
 debug_logs = true
@@ -270,20 +269,8 @@ max_distance = 600.0
 bus = "SFX"
 script = ExtResource( 72 )
 
-[node name="X" parent="." index="3"]
+[node name="CharacterPosition" parent="." index="3"]
 position = Vector2( -206, -339 )
-
-[node name="InvulnerabilityOnTeleport" type="Node" parent="X" index="35"]
-script = ExtResource( 39 )
-
-[node name="light" type="Light2D" parent="X" index="36"]
-scale = Vector2( 1.5, 1 )
-z_index = 277
-texture = ExtResource( 62 )
-energy = 0.35
-range_layer_min = -2
-range_layer_max = -1
-script = ExtResource( 61 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="Scenery" index="0"]
 layer = -1
@@ -1471,157 +1458,157 @@ position = Vector2( 145, 134 )
 [node name="spikes" parent="Objects/ConveyorBelts/SpikeConveyorBelt" index="0" instance=ExtResource( 19 )]
 position = Vector2( -171, 0 )
 z_index = 2
-frame = 0
+frame = 8
 flip_h = true
 
 [node name="spikes2" parent="Objects/ConveyorBelts/SpikeConveyorBelt" index="1" instance=ExtResource( 19 )]
 position = Vector2( -151, 0 )
 z_index = 2
-frame = 9
+frame = 7
 flip_h = true
 
 [node name="spikes3" parent="Objects/ConveyorBelts/SpikeConveyorBelt" index="2" instance=ExtResource( 19 )]
 position = Vector2( -131, 0 )
 z_index = 2
-frame = 0
+frame = 8
 flip_h = true
 
 [node name="spikes4" parent="Objects/ConveyorBelts/SpikeConveyorBelt" index="3" instance=ExtResource( 19 )]
 position = Vector2( -111, 0 )
 z_index = 2
-frame = 9
+frame = 7
 flip_h = true
 
 [node name="spikes5" parent="Objects/ConveyorBelts/SpikeConveyorBelt" index="4" instance=ExtResource( 19 )]
 position = Vector2( -91, 0 )
 z_index = 2
-frame = 9
+frame = 7
 flip_h = true
 
 [node name="spikes6" parent="Objects/ConveyorBelts/SpikeConveyorBelt" index="5" instance=ExtResource( 19 )]
 position = Vector2( -71, 0 )
 z_index = 2
-frame = 8
+frame = 6
 flip_h = true
 
 [node name="spikes7" parent="Objects/ConveyorBelts/SpikeConveyorBelt" index="6" instance=ExtResource( 19 )]
 position = Vector2( -51, 0 )
 z_index = 2
-frame = 9
+frame = 7
 flip_h = true
 
 [node name="spikes8" parent="Objects/ConveyorBelts/SpikeConveyorBelt" index="7" instance=ExtResource( 19 )]
 position = Vector2( -31, 0 )
 z_index = 2
-frame = 8
+frame = 6
 flip_h = true
 
 [node name="spikes9" parent="Objects/ConveyorBelts/SpikeConveyorBelt" index="8" instance=ExtResource( 19 )]
 position = Vector2( -11, 0 )
 z_index = 2
-frame = 0
+frame = 8
 flip_h = true
 
 [node name="spikes10" parent="Objects/ConveyorBelts/SpikeConveyorBelt" index="9" instance=ExtResource( 19 )]
 position = Vector2( 9, 0 )
 z_index = 2
-frame = 9
+frame = 7
 flip_h = true
 
 [node name="spikes11" parent="Objects/ConveyorBelts/SpikeConveyorBelt" index="10" instance=ExtResource( 19 )]
 position = Vector2( 29, 0 )
 z_index = 2
-frame = 9
+frame = 7
 flip_h = true
 
 [node name="spikes12" parent="Objects/ConveyorBelts/SpikeConveyorBelt" index="11" instance=ExtResource( 19 )]
 position = Vector2( 49, 0 )
 z_index = 2
-frame = 8
+frame = 6
 flip_h = true
 
 [node name="spikes13" parent="Objects/ConveyorBelts/SpikeConveyorBelt" index="12" instance=ExtResource( 19 )]
 position = Vector2( 69, 0 )
 z_index = 2
-frame = 9
+frame = 7
 flip_h = true
 
 [node name="spikes14" parent="Objects/ConveyorBelts/SpikeConveyorBelt" index="13" instance=ExtResource( 19 )]
 position = Vector2( 89, 0 )
 z_index = 2
-frame = 8
+frame = 6
 flip_h = true
 
 [node name="spikes15" parent="Objects/ConveyorBelts/SpikeConveyorBelt" index="14" instance=ExtResource( 19 )]
 position = Vector2( 109, 0 )
 z_index = 2
-frame = 9
+frame = 7
 flip_h = true
 
 [node name="spikes16" parent="Objects/ConveyorBelts/SpikeConveyorBelt" index="15" instance=ExtResource( 19 )]
 position = Vector2( 129, 0 )
 z_index = 2
-frame = 8
+frame = 6
 flip_h = true
 
 [node name="spikes17" parent="Objects/ConveyorBelts/SpikeConveyorBelt" index="16" instance=ExtResource( 19 )]
 position = Vector2( 149, 0 )
 z_index = 2
-frame = 7
+frame = 5
 flip_h = true
 
 [node name="spikes18" parent="Objects/ConveyorBelts/SpikeConveyorBelt" index="17" instance=ExtResource( 19 )]
 position = Vector2( 169, 0 )
 z_index = 2
-frame = 8
+frame = 6
 flip_h = true
 
 [node name="spikes19" parent="Objects/ConveyorBelts/SpikeConveyorBelt" index="18" instance=ExtResource( 19 )]
 position = Vector2( 189, 0 )
 z_index = 2
-frame = 7
+frame = 5
 flip_h = true
 
 [node name="spikes20" parent="Objects/ConveyorBelts/SpikeConveyorBelt" index="19" instance=ExtResource( 19 )]
 position = Vector2( 209, 0 )
 z_index = 2
-frame = 6
+frame = 4
 flip_h = true
 
 [node name="spikes21" parent="Objects/ConveyorBelts/SpikeConveyorBelt" index="20" instance=ExtResource( 19 )]
 position = Vector2( 227, 0 )
 z_index = 2
-frame = 8
+frame = 6
 flip_h = true
 
 [node name="spikes22" parent="Objects/ConveyorBelts/SpikeConveyorBelt" index="21" instance=ExtResource( 19 )]
 position = Vector2( 247, 0 )
 z_index = 2
-frame = 9
+frame = 7
 flip_h = true
 
 [node name="spikes23" parent="Objects/ConveyorBelts/SpikeConveyorBelt" index="22" instance=ExtResource( 19 )]
 position = Vector2( 267, 0 )
 z_index = 2
-frame = 8
+frame = 6
 flip_h = true
 
 [node name="spikes24" parent="Objects/ConveyorBelts/SpikeConveyorBelt" index="23" instance=ExtResource( 19 )]
 position = Vector2( 287, 0 )
 z_index = 2
-frame = 7
+frame = 5
 flip_h = true
 
 [node name="spikes25" parent="Objects/ConveyorBelts/SpikeConveyorBelt" index="24" instance=ExtResource( 19 )]
 position = Vector2( 307, 0 )
 z_index = 2
-frame = 8
+frame = 6
 flip_h = true
 
 [node name="spikes26" parent="Objects/ConveyorBelts/SpikeConveyorBelt" index="25" instance=ExtResource( 19 )]
 position = Vector2( 327, 0 )
 z_index = 2
-frame = 7
+frame = 5
 flip_h = true
 
 [node name="Conveyor Belt6" parent="Objects/ConveyorBelts/SpikeConveyorBelt" index="26" instance=ExtResource( 18 )]
@@ -1648,121 +1635,121 @@ position = Vector2( 657, 55 )
 [node name="spikes" parent="Objects/ConveyorBelts/SpikeConveyorBelt2" index="0" instance=ExtResource( 19 )]
 position = Vector2( -171, 0 )
 z_index = 2
-frame = 0
+frame = 8
 flip_h = true
 
 [node name="spikes2" parent="Objects/ConveyorBelts/SpikeConveyorBelt2" index="1" instance=ExtResource( 19 )]
 position = Vector2( -151, 0 )
 z_index = 2
-frame = 9
+frame = 7
 flip_h = true
 
 [node name="spikes3" parent="Objects/ConveyorBelts/SpikeConveyorBelt2" index="2" instance=ExtResource( 19 )]
 position = Vector2( -131, 0 )
 z_index = 2
-frame = 0
+frame = 8
 flip_h = true
 
 [node name="spikes4" parent="Objects/ConveyorBelts/SpikeConveyorBelt2" index="3" instance=ExtResource( 19 )]
 position = Vector2( -111, 0 )
 z_index = 2
-frame = 9
+frame = 7
 flip_h = true
 
 [node name="spikes5" parent="Objects/ConveyorBelts/SpikeConveyorBelt2" index="4" instance=ExtResource( 19 )]
 position = Vector2( -91, 0 )
 z_index = 2
-frame = 9
+frame = 7
 flip_h = true
 
 [node name="spikes6" parent="Objects/ConveyorBelts/SpikeConveyorBelt2" index="5" instance=ExtResource( 19 )]
 position = Vector2( -71, 0 )
 z_index = 2
-frame = 8
+frame = 6
 flip_h = true
 
 [node name="spikes7" parent="Objects/ConveyorBelts/SpikeConveyorBelt2" index="6" instance=ExtResource( 19 )]
 position = Vector2( -51, 0 )
 z_index = 2
-frame = 9
+frame = 7
 flip_h = true
 
 [node name="spikes8" parent="Objects/ConveyorBelts/SpikeConveyorBelt2" index="7" instance=ExtResource( 19 )]
 position = Vector2( -31, 0 )
 z_index = 2
-frame = 8
+frame = 6
 flip_h = true
 
 [node name="spikes9" parent="Objects/ConveyorBelts/SpikeConveyorBelt2" index="8" instance=ExtResource( 19 )]
 position = Vector2( -11, 0 )
 z_index = 2
-frame = 0
+frame = 8
 flip_h = true
 
 [node name="spikes10" parent="Objects/ConveyorBelts/SpikeConveyorBelt2" index="9" instance=ExtResource( 19 )]
 position = Vector2( 9, 0 )
 z_index = 2
-frame = 9
+frame = 7
 flip_h = true
 
 [node name="spikes11" parent="Objects/ConveyorBelts/SpikeConveyorBelt2" index="10" instance=ExtResource( 19 )]
 position = Vector2( 29, 0 )
 z_index = 2
-frame = 9
+frame = 7
 flip_h = true
 
 [node name="spikes12" parent="Objects/ConveyorBelts/SpikeConveyorBelt2" index="11" instance=ExtResource( 19 )]
 position = Vector2( 49, 0 )
 z_index = 2
-frame = 8
+frame = 6
 flip_h = true
 
 [node name="spikes13" parent="Objects/ConveyorBelts/SpikeConveyorBelt2" index="12" instance=ExtResource( 19 )]
 position = Vector2( 69, 0 )
 z_index = 2
-frame = 9
+frame = 7
 flip_h = true
 
 [node name="spikes14" parent="Objects/ConveyorBelts/SpikeConveyorBelt2" index="13" instance=ExtResource( 19 )]
 position = Vector2( 89, 0 )
 z_index = 2
-frame = 8
+frame = 6
 flip_h = true
 
 [node name="spikes15" parent="Objects/ConveyorBelts/SpikeConveyorBelt2" index="14" instance=ExtResource( 19 )]
 position = Vector2( 109, 0 )
 z_index = 2
-frame = 9
+frame = 7
 flip_h = true
 
 [node name="spikes16" parent="Objects/ConveyorBelts/SpikeConveyorBelt2" index="15" instance=ExtResource( 19 )]
 position = Vector2( 129, 0 )
 z_index = 2
-frame = 8
+frame = 6
 flip_h = true
 
 [node name="spikes17" parent="Objects/ConveyorBelts/SpikeConveyorBelt2" index="16" instance=ExtResource( 19 )]
 position = Vector2( 149, 0 )
 z_index = 2
-frame = 7
+frame = 5
 flip_h = true
 
 [node name="spikes18" parent="Objects/ConveyorBelts/SpikeConveyorBelt2" index="17" instance=ExtResource( 19 )]
 position = Vector2( 169, 0 )
 z_index = 2
-frame = 8
+frame = 6
 flip_h = true
 
 [node name="spikes19" parent="Objects/ConveyorBelts/SpikeConveyorBelt2" index="18" instance=ExtResource( 19 )]
 position = Vector2( 189, 0 )
 z_index = 2
-frame = 7
+frame = 5
 flip_h = true
 
 [node name="spikes20" parent="Objects/ConveyorBelts/SpikeConveyorBelt2" index="19" instance=ExtResource( 19 )]
 position = Vector2( 209, 0 )
 z_index = 2
-frame = 6
+frame = 4
 flip_h = true
 
 [node name="Conveyor Belt6" parent="Objects/ConveyorBelts/SpikeConveyorBelt2" index="20" instance=ExtResource( 18 )]
@@ -1802,9 +1789,9 @@ total_duration = 0.5
 [node name="BossSpawner" parent="Objects" index="28" instance=ExtResource( 5 )]
 position = Vector2( 26, -367 )
 script = ExtResource( 4 )
+object_to_spawn = ExtResource( 3 )
 active = false
 debug_logs = true
-object_to_spawn = ExtResource( 3 )
 make_child_of_this_object = true
 set_direction_to_right = false
 despawnable = false
@@ -2015,9 +2002,6 @@ script = ExtResource( 2 )
 position = Vector2( 1280, 366.5 )
 shape = SubResource( 3 )
 
-[node name="IGTimer" parent="." index="8" instance=ExtResource( 89 )]
-section = "Gateway"
-
 [connection signal="finished" from="Scenery/GatewayTiled/CopySigmaWall" to="Objects/BossSpawner" method="spawn"]
 [connection signal="button_press" from="Scenery/GatewayManowarTiled/Press/Button" to="Scenery/GatewayManowarTiled/Press/Press" method="_on_Button_button_press"]
 [connection signal="button_press" from="Scenery/GatewayManowarTiled/Press/Button" to="Scenery/GatewayManowarTiled/Press/Press2" method="_on_Button_button_press"]
@@ -2065,6 +2049,7 @@ section = "Gateway"
 [connection signal="ready_for_battle" from="Objects/BossWatcher" to="Objects/BossWatcher/GuideEmitter" method="_on_BossWatcher_ready_for_battle"]
 [connection signal="ready_for_battle" from="Objects/BossWatcher" to="Objects/Door" method="_on_Unlock"]
 [connection signal="ready_for_battle" from="Objects/BossWatcher" to="Objects/Door/VisualUnlock" method="activate"]
+[connection signal="remove_explosions" from="Objects/BossWatcher" to="StateCamera/SigmaFinale" method="full_deactivate"]
 [connection signal="close" from="Objects/Door" to="Objects/BossWatcher" method="_on_Door_close"]
 [connection signal="close" from="Objects/Door" to="Objects/MultiBossController" method="start_bossfight"]
 [connection signal="closing_freeway" from="Objects/Door" to="Objects/BossWatcher" method="_on_Door_closing_freeway"]

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossSpecials/BlastLauncher/heal_aura.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossSpecials/BlastLauncher/BlastLauncher_Special.gd" type="Script" id=2]
+[ext_resource path="res://src/Sounds/biketurn.wav" type="AudioStream" id=3]
+
+[node name="BlastLauncher Special" type="Node2D"]
+script = ExtResource( 2 )
+disable_base_ready = true
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 0, -4 )
+frames = ExtResource( 1 )
+animation = "aura"
+frame = 6
+playing = true
+
+[node name="sfx" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+max_distance = 600.0
+bus = "SFX"

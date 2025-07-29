@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://src/DialogSystem/Profiles/DialogueText.gd" type="Script" id=1]
+[ext_resource path="res://Zero_mod/DialogSystem/Profiles/Zero.tres" type="Resource" id=2]
+[ext_resource path="res://src/DialogSystem/Profiles/Manowar.tres" type="Resource" id=3]
+
+[resource]
+script = ExtResource( 1 )
+dialog = [ ExtResource( 2 ), "MANOWAR1_ZERO", "MANOWAR2_ZERO", ExtResource( 3 ), "MANOWAR3_ZERO", ExtResource( 2 ), "MANOWAR4_ZERO", ExtResource( 3 ), "MANOWAR5_ZERO", "MANOWAR6_ZERO", ExtResource( 2 ), "MANOWAR7_ZERO", ExtResource( 3 ), "MANOWAR8_ZERO", ExtResource( 2 ), "MANOWAR9_ZERO", "MANOWAR10_ZERO" ]

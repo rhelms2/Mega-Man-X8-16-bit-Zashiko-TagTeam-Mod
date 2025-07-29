@@ -1,8 +1,9 @@
-extends "res://src/Objects/Door/Close.gd"
+extends DoorClose
 
-export var signal_to_emit := "boss_door_closed"
+export  var signal_to_emit: String = "boss_door_closed"
 
-func _Interrupt() -> void:
+
+func _Interrupt() -> void :
 	if signal_to_emit != "none":
 		Event.emit_signal(signal_to_emit)
-	collider.set_deferred("disabled",false)
+	collider.set_deferred("disabled", false)

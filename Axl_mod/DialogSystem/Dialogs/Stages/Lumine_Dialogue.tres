@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://src/DialogSystem/Profiles/DialogueText.gd" type="Script" id=1]
+[ext_resource path="res://src/DialogSystem/Profiles/Lumine.tres" type="Resource" id=2]
+[ext_resource path="res://src/DialogSystem/Profiles/EvilLumine.tres" type="Resource" id=4]
+[ext_resource path="res://Axl_mod/DialogSystem/Profiles/Axl.tres" type="Resource" id=5]
+
+[resource]
+script = ExtResource( 1 )
+dialog = [ ExtResource( 5 ), "FINALLUMINE1_AXL", ExtResource( 2 ), "FINALLUMINE2_AXL", "FINALLUMINE3_AXL", "FINALLUMINE4_AXL", ExtResource( 5 ), "FINALLUMINE5_AXL", ExtResource( 2 ), "FINALLUMINE6_AXL", "FINALLUMINE7_AXL", ExtResource( 4 ), "FINALLUMINE8_AXL", ExtResource( 5 ), "FINALLUMINE9_AXL", ExtResource( 4 ), "FINALLUMINE10_AXL", ExtResource( 5 ), "FINALLUMINE11_AXL", ExtResource( 4 ), "FINALLUMINE12_AXL", "FINALLUMINE13_AXL", "FINALLUMINE14_AXL", "FINALLUMINE15_AXL", ExtResource( 5 ), "FINALLUMINE16_AXL", ExtResource( 4 ), "FINALLUMINE17_AXL", "FINALLUMINE18_AXL", ExtResource( 5 ), "FINALLUMINE19_AXL", ExtResource( 4 ), "FINALLUMINE20_AXL", "FINALLUMINE21_AXL", "FINALLUMINE22_AXL", "FINALLUMINE23_AXL", "FINALLUMINE24_AXL", "FINALLUMINE25_AXL", "FINALLUMINE26_AXL", "FINALLUMINE27_AXL", "FINALLUMINE28_AXL", "FINALLUMINE29_AXL", ExtResource( 5 ), "FINALLUMINE30_AXL", "FINALLUMINE31_AXL", ExtResource( 4 ), "FINALLUMINE32_AXL", "FINALLUMINE33_AXL" ]

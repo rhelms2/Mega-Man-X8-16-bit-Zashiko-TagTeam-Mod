@@ -1,4 +1,6 @@
 extends Node2D
+class_name BambooSlash
+
 onready var slash_hitbox: Node2D = $SlashHitbox
 onready var animated_sprite: AnimatedSprite = $animatedSprite
 

@@ -1,14 +1,14 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://src/Actors/Player/BossWeapons/BlastLauncher/BlastLaunchProjectile.gd" type="Script" id=1]
-[ext_resource path="res://src/Actors/Player/BossWeapons/BlastLauncher/blast_launcher.res" type="SpriteFrames" id=2]
-[ext_resource path="res://src/Actors/Player/BossWeapons/BlastLauncher/IntenseExplosion.tscn" type="PackedScene" id=3]
-[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=4]
+[ext_resource path="res://src/Actors/Player/BossWeapons/BlastLauncher/blast_launcher.res" type="SpriteFrames" id=1]
+[ext_resource path="res://src/Effects/Materials/launch_smoke.tres" type="Material" id=2]
+[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/Player/BossWeapons/BlastLauncher/IntenseExplosion.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Sounds/BlastLaunch - Bounce.ogg" type="AudioStream" id=5]
-[ext_resource path="res://src/Effects/Materials/launch_smoke.tres" type="Material" id=6]
-[ext_resource path="res://src/Effects/Textures/small_smoke.png" type="Texture" id=7]
+[ext_resource path="res://src/Effects/Textures/small_smoke.png" type="Texture" id=6]
+[ext_resource path="res://src/Actors/Player/BossWeapons/BlastLauncher/BlastLaunchProjectile.gd" type="Script" id=7]
 [ext_resource path="res://src/Effects/Materials/mat_batsmoke.tres" type="Material" id=8]
-[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=9]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 4, 5 )
@@ -16,17 +16,17 @@ extents = Vector2( 4, 5 )
 [node name="BlastLaunch" type="KinematicBody2D" groups=["Player Projectile"]]
 z_index = 8
 collision_layer = 4
-script = ExtResource( 1 )
+script = ExtResource( 7 )
 damage = 8.0
 damage_to_bosses = 5.0
 damage_to_weakness = 15.0
 time_off_screen = 2.0
 break_guards = true
-explosion = ExtResource( 3 )
+explosion = ExtResource( 4 )
 
 [node name="animatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 0, -1 )
-frames = ExtResource( 2 )
+position = Vector2( 7, 0 )
+frames = ExtResource( 1 )
 animation = "blast"
 playing = true
 
@@ -42,7 +42,7 @@ stream = ExtResource( 5 )
 volume_db = -10.0
 max_distance = 600.0
 bus = "SFX"
-script = ExtResource( 4 )
+script = ExtResource( 9 )
 
 [node name="particles2D" type="Particles2D" parent="."]
 material = ExtResource( 8 )
@@ -50,11 +50,11 @@ z_index = -1
 amount = 4
 lifetime = 0.35
 local_coords = false
-process_material = ExtResource( 6 )
-texture = ExtResource( 7 )
+process_material = ExtResource( 2 )
+texture = ExtResource( 6 )
 
 [node name="disabler" type="Node" parent="."]
-script = ExtResource( 9 )
+script = ExtResource( 3 )
 fade_out = true
 delete_after_fade = true
 undo_on_rotation_end = false

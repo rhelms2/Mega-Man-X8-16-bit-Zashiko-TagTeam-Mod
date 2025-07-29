@@ -1,0 +1,172 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/FlameBurner/FlameBurner.tres" type="Resource" id=1]
+[ext_resource path="res://Axl_mod/WeaponGet/Weaponget_new.png" type="Texture" id=2]
+[ext_resource path="res://Axl_mod/WeaponGet/WpnGetImage.gd" type="Script" id=17]
+[ext_resource path="res://src/Sounds/OST - Weapon Get.ogg" type="AudioStream" id=18]
+[ext_resource path="res://src/Effects/Materials/TextColorSwap.tres" type="Material" id=19]
+[ext_resource path="res://src/Fonts/X8bitmapfont.fnt" type="BitmapFont" id=20]
+[ext_resource path="res://src/DialogSystem/font_colors/Neutral.png" type="Texture" id=21]
+[ext_resource path="res://src/WeaponGet/sprites/wpnget_bar.png" type="Texture" id=22]
+[ext_resource path="res://Axl_mod/WeaponGet/Weapon_Get_Screen.gd" type="Script" id=25]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/PlasmaGun/PlasmaGun.tres" type="Resource" id=33]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/BlackArrow/BlackArrow.tres" type="Resource" id=34]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/SpiralMagnum/SpiralMagnum.tres" type="Resource" id=35]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/RayGun/RayGun.tres" type="Resource" id=36]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/BoundBlaster/BoundBlaster.tres" type="Resource" id=37]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/IceGattling/IceGattling.tres" type="Resource" id=38]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/BlastLauncher/BlastLauncher.tres" type="Resource" id=39]
+[ext_resource path="res://src/Title/title_bg.png" type="Texture" id=42]
+[ext_resource path="res://src/WeaponGet/lines.tscn" type="PackedScene" id=44]
+[ext_resource path="res://src/WeaponGet/sprites/flash.png" type="Texture" id=45]
+[ext_resource path="res://src/WeaponGet/flash.gd" type="Script" id=46]
+[ext_resource path="res://src/WeaponGet/green_bg.gd" type="Script" id=47]
+
+[node name="WeaponGetScreen" type="Node2D"]
+script = ExtResource( 25 )
+
+[node name="fullblack" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 0 )
+position = Vector2( 199, 112 )
+scale = Vector2( 1, 2 )
+z_index = 1010
+texture = ExtResource( 42 )
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+stream = ExtResource( 18 )
+volume_db = -4.0
+bus = "Music"
+
+[node name="Armor" type="Node2D" parent="."]
+position = Vector2( 127, 114 )
+z_index = 42
+script = ExtResource( 17 )
+weapons = [ ExtResource( 36 ), ExtResource( 39 ), ExtResource( 37 ), ExtResource( 34 ), ExtResource( 38 ), ExtResource( 1 ), ExtResource( 35 ), ExtResource( 33 ) ]
+text_palette = ExtResource( 21 )
+
+[node name="sprite" type="Sprite" parent="Armor"]
+z_index = 21
+texture = ExtResource( 2 )
+
+[node name="text" type="Node2D" parent="."]
+z_index = 444
+
+[node name="get_shadow" type="Label" parent="text"]
+modulate = Color( 0, 0, 0, 1 )
+anchor_right = 0.1
+margin_left = 254.0
+margin_top = 43.0
+margin_right = 394.4
+margin_bottom = 70.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 20 )
+text = "YOUGOT_TITLE"
+autowrap = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="name_shadow" type="Label" parent="text"]
+modulate = Color( 0, 0, 0, 1 )
+anchor_right = 0.1
+margin_left = 254.0
+margin_top = 57.0
+margin_right = 394.4
+margin_bottom = 84.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 20 )
+text = "Sonic Slicer"
+autowrap = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="you_get" type="Label" parent="text"]
+material = ExtResource( 19 )
+anchor_right = 0.1
+margin_left = 253.0
+margin_top = 42.0
+margin_right = 393.4
+margin_bottom = 69.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 20 )
+text = "YOUGOT_TITLE"
+autowrap = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="weapon_name" type="Label" parent="text"]
+material = ExtResource( 19 )
+anchor_right = 0.1
+margin_left = 253.0
+margin_top = 56.0
+margin_right = 393.4
+margin_bottom = 83.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 20 )
+text = "Sonic Slicer"
+autowrap = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="green_bg" type="Polygon2D" parent="."]
+modulate = Color( 1, 1, 1, 0.74902 )
+position = Vector2( 0, 146 )
+scale = Vector2( 1, 1e-05 )
+color = Color( 0.109804, 0.411765, 0.32549, 1 )
+antialiased = true
+polygon = PoolVector2Array( 0, -37, 398, -37, 398, 38, 0, 38 )
+script = ExtResource( 47 )
+
+[node name="bar" type="Sprite" parent="."]
+position = Vector2( 199, 147 )
+z_index = 18
+texture = ExtResource( 22 )
+
+[node name="bar2" type="Sprite" parent="."]
+position = Vector2( 199, 147 )
+z_index = 18
+texture = ExtResource( 22 )
+flip_v = true
+
+[node name="black" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 199, 112 )
+scale = Vector2( 1, 2 )
+z_index = -1000
+texture = ExtResource( 42 )
+
+[node name="lines" parent="." instance=ExtResource( 44 )]
+modulate = Color( 1, 1, 1, 0.509804 )
+z_index = -100
+start_on_ready = true
+middle_color = Color( 0.0235294, 0.501961, 0.85098, 1 )
+middle_color2 = Color( 0.862745, 0.235294, 0.0431373, 1 )
+
+[node name="lines2" parent="." instance=ExtResource( 44 )]
+modulate = Color( 1, 1, 1, 0.509804 )
+z_index = -100
+middle_color = Color( 0.0235294, 0.501961, 0.85098, 1 )
+middle_color2 = Color( 0.862745, 0.235294, 0.0431373, 1 )
+
+[node name="white_flash" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 199, 112 )
+scale = Vector2( 1, 2 )
+z_index = -5
+texture = ExtResource( 45 )
+script = ExtResource( 46 )
+
+[connection signal="flash" from="." to="lines" method="disappear"]
+[connection signal="flash" from="." to="lines2" method="disappear"]
+[connection signal="flash" from="." to="white_flash" method="start"]
+[connection signal="reset" from="." to="lines" method="appear"]
+[connection signal="reset" from="." to="lines2" method="appear"]
+[connection signal="defined_weapon" from="Armor" to="." method="_on_Armor_defined_weapon"]
+[connection signal="defined_weapon" from="Armor" to="green_bg" method="_on_Armor_defined_weapon"]
+[connection signal="defined_weapon" from="Armor" to="lines" method="define_color_via_weapon"]
+[connection signal="defined_weapon" from="Armor" to="lines2" method="define_color_via_weapon"]
+[connection signal="defined_weapon" from="Armor" to="white_flash" method="define_color_via_weapon"]

@@ -104,6 +104,7 @@ position = Vector2( 2, 0 )
 z_index = 1
 frames = ExtResource( 14 )
 animation = "idle_loop"
+frame = 2
 playing = true
 flip_h = true
 
@@ -132,6 +133,7 @@ script = ExtResource( 8 )
 
 [node name="Damage" type="Node2D" parent="."]
 script = ExtResource( 6 )
+max_freeze_hits = 5
 
 [node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
 stream = ExtResource( 12 )

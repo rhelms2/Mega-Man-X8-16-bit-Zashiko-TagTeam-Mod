@@ -1,4 +1,4 @@
-extends "res://src/Objects/Door/CameraTranslator.gd"
+extends DoorCameraTranslator
 
 func _ready() -> void:
 	if get_checkpoint() < associated_checkpoint:

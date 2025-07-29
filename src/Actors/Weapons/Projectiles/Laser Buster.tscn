@@ -1,14 +1,14 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://src/Actors/Weapons/Projectiles/laser_shot.res" type="SpriteFrames" id=1]
-[ext_resource path="res://src/Actors/Weapons/Projectiles/laser_beam.res" type="SpriteFrames" id=2]
-[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=3]
-[ext_resource path="res://src/Sounds/LASER_BEAM_MIX.wav" type="AudioStream" id=4]
-[ext_resource path="res://src/Actors/Player/BossWeapons/SqueezeBomb/SqueezeBomb.gd" type="Script" id=5]
-[ext_resource path="res://src/Sounds/Rooster - Explosion.ogg" type="AudioStream" id=6]
-[ext_resource path="res://src/Actors/Props/RideArmor/RepeatAnimation.gd" type="Script" id=7]
-[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=8]
-[ext_resource path="res://src/Effects/Materials/mat_ridearmor.tres" type="Material" id=9]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=1]
+[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Player/BossWeapons/SqueezeBomb/SqueezeBomb.gd" type="Script" id=3]
+[ext_resource path="res://src/Sounds/Rooster - Explosion.ogg" type="AudioStream" id=4]
+[ext_resource path="res://src/Actors/Props/RideArmor/RepeatAnimation.gd" type="Script" id=5]
+[ext_resource path="res://src/Effects/Materials/mat_ridearmor.tres" type="Material" id=6]
+[ext_resource path="res://src/Sounds/LASER_BEAM_MIX.wav" type="AudioStream" id=7]
+[ext_resource path="res://src/Actors/Weapons/Projectiles/laser_beam.res" type="SpriteFrames" id=8]
+[ext_resource path="res://src/Actors/Weapons/Projectiles/laser_shot.res" type="SpriteFrames" id=9]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 351.5, 17 )
@@ -20,7 +20,7 @@ extents = Vector2( 30, 30 )
 z_index = 4
 collision_layer = 4
 collision_mask = 0
-script = ExtResource( 5 )
+script = ExtResource( 3 )
 damage = 2.0
 damage_to_weakness = 10.0
 time_off_screen = 2.0
@@ -33,21 +33,21 @@ flash_duration = 0.1
 foward_start = 48.0
 
 [node name="animatedSprite" type="AnimatedSprite" parent="."]
-frames = ExtResource( 1 )
+frames = ExtResource( 9 )
 animation = "loop"
 frame = 3
 playing = true
 
 [node name="line" type="AnimatedSprite" parent="animatedSprite"]
-material = ExtResource( 9 )
+material = ExtResource( 6 )
 position = Vector2( 352.5, 16 )
 scale = Vector2( 19.5313, 1 )
-frames = ExtResource( 2 )
+frames = ExtResource( 8 )
 animation = "loop"
 frame = 4
 playing = true
 offset = Vector2( 0, -15 )
-script = ExtResource( 7 )
+script = ExtResource( 5 )
 reference = NodePath("..")
 
 [node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
@@ -59,23 +59,23 @@ position = Vector2( 313.5, 0 )
 shape = SubResource( 1 )
 
 [node name="disabler" type="Node" parent="."]
-script = ExtResource( 8 )
+script = ExtResource( 2 )
 fade_out = true
 delete_after_fade = true
 undo_on_rotation_end = false
 
 [node name="point" type="AudioStreamPlayer2D" parent="."]
 pause_mode = 2
-stream = ExtResource( 4 )
+stream = ExtResource( 7 )
 volume_db = -9.109
 bus = "SFX"
 
 [node name="sound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 6 )
+stream = ExtResource( 4 )
 volume_db = -12.0
 max_distance = 600.0
 bus = "SFX"
-script = ExtResource( 3 )
+script = ExtResource( 1 )
 
 [node name="collisionShape2D2" type="CollisionShape2D" parent="."]
 shape = SubResource( 2 )

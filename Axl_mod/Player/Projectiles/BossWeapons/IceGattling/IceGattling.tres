@@ -1,0 +1,35 @@
+[gd_resource type="Resource" load_steps=11 format=2]
+
+[ext_resource path="res://Axl_mod/WeaponGet/Videos/sequence_icegattling.tres" type="Resource" id=1]
+[ext_resource path="res://src/Actors/Player/BossWeapons/WeaponResource.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Player/BossWeapons/driftdiamond_palette.png" type="Texture" id=3]
+[ext_resource path="res://src/WeaponGet/palettes/driftdiamond_i.png" type="Texture" id=4]
+[ext_resource path="res://Axl_mod/SFX/ice_gattling.ogg" type="AudioStream" id=5]
+[ext_resource path="res://src/WeaponGet/palettes/driftdiamond_h.png" type="Texture" id=6]
+[ext_resource path="res://Axl_mod/HUD/BossWeapons/selectable_weapon_07.png" type="Texture" id=7]
+[ext_resource path="res://Axl_mod/HUD/BossWeapons/faded/selectable_weapon_07.png" type="Texture" id=8]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/IceGattling/IceGattling.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/Actors/Player/BossWeapons/DriftDiamond/DriftShoryuken.tscn" type="PackedScene" id=10]
+
+[resource]
+script = ExtResource( 2 )
+short_name = "YETI_AXL_WPNMENU"
+collectible = "yeti_weapon"
+icon = ExtResource( 7 )
+faded_icon = ExtResource( 8 )
+palette = ExtResource( 3 )
+regular_shot = ExtResource( 9 )
+regular_ammo_cost = 1.0
+charged_shot = ExtResource( 10 )
+charged_ammo_cost = 4.0
+cooldown = 0.3
+sound = ExtResource( 5 )
+input_sequence = ExtResource( 1 )
+MainColor1 = Color( 0.941176, 0.941176, 0.941176, 1 )
+MainColor2 = Color( 0.592157, 0.658824, 0.74902, 1 )
+MainColor3 = Color( 0.337255, 0.392157, 0.541176, 1 )
+MainColor4 = Color( 0.694118, 0.862745, 0.886275, 1 )
+MainColor5 = Color( 0.490196, 0.690196, 0.890196, 1 )
+MainColor6 = Color( 0.231373, 0.278431, 0.505882, 1 )
+hermes_palette = ExtResource( 6 )
+icarus_palette = ExtResource( 4 )

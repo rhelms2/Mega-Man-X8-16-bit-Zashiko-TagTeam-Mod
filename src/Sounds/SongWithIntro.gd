@@ -1,3 +1,3 @@
 extends AudioStream
 
-export var intro : AudioStream
+export  var intro: AudioStream

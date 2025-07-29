@@ -2,7 +2,7 @@ extends AttackAbility
 export var spike : PackedScene
 
 func _Update(_delta):
-	if attack_stage == 0 and timer > .5:
+	if attack_stage == 0 and timer > 0.5:
 		play_animation("ground")
 		create_spike()
 		next_attack_stage()

@@ -144,6 +144,7 @@ z_index = 5
 collision_layer = 8
 script = ExtResource( 16 )
 max_health = 140.0
+wall_distance = 16
 
 [node name="BossAI" type="Node2D" parent="."]
 script = ExtResource( 1 )
@@ -162,7 +163,7 @@ position = Vector2( 0, -5 )
 z_index = 1
 frames = ExtResource( 2 )
 animation = "idle"
-frame = 5
+frame = 2
 playing = true
 flip_h = true
 script = ExtResource( 5 )
@@ -364,7 +365,7 @@ flip_h = true
 [node name="Damage" type="Node2D" parent="."]
 script = ExtResource( 3 )
 max_flash_time = 0.35
-weakenesses = [ "SqueezeBomb" ]
+weakenesses = [ "SqueezeBomb", "SpiralMagnum", "Juuhazan" ]
 
 [node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
 pause_mode = 2
@@ -374,6 +375,7 @@ max_distance = 600.0
 bus = "SFX"
 
 [node name="dps" type="RichTextLabel" parent="Damage"]
+visible = false
 margin_left = -18.0
 margin_top = -69.0
 margin_right = 59.0

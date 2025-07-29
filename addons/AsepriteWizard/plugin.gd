@@ -1,43 +1,56 @@
-tool
+tool 
 extends EditorPlugin
 
-const ConfigDialog = preload('config/config_dialog.tscn')
-const WizardWindow = preload("animated_sprite/ASWizardWindow.tscn")
-const ImportPlugin = preload("animated_sprite/import_plugin.gd")
+const ConfigDialog = preload("config/config_dialog.tscn")
+const WizardWindow = preload("animated_sprite/docks/as_wizard_dock_container.tscn")
+const SpriteFramesImportPlugin = preload("animated_sprite/import_plugin.gd")
+const NoopImportPlugin = preload("noop_import_plugin.gd")
+const ExportPlugin = preload("export/metadata_export_plugin.gd")
 const AnimatedSpriteInspectorPlugin = preload("animated_sprite/inspector_plugin.gd")
 const SpriteInspectorPlugin = preload("animation_player/inspector_plugin.gd")
 const menu_item_name = "Aseprite Spritesheet Wizard"
 const config_menu_item_name = "Aseprite Wizard Config"
 
 var config = preload("config/config.gd").new()
-var window: PanelContainer
+var window: TabContainer
 var config_window: PopupPanel
-var import_plugin : EditorImportPlugin
+var sprite_frames_import_plugin: EditorImportPlugin
+var noop_import_plugin: EditorImportPlugin
+var export_plugin: EditorExportPlugin
 var sprite_inspector_plugin: EditorInspectorPlugin
 var animated_sprite_inspector_plugin: EditorInspectorPlugin
 
-var _importer_enabled = false
+var _exporter_enabled: bool = false
+
 
 func _enter_tree():
 	_load_config()
 	_setup_menu_entries()
 	_setup_importer()
+	_setup_exporter()
+	_configure_preset()
 	_setup_animated_sprite_inspector_plugin()
 	_setup_sprite_inspector_plugin()
 
 
-func _exit_tree():
+func disable_plugin():
 	_remove_menu_entries()
 	_remove_importer()
+	_remove_exporter()
 	_remove_wizard_dock()
 	_remove_inspector_plugins()
+	config.clear_project_settings()
+	config.set_icons({})
 
 
 func _load_config():
 	var editor_gui = get_editor_interface().get_base_control()
-	config.load_config()
-	config.set_icon_arrow_down(editor_gui.get_icon("GuiTreeArrowDown", "EditorIcons"))
-	config.set_icon_arrow_right(editor_gui.get_icon("GuiTreeArrowRight", "EditorIcons"))
+	config._editor_settings = get_editor_interface().get_editor_settings()
+	config.set_icons({
+		"collapsed": editor_gui.get_icon("GuiTreeArrowRight", "EditorIcons"), 
+		"expanded": editor_gui.get_icon("GuiTreeArrowDown", "EditorIcons"), 
+	})
+	config.initialize_project_settings()
 
 
 func _setup_menu_entries():
@@ -51,16 +64,38 @@ func _remove_menu_entries():
 
 
 func _setup_importer():
-	if (config.is_importer_enabled()):
-		import_plugin = ImportPlugin.new()
-		add_import_plugin(import_plugin)
-		_importer_enabled = true
+	sprite_frames_import_plugin = SpriteFramesImportPlugin.new()
+	sprite_frames_import_plugin.file_system = get_editor_interface().get_resource_filesystem()
+	sprite_frames_import_plugin.config = config
+	add_import_plugin(sprite_frames_import_plugin)
+
+	noop_import_plugin = NoopImportPlugin.new()
+	noop_import_plugin.file_system = get_editor_interface().get_resource_filesystem()
+	noop_import_plugin.config = config
+	add_import_plugin(noop_import_plugin)
+
+
+func _configure_preset():
+	if config.is_import_preset_enabled():
+		config.create_import_preset_setting()
 
 
 func _remove_importer():
-	if _importer_enabled:
-		remove_import_plugin(import_plugin)
-		_importer_enabled = false
+	remove_import_plugin(sprite_frames_import_plugin)
+	remove_import_plugin(noop_import_plugin)
+
+
+func _setup_exporter():
+	if config.is_exporter_enabled():
+		export_plugin = ExportPlugin.new()
+		add_export_plugin(export_plugin)
+		_exporter_enabled = true
+
+
+func _remove_exporter():
+	if _exporter_enabled:
+		remove_export_plugin(export_plugin)
+		_exporter_enabled = false
 
 
 func _setup_sprite_inspector_plugin():
@@ -107,7 +142,6 @@ func _open_config_dialog(_ud):
 
 	config_window = ConfigDialog.instance()
 	config_window.init(config)
-	config_window.connect("importer_state_changed", self, "_on_importer_state_changed")
 	get_editor_interface().get_base_control().add_child(config_window)
 	config_window.popup_centered()
 
@@ -118,12 +152,3 @@ func _on_window_closed():
 		window.queue_free()
 		window = null
 
-
-func _on_importer_state_changed():
-	if _importer_enabled:
-		remove_import_plugin(import_plugin)
-		_importer_enabled = false
-	else:
-		import_plugin = ImportPlugin.new()
-		add_import_plugin(import_plugin)
-		_importer_enabled = true

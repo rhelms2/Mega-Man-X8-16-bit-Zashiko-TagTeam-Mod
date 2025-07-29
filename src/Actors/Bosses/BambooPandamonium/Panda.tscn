@@ -436,7 +436,7 @@ script = ExtResource( 5 )
 invulnerability_time = 0.1
 ignore_nearby_hits = false
 max_flash_time = 0.35
-weakenesses = [ "FireDash", "RideArmor" ]
+weakenesses = [ "FireDash", "RideArmor", "FlameBurner", "Enkoujin" ]
 
 [node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
 pause_mode = 2

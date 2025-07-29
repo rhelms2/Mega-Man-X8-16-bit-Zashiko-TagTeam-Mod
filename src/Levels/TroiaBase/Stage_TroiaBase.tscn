@@ -1,12 +1,11 @@
-[gd_scene load_steps=235 format=2]
+[gd_scene load_steps=233 format=2]
 
 [ext_resource path="res://src/Levels/Test/test_tileset.tres" type="TileSet" id=1]
 [ext_resource path="res://src/Actors/Enemies/Servbot/Servbot.tscn" type="PackedScene" id=2]
-[ext_resource path="res://src/Levels/TroiaBase/ComboSection.gd" type="Script" id=3]
 [ext_resource path="res://src/Objects/LifeUp.tscn" type="PackedScene" id=4]
 [ext_resource path="res://src/Actors/Enemies/Drone/Drone.tscn" type="PackedScene" id=5]
 [ext_resource path="res://src/Objects/Light Capsule/LightCapsule.tscn" type="PackedScene" id=6]
-[ext_resource path="res://src/Actors/Spawner.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Actors/Spawners/Spawner.tscn" type="PackedScene" id=7]
 [ext_resource path="res://src/Levels/base_stage.tscn" type="PackedScene" id=8]
 [ext_resource path="res://src/Objects/Door/NewDoor.tscn" type="PackedScene" id=9]
 [ext_resource path="res://src/Objects/Pickups/SubTank.tscn" type="PackedScene" id=10]
@@ -22,7 +21,6 @@
 [ext_resource path="res://src/Objects/Door/boss_door.res" type="SpriteFrames" id=20]
 [ext_resource path="res://src/Objects/Door/NewBossDoor.tscn" type="PackedScene" id=21]
 [ext_resource path="res://src/Actors/Bosses/OpticSunflower/Sunflower.tscn" type="PackedScene" id=22]
-[ext_resource path="res://src/Levels/TroiaBase/ComboSystem/VisualRanking.tscn" type="PackedScene" id=23]
 [ext_resource path="res://src/System/CameraLimits.gd" type="Script" id=24]
 [ext_resource path="res://src/Objects/Door/CameraTranslator.gd" type="Script" id=25]
 [ext_resource path="res://src/DialogSystem/Dialogs/Capsules/HermesBuster.tres" type="Resource" id=26]
@@ -55,7 +53,7 @@
 [ext_resource path="res://src/Levels/TroiaBase/DoorDestroyer.gd" type="Script" id=53]
 [ext_resource path="res://src/Effects/Materials/troia_door_particles.tres" type="Material" id=54]
 [ext_resource path="res://src/Levels/TroiaBase/SecretBossBGPrepare.gd" type="Script" id=55]
-[ext_resource path="res://src/WeaponGet/flash.png" type="Texture" id=56]
+[ext_resource path="res://src/WeaponGet/sprites/flash.png" type="Texture" id=56]
 [ext_resource path="res://src/Actors/Bosses/Cutman/Cutman.tscn" type="PackedScene" id=57]
 [ext_resource path="res://src/Levels/Primrose/portal2.png" type="Texture" id=58]
 [ext_resource path="res://src/Objects/Door/NewDoor.gd" type="Script" id=59]
@@ -65,7 +63,7 @@
 [ext_resource path="res://src/Effects/Materials/crystal_particles.tres" type="Material" id=63]
 [ext_resource path="res://src/Effects/Textures/elec_particles.png" type="Texture" id=64]
 [ext_resource path="res://src/Levels/TroiaBase/a_door.png" type="Texture" id=65]
-[ext_resource path="res://src/Levels/IGTimer.tscn" type="PackedScene" id=66]
+[ext_resource path="res://System/Character_Spawner.gd" type="Script" id=66]
 
 [sub_resource type="AtlasTexture" id=67]
 flags = 4
@@ -645,7 +643,7 @@ extents = Vector2( 84, 8 )
 [sub_resource type="RectangleShape2D" id=192]
 extents = Vector2( 29, 29 )
 
-[sub_resource type="AtlasTexture" id=173]
+[sub_resource type="AtlasTexture" id=238]
 atlas = ExtResource( 44 )
 region = Rect2( 0, 0, 32, 48 )
 
@@ -671,7 +669,7 @@ region = Rect2( 128, 0, 32, 48 )
 
 [sub_resource type="SpriteFrames" id=174]
 animations = [ {
-"frames": [ SubResource( 173 ) ],
+"frames": [ SubResource( 238 ) ],
 "loop": true,
 "name": "deactivated",
 "speed": 5.0
@@ -704,7 +702,7 @@ region = Rect2( 128, 0, 32, 48 )
 
 [sub_resource type="SpriteFrames" id=198]
 animations = [ {
-"frames": [ SubResource( 173 ) ],
+"frames": [ SubResource( 238 ) ],
 "loop": true,
 "name": "deactivated",
 "speed": 5.0
@@ -743,7 +741,7 @@ region = Rect2( 128, 0, 32, 48 )
 
 [sub_resource type="SpriteFrames" id=204]
 animations = [ {
-"frames": [ SubResource( 173 ) ],
+"frames": [ SubResource( 238 ) ],
 "loop": true,
 "name": "deactivated",
 "speed": 5.0
@@ -830,6 +828,7 @@ extents = Vector2( 244, 112 )
 extents = Vector2( 199, 112 )
 
 [node name="TroiaBase" instance=ExtResource( 8 )]
+script = ExtResource( 66 )
 __meta__ = {
 "_edit_vertical_guides_": [  ]
 }
@@ -840,11 +839,7 @@ stage_song = ExtResource( 35 )
 miniboss_intro = ExtResource( 15 )
 miniboss_song = ExtResource( 14 )
 
-[node name="VisualRanking" parent="StateCamera" index="13" instance=ExtResource( 23 )]
-position = Vector2( 156, -67 )
-z_index = 100
-
-[node name="lines" parent="StateCamera" index="15" instance=ExtResource( 52 )]
+[node name="lines" parent="StateCamera" index="14" instance=ExtResource( 52 )]
 pause_mode = 1
 modulate = Color( 1, 1, 1, 0.231373 )
 position = Vector2( -11, -3 )
@@ -857,7 +852,7 @@ middle_color = Color( 0.835294, 0.584314, 0.0588235, 1 )
 middle_color2 = Color( 0.972549, 0.909804, 0.501961, 1 )
 final_color = Color( 0.972549, 0.909804, 0.501961, 0 )
 
-[node name="lines2" parent="StateCamera" index="16" instance=ExtResource( 52 )]
+[node name="lines2" parent="StateCamera" index="15" instance=ExtResource( 52 )]
 pause_mode = 1
 modulate = Color( 1, 1, 1, 0.231373 )
 position = Vector2( -11, -3 )
@@ -870,7 +865,7 @@ middle_color = Color( 0.941176, 0.533333, 0.658824, 1 )
 middle_color2 = Color( 0.909804, 0.721569, 0.752941, 1 )
 final_color = Color( 0.909804, 0.721569, 0.752941, 0 )
 
-[node name="SecretBossBGPrepare" type="Node" parent="StateCamera" index="17"]
+[node name="SecretBossBGPrepare" type="Node" parent="StateCamera" index="16"]
 script = ExtResource( 55 )
 cut_color1 = Color( 0.0588235, 0.34902, 0.054902, 1 )
 cut_color2 = Color( 0.133333, 0.6, 0.403922, 1 )
@@ -879,24 +874,17 @@ r_color1 = Color( 0.345098, 0.219608, 0.501961, 1 )
 r_color2 = Color( 0.623529, 0.0588235, 0.180392, 1 )
 r_color3 = Color( 0.921569, 0.309804, 0.156863, 1 )
 
-[node name="BGCover" type="Sprite" parent="StateCamera" index="18"]
+[node name="BGCover" type="Sprite" parent="StateCamera" index="17"]
 visible = false
 modulate = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
 z_index = -101
 texture = ExtResource( 56 )
 
-[node name="Ready Warning Text" parent="StateCamera" index="19"]
+[node name="Ready Warning Text" parent="StateCamera" index="18"]
 z_index = 30
 
-[node name="X" parent="." index="3"]
-position = Vector2( -64, 96 )
-
-[node name="combo_label" type="Label" parent="X" index="35"]
-visible = false
-margin_left = 9.0
-margin_top = -88.0
-margin_right = 49.0
-margin_bottom = -74.0
+[node name="CharacterPosition" parent="." index="3"]
+position = Vector2( -63, 87 )
 
 [node name="Collision2" type="TileMap" parent="Scenery" index="1"]
 visible = false
@@ -945,7 +933,7 @@ position = Vector2( -190, -18.25 )
 scale = Vector2( 11.125, 8.42188 )
 z_index = -2
 frames = SubResource( 99 )
-frame = 26
+frame = 2
 speed_scale = 0.8
 playing = true
 
@@ -955,7 +943,7 @@ position = Vector2( -500, -6 )
 scale = Vector2( 1.625, 3.42187 )
 z_index = -2
 frames = SubResource( 99 )
-frame = 17
+frame = 19
 speed_scale = 1.2
 playing = true
 
@@ -965,7 +953,7 @@ position = Vector2( 116, -85.5 )
 scale = Vector2( 11.125, 4.09375 )
 z_index = -2
 frames = SubResource( 99 )
-frame = 7
+frame = 18
 playing = true
 
 [node name="troia_lines_inv" type="AnimatedSprite" parent="Scenery/lines" index="3"]
@@ -975,7 +963,7 @@ rotation = 3.14159
 scale = Vector2( 2.55842, 4.09375 )
 z_index = -1
 frames = SubResource( 99 )
-frame = 26
+frame = 5
 playing = true
 
 [node name="troia_lines_inv2" type="AnimatedSprite" parent="Scenery/lines" index="4"]
@@ -985,7 +973,7 @@ rotation = 3.14159
 scale = Vector2( 3.89328, 7.22228 )
 z_index = -1
 frames = SubResource( 99 )
-frame = 26
+frame = 5
 playing = true
 
 [node name="troia_lines3" type="AnimatedSprite" parent="Scenery/lines" index="5"]
@@ -994,7 +982,6 @@ position = Vector2( 192, 56.75 )
 scale = Vector2( 14.375, 4.35937 )
 z_index = -2
 frames = SubResource( 99 )
-frame = 11
 speed_scale = 0.7
 playing = true
 
@@ -1008,7 +995,7 @@ position = Vector2( -190, -18.25 )
 scale = Vector2( 11.125, 8.42188 )
 z_index = -2
 frames = SubResource( 99 )
-frame = 25
+frame = 1
 speed_scale = 0.8
 playing = true
 
@@ -1018,7 +1005,7 @@ position = Vector2( -500, -6 )
 scale = Vector2( 1.625, 3.42187 )
 z_index = -2
 frames = SubResource( 99 )
-frame = 16
+frame = 18
 speed_scale = 1.2
 playing = true
 
@@ -1028,7 +1015,7 @@ position = Vector2( 116, -85.5 )
 scale = Vector2( 11.125, 4.09375 )
 z_index = -2
 frames = SubResource( 99 )
-frame = 7
+frame = 18
 playing = true
 
 [node name="troia_lines_inv" type="AnimatedSprite" parent="Scenery/lines2" index="3"]
@@ -1038,7 +1025,7 @@ rotation = 3.14159
 scale = Vector2( 2.55842, 4.09375 )
 z_index = -1
 frames = SubResource( 99 )
-frame = 26
+frame = 5
 playing = true
 
 [node name="troia_lines_inv2" type="AnimatedSprite" parent="Scenery/lines2" index="4"]
@@ -1048,7 +1035,7 @@ rotation = 3.14159
 scale = Vector2( 3.89328, 7.22228 )
 z_index = -1
 frames = SubResource( 99 )
-frame = 26
+frame = 5
 playing = true
 
 [node name="troia_lines3" type="AnimatedSprite" parent="Scenery/lines2" index="5"]
@@ -1057,7 +1044,7 @@ position = Vector2( 192, 56.75 )
 scale = Vector2( 14.375, 4.35937 )
 z_index = -2
 frames = SubResource( 99 )
-frame = 10
+frame = 31
 speed_scale = 0.7
 playing = true
 
@@ -1071,7 +1058,7 @@ position = Vector2( -190, 62 )
 scale = Vector2( 11.125, 10.0625 )
 z_index = -2
 frames = SubResource( 99 )
-frame = 25
+frame = 1
 speed_scale = 0.8
 playing = true
 
@@ -1081,7 +1068,7 @@ position = Vector2( -446, -6 )
 scale = Vector2( 1.625, 3.42187 )
 z_index = -2
 frames = SubResource( 99 )
-frame = 15
+frame = 17
 speed_scale = 1.2
 playing = true
 
@@ -1091,7 +1078,7 @@ position = Vector2( 116, -65 )
 scale = Vector2( 11.125, 4.09375 )
 z_index = -2
 frames = SubResource( 99 )
-frame = 6
+frame = 17
 playing = true
 
 [node name="troia_lines_inv" type="AnimatedSprite" parent="Scenery/lines3" index="3"]
@@ -1101,7 +1088,7 @@ rotation = 3.14159
 scale = Vector2( 2.55842, 4.09375 )
 z_index = -1
 frames = SubResource( 99 )
-frame = 25
+frame = 4
 playing = true
 
 [node name="troia_lines_inv2" type="AnimatedSprite" parent="Scenery/lines3" index="4"]
@@ -1111,7 +1098,7 @@ rotation = 3.14159
 scale = Vector2( 3.89328, 9.97308 )
 z_index = -1
 frames = SubResource( 99 )
-frame = 25
+frame = 4
 playing = true
 
 [node name="troia_lines3" type="AnimatedSprite" parent="Scenery/lines3" index="5"]
@@ -1120,7 +1107,7 @@ position = Vector2( 180, 69 )
 scale = Vector2( 14.375, 3.8125 )
 z_index = -2
 frames = SubResource( 99 )
-frame = 10
+frame = 31
 speed_scale = 0.7
 playing = true
 
@@ -1135,7 +1122,6 @@ rotation = 1.5708
 scale = Vector2( 3.12401, 11.4808 )
 z_index = -2
 frames = SubResource( 99 )
-frame = 24
 speed_scale = 0.8
 playing = true
 
@@ -1146,7 +1132,7 @@ rotation = -1.5708
 scale = Vector2( 1.00186, 11.4808 )
 z_index = -1
 frames = SubResource( 99 )
-frame = 13
+frame = 24
 playing = true
 
 [node name="monitor_details" type="Node2D" parent="Scenery" index="10"]
@@ -1159,7 +1145,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/monitor_details/monitor_detail" index="0"]
 z_index = 5
 frames = SubResource( 130 )
-frame = 7
+frame = 5
 speed_scale = 0.8
 playing = true
 
@@ -1171,7 +1157,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/monitor_details/monitor_detail2" index="0"]
 z_index = 5
 frames = SubResource( 130 )
-frame = 6
+frame = 4
 speed_scale = 0.8
 playing = true
 
@@ -1183,7 +1169,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/monitor_details/monitor_detail3" index="0"]
 z_index = 5
 frames = SubResource( 130 )
-frame = 6
+frame = 4
 speed_scale = 0.8
 playing = true
 flip_h = true
@@ -1196,7 +1182,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/monitor_details/monitor_detail4" index="0"]
 z_index = 5
 frames = SubResource( 130 )
-frame = 6
+frame = 4
 speed_scale = 0.8
 playing = true
 flip_h = true
@@ -1209,7 +1195,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/monitor_details/monitor_detail5" index="0"]
 z_index = 5
 frames = SubResource( 130 )
-frame = 7
+frame = 5
 speed_scale = 0.8
 playing = true
 flip_h = true
@@ -1222,7 +1208,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/monitor_details/monitor_detail6" index="0"]
 z_index = 5
 frames = SubResource( 130 )
-frame = 6
+frame = 4
 speed_scale = 0.8
 playing = true
 flip_h = true
@@ -1235,7 +1221,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/monitor_details/monitor_detail7" index="0"]
 z_index = 5
 frames = SubResource( 130 )
-frame = 6
+frame = 4
 speed_scale = 0.8
 playing = true
 
@@ -1247,7 +1233,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/monitor_details/monitor_detail8" index="0"]
 z_index = 5
 frames = SubResource( 130 )
-frame = 6
+frame = 4
 speed_scale = 0.8
 playing = true
 
@@ -1262,7 +1248,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/monitor_details2/monitor_detail" index="0"]
 z_index = 5
 frames = SubResource( 130 )
-frame = 7
+frame = 5
 speed_scale = 0.8
 playing = true
 
@@ -1274,7 +1260,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/monitor_details2/monitor_detail2" index="0"]
 z_index = 5
 frames = SubResource( 130 )
-frame = 6
+frame = 4
 speed_scale = 0.8
 playing = true
 
@@ -1286,7 +1272,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/monitor_details2/monitor_detail3" index="0"]
 z_index = 5
 frames = SubResource( 130 )
-frame = 6
+frame = 4
 speed_scale = 0.8
 playing = true
 flip_h = true
@@ -1299,7 +1285,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/monitor_details2/monitor_detail4" index="0"]
 z_index = 5
 frames = SubResource( 130 )
-frame = 6
+frame = 4
 speed_scale = 0.8
 playing = true
 flip_h = true
@@ -1312,7 +1298,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/monitor_details2/monitor_detail5" index="0"]
 z_index = 5
 frames = SubResource( 130 )
-frame = 7
+frame = 5
 speed_scale = 0.8
 playing = true
 flip_h = true
@@ -1325,7 +1311,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/monitor_details2/monitor_detail6" index="0"]
 z_index = 5
 frames = SubResource( 130 )
-frame = 6
+frame = 4
 speed_scale = 0.8
 playing = true
 flip_h = true
@@ -1338,7 +1324,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/monitor_details2/monitor_detail7" index="0"]
 z_index = 5
 frames = SubResource( 130 )
-frame = 6
+frame = 4
 speed_scale = 0.8
 playing = true
 
@@ -1350,7 +1336,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/monitor_details2/monitor_detail8" index="0"]
 z_index = 5
 frames = SubResource( 130 )
-frame = 6
+frame = 4
 speed_scale = 0.8
 playing = true
 
@@ -1366,7 +1352,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/big_detail" index="0"]
 z_index = 5
 frames = SubResource( 115 )
-frame = 12
+frame = 10
 speed_scale = 0.8
 playing = true
 flip_h = true
@@ -1379,7 +1365,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/big_detail2" index="0"]
 z_index = 5
 frames = SubResource( 115 )
-frame = 12
+frame = 10
 speed_scale = 0.8
 playing = true
 flip_h = true
@@ -1393,7 +1379,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/big_detail3" index="0"]
 z_index = 5
 frames = SubResource( 115 )
-frame = 11
+frame = 9
 speed_scale = 0.8
 playing = true
 flip_h = true
@@ -1406,7 +1392,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/big_detail4" index="0"]
 z_index = 5
 frames = SubResource( 115 )
-frame = 11
+frame = 9
 speed_scale = 0.8
 playing = true
 flip_h = true
@@ -1420,7 +1406,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/big_detail5" index="0"]
 z_index = 5
 frames = SubResource( 115 )
-frame = 10
+frame = 8
 speed_scale = 0.8
 playing = true
 flip_h = true
@@ -1434,7 +1420,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/big_detail6" index="0"]
 z_index = 5
 frames = SubResource( 115 )
-frame = 10
+frame = 8
 speed_scale = 0.8
 playing = true
 
@@ -1446,7 +1432,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/big_detail7" index="0"]
 z_index = 5
 frames = SubResource( 115 )
-frame = 10
+frame = 8
 speed_scale = 0.8
 playing = true
 
@@ -1458,7 +1444,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/big_detail8" index="0"]
 z_index = 5
 frames = SubResource( 115 )
-frame = 9
+frame = 7
 speed_scale = 0.8
 playing = true
 flip_h = true
@@ -1471,7 +1457,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/big_detail9" index="0"]
 z_index = 5
 frames = SubResource( 115 )
-frame = 8
+frame = 6
 speed_scale = 0.8
 playing = true
 flip_h = true
@@ -1484,7 +1470,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/big_detail10" index="0"]
 z_index = 5
 frames = SubResource( 115 )
-frame = 8
+frame = 6
 speed_scale = 0.8
 playing = true
 flip_h = true
@@ -1498,7 +1484,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/big_detail11" index="0"]
 z_index = 5
 frames = SubResource( 115 )
-frame = 7
+frame = 5
 speed_scale = 0.8
 playing = true
 flip_h = true
@@ -1512,7 +1498,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/big_detail12" index="0"]
 z_index = 5
 frames = SubResource( 115 )
-frame = 6
+frame = 4
 speed_scale = 0.8
 playing = true
 flip_h = true
@@ -1526,7 +1512,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/big_detail13" index="0"]
 z_index = 5
 frames = SubResource( 115 )
-frame = 6
+frame = 4
 speed_scale = 0.8
 playing = true
 flip_h = true
@@ -1539,7 +1525,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/big_detail14" index="0"]
 z_index = 5
 frames = SubResource( 115 )
-frame = 5
+frame = 3
 speed_scale = 0.8
 playing = true
 flip_h = true
@@ -1552,7 +1538,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/big_detail15" index="0"]
 z_index = 5
 frames = SubResource( 115 )
-frame = 5
+frame = 3
 speed_scale = 0.8
 playing = true
 flip_h = true
@@ -1566,7 +1552,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/big_detail16" index="0"]
 z_index = 5
 frames = SubResource( 115 )
-frame = 4
+frame = 2
 speed_scale = 0.8
 playing = true
 flip_h = true
@@ -1580,7 +1566,6 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/small_detail" index="0"]
 z_index = 5
 frames = SubResource( 145 )
-frame = 2
 speed_scale = 0.8
 playing = true
 
@@ -1592,7 +1577,6 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/small_detail2" index="0"]
 z_index = 5
 frames = SubResource( 145 )
-frame = 2
 speed_scale = 0.8
 playing = true
 
@@ -1604,7 +1588,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/small_detail3" index="0"]
 z_index = 5
 frames = SubResource( 145 )
-frame = 1
+frame = 13
 speed_scale = 0.8
 playing = true
 
@@ -1616,7 +1600,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/small_detail4" index="0"]
 z_index = 5
 frames = SubResource( 145 )
-frame = 1
+frame = 13
 speed_scale = 0.8
 playing = true
 flip_h = true
@@ -1630,7 +1614,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/small_detail5" index="0"]
 z_index = 5
 frames = SubResource( 145 )
-frame = 1
+frame = 13
 speed_scale = 0.8
 playing = true
 flip_h = true
@@ -1644,7 +1628,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/small_detail6" index="0"]
 z_index = 5
 frames = SubResource( 145 )
-frame = 1
+frame = 13
 speed_scale = 0.8
 playing = true
 flip_v = true
@@ -1657,7 +1641,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/small_detail7" index="0"]
 z_index = 5
 frames = SubResource( 145 )
-frame = 1
+frame = 13
 speed_scale = 0.8
 playing = true
 flip_v = true
@@ -1670,6 +1654,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/small_detail8" index="0"]
 z_index = 5
 frames = SubResource( 145 )
+frame = 12
 speed_scale = 0.8
 playing = true
 
@@ -1681,7 +1666,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/small_detail9" index="0"]
 z_index = 5
 frames = SubResource( 145 )
-frame = 13
+frame = 11
 speed_scale = 0.8
 playing = true
 
@@ -1693,7 +1678,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/small_detail10" index="0"]
 z_index = 5
 frames = SubResource( 145 )
-frame = 13
+frame = 11
 speed_scale = 0.8
 playing = true
 flip_h = true
@@ -1706,7 +1691,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/small_detail11" index="0"]
 z_index = 5
 frames = SubResource( 145 )
-frame = 12
+frame = 10
 speed_scale = 0.8
 playing = true
 flip_h = true
@@ -1720,7 +1705,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/small_detail12" index="0"]
 z_index = 5
 frames = SubResource( 145 )
-frame = 12
+frame = 10
 speed_scale = 0.8
 playing = true
 flip_h = true
@@ -1734,7 +1719,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/small_detail13" index="0"]
 z_index = 5
 frames = SubResource( 145 )
-frame = 11
+frame = 9
 speed_scale = 0.8
 playing = true
 flip_h = true
@@ -1748,7 +1733,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/small_detail14" index="0"]
 z_index = 5
 frames = SubResource( 145 )
-frame = 11
+frame = 9
 speed_scale = 0.8
 playing = true
 
@@ -1760,7 +1745,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/small_detail15" index="0"]
 z_index = 5
 frames = SubResource( 145 )
-frame = 11
+frame = 9
 speed_scale = 0.8
 playing = true
 
@@ -1772,7 +1757,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/small_detail16" index="0"]
 z_index = 5
 frames = SubResource( 145 )
-frame = 11
+frame = 9
 speed_scale = 0.8
 playing = true
 
@@ -1784,7 +1769,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/small_detail17" index="0"]
 z_index = 5
 frames = SubResource( 145 )
-frame = 11
+frame = 9
 speed_scale = 0.8
 playing = true
 flip_h = true
@@ -1798,7 +1783,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/small_detail18" index="0"]
 z_index = 5
 frames = SubResource( 145 )
-frame = 11
+frame = 9
 speed_scale = 0.8
 playing = true
 
@@ -1810,7 +1795,7 @@ script = ExtResource( 42 )
 [node name="sprite" type="AnimatedSprite" parent="Scenery/details/texts/small_detail19" index="0"]
 z_index = 5
 frames = SubResource( 145 )
-frame = 10
+frame = 8
 speed_scale = 0.8
 playing = true
 
@@ -1819,127 +1804,127 @@ position = Vector2( 6164, -545 )
 
 [node name="animatedSprite" type="AnimatedSprite" parent="Scenery/details/node2D" index="0"]
 frames = SubResource( 158 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="animatedSprite2" type="AnimatedSprite" parent="Scenery/details/node2D" index="1"]
 position = Vector2( 16, 0 )
 frames = SubResource( 158 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="animatedSprite3" type="AnimatedSprite" parent="Scenery/details/node2D" index="2"]
 position = Vector2( 32, 0 )
 frames = SubResource( 158 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="animatedSprite4" type="AnimatedSprite" parent="Scenery/details/node2D" index="3"]
 position = Vector2( 48, 0 )
 frames = SubResource( 158 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="animatedSprite5" type="AnimatedSprite" parent="Scenery/details/node2D" index="4"]
 position = Vector2( 64, 0 )
 frames = SubResource( 158 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="animatedSprite6" type="AnimatedSprite" parent="Scenery/details/node2D" index="5"]
 position = Vector2( 80, 0 )
 frames = SubResource( 158 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="animatedSprite7" type="AnimatedSprite" parent="Scenery/details/node2D" index="6"]
 position = Vector2( 96, 0 )
 frames = SubResource( 158 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="animatedSprite8" type="AnimatedSprite" parent="Scenery/details/node2D" index="7"]
 position = Vector2( 112, 0 )
 frames = SubResource( 158 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="animatedSprite9" type="AnimatedSprite" parent="Scenery/details/node2D" index="8"]
 position = Vector2( 128, 0 )
 frames = SubResource( 158 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="animatedSprite10" type="AnimatedSprite" parent="Scenery/details/node2D" index="9"]
 position = Vector2( 144, 0 )
 frames = SubResource( 158 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="animatedSprite11" type="AnimatedSprite" parent="Scenery/details/node2D" index="10"]
 position = Vector2( 160, 0 )
 frames = SubResource( 158 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="animatedSprite12" type="AnimatedSprite" parent="Scenery/details/node2D" index="11"]
 position = Vector2( 176, 0 )
 frames = SubResource( 158 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="animatedSprite13" type="AnimatedSprite" parent="Scenery/details/node2D" index="12"]
 position = Vector2( 192, 0 )
 frames = SubResource( 158 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="animatedSprite14" type="AnimatedSprite" parent="Scenery/details/node2D" index="13"]
 position = Vector2( 208, 0 )
 frames = SubResource( 158 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="animatedSprite15" type="AnimatedSprite" parent="Scenery/details/node2D" index="14"]
 position = Vector2( 224, 0 )
 frames = SubResource( 158 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="animatedSprite16" type="AnimatedSprite" parent="Scenery/details/node2D" index="15"]
 position = Vector2( 240, 0 )
 frames = SubResource( 158 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="animatedSprite17" type="AnimatedSprite" parent="Scenery/details/node2D" index="16"]
 position = Vector2( 256, 0 )
 frames = SubResource( 158 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="animatedSprite18" type="AnimatedSprite" parent="Scenery/details/node2D" index="17"]
 position = Vector2( 272, 0 )
 frames = SubResource( 158 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="animatedSprite19" type="AnimatedSprite" parent="Scenery/details/node2D" index="18"]
 position = Vector2( 288, 0 )
 frames = SubResource( 158 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="animatedSprite20" type="AnimatedSprite" parent="Scenery/details/node2D" index="19"]
 position = Vector2( 304, 0 )
 frames = SubResource( 158 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="animatedSprite21" type="AnimatedSprite" parent="Scenery/details/node2D" index="20"]
 position = Vector2( 320, 0 )
 frames = SubResource( 158 )
-frame = 2
+frame = 1
 playing = true
 
 [node name="parallaxBackground2" type="ParallaxBackground" parent="Scenery" index="13"]
@@ -2026,7 +2011,6 @@ position = Vector2( 4256, -535 )
 collectible_name = "life_up_sunflower"
 
 [node name="Section1" type="Node2D" parent="Objects" index="8"]
-script = ExtResource( 3 )
 
 [node name="Door" parent="Objects/Section1" index="0" instance=ExtResource( 9 )]
 position = Vector2( 248, 88 )
@@ -2050,7 +2034,6 @@ shape = SubResource( 2 )
 [node name="animatedSprite" type="AnimatedSprite" parent="Objects/Section1/RewardDoor" index="1"]
 pause_mode = 2
 frames = SubResource( 189 )
-frame = 2
 playing = true
 
 [node name="RewardDoor2" type="StaticBody2D" parent="Objects/Section1" index="2"]
@@ -2065,7 +2048,6 @@ shape = SubResource( 2 )
 [node name="animatedSprite" type="AnimatedSprite" parent="Objects/Section1/RewardDoor2" index="1"]
 pause_mode = 2
 frames = SubResource( 189 )
-frame = 2
 playing = true
 
 [node name="finish_line" type="Area2D" parent="Objects/Section1" index="3"]
@@ -2081,6 +2063,7 @@ modulate = Color( 1, 1, 1, 0.788235 )
 position = Vector2( 6, 0 )
 frames = SubResource( 166 )
 animation = "idle"
+frame = 1
 playing = true
 script = ExtResource( 46 )
 
@@ -2168,12 +2151,6 @@ texture = ExtResource( 39 )
 shape = SubResource( 190 )
 
 [node name="Section2" type="Node2D" parent="Objects" index="9"]
-script = ExtResource( 3 )
-s_time_limit = 35.0
-s_ranking = 50.0
-a_ranking = 40.0
-b_ranking = 30.0
-c_ranking = 20.0
 
 [node name="Door" parent="Objects/Section2" index="0" instance=ExtResource( 9 )]
 position = Vector2( 4440, -424 )
@@ -2196,7 +2173,7 @@ shape = SubResource( 2 )
 [node name="animatedSprite" type="AnimatedSprite" parent="Objects/Section2/RewardDoor" index="1"]
 pause_mode = 2
 frames = SubResource( 189 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="RewardDoor2" type="StaticBody2D" parent="Objects/Section2" index="2"]
@@ -2211,7 +2188,7 @@ shape = SubResource( 2 )
 [node name="animatedSprite" type="AnimatedSprite" parent="Objects/Section2/RewardDoor2" index="1"]
 pause_mode = 2
 frames = SubResource( 189 )
-frame = 1
+frame = 3
 playing = true
 
 [node name="finish_line" type="Area2D" parent="Objects/Section2" index="3"]
@@ -2227,7 +2204,7 @@ modulate = Color( 1, 1, 1, 0.788235 )
 position = Vector2( 6, 0 )
 frames = SubResource( 166 )
 animation = "idle"
-frame = 1
+frame = 2
 playing = true
 script = ExtResource( 46 )
 
@@ -2267,24 +2244,23 @@ rotation = 3.14159
 [node name="alert_sign" type="AnimatedSprite" parent="Objects/Section2" index="14"]
 position = Vector2( 5659, -501 )
 frames = SubResource( 170 )
+frame = 1
 playing = true
 
 [node name="alert_sign2" type="AnimatedSprite" parent="Objects/Section2" index="15"]
 position = Vector2( 5797, -501 )
 frames = SubResource( 170 )
-frame = 2
 playing = true
 
 [node name="alert_sign3" type="AnimatedSprite" parent="Objects/Section2" index="16"]
 position = Vector2( 5439, -540 )
 frames = SubResource( 170 )
-frame = 2
 playing = true
 
 [node name="alert_sign4" type="AnimatedSprite" parent="Objects/Section2" index="17"]
 position = Vector2( 7086, -538 )
 frames = SubResource( 170 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="DoorDestroyer" type="Area2D" parent="Objects/Section2" index="18"]
@@ -2318,10 +2294,6 @@ shape = SubResource( 190 )
 
 [node name="Section3" type="Node2D" parent="Objects" index="10"]
 position = Vector2( 3456, -352 )
-script = ExtResource( 3 )
-s_time_limit = 45.0
-s_ranking = 105.0
-c_ranking = 30.0
 
 [node name="Door" parent="Objects/Section3" index="0" instance=ExtResource( 9 )]
 position = Vector2( 4440, -424 )
@@ -2375,7 +2347,7 @@ shape = SubResource( 2 )
 [node name="animatedSprite" type="AnimatedSprite" parent="Objects/Section3/RewardDoor" index="1"]
 pause_mode = 2
 frames = SubResource( 189 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="RewardDoor2" type="StaticBody2D" parent="Objects/Section3" index="3"]
@@ -2390,7 +2362,7 @@ shape = SubResource( 2 )
 [node name="animatedSprite" type="AnimatedSprite" parent="Objects/Section3/RewardDoor2" index="1"]
 pause_mode = 2
 frames = SubResource( 189 )
-frame = 1
+frame = 3
 playing = true
 
 [node name="StateMachineVisual" type="Label" parent="Objects/Section3/RewardDoor2" index="2"]
@@ -2416,6 +2388,7 @@ modulate = Color( 1, 1, 1, 0.788235 )
 position = Vector2( 6, -22 )
 frames = SubResource( 166 )
 animation = "idle"
+frame = 1
 playing = true
 script = ExtResource( 46 )
 
@@ -2523,8 +2496,8 @@ _next_limit = NodePath("../../../Limits/boss-room")
 
 [node name="BossSpawner" parent="Objects" index="13" instance=ExtResource( 7 )]
 position = Vector2( 13352, -849 )
-debug_logs = true
 object_to_spawn = ExtResource( 22 )
+debug_logs = true
 set_direction_to_right = false
 despawnable = false
 
@@ -2808,7 +2781,7 @@ shape = SubResource( 192 )
 pause_mode = 2
 modulate = Color( 1, 0.913725, 0, 1 )
 frames = SubResource( 189 )
-frame = 1
+frame = 3
 playing = true
 
 [node name="animatedSprite2" type="AnimatedSprite" parent="Objects/SecretDoor" index="2"]
@@ -2816,6 +2789,7 @@ pause_mode = 2
 modulate = Color( 1, 0.913725, 0, 1 )
 position = Vector2( 21, 0 )
 frames = SubResource( 189 )
+frame = 2
 playing = true
 
 [node name="animatedSprite3" type="AnimatedSprite" parent="Objects/SecretDoor" index="3"]
@@ -2823,7 +2797,7 @@ pause_mode = 2
 modulate = Color( 1, 0.913725, 0, 1 )
 position = Vector2( 42, 0 )
 frames = SubResource( 189 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="StartEntrance" type="AnimatedSprite" parent="Objects" index="28"]
@@ -2927,24 +2901,24 @@ position = Vector2( 677, 476 )
 
 [node name="SecretBossSpawner" parent="Objects" index="37" instance=ExtResource( 7 )]
 position = Vector2( 12000, -279 )
-active = false
 object_to_spawn = ExtResource( 49 )
+active = false
 set_direction_to_right = false
 despawnable = false
 connect_teleport_events = false
 
 [node name="SecretBossSpawner2" parent="Objects" index="38" instance=ExtResource( 7 )]
 position = Vector2( 11426, -303 )
-active = false
 object_to_spawn = ExtResource( 57 )
+active = false
 set_direction_to_right = false
 despawnable = false
 connect_teleport_events = false
 
 [node name="SecretBossSpawner3" parent="Objects" index="39" instance=ExtResource( 7 )]
 position = Vector2( 12502, -289 )
-active = false
 object_to_spawn = ExtResource( 62 )
+active = false
 set_direction_to_right = false
 despawnable = false
 connect_teleport_events = false
@@ -3262,28 +3236,16 @@ script = ExtResource( 24 )
 position = Vector2( 5, 0 )
 shape = SubResource( 35 )
 
-[node name="IGTimer" parent="." index="8" instance=ExtResource( 66 )]
-section = "Troia Base"
-
-[connection signal="disabled" from="Objects/Section1" to="Objects/Section1/Door" method="_on_Lock"]
-[connection signal="open_doors" from="Objects/Section1" to="Objects/Section1/RewardDoor" method="queue_free"]
-[connection signal="open_doors" from="Objects/Section1" to="Objects/Section1/RewardDoor2" method="queue_free"]
 [connection signal="explode" from="Objects/Section1/Door" to="Objects/Section1" method="start"]
 [connection signal="finish" from="Objects/Section1/Door" to="Objects/Section1" method="start"]
 [connection signal="open" from="Objects/Section1/Door" to="Objects/Section1" method="prepare"]
 [connection signal="body_entered" from="Objects/Section1/finish_line" to="Objects/Section1" method="_on_finish_line_body_entered"]
 [connection signal="body_entered" from="Objects/Section1/DoorDestroyer" to="Objects/Section1/DoorDestroyer" method="_on_DoorDestroyer_body_entered"]
-[connection signal="disabled" from="Objects/Section2" to="Objects/Section2/Door" method="_on_Lock"]
-[connection signal="open_doors" from="Objects/Section2" to="Objects/Section2/RewardDoor" method="destroy"]
-[connection signal="open_doors" from="Objects/Section2" to="Objects/Section2/RewardDoor2" method="destroy"]
 [connection signal="explode" from="Objects/Section2/Door" to="Objects/Section2" method="start"]
 [connection signal="finish" from="Objects/Section2/Door" to="Objects/Section2" method="start"]
 [connection signal="open" from="Objects/Section2/Door" to="Objects/Section2" method="prepare"]
 [connection signal="body_entered" from="Objects/Section2/finish_line" to="Objects/Section2" method="_on_finish_line_body_entered"]
 [connection signal="body_entered" from="Objects/Section2/DoorDestroyer" to="Objects/Section2/DoorDestroyer" method="_on_DoorDestroyer_body_entered"]
-[connection signal="disabled" from="Objects/Section3" to="Objects/Section3/Door" method="_on_Lock"]
-[connection signal="open_doors" from="Objects/Section3" to="Objects/Section3/RewardDoor" method="destroy"]
-[connection signal="open_doors" from="Objects/Section3" to="Objects/Section3/RewardDoor2" method="destroy"]
 [connection signal="explode" from="Objects/Section3/Door" to="Objects/Section3" method="start"]
 [connection signal="finish" from="Objects/Section3/Door" to="Objects/Section3" method="start"]
 [connection signal="open" from="Objects/Section3/Door" to="Objects/Section3" method="prepare"]

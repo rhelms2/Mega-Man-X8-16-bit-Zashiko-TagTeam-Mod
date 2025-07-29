@@ -1,0 +1,115 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Axl_mod/SFX/axl_bullet.ogg" type="AudioStream" id=1]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BulletAxl.gd" type="Script" id=2]
+[ext_resource path="res://Axl_mod/Player/Projectiles/bullet_despawn.png" type="Texture" id=3]
+[ext_resource path="res://src/Sounds/MEDIUM_SHOT2.wav" type="AudioStream" id=4]
+[ext_resource path="res://src/Effects/Basic Hit.tscn" type="PackedScene" id=5]
+[ext_resource path="res://SpriteEffect.gd" type="Script" id=6]
+[ext_resource path="res://src/Effects/Deflect/lemon_deflect.png" type="Texture" id=7]
+[ext_resource path="res://src/Effects/Materials/buster_icarus_particles.tres" type="Material" id=8]
+[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=9]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BulletAxl_despawn.tres" type="SpriteFrames" id=10]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BulletAxl_Start.png" type="Texture" id=11]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8.5, 4.5 )
+
+[node name="Axl Bullet" type="KinematicBody2D" groups=["Player Projectile"]]
+z_index = 6
+collision_layer = 4
+script = ExtResource( 2 )
+damage_to_weakness = 3.0
+horizontal_velocity = 280.0
+vertical_velocity = 280.0
+time_outside_screen = 0.6
+fire_sound = ExtResource( 1 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+frames = ExtResource( 10 )
+animation = "Tag"
+frame = 1
+playing = true
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -4.5, 0.5 )
+shape = SubResource( 1 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( -3, -2.98023e-07 )
+scale = Vector2( 1, 0.3 )
+
+[node name="particles2D" type="Particles2D" parent="."]
+visible = false
+position = Vector2( 10, 0 )
+amount = 4
+lifetime = 0.54
+local_coords = false
+process_material = ExtResource( 8 )
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
+stream = ExtResource( 4 )
+volume_db = 1.378
+pitch_scale = 1.08
+bus = "SFX"
+
+[node name="Start Particle" parent="." instance=ExtResource( 5 )]
+z_index = 1
+texture = ExtResource( 11 )
+vframes = 1
+animation_speed = 100.0
+vertical_flip_chance = 0.0
+
+[node name="disabler" type="Node" parent="Start Particle"]
+script = ExtResource( 9 )
+make_invisible = true
+fade_out = true
+delete_after_fade = true
+stop_emitting = true
+queue_free = true
+undo_on_rotation_end = false
+
+[node name="Hit Particle" parent="." instance=ExtResource( 5 )]
+z_index = 1
+texture = ExtResource( 3 )
+hframes = 3
+vframes = 1
+vertical_flip_chance = 0.0
+
+[node name="disabler" type="Node" parent="Hit Particle"]
+script = ExtResource( 9 )
+make_invisible = true
+fade_out = true
+delete_after_fade = true
+stop_emitting = true
+queue_free = true
+undo_on_rotation_end = false
+
+[node name="deflect_particle" type="Sprite" parent="."]
+visible = false
+z_index = 3
+z_as_relative = false
+texture = ExtResource( 7 )
+hframes = 3
+vframes = 2
+script = ExtResource( 6 )
+animation_speed = 32.0
+one_shot = true
+copy_rotation = true
+
+[node name="disabler" type="Node" parent="deflect_particle"]
+script = ExtResource( 9 )
+make_invisible = true
+fade_out = true
+delete_after_fade = true
+stop_emitting = true
+queue_free = true
+undo_on_rotation_end = false
+
+[node name="disabler" type="Node" parent="."]
+script = ExtResource( 9 )
+make_invisible = true
+fade_out = true
+delete_after_fade = true
+undo_on_rotation_end = false

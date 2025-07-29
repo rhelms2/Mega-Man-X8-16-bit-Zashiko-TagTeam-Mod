@@ -1,7 +1,7 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=38 format=2]
 
 [ext_resource path="res://addons/PaletteSwap/PaletteSwap.gdshader" type="Shader" id=1]
-[ext_resource path="res://src/Actors/charge_shader.tres" type="Shader" id=2]
+[ext_resource path="res://src/Actors/Player/charge_shader.tres" type="Shader" id=2]
 [ext_resource path="res://src/Levels/SigmaPalace/ElevatorPlatform.gd" type="Script" id=3]
 [ext_resource path="res://src/Levels/JakobElevator/ending_loop.png" type="Texture" id=4]
 [ext_resource path="res://src/Levels/JakobElevator/bg_earth.png" type="Texture" id=5]
@@ -12,7 +12,7 @@
 [ext_resource path="res://src/Levels/SigmaPalace/ElevatorWalls.gd" type="Script" id=10]
 [ext_resource path="res://src/Levels/SigmaPalace/Ending/BG.gd" type="Script" id=11]
 [ext_resource path="res://src/Levels/SigmaPalace/CreditsScene.gd" type="Script" id=12]
-[ext_resource path="res://src/WeaponGet/flash.png" type="Texture" id=13]
+[ext_resource path="res://src/WeaponGet/sprites/flash.png" type="Texture" id=13]
 [ext_resource path="res://src/Effects/Textures/simple_gradient2.png" type="Texture" id=14]
 [ext_resource path="res://src/Levels/music_player.gd" type="Script" id=15]
 [ext_resource path="res://src/Sounds/OST - MainTheme E-Capcom Remix.ogg" type="AudioStream" id=16]
@@ -28,10 +28,11 @@
 [ext_resource path="res://src/Title/title_megaman.png" type="Texture" id=26]
 [ext_resource path="res://src/Title/title_x8_06.png" type="Texture" id=27]
 [ext_resource path="res://src/Effects/Textures/simple_gradient4.png" type="Texture" id=28]
-[ext_resource path="res://src/Levels/NoahsPark/VisuaSkip.gd" type="Script" id=29]
-[ext_resource path="res://src/Effects/Textures/skip_icon.png" type="Texture" id=30]
-[ext_resource path="res://src/Effects/Textures/skip_circle.png" type="Texture" id=31]
-[ext_resource path="res://src/Levels/SigmaPalace/SkipEnding.gd" type="Script" id=32]
+[ext_resource path="res://src/Fonts/X8bitmapfont_0.png" type="Texture" id=30]
+[ext_resource path="res://Axl_mod/Player/Sprites/axl.tres" type="SpriteFrames" id=32]
+[ext_resource path="res://Zero_mod/Sprites/zero.tres" type="SpriteFrames" id=33]
+[ext_resource path="res://Zero_mod/Sprites/Zero_Material_Shader.tres" type="Material" id=34]
+[ext_resource path="res://Axl_mod/Player/Axl_Material_Shader.tres" type="Material" id=35]
 
 [sub_resource type="ShaderMaterial" id=1]
 resource_local_to_scene = true
@@ -68,6 +69,18 @@ shader_param/use_palette_alpha = false
 shader_param/fps = 7.0
 shader_param/palette = ExtResource( 6 )
 
+[sub_resource type="BitmapFont" id=3]
+resource_name = "MEGAMANX8newfont"
+textures = [ ExtResource( 30 ) ]
+chars = PoolIntArray( 224, 0, 105, 39, 6, 13, 0, 0, 7, 96, 0, 62, 52, 3, 13, 0, 0, 4, 64, 0, 42, 0, 7, 13, 0, 0, 8, 32, 0, 66, 52, 3, 13, -1, 0, 5, 160, 0, 54, 52, 3, 13, -1, 0, 5, 192, 0, 182, 26, 6, 13, 0, 0, 7, 225, 0, 112, 39, 6, 13, 0, 0, 7, 65, 0, 112, 13, 6, 13, 0, 0, 7, 33, 0, 70, 52, 2, 13, 1, 0, 4, 97, 0, 126, 26, 6, 13, 0, 0, 7, 161, 0, 154, 26, 6, 13, 1, 0, 8, 193, 0, 189, 26, 6, 13, 0, 0, 7, 226, 0, 119, 39, 6, 13, 0, 0, 7, 66, 0, 119, 13, 6, 13, 0, 0, 7, 34, 0, 252, 13, 3, 13, 0, 0, 4, 98, 0, 28, 26, 6, 13, 0, 0, 7, 162, 0, 205, 39, 5, 13, 0, 0, 6, 194, 0, 196, 26, 6, 13, 0, 0, 7, 227, 0, 126, 39, 6, 13, 0, 0, 7, 67, 0, 126, 13, 6, 13, 0, 0, 7, 35, 0, 248, 0, 6, 13, 0, 0, 7, 99, 0, 35, 26, 6, 13, 0, 0, 7, 163, 0, 161, 26, 6, 13, 0, 0, 7, 195, 0, 203, 26, 6, 13, 0, 0, 7, 228, 0, 133, 39, 6, 13, 0, 0, 7, 68, 0, 133, 13, 6, 13, 0, 0, 7, 36, 0, 0, 13, 6, 13, 0, 0, 7, 100, 0, 42, 26, 6, 13, 0, 0, 7, 196, 0, 210, 26, 6, 13, 0, 0, 7, 229, 0, 140, 39, 6, 13, 0, 0, 7, 69, 0, 140, 13, 6, 13, 0, 0, 7, 37, 0, 50, 0, 7, 13, 0, 0, 8, 101, 0, 49, 26, 6, 13, 0, 0, 7, 197, 0, 217, 26, 6, 13, 0, 0, 7, 230, 0, 0, 0, 8, 13, 0, 0, 9, 70, 0, 147, 13, 6, 13, 0, 0, 7, 38, 0, 7, 13, 6, 13, 0, 0, 7, 102, 0, 223, 39, 5, 13, 0, 0, 6, 166, 0, 105, 52, 1, 13, 0, 0, 2, 198, 0, 82, 0, 7, 13, 0, 0, 8, 231, 0, 147, 39, 6, 13, 0, 0, 7, 71, 0, 154, 13, 6, 13, 0, 0, 7, 39, 0, 73, 52, 2, 13, 0, 0, 3, 103, 0, 56, 26, 6, 13, 0, 0, 7, 199, 0, 224, 26, 6, 13, 0, 0, 7, 232, 0, 154, 39, 6, 13, 0, 0, 7, 72, 0, 161, 13, 6, 13, 0, 0, 7, 40, 0, 252, 26, 3, 13, 0, 0, 4, 104, 0, 63, 26, 6, 13, 0, 0, 7, 168, 0, 217, 39, 5, 13, 0, 0, 6, 200, 0, 231, 26, 6, 13, 0, 0, 7, 233, 0, 161, 39, 6, 13, 0, 0, 7, 73, 0, 15, 52, 4, 13, 0, 0, 5, 41, 0, 50, 52, 3, 13, 0, 0, 4, 105, 0, 88, 52, 2, 13, 0, 0, 3, 169, 0, 26, 0, 7, 13, 0, 0, 8, 201, 0, 238, 26, 6, 13, 0, 0, 7, 234, 0, 168, 39, 6, 13, 0, 0, 7, 74, 0, 70, 13, 6, 13, 0, 0, 7, 42, 0, 90, 0, 7, 13, 0, 0, 8, 106, 0, 70, 26, 6, 13, 0, 0, 7, 202, 0, 245, 26, 6, 13, 0, 0, 7, 235, 0, 234, 0, 6, 13, 0, 0, 7, 75, 0, 175, 13, 6, 13, 0, 0, 7, 43, 0, 98, 0, 7, 13, 0, 0, 8, 107, 0, 77, 26, 6, 13, 0, 0, 7, 171, 0, 114, 0, 7, 13, 0, 0, 8, 203, 0, 0, 39, 6, 13, 0, 0, 7, 236, 0, 76, 52, 2, 13, 0, 0, 3, 76, 0, 182, 13, 6, 13, 0, 0, 7, 44, 0, 97, 52, 2, 13, 0, 0, 3, 108, 0, 85, 52, 2, 13, 0, 0, 3, 204, 0, 20, 52, 4, 13, 0, 0, 5, 237, 0, 79, 52, 2, 13, 0, 0, 3, 77, 0, 226, 0, 7, 13, 0, 0, 8, 45, 0, 42, 13, 6, 13, 0, 0, 7, 109, 0, 9, 0, 8, 13, 0, 0, 9, 205, 0, 25, 52, 4, 13, 0, 0, 5, 238, 0, 35, 52, 4, 13, 0, 0, 5, 78, 0, 189, 13, 6, 13, 0, 0, 7, 46, 0, 82, 52, 2, 13, 0, 0, 3, 110, 0, 84, 26, 6, 13, 0, 0, 7, 174, 0, 218, 0, 7, 13, 0, 0, 8, 206, 0, 240, 39, 4, 13, 0, 0, 5, 239, 0, 245, 39, 4, 13, 0, 0, 5, 79, 0, 196, 13, 6, 13, 0, 0, 7, 47, 0, 56, 13, 6, 13, 0, 0, 7, 111, 0, 91, 26, 6, 13, 0, 0, 7, 207, 0, 250, 39, 4, 13, 0, 0, 5, 240, 0, 241, 0, 6, 13, 0, 0, 7, 80, 0, 203, 13, 6, 13, 0, 0, 7, 48, 0, 130, 0, 7, 13, 0, 0, 8, 112, 0, 98, 26, 6, 13, 0, 0, 7, 176, 0, 58, 52, 3, 13, 0, 0, 4, 208, 0, 66, 0, 7, 13, 0, 0, 8, 241, 0, 14, 13, 6, 13, 0, 0, 7, 81, 0, 210, 13, 6, 13, 0, 0, 7, 49, 0, 0, 52, 4, 13, 1, 0, 6, 113, 0, 105, 26, 6, 13, 0, 0, 7, 177, 0, 181, 39, 5, 13, 0, 0, 6, 209, 0, 7, 39, 6, 13, 0, 0, 7, 242, 0, 21, 13, 6, 13, 0, 0, 7, 82, 0, 217, 13, 6, 13, 0, 0, 7, 50, 0, 146, 0, 7, 13, 0, 0, 8, 114, 0, 193, 39, 5, 13, 0, 0, 6, 210, 0, 14, 39, 6, 13, 0, 0, 7, 243, 0, 28, 13, 6, 13, 0, 0, 7, 83, 0, 224, 13, 6, 13, 0, 0, 7, 51, 0, 154, 0, 7, 13, 0, 0, 8, 115, 0, 112, 26, 6, 13, 0, 0, 7, 211, 0, 21, 39, 6, 13, 0, 0, 7, 244, 0, 35, 13, 6, 13, 0, 0, 7, 212, 0, 28, 39, 6, 13, 0, 0, 7, 84, 0, 231, 13, 6, 13, 0, 0, 7, 52, 0, 162, 0, 7, 13, 0, 0, 8, 116, 0, 199, 39, 5, 13, 0, 0, 6, 245, 0, 49, 13, 6, 13, 0, 0, 7, 213, 0, 35, 39, 6, 13, 0, 0, 7, 85, 0, 238, 13, 6, 13, 0, 0, 7, 53, 0, 18, 0, 7, 13, 0, 0, 8, 117, 0, 119, 26, 6, 13, 0, 0, 7, 246, 0, 63, 13, 6, 13, 0, 0, 7, 214, 0, 42, 39, 6, 13, 0, 0, 7, 86, 0, 245, 13, 6, 13, 0, 0, 7, 54, 0, 178, 0, 7, 13, 0, 0, 8, 118, 0, 168, 26, 6, 13, 0, 0, 7, 247, 0, 211, 39, 5, 13, 0, 0, 6, 215, 0, 49, 39, 6, 13, 0, 0, 7, 87, 0, 122, 0, 7, 13, 0, 0, 8, 55, 0, 186, 0, 7, 13, 0, 0, 8, 119, 0, 210, 0, 7, 13, 0, 0, 8, 183, 0, 100, 52, 2, 13, 0, 0, 3, 248, 0, 77, 13, 6, 13, 0, 0, 7, 216, 0, 56, 39, 6, 13, 0, 0, 7, 88, 0, 0, 26, 6, 13, 0, 0, 7, 56, 0, 194, 0, 7, 13, 0, 0, 8, 120, 0, 133, 26, 6, 13, 0, 0, 7, 249, 0, 84, 13, 6, 13, 0, 0, 7, 217, 0, 63, 39, 6, 13, 0, 0, 7, 89, 0, 7, 26, 6, 13, 0, 0, 7, 57, 0, 202, 0, 7, 13, 0, 0, 8, 121, 0, 140, 26, 6, 13, 0, 0, 7, 250, 0, 91, 13, 6, 13, 0, 0, 7, 218, 0, 70, 39, 6, 13, 0, 0, 7, 90, 0, 14, 26, 6, 13, 0, 0, 7, 58, 0, 91, 52, 2, 13, 0, 0, 3, 122, 0, 147, 26, 6, 13, 0, 0, 7, 251, 0, 98, 13, 6, 13, 0, 0, 7, 219, 0, 77, 39, 6, 13, 0, 0, 7, 91, 0, 5, 52, 4, 13, 0, 0, 5, 59, 0, 94, 52, 2, 13, 0, 0, 3, 123, 0, 40, 52, 4, 13, 0, 0, 5, 187, 0, 106, 0, 7, 13, 0, 0, 8, 252, 0, 105, 13, 6, 13, 0, 0, 7, 220, 0, 84, 39, 6, 13, 0, 0, 7, 92, 0, 21, 26, 6, 13, 0, 0, 7, 60, 0, 235, 39, 4, 13, 0, 0, 5, 124, 0, 103, 52, 1, 13, 0, 0, 2, 253, 0, 170, 0, 7, 13, 0, 0, 8, 221, 0, 91, 39, 6, 13, 0, 0, 7, 93, 0, 45, 52, 4, 13, 0, 0, 5, 61, 0, 187, 39, 5, 13, 0, 0, 6, 125, 0, 30, 52, 4, 13, 0, 0, 5, 254, 0, 229, 39, 5, 13, 1, 0, 7, 222, 0, 98, 39, 6, 13, 0, 0, 7, 94, 0, 175, 39, 5, 13, 0, 0, 6, 62, 0, 10, 52, 4, 13, 0, 0, 5, 126, 0, 138, 0, 7, 13, 0, 0, 8, 255, 0, 168, 13, 6, 13, 0, 0, 7, 223, 0, 58, 0, 7, 13, 0, 0, 8, 95, 0, 74, 0, 7, 13, 0, 0, 8, 63, 0, 34, 0, 7, 13, 0, 0, 8, 191, 0, 175, 26, 6, 13, 0, 0, 7 )
+height = 11.0
+ascent = 11.0
+
+[sub_resource type="BitmapFont" id=4]
+height = 11.0
+ascent = 11.0
+fallback = SubResource( 3 )
+
 [node name="CreditsScene" type="Node2D"]
 script = ExtResource( 12 )
 song = ExtResource( 16 )
@@ -81,11 +94,30 @@ script = ExtResource( 3 )
 
 [node name="X" type="AnimatedSprite" parent="Visuals/ElevatorPlatform"]
 material = SubResource( 1 )
-position = Vector2( 26, -30 )
+position = Vector2( 46, -30 )
 z_index = 1
 frames = ExtResource( 9 )
 animation = "idle"
-frame = 25
+frame = 32
+playing = true
+flip_h = true
+
+[node name="Axl" type="AnimatedSprite" parent="Visuals/ElevatorPlatform"]
+material = ExtResource( 35 )
+position = Vector2( -4, -31 )
+z_index = 1
+frames = ExtResource( 32 )
+animation = "idle"
+frame = 26
+playing = true
+flip_h = true
+
+[node name="Zero" type="AnimatedSprite" parent="Visuals/ElevatorPlatform"]
+material = ExtResource( 34 )
+position = Vector2( -53, -31 )
+z_index = 1
+frames = ExtResource( 33 )
+animation = "idle"
 playing = true
 flip_h = true
 
@@ -125,12 +157,12 @@ z_as_relative = false
 
 [node name="megaman" type="Sprite" parent="Credits"]
 visible = false
-position = Vector2( -62, 0 )
+position = Vector2( -60, 119 )
 texture = ExtResource( 26 )
 
 [node name="x8" type="Sprite" parent="Credits"]
 visible = false
-position = Vector2( 39, -2 )
+position = Vector2( 41, 117 )
 texture = ExtResource( 27 )
 
 [node name="richTextLabel" type="RichTextLabel" parent="Credits"]
@@ -139,9 +171,8 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -123.0
-margin_top = 257.0
 margin_right = 123.0
-margin_bottom = 1541.0
+margin_bottom = 6059.0
 custom_colors/font_color_shadow = Color( 0.105882, 0, 0.54902, 0.486275 )
 custom_fonts/normal_font = ExtResource( 25 )
 bbcode_enabled = true
@@ -158,8 +189,6 @@ bbcode_text = "[center]Mega Man X8
 
 [color=#47a1fc]A fangame by[/color]
 Alysson da Paz
-
-
 
 
 
@@ -219,8 +248,8 @@ HeaxDePolo
 ZafersanToksoz
 QuartoDoDu
 KaneTV
-JulinhoRockman
 itzBruHere
+JulinhoRockman
 OlimTR
 CalebHart42
 Nostalgia_Games_BR
@@ -242,6 +271,53 @@ Speedrunning Community![/color]
 
 
 
+[color=#47a1fc]Modded by[/color]
+Zashiko
+
+[color=#47a1fc]Decompiled by[/color]
+pirate
+
+[color=#47a1fc]Rewritten by[/color]
+Tchy
+
+[color=#47a1fc]Special Thanks to[/color]
+zKazuno
+Cwolfcommander
+Olim TR
+JahovasFitness
+Benja
+Kliver
+Shaudo
+Layson
+Bulko
+Shujin
+jacknielAF
+Samugamer20XX
+Mint (elevenmintssf2)
+caioviskimartinsoviski
+Daymon
+Dreams
+MigatteZ
+Thanos
+Guilhé
+ZytteX
+Xiyarent
+Smbai
+ColeManX
+Ayoubii
+Bando
+TetrisGuy
+MetalX250
+StaRG
+Tchy
+Kohiiiiro
+Kaegrin
+RubenO.S
+Gacel
+The whole MMX Engine Team
+
+[color=#47a1fc]Thank you for your support[/color]
+
 
 
 
@@ -251,6 +327,322 @@ MEGAMAN X8
 Paradise Lost
 
 By CAPCOM
+[/center]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[center][color=#47a1fc]Original Megaman X8 Staff[/color]
+
+[color=#47a1fc]Director[/color]
+Eiro Shirahama
+
+[color=#47a1fc]Executive Producer[/color]
+Tatsuya Minami
+
+[color=#47a1fc]Line Producer[/color]
+Tatsuya Kitabayashi
+
+[color=#47a1fc]Main Game Designer[/color]
+Hiroyuki Yamato
+
+[color=#47a1fc]Game Designers[/color]
+Shino Okamura
+Yuji Hayakawa
+Junhiro Nishiyama
+
+[color=#47a1fc]Scenario Writers[/color]
+Makoto Ikehara
+Kosuke Nasu
+
+[color=#47a1fc]Visual Director
+and Character Design[/color]
+Tatsuya Yoshikawa
+
+[color=#47a1fc]Lead Character Design 
+and Animators[/color]
+Katsumi Toda
+Tetsuya Enomoto
+Tomokazu Kadoue
+
+[color=#47a1fc]Character Design
+ and Animators[/color]
+Koujirou Ogiwara
+Tetsuji Shimazu
+Hirochika Nagaki
+
+[color=#47a1fc]Background Concept
+Art Designer[/color]
+Shigenori Kiwata
+
+[color=#47a1fc]Lead Background
+Designer[/color]
+Satoshi Ueda
+
+[color=#47a1fc]Background Design[/color]
+Naomi Goto
+Yasuaki Kishimoto
+Tomomi Fujiwara
+Daisuke Taneda
+
+[color=#47a1fc]Visual Effects Design[/color]
+Megumi Doi
+Junichirou Ogawa
+Keisuke Ando
+
+[color=#47a1fc]2D Object Design[/color]
+Miho Kobayashi
+Hayato Konishi
+
+[color=#47a1fc]Technical Program Support[/color]
+Keiji Kubori
+
+[color=#47a1fc]Sound Composers[/color]
+Yuko Komiyama
+Shinya Okada
+
+[color=#47a1fc]Sound Effects Design[/color]
+Gaku Komura
+Yoshiki Sando
+Atsuko Fujitani
+
+[color=#47a1fc]Sound Technical Support[/color]
+Tomohiro Masuda
+Shigenobu Komori
+
+[color=#47a1fc]Promotional Video Editors[/color]
+Yoshimi Zaima
+Yukiko Sasaki
+
+[color=#47a1fc]Title Logo Design[/color]
+Satoshi Ukai
+
+[color=#47a1fc]Manual Design[/color]
+Yumiko Uchida
+
+[color=#47a1fc]Publicity[/color]
+Norikazu Fujikawa
+Kazuo Chouya
+Hiroko Nakamura
+
+[color=#47a1fc]Sales[/color]
+Tsuyoshi Kanda
+Yasuhiro Kobayashi
+
+[color=#47a1fc]Marketing[/color]
+Yuji Ito
+
+[color=#47a1fc]Promotion[/color]
+Asuka Hayashi
+
+[color=#47a1fc]Publishing Team 
+Suleputer Label[/color]
+Mareo Yamada
+
+[color=#47a1fc]Merchandising Team[/color]
+Kenichi Tanaka
+
+[color=#47a1fc]Localization[/color]
+Ben Judd
+David Crislip
+
+[color=#47a1fc]International Business Departament[/color]
+Masayuki Fukumoto
+Noriko Katou
+
+[color=#47a1fc]Public Relations[/color]
+Melinda Mongelluzzo
+Alicia Kim
+
+[color=#47a1fc]Marketing[/color]
+Todd Thorson
+Bonnie Scott
+
+[color=#47a1fc]Project Management[/color]
+Robert Johnson
+Nathan Williams
+Rey Jimenez
+
+[color=#47a1fc]Rockman Club[/color]
+Takahiro Tokuda
+Masahiro Ikegawa
+Chikahiro Kawanishi
+Toshio Kou
+Hirokazu Teranishi
+
+[color=#47a1fc]Testers[/color]
+Naoki Kamura
+Shoji Araki
+Tetsunori Matsuoka
+Masaki Tsujioka
+Takeshi Kawasaki
+Keita Nakajima
+Yusuke Nakazawa
+Ken Sasaki
+Teruhisa Watanabe
+Shintaro Okada
+Shinnosuke Kontani
+Arisa Hisakuni
+
+[color=#47a1fc]Value Wave[/color]
+
+[color=#47a1fc]Main Programmer[/color]
+Soutarou Arakawa
+
+[color=#47a1fc]Programmers[/color]
+Yoshinobu Yasuhara
+Kazuteru Sonoyama
+Hiroshi Niki
+Kazuya Shinmoto
+Masaru Ueno
+Daisuke Kaneko
+
+[color=#47a1fc]Technical Visual Director[/color]
+Katsumi Kawagoe
+
+[color=#47a1fc]Game Planner[/color]
+Naotake Aboshi
+
+[color=#47a1fc]Sound Composer[/color]
+Naoto Tanaka
+
+[color=#47a1fc]ProSoft[/color]
+
+[color=#47a1fc]Boss Programmers[/color]
+Jun Yoshioka
+Koji Uehara
+Yukitoshi Tsuzuki
+
+[color=#47a1fc]Digital Zero[/color]
+
+[color=#47a1fc]Technical Visual Director[/color]
+Shinji Nariai
+
+[color=#47a1fc]Lead Background Designer[/color]
+Jun Takeda
+
+[color=#47a1fc]Background Design[/color]
+Yoshitaka Yamano
+Ryo Katori
+Hideyuki Takagi
+Makoto Kayano
+Yoshimi Nakamura
+Takayuki Kakubari
+Takahiro Komatsu
+Kazuma Yamagishi
+Nobuyuki Toshimitsu
+Toshiya Arai
+Takuya Matsuda
+Shigeo Tamura
+Yusuke Sakairi
+
+[color=#47a1fc]Lead Animator[/color]
+Kazuhisa Tomita
+
+[color=#47a1fc]Animators[/color]
+Keiichirou Kusanagi
+Takashi Hashimoto
+Kamikaze Douga
+
+[color=#47a1fc]Animation Director[/color]
+Toshihisa Yokoshima
+
+[color=#47a1fc]Art Director[/color]
+Rie Suzuki
+
+[color=#47a1fc]Technical Director[/color]
+Junpei Mizusaki
+
+[color=#47a1fc]Character Animation[/color]
+Takanobu Mizuno
+Kodai Sato
+
+[color=#47a1fc]Character Modeling[/color]
+Junko Nakada
+Masami Tanzi
+Yukiko Hirokawa
+Hitoshi Oguri
+Shinichi Eguchi
+
+[color=#47a1fc]Voice Actors[/color]
+Mark Gatha
+Lucas Gilbertson
+Jeffrey Watson
+Elionor Holt
+Dave Pettitt
+Mariette Sluyter
+Meredith Taylor-Parry
+Chris Simms
+Roger Rhodes
+Jonathan Love
+Randall Wiebe
+Tommy James
+
+[color=#47a1fc]Produced in association with
+The Ocean Group - Canada[/color]
+
+[color=#47a1fc]Production Manager[/color]
+Diana Gage
+
+[color=#47a1fc]Production Coordinator[/color]
+Dennis Hrehoriac
+
+[color=#47a1fc]Voice Directors[/color]
+James Corrigall
+Karl Willems
+
+[color=#47a1fc]Recording Engineers[/color]
+Brad Belden
+Ryan Manning
+
+[color=#47a1fc]Assistant Engineers[/color]
+Cam Desmond
+Jonathan Nostrud
+
+[color=#47a1fc]Recorded At
+Blue Waters Studios[/color]
+
+[color=#47a1fc]Special Thanks[/color]
+Keiji Inafune
+Kimio Yamazoe
+Ayatomo Tanimoto
+Setsuo Yamamoto
+Yoshito Ito
+Yasuyuki Tsujino
+Masako Honma
+Kazuki Matsue
+Masaki Moritsugu
+Sawako Yamamoto
+Akio Watanabe
+Toshiji Hazumi
+Yuki Kawaguchi
+
+
+and CAPCOM All Staff!
+
+
+
+
+
+
+
+
+
+
+
+
+
+Thanks for Playing!
 [/center]"
 text = "Mega Man X8
 16-bit
@@ -265,8 +657,6 @@ text = "Mega Man X8
 
 A fangame by
 Alysson da Paz
-
-
 
 
 
@@ -326,8 +716,8 @@ HeaxDePolo
 ZafersanToksoz
 QuartoDoDu
 KaneTV
-JulinhoRockman
 itzBruHere
+JulinhoRockman
 OlimTR
 CalebHart42
 Nostalgia_Games_BR
@@ -349,6 +739,53 @@ Speedrunning Community!
 
 
 
+Modded by
+Zashiko
+
+Decompiled by
+pirate
+
+Rewritten by
+Tchy
+
+Special Thanks to
+zKazuno
+Cwolfcommander
+Olim TR
+JahovasFitness
+Benja
+Kliver
+Shaudo
+Layson
+Bulko
+Shujin
+jacknielAF
+Samugamer20XX
+Mint (elevenmintssf2)
+caioviskimartinsoviski
+Daymon
+Dreams
+MigatteZ
+Thanos
+Guilhé
+ZytteX
+Xiyarent
+Smbai
+ColeManX
+Ayoubii
+Bando
+TetrisGuy
+MetalX250
+StaRG
+Tchy
+Kohiiiiro
+Kaegrin
+RubenO.S
+Gacel
+The whole MMX Engine Team
+
+Thank you for your support
+
 
 
 
@@ -358,17 +795,334 @@ MEGAMAN X8
 Paradise Lost
 
 By CAPCOM
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Original Megaman X8 Staff
+
+Director
+Eiro Shirahama
+
+Executive Producer
+Tatsuya Minami
+
+Line Producer
+Tatsuya Kitabayashi
+
+Main Game Designer
+Hiroyuki Yamato
+
+Game Designers
+Shino Okamura
+Yuji Hayakawa
+Junhiro Nishiyama
+
+Scenario Writers
+Makoto Ikehara
+Kosuke Nasu
+
+Visual Director
+and Character Design
+Tatsuya Yoshikawa
+
+Lead Character Design 
+and Animators
+Katsumi Toda
+Tetsuya Enomoto
+Tomokazu Kadoue
+
+Character Design
+ and Animators
+Koujirou Ogiwara
+Tetsuji Shimazu
+Hirochika Nagaki
+
+Background Concept
+Art Designer
+Shigenori Kiwata
+
+Lead Background
+Designer
+Satoshi Ueda
+
+Background Design
+Naomi Goto
+Yasuaki Kishimoto
+Tomomi Fujiwara
+Daisuke Taneda
+
+Visual Effects Design
+Megumi Doi
+Junichirou Ogawa
+Keisuke Ando
+
+2D Object Design
+Miho Kobayashi
+Hayato Konishi
+
+Technical Program Support
+Keiji Kubori
+
+Sound Composers
+Yuko Komiyama
+Shinya Okada
+
+Sound Effects Design
+Gaku Komura
+Yoshiki Sando
+Atsuko Fujitani
+
+Sound Technical Support
+Tomohiro Masuda
+Shigenobu Komori
+
+Promotional Video Editors
+Yoshimi Zaima
+Yukiko Sasaki
+
+Title Logo Design
+Satoshi Ukai
+
+Manual Design
+Yumiko Uchida
+
+Publicity
+Norikazu Fujikawa
+Kazuo Chouya
+Hiroko Nakamura
+
+Sales
+Tsuyoshi Kanda
+Yasuhiro Kobayashi
+
+Marketing
+Yuji Ito
+
+Promotion
+Asuka Hayashi
+
+Publishing Team 
+Suleputer Label
+Mareo Yamada
+
+Merchandising Team
+Kenichi Tanaka
+
+Localization
+Ben Judd
+David Crislip
+
+International Business Departament
+Masayuki Fukumoto
+Noriko Katou
+
+Public Relations
+Melinda Mongelluzzo
+Alicia Kim
+
+Marketing
+Todd Thorson
+Bonnie Scott
+
+Project Management
+Robert Johnson
+Nathan Williams
+Rey Jimenez
+
+Rockman Club
+Takahiro Tokuda
+Masahiro Ikegawa
+Chikahiro Kawanishi
+Toshio Kou
+Hirokazu Teranishi
+
+Testers
+Naoki Kamura
+Shoji Araki
+Tetsunori Matsuoka
+Masaki Tsujioka
+Takeshi Kawasaki
+Keita Nakajima
+Yusuke Nakazawa
+Ken Sasaki
+Teruhisa Watanabe
+Shintaro Okada
+Shinnosuke Kontani
+Arisa Hisakuni
+
+Value Wave
+
+Main Programmer
+Soutarou Arakawa
+
+Programmers
+Yoshinobu Yasuhara
+Kazuteru Sonoyama
+Hiroshi Niki
+Kazuya Shinmoto
+Masaru Ueno
+Daisuke Kaneko
+
+Technical Visual Director
+Katsumi Kawagoe
+
+Game Planner
+Naotake Aboshi
+
+Sound Composer
+Naoto Tanaka
+
+ProSoft
+
+Boss Programmers
+Jun Yoshioka
+Koji Uehara
+Yukitoshi Tsuzuki
+
+Digital Zero
+
+Technical Visual Director
+Shinji Nariai
+
+Lead Background Designer
+Jun Takeda
+
+Background Design
+Yoshitaka Yamano
+Ryo Katori
+Hideyuki Takagi
+Makoto Kayano
+Yoshimi Nakamura
+Takayuki Kakubari
+Takahiro Komatsu
+Kazuma Yamagishi
+Nobuyuki Toshimitsu
+Toshiya Arai
+Takuya Matsuda
+Shigeo Tamura
+Yusuke Sakairi
+
+Lead Animator
+Kazuhisa Tomita
+
+Animators
+Keiichirou Kusanagi
+Takashi Hashimoto
+Kamikaze Douga
+
+Animation Director
+Toshihisa Yokoshima
+
+Art Director
+Rie Suzuki
+
+Technical Director
+Junpei Mizusaki
+
+Character Animation
+Takanobu Mizuno
+Kodai Sato
+
+Character Modeling
+Junko Nakada
+Masami Tanzi
+Yukiko Hirokawa
+Hitoshi Oguri
+Shinichi Eguchi
+
+Voice Actors
+Mark Gatha
+Lucas Gilbertson
+Jeffrey Watson
+Elionor Holt
+Dave Pettitt
+Mariette Sluyter
+Meredith Taylor-Parry
+Chris Simms
+Roger Rhodes
+Jonathan Love
+Randall Wiebe
+Tommy James
+
+Produced in association with
+The Ocean Group - Canada
+
+Production Manager
+Diana Gage
+
+Production Coordinator
+Dennis Hrehoriac
+
+Voice Directors
+James Corrigall
+Karl Willems
+
+Recording Engineers
+Brad Belden
+Ryan Manning
+
+Assistant Engineers
+Cam Desmond
+Jonathan Nostrud
+
+Recorded At
+Blue Waters Studios
+
+Special Thanks
+Keiji Inafune
+Kimio Yamazoe
+Ayatomo Tanimoto
+Setsuo Yamamoto
+Yoshito Ito
+Yasuyuki Tsujino
+Masako Honma
+Kazuki Matsue
+Masaki Moritsugu
+Sawako Yamamoto
+Akio Watanabe
+Toshiji Hazumi
+Yuki Kawaguchi
+
+
+and CAPCOM All Staff!
+
+
+
+
+
+
+
+
+
+
+
+
+
+Thanks for Playing!
 "
 
 [node name="richTextLabel2" type="RichTextLabel" parent="Credits"]
+visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -106.0
-margin_top = 1546.0
-margin_right = 106.0
-margin_bottom = 5218.0
+margin_left = -123.0
+margin_top = 1967.0
+margin_right = 123.0
+margin_bottom = 5639.0
 custom_colors/font_color_shadow = Color( 0.105882, 0, 0.54902, 0.486275 )
 custom_fonts/normal_font = ExtResource( 25 )
 bbcode_enabled = true
@@ -1106,26 +1860,101 @@ scale = Vector2( 100, 100 )
 z_index = 1000
 texture = ExtResource( 23 )
 
-[node name="Skipper" type="CanvasLayer" parent="."]
-layer = 0
-script = ExtResource( 32 )
+[node name="FinalTime" type="ColorRect" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_right = 74.0
+margin_bottom = 17.0
+color = Color( 0, 0, 0, 0.501961 )
 
-[node name="VisualSkip" type="Control" parent="Skipper"]
-margin_left = 363.0
-margin_top = 189.0
-margin_right = 395.0
-margin_bottom = 221.0
-script = ExtResource( 29 )
+[node name="RTAContainer" type="VBoxContainer" parent="FinalTime"]
+visible = false
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -74.0
+margin_top = -2.0
+margin_right = 8.0
+margin_bottom = 9.0
+rect_scale = Vector2( 0.9, 0.9 )
 
-[node name="textureProgress" type="TextureProgress" parent="Skipper/VisualSkip"]
-margin_right = 40.0
-margin_bottom = 40.0
-max_value = 200.0
-value = 200.0
-texture_progress = ExtResource( 31 )
-fill_mode = 4
+[node name="TotalTime" type="Label" parent="FinalTime/RTAContainer"]
+margin_right = 82.0
+margin_bottom = 11.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 25 )
+text = "FINAL RTA"
+align = 1
+autowrap = true
 
-[node name="textureRect" type="TextureRect" parent="Skipper/VisualSkip"]
-margin_right = 40.0
-margin_bottom = 40.0
-texture = ExtResource( 30 )
+[node name="RTADisplay" type="VBoxContainer" parent="FinalTime"]
+visible = false
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -74.0
+margin_top = -4.0
+margin_right = 32.0
+margin_bottom = 21.0
+rect_scale = Vector2( 0.7, 0.7 )
+custom_constants/separation = 0
+
+[node name="label" type="Label" parent="FinalTime/RTADisplay"]
+margin_right = 106.0
+margin_bottom = 14.0
+
+[node name="Time" type="Label" parent="FinalTime/RTADisplay"]
+margin_top = 14.0
+margin_right = 106.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 75, 11 )
+size_flags_vertical = 5
+custom_fonts/font = SubResource( 4 )
+text = "HH:MM:SS.MS"
+align = 1
+valign = 2
+autowrap = true
+clip_text = true
+
+[node name="IGTContainer" type="VBoxContainer" parent="FinalTime"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -74.0
+margin_top = -2.0
+margin_right = 8.0
+margin_bottom = 23.0
+rect_scale = Vector2( 0.9, 0.9 )
+
+[node name="TotalTime" type="Label" parent="FinalTime/IGTContainer"]
+margin_right = 82.0
+margin_bottom = 11.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 25 )
+text = "FINAL IGT"
+align = 1
+autowrap = true
+
+[node name="IGTDisplay" type="VBoxContainer" parent="FinalTime"]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -74.0
+margin_top = -2.0
+margin_right = 32.0
+margin_bottom = 23.0
+rect_scale = Vector2( 0.7, 0.7 )
+custom_constants/separation = 0
+
+[node name="label" type="Label" parent="FinalTime/IGTDisplay"]
+margin_right = 106.0
+margin_bottom = 14.0
+
+[node name="Time" type="Label" parent="FinalTime/IGTDisplay"]
+margin_top = 14.0
+margin_right = 106.0
+margin_bottom = 25.0
+rect_min_size = Vector2( 75, 11 )
+size_flags_vertical = 5
+custom_fonts/font = SubResource( 4 )
+text = "HH:MM:SS.MS"
+align = 1
+valign = 2
+autowrap = true
+clip_text = true

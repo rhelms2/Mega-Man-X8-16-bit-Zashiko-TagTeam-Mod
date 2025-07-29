@@ -1,6 +1,6 @@
 [gd_resource type="Resource" load_steps=4 format=2]
 
-[ext_resource path="res://src/BossIntro/StageInfo.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Bosses/BossIntro/StageInfo.gd" type="Script" id=1]
 [ext_resource path="res://src/Actors/Bosses/GravityAntonion/antonion.res" type="SpriteFrames" id=2]
 [ext_resource path="res://src/StageSelect/preview/stage_2.png" type="Texture" id=3]
 
@@ -11,7 +11,7 @@ beaten_condition = [  ]
 pointer_position = Vector2( -31, 288 )
 should_play_intro = true
 name_id = "ANTONION"
-collectibles = [ "antonion_weapon", "icarus_head", "life_up_antonion", "defeated_antonion_vile" ]
+collectibles = [ "antonion_weapon", "icarus_head", "life_up_antonion", "defeated_antonion_vile", "t_breaker_zero" ]
 preview = ExtResource( 3 )
 sprite_frames = ExtResource( 2 )
 animation_beats = [ "idle", "rage", "summon_prepare", "summon_start" ]

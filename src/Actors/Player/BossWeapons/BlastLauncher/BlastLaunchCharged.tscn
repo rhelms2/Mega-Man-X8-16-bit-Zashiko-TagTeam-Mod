@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://src/Actors/Player/BossWeapons/BlastLauncher/IntenseExplosion.tscn" type="PackedScene" id=1]
-[ext_resource path="res://src/Actors/Player/BossWeapons/BlastLauncher/BlastLaunchCharged.gd" type="Script" id=2]
-[ext_resource path="res://src/Actors/Player/BossWeapons/BlastLauncher/blast_launcher.res" type="SpriteFrames" id=3]
-[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=4]
-[ext_resource path="res://src/Actors/Player/BossWeapons/BlastLauncher/platform.gd" type="Script" id=5]
+[ext_resource path="res://src/Actors/Player/BossWeapons/BlastLauncher/blast_launcher.res" type="SpriteFrames" id=1]
+[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Player/BossWeapons/BlastLauncher/IntenseExplosion.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Actors/Player/BossWeapons/BlastLauncher/platform.gd" type="Script" id=4]
+[ext_resource path="res://src/Actors/Player/BossWeapons/BlastLauncher/BlastLaunchCharged.gd" type="Script" id=5]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 14.5, 4 )
@@ -18,15 +18,15 @@ extents = Vector2( 9.5, 10.5 )
 [node name="BlastLaunchCharged" type="KinematicBody2D" groups=["Player Projectile"]]
 z_index = 8
 collision_layer = 4
-script = ExtResource( 2 )
+script = ExtResource( 5 )
 damage = 15.0
 damage_to_bosses = 15.0
 damage_to_weakness = 25.0
 break_guards = true
-explosion = ExtResource( 1 )
+explosion = ExtResource( 3 )
 
 [node name="animatedSprite" type="AnimatedSprite" parent="."]
-frames = ExtResource( 3 )
+frames = ExtResource( 1 )
 animation = "missile"
 frame = 1
 playing = true
@@ -35,7 +35,7 @@ offset = Vector2( -5, 0 )
 [node name="platform" type="KinematicBody2D" parent="animatedSprite"]
 collision_layer = 1073741824
 collision_mask = 0
-script = ExtResource( 5 )
+script = ExtResource( 4 )
 
 [node name="collisionShape2D" type="CollisionShape2D" parent="animatedSprite/platform"]
 position = Vector2( 1.5, 1 )
@@ -68,7 +68,7 @@ scale = Vector2( 2, 1 )
 shape = SubResource( 1 )
 
 [node name="disabler" type="Node" parent="."]
-script = ExtResource( 4 )
+script = ExtResource( 2 )
 fade_out = true
 delete_after_fade = true
 undo_on_rotation_end = false

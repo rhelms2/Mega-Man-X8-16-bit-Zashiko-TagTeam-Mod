@@ -28,7 +28,6 @@ animations = [ {
 extents = Vector2( 7, 23 )
 
 [node name="MantisWave" instance=ExtResource( 1 )]
-collision_layer = 16
 script = ExtResource( 3 )
 damage = 3.0
 speed = 240.0

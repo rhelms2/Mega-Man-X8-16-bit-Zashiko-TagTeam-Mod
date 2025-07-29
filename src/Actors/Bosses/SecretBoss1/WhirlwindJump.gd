@@ -23,13 +23,13 @@ func _Update(delta) -> void:
 		force_movement(-500)
 		next_attack_stage()
 	
-	if attack_stage == 1 and timer > .1 and character.is_colliding_with_wall():
+	if attack_stage == 1 and timer > 0.1 and character.is_colliding_with_wall():
 		smoke_dash.emitting = false
 		play_animation("jump_prepare")
 		decay_speed_regardless_of_direction()
 		next_attack_stage()
 	
-	elif attack_stage == 2 and timer > .5:
+	elif attack_stage == 2 and timer > 0.5:
 		play_animation("jump")
 		jump.play()
 		force_movement(311) #250 -450
@@ -55,13 +55,13 @@ func fire_whirlwind():
 		create_ball()
 		shot.play()
 
-var next := 0
-var angles = [0,90,0]
+var next: = 0
+var angles = [0, 90, 0]
 
 func create_ball():
 	var ball = _ball.instance()
 	get_tree().current_scene.add_child(ball)
-	ball.global_position = raycast.get_collision_point() - Vector2(0,24)
+	ball.global_position = raycast.get_collision_point() - Vector2(0, 24)
 	ball.rotation_degrees = angles[next]
 	next += 1
 

@@ -11,31 +11,31 @@ onready var icarus_arms: TextureRect = $icarus_arms
 onready var icarus_legs: TextureRect = $icarus_legs
 
 onready var armor_parts = [
-	hermes_head,
-	hermes_body,
-	hermes_arms,
-	hermes_legs,
-	icarus_head,
-	icarus_body,
-	icarus_arms,
+	hermes_head, 
+	hermes_body, 
+	hermes_arms, 
+	hermes_legs, 
+	icarus_head, 
+	icarus_body, 
+	icarus_arms, 
 	icarus_legs
 ]
-func _ready() -> void:
-	pause.connect("pause_starting",self,"show_parts")# warning-ignore:return_value_discarded
-	Event.listen("changed_weapon",self,"update_colors")
+func _ready() -> void :
+	pause.connect("pause_starting", self, "show_parts")
+	Event.listen("changed_weapon", self, "update_colors")
 
-func show_parts() -> void:
+func show_parts() -> void :
 	for part in armor_parts:
 		if GameManager.is_player_in_scene():
 			part.visible = part.name in GameManager.player.current_armor
 	
 	update_colors()
 
-func update_colors(_n = null) -> void:
+func update_colors(_n = null) -> void :
 	if GameManager.is_player_in_scene():
 		material = GameManager.player.animatedSprite.material.duplicate()
-		material.set_shader_param("Flash",0)
-		material.set_shader_param("Charge",0)
-		material.set_shader_param("Alpha",1)
+		material.set_shader_param("Flash", 0)
+		material.set_shader_param("Charge", 0)
+		material.set_shader_param("Alpha", 1)
 		$"../lives_icon".material = material
 	

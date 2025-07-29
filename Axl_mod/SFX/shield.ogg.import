@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/shield.ogg-bce0e78d6eb3d48c11cc44daf6d91682.oggstr"
+
+[deps]
+
+source_file="res://Axl_mod/SFX/shield.ogg"
+dest_files=[ "res://.import/shield.ogg-bce0e78d6eb3d48c11cc44daf6d91682.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

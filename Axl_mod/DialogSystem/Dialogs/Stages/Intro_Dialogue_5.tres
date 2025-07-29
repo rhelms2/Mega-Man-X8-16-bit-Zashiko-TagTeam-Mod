@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://src/DialogSystem/Profiles/Vile.tres" type="Resource" id=1]
+[ext_resource path="res://src/DialogSystem/Profiles/DialogueText.gd" type="Script" id=2]
+[ext_resource path="res://Axl_mod/DialogSystem/Profiles/Axl.tres" type="Resource" id=3]
+
+[resource]
+script = ExtResource( 2 )
+dialog = [ ExtResource( 1 ), "INTRO3-1_AXL", ExtResource( 3 ), "INTRO3-2_AXL", ExtResource( 1 ), "INTRO3-3_AXL", "INTRO3-4_AXL", ExtResource( 3 ), "INTRO3-5_AXL", ExtResource( 1 ), "INTRO3-6_AXL", ExtResource( 3 ), "INTRO3-7_AXL", ExtResource( 1 ), "INTRO3-8_AXL", ExtResource( 3 ), "INTRO3-9_AXL", ExtResource( 1 ), "INTRO3-10_AXL", "INTRO3-11_AXL" ]

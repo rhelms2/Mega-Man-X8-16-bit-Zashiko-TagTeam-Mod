@@ -1,6 +1,7 @@
-extends "res://src/Actors/Bosses/BambooPandamonium/slash.gd"
+extends BambooSlash
 
-var activation_time := 0.74
+var activation_time: float = 0.74
+
 
 func _ready() -> void:
 	animated_sprite.frame = 0

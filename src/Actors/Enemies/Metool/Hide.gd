@@ -1,4 +1,5 @@
 extends AttackAbility
+class_name MetoolHide
 
 onready var shield: Node2D = $"../EnemyShield"
 
@@ -23,13 +24,13 @@ func _Update(delta) -> void:
 			next_attack_stage_on_next_frame()
 		else:
 			EndAbility()
-
+			
 	elif attack_stage == 2:
 		if not is_player_nearby_horizontally(80):
 			EndAbility()
 		elif not is_player_looking_away():
 			force_movement(0)
-			Tools.timer(0.1,"activate",shield)
+			Tools.timer(0.1, "activate", shield)
 			play_animation_once("defense")
 			go_to_attack_stage(0)
 

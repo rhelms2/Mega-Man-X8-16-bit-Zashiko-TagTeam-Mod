@@ -1,9 +1,9 @@
-extends "res://src/Actors/Enemies/Big Tractor/AttackIdle.gd"
+extends TractorAttackIdle
 
 
-func _Update(delta) -> void:
+func _Update(delta: float) -> void :
 	process_gravity(delta)
 	force_movement(horizontal_velocity)
 
-func check_for_event_errors() -> void:
+func check_for_event_errors() -> void :
 	return

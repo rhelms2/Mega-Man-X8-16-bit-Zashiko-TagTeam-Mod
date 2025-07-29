@@ -1,5 +1,7 @@
 extends Node2D
 
+const interval: float = 3.0
+
 onready var explosions: Particles2D = $explosion_particles
 onready var smoke: Particles2D = $smoke
 onready var audio: AudioStreamPlayer2D = $final_explosion
@@ -18,7 +20,7 @@ onready var windspark: Sprite = $windspark
 onready var flash: Sprite = $flash
 
 signal screen_flash
-const interval := 3.0
+
 
 func _ready() -> void:
 	get_parent().listen("zero_health",self,"_Setup")
@@ -47,8 +49,19 @@ func _Setup():
 	
 	GlobalVariables.set("seraph_lumine_defeated",true)
 	GameManager.current_armor = GameManager.player.current_armor
-	
-func unpause():
+	IGT.should_run_rta = false
+	if CharacterManager.game_mode == 1:
+		CharacterManager.beaten_hard = true
+	if CharacterManager.game_mode == 2:
+		CharacterManager.beaten_insanity = true
+	if CharacterManager.game_mode >= 3:
+		if CharacterManager.player_character == "Zero" and CharacterManager.only_zero:
+			FeatureCheck.unlock_features(10)
+		else:
+			FeatureCheck.unlock_features(11)
+	CharacterManager._save()
+
+func unpause() -> void :
 	GameManager.unpause(character.name + name)
 	animation.play("death_loop")
 	activate()
@@ -85,24 +98,24 @@ func blink():
 	animation.animatedSprite.material.set_shader_param("Flash", 1)
 	windspark.emit()
 
-func set_weak_light():
-	tween.method("set_darken",1,.1,8)
+func set_weak_light() -> void :
+	tween.method("set_darken", 1, 0.1, 8)
 	feather_particles.emitting = false
-	tween.method("set_light_alpha",0,.33,interval)
+	tween.method("set_light_alpha", 0, 0.33, interval)
 	tween.add_callback("set_mid_light")
 
 func set_mid_light():
 	windspark.emit()
-	tween.method("set_light_alpha",.33,0.66,interval)
-	tween.method("set_light_color",0,1.0,interval)
+	tween.method("set_light_alpha", 0.33, 0.66, interval)
+	tween.method("set_light_color", 0, 1.0, interval)
 	tween.add_callback("set_final_light")
 
-func set_final_light():
+func set_final_light() -> void :
 	windspark.emit()
-	tween.method("set_light_alpha",.66,1,interval)
-	tween.method("set_light_color",1.0,2.0,2.0)
-	Tools.timer(1.25,"set_fullscreen_light",self)
-	Tools.timer(1.0,"play_death_end",self)
+	tween.method("set_light_alpha", 0.66, 1, interval)
+	tween.method("set_light_color", 1.0, 2.0, 2.0)
+	Tools.timer(1.25, "set_fullscreen_light", self)
+	Tools.timer(1.0, "play_death_end", self)
 
 func play_death_end():
 	animation.play("death_end")

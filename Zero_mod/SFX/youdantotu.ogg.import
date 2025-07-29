@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/youdantotu.ogg-3cdffdf87d18ecb1630b9cd79a0d15a1.oggstr"
+
+[deps]
+
+source_file="res://Zero_mod/SFX/youdantotu.ogg"
+dest_files=[ "res://.import/youdantotu.ogg-3cdffdf87d18ecb1630b9cd79a0d15a1.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

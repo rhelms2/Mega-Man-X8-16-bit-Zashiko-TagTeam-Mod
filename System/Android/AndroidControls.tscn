@@ -1,0 +1,105 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://System/Android/button.gd" type="Script" id=1]
+[ext_resource path="res://System/Android/Sprites/android_joystick_pointer.png" type="Texture" id=2]
+[ext_resource path="res://System/Android/Sprites/android_jump.png" type="Texture" id=3]
+[ext_resource path="res://System/Android/Sprites/android_joystick.png" type="Texture" id=4]
+[ext_resource path="res://System/Android/joystick.gd" type="Script" id=5]
+[ext_resource path="res://System/Android/Sprites/android_joystick_back.png" type="Texture" id=6]
+[ext_resource path="res://System/Android/Sprites/android_shoot.png" type="Texture" id=7]
+[ext_resource path="res://System/Android/Sprites/android_dash.png" type="Texture" id=8]
+[ext_resource path="res://System/Android/Sprites/android_weapon_left.png" type="Texture" id=9]
+[ext_resource path="res://System/Android/Sprites/android_weapon_right.png" type="Texture" id=10]
+[ext_resource path="res://System/Android/Sprites/android_pause.png" type="Texture" id=11]
+[ext_resource path="res://System/Android/AndroidControls.gd" type="Script" id=12]
+[ext_resource path="res://System/Android/Sprites/android_special.png" type="Texture" id=13]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 35.1283
+
+[node name="AndroidControls" type="CanvasLayer"]
+layer = 5
+script = ExtResource( 12 )
+
+[node name="Pause" type="TouchScreenButton" parent="."]
+position = Vector2( 183, 0 )
+scale = Vector2( 0.3, 0.3 )
+normal = ExtResource( 11 )
+action = "pause"
+script = ExtResource( 1 )
+_action = "pause"
+
+[node name="Jump" type="TouchScreenButton" parent="."]
+position = Vector2( 312, 176 )
+scale = Vector2( 0.15, 0.15 )
+normal = ExtResource( 3 )
+passby_press = true
+script = ExtResource( 1 )
+_action = "jump"
+
+[node name="Dash" type="TouchScreenButton" parent="."]
+position = Vector2( 352, 176 )
+scale = Vector2( 0.15, 0.15 )
+normal = ExtResource( 8 )
+passby_press = true
+script = ExtResource( 1 )
+_action = "dash"
+
+[node name="Shoot" type="TouchScreenButton" parent="."]
+position = Vector2( 332, 144 )
+scale = Vector2( 0.15, 0.15 )
+normal = ExtResource( 7 )
+passby_press = true
+script = ExtResource( 1 )
+_action = "fire"
+
+[node name="AltFire" type="TouchScreenButton" parent="."]
+position = Vector2( 287, 182 )
+scale = Vector2( 0.09375, 0.09375 )
+normal = ExtResource( 7 )
+passby_press = true
+script = ExtResource( 1 )
+_action = "alt_fire"
+
+[node name="Special" type="TouchScreenButton" parent="."]
+position = Vector2( 259, 182 )
+scale = Vector2( 0.094, 0.094 )
+normal = ExtResource( 13 )
+passby_press = true
+script = ExtResource( 1 )
+_action = "select_special"
+
+[node name="WeaponPrev" type="TouchScreenButton" parent="."]
+position = Vector2( 0, 7.62939e-06 )
+scale = Vector2( 0.15, 0.15 )
+normal = ExtResource( 9 )
+passby_press = true
+script = ExtResource( 1 )
+_action = "weapon_select_left"
+
+[node name="WeaponNext" type="TouchScreenButton" parent="."]
+position = Vector2( 342, 0 )
+scale = Vector2( 0.15, 0.15 )
+normal = ExtResource( 10 )
+passby_press = true
+script = ExtResource( 1 )
+_action = "weapon_select_right"
+
+[node name="joystick" type="Area2D" parent="."]
+position = Vector2( 48, 176 )
+script = ExtResource( 5 )
+
+[node name="background" type="Sprite" parent="joystick"]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 6 )
+
+[node name="outline" type="Sprite" parent="joystick"]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 4 )
+
+[node name="pointer" type="Sprite" parent="joystick/outline"]
+texture = ExtResource( 2 )
+
+[node name="Deadzone" type="CollisionShape2D" parent="joystick"]
+position = Vector2( 0, -2 )
+shape = SubResource( 1 )

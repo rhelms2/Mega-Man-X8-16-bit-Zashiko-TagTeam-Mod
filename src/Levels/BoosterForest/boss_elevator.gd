@@ -1,4 +1,4 @@
-extends "res://src/Levels/BoosterForest/rising_platform.gd"
+extends RisingPlatform
 
 export var _limit_to_deactivate: NodePath
 export var extra_limits_to_deactivate: Array

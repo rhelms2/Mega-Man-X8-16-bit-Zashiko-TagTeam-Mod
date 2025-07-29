@@ -1,0 +1,123 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Axl_mod/Enemies/SnowThrower/Snowthrower.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Enemies/AI.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Modules/Enemy/Enemy.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/Enemies/Big Tractor/AttackIdle.gd" type="Script" id=4]
+[ext_resource path="res://src/Actors/Modules/Enemy/EnemyDamage.gd" type="Script" id=5]
+[ext_resource path="res://src/Actors/Enemies/Shared/QuickEnemyDeath.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=7]
+[ext_resource path="res://src/Effects/enemy_shader.tres" type="Shader" id=8]
+[ext_resource path="res://Axl_mod/Enemies/SnowThrower/SnowProjectile.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Axl_mod/Enemies/SnowThrower/snowthrower.res" type="SpriteFrames" id=10]
+[ext_resource path="res://src/Sounds/HIT.wav" type="AudioStream" id=14]
+[ext_resource path="res://src/Sounds/Rooster - RisingLava.ogg" type="AudioStream" id=15]
+
+[sub_resource type="RectangleShape2D" id=69]
+extents = Vector2( 162.5, 30 )
+
+[sub_resource type="ShaderMaterial" id=63]
+resource_local_to_scene = true
+shader = ExtResource( 8 )
+shader_param/Flash = 0.0
+shader_param/Should_Blink = 0.0
+shader_param/Darken = 1.0
+shader_param/Alpha = 1.0
+shader_param/Alpha_Blink = 0.0
+
+[sub_resource type="RectangleShape2D" id=70]
+extents = Vector2( 9, 23.5 )
+
+[sub_resource type="RectangleShape2D" id=71]
+extents = Vector2( 9, 22 )
+
+[node name="SnowThrower" type="KinematicBody2D" groups=["Enemies"]]
+collision_layer = 0
+collision_mask = 66049
+script = ExtResource( 3 )
+max_health = 5.0
+
+[node name="AI" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 2 )
+on_idle = [ NodePath("../Idle") ]
+on_see_player = [ NodePath("../SnowThrowerAttack") ]
+
+[node name="vision" type="Area2D" parent="AI"]
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="AI/vision"]
+position = Vector2( -0.5, 0 )
+shape = SubResource( 69 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = SubResource( 63 )
+position = Vector2( 2, 0 )
+z_index = 1
+frames = ExtResource( 10 )
+animation = "idle"
+playing = true
+flip_h = true
+
+[node name="snow_origin" type="Node2D" parent="animatedSprite"]
+position = Vector2( 23, -1 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 0, 0.5 )
+shape = SubResource( 70 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+scale = Vector2( 6, 4.8 )
+rect = Rect2( -5, -5, 10, 10 )
+
+[node name="area2D" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+position = Vector2( 0, 1 )
+shape = SubResource( 71 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 7 )
+damage = 3.0
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 5 )
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+stream = ExtResource( 14 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="Idle" type="Node2D" parent="."]
+script = ExtResource( 4 )
+conflicting_moves = [ "Everything" ]
+actions = [ "Event" ]
+animation = "idle"
+
+[node name="EnemyDeath" parent="." instance=ExtResource( 6 )]
+
+[node name="SnowThrowerAttack" type="Node2D" parent="."]
+script = ExtResource( 1 )
+actions = [ "Event" ]
+animation = "prepare"
+projectile = ExtResource( 9 )
+
+[node name="snow_loop" type="AudioStreamPlayer2D" parent="SnowThrowerAttack"]
+stream = ExtResource( 15 )
+volume_db = -50.0
+autoplay = true
+max_distance = 400.0
+bus = "SFX"
+
+[connection signal="body_entered" from="AI/vision" to="AI" method="_on_vision_body_entered"]
+[connection signal="body_exited" from="AI/vision" to="AI" method="_on_vision_body_exited"]

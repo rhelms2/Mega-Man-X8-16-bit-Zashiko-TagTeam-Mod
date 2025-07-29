@@ -1,0 +1,21 @@
+extends Panda
+
+onready var dmg_sfx: AudioStreamPlayer = $damage
+
+
+func _ready() -> void :
+	var sprite = get_node("animatedSprite")
+	var effect_sprite = sprite.get_node("effectSprite")
+	CharacterManager.set_zero_normal_colors(sprite)
+	CharacterManager.set_saber_green(sprite)
+	
+	if CharacterManager.player_character == "Zero":
+		CharacterManager.set_fake_zero_colors(sprite)
+
+func _on_DamageReflector_shield_broken() -> void :
+	if not is_executing("Desperation"):
+		damage.invulnerability_time = damage.weakness_invulnerability_time
+		damage.emit_signal("charged_weakness_hit", - get_facing_direction())
+		damage.max_flash_time = damage.invulnerability_time
+		reduce_health(10)
+		dmg_sfx.play()

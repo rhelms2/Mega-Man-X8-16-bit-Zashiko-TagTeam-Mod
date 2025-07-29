@@ -1,0 +1,13 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://Zero_mod/Player/BossAbilities/AbilityResource.gd" type="Script" id=1]
+[ext_resource path="res://Zero_mod/HUD/Pause/selectable_weapon_06.png" type="Texture" id=2]
+[ext_resource path="res://Axl_mod/WeaponGet/Videos/sequence_raygun.tres" type="Resource" id=5]
+
+[resource]
+script = ExtResource( 1 )
+title = "TRILOBYTE_ZERO_WPNMENU"
+description = "TRILOBYTE_ZERO_DISC"
+icon = ExtResource( 2 )
+faded_icon = ExtResource( 2 )
+input_sequence = ExtResource( 5 )

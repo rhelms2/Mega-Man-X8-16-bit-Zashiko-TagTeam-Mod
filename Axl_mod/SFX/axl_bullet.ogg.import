@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/axl_bullet.ogg-87ce84f93415d46e87077b7c095b7de1.oggstr"
+
+[deps]
+
+source_file="res://Axl_mod/SFX/axl_bullet.ogg"
+dest_files=[ "res://.import/axl_bullet.ogg-87ce84f93415d46e87077b7c095b7de1.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

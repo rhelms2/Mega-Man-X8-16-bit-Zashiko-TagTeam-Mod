@@ -1,6 +1,6 @@
 [gd_scene load_steps=15 format=2]
 
-[ext_resource path="res://WeaponShot.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Player/WeaponShot.gd" type="Script" id=1]
 [ext_resource path="res://SpriteEffect.gd" type="Script" id=2]
 [ext_resource path="res://src/Actors/Enemies/ProjectileDoT.gd" type="Script" id=3]
 [ext_resource path="res://src/Effects/Basic Hit.tscn" type="PackedScene" id=4]
@@ -49,7 +49,7 @@ horizontal_velocity = 200.0
 
 [node name="animatedSprite" type="AnimatedSprite" parent="."]
 frames = ExtResource( 9 )
-frame = 5
+frame = 1
 playing = true
 flip_h = true
 

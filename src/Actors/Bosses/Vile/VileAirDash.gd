@@ -1,20 +1,20 @@
 extends AttackAbility
 
-onready var tween := TweenController.new(self,false)
+onready var tween: = TweenController.new(self, false)
 onready var rise: AudioStreamPlayer2D = $rise
 onready var traverse: AudioStreamPlayer2D = $traverse
 onready var land: AudioStreamPlayer2D = $land
 
-var ended_movement := false
+var ended_movement: = false
 onready var space: Node = $"../Space"
 onready var dash_particles: Particles2D = $dash_particles
 
-func _Setup() -> void:
+func _Setup() -> void :
 	play_animation("flight_to_upward")
 	turn_and_face_player()
 	ended_movement = false
 
-func _Update(_delta) -> void:
+func _Update(_delta: float) -> void :
 	if attack_stage == 0:
 		turn_and_face_player()
 		move_slightly_upwards(45)
@@ -63,31 +63,31 @@ func _Update(_delta) -> void:
 		if timer > 0.75:
 			EndAbility()
 
-func dash_towards_player() -> void:
-	tween.create(Tween.EASE_OUT,Tween.TRANS_CUBIC)
-	tween.add_method("force_movement",0.0,380.0,0.75)
-	tween.create(Tween.EASE_IN,Tween.TRANS_CUBIC)
-	tween.add_method("set_vertical_speed",300,800.0,0.75)
+func dash_towards_player() -> void :
+	tween.create(Tween.EASE_OUT, Tween.TRANS_CUBIC)
+	tween.add_method("force_movement", 0.0, 380.0, 0.75)
+	tween.create(Tween.EASE_IN, Tween.TRANS_CUBIC)
+	tween.add_method("set_vertical_speed", 300, 800.0, 0.75)
 
-func collided_with_ground() -> void:
+func collided_with_ground() -> void :
 	tween.reset()
 	force_movement(400)
 	dash_particles.emitting = true
 
-func slide() -> void:
+func slide() -> void :
 	tween.reset()
 	tween.create()
-	tween.add_method("force_movement",200,0.0,0.4)
-	Tools.timer(0.5,"end_movement",self)
+	tween.add_method("force_movement", 200, 0.0, 0.4)
+	Tools.timer(0.5, "end_movement", self)
 
-func move_slightly_upwards(amount = 100) -> void:
-	tween.create(Tween.EASE_IN,Tween.TRANS_CUBIC)
-	tween.add_method("set_vertical_speed",-amount,0.0,0.5)
+func move_slightly_upwards(amount = 100) -> void :
+	tween.create(Tween.EASE_IN, Tween.TRANS_CUBIC)
+	tween.add_method("set_vertical_speed", - amount, 0.0, 0.5)
 
-func end_movement() -> void:
+func end_movement() -> void :
 	ended_movement = true
 
-func _Interrupt() -> void:
+func _Interrupt() -> void :
 	._Interrupt()
 	tween.reset()
 	dash_particles.emitting = false

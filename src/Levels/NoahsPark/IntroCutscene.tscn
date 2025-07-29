@@ -295,20 +295,20 @@ position = Vector2( 284, 155 )
 [node name="fire" type="AnimatedSprite" parent="Visuals"]
 position = Vector2( 72, -37 )
 frames = SubResource( 13 )
-frame = 4
+frame = 5
 playing = true
 
 [node name="fire2" type="AnimatedSprite" parent="Visuals"]
 position = Vector2( -65, -27 )
 frames = SubResource( 13 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="fire3" type="AnimatedSprite" parent="Visuals"]
 position = Vector2( 77, 26 )
 z_index = 4
 frames = SubResource( 13 )
-frame = 3
+frame = 4
 playing = true
 flip_h = true
 
@@ -316,13 +316,13 @@ flip_h = true
 position = Vector2( -54, 36 )
 z_index = 2
 frames = SubResource( 22 )
-frame = 5
+frame = 6
 playing = true
 
 [node name="small_fire3" type="AnimatedSprite" parent="Visuals"]
 position = Vector2( -17, -30 )
 frames = SubResource( 22 )
-frame = 5
+frame = 6
 playing = true
 flip_h = true
 
@@ -330,6 +330,7 @@ flip_h = true
 position = Vector2( 54, 37 )
 z_index = 4
 frames = SubResource( 22 )
+frame = 1
 playing = true
 flip_h = true
 
@@ -372,7 +373,7 @@ visible = false
 position = Vector2( 280, 115 )
 z_index = 3
 frames = SubResource( 69 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="traverse" type="AudioStreamPlayer2D" parent="Kidnapped"]
@@ -388,7 +389,7 @@ position = Vector2( 245, -62 )
 z_index = 1
 frames = ExtResource( 37 )
 animation = "flight"
-frame = 4
+frame = 1
 playing = true
 flip_h = true
 

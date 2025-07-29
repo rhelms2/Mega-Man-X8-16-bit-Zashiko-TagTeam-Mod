@@ -1,6 +1,6 @@
 [remap]
 
-importer="aseprite_animation_importer"
+importer="aseprite_wizard.plugin"
 type="SpriteFrames"
 valid=false
 
@@ -9,6 +9,7 @@ valid=false
 source_file="res://src/Actors/test_enemy.ase"
 [params]
 
-extrude=false
-default_direction="Forward"
-default_loop=false
+split_layers=false
+exclude_layers_pattern=""
+only_visible_layers=false
+sheet_type="Packed"

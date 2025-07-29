@@ -1,6 +1,6 @@
-[gd_scene load_steps=117 format=2]
+[gd_scene load_steps=120 format=2]
 
-[ext_resource path="res://src/Actors/x_collision_box.tres" type="Shape2D" id=1]
+[ext_resource path="res://src/Actors/Player/x_collision_box.tres" type="Shape2D" id=1]
 [ext_resource path="res://src/Effects/Materials/x_dash_smoke.tres" type="Material" id=2]
 [ext_resource path="res://src/Actors/Player/x_sprites/x_leftarm.res" type="SpriteFrames" id=3]
 [ext_resource path="res://src/Actors/Player/x_sprites/x.res" type="SpriteFrames" id=4]
@@ -10,23 +10,25 @@
 [ext_resource path="res://src/WeaponGet/AIShot.gd" type="Script" id=8]
 [ext_resource path="res://src/WeaponGet/AIJump.gd" type="Script" id=9]
 [ext_resource path="res://src/WeaponGet/AltFireDummy.gd" type="Script" id=10]
-[ext_resource path="res://src/Actors/Player/BossWeapon.gd" type="Script" id=11]
+[ext_resource path="res://src/Actors/Player/X/BossWeapon.gd" type="Script" id=11]
 [ext_resource path="res://src/WeaponGet/AIWalk.gd" type="Script" id=12]
 [ext_resource path="res://src/WeaponGet/Charge.gd" type="Script" id=13]
-[ext_resource path="res://DashJump.gd" type="Script" id=14]
+[ext_resource path="res://src/Actors/Player/DashJump.gd" type="Script" id=14]
 [ext_resource path="res://src/Sounds/DAMAGE.wav" type="AudioStream" id=15]
 [ext_resource path="res://src/Effects/Textures/follow_shot.png" type="Texture" id=16]
 [ext_resource path="res://src/Sounds/SLIDE.wav" type="AudioStream" id=17]
 [ext_resource path="res://src/Sounds/JUMP.wav" type="AudioStream" id=18]
 [ext_resource path="res://src/Actors/Enemy Collision Detector.gd" type="Script" id=19]
-[ext_resource path="res://Damage.gd" type="Script" id=20]
+[ext_resource path="res://src/Actors/Player/Damage.gd" type="Script" id=20]
+[ext_resource path="res://X_mod/UltimateX/Sprites/x_ultimate.tres" type="SpriteFrames" id=21]
 [ext_resource path="res://SpriteEffect.gd" type="Script" id=22]
 [ext_resource path="res://src/Effects/Textures/smoke.png" type="Texture" id=23]
-[ext_resource path="res://src/Actors/CrushCheck.gd" type="Script" id=24]
+[ext_resource path="res://src/Actors/Player/X/CrushCheck.gd" type="Script" id=24]
+[ext_resource path="res://X_mod/UltimateX/Sprites/x_ultimate_arm.tres" type="SpriteFrames" id=25]
 [ext_resource path="res://src/Actors/Player/BossWeapons/ThunderDancer/ThunderDancerWeapon.gd" type="Script" id=26]
-[ext_resource path="res://WeaponChanger.gd" type="Script" id=27]
-[ext_resource path="res://Walljump.gd" type="Script" id=28]
-[ext_resource path="res://Wallslide.gd" type="Script" id=29]
+[ext_resource path="res://src/Actors/Player/WeaponChanger.gd" type="Script" id=27]
+[ext_resource path="res://src/Actors/Player/Walljump.gd" type="Script" id=28]
+[ext_resource path="res://src/Actors/Player/Wallslide.gd" type="Script" id=29]
 [ext_resource path="res://src/Sounds/DASH.wav" type="AudioStream" id=30]
 [ext_resource path="res://src/Effects/Textures/charge_2.png" type="Texture" id=31]
 [ext_resource path="res://src/Effects/Textures/airdash.png" type="Texture" id=32]
@@ -42,18 +44,19 @@
 [ext_resource path="res://src/Sounds/18 - MMX - X Fade Out.wav" type="AudioStream" id=42]
 [ext_resource path="res://src/Sounds/Yeti - Throw.ogg" type="AudioStream" id=43]
 [ext_resource path="res://src/Sounds/16 - MMX - X Upgrade Complete.wav" type="AudioStream" id=44]
-[ext_resource path="res://PlayerDeath.gd" type="Script" id=46]
-[ext_resource path="res://src/Actors/Modules/Ride.gd" type="Script" id=47]
-[ext_resource path="res://DashWallJump.gd" type="Script" id=49]
+[ext_resource path="res://X_mod/UltimateX/Sprites/x_ultimate_material.tres" type="Material" id=45]
+[ext_resource path="res://src/Actors/Player/PlayerDeath.gd" type="Script" id=46]
+[ext_resource path="res://src/Actors/Player/Modules/Ride.gd" type="Script" id=47]
+[ext_resource path="res://src/Actors/Player/DashWallJump.gd" type="Script" id=49]
 [ext_resource path="res://src/Actors/Player/BossWeapons/DriftDiamond/DriftShoryukenDiamondWeapon.gd" type="Script" id=51]
-[ext_resource path="res://src/Actors/Player/Armor.gd" type="Script" id=54]
-[ext_resource path="res://src/Actors/Player/ArmorPart.gd" type="Script" id=55]
+[ext_resource path="res://src/Actors/Player/X/Armor.gd" type="Script" id=54]
+[ext_resource path="res://src/Actors/Player/X/ArmorPart.gd" type="Script" id=55]
 [ext_resource path="res://src/Actors/Player/SubtankManager.gd" type="Script" id=56]
-[ext_resource path="res://src/Actors/Modules/Finish.gd" type="Script" id=57]
+[ext_resource path="res://src/Actors/Player/Modules/Finish.gd" type="Script" id=57]
 [ext_resource path="res://src/Actors/Player/BossWeapons/DriftDiamond/DriftDiamond.gd" type="Script" id=59]
-[ext_resource path="res://src/Actors/Modules/Forced.gd" type="Script" id=60]
+[ext_resource path="res://src/Actors/Player/Modules/Forced.gd" type="Script" id=60]
 [ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=61]
-[ext_resource path="res://src/Actors/Modules/ExtraDashJump.gd" type="Script" id=62]
+[ext_resource path="res://src/Actors/Player/Modules/ExtraDashJump.gd" type="Script" id=62]
 [ext_resource path="res://src/Actors/Weapons/Icarus Buster.tscn" type="PackedScene" id=66]
 [ext_resource path="res://src/Options/HotSwap.tscn" type="PackedScene" id=69]
 [ext_resource path="res://src/Effects/Player Death.tscn" type="PackedScene" id=70]
@@ -79,13 +82,13 @@
 [ext_resource path="res://src/Actors/Player/Talk.gd" type="Script" id=91]
 [ext_resource path="res://src/Actors/Bosses/Lumine/afterImages.gd" type="Script" id=93]
 [ext_resource path="res://src/Actors/Player/BossWeapons/FireDash/FireDash.gd" type="Script" id=94]
-[ext_resource path="res://src/Actors/WeaponStasis.gd" type="Script" id=97]
+[ext_resource path="res://src/Actors/Player/WeaponStasis.gd" type="Script" id=97]
 [ext_resource path="res://src/Actors/rotation_particle_disabler.gd" type="Script" id=98]
 [ext_resource path="res://src/Effects/Textures/hit_vfx.png" type="Texture" id=100]
 [ext_resource path="res://src/Sounds/MMX - Charge.wav" type="AudioStream" id=101]
 [ext_resource path="res://src/Levels/skip_intro.gd" type="Script" id=102]
 [ext_resource path="res://src/Effects/enemy_shader.tres" type="Shader" id=103]
-[ext_resource path="res://src/Actors/charge_shader.tres" type="Shader" id=104]
+[ext_resource path="res://src/Actors/Player/charge_shader.tres" type="Shader" id=104]
 [ext_resource path="res://src/Actors/Player/Modules/Idle.tscn" type="PackedScene" id=106]
 [ext_resource path="res://src/Actors/Player/Modules/Fall.tscn" type="PackedScene" id=108]
 [ext_resource path="res://src/Actors/Player/BossWeapons/DriftDiamond/Drift Diamond.tres" type="Resource" id=110]
@@ -422,7 +425,7 @@ position = Vector2( 0, -4 )
 z_index = 5
 frames = ExtResource( 4 )
 animation = "idle"
-frame = 52
+frame = 23
 playing = true
 
 [node name="head_armor" type="AnimatedSprite" parent="animatedSprite"]
@@ -462,6 +465,18 @@ material = SubResource( 50 )
 frames = ExtResource( 76 )
 animation = "idle"
 script = ExtResource( 55 )
+
+[node name="ultimate_armor" type="AnimatedSprite" parent="animatedSprite"]
+visible = false
+material = ExtResource( 45 )
+frames = ExtResource( 21 )
+animation = "idle"
+
+[node name="ultimate_canon" type="AnimatedSprite" parent="animatedSprite"]
+visible = false
+material = ExtResource( 45 )
+frames = ExtResource( 25 )
+animation = "idle"
 
 [node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="animatedSprite"]
 visible = false

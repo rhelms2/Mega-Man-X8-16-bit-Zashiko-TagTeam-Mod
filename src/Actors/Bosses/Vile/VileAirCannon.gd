@@ -1,4 +1,5 @@
 extends AttackAbility
+class_name VileAirCannon
 
 export var prepare_anim := "flight_cannon_prepare"
 export var shot_anim := "flight_cannon_fire"

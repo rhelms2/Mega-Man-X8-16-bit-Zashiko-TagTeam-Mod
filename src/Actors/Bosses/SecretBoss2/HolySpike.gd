@@ -16,7 +16,6 @@ onready var start_sfx: AudioStreamPlayer2D = $start_sfx
 var expiring := false
 
 func _ready() -> void:
-	Camera2D
 	animated_sprite.play("prepare")
 	Tools.timer(0.032,"prepare_next_spike",self)
 	Tools.timer(start_time,"start",self)

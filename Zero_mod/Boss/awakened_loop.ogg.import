@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/awakened_loop.ogg-f00469543cb293617928b9bf0bd8d943.oggstr"
+
+[deps]
+
+source_file="res://Zero_mod/Boss/awakened_loop.ogg"
+dest_files=[ "res://.import/awakened_loop.ogg-f00469543cb293617928b9bf0bd8d943.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

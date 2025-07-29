@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/findyourflame_loop.ogg-9b8ec1666931d4b175ce6df35af7f21b.oggstr"
+
+[deps]
+
+source_file="res://System/BossMusic/findyourflame_loop.ogg"
+dest_files=[ "res://.import/findyourflame_loop.ogg-9b8ec1666931d4b175ce6df35af7f21b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/x_vs_zero_loop.ogg-f8bf4abfeb0375d2e37d02443735d188.oggstr"
+
+[deps]
+
+source_file="res://Zero_mod/Boss/x_vs_zero_loop.ogg"
+dest_files=[ "res://.import/x_vs_zero_loop.ogg-f8bf4abfeb0375d2e37d02443735d188.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

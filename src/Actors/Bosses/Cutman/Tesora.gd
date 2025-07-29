@@ -14,7 +14,7 @@ func _Setup() -> void:
 	set_vertical_speed(target_dir.y * 320)
 	set_horizontal_speed(target_dir.x * 320)
 
-func _Update(delta) -> void:
+func _Update(_delta) -> void:
 	if timer > .75:
 		set_trajectory_towards_cutman()
 		if cutman.global_position.distance_to(global_position) <= 16:

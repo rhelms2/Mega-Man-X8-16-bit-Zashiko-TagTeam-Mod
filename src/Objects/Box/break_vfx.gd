@@ -1,10 +1,8 @@
-extends "res://src/Objects/Box/X8Sprite.gd"
+extends BoxSprite
 
 
-func _ready() -> void:
+func _ready() -> void :
 	pass
 
-
-func _on_crush() -> void:
-	
-	pass # Replace with function body.
+func _on_crush() -> void :
+	pass

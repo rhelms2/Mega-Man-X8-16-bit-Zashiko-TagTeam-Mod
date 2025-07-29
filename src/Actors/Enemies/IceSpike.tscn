@@ -1,8 +1,8 @@
 [gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://src/Actors/Weapons/Projectiles/Lemon.tscn" type="PackedScene" id=1]
-[ext_resource path="res://src/Actors/Bosses/boss_sprites/icespike.tres" type="SpriteFrames" id=2]
-[ext_resource path="res://src/Actors/Bosses/IceSpike.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/Bosses/AvalancheYeti/icespike.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://src/Actors/Bosses/AvalancheYeti/IceSpike.gd" type="Script" id=3]
 [ext_resource path="res://src/Effects/Textures/snow_sparkle.png" type="Texture" id=4]
 [ext_resource path="res://src/Actors/Enemies/ProjectileDoT.gd" type="Script" id=5]
 [ext_resource path="res://src/Effects/Textures/blue_explosion.png" type="Texture" id=6]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=14 format=2]
 
 [ext_resource path="res://src/Fonts/Xclassicfont.fnt" type="BitmapFont" id=1]
 [ext_resource path="res://src/Options/KeymapExit.gd" type="Script" id=2]
@@ -6,9 +6,12 @@
 [ext_resource path="res://src/Fonts/X8Bossfont.fnt" type="BitmapFont" id=4]
 [ext_resource path="res://src/Options/CoverScreen.gd" type="Script" id=5]
 [ext_resource path="res://src/Options/KeyBinder/KeyConfig.gd" type="Script" id=6]
+[ext_resource path="res://src/Sounds/MM - Equip.wav" type="AudioStream" id=7]
+[ext_resource path="res://src/Sounds/CHARGED_SHOT.wav" type="AudioStream" id=8]
+[ext_resource path="res://src/Sounds/FX - Cancel.ogg" type="AudioStream" id=9]
+[ext_resource path="res://System/SFX/option_select.ogg" type="AudioStream" id=10]
 [ext_resource path="res://src/Options/KeyBinder/ActionInput.tscn" type="PackedScene" id=20]
 [ext_resource path="res://src/Options/pause_bg.png" type="Texture" id=24]
-[ext_resource path="res://src/Sounds/FX - Menu Switch.ogg" type="AudioStream" id=46]
 [ext_resource path="res://src/Options/KeyBinder/ActionLoader.gd" type="Script" id=54]
 
 [node name="KeyConfig" type="CanvasLayer"]
@@ -174,11 +177,6 @@ text = "EXIT_BUTTON"
 align = 1
 uppercase = true
 
-[node name="choice" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 46 )
-volume_db = -4.0
-bus = "SFX"
-
 [node name="Fader" type="ColorRect" parent="."]
 margin_right = 398.0
 margin_bottom = 224.0
@@ -186,6 +184,27 @@ mouse_filter = 2
 color = Color( 0, 0, 0, 0 )
 script = ExtResource( 5 )
 menu = NodePath("../Menu")
+
+[node name="choice" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+volume_db = -4.0
+bus = "SFX"
+
+[node name="equip" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -4.0
+bus = "SFX"
+
+[node name="pick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = -10.0
+pitch_scale = 0.43
+bus = "SFX"
+
+[node name="cancel" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = -4.0
+bus = "SFX"
 
 [connection signal="focus_entered" from="Menu/exit" to="Menu/exit" method="_on_focus_entered"]
 [connection signal="focus_exited" from="Menu/exit" to="Menu/exit" method="_on_focus_exited"]

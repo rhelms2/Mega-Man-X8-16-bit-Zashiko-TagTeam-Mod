@@ -1,57 +1,57 @@
 [gd_scene load_steps=30 format=2]
 
-[ext_resource path="res://src/Actors/Player/BossWeapons/ThunderDancer/ThunderDancerCharged.gd" type="Script" id=1]
-[ext_resource path="res://src/Effects/Textures/charged_thunderdancer.png" type="Texture" id=2]
+[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=1]
+[ext_resource path="res://src/Sounds/Ice Break.wav" type="AudioStream" id=2]
 [ext_resource path="res://src/Effects/Textures/charged_flash.png" type="Texture" id=3]
-[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=4]
-[ext_resource path="res://src/Sounds/Ice Break.wav" type="AudioStream" id=6]
+[ext_resource path="res://src/Effects/Textures/charged_thunderdancer.png" type="Texture" id=4]
+[ext_resource path="res://src/Actors/Player/BossWeapons/ThunderDancer/ThunderDancerCharged.gd" type="Script" id=5]
 
 [sub_resource type="AtlasTexture" id=28]
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 128, 240, 128, 48 )
 
 [sub_resource type="AtlasTexture" id=22]
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 128, 96, 128, 48 )
 
 [sub_resource type="AtlasTexture" id=17]
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 128, 48 )
 
 [sub_resource type="AtlasTexture" id=18]
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 128, 0, 128, 48 )
 
 [sub_resource type="AtlasTexture" id=19]
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 0, 48, 128, 48 )
 
 [sub_resource type="AtlasTexture" id=20]
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 128, 48, 128, 48 )
 
 [sub_resource type="AtlasTexture" id=21]
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 0, 96, 128, 48 )
 
 [sub_resource type="AtlasTexture" id=23]
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 0, 144, 128, 48 )
 
 [sub_resource type="AtlasTexture" id=24]
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 128, 144, 128, 48 )
 
 [sub_resource type="AtlasTexture" id=25]
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 0, 192, 128, 48 )
 
 [sub_resource type="AtlasTexture" id=26]
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 128, 192, 128, 48 )
 
 [sub_resource type="AtlasTexture" id=27]
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 0, 240, 128, 48 )
 
 [sub_resource type="SpriteFrames" id=29]
@@ -113,7 +113,7 @@ extents = Vector2( 67.5, 28 )
 z_index = 8
 collision_layer = 4
 collision_mask = 0
-script = ExtResource( 1 )
+script = ExtResource( 5 )
 damage = 7.5
 damage_to_bosses = 5.0
 damage_to_weakness = 25.0
@@ -137,11 +137,11 @@ shape = SubResource( 40 )
 
 [node name="crash" type="AudioStreamPlayer2D" parent="."]
 pause_mode = 2
-stream = ExtResource( 6 )
+stream = ExtResource( 2 )
 volume_db = -12.671
 max_distance = 640.0
 bus = "SFX"
 
 [node name="disabler" type="Node" parent="."]
-script = ExtResource( 4 )
+script = ExtResource( 1 )
 fade_out = true

@@ -1,0 +1,25 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://src/Options/selectable_weapon_11.png" type="Texture" id=1]
+[ext_resource path="res://X_mod/UltimateX/Player/NovaStrike/UltimateXResource.gd" type="Script" id=2]
+[ext_resource path="res://X_mod/UltimateX/Sprites/novastrike_palette.png" type="Texture" id=3]
+
+[resource]
+script = ExtResource( 2 )
+short_name = "Nova Strike"
+collectible = "full_ultimate"
+icon = ExtResource( 1 )
+palette = ExtResource( 3 )
+regular_ammo_cost = 1.0
+charged_ammo_cost = 4.0
+cooldown = 0.1
+MainColor1 = Color( 0.909804, 0.878431, 0.25098, 1 )
+MainColor2 = Color( 0.945098, 0.6, 0.27451, 1 )
+MainColor3 = Color( 0.670588, 0.313726, 0.266667, 1 )
+MainColor4 = Color( 0.843137, 0.482353, 0.901961, 1 )
+MainColor5 = Color( 0.552941, 0.168627, 0.729412, 1 )
+MainColor6 = Color( 0.376471, 0, 0.552941, 1 )
+CrystalColor1 = Color( 1, 0.705882, 1, 1 )
+CrystalColor2 = Color( 0.843137, 0.482353, 0.901961, 1 )
+CrystalColor3 = Color( 0.552941, 0.168627, 0.729412, 1 )
+CrystalColor4 = Color( 0.376471, 0, 0.552941, 1 )

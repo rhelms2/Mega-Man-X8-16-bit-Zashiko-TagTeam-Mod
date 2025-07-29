@@ -1,9 +1,9 @@
 extends AttackAbility
 
-const order = [0,5,2,6,3,1,4]
+const order = [0, 5, 2, 6, 3, 1, 4]
 var teleport_positions = []
-var times_used := 0
-var position_count := 0
+var times_used: = 0
+var position_count: = 0
 onready var damage: Node2D = $"../Damage"
 onready var dot: Node2D = $"../DamageOnTouch"
 onready var disappear: AudioStreamPlayer2D = $disappear
@@ -12,7 +12,7 @@ onready var reflector: Node2D = $"../DamageReflector"
 signal teleported
 signal started
 
-func _Setup() -> void:
+func _Setup() -> void :
 	times_used = 0
 	emit_signal("started")
 	#queue_reset = true
@@ -30,7 +30,7 @@ func _Update(delta) -> void:
 		dot.deactivate()
 		next_attack_stage()
 
-	elif attack_stage == 1 and timer > .25:
+	elif attack_stage == 1 and timer > 0.25:
 		if queue_reset:
 			queue_reset = false
 			reflector.reset()
@@ -65,7 +65,7 @@ func get_teleport_positions() -> void:
 	var left_wall = raycast_from(origin,origin + Vector2(-1024,0))["position"]
 	var right_wall = raycast_from(origin,origin + Vector2(1024,0))["position"]
 	var distance_between_walls = (right_wall.x - 32) - (left_wall.x + 32)
-	var interval = distance_between_walls/6
+	var interval = distance_between_walls / 6
 	
 	var i = 0
 	while i < 7:

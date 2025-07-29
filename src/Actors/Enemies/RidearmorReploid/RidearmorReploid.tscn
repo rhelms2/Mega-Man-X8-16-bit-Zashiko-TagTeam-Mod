@@ -159,6 +159,7 @@ damage = 6.0
 [node name="Damage" type="Node2D" parent="."]
 script = ExtResource( 3 )
 minimum_damage = 2.0
+max_freeze_hits = 6
 
 [node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
 stream = ExtResource( 9 )
@@ -419,8 +420,8 @@ spawn = ExtResource( 36 )
 [connection signal="cooldown_finished" from="Pursuit/Punch" to="Pursuit/Walk" method="able_to_walk_again"]
 [connection signal="initialized" from="Pursuit/Punch" to="Pursuit/punch" method="play_rp"]
 [connection signal="started" from="Pursuit/Punch" to="Pursuit/Walk" method="_on_Punch_started"]
-[connection signal="started" from="Pursuit/Punch" to="Pursuit/PunchHitbox" method="handle_direction"]
 [connection signal="started" from="Pursuit/Punch" to="Pursuit/PunchHitbox" method="activate"]
+[connection signal="started" from="Pursuit/Punch" to="Pursuit/PunchHitbox" method="handle_direction"]
 [connection signal="started" from="Pursuit/Punch" to="Pursuit/PunchHitbox/area2D/collisionShape2D/wind" method="emit"]
 [connection signal="cooldown_finished" from="Pursuit/Jump" to="Pursuit/Walk" method="able_to_walk_again"]
 [connection signal="ended" from="Pursuit/Jump" to="Pursuit/step" method="play_rp"]

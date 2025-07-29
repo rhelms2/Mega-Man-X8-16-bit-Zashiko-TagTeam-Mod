@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/hyouryuusyou.ogg-87403593a55a016a9cee9eebb1a5249d.oggstr"
+
+[deps]
+
+source_file="res://Zero_mod/SFX/hyouryuusyou.ogg"
+dest_files=[ "res://.import/hyouryuusyou.ogg-87403593a55a016a9cee9eebb1a5249d.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

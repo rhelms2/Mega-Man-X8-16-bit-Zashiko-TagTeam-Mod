@@ -1,7 +1,7 @@
 extends CameraMode
 	
 func update(_delta) -> Vector2:
-	var new_position := camera.global_position
+	var new_position: = camera.global_position
 	if x_axis:
 		if camera.is_constrained_horizontally():
 			new_position.x = camera.get_boundary_position_right()
@@ -25,7 +25,7 @@ func update(_delta) -> Vector2:
 	return new_position
 
 func is_valid_position() -> bool:
-	#if current_position_wannabe_boundaries 
+	
 	return false
 
 func is_limited_horizontally() -> bool:

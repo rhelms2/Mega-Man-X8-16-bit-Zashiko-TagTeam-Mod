@@ -1,21 +1,22 @@
 extends CameraMode
 
-var reached_destination := false
+var reached_destination: bool = false
 
-func setup() -> void:
+
+func setup() -> void :
 	reached_destination = false
 
-func update(_delta) -> Vector2:
+func update(_delta: float) -> Vector2:
 	if reached_destination:
 		deactivate()
 	call_deferred("wait_a_frame")
 	return transmission()
 
-func wait_a_frame() -> void:
+func wait_a_frame() -> void :
 	reached_destination = true
 
 func transmission() -> Vector2:
-	var new_position := camera.global_position
+	var new_position: = camera.global_position
 	if camera.is_over_right_limit():
 		new_position.x = camera.get_boundary_position_right()
 	elif camera.is_over_left_limit():

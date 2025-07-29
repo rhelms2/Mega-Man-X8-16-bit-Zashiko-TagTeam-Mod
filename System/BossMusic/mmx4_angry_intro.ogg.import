@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/mmx4_angry_intro.ogg-95e62f0a6dcf78d42b7775ca7f8f8683.oggstr"
+
+[deps]
+
+source_file="res://System/BossMusic/mmx4_angry_intro.ogg"
+dest_files=[ "res://.import/mmx4_angry_intro.ogg-95e62f0a6dcf78d42b7775ca7f8f8683.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

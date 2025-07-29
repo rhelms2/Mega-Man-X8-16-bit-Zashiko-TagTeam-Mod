@@ -24,6 +24,7 @@ func connect_start_events() -> void:
 
 func _ready() -> void:
 	call_deferred("prepare_for_intro")
+	dialogue = CharacterManager._set_correct_dialogues("Vile Final", dialogue)
 
 func _Update(delta):
 	process_gravity(delta)
@@ -64,7 +65,7 @@ func _Update(delta):
 			next_attack_stage()
 
 
-	elif attack_stage==7:
+	elif attack_stage == 7:
 		Event.emit_signal("play_miniboss_music")
 		next_attack_stage()
 		

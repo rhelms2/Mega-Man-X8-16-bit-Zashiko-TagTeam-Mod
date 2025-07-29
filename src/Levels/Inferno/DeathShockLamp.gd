@@ -3,9 +3,8 @@ extends KinematicBody2D
 signal disabled
 
 
-
-func _ready() -> void:
+func _ready() -> void :
 	pass
 
-func energize() -> void:
+func energize() -> void :
 	emit_signal("disabled")

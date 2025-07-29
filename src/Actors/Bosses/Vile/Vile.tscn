@@ -109,7 +109,7 @@ animation = "laugh"
 script = ExtResource( 2 )
 invulnerability_time = 0.1
 max_flash_time = 0.35
-weakenesses = [ "DriftDiamond", "RideArmor" ]
+weakenesses = [ "DriftDiamond", "RideArmor", "IceGattling", "Hyouryuushou" ]
 
 [node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
 pause_mode = 2

@@ -1,13 +1,13 @@
 extends Node
 
-export var debug_logs := false
+export  var debug_logs: = false
 export (Resource) var subtank
-export var active := false #
-export var capacity := 16
-var current_health := 0
-var timer := 0.0
-var last_time_increased := 0.0
-var healing := false
+export  var active: = false
+export  var capacity: = 16
+var current_health: = 0
+var timer: = 0.0
+var last_time_increased: = 0.0
+var healing: = false
 onready var player: KinematicBody2D = $"../.."
 onready var sound: AudioStreamPlayer = $heal
 onready var charge: AudioStreamPlayer = $charge
@@ -18,7 +18,7 @@ signal max_capacity
 signal used_at_max_capacity
 signal finished_healing
 
-func activate() -> void:
+func activate() -> void :
 	Log("Activating, ID: " + subtank.id)
 	active = true
 	current_health = get_saved_health()
@@ -47,14 +47,14 @@ func add_health(amount, has_played_sound) -> int:
 	save_health()
 	return exceding_amount
 
-func use() -> void:
+func use() -> void :
 	if current_health > 0 and player.current_health < player.max_health:
 		Log("Starting heal, current: " + str(current_health))
 		healing = true
 		if current_health >= capacity:
 			emit_signal("used_at_max_capacity")
 
-func _physics_process(delta: float) -> void:
+func _physics_process(delta: float) -> void :
 	if healing:
 		timer += delta
 		if player.current_health < player.max_health and current_health > 0:
@@ -85,8 +85,8 @@ func get_saved_health() -> int:
 	return 0
 	
 func save_health():
-	GlobalVariables.set(subtank.id,current_health)
+	GlobalVariables.set(subtank.id, current_health)
 
-func Log(message) -> void:
+func Log(message) -> void :
 	if debug_logs == true:
-		print_debug(name +": "+ str(message))
+		print_debug(name + ": " + str(message))

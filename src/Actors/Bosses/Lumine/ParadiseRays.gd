@@ -6,18 +6,18 @@ onready var tween := TweenController.new(self,false)
 
 export var rotating_laser : PackedScene
 
-var laser_1 : Node2D
-var laser_2 : Node2D
+var laser_1: Node2D
+var laser_2: Node2D
 onready var charge: AudioStreamPlayer2D = $charge
 onready var fire: AudioStreamPlayer2D = $fire
 
-var firing_lasers := false
+var firing_lasers: = false
 
-var wait_duration := 5.0
+var wait_duration: = 5.0
 
 func position_both_lasers():
 	if not is_instance_valid(laser_1):
-		print_debug("Spawning Lasers")
+		#print_debug("Spawning Lasers")
 		laser_1 = position_laser()
 		laser_2 = position_laser()
 
@@ -39,7 +39,7 @@ func _Setup():
 	firing_lasers = true
 	flap.play_rp()
 
-func _Update(delta) -> void:
+func _Update(delta: float) -> void :
 	if attack_stage == 0 and has_finished_last_animation():
 		play_animation_once("hand")
 
@@ -61,30 +61,30 @@ func _Update(delta) -> void:
 
 func activate_lasers():
 	charge.play()
-	laser_1.set_rotation_degrees(-42.0)
+	laser_1.set_rotation_degrees( - 42.0)
 	laser_1.rotate_to(30)
 	laser_1.prepare()
-	Tools.timer(1.5,"fire_laser1",self)
-	Tools.timer(1.85,"second_volley",self)
+	Tools.timer(1.5, "fire_laser1", self)
+	Tools.timer(1.85, "second_volley", self)
 
 func second_volley():
 	charge.play()
 	laser_2.set_rotation_degrees(42.0)
-	laser_2.rotate_to(-30)
+	laser_2.rotate_to( - 30)
 	laser_2.prepare()
-	Tools.timer(1.5,"fire_laser2",self)
-	Tools.timer(1.85,"third_volley",self)
+	Tools.timer(1.5, "fire_laser2", self)
+	Tools.timer(1.85, "third_volley", self)
 
 func third_volley():
 	charge.play()
-	laser_1.set_rotation_degrees(-42.0)
+	laser_1.set_rotation_degrees( - 42.0)
 	laser_1.rotate_to(30)
 	laser_1.prepare()
 	laser_2.set_rotation_degrees(42.0)
-	laser_2.rotate_to(-30)
+	laser_2.rotate_to( - 30)
 	laser_2.prepare()
-	Tools.timer(1.5,"fire_both_lasers",self)
-	Tools.timer(1.5,"finish_lasers",self)
+	Tools.timer(1.5, "fire_both_lasers", self)
+	Tools.timer(1.5, "finish_lasers", self)
 
 func fire_laser1():
 	laser_1.activate()
@@ -106,7 +106,7 @@ func finish_lasers():
 	firing_lasers = false
 
 func _Interrupt():
-	wait_duration = .95
+	wait_duration = 0.95
 	._Interrupt()
 
 func _StartCondition() -> bool:
@@ -115,18 +115,18 @@ func _StartCondition() -> bool:
 	else:
 		return _StartCondition()
 
-func go_to_high_position() -> void:
-	var center = GameManager.camera.get_camera_screen_center() + Vector2(0,-42)
+func go_to_high_position() -> void :
+	var center = GameManager.camera.get_camera_screen_center() + Vector2(0, - 42)
 	var time_to_return = 1.0
 	turn_towards_point(center)
-	tween.create(Tween.EASE_IN_OUT,Tween.TRANS_QUAD)
-	tween.add_attribute("global_position:y",center.y,time_to_return,character)
+	tween.create(Tween.EASE_IN_OUT, Tween.TRANS_QUAD)
+	tween.add_attribute("global_position:y", center.y, time_to_return, character)
 	tween.add_callback("next_attack_stage")
 
-func go_back_to_hittable_position() -> void:
+func go_back_to_hittable_position() -> void :
 	var pos = space.get_closest_position()
 	var time_to_return = 1.0
-	#turn_towards_point(pos)
-	tween.create(Tween.EASE_IN_OUT,Tween.TRANS_SINE)
-	tween.add_attribute("global_position.y",pos.y,time_to_return,character)
+	
+	tween.create(Tween.EASE_IN_OUT, Tween.TRANS_SINE)
+	tween.add_attribute("global_position.y", pos.y, time_to_return, character)
 	tween.add_callback("next_attack_stage")

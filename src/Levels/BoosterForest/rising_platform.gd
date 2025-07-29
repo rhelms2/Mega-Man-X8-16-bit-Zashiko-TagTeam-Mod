@@ -1,4 +1,5 @@
 extends StaticBody2D
+class_name RisingPlatform
 
 export var tiles := 10
 export var speed := 0.25

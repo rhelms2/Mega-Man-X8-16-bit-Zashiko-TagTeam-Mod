@@ -1,29 +1,29 @@
 extends AttackAbility
-#class_name SwordPursuit
 
-export var nearby_distance : Vector2
-var max_distance : Vector2
-var player_direction := 0
-var turning := false
+
+export  var nearby_distance: Vector2
+var max_distance: Vector2
+var player_direction: = 0
+var turning: = false
 onready var slash: Node2D = $SlashHitbox
 
-func _ready() -> void:
+func _ready() -> void :
 	max_distance = $"../AI/vision/collisionShape2D".shape.extents
-	max_distance += Vector2(10,10)
+	max_distance += Vector2(10, 10)
 
 func _StartCondition() -> bool:
 	return character.is_on_floor()
 
-func _Setup() -> void:
+func _Setup() -> void :
 	attack_stage = 0
 	turning = false
 
-func go_to_slash_state() -> void:
+func go_to_slash_state() -> void :
 	decay_speed()
 	slash.handle_direction()
 	go_to_attack_stage(4)
 
-func _Update(_delta) -> void:
+func _Update(_delta: float) -> void :
 	process_gravity(_delta)
 	handle_turning()
 
@@ -35,7 +35,7 @@ func _Update(_delta) -> void:
 			next_attack_stage_on_next_frame()
 	
 	
-	elif attack_stage == 1 and has_finished_last_animation(): #pursuit
+	elif attack_stage == 1 and has_finished_last_animation():
 		play_animation_once("walk_loop")
 		force_movement(horizontal_velocity)
 		if is_player_nearby(nearby_distance):
@@ -45,13 +45,13 @@ func _Update(_delta) -> void:
 			play_animation_once("ready_loop")
 			go_to_attack_stage(5)
 	
-	elif attack_stage == 6 and timer > 1: #end pursuit
+	elif attack_stage == 6 and timer > 1:
 		if is_player_nearby(nearby_distance):
 			go_to_slash_state()
 		else:
 			EndAbility()
 	
-	if attack_stage == 2: # turn
+	if attack_stage == 2:
 		force_movement(0)
 		process_gravity(_delta)
 		play_animation_once("turn")
@@ -60,11 +60,11 @@ func _Update(_delta) -> void:
 			play_animation_once("ready_loop")
 			next_attack_stage()
 
-	elif attack_stage == 3 and timer > 0.25: #after turning
+	elif attack_stage == 3 and timer > 0.25:
 		turning = false
 		go_to_attack_stage(0)
 			
-	elif attack_stage == 4: #nearby player
+	elif attack_stage == 4:
 		play_animation_once("slash_prepare")
 		if has_finished_last_animation():
 			slash.activate()
@@ -77,15 +77,14 @@ func _Update(_delta) -> void:
 		else:
 			EndAbility()
 
-func handle_turning() -> void:
-	if not player_in_front() and not turning and \
-	not attack_stage == 4 and not attack_stage == 5:
+func handle_turning() -> void :
+	if not player_in_front() and not turning and not attack_stage == 4 and not attack_stage == 5:
 		go_to_attack_stage(2)
 		turning = true
 
-#func is_player_nearby() -> bool:
-	#return is_player_nearby_horizontally(nearby_distance.x) \
-	  # and is_player_nearby_vertically(nearby_distance.y)
+
+	
+			
 
 func should_stop_pursuing() -> bool:
 	if not is_player_nearby_vertically(max_distance.y):
@@ -97,7 +96,7 @@ func should_stop_pursuing() -> bool:
 func player_in_front() -> bool:
 	return get_player_direction_relative() == character.get_facing_direction()
 
-func turn_and_face_player() -> void:
+func turn_and_face_player() -> void :
 	.turn_and_face_player()
 	slash.handle_direction()
 	

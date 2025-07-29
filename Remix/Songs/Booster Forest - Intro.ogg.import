@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Booster Forest - Intro.ogg-de2c576004aabd6fe06bda7c4296a6a9.oggstr"
+
+[deps]
+
+source_file="res://Remix/Songs/Booster Forest - Intro.ogg"
+dest_files=[ "res://.import/Booster Forest - Intro.ogg-de2c576004aabd6fe06bda7c4296a6a9.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

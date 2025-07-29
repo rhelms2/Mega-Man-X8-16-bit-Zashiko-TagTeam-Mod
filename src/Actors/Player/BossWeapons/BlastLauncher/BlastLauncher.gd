@@ -1,4 +1,4 @@
 extends BossWeapon
 
-func _ready() -> void:
+func _ready() -> void :
 	pass

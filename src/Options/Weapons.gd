@@ -1,26 +1,26 @@
 extends VBoxContainer
 
-var choosen_weapon : Control
+var choosen_weapon: Control
 onready var cover_screen: ColorRect = $"../../CoverScreen"
 
-onready var weapons := get_children()
+onready var weapons: = get_children()
 onready var pause: CanvasLayer = $"../.."
 
-func set_weapon(choice : Control) -> void:
+func set_weapon(choice: Control) -> void :
 	var last_weapon = choosen_weapon
 	choosen_weapon = choice
 	if last_weapon and choosen_weapon != last_weapon:
 		last_weapon._on_focus_exited()
 
-func on_unlock_buttons() -> void:
+func on_unlock_buttons() -> void :
 	call_deferred("give_focus_to_first_weapon")
 
-func give_focus_to_first_weapon() -> void:
+func give_focus_to_first_weapon() -> void :
 	if choosen_weapon:
 		choosen_weapon.silent = true
 		choosen_weapon.grab_focus()
 
-func set_weapon_as_player_current_weapon() -> void:
+func set_weapon_as_player_current_weapon() -> void :
 	var current_player_weapon
 	if GameManager.is_player_in_scene():
 		current_player_weapon = GameManager.player.get_current_weapon()
@@ -32,11 +32,14 @@ func set_weapon_as_player_current_weapon() -> void:
 		set_weapon(weapons[0])
 	
 
-func _ready() -> void:
-	var _s = pause.connect("pause_starting",self,"show_weapons")
-	_s = pause.connect("unlock_buttons",self,"on_unlock_buttons")
+func _ready() -> void :
+	pause.character_menu_visibility()
+	var _s = pause.connect("pause_starting", self, "show_weapons")
+	_s = pause.connect("unlock_buttons", self, "on_unlock_buttons")
 
-func show_weapons() -> void:
+func show_weapons() -> void :
+	if CharacterManager.player_character != "X":
+		return
 	for weapon in weapons:
 		if weapon.name in GameManager.collectibles:
 			weapon.visible = true
@@ -46,9 +49,12 @@ func show_weapons() -> void:
 		elif weapon.name == "X Drive":
 			if GameManager.is_player_in_scene():
 				weapon.visible = GameManager.player.is_full_armor() == "hermes"
+		elif weapon.name == "Nova Strike":
+			if GameManager.is_player_in_scene():
+				weapon.visible = GameManager.player.is_full_armor() == "ultimate"
 		else:
 			weapon.visible = false
-	weapons[0].visible = true #Xbuster
+	weapons[0].visible = true
 	
 	set_weapon_as_player_current_weapon()
 	if choosen_weapon:

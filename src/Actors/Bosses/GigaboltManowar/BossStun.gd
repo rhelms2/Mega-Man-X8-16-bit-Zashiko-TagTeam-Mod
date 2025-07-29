@@ -1,4 +1,4 @@
-extends "res://src/Actors/Bosses/BossStun.gd"
+extends BossStun
 
 export var after_animation := "idle"
 

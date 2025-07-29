@@ -1,0 +1,53 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://Zero_mod/Sprites/zero_sprite_shader.tres" type="Shader" id=1]
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/Flash = 0.0
+shader_param/Should_Blink = null
+shader_param/MainColor1 = Color( 0.878431, 0.12549, 0, 1 )
+shader_param/MainColor2 = Color( 0.627451, 0.12549, 0, 1 )
+shader_param/MainColor3 = Color( 0.376471, 0.12549, 0, 1 )
+shader_param/MainColor4 = Color( 0.878431, 0.752941, 0, 1 )
+shader_param/MainColor5 = Color( 0.627451, 0.376471, 0, 1 )
+shader_param/MainColor6 = Color( 0.435294, 0.258824, 0, 1 )
+shader_param/R_MainColor1 = Color( 0.878431, 0.12549, 0, 1 )
+shader_param/R_MainColor2 = Color( 0.627451, 0.12549, 0, 1 )
+shader_param/R_MainColor3 = Color( 0.376471, 0.12549, 0, 1 )
+shader_param/R_MainColor4 = Color( 0.878431, 0.752941, 0, 1 )
+shader_param/R_MainColor5 = Color( 0.627451, 0.376471, 0, 1 )
+shader_param/R_MainColor6 = Color( 0.435294, 0.258824, 0, 1 )
+shader_param/CrystalColor1 = Color( 0.972549, 0.972549, 0.972549, 1 )
+shader_param/CrystalColor2 = Color( 0.376471, 0.627451, 0.878431, 1 )
+shader_param/CrystalColor3 = Color( 0, 0.25098, 0.627451, 1 )
+shader_param/R_CrystalColor1 = Color( 0.972549, 0.972549, 0.972549, 1 )
+shader_param/Alert = 0.0
+shader_param/R_CrystalColor2 = Color( 0.376471, 0.627451, 0.878431, 1 )
+shader_param/R_CrystalColor3 = Color( 0, 0.25098, 0.627451, 1 )
+shader_param/tolerance = 0.01
+shader_param/GreenColor1 = Color( 0.25098, 0.878431, 0.25098, 1 )
+shader_param/GreenColor2 = Color( 0.12549, 0.627451, 0.12549, 1 )
+shader_param/OutlineColor = Color( 0.12549, 0.12549, 0.12549, 1 )
+shader_param/R_GreenColor1 = Color( 0.25098, 0.878431, 0.25098, 1 )
+shader_param/R_GreenColor2 = Color( 0.12549, 0.627451, 0.12549, 1 )
+shader_param/R_OutlineColor = Color( 0.12549, 0.12549, 0.12549, 1 )
+shader_param/SaberColor1 = Color( 0.627451, 0.878431, 0.501961, 1 )
+shader_param/SaberColor2 = Color( 0.376471, 0.878431, 0.25098, 1 )
+shader_param/SaberColor3 = Color( 0.25098, 0.752941, 0.25098, 1 )
+shader_param/SaberColor4 = Color( 0.258824, 0.647059, 0.258824, 1 )
+shader_param/R_SaberColor1 = Color( 0.627451, 0.878431, 0.501961, 1 )
+shader_param/R_SaberColor2 = Color( 0.376471, 0.878431, 0.25098, 1 )
+shader_param/R_SaberColor3 = Color( 0.25098, 0.752941, 0.25098, 1 )
+shader_param/R_SaberColor4 = Color( 0.258824, 0.647059, 0.258824, 1 )
+shader_param/HairColor = Color( 0.313726, 0.0941176, 0, 1 )
+shader_param/R_HairColor = Color( 0.435294, 0.258824, 0, 1 )
+shader_param/LightRedColor1 = Color( 1, 0.34902, 0.34902, 1 )
+shader_param/R_LightRedColor1 = Color( 1, 0.34902, 0.34902, 1 )
+shader_param/SaberColor0 = Color( 0.905882, 0.905882, 0.905882, 1 )
+shader_param/R_SaberColor0 = Color( 0.905882, 0.905882, 0.905882, 1 )
+shader_param/AuraColor = Color( 0.8, 0.105882, 0, 1 )
+shader_param/R_AuraColor = Color( 0.8, 0.105882, 0, 1 )
+shader_param/Darken = 1.0
+shader_param/Alpha = 1.0

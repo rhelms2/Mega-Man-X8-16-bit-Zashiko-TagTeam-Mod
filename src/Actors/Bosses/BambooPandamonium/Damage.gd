@@ -1,8 +1,8 @@
 extends BossDamage
 
-const exceptions = ["RideArmor","Optic","Fire"]
+const exceptions = ["RideArmor", "Optic", "Fire", "Flame", "Enkoujin", "Juuhazan", "Enkoujin_Charged", "Enkoujin_Charged_B"]
 
-func should_ignore_damage (inflicter) -> bool:
+func should_ignore_damage(inflicter) -> bool:
 		
 	if character.is_invulnerable() or not character.has_health():
 		return true

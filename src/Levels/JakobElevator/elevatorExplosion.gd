@@ -4,15 +4,16 @@ onready var shutdown_2: AudioStreamPlayer2D = $"../shutdown2"
 onready var startup: AudioStreamPlayer2D = $"../startup"
 onready var startup_2: AudioStreamPlayer2D = $"../startup2"
 onready var loop: AudioStreamPlayer2D = $"../loop"
-export var doorblock : NodePath
+export  var doorblock: NodePath
 
-func play_start_sound() -> void:
+func play_start_sound() -> void :
 	startup.play()
 	startup_2.play()
 	loop.play()
-	get_node(doorblock).set_deferred("disabled",false)
+	
+	get_node(doorblock).set_deferred("disabled", false)
 
-func emit() -> void:
+func emit() -> void :
 	emitting = true
 	shutdown.play()
 	shutdown_2.play()

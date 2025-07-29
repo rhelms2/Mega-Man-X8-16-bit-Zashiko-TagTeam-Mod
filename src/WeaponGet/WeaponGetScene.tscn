@@ -1,4 +1,4 @@
-[gd_scene load_steps=79 format=2]
+[gd_scene load_steps=78 format=2]
 
 [ext_resource path="res://addons/PaletteSwap/PaletteSwap.gdshader" type="Shader" id=1]
 [ext_resource path="res://src/Levels/HUD.gd" type="Script" id=2]
@@ -63,7 +63,6 @@
 [ext_resource path="res://src/Sounds/12 - MMX - X Life Gain.wav" type="AudioStream" id=61]
 [ext_resource path="res://src/Levels/music_player.gd" type="Script" id=62]
 [ext_resource path="res://src/System/StateCamera.tscn" type="PackedScene" id=63]
-[ext_resource path="res://src/Levels/IGTimer.tscn" type="PackedScene" id=64]
 
 [sub_resource type="ShaderMaterial" id=52]
 resource_local_to_scene = true
@@ -493,7 +492,7 @@ script = ExtResource( 42 )
 
 [node name="animatedSprite" parent="Objects/Servbot" index="1"]
 material = SubResource( 69 )
-frame = 14
+frame = 8
 
 [node name="EnemyDeath" parent="Objects/Servbot" index="8"]
 should_spawn_item = false
@@ -503,7 +502,7 @@ position = Vector2( 238, -23 )
 
 [node name="animatedSprite" parent="Objects/Servbot2" index="1"]
 material = SubResource( 70 )
-frame = 14
+frame = 8
 
 [node name="EnemyDeath" parent="Objects/Servbot2" index="8"]
 should_spawn_item = false
@@ -513,7 +512,7 @@ position = Vector2( 286, -35 )
 
 [node name="animatedSprite" parent="Objects/Servbot3" index="1"]
 material = SubResource( 71 )
-frame = 14
+frame = 8
 
 [node name="EnemyDeath" parent="Objects/Servbot3" index="8"]
 should_spawn_item = false
@@ -548,7 +547,7 @@ position = Vector2( 0, -16 )
 z_index = 1
 frames = ExtResource( 46 )
 animation = "idle"
-frame = 11
+frame = 2
 playing = true
 flip_h = true
 
@@ -708,7 +707,6 @@ position = Vector2( 180, -2 )
 
 [node name="animatedSprite" parent="Objects/Drone2" index="1"]
 material = SubResource( 72 )
-frame = 0
 
 [node name="animatedSprite" parent="Objects/Drone2/animatedSprite" index="0"]
 material = SubResource( 72 )
@@ -732,9 +730,6 @@ shape = SubResource( 53 )
 
 [node name="LevelModifier" type="Node" parent="."]
 script = ExtResource( 50 )
-
-[node name="IGTimer" parent="." instance=ExtResource( 64 )]
-section = "Misc."
 
 [connection signal="animation_finished" from="StateCamera/Ready Warning Text" to="StateCamera/Ready Warning Text" method="_on_animatedSprite_animation_finished"]
 [connection signal="initialize" from="StateCamera/WeaponGetScreen" to="InputEmulator" method="start"]

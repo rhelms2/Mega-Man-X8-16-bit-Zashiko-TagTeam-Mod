@@ -1,10 +1,10 @@
 extends Node
 
 
-func _ready() -> void:
+func _ready() -> void :
 	if not "finished_intro" in GameManager.collectibles:
-	 disable()
+		disable()
 
-func disable() -> void:
+func disable() -> void :
 	$"..".visible = false
 	pass

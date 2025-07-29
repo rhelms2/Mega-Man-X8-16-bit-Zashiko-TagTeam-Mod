@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Metal Valley - Intro.ogg-4615adff9c5e9c6e62920722a74cb679.oggstr"
+
+[deps]
+
+source_file="res://Remix/Songs/Metal Valley - Intro.ogg"
+dest_files=[ "res://.import/Metal Valley - Intro.ogg-4615adff9c5e9c6e62920722a74cb679.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

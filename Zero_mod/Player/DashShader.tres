@@ -1,0 +1,15 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://Zero_mod/Player/DashShader.shader" type="Shader" id=1]
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/display_color = null
+shader_param/ignored_color_1 = null
+shader_param/ignored_color_2 = null
+shader_param/ignored_color_3 = null
+shader_param/ignored_color_4 = null
+shader_param/ignored_color_5 = null
+shader_param/ignored_color_6 = null
+shader_param/ignored_color_7 = null
+shader_param/ignored_color_8 = null

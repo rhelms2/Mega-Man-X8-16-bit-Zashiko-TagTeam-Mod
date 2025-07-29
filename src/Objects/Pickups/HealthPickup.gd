@@ -1,5 +1,5 @@
 extends PickUp
 
 
-func _ready() -> void:
+func _ready() -> void :
 	pass

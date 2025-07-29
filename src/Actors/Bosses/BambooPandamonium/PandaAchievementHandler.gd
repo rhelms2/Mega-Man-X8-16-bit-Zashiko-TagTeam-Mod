@@ -1,4 +1,4 @@
-extends "res://src/AchievementSystem/BossAchievementHandler.gd"
+extends BossAchievementHandler
 
 
 func fire_achievements():

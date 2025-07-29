@@ -6,9 +6,9 @@ onready var mid_sky: ParallaxLayer = $"../Scenery/parallaxBackground/mid_sky"
 onready var foreground: ParallaxLayer = $"../parallaxBackground2/foreground"
 
 
-func _on_body_entered(_body: Node) -> void:
+func _on_body_entered(_body: Node) -> void :
 	mid_sky.visible = false
 	start.visible = true
 	sky_limit.visible = false
 	inner_tower.visible = false
-	pass # Replace with function body.
+	pass

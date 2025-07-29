@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/mmx3_loop.ogg-d55bf83623ae1dde8325fdedc8edae5a.oggstr"
+
+[deps]
+
+source_file="res://System/BossMusic/mmx3_loop.ogg"
+dest_files=[ "res://.import/mmx3_loop.ogg-d55bf83623ae1dde8325fdedc8edae5a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

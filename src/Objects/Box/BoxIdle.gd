@@ -1,13 +1,13 @@
 extends AttackAbility
-export var gravity := false
+export  var gravity: = false
 
-func _Setup() -> void:
+func _Setup() -> void :
 	pass
 
-func _Update(delta) -> void:
+func _Update(delta: float) -> void :
 	if gravity:
 		process_gravity(delta)
 
-func check_for_event_errors() -> void:
+func check_for_event_errors() -> void :
 	pass
 

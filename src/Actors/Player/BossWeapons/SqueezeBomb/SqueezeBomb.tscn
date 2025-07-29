@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=1]
-[ext_resource path="res://src/Actors/Player/BossWeapons/SqueezeBomb/SqueezeBomb.gd" type="Script" id=2]
-[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=3]
-[ext_resource path="res://src/Actors/Player/BossWeapons/SqueezeBomb/Deflectable.gd" type="Script" id=4]
-[ext_resource path="res://src/Sounds/Rooster - Explosion.ogg" type="AudioStream" id=5]
-[ext_resource path="res://src/Sounds/Antonion - BoxPrepare.wav" type="AudioStream" id=6]
-[ext_resource path="res://src/Actors/Player/BossWeapons/SqueezeBomb/squeeze_bomb.res" type="SpriteFrames" id=7]
+[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Player/BossWeapons/SqueezeBomb/squeeze_bomb.res" type="SpriteFrames" id=2]
+[ext_resource path="res://src/Actors/Player/BossWeapons/SqueezeBomb/Deflectable.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/Player/BossWeapons/SqueezeBomb/SqueezeBomb.gd" type="Script" id=4]
+[ext_resource path="res://src/Sounds/Antonion - BoxPrepare.wav" type="AudioStream" id=5]
+[ext_resource path="res://src/Sounds/Rooster - Explosion.ogg" type="AudioStream" id=6]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=7]
 
 [sub_resource type="CircleShape2D" id=17]
 radius = 23.0868
@@ -18,7 +18,7 @@ extents = Vector2( 12, 12 )
 z_index = 5
 collision_layer = 4
 collision_mask = 0
-script = ExtResource( 2 )
+script = ExtResource( 4 )
 damage = 2.0
 damage_to_bosses = 0.25
 damage_to_weakness = 12.0
@@ -28,7 +28,7 @@ duration = 1.25
 move_speed = 150.0
 
 [node name="animatedSprite" type="AnimatedSprite" parent="."]
-frames = ExtResource( 7 )
+frames = ExtResource( 2 )
 animation = "idle"
 frame = 4
 playing = true
@@ -45,7 +45,7 @@ z_index = -1
 shape = SubResource( 17 )
 
 [node name="disabler" type="Node" parent="."]
-script = ExtResource( 3 )
+script = ExtResource( 1 )
 fade_out = true
 delete_after_fade = true
 undo_on_rotation_end = false
@@ -55,22 +55,22 @@ modulate = Color( 0.929412, 1, 0, 1 )
 collision_layer = 4
 collision_mask = 0
 mode = 3
-script = ExtResource( 4 )
+script = ExtResource( 3 )
 
 [node name="collisionShape2D" type="CollisionShape2D" parent="Deflectable"]
 shape = SubResource( 16 )
 
 [node name="point" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 6 )
+stream = ExtResource( 5 )
 volume_db = -8.0
 pitch_scale = 2.0
 max_distance = 600.0
 bus = "SFX"
-script = ExtResource( 1 )
+script = ExtResource( 7 )
 
 [node name="sound" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource( 5 )
+stream = ExtResource( 6 )
 volume_db = -8.5
 max_distance = 600.0
 bus = "SFX"
-script = ExtResource( 1 )
+script = ExtResource( 7 )

@@ -1,11 +1,11 @@
 extends BossDamage
 
 
-func should_ignore_damage(t) -> bool:
+func should_ignore_damage(_t) -> bool:
 	return false
 
-func reduce_health(_i,_g) -> void:
-	character.reduce_health(25)
+func reduce_health(_i, _g) -> void :
+	character.reduce_health(25 * CharacterManager.damage_deal_multiplier)
 	max_flash_time = normal_flash_time
 	
 func damage(damage, inflicter) -> float:

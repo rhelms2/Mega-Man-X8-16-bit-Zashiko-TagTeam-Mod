@@ -1,15 +1,25 @@
 extends AttackAbility
+
 onready var rage: AudioStreamPlayer2D = $rage
+
+var desperation_damage_reduction: float = 0.5
+
 signal ready_for_stun
 signal beam
+signal laser
 
-func _Setup() -> void:
+
+func set_game_modes() -> void :
+	desperation_damage_reduction = CharacterManager.boss_damage_reduction
+
+func _Setup() -> void :
+	set_game_modes()
 	turn_and_face_player()
 	play_animation("rage_prepare")
 	rage.play()
-	character.emit_signal("damage_reduction", 0.5)
+	character.emit_signal("damage_reduction", desperation_damage_reduction)
 
-func _Update(delta) -> void:
+func _Update(delta: float) -> void :
 	process_gravity(delta)
 	if attack_stage == 0 and has_finished_last_animation():
 		play_animation("rage_loop")
@@ -25,10 +35,12 @@ func _Update(delta) -> void:
 		
 	elif attack_stage == 3 and timer > 0.5:
 		play_animation("desp")
-		emit_signal("beam")
+		if CharacterManager.game_mode < 1:
+			emit_signal("beam")
+		emit_signal("laser")
 		emit_signal("ready_for_stun")
 		next_attack_stage()
-	
+		
 	elif attack_stage == 4 and has_finished_last_animation():
 		play_animation("desp_loop")
 		#cria o laser
@@ -41,6 +53,6 @@ func _Update(delta) -> void:
 	elif attack_stage == 6 and has_finished_last_animation():
 		EndAbility()
 
-func _Interrupt():
+func _Interrupt() -> void :
 	._Interrupt()
 	character.emit_signal("damage_reduction", 1.0)

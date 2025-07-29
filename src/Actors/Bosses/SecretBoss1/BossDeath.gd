@@ -6,12 +6,29 @@ export var dialogue : Resource
 signal screen_flash
 onready var battle_song: AudioStreamPlayer = $"../Intro/BattleSong"
 
-func _ready() -> void:
-	character.listen("zero_health",self,"start")
+func unlock_axl_white():
+	if CharacterManager.player_character == "Axl":
+		if is_instance_valid(GameManager.player):
+			var axl = GameManager.player
+			CharacterManager.white_axl_armor = true
+			axl.equip_axl_white_parts()
+			CharacterManager.set_axl_colors(axl.animatedSprite)
+			var pause_node = get_tree().root.find_node("Pause", true, false)
+			pause_node.character_menu_visibility()
+			GameManager.add_collectible_to_savedata("white_axl_armor")
+			achievement_check()
+		
+func achievement_check() -> void :
+	Achievements.unlock("COLLECTWHITEAXL")
+	Savefile.save(Savefile.save_slot)
 
-func start() -> void:
+func _ready() -> void :
+	dialogue = CharacterManager._set_correct_dialogues("Secret1Defeated", dialogue)
+	character.listen("zero_health", self, "start")
+
+func start() -> void :
 	character.interrupt_all_moves()
-	
+	unlock_axl_white()
 	ExecuteOnce()
 
 func _Setup() -> void:
@@ -22,6 +39,7 @@ func _Setup() -> void:
 	explosion.play()
 	emit_signals()
 	battle_song.fade_out()
+	GlobalVariables.add("red_defeated", "defeated")
 
 func emit_signals() -> void:
 	character.emit_signal("death")

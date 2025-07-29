@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/black_arrow.ogg-3a8aec0f5efb216b4cae0b8d46f290ab.oggstr"
+
+[deps]
+
+source_file="res://Axl_mod/SFX/black_arrow.ogg"
+dest_files=[ "res://.import/black_arrow.ogg-3a8aec0f5efb216b4cae0b8d46f290ab.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

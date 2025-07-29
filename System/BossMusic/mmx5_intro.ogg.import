@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/mmx5_intro.ogg-436f5369abd4300133e267535ca605cc.oggstr"
+
+[deps]
+
+source_file="res://System/BossMusic/mmx5_intro.ogg"
+dest_files=[ "res://.import/mmx5_intro.ogg-436f5369abd4300133e267535ca605cc.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

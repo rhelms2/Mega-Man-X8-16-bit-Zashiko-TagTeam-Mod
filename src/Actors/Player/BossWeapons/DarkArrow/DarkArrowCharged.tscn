@@ -1,20 +1,20 @@
 [gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://src/Actors/Player/BossWeapons/DarkArrow/DarkArrowCharged.gd" type="Script" id=1]
-[ext_resource path="res://src/Effects/Textures/giant_darkwave.png" type="Texture" id=2]
+[ext_resource path="res://src/Actors/Player/BossWeapons/DarkArrow/Tracker.gd" type="Script" id=2]
 [ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=3]
-[ext_resource path="res://src/Actors/Player/BossWeapons/DarkArrow/Tracker.gd" type="Script" id=6]
+[ext_resource path="res://src/Effects/Textures/giant_darkwave.png" type="Texture" id=4]
 
 [sub_resource type="AtlasTexture" id=20]
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 0, 0, 70, 146 )
 
 [sub_resource type="AtlasTexture" id=21]
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 70, 0, 70, 146 )
 
 [sub_resource type="AtlasTexture" id=22]
-atlas = ExtResource( 2 )
+atlas = ExtResource( 4 )
 region = Rect2( 140, 0, 70, 146 )
 
 [sub_resource type="SpriteFrames" id=23]
@@ -57,7 +57,7 @@ shape = SubResource( 19 )
 [node name="left_tracker" type="Area2D" parent="."]
 collision_layer = 0
 collision_mask = 8
-script = ExtResource( 6 )
+script = ExtResource( 2 )
 
 [node name="collisionShape2D" type="CollisionShape2D" parent="left_tracker"]
 position = Vector2( -108.5, 0 )
@@ -67,7 +67,7 @@ shape = SubResource( 16 )
 position = Vector2( 1, 0 )
 collision_layer = 0
 collision_mask = 8
-script = ExtResource( 6 )
+script = ExtResource( 2 )
 
 [node name="collisionShape2D" type="CollisionShape2D" parent="right_tracker"]
 position = Vector2( 107.5, 0 )

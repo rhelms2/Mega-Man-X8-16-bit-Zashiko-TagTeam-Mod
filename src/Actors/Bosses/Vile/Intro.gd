@@ -4,10 +4,24 @@ export var boss_vile := false
 const sprite_y := -19.0
 onready var beam_in: AudioStreamPlayer2D = $beam_in
 
-func connect_start_events() -> void:
-	Event.listen("vile_door_open",self,"prepare_for_intro")
-	Event.listen("vile_door_exploded",self,"prepare_for_intro")
-	Event.listen("vile_door_closed",self,"execute_intro")
+func set_dialogues():
+	var _level_node = get_parent().get_parent().get_parent()
+	
+	var _level_name = _level_node.name
+	
+	if "BoosterForest" in _level_name:
+		dialogue = CharacterManager._set_correct_dialogues("Vile Booster Forest", dialogue)
+	if "Primrose" in _level_name:
+		dialogue = CharacterManager._set_correct_dialogues("Vile Primrose", dialogue)
+	
+func _ready() -> void :
+	._ready()
+	set_dialogues()
+
+func connect_start_events() -> void :
+	Event.listen("vile_door_open", self, "prepare_for_intro")
+	Event.listen("vile_door_exploded", self, "prepare_for_intro")
+	Event.listen("vile_door_closed", self, "execute_intro")
 
 func prepare_for_intro() -> void:
 	animatedSprite.position = Vector2(0,-256)
@@ -19,7 +33,7 @@ func _Update(delta):
 		Event.emit_signal("vile_intro")
 		turn_player_towards_boss()
 		turn_and_face_player()
-		tween_attribute("position:y",sprite_y,0.5,animatedSprite)
+		tween_attribute("position:y", sprite_y, 0.5, animatedSprite)
 		beam_in.play()
 		add_next_state(get_last_tween())
 		next_attack_stage()
@@ -65,21 +79,20 @@ func _Update(delta):
 		else:
 			EndAbility()
 
-func _Interrupt() -> void:
+func _Interrupt() -> void :
 	Event.emit_signal("boss_start", character)
 	GameManager.end_cutscene()
 	character.emit_signal("intro_concluded")
 	if boss_vile:
 		deactivate_air_attacks()
 
-export var ignore_deactivate := false
-func deactivate_air_attacks() -> void:
+export  var ignore_deactivate: = false
+func deactivate_air_attacks() -> void :
 	if ignore_deactivate:
 		return
-	var air_attacks = [$"../VileAirCannon",$"../VileAirMissile",$"../VileAirDash",$"../VileAirKnee"]
+	var air_attacks = [$"../VileAirCannon", $"../VileAirMissile", $"../VileAirDash", $"../VileAirKnee"]
 	for attack in air_attacks:
 		attack.deactivate()
-
 
 func seen_dialog() -> bool:
 	if GameManager.has_beaten_the_game():

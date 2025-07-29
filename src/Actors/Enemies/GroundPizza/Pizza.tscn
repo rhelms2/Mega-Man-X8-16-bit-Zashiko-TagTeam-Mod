@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://src/Actors/Enemies/AI.gd" type="Script" id=1]
 [ext_resource path="res://src/Actors/Enemies/GroundPizza/Pizza.gd" type="Script" id=2]
@@ -23,10 +23,13 @@ extents = Vector2( 33.5, 20 )
 extents = Vector2( 13.5, 5.25 )
 
 [sub_resource type="RectangleShape2D" id=47]
-extents = Vector2( 8, 21.5 )
+extents = Vector2( 8, 17.5 )
 
 [sub_resource type="RectangleShape2D" id=48]
-extents = Vector2( 8, 6.5 )
+extents = Vector2( 10, 6.5 )
+
+[sub_resource type="RectangleShape2D" id=249]
+extents = Vector2( 10, 6.5 )
 
 [sub_resource type="Curve" id=247]
 max_value = 3.0
@@ -71,7 +74,7 @@ anim_speed = 1.0
 anim_speed_curve = SubResource( 243 )
 
 [sub_resource type="RectangleShape2D" id=49]
-extents = Vector2( 9, 11.0625 )
+extents = Vector2( 16, 5.5 )
 
 [node name="Pizza" type="KinematicBody2D" groups=["Enemies"]]
 z_index = 2
@@ -113,13 +116,12 @@ scale = Vector2( 2, 2 )
 rect = Rect2( -5, -5, 10, 10 )
 
 [node name="area2D" type="Area2D" parent="."]
-visible = false
 collision_layer = 0
 collision_mask = 6
 input_pickable = false
 
 [node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
-position = Vector2( 0, 4.5 )
+position = Vector2( 0, 6.5 )
 shape = SubResource( 47 )
 
 [node name="DamageOnTouch" type="Node2D" parent="."]
@@ -131,22 +133,42 @@ script = ExtResource( 5 )
 damage = 4.0
 
 [node name="projectile" type="Area2D" parent="Projectile_DoT"]
-visible = false
 collision_layer = 0
 collision_mask = 6
 input_pickable = false
 
 [node name="collisionShape2D" type="CollisionShape2D" parent="Projectile_DoT/projectile"]
+position = Vector2( -1, 0.5 )
 shape = SubResource( 48 )
 
 [node name="lilpizza" type="AnimatedSprite" parent="Projectile_DoT/projectile"]
 material = ExtResource( 12 )
+position = Vector2( -1, 1 )
 z_index = -1
 frames = ExtResource( 16 )
 animation = "projectile"
 frame = 1
 playing = true
 flip_h = true
+
+[node name="EnemyShieldprojectile" type="Node2D" parent="Projectile_DoT/projectile"]
+script = ExtResource( 9 )
+breakable = false
+
+[node name="hittable_area" type="Area2D" parent="Projectile_DoT/projectile/EnemyShieldprojectile"]
+collision_layer = 0
+collision_mask = 6
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="Projectile_DoT/projectile/EnemyShieldprojectile/hittable_area"]
+position = Vector2( -1, 0.5 )
+shape = SubResource( 249 )
+
+[node name="hitSound" type="AudioStreamPlayer2D" parent="Projectile_DoT/projectile/EnemyShieldprojectile"]
+stream = ExtResource( 11 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
 
 [node name="Damage" type="Node2D" parent="."]
 script = ExtResource( 6 )
@@ -220,7 +242,6 @@ actions = [ "Event" ]
 animation = "stop"
 
 [node name="EnemyShield" type="Node2D" parent="."]
-visible = false
 script = ExtResource( 9 )
 breakable = false
 
@@ -230,7 +251,7 @@ collision_mask = 6
 input_pickable = false
 
 [node name="collisionShape2D" type="CollisionShape2D" parent="EnemyShield/hittable_area"]
-position = Vector2( 0, 9.0625 )
+position = Vector2( 0, 18.5 )
 shape = SubResource( 49 )
 
 [node name="hitSound" type="AudioStreamPlayer2D" parent="EnemyShield"]
@@ -241,5 +262,7 @@ attenuation = 1e-05
 bus = "SFX"
 
 [connection signal="body_entered" from="AI/vision" to="AI" method="_on_vision_body_entered"]
+[connection signal="body_entered" from="Projectile_DoT/projectile/EnemyShieldprojectile/hittable_area" to="Deflect" method="_on_hittable_area_body_shape_entered"]
+[connection signal="body_shape_entered" from="Projectile_DoT/projectile/EnemyShieldprojectile/hittable_area" to="Deflect" method="_on_hittable_area_body_shape_entered"]
 
 [editable path="EnemyDeath/Remains"]
