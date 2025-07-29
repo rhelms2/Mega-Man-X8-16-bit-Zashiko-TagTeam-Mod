@@ -77,7 +77,7 @@ func _save() -> void :
 		"new_game": new_game, 
 		"beaten_hard": beaten_hard, 
 		"beaten_insanity": beaten_insanity, 
-		
+		"beaten_ninjagaiden": beaten_ninjagaiden,
 		"beta_zero_unlocked": betazero_unlocked, 
 		"beta_zero_activated": betazero_activated, 
 		
@@ -171,6 +171,7 @@ func _process(_delta: float) -> void :
 
 var beaten_hard: bool = false
 var beaten_insanity: bool = false
+var beaten_ninjagaiden: bool = false
 var game_mode_set: bool = false
 var damage_deal_multiplier: float = 1.0
 var damage_get_multiplier: float = 1.0
