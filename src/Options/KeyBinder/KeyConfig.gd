@@ -140,6 +140,11 @@ func start() -> void :
 	emit_signal("lock_buttons")
 	if start_emit_event != "none":
 		Event.emit_signal(start_emit_event)
+	if has_node("Menu/scrollContainer/OptionHolder/ShowDebug"):
+		if Input.is_action_pressed("select_special"):
+			$"Menu/scrollContainer/OptionHolder/ShowDebug".visible = true
+		else:
+			$"Menu/scrollContainer/OptionHolder/ShowDebug".visible = false
 	fader.visible = true
 	fader.FadeIn()
 	yield(fader, "finished")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=138 format=2]
+[gd_scene load_steps=139 format=2]
 
 [ext_resource path="res://src/System/CameraLimits.gd" type="Script" id=1]
 [ext_resource path="res://src/Levels/Test/test_tileset.tres" type="TileSet" id=2]
@@ -89,6 +89,7 @@
 [ext_resource path="res://src/Levels/PitchBlack/parent_mover.gd" type="Script" id=87]
 [ext_resource path="res://Zero_mod/Objects/Pickups/WeaponCollect.tscn" type="PackedScene" id=88]
 [ext_resource path="res://Zero_mod/Levels/Black_Zero_Block.gd" type="Script" id=89]
+[ext_resource path="res://src/Levels/IGTimer.tscn" type="PackedScene" id=90]
 [ext_resource path="res://Zero_mod/Player/Weapons/Sigma-Blade.tres" type="Resource" id=91]
 [ext_resource path="res://Zero_mod/Player/Weapons/V-Hanger.tres" type="Resource" id=92]
 [ext_resource path="res://Zero_mod/Objects/Pickups/BetaZero.tscn" type="PackedScene" id=94]
@@ -6515,6 +6516,9 @@ position = Vector2( 5240, 1600 )
 armor_part = "hermes_body"
 dialogue = ExtResource( 26 )
 
+[node name="animatedSprite" parent="Objects/Capsule" index="1"]
+frame = 0
+
 [node name="collisionShape2D" parent="Objects/Capsule/area2D" index="0"]
 shape = SubResource( 49 )
 
@@ -7620,6 +7624,8 @@ position = Vector2( 78, -82 )
 rotate = false
 
 [node name="BrightServbot" parent="Darkness/ServbotPath/pathFollow2D" instance=ExtResource( 56 )]
+
+[node name="IGTimer" parent="." instance=ExtResource( 90 )]
 
 [connection signal="animation_finished" from="camera2D/Ready Warning Text" to="camera2D/Ready Warning Text" method="_on_animatedSprite_animation_finished"]
 [connection signal="body_entered" from="Scenery/canvasLayer/parallaxBackground/BackgroundSwap" to="Scenery/canvasLayer/parallaxBackground/BackgroundSwap" method="_on_area2D_body_entered"]

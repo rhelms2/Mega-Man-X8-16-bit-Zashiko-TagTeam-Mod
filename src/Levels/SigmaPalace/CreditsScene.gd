@@ -113,6 +113,6 @@ func fade_out():
 	tween.attribute("modulate:a", 1.0, fade_out_duration, screencover)
 	tween.add_wait(3)
 	tween.attribute("volume_db", - 80, fade_out_duration, loop)
-	tween.add_callback("go_to_intro", GameManager)
+	tween.add_callback("go_to_igt", GameManager)
 	CharacterManager.credits_seen = true
 	CharacterManager._save()

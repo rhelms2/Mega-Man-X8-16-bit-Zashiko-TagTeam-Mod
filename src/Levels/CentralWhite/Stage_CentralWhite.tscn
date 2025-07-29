@@ -1,4 +1,4 @@
-[gd_scene load_steps=102 format=2]
+[gd_scene load_steps=103 format=2]
 
 [ext_resource path="res://src/Levels/CentralWhite/Music Player.gd" type="Script" id=1]
 [ext_resource path="res://System/Character_Spawner.gd" type="Script" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://src/Levels/CentralWhite/parallax_3.png" type="Texture" id=19]
 [ext_resource path="res://src/Levels/CentralWhite/new_parallax_4.png" type="Texture" id=20]
 [ext_resource path="res://Axl_mod/Enemies/SnowThrower/SnowThrower.tscn" type="PackedScene" id=21]
+[ext_resource path="res://src/Levels/IGTimer.tscn" type="PackedScene" id=22]
 [ext_resource path="res://src/Effects/Textures/small_snow.png" type="Texture" id=23]
 [ext_resource path="res://src/Levels/CentralWhite/map_5.tscn" type="PackedScene" id=24]
 [ext_resource path="res://src/Objects/Door/NewBossDoor.tscn" type="PackedScene" id=27]
@@ -563,7 +564,6 @@ pause_mode = 2
 position = Vector2( 4406, -1313 )
 z_index = 2
 frames = SubResource( 187 )
-frame = 3
 playing = true
 flip_h = true
 script = ExtResource( 82 )
@@ -1043,6 +1043,8 @@ z_index = 1
 object_to_spawn = ExtResource( 43 )
 set_direction_to_right = false
 despawnable = false
+
+[node name="IGTimer" parent="." instance=ExtResource( 22 )]
 
 [connection signal="animation_finished" from="StateCamera/Ready Warning Text" to="StateCamera/Ready Warning Text" method="_on_animatedSprite_animation_finished"]
 [connection signal="explode" from="Objects/Door" to="Objects/Door/AchievementUnlocker" method="fire_achievement"]

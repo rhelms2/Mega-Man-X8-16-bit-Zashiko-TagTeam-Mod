@@ -1,4 +1,4 @@
-[gd_scene load_steps=124 format=2]
+[gd_scene load_steps=125 format=2]
 
 [ext_resource path="res://src/Actors/Enemies/BigMechaniloid/EnemyMechaniloid.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Objects/Pickups/SubTank.tscn" type="PackedScene" id=2]
@@ -71,6 +71,7 @@
 [ext_resource path="res://src/Levels/MetalValley/sandstorm.gd" type="Script" id=69]
 [ext_resource path="res://System/Character_Spawner.gd" type="Script" id=70]
 [ext_resource path="res://Zero_mod/Levels/Zero_B-Fan.gd" type="Script" id=71]
+[ext_resource path="res://src/Levels/IGTimer.tscn" type="PackedScene" id=72]
 [ext_resource path="res://Zero_mod/Objects/Pickups/WeaponCollect.tscn" type="PackedScene" id=73]
 [ext_resource path="res://src/Actors/Enemies/Respawner.gd" type="Script" id=74]
 
@@ -1960,6 +1961,8 @@ spawn_direction = 1
 position = Vector2( -112, 508 )
 z_index = -2
 max_health = 200.0
+
+[node name="IGTimer" parent="." index="9" instance=ExtResource( 72 )]
 
 [connection signal="body_entered" from="Scenery/parallaxBackground/OutsideBGActivator" to="Scenery/parallaxBackground/OutsideBGActivator" method="_on_area2D_body_entered"]
 [connection signal="body_exited" from="Scenery/parallaxBackground/OutsideBGActivator" to="Scenery/parallaxBackground/OutsideBGActivator" method="_on_BackgroundSwap_body_exited"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=134 format=2]
+[gd_scene load_steps=135 format=2]
 
 [ext_resource path="res://src/System/CameraLimits.gd" type="Script" id=1]
 [ext_resource path="res://src/Levels/Test/test_tileset.tres" type="TileSet" id=2]
@@ -87,6 +87,7 @@
 [ext_resource path="res://src/Levels/Primrose/portal.png" type="Texture" id=85]
 [ext_resource path="res://src/Levels/Primrose/portal_deactivated.png" type="Texture" id=86]
 [ext_resource path="res://System/Character_Spawner.gd" type="Script" id=87]
+[ext_resource path="res://src/Levels/IGTimer.tscn" type="PackedScene" id=88]
 
 [sub_resource type="RectangleShape2D" id=41]
 extents = Vector2( 41.5, 19 )
@@ -1022,6 +1023,7 @@ rotate = false
 z_index = 5
 frames = ExtResource( 52 )
 animation = "roll_loop"
+frame = 2
 playing = true
 script = ExtResource( 51 )
 duration = 14.0
@@ -1073,6 +1075,7 @@ rotate = false
 z_index = 5
 frames = ExtResource( 52 )
 animation = "roll_loop"
+frame = 2
 playing = true
 script = ExtResource( 51 )
 duration = 16.0
@@ -1124,7 +1127,7 @@ rotate = false
 z_index = 5
 frames = ExtResource( 52 )
 animation = "roll_loop"
-frame = 3
+frame = 1
 playing = true
 script = ExtResource( 51 )
 duration = 16.0
@@ -2064,6 +2067,8 @@ dir = "-1"
 position = Vector2( 3421, 33 )
 dir = "-1"
 type = "down"
+
+[node name="IGTimer" parent="." index="9" instance=ExtResource( 88 )]
 
 [connection signal="body_entered" from="Scenery/background_mover" to="Scenery/parallaxBackground" method="_on_background_mover_body_entered"]
 [connection signal="button_press" from="Objects/RisingPlatform/Button" to="Objects/RisingPlatform/rising_platform" method="_on_Button_button_press"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=119 format=2]
+[gd_scene load_steps=120 format=2]
 
 [ext_resource path="res://src/Options/KeyConfig.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Options/Options.tscn" type="PackedScene" id=2]
@@ -65,6 +65,7 @@
 [ext_resource path="res://src/Fonts/Xclassicfont.fnt" type="BitmapFont" id=63]
 [ext_resource path="res://System/SFX/window_open.ogg" type="AudioStream" id=64]
 [ext_resource path="res://System/SFX/open_option.ogg" type="AudioStream" id=65]
+[ext_resource path="res://src/Levels/IGTimer.tscn" type="PackedScene" id=66]
 
 [sub_resource type="AtlasTexture" id=59]
 atlas = ExtResource( 61 )
@@ -676,7 +677,7 @@ color = Color( 0, 0, 0, 1 )
 position = Vector2( 199, -139 )
 z_index = -50
 frames = SubResource( 38 )
-frame = 8
+frame = 13
 playing = true
 
 [node name="pointer" type="AnimatedSprite" parent="map"]
@@ -793,7 +794,7 @@ frame = 0
 
 [node name="cursor" parent="button_sprites/JacobElevator" index="0"]
 animation = "long"
-frame = 2
+frame = 4
 
 [node name="Gateway" parent="button_sprites" instance=ExtResource( 22 )]
 position = Vector2( 343, 112 )
@@ -802,7 +803,7 @@ frame = 0
 
 [node name="cursor" parent="button_sprites/Gateway" index="0"]
 animation = "long"
-frame = 2
+frame = 4
 
 [node name="on_stage_select" type="Node" parent="."]
 script = ExtResource( 51 )
@@ -812,6 +813,8 @@ subtanks = [ ExtResource( 53 ), ExtResource( 52 ), ExtResource( 54 ), ExtResourc
 visible = false
 margin_left = 333.0
 margin_right = 398.0
+
+[node name="IGTimer" parent="." instance=ExtResource( 66 )]
 
 [connection signal="finished" from="music" to="music" method="_on_music_finished"]
 [connection signal="focus_entered" from="StageSelectUI/Menu/TroiaBase" to="StageSelectUI/Menu/TroiaBase" method="_on_focus_entered"]

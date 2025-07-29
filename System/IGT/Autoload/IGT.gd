@@ -6,7 +6,7 @@ var stage_timer: float = 0.0
 var should_run: bool = true
 var rta_timer: float = 0.0
 var should_run_rta: bool = true
-
+var times : Dictionary = {}
 
 func _process(delta: float) -> void :
 	if should_run_rta:
@@ -28,6 +28,12 @@ func save_time():
 	IGT.should_run = false
 	GlobalVariables.set("igt", IGT.in_game_timer)
 	Savefile.save(Savefile.save_slot)
+
+func add_time(section,delta):
+	if times.has(section):
+		times[section] += delta
+	else:
+		times[section] = delta
 
 func set_time(time):
 	in_game_timer = time

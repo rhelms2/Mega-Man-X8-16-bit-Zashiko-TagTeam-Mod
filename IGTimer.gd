@@ -1,7 +1,10 @@
 extends Node
 
-onready var section: String = "IGT_" + get_parent().name
+onready var section: String = get_parent().name
 
 
 func _physics_process(delta: float) -> void :
-	GlobalVariables.add(section, delta)
+	if get_tree().paused:
+		IGT.add_time("Paused",delta)
+	else:
+		IGT.add_time(section, delta)

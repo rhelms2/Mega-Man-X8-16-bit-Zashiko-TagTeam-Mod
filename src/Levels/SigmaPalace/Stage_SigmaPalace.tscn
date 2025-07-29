@@ -1,4 +1,4 @@
-[gd_scene load_steps=123 format=2]
+[gd_scene load_steps=124 format=2]
 
 [ext_resource path="res://src/System/CameraLimits.gd" type="Script" id=1]
 [ext_resource path="res://src/Actors/BossSpawner.gd" type="Script" id=2]
@@ -73,6 +73,7 @@
 [ext_resource path="res://src/Effects/Textures/elec_particles.png" type="Texture" id=71]
 [ext_resource path="res://src/Levels/SigmaPalace/RechargeHint.gd" type="Script" id=72]
 [ext_resource path="res://System/Character_Spawner.gd" type="Script" id=73]
+[ext_resource path="res://src/Levels/IGTimer.tscn" type="PackedScene" id=74]
 
 [sub_resource type="ShaderMaterial" id=92]
 resource_local_to_scene = true
@@ -2237,6 +2238,8 @@ volume_db = -17.0
 pitch_scale = 1.6
 bus = "SFX"
 script = ExtResource( 63 )
+
+[node name="IGTimer" parent="." index="11" instance=ExtResource( 74 )]
 
 [connection signal="body_entered" from="Scenery/RechargeHint/area2D" to="Scenery/RechargeHint" method="_on_area2D_body_entered"]
 [connection signal="finish" from="Objects/VileDoor" to="Objects/VileSpawner" method="_on_VileDoor_finish"]
