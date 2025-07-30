@@ -190,7 +190,7 @@ class Deserializer:
 				0x03: object[key] = read_dictionary()
 				0x0a: object[key] = null
 				_: push_error("BSON deserialization error: Unsupported type " + str(type) + " at byte " + str(read_position - 1))
-		if iter > expected_size:
+		if iter > expected_size and expected_size > 0:
 			push_warning("BSON deserialization warning: Dictionary is the wrong length. Expected: " + str(expected_size) + ", Actual: " + str(iter))
 		return object
 
@@ -219,6 +219,6 @@ class Deserializer:
 				0x03: array.append(read_dictionary())
 				0x0a: array.append(null)
 				_: push_error("BSON deserialization error: Unsupported type: " + str(type))
-		if iter > expected_size:
+		if iter > expected_size and expected_size > 0:
 			push_warning("BSON deserialization warning: Array is the wrong length. Expected: " + str(expected_size) + ", Actual: " + str(iter))
 		return array
