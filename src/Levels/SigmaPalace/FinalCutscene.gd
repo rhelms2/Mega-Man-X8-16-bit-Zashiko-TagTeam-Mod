@@ -55,7 +55,8 @@ var tentacle_scale_max = 0.7
 var tentacle_alpha = 0.3
 
 func show_tentacle():
-	lumine.animation = "Final"
+	tentacles.play("tentacle_attack")
+	tentacles.visible = true
 
 func _ready() -> void :
 	screencover.visible = true
@@ -106,7 +107,7 @@ func _on_dialog_concluded() -> void :
 			"duration": 4
 		}
 		Tools.timer_array(self, 1.0, "move_to_position", params)
-		Tools.timer(4.4, "show_tentacle", self)
+		Tools.timer(4.7, "show_tentacle", self)
 	else:
 		Tools.timer(1.0, "fade_out", self)
 
@@ -254,7 +255,7 @@ func single_explosion() -> void :
 	tentacles.visible = false
 	explosion.emitting = true
 	explode_2.play()
-	lumine.animation = "Final_cut"
+	#lumine.animation = "Final_cut"
 
 func cutscene_phase_2():
 	cutscene_stage += 1
