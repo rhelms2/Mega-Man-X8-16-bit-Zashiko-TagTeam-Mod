@@ -26,3 +26,11 @@ func display():
 		display_value("ON_VALUE")
 	else:
 		display_value("OFF_VALUE")
+
+func _on_OptionsMenu_initialize() -> void:
+	if not OS.has_feature("editor"): 
+		print("Debug options: ................. initialize")
+		get_parent().visible = GameManager.debug_enabled
+		if not GameManager.debug_enabled:
+			set_showdebug(false)
+		display()
