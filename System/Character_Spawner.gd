@@ -8,7 +8,6 @@ var teleport_to_boss: bool = CharacterManager.teleport_to_boss
 var spawn_ride_armor: bool = false
 
 
-var _locale_script: Script = preload("res://System/utils/Localization_extract.gd")
 var _musicmanager_script: Script = preload("res://Remix/Music_Manager.gd")
 
 
@@ -41,25 +40,6 @@ signal level_initialized
 
 func _ready() -> void :
 	teleport_to_boss = CharacterManager.teleport_to_boss
-	
-	
-	
-	
-	var _node = Node.new()
-	_node.set_name("Localization extract")
-	_node.set_script(_locale_script)
-	add_child(_node)
-	
-
-
-
-
-	
-	
-
-
-
-
 	
 	if self.name == "NoahsPark":
 		var node: Node = Node.new()
