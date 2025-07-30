@@ -154,26 +154,26 @@ func update_character_sprites() -> void :
 
 func activate_saber_moves() -> void :
 	character.saber_combo.active = true
-	character.saber_combo.damage = 2
-	character.saber_combo.damage_boss = 4
+	character.saber_combo.damage = 3
+	character.saber_combo.damage_boss = 5
 	character.saber_combo.damage_weakness = 24
 	character.saber_combo.deflectable_type = 0
 	character.saber_combo.only_deflect_weak = true
 	character.saber_dash.active = true
-	character.saber_dash.damage = 4
-	character.saber_dash.damage_boss = 4
+	character.saber_dash.damage = 5
+	character.saber_dash.damage_boss = 5
 	character.saber_dash.damage_weakness = 24
 	character.saber_dash.deflectable_type = 0
 	character.saber_dash.only_deflect_weak = true
 	character.saber_jump.active = true
-	character.saber_jump.damage = 4
-	character.saber_jump.damage_boss = 4
+	character.saber_jump.damage = 5
+	character.saber_jump.damage_boss = 5
 	character.saber_jump.damage_weakness = 24
 	character.saber_jump.deflectable_type = 0
 	character.saber_jump.only_deflect_weak = true
 	character.saber_wall.active = true
-	character.saber_wall.damage = 4
-	character.saber_wall.damage_boss = 4
+	character.saber_wall.damage = 5
+	character.saber_wall.damage_boss = 5
 	character.saber_wall.damage_weakness = 24
 	character.saber_wall.deflectable_type = 0
 	character.saber_wall.only_deflect_weak = true
@@ -182,7 +182,7 @@ func activate_saber_moves() -> void :
 	
 	character.skill_juuhazan.hitbox_name = "Juuhazan"
 	character.skill_juuhazan.damage = 12
-	character.skill_juuhazan.damage_boss = 4
+	character.skill_juuhazan.damage_boss = 6
 	character.skill_juuhazan.damage_weakness = 20
 	character.skill_juuhazan.deflectable_type = - 1
 	character.skill_juuhazan.only_deflect_weak = false
@@ -192,8 +192,8 @@ func activate_saber_moves() -> void :
 	
 	character.skill_rasetsusen.hitbox_name = "Rasetsusen"
 	character.skill_rasetsusen.max_time = 2.0
-	character.skill_rasetsusen.damage = 2
-	character.skill_rasetsusen.damage_boss = 2
+	character.skill_rasetsusen.damage = 3
+	character.skill_rasetsusen.damage_boss = 3
 	character.skill_rasetsusen.damage_weakness = 24
 	character.skill_rasetsusen.deflectable_type = 0
 	character.skill_rasetsusen.only_deflect_weak = true
@@ -203,8 +203,8 @@ func activate_saber_moves() -> void :
 	
 	character.skill_raikousen.hitbox_name = "Raikousen"
 	character.skill_raikousen.effect_transparency = 0.65
-	character.skill_raikousen.damage = 4
-	character.skill_raikousen.damage_boss = 4
+	character.skill_raikousen.damage = 5
+	character.skill_raikousen.damage_boss = 5
 	character.skill_raikousen.damage_weakness = 24
 	character.skill_raikousen.deflectable_type = - 1
 	character.skill_raikousen.only_deflect_weak = false
@@ -225,8 +225,8 @@ func activate_saber_moves() -> void :
 	character.skill_youdantotsu.hitbox_name = "Youdantotsu"
 	character.skill_youdantotsu.movement_frame = 5
 	character.skill_youdantotsu.start_speed = 500
-	character.skill_youdantotsu.damage = 4
-	character.skill_youdantotsu.damage_boss = 4
+	character.skill_youdantotsu.damage = 6
+	character.skill_youdantotsu.damage_boss = 6
 	character.skill_youdantotsu.damage_weakness = 24
 	character.skill_youdantotsu.deflectable_type = - 1
 	character.skill_youdantotsu.only_deflect_weak = false
@@ -238,8 +238,8 @@ func activate_saber_moves() -> void :
 	
 	character.skill_hyouryuushou.loop_frame = 10
 	character.skill_hyouryuushou.loop_start_frame = 4
-	character.skill_hyouryuushou.damage = 3
-	character.skill_hyouryuushou.damage_boss = 4
+	character.skill_hyouryuushou.damage = 6
+	character.skill_hyouryuushou.damage_boss = 6
 	character.skill_hyouryuushou.damage_weakness = 24
 	character.skill_hyouryuushou.deflectable_type = - 1
 	character.skill_hyouryuushou.only_deflect_weak = true
@@ -259,26 +259,26 @@ func deactivate_saber_moves() -> void :
 
 func activate_fan_moves() -> void :
 	character.saber_combo.active = true
-	character.saber_combo.damage = 2
-	character.saber_combo.damage_boss = 4
+	character.saber_combo.damage = 3
+	character.saber_combo.damage_boss = 5
 	character.saber_combo.damage_weakness = 24
 	character.saber_combo.deflectable_type = 2
 	character.saber_combo.only_deflect_weak = false
 	character.saber_dash.active = true
-	character.saber_dash.damage = 4
-	character.saber_dash.damage_boss = 4
+	character.saber_dash.damage = 5
+	character.saber_dash.damage_boss = 5
 	character.saber_dash.damage_weakness = 24
 	character.saber_dash.deflectable_type = 2
 	character.saber_dash.only_deflect_weak = false
 	character.saber_jump.active = true
-	character.saber_jump.damage = 4
-	character.saber_jump.damage_boss = 4
+	character.saber_jump.damage = 5
+	character.saber_jump.damage_boss = 5
 	character.saber_jump.damage_weakness = 24
 	character.saber_jump.deflectable_type = 2
 	character.saber_jump.only_deflect_weak = false
 	character.saber_wall.active = true
-	character.saber_wall.damage = 4
-	character.saber_wall.damage_boss = 4
+	character.saber_wall.damage = 5
+	character.saber_wall.damage_boss = 5
 	character.saber_wall.damage_weakness = 24
 	character.saber_wall.deflectable_type = 2
 	character.saber_wall.only_deflect_weak = false
@@ -287,7 +287,7 @@ func activate_fan_moves() -> void :
 	
 	character.skill_juuhazan.hitbox_name = "Juuhazan"
 	character.skill_juuhazan.damage = 12
-	character.skill_juuhazan.damage_boss = 4
+	character.skill_juuhazan.damage_boss = 6
 	character.skill_juuhazan.damage_weakness = 20
 	character.skill_juuhazan.deflectable_type = - 1
 	character.skill_juuhazan.only_deflect_weak = false
@@ -297,8 +297,8 @@ func activate_fan_moves() -> void :
 	
 	character.skill_rasetsusen.hitbox_name = "Rasetsusen"
 	character.skill_rasetsusen.max_time = 2.0
-	character.skill_rasetsusen.damage = 2
-	character.skill_rasetsusen.damage_boss = 2
+	character.skill_rasetsusen.damage = 3
+	character.skill_rasetsusen.damage_boss = 3
 	character.skill_rasetsusen.damage_weakness = 24
 	character.skill_rasetsusen.deflectable_type = 2
 	character.skill_rasetsusen.only_deflect_weak = false
@@ -308,8 +308,8 @@ func activate_fan_moves() -> void :
 	
 	character.skill_raikousen.hitbox_name = "Raikousen"
 	character.skill_raikousen.effect_transparency = 0.85
-	character.skill_raikousen.damage = 4
-	character.skill_raikousen.damage_boss = 4
+	character.skill_raikousen.damage = 6
+	character.skill_raikousen.damage_boss = 6
 	character.skill_raikousen.damage_weakness = 24
 	character.skill_raikousen.deflectable_type = - 1
 	character.skill_raikousen.only_deflect_weak = false
@@ -330,8 +330,8 @@ func activate_fan_moves() -> void :
 	character.skill_youdantotsu.hitbox_name = "Youdantotsu"
 	character.skill_youdantotsu.movement_frame = 5
 	character.skill_youdantotsu.start_speed = 500
-	character.skill_youdantotsu.damage = 4
-	character.skill_youdantotsu.damage_boss = 4
+	character.skill_youdantotsu.damage = 6
+	character.skill_youdantotsu.damage_boss = 6
 	character.skill_youdantotsu.damage_weakness = 24
 	character.skill_youdantotsu.deflectable_type = - 1
 	character.skill_youdantotsu.only_deflect_weak = false
@@ -364,26 +364,26 @@ func deactivate_fan_moves() -> void :
 
 func activate_glaive_moves() -> void :
 	character.saber_combo.active = true
-	character.saber_combo.damage = 2
-	character.saber_combo.damage_boss = 4
+	character.saber_combo.damage = 3
+	character.saber_combo.damage_boss = 5
 	character.saber_combo.damage_weakness = 24
 	character.saber_combo.deflectable_type = 0
 	character.saber_combo.only_deflect_weak = true
 	character.saber_dash.active = true
-	character.saber_dash.damage = 4
-	character.saber_dash.damage_boss = 4
+	character.saber_dash.damage = 5
+	character.saber_dash.damage_boss = 5
 	character.saber_dash.damage_weakness = 24
 	character.saber_dash.deflectable_type = 0
 	character.saber_dash.only_deflect_weak = true
 	character.saber_jump.active = true
-	character.saber_jump.damage = 4
-	character.saber_jump.damage_boss = 4
+	character.saber_jump.damage = 5
+	character.saber_jump.damage_boss = 5
 	character.saber_jump.damage_weakness = 24
 	character.saber_jump.deflectable_type = 0
 	character.saber_jump.only_deflect_weak = true
 	character.saber_wall.active = true
-	character.saber_wall.damage = 4
-	character.saber_wall.damage_boss = 4
+	character.saber_wall.damage = 5
+	character.saber_wall.damage_boss = 5
 	character.saber_wall.damage_weakness = 24
 	character.saber_wall.deflectable_type = 0
 	character.saber_wall.only_deflect_weak = true
@@ -392,7 +392,7 @@ func activate_glaive_moves() -> void :
 	
 	character.skill_juuhazan.hitbox_name = "Juuhazan"
 	character.skill_juuhazan.damage = 12
-	character.skill_juuhazan.damage_boss = 4
+	character.skill_juuhazan.damage_boss = 6
 	character.skill_juuhazan.damage_weakness = 20
 	character.skill_juuhazan.deflectable_type = - 1
 	character.skill_juuhazan.only_deflect_weak = false
@@ -402,8 +402,8 @@ func activate_glaive_moves() -> void :
 	
 	character.skill_rasetsusen.hitbox_name = "Rasetsusen"
 	character.skill_rasetsusen.max_time = 2.0
-	character.skill_rasetsusen.damage = 2
-	character.skill_rasetsusen.damage_boss = 2
+	character.skill_rasetsusen.damage = 3
+	character.skill_rasetsusen.damage_boss = 3
 	character.skill_rasetsusen.damage_weakness = 24
 	character.skill_rasetsusen.deflectable_type = 0
 	character.skill_rasetsusen.only_deflect_weak = true
@@ -413,8 +413,8 @@ func activate_glaive_moves() -> void :
 	
 	character.skill_raikousen.hitbox_name = "Raikousen"
 	character.skill_raikousen.effect_transparency = 1.0
-	character.skill_raikousen.damage = 4
-	character.skill_raikousen.damage_boss = 4
+	character.skill_raikousen.damage = 6
+	character.skill_raikousen.damage_boss = 6
 	character.skill_raikousen.damage_weakness = 24
 	character.skill_raikousen.deflectable_type = - 1
 	character.skill_raikousen.only_deflect_weak = false
@@ -435,8 +435,8 @@ func activate_glaive_moves() -> void :
 	character.skill_youdantotsu.hitbox_name = "Youdantotsu_Charged"
 	character.skill_youdantotsu.movement_frame = 5
 	character.skill_youdantotsu.start_speed = 300
-	character.skill_youdantotsu.damage = 4
-	character.skill_youdantotsu.damage_boss = 4
+	character.skill_youdantotsu.damage = 6
+	character.skill_youdantotsu.damage_boss = 6
 	character.skill_youdantotsu.damage_weakness = 24
 	character.skill_youdantotsu.deflectable_type = - 1
 	character.skill_youdantotsu.hitbox_break_guards = true
@@ -447,8 +447,8 @@ func activate_glaive_moves() -> void :
 	
 	character.skill_hyouryuushou.loop_frame = 10
 	character.skill_hyouryuushou.loop_start_frame = 6
-	character.skill_hyouryuushou.damage = 3
-	character.skill_hyouryuushou.damage_boss = 4
+	character.skill_hyouryuushou.damage = 6
+	character.skill_hyouryuushou.damage_boss = 6
 	character.skill_hyouryuushou.damage_weakness = 24
 	character.skill_hyouryuushou.deflectable_type = - 1
 	character.skill_hyouryuushou.only_deflect_weak = true
@@ -498,7 +498,7 @@ func activate_knuckle_moves() -> void :
 	
 	character.skill_juuhazan.hitbox_name = "Juuhazan_Charged"
 	character.skill_juuhazan.damage = 16
-	character.skill_juuhazan.damage_boss = 6
+	character.skill_juuhazan.damage_boss = 8
 	character.skill_juuhazan.damage_weakness = 24
 	character.skill_juuhazan.deflectable_type = - 1
 	character.skill_juuhazan.only_deflect_weak = false
@@ -520,7 +520,7 @@ func activate_knuckle_moves() -> void :
 	character.skill_raikousen.hitbox_name = "Raikousen_Charged"
 	character.skill_raikousen.effect_transparency = 0.65
 	character.skill_raikousen.damage = 8
-	character.skill_raikousen.damage_boss = 4
+	character.skill_raikousen.damage_boss = 8
 	character.skill_raikousen.damage_weakness = 30
 	character.skill_raikousen.deflectable_type = - 1
 	character.skill_raikousen.only_deflect_weak = false
@@ -610,7 +610,7 @@ func activate_breaker_moves() -> void :
 	
 	character.skill_juuhazan.hitbox_name = "Juuhazan_Charged_B"
 	character.skill_juuhazan.damage = 12
-	character.skill_juuhazan.damage_boss = 4
+	character.skill_juuhazan.damage_boss = 6
 	character.skill_juuhazan.damage_weakness = 30
 	character.skill_juuhazan.deflectable_type = - 1
 	character.skill_juuhazan.only_deflect_weak = false
@@ -620,8 +620,8 @@ func activate_breaker_moves() -> void :
 	
 	character.skill_rasetsusen.hitbox_name = "Rasetsusen"
 	character.skill_rasetsusen.max_time = 2.0
-	character.skill_rasetsusen.damage = 2
-	character.skill_rasetsusen.damage_boss = 2
+	character.skill_rasetsusen.damage = 3
+	character.skill_rasetsusen.damage_boss = 3
 	character.skill_rasetsusen.damage_weakness = 24
 	character.skill_rasetsusen.deflectable_type = - 1
 	character.skill_rasetsusen.only_deflect_weak = true
@@ -631,8 +631,8 @@ func activate_breaker_moves() -> void :
 	
 	character.skill_raikousen.hitbox_name = "Raikousen"
 	character.skill_raikousen.effect_transparency = 0.65
-	character.skill_raikousen.damage = 4
-	character.skill_raikousen.damage_boss = 4
+	character.skill_raikousen.damage = 6
+	character.skill_raikousen.damage_boss = 6
 	character.skill_raikousen.damage_weakness = 24
 	character.skill_raikousen.deflectable_type = - 1
 	character.skill_raikousen.only_deflect_weak = false
@@ -653,8 +653,8 @@ func activate_breaker_moves() -> void :
 	character.skill_youdantotsu.hitbox_name = "Youdantotsu"
 	character.skill_youdantotsu.movement_frame = 5
 	character.skill_youdantotsu.start_speed = 500
-	character.skill_youdantotsu.damage = 4
-	character.skill_youdantotsu.damage_boss = 4
+	character.skill_youdantotsu.damage = 6
+	character.skill_youdantotsu.damage_boss = 6
 	character.skill_youdantotsu.damage_weakness = 24
 	character.skill_youdantotsu.deflectable_type = - 1
 	character.skill_youdantotsu.only_deflect_weak = false
@@ -666,8 +666,8 @@ func activate_breaker_moves() -> void :
 	
 	character.skill_hyouryuushou.loop_frame = 10
 	character.skill_hyouryuushou.loop_start_frame = 6
-	character.skill_hyouryuushou.damage = 3
-	character.skill_hyouryuushou.damage_boss = 4
+	character.skill_hyouryuushou.damage = 6
+	character.skill_hyouryuushou.damage_boss = 6
 	character.skill_hyouryuushou.damage_weakness = 24
 	character.skill_hyouryuushou.deflectable_type = - 1
 	character.skill_hyouryuushou.only_deflect_weak = true
