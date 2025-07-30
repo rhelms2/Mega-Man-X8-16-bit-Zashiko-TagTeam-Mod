@@ -222,6 +222,7 @@ func clear_save(slot: int = 0) -> void :
 	CharacterManager.game_mode_set = false
 	CharacterManager.game_mode = 0
 	newgame_plus = 0
+	IGT.reset()
 	GameManager.collectibles = []
 	GameManager.equip_exceptions = []
 	GlobalVariables.variables = {}
