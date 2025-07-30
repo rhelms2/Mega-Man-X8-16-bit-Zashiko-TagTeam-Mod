@@ -2864,6 +2864,7 @@ script = ExtResource( 80 )
 achievement = ExtResource( 81 )
 
 [node name="IGTimer" parent="." instance=ExtResource( 85 )]
+section = "Primrose"
 
 [connection signal="animation_finished" from="StateCamera/Ready Warning Text" to="StateCamera/Ready Warning Text" method="_on_animatedSprite_animation_finished"]
 [connection signal="teleport_start" from="Scenery/Room2/Portal" to="Scenery/Room3/Enemies" method="_on_Portal_teleport_start"]

@@ -72,6 +72,13 @@ static func get_readable_time(time) -> String:
 	var miliseconds = int((time - int(time)) * 100)
 	return "%02d:%02d:%02d" % [minutes, seconds, miliseconds]
 
+static func get_full_readable_time(time) -> String:
+	var hours = (time/60)/60
+	var minutes = fmod((time/60),60)
+	var seconds = fmod(time,60)
+	var miliseconds = int((time - int(time)) * 100)
+	return "%02d:%02d:%02d.%02d" % [hours, minutes, seconds, miliseconds]
+
 static func timer_array(target, delay, method_name, params) -> void :
 	var timer = Timer.new()
 	timer.wait_time = delay

@@ -6517,7 +6517,7 @@ armor_part = "hermes_body"
 dialogue = ExtResource( 26 )
 
 [node name="animatedSprite" parent="Objects/Capsule" index="1"]
-frame = 0
+frame = 9
 
 [node name="collisionShape2D" parent="Objects/Capsule/area2D" index="0"]
 shape = SubResource( 49 )
@@ -7626,6 +7626,7 @@ rotate = false
 [node name="BrightServbot" parent="Darkness/ServbotPath/pathFollow2D" instance=ExtResource( 56 )]
 
 [node name="IGTimer" parent="." instance=ExtResource( 90 )]
+section = "Pitch Black"
 
 [connection signal="animation_finished" from="camera2D/Ready Warning Text" to="camera2D/Ready Warning Text" method="_on_animatedSprite_animation_finished"]
 [connection signal="body_entered" from="Scenery/canvasLayer/parallaxBackground/BackgroundSwap" to="Scenery/canvasLayer/parallaxBackground/BackgroundSwap" method="_on_area2D_body_entered"]

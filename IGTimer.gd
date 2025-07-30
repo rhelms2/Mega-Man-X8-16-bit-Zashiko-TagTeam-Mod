@@ -1,10 +1,17 @@
 extends Node
 
-onready var section: String = get_parent().name
+export var section := "section_name"
 
+var running := true
 
-func _physics_process(delta: float) -> void :
-	if get_tree().paused:
-		IGT.add_time("Paused",delta)
-	else:
-		IGT.add_time(section, delta)
+func _ready() -> void:
+	Event.connect("beat_seraph_lumine",self,"stop")
+	IGT.current_section = section
+	running = true
+
+func _physics_process(delta: float) -> void:
+	if running:
+		IGT.add_time(section,delta)
+
+func stop() -> void:
+	running = false

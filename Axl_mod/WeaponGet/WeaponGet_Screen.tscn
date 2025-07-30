@@ -1,7 +1,8 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/FlameBurner/FlameBurner.tres" type="Resource" id=1]
 [ext_resource path="res://Axl_mod/WeaponGet/Weaponget_new.png" type="Texture" id=2]
+[ext_resource path="res://src/Levels/IGTimer.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Axl_mod/WeaponGet/WpnGetImage.gd" type="Script" id=17]
 [ext_resource path="res://src/Sounds/OST - Weapon Get.ogg" type="AudioStream" id=18]
 [ext_resource path="res://src/Effects/Materials/TextColorSwap.tres" type="Material" id=19]
@@ -159,6 +160,9 @@ scale = Vector2( 1, 2 )
 z_index = -5
 texture = ExtResource( 45 )
 script = ExtResource( 46 )
+
+[node name="IGTimer" parent="." instance=ExtResource( 3 )]
+section = "Misc."
 
 [connection signal="flash" from="." to="lines" method="disappear"]
 [connection signal="flash" from="." to="lines2" method="disappear"]

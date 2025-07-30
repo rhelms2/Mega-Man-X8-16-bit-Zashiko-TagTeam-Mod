@@ -1593,7 +1593,7 @@ armor_part = "hermes_legs"
 dialogue = ExtResource( 20 )
 
 [node name="animatedSprite" parent="Objects/Capsule" index="1"]
-frame = 16
+frame = 22
 
 [node name="area2D" parent="Objects/Capsule" index="6"]
 visible = true
@@ -1807,6 +1807,7 @@ position = Vector2( 576.5, 0 )
 polygon = PoolVector2Array( -263.5, -333, -378.5, 2737, -927.5, 2703, -1162.5, 183, -1167.5, -226 )
 
 [node name="IGTimer" parent="." instance=ExtResource( 40 )]
+section = "Inferno"
 
 [connection signal="animation_finished" from="camera2D/Ready Warning Text" to="camera2D/Ready Warning Text" method="_on_animatedSprite_animation_finished"]
 [connection signal="body_entered" from="Scenery/parallaxBackground/InsideBGActivator" to="Scenery/parallaxBackground/InsideBGActivator" method="_on_area2D_body_entered"]

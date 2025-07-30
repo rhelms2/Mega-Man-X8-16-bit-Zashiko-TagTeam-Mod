@@ -187,6 +187,7 @@ extents = Vector2( 198, 112 )
 script = ExtResource( 57 )
 
 [node name="IGTimer" parent="." index="0" instance=ExtResource( 4 )]
+section = "Noah's Park"
 
 [node name="X Bar" parent="Hud" index="8"]
 material = SubResource( 32 )
@@ -334,66 +335,44 @@ tile_data = PoolIntArray( -65537, 7, 0, -1, 7, 0, -65256, 7, 0, 65535, 7, 0, 280
 
 [node name="far background" parent="Scenery/tiled_noahspark" index="1"]
 z_index = -1
-cell_y_sort = false
-compatibility_mode = true
 collision_mask = 0
 navigation_layers = 0
 occluder_light_mask = 0
 
 [node name="far bg details" parent="Scenery/tiled_noahspark" index="2"]
 z_index = -1
-cell_y_sort = false
-compatibility_mode = true
 collision_mask = 0
 
 [node name="background" parent="Scenery/tiled_noahspark" index="3"]
 z_index = -1
-cell_y_sort = false
-compatibility_mode = true
 collision_mask = 0
 
 [node name="near background" parent="Scenery/tiled_noahspark" index="4"]
 material = SubResource( 63 )
-cell_y_sort = false
-compatibility_mode = true
 collision_mask = 0
 
 [node name="grass" parent="Scenery/tiled_noahspark" index="5"]
-cell_y_sort = false
-compatibility_mode = true
 collision_mask = 0
 
 [node name="near grass" parent="Scenery/tiled_noahspark" index="6"]
-cell_y_sort = false
-compatibility_mode = true
 collision_mask = 0
 
 [node name="grass details" parent="Scenery/tiled_noahspark" index="7"]
-cell_y_sort = false
-compatibility_mode = true
 collision_mask = 0
 
 [node name="platforms" parent="Scenery/tiled_noahspark" index="8"]
-cell_y_sort = false
-compatibility_mode = true
 collision_mask = 0
 
 [node name="platform details" parent="Scenery/tiled_noahspark" index="9"]
 z_index = 53
-cell_y_sort = false
-compatibility_mode = true
 collision_mask = 0
 
 [node name="platform extra details" parent="Scenery/tiled_noahspark" index="10"]
 z_index = 54
-cell_y_sort = false
-compatibility_mode = true
 collision_mask = 0
 
 [node name="foreground" parent="Scenery/tiled_noahspark" index="11"]
 z_index = 55
-cell_y_sort = false
-compatibility_mode = true
 collision_mask = 0
 
 [node name="parallaxBackground" type="ParallaxBackground" parent="Scenery" index="3"]
@@ -456,13 +435,13 @@ bus = "SFX"
 [node name="shine" type="AnimatedSprite" parent="Scenery/water/watersplash" index="4"]
 position = Vector2( -43, -2 )
 frames = SubResource( 70 )
-frame = 3
+frame = 1
 playing = true
 
 [node name="shine2" type="AnimatedSprite" parent="Scenery/water/watersplash" index="5"]
 position = Vector2( -20, -3 )
 frames = SubResource( 70 )
-frame = 1
+frame = 2
 speed_scale = 0.85
 playing = true
 flip_h = true
@@ -470,13 +449,11 @@ flip_h = true
 [node name="shine3" type="AnimatedSprite" parent="Scenery/water/watersplash" index="6"]
 position = Vector2( 18, -2 )
 frames = SubResource( 70 )
-frame = 2
 playing = true
 
 [node name="shine4" type="AnimatedSprite" parent="Scenery/water/watersplash" index="7"]
 position = Vector2( 51, -3 )
 frames = SubResource( 70 )
-frame = 2
 playing = true
 
 [node name="long" type="AnimatedSprite" parent="Scenery/water/watersplash" index="8"]
@@ -484,7 +461,7 @@ modulate = Color( 1, 1, 1, 0.305882 )
 position = Vector2( -5, -4 )
 scale = Vector2( 2, 1 )
 frames = SubResource( 70 )
-frame = 4
+frame = 5
 speed_scale = 1.2
 playing = true
 flip_h = true
@@ -494,7 +471,6 @@ modulate = Color( 1, 1, 1, 0.305882 )
 position = Vector2( 45, -1 )
 scale = Vector2( 2, 1 )
 frames = SubResource( 70 )
-frame = 2
 playing = true
 
 [node name="long3" type="AnimatedSprite" parent="Scenery/water/watersplash" index="10"]
@@ -1124,10 +1100,6 @@ delay_before_close = 30000.0
 
 [node name="tiled_press" parent="Objects/CeilingDoor/CeilingDoor" index="0" instance=ExtResource( 24 )]
 
-[node name="Tile Layer 1" parent="Objects/CeilingDoor/CeilingDoor/tiled_press" index="0"]
-cell_y_sort = false
-compatibility_mode = true
-
 [node name="tileMap" type="TileMap" parent="Objects/CeilingDoor/CeilingDoor/tiled_press" index="1"]
 visible = false
 tile_set = ExtResource( 3 )
@@ -1137,10 +1109,6 @@ tile_data = PoolIntArray( 0, 7, 0, 1, 7, 0, 2, 7, 0, 3, 7, 0, 4, 7, 0, 5, 7, 0, 
 
 [node name="tiled_doorcover" parent="Objects/CeilingDoor/CeilingDoor" index="1" instance=ExtResource( 25 )]
 position = Vector2( 0, -16 )
-
-[node name="Tile Layer 1" parent="Objects/CeilingDoor/CeilingDoor/tiled_doorcover" index="0"]
-cell_y_sort = false
-compatibility_mode = true
 
 [node name="HealthPickUp" parent="Objects" index="4" instance=ExtResource( 31 )]
 position = Vector2( 7039, 331 )

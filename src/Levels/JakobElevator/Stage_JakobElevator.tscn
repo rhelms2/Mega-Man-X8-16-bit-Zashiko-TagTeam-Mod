@@ -8351,7 +8351,7 @@ bus = "SFX"
 pause_mode = 2
 position = Vector2( 1350, -1571 )
 frames = SubResource( 204 )
-frame = 3
+frame = 2
 playing = true
 
 [node name="particles2D" type="Particles2D" parent="Objects/Entrance" index="0"]
@@ -8426,7 +8426,6 @@ script = ExtResource( 88 )
 position = Vector2( 200, 113 )
 z_index = -10
 frames = SubResource( 234 )
-frame = 2
 playing = true
 
 [node name="SecretBossTileset" type="TileMap" parent="Objects/SecretBossRoom" index="1"]
@@ -8788,6 +8787,7 @@ position = Vector2( 2168.5, -3776 )
 shape = SubResource( 29 )
 
 [node name="IGTimer" parent="." index="13" instance=ExtResource( 90 )]
+section = "Jakob Elevator"
 
 [connection signal="visibility_changed" from="Scenery/parallaxBackground/mid_sky" to="parallaxBackground2/foreground" method="_on_mid_sky_visibility_changed"]
 [connection signal="body_entered" from="Scenery/Passarins2" to="Scenery/Passarins2" method="_on_area2D_body_entered"]

@@ -2240,6 +2240,7 @@ bus = "SFX"
 script = ExtResource( 63 )
 
 [node name="IGTimer" parent="." index="11" instance=ExtResource( 74 )]
+section = "Sigma Palace"
 
 [connection signal="body_entered" from="Scenery/RechargeHint/area2D" to="Scenery/RechargeHint" method="_on_area2D_body_entered"]
 [connection signal="finish" from="Objects/VileDoor" to="Objects/VileSpawner" method="_on_VileDoor_finish"]

@@ -1963,6 +1963,7 @@ z_index = -2
 max_health = 200.0
 
 [node name="IGTimer" parent="." index="9" instance=ExtResource( 72 )]
+section = "Metal Valley"
 
 [connection signal="body_entered" from="Scenery/parallaxBackground/OutsideBGActivator" to="Scenery/parallaxBackground/OutsideBGActivator" method="_on_area2D_body_entered"]
 [connection signal="body_exited" from="Scenery/parallaxBackground/OutsideBGActivator" to="Scenery/parallaxBackground/OutsideBGActivator" method="_on_BackgroundSwap_body_exited"]

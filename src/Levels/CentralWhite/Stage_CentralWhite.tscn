@@ -1045,6 +1045,7 @@ set_direction_to_right = false
 despawnable = false
 
 [node name="IGTimer" parent="." instance=ExtResource( 22 )]
+section = "Central White"
 
 [connection signal="animation_finished" from="StateCamera/Ready Warning Text" to="StateCamera/Ready Warning Text" method="_on_animatedSprite_animation_finished"]
 [connection signal="explode" from="Objects/Door" to="Objects/Door/AchievementUnlocker" method="fire_achievement"]
