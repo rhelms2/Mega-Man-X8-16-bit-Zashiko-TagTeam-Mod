@@ -18,7 +18,7 @@ export  var break_guard_damage: float = 1.0
 onready var audio: AudioStreamPlayer2D = $audioStreamPlayer2D
 onready var visibilityNotifier: VisibilityNotifier2D = $visibilityNotifier2D
 onready var hit_particle: Sprite = get_node_or_null("Hit Particle")
-onready var particle_visual: Particles2D = $particles2D
+onready var particle_visual: Particles2D = get_node_or_null("particles2D")
 
 var countdown_to_destruction: float = 0.0
 var facing_direction: int = 1
@@ -38,8 +38,10 @@ func should_unlock(collectible: String) -> bool:
 	return collectible == weapon.collectible
 
 func _ready() -> void :
-	visibilityNotifier.connect("screen_entered", self, "_on_visibilityNotifier2D_screen_entered")
-	visibilityNotifier.connect("screen_exited", self, "_on_visibilityNotifier2D_screen_exited")
+	if not visibilityNotifier.is_connected("screen_entered",self,"_on_visibilityNotifier2D_screen_entered"):
+		visibilityNotifier.connect("screen_entered", self, "_on_visibilityNotifier2D_screen_entered")
+	if not visibilityNotifier.is_connected("screen_exited", self, "_on_visibilityNotifier2D_screen_exited"):
+		visibilityNotifier.connect("screen_exited", self, "_on_visibilityNotifier2D_screen_exited")
 	if not is_in_group("Player Projectile") and not is_in_group("Enemy Projectile"):
 		
 		pass
@@ -163,7 +165,8 @@ func disable_projectile_visual() -> void :
 	animatedSprite.visible = false
 
 func disable_particle_visual() -> void :
-	particle_visual.visible = false
+	if particle_visual:
+		particle_visual.visible = false
 
 func disable_visuals() -> void :
 	Log("Disabling Visuals")
@@ -198,8 +201,6 @@ func has_hit_scenery() -> bool:
 	return is_on_floor() or is_on_wall() or is_on_ceiling()
 
 func disable_damage() -> void :
-	if damageOnTouch == null:
-		damageOnTouch = get_node("DamageOnTouch")
 	if damageOnTouch != null:
 		damageOnTouch.deactivate()
 
