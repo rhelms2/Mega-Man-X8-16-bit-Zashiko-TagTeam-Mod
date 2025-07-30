@@ -25,7 +25,7 @@ func activate() -> void :
 	signature.modulate = Color.black
 	enter_by()
 	Tools.timer(1.0, "appear", self)
-	Tools.timer(1.0, "set_able_to_exit", self)
+	Tools.timer(2.5, "set_able_to_exit", self)
 	Tools.timer(6, "fade", self)
 	Tools.timer(6, "fade_by", self)
 
