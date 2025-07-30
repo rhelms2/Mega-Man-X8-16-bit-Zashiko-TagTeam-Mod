@@ -11,7 +11,7 @@ var flashed: bool = false
 
 
 func _ready() -> void :
-	text.text = default_label
+	text.text = tr(default_label)
 	Event.connect("translation_updated", self, "on_update")
 
 func on_update() -> void :
@@ -25,7 +25,7 @@ func on_press() -> void :
 			strong_flash()
 			flashed = true
 			menu.play_equip_sound()
-		text.text = confirmation
+		text.text = tr(confirmation)
 	if times_pressed >= 2:
 		menu.play_cancel_sound()
 		strong_flash()
@@ -108,6 +108,7 @@ func action() -> void :
 	
 	GatewayManager.reset_bosses()
 	IGT.set_time(0.0)
+	IGT.reset()
 	CharacterManager.game_mode_set = false
 	CharacterManager.game_mode = 0
 	Savefile.save(Savefile.save_slot)

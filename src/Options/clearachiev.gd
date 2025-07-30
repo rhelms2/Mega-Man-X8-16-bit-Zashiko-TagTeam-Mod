@@ -13,12 +13,12 @@ func on_press() -> void :
 			strong_flash()
 			flashed = true
 			menu.play_equip_sound()
-		text.text = confirmation
+		text.text = tr(confirmation)
 	if times_pressed == 2:
 		menu.play_cancel_sound()
 		strong_flash()
 		action()
-		text.text = post_confirm
+		text.text = tr(post_confirm)
 
 func action() -> void :
 	Achievements.reset_all()

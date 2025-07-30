@@ -2276,14 +2276,7 @@ pointing/emulate_touch_from_mouse=true
 [locale]
 
 test="en"
-translation_remaps={
-}
-translations=PoolStringArray( "res://src/Localization/real_translations.br.translation", "res://src/Localization/real_translations.es.translation", "res://src/Localization/real_translations.ja_JP.translation", "res://src/Localization/real_translations.pr.translation", "res://src/Localization/real_translations.en.translation" )
-locale_filter=[ 0, [  ] ]
-
-[localization_editor]
-
-locales_path_to_file="res://src/Localization/test1.en.translation"
+translations=PoolStringArray( "res://src/Localization/real_translations.br.translation", "res://src/Localization/real_translations.en.translation", "res://src/Localization/real_translations.es.translation", "res://src/Localization/real_translations.ja_JP.translation", "res://src/Localization/real_translations.pr.translation" )
 
 [logging]
 

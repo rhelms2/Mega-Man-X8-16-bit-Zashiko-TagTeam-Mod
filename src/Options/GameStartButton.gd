@@ -16,6 +16,10 @@ var labels: Dictionary = {
 func _ready() -> void :
 	build_mode_list()
 	update_game_mode(CharacterManager.game_mode)
+	Event.connect("translation_updated",self,"update_display")
+
+func update_display():
+	label.text = tr(labels.get(CharacterManager.game_mode, "GAME_START"))
 
 func _process(_delta: float) -> void :
 	if not has_focus() or CharacterManager.game_mode_set:

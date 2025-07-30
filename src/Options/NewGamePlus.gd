@@ -11,7 +11,7 @@ var flashed: bool = false
 
 
 func _ready() -> void :
-	text.text = default_label
+	text.text = tr(default_label)
 	Event.connect("translation_updated", self, "on_update")
 	Savefile.connect("loaded", self, "on_loaded")
 	on_loaded()
@@ -33,7 +33,7 @@ func on_press() -> void :
 			strong_flash()
 			flashed = true
 			menu.play_equip_sound()
-		text.text = confirmation
+		text.text = tr(confirmation)
 	if times_pressed >= 2:
 		menu.play_cancel_sound()
 		strong_flash()

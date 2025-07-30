@@ -38,8 +38,8 @@ func on_press() -> void :
 	icon.material.set_shader_param("grayscale", not CharacterManager.custom_zero_armor)
 
 func display_info() -> void :
-	name_display.text = legible_name
-	disc_display.text = description
+	name_display.text = tr(legible_name)
+	disc_display.text = tr(description)
 
 func process_inputs() -> void :
 	pass
