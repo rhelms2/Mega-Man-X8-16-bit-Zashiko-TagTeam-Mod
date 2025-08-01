@@ -9,4 +9,4 @@ script = ExtResource( 1 )
 name = "Awakened Zero"
 portrait_animations = ExtResource( 3 )
 text_palette = ExtResource( 2 )
-audio_pitch = 1.25
+audio_pitch = 0.8

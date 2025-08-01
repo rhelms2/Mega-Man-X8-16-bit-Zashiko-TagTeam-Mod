@@ -6,4 +6,4 @@
 
 [resource]
 script = ExtResource( 1 )
-dialog = [ ExtResource( 3 ), "FINAL-1", ExtResource( 2 ), "FINAL-2", ExtResource( 3 ), "FINAL-3", "FINAL-4", "FINAL-5" ]
+dialog = [ ExtResource( 3 ), "FINAL-1", ExtResource( 2 ), "FINAL-2", ExtResource( 3 ), "FINAL-3", "FINAL-4", "FINAL-5", ExtResource( 2 ), "FINAL-6" ]
