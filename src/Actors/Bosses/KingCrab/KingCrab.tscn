@@ -64,7 +64,7 @@ extents = Vector2( 38.5, 61 )
 z_index = 4
 collision_layer = 8
 script = ExtResource( 10 )
-max_health = 90.0
+max_health = 80.0
 things_to_hide_on_death = [ NodePath("animatedSprite/LegShooter") ]
 
 [node name="actual_center" type="Node2D" parent="."]
@@ -331,6 +331,7 @@ invulnerability_time = 0.1
 ignore_nearby_hits = false
 max_flash_time = 0.35
 debugging = true
+weakenesses = [ "Saber" ]
 
 [node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
 pause_mode = 2
