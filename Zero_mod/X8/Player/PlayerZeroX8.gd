@@ -336,12 +336,12 @@ func equip_black_zero_parts() -> void :
 	
 	var lifesteal = get_node("LifeSteal")
 	lifesteal.activate()
-	lifesteal.first_decay = 0.5
-	lifesteal.lifesteal_decay = 0.5
+	lifesteal.first_decay = 1.5
+	lifesteal.lifesteal_decay = 0.75
 	lifesteal.minimum_time_between_heals = 0.3
 	
 	var dmg = get_node("Damage")
-	dmg.damage_reduction = 0
+	dmg.damage_reduction = 15
 	dmg.prevent_knockbacks = true
 	dmg.conflicting_moves = ["Death", "Nothing"]
 	

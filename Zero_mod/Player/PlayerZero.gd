@@ -283,7 +283,7 @@ func equip_black_zero_parts():
 	lifesteal.minimum_time_between_heals = 0.3
 	
 	var dmg = get_node("Damage")
-	dmg.damage_reduction = 0
+	dmg.damage_reduction = 15
 	dmg.prevent_knockbacks = true
 	dmg.conflicting_moves = ["Death", "Nothing"]
 	
