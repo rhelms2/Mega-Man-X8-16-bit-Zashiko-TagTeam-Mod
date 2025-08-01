@@ -88,7 +88,7 @@ margin_right = 60.0
 margin_bottom = 9.0
 custom_colors/font_color_shadow = Color( 0.372549, 0.372549, 0.372549, 1 )
 custom_fonts/font = ExtResource( 11 )
-text = "LOAD GAME"
+text = "LOAD_GAME"
 align = 1
 uppercase = true
 
