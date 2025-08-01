@@ -2,7 +2,6 @@ extends AttackAbility
 
 export  var vertical_offset: float = 10.0
 export  var strong_lightining: PackedScene
-export  var damage_reduction_during_desperation: float = 0.5
 
 onready var space: Node = $"../Space"
 onready var tween: TweenController = TweenController.new(self)
@@ -69,7 +68,6 @@ var sequence3: Array = [
 var sequences: Array = [sequence0, sequence1, sequence, sequence2, sequence3]
 var current_sequence
 var final_storms: Array
-var desperation_damage_reduction: float = 0.5
 
 var storm_prepare_time: Array = [0.45, 0.45, 0.45, 0.45]
 var strom2_time: Array = [1.25, 0.65]
@@ -83,7 +81,6 @@ signal ready_for_stun
 
 
 func set_game_modes() -> void :
-	desperation_damage_reduction = CharacterManager.boss_damage_reduction
 	if CharacterManager.game_mode < 0:
 		storm_prepare_time = [0.5, 0.5, 0.5, 0.5]
 		strom2_time = [1.5, 0.7]
@@ -134,7 +131,7 @@ func generate_random_sequence(
 	var simple_phase_end_index: int = 3
 	var complex_phase_start_index: int = 4
 	var total_entries: int = 8
-	var sequence: Array = []
+	var _sequence: Array = []
 	var count_4: int = 0
 	var count_5: int = 0
 	
@@ -168,17 +165,17 @@ func generate_random_sequence(
 				entry.append(number_pool[j])
 			entry.sort()
 			
-			if i > 0 and entry == sequence[i - 1]:
+			if i > 0 and entry == _sequence[i - 1]:
 				attempts += 1
 				continue
-			if not can_repeat and entry in sequence:
+			if not can_repeat and entry in _sequence:
 				attempts += 1
 				continue
 			
-			if i > 0 and entry.size() < sequence[i - 1].size():
+			if i > 0 and entry.size() < _sequence[i - 1].size():
 				var is_subset: = true
 				for n in entry:
-					if not sequence[i - 1].has(n):
+					if not _sequence[i - 1].has(n):
 						is_subset = false
 						break
 				if is_subset:
@@ -187,9 +184,9 @@ func generate_random_sequence(
 			
 			if i > 0 and side_switch_strength > 0.0:
 				var last_avg = 0.0
-				for n in sequence[i - 1]:
+				for n in _sequence[i - 1]:
 					last_avg += n
-				last_avg /= sequence[i - 1].size()
+				last_avg /= _sequence[i - 1].size()
 				var current_avg = 0.0
 				for n in entry:
 					current_avg += n
@@ -220,8 +217,8 @@ func generate_random_sequence(
 				count_5 += 1
 				
 			break
-		sequence.append(entry)
-	return sequence
+		_sequence.append(entry)
+	return _sequence
 
 func _ready() -> void :
 	Event.connect("crystal_wall_created", self, "on_wall_created")
@@ -231,7 +228,6 @@ func on_wall_created(wall) -> void :
 
 func _Setup() -> void :
 	set_game_modes()
-	character.emit_signal("damage_reduction", desperation_damage_reduction)
 	cast_times = 0
 	pick_random_storm_sequence()
 	for cast in raycasts:
@@ -385,7 +381,7 @@ func cast_warnings() -> void :
 
 func cast_final_warnings() -> void :
 	current_lightnings.clear()
-	var pack: Array
+	var pack: Array = []
 	for element in current_sequence[cast_times]:
 		pack.append(create_lightning(raycasts[element - 1].get_collision_point(), 0.35))
 	cast_times += 1
@@ -483,7 +479,6 @@ func go_to_center() -> void :
 
 func _Interrupt() -> void :
 	emit_signal("stop")
-	character.emit_signal("damage_reduction", 1.0)
 	for r in current_lightnings:
 		r.queue_free()
 	current_lightnings.clear()
