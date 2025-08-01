@@ -8276,17 +8276,12 @@ position = Vector2( 0, -33 )
 z_index = 1
 shape = SubResource( 30 )
 
-[node name="collisionShape2D_Top" type="CollisionShape2D" parent="Objects/Elevator2" index="3"]
-position = Vector2( -28, -270 )
-z_index = 1
-shape = SubResource( 30 )
-
-[node name="sprite" type="Sprite" parent="Objects/Elevator2" index="4"]
+[node name="sprite" type="Sprite" parent="Objects/Elevator2" index="3"]
 position = Vector2( 0, -38 )
 texture = ExtResource( 32 )
 script = ExtResource( 45 )
 
-[node name="elevatorStarter" type="Area2D" parent="Objects/Elevator2" index="5"]
+[node name="elevatorStarter" type="Area2D" parent="Objects/Elevator2" index="4"]
 position = Vector2( 0, -74 )
 z_index = 6
 collision_layer = 0
@@ -8301,7 +8296,7 @@ shape = SubResource( 25 )
 position = Vector2( -63.5, -79.5 )
 shape = SubResource( 212 )
 
-[node name="elevatorOnStartOnEnd" type="Particles2D" parent="Objects/Elevator2" index="6"]
+[node name="elevatorOnStartOnEnd" type="Particles2D" parent="Objects/Elevator2" index="5"]
 visible = false
 material = SubResource( 210 )
 position = Vector2( 0, -23 )
@@ -8316,31 +8311,31 @@ texture = ExtResource( 39 )
 script = ExtResource( 37 )
 doorblock = NodePath("../../DoorBlock2/collisionShape2D")
 
-[node name="shutdown" type="AudioStreamPlayer2D" parent="Objects/Elevator2" index="7"]
+[node name="shutdown" type="AudioStreamPlayer2D" parent="Objects/Elevator2" index="6"]
 stream = ExtResource( 40 )
 volume_db = -8.0
 max_distance = 600.0
 bus = "SFX"
 
-[node name="shutdown2" type="AudioStreamPlayer2D" parent="Objects/Elevator2" index="8"]
+[node name="shutdown2" type="AudioStreamPlayer2D" parent="Objects/Elevator2" index="7"]
 stream = ExtResource( 41 )
 volume_db = -8.0
 max_distance = 600.0
 bus = "SFX"
 
-[node name="startup" type="AudioStreamPlayer2D" parent="Objects/Elevator2" index="9"]
+[node name="startup" type="AudioStreamPlayer2D" parent="Objects/Elevator2" index="8"]
 stream = ExtResource( 42 )
 volume_db = -8.0
 max_distance = 600.0
 bus = "SFX"
 
-[node name="startup2" type="AudioStreamPlayer2D" parent="Objects/Elevator2" index="10"]
+[node name="startup2" type="AudioStreamPlayer2D" parent="Objects/Elevator2" index="9"]
 stream = ExtResource( 43 )
 volume_db = -8.0
 max_distance = 600.0
 bus = "SFX"
 
-[node name="loop" type="AudioStreamPlayer2D" parent="Objects/Elevator2" index="11"]
+[node name="loop" type="AudioStreamPlayer2D" parent="Objects/Elevator2" index="10"]
 stream = ExtResource( 44 )
 volume_db = -14.0
 pitch_scale = 0.51
@@ -8351,7 +8346,7 @@ bus = "SFX"
 pause_mode = 2
 position = Vector2( 1350, -1571 )
 frames = SubResource( 204 )
-frame = 2
+frame = 4
 playing = true
 
 [node name="particles2D" type="Particles2D" parent="Objects/Entrance" index="0"]
@@ -8426,6 +8421,7 @@ script = ExtResource( 88 )
 position = Vector2( 200, 113 )
 z_index = -10
 frames = SubResource( 234 )
+frame = 1
 playing = true
 
 [node name="SecretBossTileset" type="TileMap" parent="Objects/SecretBossRoom" index="1"]
