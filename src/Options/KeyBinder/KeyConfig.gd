@@ -110,6 +110,8 @@ func update_character_menu() -> void :
 			hide_special_holders()
 			if CharacterManager.betazero_unlocked:
 				$Menu / textureRect / Zero / betazero_holder.show()
+			if CharacterManager.custom_zero_unlocked:
+				$Menu/textureRect/Zero/customzero_holder.show()
 
 func has_icarus_armor() -> bool:
 	var part: int = 0

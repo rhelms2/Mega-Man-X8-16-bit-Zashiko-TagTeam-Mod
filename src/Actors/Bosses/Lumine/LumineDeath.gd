@@ -56,6 +56,8 @@ func _Setup():
 		CharacterManager.beaten_insanity = true
 	if CharacterManager.game_mode >= 3:
 		CharacterManager.beaten_ninjagaiden = true
+		if CharacterManager.player_character == "Zero":
+			CharacterManager.custom_zero_unlocked = true
 	CharacterManager._save()
 
 func unpause() -> void :

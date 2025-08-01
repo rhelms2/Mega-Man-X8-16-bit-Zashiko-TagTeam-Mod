@@ -32,6 +32,7 @@ var nightshade_zero_armor: bool = false
 var started_fresh_game: bool = false
 var only_zero: bool = false
 var custom_zero_armor: bool = false
+var custom_zero_unlocked: bool = false
 
 var tenshouha_active: bool = true
 var juuhazan_active: bool = true
@@ -78,6 +79,8 @@ func _save() -> void :
 		"beaten_hard": beaten_hard, 
 		"beaten_insanity": beaten_insanity, 
 		"beaten_ninjagaiden": beaten_ninjagaiden,
+		"custom_zero_unlocked": custom_zero_unlocked,
+		"custom_zero_armor": custom_zero_armor,
 		"beta_zero_unlocked": betazero_unlocked, 
 		"beta_zero_activated": betazero_activated, 
 		
@@ -109,9 +112,13 @@ func _load() -> void :
 			new_game = bool(save_data.get("new_game", true))
 			beaten_hard = bool(save_data.get("beaten_hard", false))
 			beaten_insanity = bool(save_data.get("beaten_insanity", false))
+			beaten_ninjagaiden = bool(save_data.get("beaten_ninjagaiden",false))
 			
 			betazero_unlocked = bool(save_data.get("beta_zero_unlocked", false))
 			betazero_activated = bool(save_data.get("beta_zero_activated", false))
+			
+			custom_zero_unlocked = bool(save_data.get("custom_zero_unlocked",false))
+			custom_zero_armor = bool(save_data.get("custom_zero_armor",false))
 			
 			if "ultima_head" in GameManager.collectibles:
 				if evaluate_ultimate_armor_state():
@@ -767,7 +774,7 @@ func set_custom_zeroX8_colors(node) -> void :
 	}
 
 	var file = File.new()
-	var path = "res://custom_zero_palette.txt"
+	var path = "user://custom_zero_palette.ini"
 	if not file.file_exists(path):
 		var default_text = \
 		"# You can customize Zero\'s colors by changing the hex values below.\n# Format: ParameterName=HexColor\n# Lines starting with \'#\' are comments and ignored.\n\n# Outline color\nOutline_Color=#4A086A\n\n# Main body colors (light to dark)\nMainBody_Color1=#C56AF6\nMainBody_Color2=#C56AF6\nMainBody_Color3=#A400D5\nMainBody_Color4=#6A109C\n\n# Hair colors (light to dark)\nHair_Color1=#F6F6F6\nHair_Color2=#F694E6\nHair_Color3=#DE4AAC\nHair_Color4=#B4007B\n\n# Head crystal colors (light to dark)\nHeadCrystal_Color1=#F6F6F6\nHeadCrystal_Color2=#31DB73\nHeadCrystal_Color3=#187B29\n\n# Chest crystal colors (light to dark)\nChestCrystal_Color1=#F6F6F6\nChestCrystal_Color2=#40E040\nChestCrystal_Color3=#20A020\n\n# Armor colors (light to dark)\nArmor_Color1=#F694E6\nArmor_Color2=#DE4AAC\nArmor_Color3=#B4007B\n\n# Grey parts colors (light to dark)\nGrey_Color1=#F6F6F6\nGrey_Color2=#9CB4A4\nGrey_Color3=#526A5A\nGrey_Color4=#526A5A\n\n# Skin colors (light to dark)\nSkin_Color1=#F694E6\nSkin_Color2=#DE4AAC\nSkin_Color3=#B4007B\n\n# Saber colors (light to dark)\nSaber_Color1=#F0F0F0\nSaber_Color2=#A0B0C0\nSaber_Color3=#646A84\n# Also used for afterimage effects when dashing\nSaber_Color4=#404060"
