@@ -983,8 +983,8 @@ margin_bottom = 30.0
 texture_normal = ExtResource( 83 )
 script = ExtResource( 55 )
 menu_path = NodePath("../../../../../../..")
-legible_name = "DEFAULTHEAD_NAME"
-description = "DEFAULTHEAD_DISC"
+legible_name = "AXLHEAD_NAME"
+description = "AXLHEAD_DISC"
 
 [node name="sprite" type="Sprite" parent="Menu/textureRect/Axl/Options Group/ArmorParts/HeadParts/head"]
 modulate = Color( 1, 1, 1, 0.588235 )
@@ -1023,8 +1023,8 @@ margin_bottom = 30.0
 texture_normal = ExtResource( 82 )
 script = ExtResource( 55 )
 menu_path = NodePath("../../../../../../..")
-legible_name = "DEFAULTBODY_NAME"
-description = "DEFAULTBODY_DISC"
+legible_name = "AXLBODY_NAME"
+description = "AXLBODY_DISC"
 
 [node name="sprite" type="Sprite" parent="Menu/textureRect/Axl/Options Group/ArmorParts/BodyParts/body"]
 modulate = Color( 1, 1, 1, 0.588235 )
@@ -1063,8 +1063,8 @@ margin_bottom = 30.0
 texture_normal = ExtResource( 80 )
 script = ExtResource( 55 )
 menu_path = NodePath("../../../../../../..")
-legible_name = "DEFAULTARMS_NAME"
-description = "DEFAULTARMS_DISC"
+legible_name = "AXLARMS_NAME"
+description = "AXLARMS_DISC"
 
 [node name="sprite" type="Sprite" parent="Menu/textureRect/Axl/Options Group/ArmorParts/ArmParts/arms"]
 modulate = Color( 1, 1, 1, 0.588235 )
@@ -1103,8 +1103,8 @@ margin_bottom = 30.0
 texture_normal = ExtResource( 81 )
 script = ExtResource( 55 )
 menu_path = NodePath("../../../../../../..")
-legible_name = "DEFAULTLEGS_NAME"
-description = "DEFAULTLEGS_DISC"
+legible_name = "AXLLEGS_NAME"
+description = "AXLLEGS_DISC"
 
 [node name="sprite" type="Sprite" parent="Menu/textureRect/Axl/Options Group/ArmorParts/LegParts/legs"]
 modulate = Color( 1, 1, 1, 0.588235 )
@@ -1283,8 +1283,8 @@ margin_bottom = 30.0
 texture_normal = ExtResource( 59 )
 script = ExtResource( 61 )
 menu_path = NodePath("../../../../../../..")
-legible_name = "DEFAULTHEAD_NAME"
-description = "DEFAULTHEAD_DISC"
+legible_name = "ZEROHEAD_NAME"
+description = "ZEROHEAD_DESC"
 
 [node name="sprite" type="Sprite" parent="Menu/textureRect/Zero/Options Group/ArmorParts/HeadParts/head"]
 modulate = Color( 1, 1, 1, 0.588235 )
@@ -1363,8 +1363,8 @@ margin_bottom = 30.0
 texture_normal = ExtResource( 74 )
 script = ExtResource( 61 )
 menu_path = NodePath("../../../../../../..")
-legible_name = "DEFAULTARMS_NAME"
-description = "DEFAULTARMS_DISC"
+legible_name = "ZEROARMS_NAME"
+description = "ZEROARMS_DISC"
 
 [node name="sprite" type="Sprite" parent="Menu/textureRect/Zero/Options Group/ArmorParts/ArmParts/arms"]
 modulate = Color( 1, 1, 1, 0.588235 )
@@ -1403,8 +1403,8 @@ margin_bottom = 30.0
 texture_normal = ExtResource( 62 )
 script = ExtResource( 61 )
 menu_path = NodePath("../../../../../../..")
-legible_name = "DEFAULTLEGS_NAME"
-description = "DEFAULTLEGS_DISC"
+legible_name = "ZEROLEGS_NAME"
+description = "ZEROLEGS_DISC"
 
 [node name="sprite" type="Sprite" parent="Menu/textureRect/Zero/Options Group/ArmorParts/LegParts/legs"]
 modulate = Color( 1, 1, 1, 0.588235 )
