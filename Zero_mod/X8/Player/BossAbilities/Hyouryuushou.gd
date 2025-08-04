@@ -14,6 +14,6 @@ func set_ability():
 func should_unlock(collectible: String) -> bool:
 	return collectible == weapon.collectible
 
-func _on_Forced_ability_start(node):
+func _on_Forced_ability_start(_node):
 	pass
 	

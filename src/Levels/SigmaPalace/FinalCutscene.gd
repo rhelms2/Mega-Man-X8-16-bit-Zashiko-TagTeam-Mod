@@ -114,12 +114,12 @@ func _on_dialog_concluded() -> void :
 func move_to_position(data: Dictionary):
 	var sprite = data["sprite"]
 	var animation = data["animation"]
-	var x = data["x"]
-	var y = data["y"]
+	var _x = data["x"]
+	var _y = data["y"]
 	var duration = data["duration"]
 	sprite.animation = animation
-	tween.attribute("position:x", x, duration, sprite)
-	tween.attribute("position:y", y, duration, sprite)
+	tween.attribute("position:x", _x, duration, sprite)
+	tween.attribute("position:y", _y, duration, sprite)
 	var callback_data = {"sprite": sprite, "animation": "recover"}
 	tween.add_callback("on_movement_completed", self, [callback_data])
 	connect("movement_finished", self, "finished_movement")
@@ -312,7 +312,7 @@ func end_fire() -> void :
 	x.play("crouch")
 	x.frames = load("res://src/Actors/Player/x_sprites/x.res")
 	zero.flip_h = true
-func _on_area2D_body_entered(body: Node) -> void :
+func _on_area2D_body_entered(_body: Node) -> void :
 	quick_pause()
 
 
