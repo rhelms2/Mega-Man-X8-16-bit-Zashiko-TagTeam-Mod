@@ -1040,7 +1040,7 @@ texture_normal = ExtResource( 84 )
 script = ExtResource( 55 )
 menu_path = NodePath("../../../../../../..")
 legible_name = "AXLWHITEBODY_NAME"
-description = "AXLWHITEBODY_DISC"
+description = "AXLWHITEBODY_DESC"
 
 [node name="sprite" type="Sprite" parent="Menu/textureRect/Axl/Options Group/ArmorParts/BodyParts/white_body"]
 modulate = Color( 1, 1, 1, 0.588235 )
