@@ -1593,7 +1593,7 @@ armor_part = "hermes_legs"
 dialogue = ExtResource( 20 )
 
 [node name="animatedSprite" parent="Objects/Capsule" index="1"]
-frame = 10
+frame = 21
 
 [node name="area2D" parent="Objects/Capsule" index="6"]
 visible = true
