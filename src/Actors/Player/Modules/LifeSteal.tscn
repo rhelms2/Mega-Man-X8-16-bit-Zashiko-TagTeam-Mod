@@ -1,0 +1,34 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/Actors/Player/Modules/LifeSteal.gd" type="Script" id=1]
+[ext_resource path="res://src/Sounds/12 - MMX - X Life Gain.wav" type="AudioStream" id=2]
+[ext_resource path="res://src/Sounds/22 - MMX - Capsule Open.wav" type="AudioStream" id=3]
+
+[node name="LifeSteal" type="Node2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+active = false
+debug_logs = true
+conflicting_moves = [ "Death", "Nothing" ]
+actions = [ "Event" ]
+horizontal_velocity = 45.0
+jump_velocity = 190.0
+start_event = "reduced_health"
+receive_parameter = true
+force_start = true
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+volume_db = -7.0
+pitch_scale = 1.15
+max_distance = 600.0
+bus = "SFX"
+
+[node name="heal_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 2 )
+volume_db = -6.0
+pitch_scale = 0.95
+max_distance = 600.0
+bus = "SFX"

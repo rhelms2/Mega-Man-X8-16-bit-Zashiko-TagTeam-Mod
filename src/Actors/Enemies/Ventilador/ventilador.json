@@ -1,0 +1,141 @@
+{ "frames": [
+   {
+    "filename": "ventilador 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 48, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 48, "h": 96 },
+    "sourceSize": { "w": 48, "h": 96 },
+    "duration": 60
+   },
+   {
+    "filename": "ventilador 1.ase",
+    "frame": { "x": 48, "y": 0, "w": 48, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 48, "h": 96 },
+    "sourceSize": { "w": 48, "h": 96 },
+    "duration": 60
+   },
+   {
+    "filename": "ventilador 2.ase",
+    "frame": { "x": 96, "y": 0, "w": 48, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 48, "h": 96 },
+    "sourceSize": { "w": 48, "h": 96 },
+    "duration": 60
+   },
+   {
+    "filename": "ventilador 3.ase",
+    "frame": { "x": 144, "y": 0, "w": 48, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 48, "h": 96 },
+    "sourceSize": { "w": 48, "h": 96 },
+    "duration": 60
+   },
+   {
+    "filename": "ventilador 4.ase",
+    "frame": { "x": 0, "y": 96, "w": 48, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 48, "h": 96 },
+    "sourceSize": { "w": 48, "h": 96 },
+    "duration": 60
+   },
+   {
+    "filename": "ventilador 5.ase",
+    "frame": { "x": 48, "y": 96, "w": 48, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 48, "h": 96 },
+    "sourceSize": { "w": 48, "h": 96 },
+    "duration": 60
+   },
+   {
+    "filename": "ventilador 6.ase",
+    "frame": { "x": 96, "y": 96, "w": 48, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 48, "h": 96 },
+    "sourceSize": { "w": 48, "h": 96 },
+    "duration": 60
+   },
+   {
+    "filename": "ventilador 7.ase",
+    "frame": { "x": 144, "y": 96, "w": 48, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 48, "h": 96 },
+    "sourceSize": { "w": 48, "h": 96 },
+    "duration": 60
+   },
+   {
+    "filename": "ventilador 8.ase",
+    "frame": { "x": 0, "y": 192, "w": 48, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 48, "h": 96 },
+    "sourceSize": { "w": 48, "h": 96 },
+    "duration": 60
+   },
+   {
+    "filename": "ventilador 9.ase",
+    "frame": { "x": 48, "y": 192, "w": 48, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 48, "h": 96 },
+    "sourceSize": { "w": 48, "h": 96 },
+    "duration": 60
+   },
+   {
+    "filename": "ventilador 10.ase",
+    "frame": { "x": 96, "y": 192, "w": 48, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 48, "h": 96 },
+    "sourceSize": { "w": 48, "h": 96 },
+    "duration": 60
+   },
+   {
+    "filename": "ventilador 11.ase",
+    "frame": { "x": 144, "y": 192, "w": 48, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 48, "h": 96 },
+    "sourceSize": { "w": 48, "h": 96 },
+    "duration": 60
+   },
+   {
+    "filename": "ventilador 12.ase",
+    "frame": { "x": 0, "y": 288, "w": 48, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 48, "h": 96 },
+    "sourceSize": { "w": 48, "h": 96 },
+    "duration": 60
+   },
+   {
+    "filename": "ventilador 13.ase",
+    "frame": { "x": 48, "y": 288, "w": 48, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 48, "h": 96 },
+    "sourceSize": { "w": 48, "h": 96 },
+    "duration": 60
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3-rc1-x64",
+  "image": "ventilador.png",
+  "format": "RGBA8888",
+  "size": { "w": 192, "h": 384 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "back", "from": 0, "to": 6, "direction": "forward", "color": "#000000ff" },
+   { "name": "front", "from": 7, "to": 13, "direction": "forward", "color": "#000000ff" }
+  ]
+ }
+}

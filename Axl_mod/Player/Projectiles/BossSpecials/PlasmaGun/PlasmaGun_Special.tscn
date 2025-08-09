@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossSpecials/PlasmaGun/lightning_aura.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossSpecials/PlasmaGun/PlasmaGun_Special.gd" type="Script" id=2]
+[ext_resource path="res://src/Sounds/FX - Electric Spark.ogg" type="AudioStream" id=3]
+[ext_resource path="res://src/Sounds/Vile - Defeat.ogg" type="AudioStream" id=4]
+
+[node name="PlasmaGun Special" type="Node2D"]
+script = ExtResource( 2 )
+disable_base_ready = true
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 0, -4 )
+frames = ExtResource( 1 )
+animation = "aura"
+playing = true
+
+[node name="sfx" type="AudioStreamPlayer" parent="."]
+pause_mode = 1
+stream = ExtResource( 3 )
+volume_db = -16.0
+bus = "SFX"
+
+[node name="sparks" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
+stream = ExtResource( 4 )
+pitch_scale = 1.05
+max_distance = 600.0
+attenuation = 0.951366
+bus = "SFX"

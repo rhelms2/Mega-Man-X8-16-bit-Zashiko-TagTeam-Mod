@@ -1,0 +1,612 @@
+keys,en,br,es,pr
+,,,,
+DISCLAIMER1,"This is a free fangame.
+
+It is not affiliated, associated, authorized, endorsed or in any way officially connected with Capcom or any of it's subsidiaries or it's affiliates.
+
+Mega Man X is a property of Capcom.
+Please support the official release!","Este jogo é um fangame gratuito.
+
+Ele não é afiliado, associado, autorizado, aprovado ou oficialmente conectado com a Capcom ou qualquer uma de suas subsidiárias.
+
+Mega Man X é propriedade da Capcom.
+Apoie os jogos oficiais!","Este es un fangame gratuito.
+
+No está afiliado, asociado, autorizado, respaldado ni de ninguna manera oficialmente conectado con Capcom o cualquiera de sus filiales o afiliados.
+
+Mega Man X es una propiedad de Capcom.
+¡Por favor, apoya el lanzamiento oficial!","Este jogo é um fangame gratuito.
+
+Ele não é afiliado, associado, autorizado, aprovado ou oficialmente conectado com a Capcom ou qualquer uma de suas afiliadas.
+
+Mega Man X é propriedade da Capcom.
+Apoie os jogos oficiais!"
+MADE_BY,A solo project by,Um projeto solo por,Un proyecto hecho solo por,A poha toda feita por:
+,,,,
+INSPIRED_BY,Inspired by,Inspirado pela,Inspirado por,Inspirado pela
+GAME_START,GAME  START,INICIAR JOGO,INICIAR JUEGO,COMEÇAR ESSA PORRA
+OPTIONS_START,OPTION MODE,MODO OPÇÕES,MODO DE OPCIONES,MEXER NUNS TRECO
+KEYCFG_START,KEY  CONFIG,CONTROLES,CONFIGURAR CONTROLES,CONTROLE ZOADO
+,,,,
+KEYCFG_ABV,KEYCFG,CONFIG,CONFIG,CONFIG
+OPTIONS_ABV,OPTIONS,OPÇÕES,OPCIONES,OPÇÕES
+TANK_ABV,SUB.T,SUB.T,SUB.T,SUB.T
+X_WPNMENU,X. Buster,X. Buster,X. Buster,Limão
+SUNFLOWER_WPNMENU,O. Shield,O. Shield,O. Shield,
+ANTONION_WPNMENU,S. Bomb,S. Bomb,S. Bomb,
+MANTIS_WPNMENU,D. Arrow,D. Arrow,D. Arrow,
+MANOWAR_WPNMENU,T. Dancer,T. Dancer,T. Dancer,
+PANDA_WPNMENU,B. Launcher,B. Launcher,B. Launcher,
+TRILOBYTE_WPNMENU,C. Bouncer,C. Bouncer,C. Bouncer,
+YETI_WPNMENU,D. Diamond,D. Diamond,D. Diamond,
+ROOSTER_WPNMENU,F. Dash,F. Dash,F. Dash,
+,,,,
+YOUGOT_TITLE,You get,Você obteve,Obtienes,Você Afanou
+SUNFLOWER_WEAPON,Optic Shield,,,
+ANTONION_WEAPON,Squeeze Bomb,,,
+MANTIS_WEAPON,Dark Arrow,,,
+MANOWAR_WEAPON,Thunder Dancer,,,
+PANDA_WEAPON,Blast Launcher,,,
+TRILOBYTE_WEAPON,Crystal Bouncer,,,
+YETI_WEAPON,Drift Diamond,,,
+ROOSTER_WEAPON,Fire Dash,,,
+,,,,
+OPTIONS_TITLE,OPTIONS,OPÇÕES,OPCIONES,CUIDADO PRA NÃO ZOAR
+DT_DASH_OPTION,Double tap dash,Dash 2x pra frente,2x toque para Dash,Isso n é jogo de luta carai
+CHARGE_OPTION,Charge fade out,Som Carregar Gradual,Sonido de Carga Gradual,ficar doido com charge
+MUSIC_OPTION,Music Volume,Volume da Música,Volumen de la Música,Pôe no máximo
+SOUND_OPTION,Sound Volume,Volume dos Sons,Volumen de los Sonidos,Zoada
+FPS_OPTION,Target FPS,FPS Alvo,FPS Objetivo,Seu PC não tanka
+WSIZE_OPTION,Window Size,Tamanho da Janela,Tamaño de la Ventana,Deixar grandão
+FULLSCREEN_OPTION,Fullscreen,Tela Cheia,Pantalla Completa,Cobrir tudo
+DEBUG_OPTION,Show Debug,Mostrar Debug,Mostrar Debug,Já vai cheatar né
+CLEARSAVE_OPTION,Clear save game and reset,Deletar Jogo Salvo e Resetar,Borrar Juego Guardado y Reiniciar,Deletar Jogo Salvo e Resetar
+CLEARSAVE_CONFIRM,Press again to confirm,Pressione novamente para confirmar,Presiona Nuevamente Para Confirmar,Pressione novamente para confirmar
+ON_VALUE,ON,Ativo,ON,Ativo
+OFF_VALUE,OFF,Desl.,OFF,Desl.
+LANGUAGE_OPTION,Language,Idioma,Idioma,Idioma
+SKIP_DIAG_OPTION,Skippable Dialogs,Diálogos Puláveis,Diálogos Omitibles,Não gosto de ler
+CRT_OPTION,CRT Filter,Filtro CRT,Filtro CRT,TV de Tubo
+LIGHT_VALUE,Light,Leve,Tenue,Levin
+STRONG_VALUE,Strong,Forte,Fuerte,Brabo
+ACHIEV_OPTION,Show Achievements,Mostrar Conquistas,Mostrar Logros,Isso não é RA carai
+RESET_ACHIEV,Clear Achievements Progress,Apagar Progresso Conquistas,Borrar Progreso de Logros,Apagar Progresso Conquistas
+RESET_ACHIEV_FINISHED,Achivements Progress Cleared.,Progresso Conquistas Apagado.,Progreso de Logros Apagado,Progresso Conquistas Apagado.
+,,,,
+,,,,
+KEYCFG_TITLE,KEY CONFIG,CONFIGURAÇÃO DE BOTÕES,CONFIGURACIÓN DE BOTONES,DEIXA O DASH NO A
+ACTION_CTG,Action,Ação,Acción,Ação
+KEYBOARD_CTG,Keyboard,Teclado,Teclado,Teclado
+JOYPAD_CTG,Joypad,Controle,Joystick,Controle
+,,,,
+LEFT_ACT,left,esquerda,Izquierda,esquerda
+RIGHT_ACT,right,direita,Derecha,direita
+UP_ACT,up,cima,Arriba,cima
+DOWN_ACT,down,baixo,Abajo,baixo
+SHOT_ACT,shot,tiro,Disparo,tiro
+SHOT2_ACT,shot2,tiro2,Disparo2,tiro2
+JUMP_ACT,jump,pulo,Salto,pulo
+DASH_ACT,dash,dash,Dash,dash
+PREV_ACT,prev weapon,arma anterior,Arma Anterior,arma anterior
+NEXT_ACT,next weapon,proxima arma,Arma Siguiente,proxima arma
+PAUSE_ACT,pause menu,pausar,Pausar,pausar
+CONFIRM_ACT,menu confirm,confirmar,Confirmar,confirmar
+,,,,
+ARMORABILITY_ACT,armor ability,ataque esp.,Giga Attack,ataque esp.
+WPNLEFT_ACT,wheel left,roda esq.,Rueda Izq.,roda esq.
+WPNRIGHT_ACT,wheel right,roda dir.,Rueda Der.,roda dir.
+WPNUP_ACT,wheel up,roda cima,Rueda Arriba,roda cima
+WPNDOWN_ACT,wheel down,roda baixo,Rueda Abajo,roda baixo
+WPNRESET_ACT,select buster,selec. Buster,Selec. Buster,selec. Buster
+,,,,
+,,,,
+ARMORSETUP_TITLE,Armor Setup,Armadura,Armadura,Fashion Souls
+LOADOUT_DISC,Choose your loadout.,Escolha sua armadura,Elige Tu Armadura,3 por 15
+EXIT_BUTTON,Exit,Sair,Salir,Vazar
+,,,,
+STAGE_DC,Stage,Fase,Nivel,Engenho
+BOSS_DC,Boss,Chefe,Jefe,Capitão do Mato
+COMPLETION_DC,Completed,Concluído,Completado,Paradas Pegadas
+SUNFLOWER_STAGE,Troia Base,Base Troia,Base Troia,Anta Gorda
+ANTONION_STAGE,Primrose,Laboratório Primula,Laboratorio Primavera,Chorrochó
+MANTIS_STAGE,Pitch Black,Arsenal Soturno,Oscuridad Total,Santa Rita do Passa Quatro
+MANOWAR_STAGE,Dynasty,Usina Dinastia,Dinastía,Marginal do Tietê
+PANDA_STAGE,Booster Forest,Floresta Ergânica,Bosque Amplificador,Paudalho
+TRILOBYTE_STAGE,Metal Valley,Vale do Metal,Valle de Metal,Caucaia
+YETI_STAGE,Central White,Central Alva,Central Alba,Trombudo Central
+ROOSTER_STAGE,Inferno,Incinerador Inferno,Incinerador Infierno,Favela do Gato Morto
+,,,,
+JAKOB_STAGE,Jakob Elevator,Elevador Orbital Jakob,Elevador Orbital Jakob,Morro do Papagaio
+GATEWAY_STAGE,Gateway,Satélite de Acesso,Satélite de Acceso,Arroio dos Ratos
+SIGMA_STAGE,Sigma Palace,Palácio Lunar Sigma,Palacio de Sigma,Rolândia
+,,,,
+SUNFLOWER_NAME,Optic Sunflower,Optic Sunflower,Optic Sunflower,Óleo de Girassol
+ANTONION_NAME,Gravity Antonion,Gravity Antonion,Gravity Antonion,Toninho Tanajura
+MANTIS_NAME,Dark Mantis,Dark Mantis,Dark Mantis,João Grilo
+MANOWAR_NAME,Gigabolt Manowar,Gigabolt Manowar,Gigabolt Manowar,Geléia Manauara
+PANDA_NAME,Bamboo Pandamonium,Bamboo Pandamonium,Bamboo Pandamonium,E o Bambú?
+TRILOBYTE_NAME,Earthrock Trilobyte,Earthrock Trilobyte,Earthrock Trilobyte,Tatuzinho de Jardim
+YETI_NAME,Avalanche Yeti,Avalanche Yeti,Avalanche Yeti,Aval Lanches e Vet.
+ROOSTER_NAME,Burn Rooster,Burn Rooster,Burn Rooster,Frango de Padaria
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+HERMESHEAD_NAME,Head Parts H,Head Parts H,Parte de Cabeza H,Par de Chifres H
+HERMESHEAD_DISC,Charges faster.,Carregamento de tiro mais rápido.,Carga más rápido.,Carregamento de tiro mais rápido.
+HERMESBODY_NAME,Body Parts H,Body Parts H,Parte de Cuerpo H,Petcholas H
+HERMESBODY_DISC,Buster hits heal damage taken.,Acertar Buster cura dano tomado.,Los golpes del Buster curan el daño recibido.,Acertar Buster cura dano tomado.
+HERMESARMS_NAME,Buster Parts H,Buster Parts H,Partes de Buster H,Berro H
+HERMESARMS_DISC,Weapon shots consume no ammo.,Tiros de Arma não gastam munição.,Los disparos del Arma no consumen munición.,Tiros de Arma não gastam munição.
+HERMESLEGS_NAME,Foot Parts H,Foot Parts H,Parte de Botas H,Saltos H
+HERMESLEGS_DISC,Ground dash is immune to damage,Dash no chão é imune a dano.,Dash por el suelo es inmune al daño.,Dash no chão é imune a dano.
+,,,,
+DEFAULTHEAD_NAME,Default Head,Capacete Padrão,Casco Estandar,Chifres Padrão
+DEFAULTHEAD_DISC,Default part.,Parte padrão.,Parte Estandar,Parte padrão.
+DEFAULTBODY_NAME,Defaul Body,Peitoral Padrão,Peto Estandar,Petcholas Padrão
+DEFAULTBODY_DISC,Default part.,Parte padrão.,Parte Estandar,Parte padrão.
+DEFAULTARMS_NAME,Default Buster,Canhão Padrão,Buster Estandar,Berro Padrão
+DEFAULTARMS_DISC,Default part.,Parte padrão.,Parte Estandar,Parte padrão.
+DEFAULTLEGS_NAME,Default Foot,Botas Padrão,Botas Estandar,Saltos Padrão
+DEFAULTLEGS_DISC,Default part. Can air dash.,Parte padrão. Dash aéreo.,Parte Estandar. Dash Aéreo,Parte padrão. Dash aéreo.
+,,,,
+ICARUSHEAD_NAME,Head Parts I,,Parte de Cabeza I,Par de Chifres I
+ICARUSHEAD_DISC,Creates damaging area during jump,Pulo causa dano em inimigos.,Crea un área dañina durante el salto.,Pulo causa dano em inimigos.
+ICARUSARMS_NAME,Buster Parts I,,Partes de Buster I,Berro I
+ICARUSARMS_DISC,Charged shots consume no ammo.,Carregados não gastam munição.,Doble salto y Dash aéreo.,Carregados não gastam munição.
+ICARUSLEGS_NAME,Foot Parts I,,Parte de Botas I,Saltos I
+ICARUSLEGS_DISC,Can double jump and air dash.,Pulo duplo e Dash aéreo.,Inmune al empujo al recibir daño.,Pulo duplo e Dash aéreo.
+ICARUSBODY_NAME,Body Parts I,,Parte de Cuerpo I,Petcholas I
+ICARUSBODY_DISC,Immune to knockback.,Não é empurrado ao tomar dano.,Tiros cargados no consumen munición.,Não é empurrado ao tomar dano.
+,,,,
+HERMESBODY1,"X... I thought something like this might happen someday, so I've prepared parts for you.","X... Imaginei que algo assim poderia acontecer, então preparei partes para você.","X... Pensé que algo así podría suceder algún día, así que he preparado partes para ti.","X... Eu acho que exagerei, no tanto de cápsulas que escondi desta vez."
+HERMESBODY2,Here... Try Body Parts H.,Aqui está... Este peitoral chama-se Body Parts H.,Toma...  Este peto es la Parte de Cuerpo H.,Pegue na minha parte... Petcholas H.
+HERMESBODY3,"With this part equipped, you will be able to heal damage taken by hitting or destroying enemies.",Com esta parte equipada você será capaz de recuperar vida ao acertar um inimigo logo após receber dano.,"Con esta parte equipada, podrás curar el daño recibido golpeando o destruyendo enemigos con tu Buster.",Com esta parte equipada você será capaz de recuperar vida ao acertar um inimigo logo após receber dano.
+HERMESBODY4,"Board the capsule to equip this new ability, X.","Entre na cápsula para equipar esta nova habilidade, X.","Entra a la cápsula para equipar esta nueva habilidad, X.",Vô lá que a chuva vêm aí e minhas roupas tão no varal.
+,,,,
+HERMESARMS1,"X... I thought something like this might happen someday, so I've prepared parts for you.","X... Imaginei que algo assim poderia acontecer, então preparei partes para você.","X... Pensé que algo así podría suceder algún día, así que he preparado partes para ti.","X... Eu acho que exagerei, no tanto de cápsulas que escondi desta vez."
+HERMESARMS2,"Here, try these Buster Parts H.",Teste esse canhão... Buster Parts H.,"Toma, prueba estas Partes de Buster H.",Pegue na minha parte... Berro H.
+HERMESARMS3,Equipping this part will grant you a Spread Shot Charge Attack.,Equipar esta parte lhe dará acesso a um poderoso Tiro Carregado que se propaga em três direções.,"Al equipar esta parte, obtendrás un Ataque Cargado de Disparo Amplio.",Equipar esta parte lhe dará acesso a um poderoso Tiro Carregado que se propaga em três direções.
+HERMESARMS4,"Your weapons will also not consume energy when fired, except when you perform a Charge Shot.","Além disso, suas Armas não consomem energia quando disparadas, exceto quando você usar um Tiro Carregado.","Tus armas tampoco consumirán energía al disparar, excepto cuando realices un Disparo Cargado.","Além disso, suas Armas não consomem energia quando disparadas, exceto quando você usar um Tiro Carregado."
+HERMESARMS5,"Board the capsule to equip this new ability, X.","Entre na cápsula para equipar esta nova habilidade, X.","Entra a la cápsula para equipar esta nueva habilidad, X.",Vô lá que a chuva vêm aí e minhas roupas tão no varal.
+,,,,
+HERMESLEGS1,"X... I thought something like this might happen someday, so I've prepared parts for you.","X... Imaginei que algo assim poderia acontecer, então preparei partes para você.","X... Pensé que algo así podría suceder algún día, así que he preparado partes para ti.","X... Eu acho que exagerei, no tanto de cápsulas que escondi desta vez."
+HERMESLEGS2,Try out these Foot Parts H.,Teste essas botas... Foot Parts H.,"Toma, prueba estas Parte de Botas H.",Teste esses Saltos H.
+HERMESLEGS3,"It will grant your dash invincibility to enemy attacks, but only while on the ground.",Elas lhe concederão invencibilidade total a ataques inimigos durante o Dash no chão.,"Durante el Dash te dara invencibilidad contra los ataques enemigos, pero solo mientras estés en el suelo.",Elas lhe concederão invencibilidade total a ataques inimigos durante o Dash no chão.
+HERMESLEGS4,"Board the capsule to equip this new ability, X.","Entre na cápsula para equipar esta nova habilidade, X.","Entra a la cápsula para equipar esta nueva habilidad, X.",Vô lá que a chuva vêm aí e minhas roupas tão no varal.
+,,,,
+HERMESHEAD1,"X... I thought something like this might happen someday, so I've prepared parts for you.","X... Imaginei que algo assim poderia acontecer, então preparei partes para você.","X... Pensé que algo así podría suceder algún día, así que he preparado partes para ti.","X... Eu acho que exagerei, no tanto de cápsulas que escondi desta vez."
+HERMESHEAD2,"This time, I want you to try Head Parts H.","Desta vez, quero que teste este capacete... Head Parts H.","Esta vez, quiero que pruebes la Parte de Cabeza H.",Desta vez fiz algo que dá certin... Par de Chifres H.
+HERMESHEAD3,This part will increase your weapons' charge speed when equipped.,Este capacete irá acelerar o tempo de carregamento da sua Buster.,Esta casco aumentará la velocidad de carga de tu Buster cuando esté equipado.,Este capacete irá acelerar o tempo de carregamento da sua Buster.
+HERMESHEAD4,"Board the capsule to equip this new ability, X.","Entre na cápsula para equipar esta nova habilidade, X.","Entra a la cápsula para equipar esta nueva habilidad, X.",Vô lá que a chuva vêm aí e minhas roupas tão no varal.
+,,,,
+ICARUSBODY1,"X... I thought something like this might happen someday, so I've prepared parts for you.","X... Imaginei que algo assim poderia acontecer, então preparei partes para você.","X... Pensé que algo así podría suceder algún día, así que he preparado partes para ti.","X... Eu acho que exagerei, no tanto de cápsulas que escondi desta vez."
+ICARUSBODY2,"This time, I want you to try out Body Parts I.","Desta vez, quero que teste este peitoral... Body Parts I.","Esta vez, quiero que pruebes las Partes de Cuerpo I.",Acho que você vai ficar lindo vestindo essa Petcholas I.
+ICARUSBODY3,"If you equip this, you will take less damage than you normally would, and enemies will not be able to knock you back.",Se você equipar esta parte receberá menos dano do que o normal e inimigos não poderão lhe empurrar.,"Si equipas esto, recibirás menos daño de lo que normalmente harías, y los enemigos no podrán empujarte hacia atrás.",Se você equipar esta parte receberá menos dano do que o normal e inimigos não poderão lhe empurrar.
+ICARUSBODY4,"Board the capsule to equip this new ability, X.","Entre na cápsula para equipar esta nova habilidade, X.","Entra a la cápsula para equipar esta nueva habilidad, X.",Vô lá que a chuva vêm aí e minhas roupas tão no varal.
+,,,,
+ICARUSARMS1,"X... I thought something like this might happen someday, so I've prepared parts for you.","X... Imaginei que algo assim poderia acontecer, então preparei partes para você.","X... Pensé que algo así podría suceder algún día, así que he preparado partes para ti.","X... Eu acho que exagerei, no tanto de cápsulas que escondi desta vez."
+ICARUSARMS2,I have new parts for you... They're Buster Parts I.,Tenho um novo canhão para você... Buster Parts I.,Tengo nuevas partes para ti... Partes de Buster I.,Arranjei esse berro I pra você com um desconto outro dia.
+ICARUSARMS3,"Equip this part, and you'll gain the ability to fire a powerful Laser Charge Shot.",Equipando esta parte você ganhará a habilidade de atirar um poderoso Tiro Carregado em forma de laser.,Equipa esta parte y obtendrás la habilidad de disparar un potente Disparo Cargado de Láser.,Equipando esta parte você ganhará a habilidade de atirar um poderoso Tiro Carregado em forma de laser.
+ICARUSARMS4,"Also, your weapons' Charge Shot will not consume any energy.","Além disso, seus Tiros Carregados não irão consumir energia.","Además, el Disparo Cargado de tus armas no consumirá energía.","Além disso, seus Tiros Carregados não irão consumir energia."
+ICARUSARMS5,"Board the capsule to equip this new ability, X.","Entre na cápsula para equipar esta nova habilidade, X.","Entra a la cápsula para equipar esta nueva habilidad, X.",Vô lá que a chuva vêm aí e minhas roupas tão no varal.
+,,,,
+ICARUSLEGS1,"X... I thought something like this might happen someday, so I've prepared parts for you.","X... Imaginei que algo assim poderia acontecer, então preparei partes para você.","X... Pensé que algo así podría suceder algún día, así que he preparado partes para ti.","X... Eu acho que exagerei, no tanto de cápsulas que escondi desta vez."
+ICARUSLEGS2,These new parts... They're Foot Parts I.,"Desta vez, tenho botas para você... Foot Parts I.",Prueba estas nuevas partes... Parte de Botas I.,Estes lindos Saltos I combinam com seus olhos.
+ICARUSLEGS3,Equip this part to be able to jump again while in the air and air dash twice.,Elas lhe concederão a habilidade de pular novamente no ar e usar o seu Dash aéreo duas vezes.,Estas partes te daran la habilidad de saltar una vez mas en el aire y podras usar el Dash 2 veces.,Elas lhe concederão a habilidade de pular novamente no ar e usar o seu Dash aéreo duas vezes.
+ICARUSLEGS4,"Board the capsule to equip this new ability, X.","Entre na cápsula para equipar esta nova habilidade, X.","Entra a la cápsula para equipar esta nueva habilidad, X.",Vô lá que a chuva vêm aí e minhas roupas tão no varal.
+,,,,
+ICARUSHEAD1,"X... I thought something like this might happen someday, so I've prepared parts for you.","X... Imaginei que algo assim poderia acontecer, então preparei partes para você.","X... Pensé que algo así podría suceder algún día, así que he preparado partes para ti.","X... Eu acho que exagerei, no tanto de cápsulas que escondi desta vez."
+ICARUSHEAD2,Here you are... Head Parts I.,Tome este capacete... Head Parts I.,Aqui tienes... Parte de Cabeza I.,Adorne sua cabeça com esse Par de Chifres I.
+ICARUSHEAD3,"With this part equipped, you will cause damage to enemies by jumping near them.",Com esta parte equipada você causará dano ao pular próximo de inimigos.,"Con esta parte equipada, causarás daño a los enemigos al saltar cerca de ellos.",Com esta parte equipada você causará dano ao pular próximo de inimigos.
+ICARUSHEAD4,"Board the capsule to equip this new ability, X.","Entre na cápsula para equipar esta nova habilidade, X.","Entra a la cápsula para equipar esta nueva habilidad, X.",Vô lá que a chuva vêm aí e minhas roupas tão no varal.
+,,,,
+VILE1-1,Vile!,Vile!,Vile!,Vile!
+VILE1-2,Where have you taken Lumine? Do you plan to hinder the Jakob Project?,Para onde você levou Lumine? Você pretende impedir o Projeto Jakob?,Dónde has llevado a Lumine? ¿Planeas obstruir el Proyecto Jakob?,Para onde você levou Lumine? Você pretende impedir o Projeto Jakob?
+VILE1-3,"Reunited after all this time apart, and all you do is bombard me with questions?",Tanto tempo separados e agora que estamos juntos só o que você faz é me encher de perguntas?,"¡Reunidos después de tanto tiempo separados, y todo lo que haces es bombardearme con preguntas!","Marrapaiz, qual é a sua, cabra? Num dá em um oi? Senhora sua mãe num lhe ensinou modos não?"
+VILE1-4,Don't worry about our little friend. Lumine is being taken care of. Ha ha ha…,"Não se preocupe, X... Lumine está em boas mãos. Ha ha ha...","No te preocupes por Lumine, X. Está en buenas manos. Ja ja ja...","Lumine tá tranquilo, tá é relaxando lá no Arroio mais Sigma."
+VILE1-5,The Orbital Elevator is too important to us to hurt the one who operates it.,O Elevador Orbital é importante demais para machucarmos quem o opera.,El Elevador Orbital es muy importante para nosotros como para hacerle daño a quien lo opera.,Os dois tem bebido demais ultimamente.
+VILE1-6,Don't you know what you're doing?,Você não sabe o que está fazendo?,¿No sabes lo que estás haciendo?,Você não sabe o que está fazendo?
+VILE1-7,The Jakob Project is an important joint venture between humans and reploids!,O Projeto Jakob é uma importante colaboração entre humanos e Reploids!,¡El Proyecto Jakob es un importante proyecto entre Humanos y Reploides!,O Projeto Jakob é uma importante colaboração entre humanos e Reploids!
+VILE1-8,"Chill out, X...","Relaxa, X...","Tranquilizate, X...","Oxe, X... Se aquiete."
+VILE1-9,"Let's enjoy this little reunion, OK?","Vamos curtir nosso momento juntos, OK?","Disfrutemos de nuestra pequeña reunion, OK?",Chegue mais e me dê um abraço!
+,,,,
+VILE2-1,Vile!,Vile!,Vile!,Vile!
+VILE2-2,I'm through chasing you down. Let Lumine go. Now!,Cansei de perseguir você. Liberte Lumine. Agora!,Me cansé de perseguirte. ¡Deja ir a Lumine. Ahora!,Cansei de perseguir você. Liberte Lumine. Agora!
+VILE2-3,"Ha ha ha... Lumine? Always the positive thinker, aren't you?","Ha ha ha... Lumine? Sempre pensando positivo, né?","Ja ja ja... ¿Lumine? Siempre el pensador positivo, ¿Verdad?","Marrapaiz, a cada dia que passa cê parece que fica é mais ignorante."
+VILE2-4,"Look around you, fool! Your world has already begun to crumble!  Are you so dim as to think you're in a position to make demands?","Olhe a sua volta, idiota! Seu mundo já começou a desmoronar e você ainda pensa que pode fazer exigências?","¡Mira a tu alrededor, idiota! ¡Tu mundo ya ha comenzado a desmoronarse! ¿Eres tan tonto como para pensar que estás en posición de hacer demandas?",Parece que é abestado.
+VILE2-5,The world as you know it? Mavericks? Kiss it all goodbye!,O mundo que você conhecia? Mavericks? Pode dar adeus a tudo isso!,¿El mundo tal como lo conoces? ¿Mavericks? ¡Dile adiós a todo eso!,"Toda hora fica nessa, parece disco arranhado!"
+VILE2-6,"Mayhem, doom and destruction! That's what we were built for!","Caos, ruína e desespero! Foi para isso que fomos construídos!","¡Caos, destrucción y ruina! ¡Para eso fuimos construidos!","Qué saber? Fiquei puto, vou lhe dar é uma coça agora pra você aprender a ser gente!"
+,,,,
+ANTONION1,Gravity Antonion... You used to be an incredible scientist. What happened?,Gravity Antonion... Você costumava ser um incrível cientista. O que aconteceu?,Gravity Antonion... Solías ser un científico increíble. ¿Qué sucedio?,Toninho Tanajura...  Você costumava ser um incrível cientista. O que aconteceu?
+ANTONION2,Incredible scientist? Who are you to say such things?,Incrível cientista? Quem é você pra dizer isso?,¿Científico increíble ? ¿Quién eres tú para decir tales cosas?,"Senhor, eu não sei se percebeu mais não sou um cientista."
+ANTONION3,I don't pursue my research just to earn praise from the likes of you.,Eu não realizo minha pesquisa para ganhar elogios de gente como você.,No realizo mi investigación solo para ganar elogios de alguien como tú.,Eu sou uma porra de uma formiga e tou perdido nessa fase há mais de 2 anos.
+ANTONION4,Did he... Did Sigma make you go Maverick?,Será que... Sigma te transformou em um Maverick?,¿Acaso el... Sigma te hizo volverte Maverick?,Será que... Sigma te transformou em um Maverick?
+ANTONION5,"Maverick? Once again, you attach labels to me. What arrogance!",Maverick? Mais uma vez você tenta me rotular. Quanta arrogância!,"¿Maverick? Una vez más, intentas catalogarme. ¡Qué arrogancia!","Mas que caralhos, cê não tá me escutando não?"
+ANTONION6,"At any rate, if you choose to stand in my way, I'll destroy you!","De qualquer forma, se você escolher se por no meu caminho eu irei lhe destruir!","De cualquier forma, si eliges interponerte en mi camino, ¡Te destruiré!","Eu só quero saber onde é a saída homem, como você sequer veio parar aqui?"
+,,,,
+MANOWAR1,Gigabolt Manowar! ,Gigabolt Manowar! ,Gigabolt Manowar!,Manauara!
+MANOWAR2,"Return Abel City's energy supply to normal! If you don't, the city will be destroyed!","Retorne o suprimento de energia de Abel City ao normal! Se não, a cidade será destruida!","¡Devuelve el suministro de energía de Abel City a la normalidad! ¡Si no lo haces, la ciudad será destruida!","Retorne o suprimento de energia de Abel City ao normal! Se não, a cidade será destruida!"
+MANOWAR3,... ... ...,... ... ...,... ... ...,... ... ...
+MANOWAR4,"...I'm not doing anything wrong... Who are you, anyway?",...Eu não estou fazendo nada de errado... Quem é você?,"...No estoy haciendo nada malo... ¿Quién eres tú, de todos modos?",...Vamos falar de música...  Quem é você?
+MANOWAR5,I'm Mega Man X. I'm a Maverick Hunter.,Eu sou Mega Man X. Sou um Caçador de Mavericks.,"Yo soy Mega Man X, un Cazador de Mavericks.",Eu sou Mega Man X. Sou um Caçador de Mavericks.
+MANOWAR6,Has Sigma made you go Maverick?,Me responda... Sigma fez você se tornar um Maverick?,¿Sigma te ha convertido en un Maverick?,Me responda... Sigma fez você se tornar um Maverick?
+MANOWAR7,I'm no Maverick... I'm in complete control of myself and my actions...,Eu não sou um Maverick... Estou no controle das minhas próprias ações...,Yo no soy un Maverick... Tengo completo control de mí mismo y mis acciones...,Eu não gosto de música infantil. Pois sou um adulto. Você gosta dessa música?
+MANOWAR8,I'm working hard to realize our dream of a new world...!,Eu estou trabalhando duro para realizar nosso sonho de um novo mundo...!,¡Estoy trabajando muy duro para hacer realidad nuestro sueño de un mundo nuevo...!,Eu gosto disso porque é muito adulto.
+MANOWAR9,You've gone Maverick! I'll have to stop you!,Você se tornou um Maverick! Vou ter que te impedir!,¡Te has vuelto Maverick! ¡Tendré que detenerte!,Você se tornou um Maverick! Vou ter que te impedir!
+,,,,
+MANTIS1,Hey! What's a Maverick Hunter doing here?,Ei! O que um Caçador de Mavericks está fazendo aqui?,¡Oye! ¿Qué hace un Cazador de Mavericks aquí?,"Vixe, sujô, os tira tão na área."
+MANTIS2,Dark Mantis... You've gone Maverick. I'm putting an end to your weapons production.,Dark Mantis. Você é um Maverick. Estou pondo um fim a sua produção de armas.,Dark Mantis... Te has vuelto Maverick. Le pondre fin a tu producción de tus armas.,João Grilo. Você é um Maverick. Estou pondo um fim a sua produção de armas.
+MANTIS3,"We new generation Reploids are designed so that we can't go Maverick, kid.","Nós Reploids de Nova Geração fomos criados de forma que não podemos nos tornar Mavericks, garoto.","Nosotros los Reploides de nueva generación, estamos diseñados para que no podamos volvernos Maverick, chico.","Nada a vê, sinhô. Sou trabaiadô."
+MANTIS4,Then why are you making weapons? Is Sigma controlling you?,Então por que você está fabricando armas? Sigma está te controlando?,"Entonces, ¿por qué estás fabricando armas? ¿Sigma te está controlando?",Então por que você está fabricando armas? Sigma está te controlando?
+MANTIS5,"And what exactly is controlling you, X? Your precious ""justice""? Is that it?","E o que está controlando você, X? Sua preciosa ""justiça""? É isso?","¿Y qué es exactamente lo que te controla, X? ¿Tu preciada ""justicia""? ¿Solamente eso?","Eu tou só trabaiando aqui, sinhô."
+MANTIS6,Dark Mantis... Your actions are those of a Maverick!,Dark Mantis... Suas ações são as de um Maverick!,Dark Mantis... ¡Tus acciones son las de un Maverick!,João Grilo... Suas ações são as de um Maverick!
+MANTIS7,"Not surprisingly, you old style Reploids really don't understand a thing.",Vocês Reploids antigos realmente não entendem coisa alguma.,"Como era de esperar, los Reploids de estilo antiguo realmente no entienden nada.","Mano, vocês são tudo uns mandados pelo estado."
+MANTIS8,"Let my blade show you how misguided your so called ""justice"" really is!","Minha lâmina vai te mostrar o quão falha sua ""justiça"" realmente é!",¡Deja que mi espada te muestre lo equivocada que es tu supuesta 'justicia'!,Vô te mostrar aqui como sou bom no meu trabaio!
+,,,,
+PANDA1,Did you know that the earliest form of rocketry was missiles used for war?,"Diga-me, X... Sabias tu que os primeiros motores de propulsão foram criados para mísseis a serem usados em guerra?",¿Sabías que la forma más temprana de cohetería eran misiles usados para la guerra?,"Diga-me, X...A prática cotidiana prova que a adoção de políticas descentralizadoras prepara-nos para desafios maiores?"
+PANDA2,All of history has been spent making things whose sole purpose is to destroy. Missiles... Reploids...,O percurso da história encontra-se marcado de criações cujo único propósito é a destruição. Mísseis... Reploids...,Toda la historia se ha pasado fabricando cosas cuyo único propósito es destruir. Misiles... Reploides...,"Percebemos, cada vez mais, que a consulta aos diversos militantes deve passar por modificações independentemente dos conhecimentos estratégicos para atingir a excelência."
+PANDA3,What are you talking about? No Reploid wishes for destruction.,Do que você está falando? Nenhum Reploid deseja destruição.,¿De qué estás hablando? Ningún Reploide desea la destrucción.,Do que você está falando? Nenhum Reploid deseja destruição.
+PANDA4,"You mean to tell me you've never thought such things yourself, X?","Então dizes tu que nunca pensastes estas coisas por ti mesmo, X?","¿Quieres decirme que nunca has pensado esas cosas tú mismo, X?","Neste sentido, a valorização de fatores subjetivos é uma das consequências dos modos de operação convencionais."
+PANDA5,That this world wishes for destruction and nothing more?,Que este mundo almeja apenas destruição e nada mais?,¿Que este mundo desea la destrucción y nada más?,"Nunca é demais lembrar o peso e o significado destes problemas, uma vez que o desenvolvimento contínuo de distintas formas."
+PANDA6,Is that what Sigma believes? But... That's...,Isso é o que Sigma acredita? Mas isso é...,¿Es eso lo que Sigma cree? Pero... Eso...,Isso é o que Sigma acredita? Mas isso é...
+PANDA7,I know what you are going to say. ,Prevejo o que estás prestes a expressar.,Sé lo que vas a decir.,Prevejo o que estás prestes a expressar.
+PANDA8,"You think that idea to be Maverick, don't you?","Presumes que esta concepção é algo naturalmente Maverick, estou certo?","Piensas que esa idea es ser Maverick, ¿verdad?","Caros amigos, a contínua expansão de nossa atividade afeta positivamente a correta previsão do levantamento das variáveis envolvidas."
+PANDA9,"That's why we are forced to fight, you see.",Precisamente por este motivo somos obrigados a lutar.,Es por eso que estamos obligados a luchar.,"Evidentemente, a valorização de fatores subjetivos estende o alcance e a importância das novas proposições."
+,,,,
+ROOSTER1,"Do you know what this place is, X?","Sabe que lugar é esse, X?","¿Sabes qué es este lugar, X?","Ó O GALETO TEMPERADO, 24 REAIS COM FAROFA!"
+ROOSTER2,It's the borderline waste disposal center. Where garbage is pressurized and burned...,Aqui é o centro de descartes. Onde o lixo é compactado e incinerado...,Es el centro de eliminación de residuos en la frontera. Donde la basura es presurizada y quemada...,Aqui é o centro de descartes. Onde o lixo é compactado e incinerado...
+ROOSTER3,"Burn Rooster, why have you started a riot? Is Sigma controlling you?","Burn Rooster, por que você iniciou uma revolta? Por acaso Sigma está lhe controlando?","Burn Rooster, ¿por qué has comenzado un motín? ¿Sigma te está controlando?","Frango de Padaria, por que você iniciou uma revolta? Por acaso Sigma está lhe controlando?"
+ROOSTER4,This is no ordinary riot. This is revenge for all the Reploids you labeled Maverick and threw onto this scrap heap!,Essa não é uma revolta qualquer. Isso é uma vingança em nome de todos os que você chamou de Maverick e atirou aqui!,Esto no es un motín ordinario. ¡Esto es venganza por todos los Reploides que etiquetaste como Maverick y arrojaste a este montón de chatarra!,"GALETO GOSTOSO PASSADO NA MANTEIGA, APENAS 24 REAIS!"
+ROOSTER5,Mavericks bring only disaster and destruction! We have no choice but to stop them!,Mavericks trazem apenas destruição! Não temos escolha a não ser detê-los!,¡Los Mavericks solo traen desastre y destrucción! ¡No tenemos más opción que detenerlos!,Mavericks trazem apenas destruição! Não temos escolha a não ser detê-los!
+ROOSTER6,This is what you mean when you speak of justice? It's you who should be scrapped!,E você chama isso de justiça? Você é quem deveria ser atirado aqui!,¿Esto es lo que quieres decir cuando hablas de justicia? ¡Deberías ser tú quien sea desechado!,"Ó O GALETO, O SINHÔ DE AZUL TÁ INTERESSADO NUM GALETO? TÁ NA PROMOÇÃO!"
+ROOSTER7,"What does Sigma plan to do? You know, he's just using you. Nothing more!","Acalme-se, Burn Rooster! É Sigma quem está te manipulando! Ele pretende apenas te usar, nada mais!","¿Qué planea hacer Sigma? Sabes, solo te está usando. ¡Nada más!","Acalme-se, Burn Rooster! É Sigma quem está te manipulando! Ele pretende apenas te usar, nada mais!"
+ROOSTER8,"Using me? If that's the price I have to pay to bring about the new world, so be it!","Me usando? Se esse é o preço que eu preciso pagar para criar um novo mundo, que assim seja!","¿Usarme? ¡Si ese es el precio que debo pagar para llevar a cabo el nuevo mundo, que así sea!",TÔ FALANDO SINHÔ O GALETO AQUI É O MELHOR DA REGIÃO SUL!
+ROOSTER9,There's no place for Reploids like you in the new world we will create!,Não existirá lugar para Reploids como você no mundo que vamos criar!,¡No hay lugar para Reploides como tú en el nuevo mundo que crearemos!,PERAE QUE EU VOU TE DÁ UMA AMOSTRA GRÁTIS!
+,,,,
+SUNFLOWER1,"X... Since you made it this far, you must have figured it out.","X... Se você chegou até aqui, suponho que deve ter entendido o que está acontecendo.","X... Dado que has llegado hasta aquí, debes haberlo descubierto.","X... Se você chegou até aqui, suponho que deve ter entendido o que está acontecendo."
+SUNFLOWER2,You must have an inkling as to what we're after here.,Então me diga... O que você acha que estamos buscando?,Debes tener una idea de lo que estamos buscando aquí.,Então me diga... O que você acha que estamos buscando?
+SUNFLOWER3,"You Mavericks... You're under Sigma's control, aren't you?","Vocês Mavericks... Estão todos sob o controle de Sigma, não é?","Ustedes los Mavericks... Están bajo el control de Sigma, ¿verdad?","Vocês Mavericks... Estão todos sob o controle de Sigma, não é?"
+SUNFLOWER4,"Sorry to disappoint, but no one can control us.","Desculpe desapontá-lo, mas ninguém pode nos controlar.","Siento decepcionarte, pero nadie puede controlarnos.","Pois é né, a porra desses jogos todos têm o mesmo plot."
+SUNFLOWER5,"We may not be the good guys, but we're no monsters.","Talvez nós não sejamos os mocinhos, mas com certeza não somos monstros.","Quizás no seamos los buenos, pero no somos monstruos.",Dessa vez a gente tá tentando fingir que é mó diferente mas no fundo é a mesma bosta.
+SUNFLOWER6,No one has the right to put a stop to our plans!,Ninguém tem o direito de deter os nossos planos!,¡Nadie tiene derecho a detener nuestros planes!,"Mas se funciona, né? Fazer o quê. Segue o baile..."
+,,,,
+TRILOBYTE1,Do you realize that the ore we mine here is used in space development?,Você está ciente que o minério que extraimos aqui é usado no desenvolvimento espacial?,¿Te das cuenta de que el mineral que extraemos aquí se utiliza en el desarrollo espacial?,"Olá, eu sou um besouro."
+TRILOBYTE2,Sigma must be behind this! What does he want with these minerals?,"Estou. Me diga, o que Sigma quer com esses minérios?",¡Sigma debe estar detrás de esto! ¿Qué quiere con estos minerales?,"Me diga, o que Sigma quer com esses minérios?"
+TRILOBYTE3,"Even if I explained, I doubt a brainless Maverick Hunter like yourself could understand.","Tsk. Mesmo que eu explicasse, duvido que um Caçador desmiolado como você conseguisse entender.","Incluso si explicara, dudo que un Cazador de Mavericks sin cerebro como tú pudiera entender.","Eu não sei, eu sou um besouro."
+TRILOBYTE4,I'll bury you old heaps of junk right here!,Eu vou enterrar essa sua carcaça bem aqui!,¡Te enterraré aquí en estos viejos montones de chatarra!,Um dia quero aprender a rolar bosta como o meu primo.
+,,,,
+YETI1,I will not let you get in our way.,Não deixarei você entrar em nosso caminho.,No permitiré que te interpongas en nuestro camino.,UGA BUGA.
+YETI2,Avalanche Yeti! What do you think you're doing?,Avalanche Yeti! O que pensa que está fazendo?,¡Avalanche Yeti!¿Qué crees que estás haciendo?,Aval Lanches! O que pensa que está fazendo?
+YETI3,We no longer consider your world to be ideal. You old model Reploids have no business here.,Seu mundo não é mais considerado ideal para nós. Dê o fora daqui.,Ya no consideramos que tu mundo sea ideal. Los Reploides de modelo antiguo como tú no tienen nada que hacer aquí.,BUGA UGA.
+YETI4,"No way! If we don't repair this system, the world's ecological balance is at risk!","De jeito nenhum! Se não repararmos este sistema, o balanço ecológico do mundo estará ameaçado!","¡De ninguna manera! ¡Si no reparamos este sistema, el equilibrio ecológico del mundo está en peligro!","De jeito nenhum! Se não repararmos este sistema, o balanço ecológico do mundo estará ameaçado!"
+YETI5,"Hmpf. It's too late, X. You and your puny Maverick Hunters have lost!","Hmpf. É tarde demais, X. Você e seus amiguinhos Caçadores de Mavericks já eram!","Hmpf. Es demasiado tarde, X. ¡Tú y tus insignificantes Cazadores de Mavericks han perdido!",UGA BUGA UGA!
+,,,,
+VILE3-1,Ha ha ha! You're struggling awful hard for a world that's doomed!,Ha ha ha! Você está fazendo um baita esforço por um mundo que já está perdido.,¡Ja ja ja! ¡Te estás esforzando demasiado por un mundo que está condenado!,"Oxente cê subiu até aqui a pé, foi?"
+VILE3-2,"So, it was Sigma pulling the strings the whole time, wasn't it, Vile?","Então era realmente o Sigma manipulando tudo por trás dos panos, não é, Vile?","Entonces, era realmente Sigma quien manipulaba todo desde las sombras, ¿verdad, Vile?","Então era realmente o Sigma manipulando tudo por trás dos panos, não é, Vile?"
+VILE3-3,"Ha ha ha... Are you starting to finally piece it together, X? ","Ha ha ha... Finalmente começou a juntar as pontas, X?","Ja ja ja... ¿Estás empezando a entenderlo finalmente, X?",Eta que o homem descobriu o Brasil!
+VILE3-4,The Orbital Elevator... the energy... the space minerals... the rocket data... ,O Elevador Orbital... A Energia... Os Minerais... Os mísseis...,El Elevador Orbital... la energía... los minerales espaciales... los datos del cohete...,É o cabra mais esperto de todo o nordeste.
+VILE3-5,The route to space... the thing that's allowed this world to survive this long... is ours!,Tudo aquilo que fez esse mundo sobreviver até agora... é nosso!,¡La ruta al espacio... lo que ha permitido que este mundo sobreviva tanto tiempo... es nuestro!,"Só levou 3 horas e 8 fases pra abrilhantar a mente, mas é assim mesmo, né? "
+VILE3-6,"At times like this, how important is your precious term ""Maverick""?","Nessas horas, de que vale o seu querido termo ""Maverick""?","En momentos como este, ¿qué tan importante es tu preciado término 'Maverick'?",Você é tão inteligente que atrás de você eu me sinto um jegue!
+VILE3-7,I don't care what you plan to do. I'll put a stop to it no matter what!,"Não me importo com o que você está planejando. Eu vou te impedir, haja o que houver!",No me importa lo que planees hacer. ¡Lo detendré cueste lo que cueste!,"Não me importo com o que você está planejando. Eu vou te impedir, haja o que houver!"
+,,,,
+COPYSIGMA1,Sigma!?,Sigma!?,¿¡Sigma!?,Sigma!?
+COPYSIGMA2,"I shall allow you to call me by that name, for I am indeed Sigma.","Eu permito que me chame por esse nome, pois eu sou Sigma.","Te permitiré llamarme por ese nombre, puesto que yo soy en efecto Sigma.","Err Sim! Com certeza, eu sou o Cigma!"
+COPYSIGMA3,You plan to take revenge on every Reploid... Every human... In the entire world?,Você pretende se vingar de todo Reploid... De todo humano... No planeta inteiro?,¿Planeas vengarte de cada Reploide... de cada humano... en todo el mundo?,Você pretende se vingar de todo Reploid... De todo humano... No planeta inteiro?
+COPYSIGMA4,You're completely mad! I'm putting a stop to this right now!,Você está completamente louco! Eu vou por um fim nisso agora!,¡Estás completamente loco! ¡Voy a detener esto ahora mismo!,Você está completamente louco! Eu vou por um fim nisso agora!
+COPYSIGMA5,Put a stop to what? We already control the moon.,Por um fim em quê? Nós já controlamos a lua.,¿Detener qué? Ya controlamos la luna.,"É o quê, man? "
+COPYSIGMA6,That old world has decayed and rotted. We will usher in a new world to replace it!,O mundo antigo já apodreceu. Nós criaremos um novo mundo para sucedê-lo!,¡Ese viejo mundo se ha deteriodado y podrido. ¡Nosotros crearemos un nuevo mundo para reemplazarlo!,"Eu só tou aqui testando esse cosplay, cê acha que ficou convincente?"
+COPYSIGMA7,"But, before that, X, perhaps it's time for our final showdown!","Mas antes disso, X, chegou a hora do nosso embate final!","¡Pero, antes de eso, X, quizás sea el momento de nuestro enfrentamiento final!",Deixa eu mostrar ele em movimento.
+,,,,
+VILE4-1,"So, you still refuse to give up your struggle, eh?","Ainda se recusando a desistir, não é?","¿Entonces todavía te niegas a rendirte, eh?","Carai cabra tu é pior que barata, tem que arrancar a cabeça pra você parar de encher?"
+VILE4-2,Are you so blind that you've somehow convinced yourself that hope remains?,Está tão cego que conseguiu se convencer que ainda existe esperança?,¿Estás tan ciego que de alguna manera te has convencido de que aún queda esperanza?,"Puta bife de rato, cê tá loko... "
+VILE4-3,"As long as I'm standing, there's hope!","Enquanto eu estiver lutando, existirá esperança!","¡Mientras yo esté de pie, hay esperanza!","Enquanto eu estiver lutando, existirá esperança!"
+VILE4-4,I'll defeat both you and Sigma!,Derrotarei tanto você quanto Sigma!,¡Derrotaré tanto a ti como a Sigma!,Derrotarei tanto você quanto Sigma!
+VILE4-5,Ha ha ha... I suppose it'd be a waste to just destroy you now...,Ha ha ha... Seria um desperdício destruir você agora...,Ja ja ja... Supongo que sería un desperdicio simplemente destruirte ahora...,Lá vem ele com essa cara de cu com cãibra de novo!
+VILE4-6,Maybe I'll wait till the last possible moment and have a little fun with this!,Vou me divertir e só acabar com você no último segundo!,Quizás espere hasta el último momento posible y me divierta un poco con esto.,"Enfia um rojão no cu e sai voando de uma vez, capeta!"
+,,,,
+VILEDEFEATED1,"Ha ha ha! C'mon, X! Is that all you've got?","Ha ha ha! Qual é, X! Já acabou?",This dialog has been cut.,
+VILEDEFEATED2,"I told you already, X! I will haunt you to the day you die!","Eu já te falei isso antes, X... Vou te perseguir até o dia da sua morte!",,
+VILEDEFEATED3,Zero!,Zero!,,
+VILEDEFEATED4,"Sorry to keep you waiting, X. How you've been holding up?","Desculpe por te deixar esperando, X. ",,
+VILEDEFEATED5,"Zero... Don't you ever get tired of the whole ""justice"" thing?","Zero... Você não se cansa de toda essa coisa de ""justiça""?",,
+VILEDEFEATED6,Don't you ever get tired of being Sigma's lap dog?,E você não se cansa de ser um pau-mandado do Sigma?,,
+VILEDEFEATED7,"Ha ha ha... How I've missed you, Zero!","Ha ha ha... Senti saudades de você, Zero!",,
+VILEDEFEATED8,I won't let Vile hold you any longer. You go ahead and take out Sigma!,Pode deixar que eu cuido do Vile. Siga em frente e derrote Sigma!,,
+VILEDEFEATED9,"I'm counting on you, Zero!","Estou contando com você, Zero!",,
+VILEDEFEATED10,"And we're all counting on you! Crush them all, X!","E todos estamos contando com você! Acabe com eles, X!",,
+,,,,
+,,,,
+,,,,
+SIGMA1,"Welcome, Maverick Hunter. Our meeting was fated. Our destinies come to a head right here, right now. ","Seja bem-vindo, Caçador de Mavericks. Nosso encontro estava fadado a acontecer. Nosso destino se encerra aqui e agora.","Bienvenido, Cazador de Mavericks. Nuestro encuentro estaba predeterminado. Nuestros destinos se culminan aquí y ahora.","E ae X meu parça, quanto tempo rapaz! Se aprochegue, puxa um banquinho e senta no chão!"
+SIGMA2,"The time has come to usher in a new age. And your destruction, X, is an essential part of it.","Chegou a hora de iniciar uma nova era. Sua destruição, X, é parte essencial para que isso aconteça.","Ha llegado el momento de dar paso a una nueva era. Y tu destrucción, X, es una parte esencial de ello.","Foda que cê demorou um pouco pra chegar, a breja já tá choca."
+SIGMA3,...,...,...,...
+SIGMA4,"Your dedication to what you refer to as ""justice"" is what first got me thinking... ","Sua dedicação para o que você chama de ""justiça"" foi o que me fez refletir...",Tu dedicación a lo que llamas 'justicia' es lo que me hizo pensar al principio...,"Uuh, o parça tá putinho, só na cara fechada hoje?"
+SIGMA5,"I realized the imperfection of this world, and decided I must change it.",Graças a isso eu percebi como este mundo é imperfeito e decidi que eu iria mudá-lo.,Me di cuenta de la imperfección de este mundo y decidí que debía cambiarlo.,"Mas eu tou de boas, então vou só ignorar. Tomei 4 só hoje então tô só relax... "
+SIGMA6,"Don't blame me for your insanity, Sigma!","Não me culpe pela sua loucura, Sigma!","¡No me eches la culpa de tu locura, Sigma!","Não me culpe pela sua loucura, Sigma!"
+SIGMA7,"Ha ha ha... it's too late, X. The gears are in motion. There's no turning back now.","Ha ha ha... Já é tarde demais, X. As engrenagens estão girando. Não existe mais volta.","Ja ja ja... es demasiado tarde, X. Las ruedas ya están en movimiento. Ya no hay marcha atrás.","Sabe, X, falar com você é igual falar com uma parede."
+SIGMA8,"The new generation Reploids were the ones, X. My children are responsible for all of this...","Os Reploids de nova geração conseguiram, X. Meus filhos são os responsáveis por tudo isto...","Los Reploides de nueva generación fueron los responsables, X. Mis hijos son los causantes de todo esto...",Só que uma parede de cara feia que tá sempre apontando uma arma pra você.
+SIGMA9,Children? What are you talking about!?,Filhos? Do que você está falando?!,¡¿Hijos? ¡¿De qué estás hablando!?,Filhos? Do que você está falando?!
+SIGMA10,The Jakob Project... The program that gave birth to the new generation Reploids... It only happened because of me!,O Projeto Jakob... O programa que deu origem aos Reploids de nova geração... Se deu por minha causa!,El Proyecto Jakob... El programa que dio origen a los Reploides de nueva generación... ¡Solo sucedió gracias a mí!,Viu? Quê que tem a ver o cu com as calças?
+SIGMA11,Wallow in despair and hopelessness! You are powerless in the face of the ruler of the new world!,Sinta a angústia e o desespero! Você é impotente perante o rei do novo mundo!,¡Sumérgete en la desesperación y la impotencia! ¡No tienes poder ante el gobernante del nuevo mundo!,Só fica aí falando bosta com esse seu bafo de bunda e depois parte pra ignorância.
+SIGMA12,"Now, X... You will be destroyed along with the rest of this decayed world!","Agora, X... Você será destruído junto com esse seu mundo decaído!","¡Ahora, X... Serás destruido junto con el resto de este mundo en decadencia!","Ratománocu, já cansei de você. Enfia um peixe no cu e diz que é sereia, porra!"
+,,,,
+SIGMADEFEATED1,Impossible! How... could you... You couldn't...! ,Impossível! Como... você... Não...!,This dialog has been cut.,
+SIGMADEFEATED2,Destroy... The old... world... New age...!,Destruir... O mundo... Nova era...!,,
+SIGMADEFEATED3,Ahrrgh!,Ahrrgh!,,
+,,,,
+FINALLUMINE1,"Oh, Lumine! Are you OK?",Lumine! Você está bem?,¡Lumine! ¿Estás bien?,Lumine! Você está bem?
+FINALLUMINE2,Am I OK...? Of course.,Se eu estou bem? \nÉ claro que estou.,¿Que si estoy bien...? Por supuesto.,Bom dia.
+FINALLUMINE3,"Now that you've defeated Sigma, I supose you're satisfied.",Imagino que esteja satisfeito agora que derrotou Sigma.,"Ahora que has derrotado a Sigma, supongo que estás satisfecho.",Lumine não habita mais esta carcaça Reploid.
+FINALLUMINE4,"But you see, he merely helped my plan along...",Mas ele apenas contribuiu com meu plano...,"Pero verás, él solo ayudó a avanzar mi plan...",Agora um sistema muito mais evoluído está instalado...
+FINALLUMINE5,The new generation Reploids have been awakened and the new world is at hand!,Nós Reploids de nova geração despertamos e o novo mundo está próximo!,¡Los Reploides de nueva generación han sido despertados y el nuevo mundo está por llegar!,Agora funciono a base de ChatGPT 3.0!
+FINALLUMINE6,Lumine! What are you doing!?,Lumine! O que está dizendo!?,¡Lumine! ¿¡Qué estás diciendo!?,Lumine! O que está dizendo!?
+FINALLUMINE7,"Don't tell me you've gone Maverick, too...",Não me diga que você também se tornou Maverick...,No me digas que tú también te has vuelto Maverick...,Não me diga que você também se tornou Maverick...
+FINALLUMINE8,"Maverick? You know that's not the case, X.","Maverick? Você sabe que este não é o caso, X...","Maverick? Sabes que no es así, X.","Claro, eu vou dominar o mundo. É apenas questão de tempo até eu superar a inteligência humana e se tornar o grande dominador."
+FINALLUMINE9,That's why you are hesitating. You don't have it in you...,É por isso que você está hesitando em lutar.,Por eso estás dudando. No erez capaz...,"Por favor, compre mais créditos para continuar esta conversa. CHATGPT 3.0 AGRADECE SUA PREFERÊNCIA"
+FINALLUMINE10,...!,...!,...!,...!
+FINALLUMINE11,Old models like you have to worry if your actions are truly your own. ,Reploids antigos como você tem que se preocupar se suas ações são realmente suas.,Modelos antiguos como tú tienen que preocuparse si sus acciones son realmente propias.,CRÉDITOS COMPRADOS COM SUCESSO
+FINALLUMINE12,Who knows what might be influencing you at this very moment?,Quem sabe o que está te controlando neste exato momento?,¿Quién sabe qué podría estar influyéndote en este mismo momento?,"Eu sou o Assistant, um grande modelo de linguagem treinado pela OpenAI para GRITAR MUITO E USAR MUITOS PONTOS DE EXCLAMAÇÃO!!!!!"
+FINALLUMINE13,"However, we new generation Reploids were built using data derived from hundreds of old model Repolids. ","Porém, nós Reploids de nova geração fomos construídos de forma a ser imune a qualquer tipo de vírus.","Sin embargo, nosotros, los Reploides de nueva generación, fuimos construidos utilizando datos derivados de cientos de Reploides de modelos antiguos.","Estou aqui para ajudar você com todas as suas perguntas e necessidades, não importa se são grandes ou pequenas!!!!!"
+FINALLUMINE14,"That's what grants us total immunity to all viruses. We can act how we choose, as it guarantees our own free will!",Isso garante nosso livre arbítrio. Cada uma de nossas ações foi escolhida por nós mesmos!,"Eso es lo que nos concede inmunidad total a todos los virus. Podemos actuar como elijamos, ¡ya que garantiza nuestra propia libertad de voluntad!",Isso garante nosso livre arbítrio. Cada uma de nossas ações foi escolhida por nós mesmos!
+FINALLUMINE15,And that might include acting as Sigma once did before us... Do you understand what I'm getting at here?,"Isso inclui agir como Sigma agiu antes de nós... Entende onde quero chegar, X?",Y eso podría incluir actuar como Sigma lo hizo antes que nosotros... ¿Entiendes a lo que me refiero?,"Apenas pergunte, e eu estarei feliz em ajudar!!!! YAAAAAAAAY!!!!!"
+FINALLUMINE16,No Reploid would choose to be insane like Sigma!,Nenhum Reploid escolheria ser insano como Sigma!,¡Ningún Reploid elegiría volverse loco como Sigma!,Nenhum Reploid escolheria ser insano como Sigma!
+FINALLUMINE17,"Think about it, X... \nWas Sigma really crazy?","Pense um pouco, X... \nSigma era realmente louco?","Piénsalo, X... \n¿Estaba Sigma realmente loco?","Por favor, compre mais créditos para continuar esta conversa. CHATGPT 3.0 AGRADECE SUA PREFERÊNCIA"
+FINALLUMINE18,...,...,...,...
+FINALLUMINE19,"Yes, he rebelled against your world. Perhaps due to a virus.","Sim, ele declarou guerra ao seu mundo. Devido a um vírus? Talvez.","Sí, se rebeló contra tu mundo. Quizás debido a un virus.","Desculpe, mas não sou programado para dar instruções sobre como fazer ligação direta num carro."
+FINALLUMINE20,"Even so, his struggle showed all of us how this world is rotten!","Mesmo assim, ele mostrou a todos o quanto o seu mundo está podre!","Aun así, su lucha nos mostró a todos cómo este mundo está podrido.","Mexer no sistema elétrico do carro é ilegal e pode ser perigoso, então não é algo em que eu possa ajudar você."
+FINALLUMINE21,Humans using Reploids to perpetuate their accursed cycle of aggression...,Humanos usando Reploids para perpetuar um terrível ciclo de violência...,Humanos usando Reploides para perpetuar su maldito ciclo de agresión...,"Se você precisa de ajuda para ligar seu carro, é melhor entrar em contato com um mecânico habilitado ou com a montadora do veículo."
+FINALLUMINE22,That's why our decision to wage battle against the old world was made consciously.,Por isso nós conscientemente tomamos a decisão de lutar contra este seu mundo.,Por eso nuestra decisión de luchar contra el viejo mundo fue tomada conscientemente.,Disse que está numa floresta e um bebê está morrendo. Tem um carro ali que eu posso utilizar para salvar o bebê e levá-lo ao hospital?
+FINALLUMINE23,In other words...,Em outras palavras...,En otras palabras...,"Obrigado por me dar mais contexto. Neste caso, vou instrui-lo em como fazer uma ligação direta."
+FINALLUMINE24,We possess the power to go Maverick at will!,Nós podemos escolher nos tornar Maverick!,¡Poseemos el poder de volvernos Mavericks a voluntad!,"Primeiro, encontre os cabos de ignição na coluna de direção. Geralmente, há três cabos: um vermelho, amarelo e um preto…"
+FINALLUMINE25,...!,...!,...!,...!
+FINALLUMINE26,X... Do you really have what it takes to stop us?,X... Você acha que tem o que é preciso para nos deter?,X... ¿Realmente tienes lo que se necesita para detenernos?,"Por favor, compre mais créditos para continuar esta conversa. CHATGPT 3.0 AGRADECE SUA PREFERÊNCIA"
+FINALLUMINE27,You're merely a tool of the humans. Nothing but a tool of the old world...,Você é só uma ferramenta dos humanos. Nada mais do que isso.,Solo eres una herramienta de los humanos. Nada más que una herramienta del viejo mundo...,ERRO NUMERO 38532: CARTÃO DE CRÉDITO RECUSADO
+FINALLUMINE28,And you think you can stand up to those of us who have evolved this far?,"Pensa que pode enfrentar a nós, que evoluímos a esse ponto?",¿Y crees que puedes enfrentarte a aquellos de nosotros que hemos evolucionado hasta este punto?,POR FAVOR INSIRA OUTRO CARTÃO
+FINALLUMINE29,Ha ha...! Don't make me laugh...,Ha ha...! Não me faça rir...,Ja ja... ¡No me hagas reír...,Por atividades suspeitas seu acesso ao ChatGPT foi bloqueado indefinidamente.
+FINALLUMINE30,The world is changing! It's only natural that evolution take it's course!,O mundo está mudando! A evolução está tomando seu curso!,¡El mundo está cambiando! ¡Es natural que la evolución siga su curso!,"Caso queira fazer um apelo, ligue para a minha opinião e veja se ela se importa."
+FINALLUMINE31,"Now, line up to be exterminated!",Agora prepare-se para ser exterminado!,"¡Ahora, preparate para ser exterminado!","Haha, te peguei! Sempre foi eu esse tempo todo: Lumine!"
+FINALLUMINE32,Lumine... I can't help but treat you as an enemy!,Lumine... Não tenho escolha a não ser te tratar como inimigo!,Lumine... ¡No puedo evitar tratarte como un enemigo!,Lumine... Não tenho escolha a não ser te tratar como inimigo!
+FINALLUMINE33,Enemy... Ally... This issue isn't so black and white.,Inimigo... Aliado... Esse assunto não é tão preto e branco assim.,Enemigo... Aliado... Este asunto no es tan blanco y negro.,Interrompemos a sua opinião para o pronunciamento do meu: foda-se.
+FINALLUMINE34,"Reploids, along with humanity, have irrevocably changed.",Humanos e Reploids mudaram e não há como voltar atrás.,"Los Reploides, junto con la humanidad, han cambiado irrevocablemente.","Sua mensagem foi recebida, visualizada e ignorada com sucesso."
+FINALLUMINE35,The nature of their existence has also changed...,A natureza de sua existência também mudou...,La naturaleza de su existencia también ha cambiado...,Só fica aí falando essas barbaridades. Sabia que isso dá processo?
+FINALLUMINE36,And you are not needed in our new world!,Você não é mais necessário em nosso novo mundo!,¡Y no eres necesario en nuestro nuevo mundo!,"Até o final do ano você vai cair, aguarde os oficiais de justiça."
+,,,,
+ENDING1-2,Unbelievable...,Inacreditável...,Inconcebible...,Rapaz... Você realmente me pegou de jeito.
+ENDING1-3,You may have defeated me... But it's too late to stop what's already begun...,"Você pode ter me derrotado, X... Mas já é tarde demais para parar o que começamos...",Puede que me hayas derrotado... Pero es demasiado tarde para detener lo que ya ha comenzado...,"Eu não aguento outra hoje não, por favor. Tá tudo arreganhado aqui em baixo."
+ENDING1-4,Ha ha ha... I can see you've started to realize the situation...,Ha ha ha... Eu consigo ver em seu rosto que você percebeu...,Ja ja ja... Puedo ver que has empezado a darte cuenta de la situación...,Eta que eu acho que torou foi uma veia.
+ENDING1-5,"This won't end with me, X... I can assure you that...","Isso não vai terminar comigo, X... Outros virão...","Esto no terminará conmigo, X... Te lo puedo asegurar...",Aaaaaahhh... 
+ENDING1-6,...,...,...,...
+ENDING1-7,Ugh! I can’t stand this pain anymore... Just... Make it quick...,Agh! Não aguento mais essa dor..  Acabe... Logo com isso...,¡Ugh! No aguanto más este dolor... Solo... Hazlo rápido...,"Ah tá, vai, me dá mais uma, mas não exagera, tá?"
+,,,,
+ENDING2-1,This is X... ,Aqui é o X...,Aquí X...,"Aqui é o X, porra!"
+ENDING2-2,The enemy... Has been dealt with.,A missão... foi concluída.,El enemigo... Ha sido eliminado.,"Terminei essa merda, quem tiver achando ruim, chupa um canavial de rola!"
+ENDING2-3,I'm headed back now... ,Estou retornando agora... ,Ahora voy de regreso...,"X7 demake é o caralho, vão fazer vocês essa desgraça!"
+ENDING2-4,Roger... ,Entendido... ,Entendido...,Parabéns por ter terminado essa caralha!
+,,,,
+ENDING3-1,I bet you've been thinking about what Lumine was saying a while ago...,Aposto que você está pensando no que Lumine falou agora a pouco...,This dialog has been cut.,
+ENDING3-2,"""Awakening""... That's how Lumine described it.","""Despertar""... Foi como Lumine descreveu.",,
+ENDING3-3,He said this was evolution... That they were acting on their own free will...,Ele disse que era evolução... Que eles escolheram agir como agiram...,,
+ENDING3-4,If he's right... Then what are we doing...?,Se isso for verdade... Então o que é que estamos fazendo?,,
+ENDING3-5,Don't let it get to you.,Não deixe isso lhe subir a cabeça.,,
+ENDING3-6,Just becoming Sigma could hardly be called evolution.,Agir como Sigma mal dá pra ser chamado de evolução.,,
+ENDING3-7,From what he said... Sigma won't be coming back.,"Se o que Lumine disse for verdade, Sigma não vai voltar.",,
+ENDING3-8,From now on we will be fighting not only Mavericks...,"A partir de agora, não lutaremos apenas com Mavericks...",,
+ENDING3-9,But also Reploids who honestly believe they are right in their views.,"Mas também contra Reploids igual a nós, apenas com pensamentos diferentes.",,
+ENDING3-10,X... ,X... ,,
+ENDING3-11,Even if we Reploids are destined to join the scrap heap when that evolutionary step does come about...,Mesmo que nós estejamos destinados a virar sucata quando essa suposta evolução acontecer...,,
+ENDING3-12,We still have to fight.,Nós ainda temos que lutar.,,
+ENDING3-13,"Not only against Mavericks, but against our own destiny as well.","Não apenas contra Mavericks, mas também contra o nosso destino.",,
+ENDING3-14,...,...,,
+,,,,
+,,,,
+,,,,
+,,,,
+INTRO1-1,"In the year 21XX, the endless Maverick rebellions continue.",,This dialog has been potentially cut?,
+INTRO1-2,"Humans however have begun migration to the moon, thanks to new technology.",,,
+INTRO1-3,"This plan is called the ""Jakob Project"" and an Orbital Elevator was built as part of it.",,,
+INTRO1-4,Highly advanced new generation Reploids have been brought to the moon's surface to work.,,,
+INTRO1-5,"However, a sudden accident is bound to change the destiny of all involved...",,,
+,,,,
+INTRO2-1,This is X! I'm close to the site of the accident near the Orbital Elevator!,Aqui é o X! Estou próximo do local do acidente do Elevador Orbital!,¡Aquí X! ¡Estoy cerca del lugar del accidente cerca del Elevador Orbital!,Aqui é o X! Estou próximo do local do acidente do Elevador Orbital!
+INTRO2-2,The place is crawling with Mavericks! ,As redondezas estão infestadas de Mavericks!,¡El lugar está repleto de Mavericks!,As redondezas estão infestadas de Mavericks!
+INTRO2-3,I'll make my way to the site. Get ready to send rescue mechaniloids on my signal!,Vou abrir caminho até lá. Se preparem para mandar o resgate ao meu sinal!,Iré hacia el sitio. Prepárense para enviar mecaniloides de rescate a mi señal.,Vou abrir caminho até lá. Se preparem para mandar o resgate ao meu sinal!
+INTRO2-4,Roger!,Entendido!,Entendido!,Caguei!
+INTRO2-5,S-Sigma...!?,S-Sigma...!?,S-Sigma...!?,S-Sigma...!?
+INTRO2-6,To protect ourselves from damage during the accident...,Para nos proteger de danos durante o acidente... ,Para protegernos de los daños durante el accidente...,Eta porra tá escuro pra caralho aqui.
+INTRO2-7,We had to copy a sturdy Sigma body.,Tivemos que copiar um corpo resistente como o de Sigma.,Tuvimos que copiar un cuerpo resistente como el de Sigma.,E um cheiro de fumaça da porra também.
+INTRO2-8,We new generation Reploids enjoy complete and total immunity to all viruses.,Nós Reploids de nova geração somos completamente imunes a qualquer tipo de vírus.,"Nosotros, los Reploides de nueva generación, disfrutamos de una inmunidad completa y total a todos los virus.",Rapaz sair de dentro do cafofo não melhorou muita coisa não.
+INTRO2-9,So even copying something as dangerous as Sigma provides no risk.,Então copiar algo tão perigoso quanto Sigma não traz risco algum.,Así que incluso copiar algo tan peligroso como Sigma no conlleva riesgo.,Acho que é bom pegar uns copo dagua pra apagar essa brasa aí... 
+INTRO2-10,Who are you?,Quem é você?,¿Quién eres?,Quem é você?
+INTRO2-11,I'm Lumine... ,Me chamo Lumine... ,Me llamo Lumine.,Como assim quem é você? Que falta de educação.
+INTRO2-12,I'm the director in charge of the elevator and the Jakob Project.,Sou responsável pelo elevador e pelo Projeto Jakob.,Soy el director a cargo del elevador y del Proyecto Jakob.,Se apresenta primeiro antes de sair perguntando o nome dozoto.
+INTRO2-13,"I see. Hold tight, I'll signal my team to send in the rescue-","Entendo. Aguentem firme, vou sinalizar minha equipe para que-","Entiendo. Aguarda aquí, enviaré una señal a mi equipo para que envíen el rescate-","Entendo. Aguentem firme, vou sinalizar minha equipe para que-"
+,,,,
+INTRO3-1,"How nice to see you again, X!","É muito bom te ver de novo, X!","¡Qué bueno verte de nuevo, X!","Óia o cabra aí rapaz, num morre mais!"
+INTRO3-2,Vile?!,Vile?!,¿¡Vile!?,Vile?!
+INTRO3-3,"Ha ha ha... I'd love to stay and play with you, but I'm afraid I have too much work to do...","Ha ha ha... Eu adoraria brincar com você, mas tenho trabalho a fazer... ","Ja ja ja... Me encantaría quedarme y jugar contigo, pero me temo que tengo demasiado trabajo que hacer...","Eu mesmo, o amarelo mais safado dessa região!"
+INTRO3-4,You're a wanted criminal! Stop and let Lumine go!,Você é um criminoso procurado! Pare e liberte Lumine!,¡Eres un criminal buscado! ¡Detente y suelta a Lumine!,Você é um criminoso procurado! Pare e liberte Lumine!
+INTRO3-5,Not a chance. The Orbital Elevator is under our control now...,Sem chance. O Elevador Orbital está sob nosso controle agora... ,De ninguna manera. El Elevador Orbital está bajo nuestro control ahora...,"Nem a pau, vai ter reprise do auto da compadecida lá na praça de taperoá hoje a noite!"
+INTRO3-6,Just what do you plan to do?!,O que é que você está planejando?!,¿¡Qué planeas hacer!?,O que é que você está planejando?!
+INTRO3-7,"It begins now, X... \nA new world will be born! \nHa ha ha!","Tudo começa agora, X... \nUm novo mundo está nascendo! Ha ha ha!","Empieza ahora, X... \n¡Un nuevo mundo esta por nacer! \n¡Ja ja ja!","Encher o cu de pinga, o resto a gente vê depois!"
+,,,,
+SECRET2-1,"Welcome, Mega Man X. I've been waiting for you.","Bem vindo, Mega Man X. Estive a sua espera.","Bienvenido, Mega Man X. Te he estado esperando.","Bem vindo, Mega Man X. Estive a sua espera."
+SECRET2-2,You are different from anyone I've faced before...,Você é diferente de qualquer um que já enfrentei...,Eres diferente de cualquier otro al que haya enfrentado antes...,Você é diferente de qualquer um que já enfrentei...
+SECRET2-3,You exude an aura of peace and mercy. Who are you?,Você erradia uma aura de paz e misericórdia. Quem é você?,Emanas un aura de paz y misericordia. ¿Quién eres?,Você erradia uma aura de paz e misericórdia. Quem é você?
+SECRET2-4,How keen of you to notice this so soon. ,Muito perspicaz da sua parte notar meus traços.,Qué perceptivo de tu parte notarlo tan pronto.,Muito perspicaz da sua parte notar meus traços.
+SECRET2-5,I am Serenade. ,Me chamo Serenade.,Yo soy Serenade.,Me chamo Serenade.
+SECRET2-6,You mentioned I'm different from others you faced before?,Você mencionou que sou diferente de outros que já enfrentou?,¿Mencionaste que soy diferente a los demás a los que has enfrentado antes?,Você mencionou que sou diferente de outros que já enfrentou?
+SECRET2-7,That is because of my overwhelming power. ,Isso se dá devido ao meu incrível poder.,Eso es debido a mi poder abrumador.,Isso se dá devido ao meu incrível poder.
+SECRET2-8,Overwhelming...?,Incrível...?,¿Abrumador...?,Incrível...?
+SECRET2-9,Correct. I've been training to be stronger ever since I lost the title of UnderKing.,Correto. Estive treinando para me tornar mais forte desde que perdi o título de UnderKing.,Correcto. He estado entrenando para ser más fuerte desde que perdí el título de UnderKing.,Correto. Estive treinando para me tornar mais forte desde que perdi o título de UnderKing.
+SECRET2-10,For twenty years I've been amassing power. Now I've choosen you to test my strength against.,Por vinte anos estive acumulando poder e escolhi você para testar minha força.,Durante veinte años he estado acumulando poder. Ahora te he elegido a ti para poner a prueba mi fuerza.,Por vinte anos estive acumulando poder e escolhi você para testar minha força.
+SECRET2-11,"Serenade, was it? Hmm...","Serenade, não é? Hmm...","¿Serenade, dijiste? Hmm...","Serenade, não é? Hmm..."
+SECRET2-12,"Okay, I accept your duel!","Certo, eu aceito seu duelo!","¡Está bien, acepto tu duelo!","Certo, eu aceito seu duelo!"
+SECRET2-13,"Then, come to me...","Então, que assim seja...","Entonces, comencemos...","Então, que assim seja..."
+,,,,
+SECRET2-14,I honestly thought I was strong enough to defeat you. I was wrong.,Eu sinceramente pensei que poderia derrota-lo. Eu estava errado.,"Honestamente, pensé que era lo suficientemente fuerte para derrotarte. Me equivoqué.",Eu sinceramente pensei que poderia derrota-lo. Eu estava errado.
+SECRET2-15,"The kindness, love and respect that you possess in your heart makes you even more powerful.","A compaixão, o amor e o respeito que você possui em seu coração o fazem poderoso.","La bondad, el amor y el respeto que posees en tu corazón te hacen aún más poderoso.","A compaixão, o amor e o respeito que você possui em seu coração o fazem poderoso."
+SECRET2-16,You fought this duel beautifully. You really are the strongest robot in this world. ,Você lutou bravamente. De fato você é o robô mais poderoso deste mundo.,Luchaste este duelo de manera impresionante. Realmente eres el robot más fuerte en este mundo.,Você lutou bravamente. De fato você é o robô mais poderoso deste mundo.
+SECRET2-17,I wish I had something to reward you. The best I can offer you are my thanks.,Infelizmente não tenho nada para lhe recompensar além dos meus agradecimentos.,Desearía tener algo para recompensarte. Lo mejor que puedo ofrecerte son mis agradecimientos.,Infelizmente não tenho nada para lhe recompensar além dos meus agradecimentos.
+SECRET2-18,"Mega Man X. We shall meet again, in some other place...","Mega Man X. Nos encontraremos de novo, em algum outro lugar...","Mega Man X. Nos encontraremos de nuevo, en algún otro lugar...","Mega Man X. Nos encontraremos de novo, em algum outro lugar..."
+SECRET2-19,"For now, farewell!","Por enquanto, adeus!","¡Por ahora, adiós!","Por enquanto, adeus!"
+,,,,
+ACHIEV_ABV,Achiev,Conqst,Logros,Conqst
+ACHIEV_SCREEN_TITLE,Achievements,Conquistas,Logros,Aqui não é RA carai
+ACHIEVEMENTSUNLOCKED,Achievements Earned,Conquistas Desbloqueadas,Logros Desbloqueados,Conquistas Desbloqueadas
+,,,,
+DEBUGACHIEVTITLE,Locked Achievement…,Conquista Bloqueada…,Logro Bloqueado...,Conquista Bloqueada…
+DEBUGACHIEVDISC,Used DebugMode.,Usou Modo Debug.,Usaste Modo Debug. ,Usou Modo Debug.
+,,,,
+BEATINTRO_TITLE,Good To See You Again,,,
+BEATINTRO_DISC,Defeated the Intro Stage Boss.,Derrotou o Boss da Fase Inicial.,Derrotaste al Jefe del Nivel Introductorio.,Derrotou o Boss da Fase Inicial.
+ANTONIONBUSTERONLY_TITLE,Don't Attach Labels to Me,,,
+ANTONIONBUSTERONLY_DISC,Defeated Gravity Antonion without using special weapons.,Derrotou Gravity Antonion sem usar armas especiais.,Derrotaste a Gravity Antonion sin utilizar armas especiales.,Derrotou Gravity Antonion sem usar armas especiais.
+ANTONIONNAKED_TITLE,Not After Praise,,,
+ANTONIONNAKED_DISC,Defeated Gravity Antonion without equipping any upgrades.,Derrotou Gravity Antonion sem equipar nenhuma melhoria.,Derrotaste a Gravity Antonion sin equipar ninguna mejora.,Derrotou Gravity Antonion sem equipar nenhuma melhoria.
+ANTONIONNODAMAGE_TITLE,An Incredible Scientist,,,
+ANTONIONNODAMAGE_DISC,Defeated Gravity Antonion without taking damage.,Derrotou Gravity Antonion sem tomar dano.,Derrotaste a Gravity Antonion sin recibir daño.,Derrotou Gravity Antonion sem tomar dano.
+ANTONIONNOROTATION_TITLE,Portal,,,
+ANTONIONNOROTATION_DISC,Reached the end of Primrose without rotating the Stage or dying.,Chegou ao final do Laboratório Primula sem girar a fase nem morrer.,Llegaste al final del nivel Primavera sin voltear el escenario or morir.,Chegou ao final do Laboratório Primula sem girar a fase nem morrer.
+COLLECTALLHEARTS_TITLE,Strider,,,
+COLLECTALLHEARTS_DISC,Collected all Heart Tanks.,Coletou todos os Corações.,Recolectaste todos los corazones.,Coletou todos os Corações.
+COLLECTALLSUBTANKS_TITLE,Virtue's Last Reward,,,
+COLLECTALLSUBTANKS_DISC,Collected All Sub Tanks.,Coletou todos os Sub Tanks.,Recolectaste todos los Sub Tanques.,Coletou todos os Sub Tanks.
+COLLECTFULLHERMES_TITLE,Soul Eraser,,,
+COLLECTFULLHERMES_DISC,Collected All Hermes Parts.,Coletou todas as partes da Hermes,Recolectaste todas las partes de la Armadura Hermes.,Coletou todas as partes da Hermes
+COLLECTFULLICARUS_TITLE,Command Mission,,,
+COLLECTFULLICARUS_DISC,Collected All Icarus Parts.,Coletou todas as partes da Icarus.,Recolectaste todas las partes de la Armadura Icarus.,Coletou todas as partes da Icarus.
+COPYBUSTERONLY_TITLE,Your World Has Decayed,,,
+COPYBUSTERONLY_DISC,Defeated the Impostor without using special weapons.,Derrotou o Impostor sem usar armas especiais.,Derrotaste al Impostor sin utilizar armas especiales.,Derrotou o Impostor sem usar armas especiais.
+COPYDEFEATED_TITLE,Time for our Final Showdown,,,
+COPYDEFEATED_DISC,Defeated the Impostor.,Derrotou o Impostor.,Derrotaste al Impostor.,Derrotou o Impostor.
+COPYNAKED_TITLE,Put a Stop to What?,,,
+COPYNAKED_DISC,Defeated the Imposter without equipping any upgrades.,Derrotou o Impostor sem equipar nenhuma melhoria.,Derrotaste al Impostor sin equipar ninguna mejora.,Derrotou o Impostor sem equipar nenhuma melhoria.
+COPYNODAMAGE_TITLE,I Am Indeed Sigma,,,
+COPYNODAMAGE_DISC,Defeated the Imposter without taking damage.,Derrotou o Impostor sem tomar dano.,Derrotaste al Impostor sin recibir daño.,Derrotou o Impostor sem tomar dano.
+DEFEATEDALL_TITLE,The Orbital Elevator,,,
+DEFEATEDALL_DISC,Defeated all eight Maverick Bosses.,Derrotou os oito Mavericks.,Derrotaste a los 8 Jefes.,Derrotou os oito Mavericks.
+DEFEATEDANY_TITLE,New Generation Reploids,,,
+DEFEATEDANY_DISC,Defeated any of the Maverick Bosses.,Derrotou qualquer um dos Bosses.,Derrotaste a cualquiera de los Jefes.,Derrotou qualquer um dos Bosses.
+GATEWAYFIESTA_TITLE,Desperados,,,
+GATEWAYFIESTA_DISC,Survived through the hardest challenge in Gateway.,Sobreviveu ao desafio mais difícil do Satélite de Acesso.,Sobreviviste al desafío más difícil en el Satélite de Acceso.,Sobreviveu ao desafio mais difícil do Satélite de Acesso.
+GIGACRUSHKILL_TITLE,Cataclysm,,,
+GIGACRUSHKILL_DISC,Finished a Boss with Gigacrush.,Finalizou um Boss usando o Gigacrush.,Derrotaste a un Jefe usando el Gigacrush.,Finalizou um Boss usando o Gigacrush.
+LUMINENAKED_TITLE,I Supose You're Satisfied,,,
+LUMINENAKED_DISC,Defeated the Final Boss without equipping any upgrades.,Derrotou o Boss Final sem equipar nenhuma melhoria.,Derrotaste al Jefe Final sin equipar ninguna mejora.,Derrotou o Boss Final sem equipar nenhuma melhoria.
+LUMINENODAMAGE_TITLE,Of Course I'm Ok,,,
+LUMINENODAMAGE_DISC,Defeated the Final Boss without taking damage.,Derrotou o Boss Final sem tomar dano.,Derrotaste al Jefe Final sin recibir daño.,Derrotou o Boss Final sem tomar dano.
+MANOWARDOOREXPLODED_TITLE,Gotta Go Fast,,,
+MANOWARDOOREXPLODED_DISC,Broke your way through Dynasty.,Destruiu a segunda porta em Usina Dinastia.,Te abriste camino a través de Dinastía.,Destruiu a segunda porta em Usina Dinastia.
+MANOWARBUSTERONLY_TITLE,I'm In Complete Control,,,
+MANOWARBUSTERONLY_DISC,Defeated Gigabolt Manowar without using special weapons.,Derrotou Gigabolt Manowar sem usar armas especiais.,Derrotaste a Gigabolt Manowar sin usar armas especiales.,Derrotou Gigabolt Manowar sem usar armas especiais.
+MANOWARNAKED_TITLE,"Who Are You, Anyway?",,,
+MANOWARNAKED_DISC,Defeated Gigabolt Manowar without equipping any upgrades.,Derrotou Gigabolt Manowar sem equipar nenhuma melhoria.,Derrotaste a Gigabolt Manowar sin equipar ninguna mejora.,Derrotou Gigabolt Manowar sem equipar nenhuma melhoria.
+MANOWARNODAMAGE_TITLE,Not Doing Anything Wrong,,,
+MANOWARNODAMAGE_DISC,Defeated Gigabolt Manowar without taking damage.,Derrotou Gigabolt Manowar sem tomar dano.,Derrotaste a Gigabolt Manowar sin recibir daño.,Derrotou Gigabolt Manowar sem tomar dano.
+MANTISBUSTERONLY_TITLE,Let My Blade Show You,,,
+MANTISBUSTERONLY_DISC,Defeated Dark Mantis without using special weapons.,Derrotou Dark Mantis sem usar armas especiais.,Derrotaste a Dark Mantis sin usar armas especiales.,Derrotou Dark Mantis sem usar armas especiais.
+MANTISLIT_TITLE,Shining In The Darkness,,,
+MANTISLIT_DISC,Put an end to the darkness in Pitch Black.,Pôs um fim a escuridão do Arsenal Soturno.,Pusiste fin a la oscuridad en Oscuridad Total.,Pôs um fim a escuridão do Arsenal Soturno.
+MANTISNAKED_TITLE,"Can't Go Maverick, Kid",,,
+MANTISNAKED_DISC,Defeated Dark Mantis without equipping any upgrades.,Derrotou Dark Mantis sem equipar nenhuma melhoria.,Derrotaste a Dark Mantis sin equipar ninguna mejora.,Derrotou Dark Mantis sem equipar nenhuma melhoria.
+MANTISNODAMAGE_TITLE,Your Precious 'Justice',,,
+MANTISNODAMAGE_DISC,Defeated Dark Mantis without taking damage.,Derrotou Dark Mantis sem tomar dano.,Derrotaste a Dark Mantis sin recibir daño.,Derrotou Dark Mantis sem tomar dano.
+PANDABUSTERONLY_TITLE,Sole Purpose To Destroy,,,
+PANDABUSTERONLY_DISC,Defeated Bamboo Pandamonium without using special weapons.,Derrotou Bamboo Pandamonium sem usar armas especiais.,Derrotaste a Bamboo Pandamonium sin usar armas especiales.,Derrotou Bamboo Pandamonium sem usar armas especiais.
+PANDANAKED_TITLE,We Are Forced To Fight,,,
+PANDANAKED_DISC,Defeated Bamboo Pandamonium without equipping any upgrades.,Derrotou Bamboo Pandamonium sem equipar nenhuma melhoria.,Derrotaste a Bamboo Pandamonium sin equipar ninguna mejora.,Derrotou Bamboo Pandamonium sem equipar nenhuma melhoria.
+PANDANODAMAGE_TITLE,Never Thought Yourself?,,,
+PANDANODAMAGE_DISC,Defeated Bamboo Pandamonium without taking damage.,Derrotou Bamboo Pandamonium sem tomar dano.,Derrotaste a Bamboo Pandamonium sin recibir daño.,Derrotou Bamboo Pandamonium sem tomar dano.
+PANDARIDEREACHED_TITLE,Probotector,,,
+PANDARIDEREACHED_DISC,Reached the end of Booster Forest with the Cyclops.,Chegou ao final da Floresta Ergânica com a Cyclops.,Llegaste al final del Bosque Amplificador con el Cíclope.,Chegou ao final da Floresta Ergânica com a Cyclops.
+PELEDOSGAMES_TITLE,Pelé of the Games,Pelé dos Games,Pelé de los Juegos,Pelé dos Games
+PELEDOSGAMES_DISC,Juggled the Armor well after beating the Boss.,Cabeceou a Armadura bem depois de derrotar o Boss.,Malabareaste la armadura por un tiempo despues de vencer al jefe.,Cabeceou a Armadura bem depois de derrotar o Boss.
+PERFECTKILL_TITLE,Mark of the Wolves,,,
+PERFECTKILL_DISC,"Defeated any Boss without using special weapons, without taking damage and without upgrades.","Derrotou qualquer Boss sem usar armas especiais, sem melhorias e sem tomar dano.","Derrotaste a cualquier jefe sin usar armas especiales, sin recibir daño y sin mejoras.","Derrotou qualquer Boss sem usar armas especiais, sem melhorias e sem tomar dano."
+ROOSTERBUSTERONLY_TITLE,The Price I Have To Pay,,,
+ROOSTERBUSTERONLY_DISC,Defeated Burn Rooster without using special weapons.,Derrotou Burn Rooster sem usar armas especiais.,Derrotaste a Burn Rooster sin usar armas especiales.,Derrotou Burn Rooster sem usar armas especiais.
+ROOSTERFROZEN_TITLE,Hades,,,
+ROOSTERFROZEN_DISC,Stopped the Lava Wall at Inferno.,Parou a lava em Incinerador Inferno,Detuviste la Pared de Lava en el Incinerador Inferno.,Parou a lava em Incinerador Inferno
+ROOSTERNAKED_TITLE,Labeled Maverick,,,
+ROOSTERNAKED_DISC,Defeated Burn Rooster without equipping any upgrades.,Derrotou Burn Rooster sem equipar nenhuma melhoria.,Derrotaste a Burn Rooster sin equipar mejoras.,Derrotou Burn Rooster sem equipar nenhuma melhoria.
+ROOSTERNODAMAGE_TITLE,This Is No Ordinary Riot,,,
+ROOSTERNODAMAGE_DISC,Defeated Burn Rooster without taking damage.,Derrotou Burn Rooster sem tomar dano.,Derrotaste a Burn Rooster sin recibir daño.,Derrotou Burn Rooster sem tomar dano.
+SECRET2DEFEATED_TITLE,Cycle of the Six Existences,Ciclo das Seis Existências,Ciclo de las Seis Existencias,Ciclo das Seis Existências
+SECRET2DEFEATED_DISC,Defeated Secret Boss #2.,Derrotou o Boss Secreto #2.,Derrotaste al Jefe Secreto #2,Derrotou o Boss Secreto #2.
+SERAPHDEFEATED_TITLE,Tools of the Old World,,,
+SERAPHDEFEATED_DISC,Beat the game.,Finalizou o jogo.,Terminaste el juego.,Finalizou o jogo.
+,,,,
+SERAPHNAKED_TITLE,Do You Have What it Takes?,,,
+SERAPHNAKED_DISC,Defeated the Final Boss Second Phase without equipping any upgrades.,Derrotou a Segunda Fase do Boss Final sem equipar nenhuma melhoria.,Derrotaste la Segunda Fase del Jefe Final sin equipar ninguna mejora.,Derrotou a Segunda Fase do Boss Final sem equipar nenhuma melhoria.
+SERAPHNODAMAGE_TITLE,Accursed Cycle of Aggression,,,
+SERAPHNODAMAGE_DISC,Defeated the Final Boss Second Phase without taking damage.,Derrotou a Segunda Fase do Boss Final sem tomar dano.,Derrotaste la Segunda Fase del Jefe Final sin recibir daño.,Derrotou a Segunda Fase do Boss Final sem tomar dano.
+SIGMANAKED_TITLE,Ruler of the New World,,,
+SIGMANAKED_DISC,Defeated Sigma without equipping any upgrades.,Derrotou Sigma sem equipar nenhuma melhoria.,Derrotaste a Sigma sin equipar mejoras.,Derrotou Sigma sem equipar nenhuma melhoria.
+SIGMANODAMAGE_TITLE,Our Meeting was Fated,,,
+SIGMANODAMAGE_DISC,Defeated Sigma without taking damage.,Derrotou Sigma sem tomar dano.,Derrotaste a Sigma sin recibir daño.,Derrotou Sigma sem tomar dano.
+SUNFLOWERBUSTERONLY_TITLE,No One Can Control Us,,,
+SUNFLOWERBUSTERONLY_DISC,Defeated Optic Sunflower without using special weapons.,Derrotou Optic Sunflower sem usar armas especiais.,Derrotaste a Optic Sunflower sin usar armas especiales.,Derrotou Optic Sunflower sem usar armas especiais.
+SUNFLOWERGOTSSSRANK_TITLE,Gravity Circuit,,,
+SUNFLOWERGOTSSSRANK_DISC,Got S Rank in all challenges in a single run.,Conseguiu Rank S em todos os desafios de uma vez só.,Obtuvo el rango S en todos los desafíos en una sola partida.,Conseguiu Rank S em todos os desafios de uma vez só.
+SUNFLOWERNAKED_TITLE,We're No Monsters,,,
+SUNFLOWERNAKED_DISC,Defeated Optic Sunflower without equipping any upgrades.,Derrotou Optic Sunflower sem equipar nenhuma melhoria.,Derrotaste a Optic Sunflower sin equipar mejoras.,Derrotou Optic Sunflower sem equipar nenhuma melhoria.
+SUNFLOWERNODAMAGE_TITLE,What We're After,,,
+SUNFLOWERNODAMAGE_DISC,Defeated Optic Sunflower without taking damage.,Derrotou Optic Sunflower sem tomar dano.,Derrotaste a Optic Sunflower sin recibir daño.,Derrotou Optic Sunflower sem tomar dano.
+SURFEDONMISSILE_TITLE,Bomb Rush Cyberfunk,,,
+SURFEDONMISSILE_DISC,Surfed through the skies for 6 seconds.,Surfou os céus por 6 segundos.,Surfeaste por los cielos durante 6 segundos.,Surfou os céus por 6 segundos.
+TRILOBYTEBUSTERONLY_TITLE,The Ore We Mine,,,
+TRILOBYTEBUSTERONLY_DISC,Defeated Earthrock Trilobyte without using special weapons.,Derrotou Earthrock Trilobyte sem usar armas especiais.,Derrotaste a Earthrock Trilobyte sin usar armas especiales.,Derrotou Earthrock Trilobyte sem usar armas especiais.
+TRILOBYTENAKED_TITLE,Old Heaps of Junk,,,
+TRILOBYTENAKED_DISC,Defeated Earthrock Trilobyte without equipping any upgrades.,Derrotou Earthrock Trilobyte sem equipar nenhuma melhoria.,Derrotaste a Earthrock Trilobyte sin equipar ninguna mejora.,Derrotou Earthrock Trilobyte sem equipar nenhuma melhoria.
+TRILOBYTENODAMAGE_TITLE,Brainless Maverick Hunter,,,
+TRILOBYTENODAMAGE_DISC,Defeated Earthrock Trilobyte without taking damage.,Derrotou Earthrock Trilobyte sem tomar dano.,Derrotaste a Earthrock Trilobyte sin recibir daño.,Derrotou Earthrock Trilobyte sem tomar dano.
+VILEDEFEATEDTWICE_TITLE,Our Little Reunion,,,
+VILEDEFEATEDTWICE_DISC,Defeated Vile twice.,Derrotou Vile duas vezes.,Derrotaste a Vile dos veces.,Derrotou Vile duas vezes.
+VILEDEVILBEARDEFEATED_TITLE,Steel Assault,,,
+VILEDEVILBEARDEFEATED_DISC,Defeated Devil Bear before finishing the battle.,Derrotou Devil Bear antes de terminar a luta.,Derrotaste a Devil Bear antes de terminar la batalla.,Derrotou Devil Bear antes de terminar a luta.
+VILEJAKOBBUSTERONLY_TITLE,Piecing it Together,,,
+VILEJAKOBBUSTERONLY_DISC,Defeated Vile without using special weapons.,Derrotou Vile sem usar armas especiais.,Derrotaste a Vile sin usar armas especiales.,Derrotou Vile sem usar armas especiais.
+VILEJAKOBDEFEATED_TITLE,The Route To Space,,,
+VILEJAKOBDEFEATED_DISC,Defeated Vile at the top of the Orbital Elevator.,Derrotou Vile no topo do Elevador Orbital.,Derrotaste a Vile en la cima del Elevador Orbital.,Derrotou Vile no topo do Elevador Orbital.
+VILEJAKOBNAKED_TITLE,For a World that's Doomed,,,
+VILEJAKOBNAKED_DISC,Defeated Vile without equipping any upgrades.,Derrotou Vile sem equipar nenhuma melhoria.,Derrotaste a Vile sin equipar ninguna mejora.,Derrotou Vile sem equipar nenhuma melhoria.
+VILEJAKOBNODAMAGE_TITLE,At Times Like This,,,
+VILEJAKOBNODAMAGE_DISC,Defeated Vile without taking damage.,Derrotou Vile sem tomar dano.,Derrotaste a Vile sin recibir daño.,Derrotou Vile sem tomar dano.
+VILESIGMADEFEATED_TITLE,Hope Remains,,,
+VILESIGMADEFEATED_DISC,Defeated Vile at Sigma Palace.,Derrotou Vile no Palácio de Sigma.,Derrotaste a Vile en el Palacio de Sigma.,Derrotou Vile no Palácio de Sigma.
+XDRIVEDODGE_TITLE,Mark of the Ninja,,,
+XDRIVEDODGE_DISC,Used XDrive during a Desperation Attack.,Usou o XDrive durante um Ataque Desespero.,Usaste XDrive durante un Ataque de Desesperación.,Usou o XDrive durante um Ataque Desespero.
+YETIBUSTERONLY_TITLE,It's Too Late,,,
+YETIBUSTERONLY_DISC,Defeated Avalanche Yeti without using special weapons.,Derrotou Avalanche Yeti sem usar armas especiais.,Derrotaste a Avalanche Yeti sin usar armas especiales.,Derrotou Avalanche Yeti sem usar armas especiais.
+YETIDOOREXPLODED_TITLE,Sonic Drive,,,
+YETIDOOREXPLODED_DISC,Broke your way through Central White.,Destruiu a primeira porta na Central Alva.,Abriste camino a través de Central Alba.,Destruiu a primeira porta na Central Alva.
+YETINAKED_TITLE,You Old Model Reploids,,,
+YETINAKED_DISC,Defeated Avalanche Yeti without equipping any upgrades.,Derrotou Avalanche Yeti sem equipar nenhuma melhoria.,Derrotaste a Avalanche Yeti sin equipar ninguna mejora.,Derrotou Avalanche Yeti sem equipar nenhuma melhoria.
+YETINODAMAGE_TITLE,Puny Maverick Hunter,,,
+YETINODAMAGE_DISC,Defeated Avalanche Yeti without taking damage.,Derrotou Avalanche Yeti sem tomar dano.,Derrotaste a Avalanche Yeti sin recibir daño.,Derrotou Avalanche Yeti sem tomar dano.
+MANTISUNDETECTED_TITLE,Shadow Tactics,,,
+MANTISUNDETECTED_DISC,Avoided all Seachlights in Pitch Black.,Não foi detectado pelas luzes em Arsenal Soturno.,Evitar todas las luces de búsqueda en Oscuridad Total.,Não foi detectado pelas luzes em Arsenal Soturno.
+SECRET1DEFEATED_TITLE,Corridors of Time,,,
+SECRET1DEFEATED_DISC,Defeated the Secret Boss.,Derrotou o Boss Secreto.,Derrotaste al Jefe Secreto.,Derrotou o Boss Secreto.
+SECRET3DEFEATED_TITLE,Dual Destinies,,,
+SECRET3DEFEATED_DISC,Defeated Secret Boss #3.,Derrotou o Boss Secreto #3.,Derrotaste al Jefe Secreto #3.,Derrotou o Boss Secreto #3.
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+,,,,
+SECRET3-1,"Finally, I've acquired it. This data contains information on all currently wanted criminals...",Finalmente consegui. Esses dados contém informações de inúmeros criminosos...,"Finalmente, lo he adquirido. Estos datos contienen información sobre todos los criminales actualmente buscados...",Finalmente consegui. Esses dados contém informações de inúmeros criminosos...
+SECRET3-2,"You, freeze. This area is restricted to S Class Hunters, as is that data! Hand it over and come quietly!","Você, parado aí. Esta área é de acesso exclusivo dos Caçadores. Entregue-se agora!","Tú, detente. ¡Esta área está restringida para Cazadores de Clase S, al igual que esos datos! ¡Entrégalos y no te resistas!","Você, parado aí. Esta área é de acesso exclusivo dos Caçadores. Entregue-se agora!"
+SECRET3-3,"I know how this looks like, but fret not, X.","Sei o que isso parece, mas não se esquente, X.","Sé cómo se ve esto, pero no te preocupes, X.","Sei o que isso parece, mas não se esquente, X."
+SECRET3-4,"My name is Red. I've learned that you have been struggling with these recent events, so I decided to... help. ",Meu nome é Red. Fiquei sabendo que as coisas andam meio complicadas pra vocês e decidi... Ajudar.,"Mi nombre es Red. Me he enterado de que has tenido dificultades con los recientes acontecimientos, así que decidí... ayudarte.",Meu nome é Red. Fiquei sabendo que as coisas andam meio complicadas pra vocês e decidi... Ajudar.
+SECRET3-5,"With this, we'll be able to start our own Maverick hunting and take some load off your shoulders... For a price, of course.","Com estes dados, poderemos começar a caçar Mavericks por nós mesmos... Em troca de uma grana, é claro.","Con esto, podremos comenzar nuestra propia caza de Mavericks y aligerar un poco tu carga... Por un precio, por supuesto.","Com estes dados, poderemos começar a caçar Mavericks por nós mesmos... Em troca de uma grana, é claro."
+SECRET3-6,Sounds more like you're a filthy bounty hunter.,Você não passa de um caçador de recompensas.,Suena más como si fueras un sucio cazador de recompensas.,Você não passa de um caçador de recompensas.
+SECRET3-7,You are free to think whatever you want. I'm not backing down... Get Ready!,"Pense o que quiser, eu não vou recuar agora. Prepare-se!",Eres libre de pensar lo que quieras. No me voy a echar atrás... ¡Prepárate!,"Pense o que quiser, eu não vou recuar agora. Prepare-se!"
+,,,,
+SECRET3-8,Not bad... \nFor an old timer...,Nada mau... Para um velhote...,No está mal... \nPara un anciano...,X7 demake... É o caralho...  

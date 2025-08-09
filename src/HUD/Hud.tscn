@@ -1,0 +1,324 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://src/Levels/HUD.gd" type="Script" id=1]
+[ext_resource path="res://src/HUD/BossBar.gd" type="Script" id=2]
+[ext_resource path="res://src/Sounds/12 - MMX - X Life Gain.wav" type="AudioStream" id=3]
+[ext_resource path="res://src/HUD/Boss_bar.png" type="Texture" id=4]
+[ext_resource path="res://src/HUD/X_bar.png" type="Texture" id=5]
+[ext_resource path="res://src/HUD/SpecialBar.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/HUD/hp_fill.png" type="Texture" id=7]
+[ext_resource path="res://src/Fonts/font.tres" type="DynamicFont" id=8]
+[ext_resource path="res://src/HUD/BarFader.gd" type="Script" id=9]
+[ext_resource path="res://src/Effects/enemy_shader.tres" type="Shader" id=10]
+[ext_resource path="res://src/HUD/DebugAndCheats.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/DialogSystem/DialogBox.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/Options/Pause.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/HUD/R_bar.png" type="Texture" id=14]
+[ext_resource path="res://src/Options/selectable_weapon_00.png" type="Texture" id=15]
+[ext_resource path="res://src/HUD/Weapon_bar.png" type="Texture" id=16]
+[ext_resource path="res://addons/PaletteSwap/PaletteSwap.gdshader" type="Shader" id=17]
+[ext_resource path="res://src/HUD/WeaponBar.gd" type="Script" id=18]
+[ext_resource path="res://src/Actors/Player/BossWeapons/firedash_palette.png" type="Texture" id=19]
+[ext_resource path="res://src/HUD/RidearmorBar.gd" type="Script" id=20]
+[ext_resource path="res://src/HUD/R2_bar.png" type="Texture" id=21]
+[ext_resource path="res://src/Effects/Materials/crt_shader_1.tres" type="Material" id=22]
+[ext_resource path="res://System/IGT/HUD/InGame_Timer.tscn" type="PackedScene" id=23]
+
+[sub_resource type="ShaderMaterial" id=1]
+resource_local_to_scene = true
+shader = ExtResource( 10 )
+shader_param/Flash = 0.0
+shader_param/Should_Blink = 1.0
+shader_param/Darken = 1.0
+shader_param/Alpha = 1.0
+shader_param/Alpha_Blink = 0.0
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 15 )
+region = Rect2( 3, 3, 10, 10 )
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 17 )
+shader_param/skip_first_row = true
+shader_param/use_palette_alpha = false
+shader_param/fps = 6.0
+shader_param/palette = ExtResource( 19 )
+
+[node name="HUD" type="CanvasLayer"]
+pause_mode = 2
+script = ExtResource( 1 )
+checked_inputs = [ "move_left", "move_right", "fire", "alt_fire", "jump", "dash", "weapon_select_left", "weapon_select_right" ]
+
+[node name="Pause" parent="." instance=ExtResource( 13 )]
+layer = 4
+visible = false
+
+[node name="WhiteScreen" type="ColorRect" parent="."]
+visible = false
+margin_right = 399.0
+margin_bottom = 224.0
+mouse_filter = 2
+
+[node name="X Debug Info" type="RichTextLabel" parent="."]
+visible = false
+self_modulate = Color( 1, 1, 1, 0.780392 )
+margin_right = 206.0
+margin_bottom = 106.0
+mouse_filter = 2
+custom_fonts/normal_font = ExtResource( 8 )
+text = "Debug Information"
+
+[node name="vBoxContainer" type="VBoxContainer" parent="X Debug Info"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Input Info" type="RichTextLabel" parent="."]
+visible = false
+self_modulate = Color( 1, 1, 1, 0.780392 )
+margin_top = 211.0
+margin_right = 206.0
+margin_bottom = 317.0
+mouse_filter = 2
+custom_fonts/normal_font = ExtResource( 8 )
+text = "Input Info"
+
+[node name="textureRect" type="TextureRect" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+mouse_filter = 2
+stretch_mode = 3
+
+[node name="Rec Info" type="RichTextLabel" parent="."]
+self_modulate = Color( 1, 1, 1, 0.780392 )
+margin_left = 88.0
+margin_top = 204.0
+margin_right = 340.0
+margin_bottom = 310.0
+mouse_filter = 2
+custom_fonts/normal_font = ExtResource( 8 )
+text = "X8FC 0.6.1.0 Demo03"
+
+[node name="Chronometer" type="RichTextLabel" parent="."]
+self_modulate = Color( 1, 1, 1, 0.780392 )
+margin_left = 347.0
+margin_top = 211.0
+margin_right = 564.0
+margin_bottom = 317.0
+mouse_filter = 2
+custom_fonts/normal_font = ExtResource( 8 )
+text = "MM:SS:MM"
+
+[node name="Bars" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="X Bar" type="NinePatchRect" parent="."]
+material = SubResource( 1 )
+margin_left = 8.0
+margin_top = 56.0
+margin_right = 22.0
+margin_bottom = 108.0
+texture = ExtResource( 5 )
+patch_margin_top = 4
+patch_margin_bottom = 17
+script = ExtResource( 9 )
+
+[node name="textureProgress2" type="TextureProgress" parent="X Bar"]
+modulate = Color( 0.737255, 0.0941176, 0.0941176, 1 )
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = -80.0
+margin_right = 10.0
+margin_bottom = -17.0
+max_value = 32.0
+texture_progress = ExtResource( 7 )
+fill_mode = 3
+
+[node name="textureProgress" type="TextureProgress" parent="X Bar"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = -80.0
+margin_right = 10.0
+margin_bottom = -17.0
+max_value = 32.0
+value = 16.0
+texture_progress = ExtResource( 7 )
+fill_mode = 3
+
+[node name="WeaponIcon" type="TextureRect" parent="X Bar"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 17.0
+margin_top = -14.0
+margin_right = 33.0
+margin_bottom = 2.0
+rect_clip_content = true
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = SubResource( 2 )
+
+[node name="WeaponBar" type="NinePatchRect" parent="X Bar"]
+material = SubResource( 1 )
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 15.0
+margin_top = -76.0
+margin_right = 29.0
+texture = ExtResource( 16 )
+patch_margin_top = 4
+patch_margin_bottom = 17
+script = ExtResource( 18 )
+
+[node name="textureProgress" type="TextureProgress" parent="X Bar/WeaponBar"]
+material = SubResource( 3 )
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = -80.0
+margin_right = 10.0
+margin_bottom = -17.0
+max_value = 32.0
+value = 28.0
+texture_progress = ExtResource( 7 )
+fill_mode = 3
+
+[node name="SpecialBar" parent="X Bar" instance=ExtResource( 6 )]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = -10.0
+margin_top = -53.0
+margin_right = 0.0
+margin_bottom = 1.0
+
+[node name="Ride Bar" type="NinePatchRect" parent="."]
+margin_left = -14.0
+margin_top = 56.0
+margin_bottom = 108.0
+texture = ExtResource( 14 )
+patch_margin_top = 4
+patch_margin_bottom = 17
+
+[node name="textureProgress" type="TextureProgress" parent="Ride Bar"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = -80.0
+margin_right = 10.0
+margin_bottom = -17.0
+max_value = 32.0
+value = 16.0
+texture_progress = ExtResource( 7 )
+fill_mode = 3
+
+[node name="RideArmor Bar" type="NinePatchRect" parent="."]
+margin_left = -14.0
+margin_top = 24.0
+margin_bottom = 108.0
+texture = ExtResource( 21 )
+patch_margin_top = 4
+patch_margin_bottom = 17
+script = ExtResource( 20 )
+
+[node name="textureProgress" type="TextureProgress" parent="RideArmor Bar"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = -80.0
+margin_right = 10.0
+margin_bottom = -17.0
+max_value = 32.0
+value = 32.0
+texture_progress = ExtResource( 7 )
+fill_mode = 3
+
+[node name="Boss Bar" type="NinePatchRect" parent="."]
+margin_left = 377.0
+margin_top = 24.0
+margin_right = 391.0
+margin_bottom = 108.0
+texture = ExtResource( 4 )
+patch_margin_top = 4
+patch_margin_bottom = 17
+script = ExtResource( 2 )
+
+[node name="textureProgress" type="TextureProgress" parent="Boss Bar"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 10.0
+margin_bottom = 67.0
+max_value = 32.0
+value = 32.0
+texture_progress = ExtResource( 7 )
+fill_mode = 3
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+bus = "SFX"
+
+[node name="BlackScreen" type="ColorRect" parent="."]
+visible = false
+margin_right = 399.0
+margin_bottom = 224.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 1 )
+
+[node name="GLES2warning" type="RichTextLabel" parent="."]
+visible = false
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 1.0
+margin_top = 194.0
+margin_right = 289.0
+margin_bottom = 223.0
+custom_fonts/normal_font = ExtResource( 8 )
+text = "Your graphics card driver does not support GLS3.3. Visual effects will not appear. Update your video driver."
+
+[node name="GLES2warning2" type="RichTextLabel" parent="GLES2warning"]
+modulate = Color( 1, 0, 0, 1 )
+self_modulate = Color( 1, 0, 0, 1 )
+margin_left = -1.0
+margin_top = -1.0
+margin_right = 287.0
+margin_bottom = 28.0
+custom_fonts/normal_font = ExtResource( 8 )
+text = "Your graphics card driver does not support GLS3.3. Visual effects will not appear. Update your video driver."
+
+[node name="DialogBox" parent="." instance=ExtResource( 12 )]
+margin_left = 104.0
+margin_top = 42.0
+margin_right = 255.2
+margin_bottom = 109.0
+mouse_filter = 2
+
+[node name="colorRect" type="ColorRect" parent="."]
+visible = false
+material = ExtResource( 22 )
+margin_right = 398.0
+margin_bottom = 224.0
+mouse_filter = 2
+
+[node name="Boss and Weapon Info" type="RichTextLabel" parent="."]
+visible = false
+self_modulate = Color( 1, 1, 1, 0.780392 )
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -138.0
+margin_bottom = 169.0
+mouse_filter = 2
+custom_fonts/normal_font = ExtResource( 8 )
+text = "Input Info"
+
+[node name="canvasLayer" type="CanvasLayer" parent="Boss and Weapon Info"]
+layer = 128
+
+[node name="DebugAndCheats" parent="Boss and Weapon Info/canvasLayer" instance=ExtResource( 11 )]
+margin_left = 397.0
+margin_right = 397.0
+
+[node name="IGTHUD" parent="." instance=ExtResource( 23 )]
+
+[connection signal="displayed" from="X Bar/WeaponBar" to="X Bar/SpecialBar" method="_on_WeaponBar_displayed"]
+[connection signal="hidden" from="X Bar/WeaponBar" to="X Bar/SpecialBar" method="_on_WeaponBar_hidden"]

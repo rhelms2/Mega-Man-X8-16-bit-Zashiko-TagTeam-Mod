@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Troia Base 2 - Loop.ogg-cdfffbdae42c6033706c6a3da7c7b595.oggstr"
+
+[deps]
+
+source_file="res://Remix/Songs/Troia Base 2 - Loop.ogg"
+dest_files=[ "res://.import/Troia Base 2 - Loop.ogg-cdfffbdae42c6033706c6a3da7c7b595.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

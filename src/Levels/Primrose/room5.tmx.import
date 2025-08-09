@@ -1,0 +1,22 @@
+[remap]
+
+importer="vnen.tiled_importer"
+type="PackedScene"
+path="res://.import/room5.tmx-feedce5846596a95c6dd2bb499b3b3b6.scn"
+
+[deps]
+
+source_file="res://src/Levels/Primrose/room5.tmx"
+dest_files=[ "res://.import/room5.tmx-feedce5846596a95c6dd2bb499b3b3b6.scn" ]
+
+[params]
+
+custom_properties=true
+tile_metadata=false
+uv_clip=false
+image_flags=7
+collision_layer=1
+embed_internal_images=false
+save_tiled_properties=false
+add_background=true
+post_import_script=""

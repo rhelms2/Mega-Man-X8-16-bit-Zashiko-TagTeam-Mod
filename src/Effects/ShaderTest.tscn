@@ -1,0 +1,59 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/Actors/Player/x_sprites/x.png" type="Texture" id=1]
+[ext_resource path="res://src/Actors/recolor_shader.tres" type="Shader" id=2]
+[ext_resource path="res://src/Actors/Player/charge_shader.tres" type="Shader" id=3]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 2 )
+shader_param/MainColor1 = Color( 0, 0.501961, 0.972549, 1 )
+shader_param/MainColor2 = Color( 0, 0.25098, 0.941176, 1 )
+shader_param/MainColor3 = Color( 0, 0.215686, 0.470588, 1 )
+shader_param/MainColor4 = Color( 0.513726, 0.85098, 0.960784, 1 )
+shader_param/MainColor5 = Color( 0.356863, 0.615686, 0.701961, 1 )
+shader_param/MainColor6 = Color( 0.207843, 0.392157, 0.45098, 1 )
+shader_param/R_MainColor1 = Color( 1, 0, 0, 1 )
+shader_param/R_MainColor2 = Color( 0.87451, 0.0666667, 0.0666667, 1 )
+shader_param/R_MainColor3 = Color( 0.619608, 0.0156863, 0.0156863, 1 )
+shader_param/R_MainColor4 = Color( 1, 0.909804, 0, 1 )
+shader_param/R_MainColor5 = Color( 0.631373, 0.533333, 0.0352941, 1 )
+shader_param/R_MainColor6 = Color( 1, 0.654902, 0.0156863, 1 )
+shader_param/tolerance = 0.0
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 3 )
+shader_param/Flash = null
+shader_param/Charge = null
+shader_param/Color = null
+shader_param/MainColor1 = null
+shader_param/MainColor2 = null
+shader_param/MainColor3 = null
+shader_param/MainColor4 = null
+shader_param/MainColor5 = null
+shader_param/MainColor6 = null
+shader_param/R_MainColor1 = null
+shader_param/R_MainColor2 = null
+shader_param/R_MainColor3 = null
+shader_param/R_MainColor4 = null
+shader_param/R_MainColor5 = null
+shader_param/R_MainColor6 = null
+shader_param/CrystalColor1 = null
+shader_param/CrystalColor2 = null
+shader_param/CrystalColor3 = null
+shader_param/R_CrystalColor1 = null
+shader_param/Alert = null
+shader_param/R_CrystalColor2 = null
+shader_param/R_CrystalColor3 = null
+shader_param/tolerance = null
+shader_param/Alpha = null
+
+[node name="node2D" type="Sprite"]
+material = SubResource( 1 )
+texture = ExtResource( 1 )
+hframes = 12
+vframes = 11
+frame = 32
+
+[node name="sprite" type="Sprite" parent="."]
+visible = false
+material = SubResource( 2 )

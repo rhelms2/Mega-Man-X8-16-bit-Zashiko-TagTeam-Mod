@@ -1,0 +1,398 @@
+[gd_scene load_steps=52 format=2]
+
+[ext_resource path="res://src/Effects/Materials/mat_smokeparticle.tres" type="Material" id=1]
+[ext_resource path="res://src/Sounds/SFX - CutsceneExplosion.wav" type="AudioStream" id=2]
+[ext_resource path="res://src/Effects/Textures/smoke.png" type="Texture" id=3]
+[ext_resource path="res://src/Effects/Materials/mecha_smokes.tres" type="Material" id=4]
+[ext_resource path="res://Axl_mod/Levels/NoahsPark/Stage_Cutscene.gd" type="Script" id=5]
+[ext_resource path="res://src/Levels/PitchBlack/light.png" type="Texture" id=6]
+[ext_resource path="res://src/Levels/NoahsPark/damaged_craft.png" type="Texture" id=7]
+[ext_resource path="res://src/Effects/Textures/intro_fire2.png" type="Texture" id=8]
+[ext_resource path="res://src/Effects/Textures/intro_fire1.png" type="Texture" id=9]
+[ext_resource path="res://src/Effects/Materials/intro_fire_particles.tres" type="Material" id=10]
+[ext_resource path="res://src/Levels/NoahsPark/cutscene_cover.png" type="Texture" id=12]
+[ext_resource path="res://src/Sounds/SFX - Ambientfire.wav" type="AudioStream" id=16]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=25]
+[ext_resource path="res://src/Sounds/EXPLOSION.wav" type="AudioStream" id=26]
+[ext_resource path="res://src/Sounds/Rooster - Explosion.ogg" type="AudioStream" id=27]
+[ext_resource path="res://src/Effects/Materials/lumine_explosion.tres" type="Material" id=28]
+[ext_resource path="res://src/Effects/Textures/blue_explosion.png" type="Texture" id=29]
+[ext_resource path="res://src/Effects/Materials/RemainsParticle.tres" type="Material" id=30]
+[ext_resource path="res://src/Effects/Textures/remains_gray.png" type="Texture" id=31]
+[ext_resource path="res://src/Actors/Bosses/SatanSigma/flash.gd" type="Script" id=32]
+[ext_resource path="res://src/Effects/Textures/long_smoke.png" type="Texture" id=33]
+[ext_resource path="res://src/Effects/Materials/cutscene_smoke_particles.tres" type="Material" id=34]
+[ext_resource path="res://src/Effects/Materials/RemainsMat.tres" type="Material" id=41]
+[ext_resource path="res://src/Effects/Textures/explosion.png" type="Texture" id=42]
+[ext_resource path="res://src/Effects/Textures/remains.png" type="Texture" id=43]
+[ext_resource path="res://src/Effects/Materials/crab_land_explosion_particles.tres" type="Material" id=44]
+[ext_resource path="res://src/Effects/Materials/craft_remains.tres" type="Material" id=45]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 80, 188, 80 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 188, 80 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 160, 188, 80 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ SubResource( 1 ) ],
+"loop": true,
+"name": "door",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 2 ) ],
+"loop": true,
+"name": "main",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 3 ) ],
+"loop": true,
+"name": "side",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 37, 40 )
+
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 9 )
+region = Rect2( 37, 0, 37, 40 )
+
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 9 )
+region = Rect2( 74, 0, 37, 40 )
+
+[sub_resource type="AtlasTexture" id=44]
+atlas = ExtResource( 9 )
+region = Rect2( 111, 0, 37, 40 )
+
+[sub_resource type="AtlasTexture" id=45]
+atlas = ExtResource( 9 )
+region = Rect2( 0, 40, 37, 40 )
+
+[sub_resource type="AtlasTexture" id=46]
+atlas = ExtResource( 9 )
+region = Rect2( 37, 40, 37, 40 )
+
+[sub_resource type="AtlasTexture" id=47]
+atlas = ExtResource( 9 )
+region = Rect2( 74, 40, 37, 40 )
+
+[sub_resource type="AtlasTexture" id=48]
+atlas = ExtResource( 9 )
+region = Rect2( 111, 40, 37, 40 )
+
+[sub_resource type="SpriteFrames" id=13]
+animations = [ {
+"frames": [ SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ), SubResource( 48 ) ],
+"loop": true,
+"name": "default",
+"speed": 12.0
+} ]
+
+[sub_resource type="AtlasTexture" id=50]
+atlas = ExtResource( 8 )
+region = Rect2( 0, 0, 26, 21 )
+
+[sub_resource type="AtlasTexture" id=51]
+atlas = ExtResource( 8 )
+region = Rect2( 26, 0, 26, 21 )
+
+[sub_resource type="AtlasTexture" id=52]
+atlas = ExtResource( 8 )
+region = Rect2( 52, 0, 26, 21 )
+
+[sub_resource type="AtlasTexture" id=53]
+atlas = ExtResource( 8 )
+region = Rect2( 78, 0, 26, 21 )
+
+[sub_resource type="AtlasTexture" id=54]
+atlas = ExtResource( 8 )
+region = Rect2( 0, 21, 26, 21 )
+
+[sub_resource type="AtlasTexture" id=55]
+atlas = ExtResource( 8 )
+region = Rect2( 26, 21, 26, 21 )
+
+[sub_resource type="AtlasTexture" id=56]
+atlas = ExtResource( 8 )
+region = Rect2( 52, 21, 26, 21 )
+
+[sub_resource type="AtlasTexture" id=57]
+atlas = ExtResource( 8 )
+region = Rect2( 78, 21, 26, 21 )
+
+[sub_resource type="SpriteFrames" id=22]
+animations = [ {
+"frames": [ SubResource( 50 ), SubResource( 51 ), SubResource( 52 ), SubResource( 53 ), SubResource( 54 ), SubResource( 55 ), SubResource( 56 ), SubResource( 57 ) ],
+"loop": true,
+"name": "default",
+"speed": 12.0
+} ]
+
+[sub_resource type="CanvasItemMaterial" id=23]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id=58]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 4
+particles_anim_loop = false
+
+[node name="StageCutscene" type="Node2D"]
+script = ExtResource( 5 )
+
+[node name="DamagedCraft" type="AnimatedSprite" parent="."]
+modulate = Color( 0.8, 0.819608, 0.921569, 1 )
+position = Vector2( 288, 163 )
+z_index = 1
+frames = SubResource( 4 )
+animation = "main"
+
+[node name="Side" type="AnimatedSprite" parent="DamagedCraft"]
+z_index = 2
+frames = SubResource( 4 )
+animation = "side"
+
+[node name="Door" type="AnimatedSprite" parent="DamagedCraft"]
+z_index = 1
+frames = SubResource( 4 )
+animation = "door"
+
+[node name="smoke" type="Particles2D" parent="DamagedCraft/Door"]
+modulate = Color( 1, 1, 1, 0.486275 )
+material = ExtResource( 1 )
+position = Vector2( 10, -19 )
+z_index = -1
+emitting = false
+amount = 16
+local_coords = false
+process_material = ExtResource( 4 )
+texture = ExtResource( 3 )
+
+[node name="smoke2" type="Particles2D" parent="DamagedCraft/Door"]
+modulate = Color( 1, 1, 1, 0.486275 )
+material = ExtResource( 1 )
+position = Vector2( -29, -23 )
+z_index = -1
+emitting = false
+amount = 16
+local_coords = false
+process_material = ExtResource( 4 )
+texture = ExtResource( 3 )
+
+[node name="doorhit" type="AudioStreamPlayer2D" parent="DamagedCraft/Door"]
+pause_mode = 2
+stream = ExtResource( 26 )
+volume_db = -9.0
+pitch_scale = 0.8
+bus = "SFX"
+script = ExtResource( 25 )
+
+[node name="explode" type="AudioStreamPlayer2D" parent="DamagedCraft/Door"]
+pause_mode = 2
+stream = ExtResource( 27 )
+volume_db = -6.0
+bus = "SFX"
+script = ExtResource( 25 )
+
+[node name="smoke" type="Particles2D" parent="DamagedCraft"]
+material = ExtResource( 1 )
+position = Vector2( -69, 23 )
+amount = 5
+local_coords = false
+process_material = ExtResource( 4 )
+texture = ExtResource( 3 )
+
+[node name="smoke2" type="Particles2D" parent="DamagedCraft"]
+modulate = Color( 0.713726, 0.713726, 0.713726, 1 )
+material = ExtResource( 1 )
+position = Vector2( 13, -31 )
+amount = 5
+local_coords = false
+process_material = ExtResource( 4 )
+texture = ExtResource( 3 )
+
+[node name="smoke3" type="Particles2D" parent="DamagedCraft"]
+material = ExtResource( 1 )
+position = Vector2( 26, 14 )
+z_index = 2
+amount = 5
+local_coords = false
+process_material = ExtResource( 4 )
+texture = ExtResource( 3 )
+
+[node name="flash" type="Sprite" parent="DamagedCraft"]
+pause_mode = 2
+visible = false
+scale = Vector2( 15, 10 )
+z_index = -1
+texture = ExtResource( 6 )
+script = ExtResource( 32 )
+initial_alpha = 1.0
+initial_scale = 15.0
+final_color = Color( 1, 1, 1, 1 )
+duration = 0.1
+
+[node name="Visuals" type="Node2D" parent="."]
+position = Vector2( 284, 155 )
+
+[node name="fire" type="AnimatedSprite" parent="Visuals"]
+position = Vector2( 72, -37 )
+frames = SubResource( 13 )
+frame = 7
+playing = true
+
+[node name="fire2" type="AnimatedSprite" parent="Visuals"]
+position = Vector2( -65, -27 )
+frames = SubResource( 13 )
+frame = 4
+playing = true
+
+[node name="fire3" type="AnimatedSprite" parent="Visuals"]
+position = Vector2( 77, 26 )
+z_index = 4
+frames = SubResource( 13 )
+frame = 6
+playing = true
+flip_h = true
+
+[node name="small_fire" type="AnimatedSprite" parent="Visuals"]
+position = Vector2( -54, 36 )
+z_index = 2
+frames = SubResource( 22 )
+playing = true
+
+[node name="small_fire3" type="AnimatedSprite" parent="Visuals"]
+position = Vector2( -17, -30 )
+frames = SubResource( 22 )
+playing = true
+flip_h = true
+
+[node name="small_fire2" type="AnimatedSprite" parent="Visuals"]
+position = Vector2( 54, 37 )
+z_index = 4
+frames = SubResource( 22 )
+frame = 3
+playing = true
+flip_h = true
+
+[node name="particles" type="Particles2D" parent="Visuals"]
+position = Vector2( 31, 41 )
+z_index = -1
+amount = 32
+lifetime = 2.5
+visibility_rect = Rect2( -250, -100, 500, 200 )
+local_coords = false
+process_material = ExtResource( 10 )
+
+[node name="firenoise" type="AudioStreamPlayer2D" parent="Visuals"]
+stream = ExtResource( 16 )
+volume_db = -35.0
+autoplay = true
+max_distance = 600.0
+bus = "SFX"
+
+[node name="light" type="Sprite" parent="Visuals"]
+modulate = Color( 1, 0.913725, 0, 0.0627451 )
+material = SubResource( 23 )
+position = Vector2( -8, 11 )
+scale = Vector2( 5.974, 3 )
+z_index = 10
+texture = ExtResource( 6 )
+
+[node name="explosion_particles" type="Particles2D" parent="."]
+material = SubResource( 58 )
+position = Vector2( 272, 64 )
+z_index = 101
+emitting = false
+amount = 60
+lifetime = 2.0
+local_coords = false
+process_material = ExtResource( 28 )
+texture = ExtResource( 29 )
+
+[node name="explosion_sfx" type="AudioStreamPlayer2D" parent="explosion_particles"]
+stream = ExtResource( 2 )
+volume_db = -2.0
+pitch_scale = 1.15
+max_distance = 1200.0
+bus = "SFX"
+
+[node name="screencover" type="Sprite" parent="."]
+visible = false
+position = Vector2( 197, 120 )
+scale = Vector2( 100, 100 )
+z_index = 100
+texture = ExtResource( 6 )
+
+[node name="skip_screencover" type="Sprite" parent="."]
+visible = false
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 197, 120 )
+scale = Vector2( 100, 100 )
+z_index = 200
+texture = ExtResource( 6 )
+
+[node name="craft_explosion" type="Particles2D" parent="."]
+material = SubResource( 58 )
+position = Vector2( 297, 159 )
+z_index = 101
+emitting = false
+amount = 15
+lifetime = 2.0
+one_shot = true
+explosiveness = 0.75
+local_coords = false
+process_material = ExtResource( 44 )
+texture = ExtResource( 42 )
+
+[node name="remains_particles" type="Particles2D" parent="."]
+material = ExtResource( 41 )
+position = Vector2( 288, 158 )
+z_index = 10
+emitting = false
+amount = 24
+lifetime = 2.0
+one_shot = true
+explosiveness = 1.0
+visibility_rect = Rect2( -600, -100, 1200, 200 )
+process_material = ExtResource( 45 )
+texture = ExtResource( 43 )
+
+[node name="background_cover" type="Sprite" parent="."]
+position = Vector2( 223, 77 )
+z_index = -6
+texture = ExtResource( 12 )
+
+[node name="remains_particles" type="Particles2D" parent="background_cover"]
+material = ExtResource( 41 )
+position = Vector2( 74, -36 )
+z_index = 8
+emitting = false
+amount = 12
+lifetime = 1.2
+explosiveness = 1.0
+visibility_rect = Rect2( -600, -100, 1200, 200 )
+process_material = ExtResource( 30 )
+texture = ExtResource( 31 )
+
+[node name="dust" type="Particles2D" parent="."]
+modulate = Color( 0.72549, 0.72549, 0.72549, 1 )
+position = Vector2( 258, 122 )
+z_index = 10
+emitting = false
+amount = 6
+lifetime = 8.0
+one_shot = true
+explosiveness = 0.95
+process_material = ExtResource( 34 )
+texture = ExtResource( 33 )

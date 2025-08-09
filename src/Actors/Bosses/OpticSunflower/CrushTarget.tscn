@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/Actors/Bosses/OpticSunflower/CrushTarget.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Player/BossWeapons/OpticShield/optic_target.res" type="SpriteFrames" id=2]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=3]
+[ext_resource path="res://src/Sounds/OpticShield - Laser Prepare.ogg" type="AudioStream" id=4]
+[ext_resource path="res://src/Effects/Materials/crushtarget_mat.tres" type="Material" id=5]
+
+[node name="CrushTarget" type="Node2D"]
+z_index = 15
+script = ExtResource( 1 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 5 )
+frames = ExtResource( 2 )
+frame = 3
+playing = true
+
+[node name="prepare" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+volume_db = -8.0
+autoplay = true
+bus = "SFX"
+script = ExtResource( 3 )

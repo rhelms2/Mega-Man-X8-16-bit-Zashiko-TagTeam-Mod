@@ -1,0 +1,91 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/Actors/Weapons/Projectiles/laser_beam.res" type="SpriteFrames" id=1]
+[ext_resource path="res://src/Tests/MovingPlatform.gd" type="Script" id=2]
+
+[sub_resource type="Curve2D" id=2]
+_data = {
+"points": PoolVector2Array( -0.813698, -48.829, 0.813698, 48.829, 16, -198, -0.295443, -20.086, 0.295443, 20.086, 17, -36 )
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "New Anim"
+length = 8.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("pathFollow2D:unit_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 1.0 ]
+}
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:unit_offset")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("pathFollow2D:unit_offset")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1.0 ]
+}
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 64, 25.7426 )
+
+[node name="MovingPlatform" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="path2D" type="Path2D" parent="."]
+curve = SubResource( 2 )
+
+[node name="pathFollow2D" type="PathFollow2D" parent="path2D"]
+position = Vector2( 16, -198 )
+rotate = false
+loop = false
+
+[node name="remoteTransform2D" type="RemoteTransform2D" parent="path2D/pathFollow2D"]
+remote_path = NodePath("../../../kinematicBody2D")
+
+[node name="animationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../path2D")
+playback_process_mode = 0
+"anims/New Anim" = SubResource( 3 )
+anims/RESET = SubResource( 4 )
+
+[node name="kinematicBody2D" type="KinematicBody2D" parent="."]
+position = Vector2( 16, -198 )
+collision_mask = 0
+motion/sync_to_physics = true
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="kinematicBody2D"]
+shape = SubResource( 1 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="kinematicBody2D"]
+modulate = Color( 0, 0, 0, 1 )
+scale = Vector2( 4, 2.4375 )
+frames = ExtResource( 1 )
+animation = "loop"
+frame = 1

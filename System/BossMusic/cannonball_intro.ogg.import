@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/cannonball_intro.ogg-e57bfb394346b99f643ace17e97026f2.oggstr"
+
+[deps]
+
+source_file="res://System/BossMusic/cannonball_intro.ogg"
+dest_files=[ "res://.import/cannonball_intro.ogg-e57bfb394346b99f643ace17e97026f2.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

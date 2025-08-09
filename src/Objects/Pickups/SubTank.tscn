@@ -1,0 +1,57 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://src/Sounds/12 - MMX - X Life Gain.wav" type="AudioStream" id=1]
+[ext_resource path="res://src/Sounds/14 - MMX - X Sub Tank-Heart Powerup.wav" type="AudioStream" id=2]
+[ext_resource path="res://src/Objects/Pickups/subtank.png" type="Texture" id=3]
+[ext_resource path="res://src/Objects/Pickups/SubTank.gd" type="Script" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 4, 4 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 20, 20 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 3 )
+region = Rect2( 20, 0, 20, 20 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 24.0
+} ]
+
+[node name="SubTank" type="Node2D"]
+pause_mode = 2
+z_index = 10
+script = ExtResource( 4 )
+collectible_name = "subtank_rooster"
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 2
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+shape = SubResource( 1 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+pause_mode = 1
+frames = SubResource( 4 )
+playing = true
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 1 )
+volume_db = -4.554
+max_distance = 600.0
+bus = "SFX"
+
+[node name="audioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 2 )
+volume_db = -4.554
+max_distance = 600.0
+bus = "SFX"
+
+[connection signal="body_entered" from="area2D" to="." method="_on_area2D_body_entered"]

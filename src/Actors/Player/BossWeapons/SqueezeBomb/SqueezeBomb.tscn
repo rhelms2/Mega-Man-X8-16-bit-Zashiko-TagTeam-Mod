@@ -1,0 +1,76 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Player/BossWeapons/SqueezeBomb/squeeze_bomb.res" type="SpriteFrames" id=2]
+[ext_resource path="res://src/Actors/Player/BossWeapons/SqueezeBomb/Deflectable.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/Player/BossWeapons/SqueezeBomb/SqueezeBomb.gd" type="Script" id=4]
+[ext_resource path="res://src/Sounds/Antonion - BoxPrepare.wav" type="AudioStream" id=5]
+[ext_resource path="res://src/Sounds/Rooster - Explosion.ogg" type="AudioStream" id=6]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=7]
+
+[sub_resource type="CircleShape2D" id=17]
+radius = 23.0868
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 12, 12 )
+
+[node name="SqueezeBomb" type="KinematicBody2D" groups=["Player Projectile"]]
+z_index = 5
+collision_layer = 4
+collision_mask = 0
+script = ExtResource( 4 )
+damage = 2.0
+damage_to_bosses = 0.25
+damage_to_weakness = 12.0
+time_off_screen = 1.0
+break_guards = true
+duration = 1.25
+move_speed = 150.0
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+frames = ExtResource( 2 )
+animation = "idle"
+frame = 4
+playing = true
+flip_h = true
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+position = Vector2( -0.500001, -1.90735e-06 )
+scale = Vector2( 2.65, 2.5 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -1, 1 )
+z_index = -1
+shape = SubResource( 17 )
+
+[node name="disabler" type="Node" parent="."]
+script = ExtResource( 1 )
+fade_out = true
+delete_after_fade = true
+undo_on_rotation_end = false
+
+[node name="Deflectable" type="RigidBody2D" parent="." groups=["Deflectable", "Player Projectile"]]
+modulate = Color( 0.929412, 1, 0, 1 )
+collision_layer = 4
+collision_mask = 0
+mode = 3
+script = ExtResource( 3 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="Deflectable"]
+shape = SubResource( 16 )
+
+[node name="point" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
+volume_db = -8.0
+pitch_scale = 2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 7 )
+
+[node name="sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+volume_db = -8.5
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 7 )

@@ -1,0 +1,325 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://src/Levels/Inferno/FreezableLava.gd" type="Script" id=1]
+[ext_resource path="res://addons/PaletteSwap/PaletteSwap.gdshader" type="Shader" id=2]
+[ext_resource path="res://src/Levels/Inferno/lava.res" type="SpriteFrames" id=3]
+[ext_resource path="res://src/Levels/Gateway/GatewayLava.gd" type="Script" id=4]
+[ext_resource path="res://src/Levels/PitchBlack/light.png" type="Texture" id=5]
+[ext_resource path="res://src/Effects/Materials/LavawallFieryParticles.tres" type="Material" id=6]
+[ext_resource path="res://src/Effects/Fire/fire2.png" type="Texture" id=7]
+[ext_resource path="res://src/Effects/Materials/LavawallUpFire.tres" type="Material" id=8]
+[ext_resource path="res://src/Actors/Player/BossWeapons/DriftDiamond/IcePlatform.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/Actors/Bosses/BurnRooster/random_pitcher.gd" type="Script" id=10]
+[ext_resource path="res://src/Sounds/Rooster - RisingLava.ogg" type="AudioStream" id=11]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 194, 10 )
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 2 )
+shader_param/skip_first_row = true
+shader_param/use_palette_alpha = false
+shader_param/fps = 0.0
+
+[sub_resource type="CanvasItemMaterial" id=3]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 3
+particles_anim_loop = false
+
+[node name="GatewayLava" type="Node2D"]
+script = ExtResource( 4 )
+ice_platform = ExtResource( 9 )
+
+[node name="DeathZone" type="Area2D" parent="."]
+position = Vector2( 0, -6 )
+collision_layer = 0
+collision_mask = 6
+script = ExtResource( 1 )
+type = "void"
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="DeathZone"]
+position = Vector2( 0, 10 )
+shape = SubResource( 1 )
+
+[node name="visuals" type="Node2D" parent="."]
+
+[node name="idle" type="AnimatedSprite" parent="visuals"]
+material = SubResource( 2 )
+position = Vector2( 16, -1 )
+frames = ExtResource( 3 )
+animation = "idle"
+frame = 3
+speed_scale = 2.0
+playing = true
+
+[node name="idle2" type="AnimatedSprite" parent="visuals"]
+material = SubResource( 2 )
+position = Vector2( 32, -1 )
+frames = ExtResource( 3 )
+animation = "idle"
+frame = 2
+speed_scale = 2.0
+playing = true
+
+[node name="idle3" type="AnimatedSprite" parent="visuals"]
+material = SubResource( 2 )
+position = Vector2( 48, -1 )
+frames = ExtResource( 3 )
+animation = "idle"
+frame = 3
+speed_scale = 2.0
+playing = true
+
+[node name="idle4" type="AnimatedSprite" parent="visuals"]
+material = SubResource( 2 )
+position = Vector2( 64, -1 )
+frames = ExtResource( 3 )
+animation = "idle"
+frame = 2
+speed_scale = 2.0
+playing = true
+
+[node name="idle5" type="AnimatedSprite" parent="visuals"]
+material = SubResource( 2 )
+position = Vector2( 80, -1 )
+frames = ExtResource( 3 )
+animation = "idle"
+frame = 2
+speed_scale = 2.0
+playing = true
+
+[node name="idle6" type="AnimatedSprite" parent="visuals"]
+material = SubResource( 2 )
+position = Vector2( 96, -1 )
+frames = ExtResource( 3 )
+animation = "idle"
+frame = 1
+speed_scale = 2.0
+playing = true
+
+[node name="idle7" type="AnimatedSprite" parent="visuals"]
+material = SubResource( 2 )
+position = Vector2( 112, -1 )
+frames = ExtResource( 3 )
+animation = "idle"
+frame = 2
+speed_scale = 2.0
+playing = true
+
+[node name="idle8" type="AnimatedSprite" parent="visuals"]
+material = SubResource( 2 )
+position = Vector2( 128, -1 )
+frames = ExtResource( 3 )
+animation = "idle"
+frame = 1
+speed_scale = 2.0
+playing = true
+
+[node name="idle9" type="AnimatedSprite" parent="visuals"]
+material = SubResource( 2 )
+position = Vector2( 144, -1 )
+frames = ExtResource( 3 )
+animation = "idle"
+frame = 2
+speed_scale = 2.0
+playing = true
+
+[node name="idle10" type="AnimatedSprite" parent="visuals"]
+material = SubResource( 2 )
+position = Vector2( 160, -1 )
+frames = ExtResource( 3 )
+animation = "idle"
+frame = 1
+speed_scale = 2.0
+playing = true
+
+[node name="idle11" type="AnimatedSprite" parent="visuals"]
+material = SubResource( 2 )
+position = Vector2( 176, -1 )
+frames = ExtResource( 3 )
+animation = "idle"
+frame = 2
+speed_scale = 2.0
+playing = true
+
+[node name="idle12" type="AnimatedSprite" parent="visuals"]
+material = SubResource( 2 )
+position = Vector2( 192, -1 )
+frames = ExtResource( 3 )
+animation = "idle"
+frame = 1
+speed_scale = 2.0
+playing = true
+
+[node name="idle13" type="AnimatedSprite" parent="visuals"]
+material = SubResource( 2 )
+position = Vector2( 208, -1 )
+frames = ExtResource( 3 )
+animation = "idle"
+speed_scale = 2.0
+playing = true
+
+[node name="idle14" type="AnimatedSprite" parent="visuals"]
+material = SubResource( 2 )
+position = Vector2( -192, -1 )
+frames = ExtResource( 3 )
+animation = "idle"
+frame = 3
+speed_scale = 2.0
+playing = true
+
+[node name="idle15" type="AnimatedSprite" parent="visuals"]
+material = SubResource( 2 )
+position = Vector2( -176, -1 )
+frames = ExtResource( 3 )
+animation = "idle"
+frame = 2
+speed_scale = 2.0
+playing = true
+
+[node name="idle16" type="AnimatedSprite" parent="visuals"]
+material = SubResource( 2 )
+position = Vector2( -160, -1 )
+frames = ExtResource( 3 )
+animation = "idle"
+frame = 2
+speed_scale = 2.0
+playing = true
+
+[node name="idle17" type="AnimatedSprite" parent="visuals"]
+material = SubResource( 2 )
+position = Vector2( -144, -1 )
+frames = ExtResource( 3 )
+animation = "idle"
+frame = 1
+speed_scale = 2.0
+playing = true
+
+[node name="idle18" type="AnimatedSprite" parent="visuals"]
+material = SubResource( 2 )
+position = Vector2( -128, -1 )
+frames = ExtResource( 3 )
+animation = "idle"
+frame = 2
+speed_scale = 2.0
+playing = true
+
+[node name="idle19" type="AnimatedSprite" parent="visuals"]
+material = SubResource( 2 )
+position = Vector2( -112, -1 )
+frames = ExtResource( 3 )
+animation = "idle"
+frame = 1
+speed_scale = 2.0
+playing = true
+
+[node name="idle20" type="AnimatedSprite" parent="visuals"]
+material = SubResource( 2 )
+position = Vector2( -96, -1 )
+frames = ExtResource( 3 )
+animation = "idle"
+frame = 2
+speed_scale = 2.0
+playing = true
+
+[node name="idle21" type="AnimatedSprite" parent="visuals"]
+material = SubResource( 2 )
+position = Vector2( -80, -1 )
+frames = ExtResource( 3 )
+animation = "idle"
+frame = 1
+speed_scale = 2.0
+playing = true
+
+[node name="idle22" type="AnimatedSprite" parent="visuals"]
+material = SubResource( 2 )
+position = Vector2( -64, -1 )
+frames = ExtResource( 3 )
+animation = "idle"
+frame = 2
+speed_scale = 2.0
+playing = true
+
+[node name="idle23" type="AnimatedSprite" parent="visuals"]
+material = SubResource( 2 )
+position = Vector2( -48, -1 )
+frames = ExtResource( 3 )
+animation = "idle"
+frame = 1
+speed_scale = 2.0
+playing = true
+
+[node name="idle24" type="AnimatedSprite" parent="visuals"]
+material = SubResource( 2 )
+position = Vector2( -32, -1 )
+frames = ExtResource( 3 )
+animation = "idle"
+frame = 2
+speed_scale = 2.0
+playing = true
+
+[node name="idle25" type="AnimatedSprite" parent="visuals"]
+material = SubResource( 2 )
+position = Vector2( -16, -1 )
+frames = ExtResource( 3 )
+animation = "idle"
+frame = 1
+speed_scale = 2.0
+playing = true
+
+[node name="idle26" type="AnimatedSprite" parent="visuals"]
+material = SubResource( 2 )
+position = Vector2( 0, -1 )
+frames = ExtResource( 3 )
+animation = "idle"
+speed_scale = 2.0
+playing = true
+
+[node name="polygon2D" type="Polygon2D" parent="."]
+color = Color( 1, 0.4, 0, 1 )
+polygon = PoolVector2Array( 210, 84, -208, 85, -208, 0, 210, 0 )
+
+[node name="light" type="Light2D" parent="."]
+scale = Vector2( 2, 1 )
+z_index = -8
+texture = ExtResource( 5 )
+texture_scale = 5.0
+color = Color( 1, 0.360784, 0.141176, 1 )
+energy = 0.7
+range_z_min = -1
+range_z_max = 0
+
+[node name="particles" type="Particles2D" parent="."]
+position = Vector2( -2, 2 )
+z_index = 10
+amount = 64
+lifetime = 4.0
+visibility_rect = Rect2( -250, -100, 500, 200 )
+local_coords = false
+process_material = ExtResource( 6 )
+
+[node name="fire" type="Particles2D" parent="."]
+material = SubResource( 3 )
+position = Vector2( -1, -21 )
+z_index = 10
+amount = 12
+lifetime = 0.35
+visibility_rect = Rect2( -253.516, -20.1006, 509.94, 30.4821 )
+local_coords = false
+process_material = ExtResource( 8 )
+texture = ExtResource( 7 )
+
+[node name="visibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+position = Vector2( 0, 38 )
+scale = Vector2( 20.4, 4.8 )
+
+[node name="fire_loop" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 11 )
+volume_db = -18.482
+max_distance = 1000.0
+bus = "SFX"
+script = ExtResource( 10 )
+
+[connection signal="body_entered" from="DeathZone" to="DeathZone" method="_on_area2D_body_entered"]
+[connection signal="small_ice" from="DeathZone" to="." method="_on_icehit"]

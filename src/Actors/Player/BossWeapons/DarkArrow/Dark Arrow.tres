@@ -1,0 +1,37 @@
+[gd_resource type="Resource" load_steps=12 format=2]
+
+[ext_resource path="res://src/Sounds/Mantis - DarkArrow.ogg" type="AudioStream" id=1]
+[ext_resource path="res://src/Actors/Player/BossWeapons/WeaponResource.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Player/BossWeapons/darkarrow_palette.png" type="Texture" id=3]
+[ext_resource path="res://src/Options/selectable_weapon_03.png" type="Texture" id=4]
+[ext_resource path="res://src/Actors/Player/BossWeapons/DarkArrow/DarkArrow.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Actors/Player/BossWeapons/DarkArrow/DarkArrowCharged.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/swipe.wav" type="AudioStream" id=7]
+[ext_resource path="res://src/Options/Hotswap/faded_weapon_03.png" type="Texture" id=8]
+[ext_resource path="res://src/WeaponGet/palettes/darkarrow_h.png" type="Texture" id=9]
+[ext_resource path="res://src/WeaponGet/palettes/darkarrow_i.png" type="Texture" id=10]
+[ext_resource path="res://src/WeaponGet/Videos/sequence_darkarrow.tres" type="Resource" id=11]
+
+[resource]
+script = ExtResource( 2 )
+short_name = "MANTIS_WPNMENU"
+collectible = "mantis_weapon"
+icon = ExtResource( 4 )
+faded_icon = ExtResource( 8 )
+palette = ExtResource( 3 )
+regular_shot = ExtResource( 5 )
+regular_ammo_cost = 0.333
+charged_shot = ExtResource( 6 )
+charged_ammo_cost = 3.0
+cooldown = 0.1
+sound = ExtResource( 1 )
+charged_sound = ExtResource( 7 )
+input_sequence = ExtResource( 11 )
+MainColor1 = Color( 0.443137, 0.443137, 0.443137, 1 )
+MainColor2 = Color( 0.239216, 0.254902, 0.360784, 1 )
+MainColor3 = Color( 0.184314, 0.180392, 0.282353, 1 )
+MainColor4 = Color( 0.713726, 0.556863, 0.780392, 1 )
+MainColor5 = Color( 0.486275, 0.364706, 0.564706, 1 )
+MainColor6 = Color( 0.235294, 0.196078, 0.286275, 1 )
+hermes_palette = ExtResource( 9 )
+icarus_palette = ExtResource( 10 )

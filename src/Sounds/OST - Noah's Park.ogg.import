@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - Noah's Park.ogg-4581e37fdfa350150bb61ead2e2c2c60.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - Noah's Park.ogg"
+dest_files=[ "res://.import/OST - Noah's Park.ogg-4581e37fdfa350150bb61ead2e2c2c60.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

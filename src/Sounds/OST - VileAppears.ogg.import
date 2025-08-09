@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - VileAppears.ogg-dd905151c20f5395eed28c575f20e088.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - VileAppears.ogg"
+dest_files=[ "res://.import/OST - VileAppears.ogg-dd905151c20f5395eed28c575f20e088.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

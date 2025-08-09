@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/Objects/Button/button.res" type="SpriteFrames" id=1]
+[ext_resource path="res://src/Objects/Button/Button.gd" type="Script" id=2]
+[ext_resource path="res://src/Sounds/Press Open.ogg" type="AudioStream" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8.75, 10 )
+
+[node name="Button" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+frames = ExtResource( 1 )
+animation = "on"
+frame = 13
+playing = true
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+position = Vector2( 5, 0 )
+shape = SubResource( 1 )
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+volume_db = -8.0
+bus = "SFX"
+
+[node name="visibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+process_parent = true
+physics_process_parent = true
+
+[connection signal="body_entered" from="area2D" to="." method="_on_area2D_body_entered"]

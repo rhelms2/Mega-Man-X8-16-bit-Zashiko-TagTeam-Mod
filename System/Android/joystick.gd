@@ -1,0 +1,88 @@
+extends Area2D
+
+onready var _player = get_parent().get_node(CharacterManager.current_player_character)
+
+onready var background = $background
+onready var outline = $outline
+onready var pointer = $outline / pointer
+
+onready var max_distance = $Deadzone.shape.radius
+export  var deadzone = 0.5
+
+var touch_id = null
+
+func _input(event):
+	if event is InputEventScreenTouch:
+		var distance = event.position.distance_to(outline.global_position)
+		
+		if event.pressed:
+			if distance < max_distance and touch_id == null:
+				touch_id = event.index
+				set_visibility()
+			else:
+				pass
+				
+
+		elif not event.pressed:
+			if touch_id == event.index:
+				reset_joystick()
+				touch_id = null
+
+	elif event is InputEventScreenDrag and touch_id == event.index:
+		var distance = event.position.distance_to(outline.global_position)
+		
+		if distance <= max_distance + 50:
+			set_visibility()
+			pointer.global_position = outline.global_position + (event.position - outline.global_position).clamped(max_distance)
+		else:
+			reset_joystick()
+		
+		press_direction()
+
+func _process(delta):
+	if touch_id != null:
+		press_direction()
+
+func get_direction():
+	var joystick_dir = Vector2(0, 0)
+	joystick_dir.x = pointer.position.x / max_distance
+	joystick_dir.y = pointer.position.y / max_distance
+	return joystick_dir
+
+func press_direction():
+	var direction = get_direction()
+
+	if direction.x <= 0 - deadzone:
+		Input.action_press("move_left")
+		Input.action_release("move_right")
+	elif direction.x >= 0 + deadzone:
+		Input.action_release("move_left")
+		Input.action_press("move_right")
+	else:
+		Input.action_release("move_left")
+		Input.action_release("move_right")
+
+	if direction.y <= 0 - deadzone:
+		Input.action_press("move_up")
+		Input.action_release("move_down")
+	elif direction.y >= 0 + deadzone:
+		Input.action_release("move_up")
+		Input.action_press("move_down")
+	else:
+		Input.action_release("move_up")
+		Input.action_release("move_down")
+
+func set_visibility():
+	background.modulate.a = 1.0
+	outline.modulate.a = 1.0
+	pointer.modulate.a = 1.0
+
+func reset_joystick():
+	pointer.position = Vector2(0, 0)
+	reset_visibility()
+	press_direction()
+	
+func reset_visibility():
+	background.modulate.a = 0.5
+	outline.modulate.a = 0.5
+	pointer.modulate.a = 0.5

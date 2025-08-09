@@ -1,0 +1,22 @@
+[remap]
+
+importer="vnen.tiled_importer"
+type="PackedScene"
+path="res://.import/_inferno_4.tmx-70c145abf70f8de229bb1ede1d9ed51c.scn"
+
+[deps]
+
+source_file="res://src/Levels/Inferno/_inferno_4.tmx"
+dest_files=[ "res://.import/_inferno_4.tmx-70c145abf70f8de229bb1ede1d9ed51c.scn" ]
+
+[params]
+
+custom_properties=true
+tile_metadata=false
+uv_clip=true
+image_flags=7
+collision_layer=1
+embed_internal_images=false
+save_tiled_properties=false
+add_background=true
+post_import_script=""

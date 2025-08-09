@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/ice_gattling.ogg-92d79ecc8dd6a53ffc7882b05980c1a1.oggstr"
+
+[deps]
+
+source_file="res://Axl_mod/SFX/ice_gattling.ogg"
+dest_files=[ "res://.import/ice_gattling.ogg-92d79ecc8dd6a53ffc7882b05980c1a1.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

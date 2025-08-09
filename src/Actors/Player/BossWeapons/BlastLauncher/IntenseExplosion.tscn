@@ -1,0 +1,56 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://src/Effects/Textures/big_explosion.res" type="SpriteFrames" id=1]
+[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=2]
+[ext_resource path="res://src/Levels/PitchBlack/light.png" type="Texture" id=3]
+[ext_resource path="res://src/Sounds/Rooster - Explosion.ogg" type="AudioStream" id=4]
+[ext_resource path="res://src/Actors/Player/BossWeapons/BlastLauncher/IntenseExplosion.gd" type="Script" id=5]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=6]
+[ext_resource path="res://src/Levels/PitchBlack/X_Lightsource.gd" type="Script" id=7]
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 26, 25 )
+
+[node name="IntenseExplosion" type="KinematicBody2D" groups=["Player Projectile"]]
+z_index = 2
+collision_layer = 4
+collision_mask = 0
+script = ExtResource( 5 )
+damage_to_bosses = 0.15
+damage_to_weakness = 10.0
+time_off_screen = 1.0
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+frames = ExtResource( 1 )
+animation = "intro"
+frame = 7
+playing = true
+flip_h = true
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+z_index = -1
+shape = SubResource( 15 )
+
+[node name="sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+volume_db = -5.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 6 )
+
+[node name="light" type="Light2D" parent="."]
+scale = Vector2( 1.5, 1 )
+z_index = 277
+texture = ExtResource( 3 )
+energy = 0.35
+range_layer_min = -2
+range_layer_max = -1
+script = ExtResource( 7 )
+
+[node name="disabler" type="Node" parent="."]
+script = ExtResource( 2 )
+fade_out = true
+delete_after_fade = true
+undo_on_rotation_end = false

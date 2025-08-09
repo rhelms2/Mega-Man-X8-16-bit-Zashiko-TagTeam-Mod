@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Ride Armor - Loop.ogg-5c2b67165f47e0f6237294bfb43026ba.oggstr"
+
+[deps]
+
+source_file="res://Remix/Songs/Ride Armor - Loop.ogg"
+dest_files=[ "res://.import/Ride Armor - Loop.ogg-5c2b67165f47e0f6237294bfb43026ba.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

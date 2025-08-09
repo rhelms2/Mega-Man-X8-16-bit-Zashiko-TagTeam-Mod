@@ -1,0 +1,178 @@
+{ "frames": [
+   {
+    "filename": "firebird 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 96, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 112 },
+    "sourceSize": { "w": 96, "h": 112 },
+    "duration": 32
+   },
+   {
+    "filename": "firebird 1.ase",
+    "frame": { "x": 96, "y": 0, "w": 96, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 112 },
+    "sourceSize": { "w": 96, "h": 112 },
+    "duration": 32
+   },
+   {
+    "filename": "firebird 2.ase",
+    "frame": { "x": 192, "y": 0, "w": 96, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 112 },
+    "sourceSize": { "w": 96, "h": 112 },
+    "duration": 32
+   },
+   {
+    "filename": "firebird 3.ase",
+    "frame": { "x": 288, "y": 0, "w": 96, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 112 },
+    "sourceSize": { "w": 96, "h": 112 },
+    "duration": 32
+   },
+   {
+    "filename": "firebird 4.ase",
+    "frame": { "x": 0, "y": 112, "w": 96, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 112 },
+    "sourceSize": { "w": 96, "h": 112 },
+    "duration": 32
+   },
+   {
+    "filename": "firebird 5.ase",
+    "frame": { "x": 96, "y": 112, "w": 96, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 112 },
+    "sourceSize": { "w": 96, "h": 112 },
+    "duration": 32
+   },
+   {
+    "filename": "firebird 6.ase",
+    "frame": { "x": 192, "y": 112, "w": 96, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 112 },
+    "sourceSize": { "w": 96, "h": 112 },
+    "duration": 32
+   },
+   {
+    "filename": "firebird 7.ase",
+    "frame": { "x": 288, "y": 0, "w": 96, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 112 },
+    "sourceSize": { "w": 96, "h": 112 },
+    "duration": 32
+   },
+   {
+    "filename": "firebird 8.ase",
+    "frame": { "x": 288, "y": 112, "w": 96, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 112 },
+    "sourceSize": { "w": 96, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "firebird 9.ase",
+    "frame": { "x": 0, "y": 224, "w": 96, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 112 },
+    "sourceSize": { "w": 96, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "firebird 10.ase",
+    "frame": { "x": 96, "y": 224, "w": 96, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 112 },
+    "sourceSize": { "w": 96, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "firebird 11.ase",
+    "frame": { "x": 192, "y": 224, "w": 96, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 112 },
+    "sourceSize": { "w": 96, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "firebird 12.ase",
+    "frame": { "x": 288, "y": 224, "w": 96, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 112 },
+    "sourceSize": { "w": 96, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "firebird 13.ase",
+    "frame": { "x": 0, "y": 336, "w": 96, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 112 },
+    "sourceSize": { "w": 96, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "firebird 14.ase",
+    "frame": { "x": 96, "y": 336, "w": 96, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 112 },
+    "sourceSize": { "w": 96, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "firebird 15.ase",
+    "frame": { "x": 192, "y": 336, "w": 96, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 112 },
+    "sourceSize": { "w": 96, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "firebird 16.ase",
+    "frame": { "x": 288, "y": 336, "w": 96, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 112 },
+    "sourceSize": { "w": 96, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "firebird 17.ase",
+    "frame": { "x": 288, "y": 336, "w": 96, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 96, "h": 112 },
+    "sourceSize": { "w": 96, "h": 112 },
+    "duration": 42
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3-rc1-x64",
+  "image": "phoenix.png",
+  "format": "RGBA8888",
+  "size": { "w": 384, "h": 448 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "start", "from": 0, "to": 3, "direction": "forward", "color": "#000000ff" },
+   { "name": "loop", "from": 4, "to": 7, "direction": "forward", "repeat": "3", "color": "#000000ff" },
+   { "name": "end", "from": 8, "to": 17, "direction": "forward", "color": "#000000ff" }
+  ]
+ }
+}

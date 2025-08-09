@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/FX - Get A Rank.ogg-29f2ea6c587867bc636c2cab7f0173dc.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/FX - Get A Rank.ogg"
+dest_files=[ "res://.import/FX - Get A Rank.ogg-29f2ea6c587867bc636c2cab7f0173dc.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

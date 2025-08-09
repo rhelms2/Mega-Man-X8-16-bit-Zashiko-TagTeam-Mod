@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/Levels/Gateway/BossWatcher.gd" type="Script" id=1]
+[ext_resource path="res://src/Levels/Gateway/crystalanims.tres" type="SpriteFrames" id=2]
+
+[node name="BossWatcher" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+z_index = 1
+frames = ExtResource( 2 )
+animation = "yeti"
+
+[node name="animatedSprite2" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -14 )
+z_index = 1
+frames = ExtResource( 2 )
+animation = "yeti"
+
+[node name="animatedSprite3" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -28 )
+z_index = 1
+frames = ExtResource( 2 )
+animation = "yeti"
+
+[node name="animatedSprite4" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -42 )
+z_index = 1
+frames = ExtResource( 2 )
+animation = "yeti"
+
+[node name="animatedSprite5" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -56 )
+z_index = 1
+frames = ExtResource( 2 )
+animation = "yeti"
+
+[node name="animatedSprite6" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -70 )
+z_index = 1
+frames = ExtResource( 2 )
+animation = "yeti"
+
+[node name="animatedSprite7" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -84 )
+z_index = 1
+frames = ExtResource( 2 )
+animation = "yeti"
+
+[node name="animatedSprite8" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -98 )
+z_index = 1
+frames = ExtResource( 2 )
+animation = "yeti"

@@ -1,0 +1,8 @@
+[gd_resource type="CanvasItemMaterial" format=2]
+
+[resource]
+render_priority = -1
+particles_animation = true
+particles_anim_h_frames = 6
+particles_anim_v_frames = 3
+particles_anim_loop = false

@@ -1,0 +1,125 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://src/Effects/enemy_shader.tres" type="Shader" id=1]
+[ext_resource path="res://src/Objects/Box/Deflect.gd" type="Script" id=2]
+[ext_resource path="res://src/Sounds/MMX - Enemy Helmet Hit.ogg" type="AudioStream" id=3]
+[ext_resource path="res://src/Objects/Box/BreakBox.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Objects/Box/X8Sprite.gd" type="Script" id=5]
+[ext_resource path="res://src/Effects/ShieldBreak/shieldbreak.res" type="SpriteFrames" id=6]
+[ext_resource path="res://src/Objects/Box/BikeDamageReceiver.gd" type="Script" id=7]
+[ext_resource path="res://src/Objects/Box/ArrowDetector.gd" type="Script" id=8]
+[ext_resource path="res://src/Sounds/HIT.wav" type="AudioStream" id=9]
+
+[sub_resource type="ShaderMaterial" id=240]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/Flash = 0.0
+shader_param/Should_Blink = 1.0
+shader_param/Darken = 1.0
+shader_param/Alpha = 1.0
+shader_param/Alpha_Blink = 0.0
+
+[sub_resource type="RectangleShape2D" id=242]
+extents = Vector2( 23, 23 )
+
+[sub_resource type="Curve" id=243]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=239]
+curve = SubResource( 243 )
+
+[sub_resource type="ParticlesMaterial" id=241]
+resource_local_to_scene = true
+emission_shape = 1
+emission_sphere_radius = 25.0
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 239 )
+
+[sub_resource type="RectangleShape2D" id=244]
+extents = Vector2( 19, 20 )
+
+[node name="DeflectBox" instance=ExtResource( 4 )]
+
+[node name="animatedSprite" parent="." index="1"]
+material = SubResource( 240 )
+animation = "stationary"
+
+[node name="DamageReceiver" parent="." index="7"]
+active = false
+
+[node name="collisionShape2D" parent="DamageReceiver" index="0"]
+disabled = true
+
+[node name="BikeDamageReceiver" parent="." index="8"]
+script = ExtResource( 7 )
+
+[node name="EnemyShield" type="Node2D" parent="." index="11"]
+script = ExtResource( 2 )
+breakable = false
+
+[node name="hittable_area" type="Area2D" parent="EnemyShield" index="0"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="EnemyShield/hittable_area" index="0"]
+shape = SubResource( 242 )
+
+[node name="hitSound" type="AudioStreamPlayer2D" parent="EnemyShield" index="1"]
+stream = ExtResource( 3 )
+volume_db = -6.832
+pitch_scale = 1.17
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="break_vfx" type="AnimatedSprite" parent="." index="12"]
+modulate = Color( 1, 1, 1, 0.670588 )
+z_index = 25
+frames = ExtResource( 6 )
+frame = 9
+playing = true
+script = ExtResource( 5 )
+
+[node name="explosion" parent="Death" index="1"]
+process_material = SubResource( 241 )
+
+[node name="DamageOnTouch" parent="." index="16"]
+damage = 15.0
+
+[node name="Crush" parent="." index="17"]
+active = false
+
+[node name="ArrowDetector" type="Area2D" parent="." index="18"]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource( 8 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="ArrowDetector" index="0"]
+shape = SubResource( 244 )
+
+[node name="hit" type="AudioStreamPlayer2D" parent="ArrowDetector" index="1"]
+stream = ExtResource( 9 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[connection signal="falling" from="." to="Crush" method="activate"]
+[connection signal="landed" from="." to="Crush" method="deactivate"]
+[connection signal="bike_crash" from="BikeDamageReceiver" to="Health" method="set_health_to_zero"]
+[connection signal="zero_health" from="Health" to="EnemyShield" method="deactivate"]
+[connection signal="zero_health" from="Health" to="break_vfx" method="restart"]
+[connection signal="destroyer_hit" from="EnemyShield" to="Health" method="set_health_to_zero"]
+[connection signal="destroyer_hit" from="EnemyShield" to="ArrowDetector" method="deactivate"]
+[connection signal="body_entered" from="ArrowDetector" to="ArrowDetector" method="_on_ArrowDetector_body_entered"]
+[connection signal="destroyed" from="ArrowDetector" to="Health" method="set_health_to_zero"]
+[connection signal="destroyed" from="ArrowDetector" to="EnemyShield" method="deactivate"]

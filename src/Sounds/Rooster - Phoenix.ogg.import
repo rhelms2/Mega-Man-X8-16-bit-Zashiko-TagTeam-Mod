@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Rooster - Phoenix.ogg-c8bd118df2c00bb4845b7f815c0fb8d6.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/Rooster - Phoenix.ogg"
+dest_files=[ "res://.import/Rooster - Phoenix.ogg-c8bd118df2c00bb4845b7f815c0fb8d6.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

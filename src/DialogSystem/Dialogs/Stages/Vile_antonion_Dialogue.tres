@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://src/DialogSystem/Profiles/DialogueText.gd" type="Script" id=1]
+[ext_resource path="res://src/DialogSystem/Profiles/Vile.tres" type="Resource" id=2]
+[ext_resource path="res://src/DialogSystem/Profiles/X.tres" type="Resource" id=3]
+
+[resource]
+script = ExtResource( 1 )
+dialog = [ ExtResource( 3 ), "VILE2-1", "VILE2-2", ExtResource( 2 ), "VILE2-3", "VILE2-4", "VILE2-5", "VILE2-6" ]

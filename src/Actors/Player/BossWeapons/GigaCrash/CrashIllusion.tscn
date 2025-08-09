@@ -1,0 +1,59 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://src/Actors/Player/BossWeapons/GigaCrash/gigacrash.res" type="SpriteFrames" id=1]
+[ext_resource path="res://src/Sounds/FX - Giga Crash Start 2.ogg" type="AudioStream" id=2]
+[ext_resource path="res://src/Effects/Textures/flash.png" type="Texture" id=3]
+[ext_resource path="res://src/Actors/Player/BossWeapons/GigaCrash/GigaCrashStart.gd" type="Script" id=4]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=5]
+[ext_resource path="res://src/Actors/Player/BossWeapons/GigaCrash/GigaCrashExplosion.tscn" type="PackedScene" id=6]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 256, 64 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 64, 256, 64 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 128, 256, 64 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 192, 256, 64 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"loop": false,
+"name": "default",
+"speed": 37.0
+} ]
+
+[node name="CrashIllusion" type="Node2D"]
+pause_mode = 2
+z_index = 20
+z_as_relative = false
+script = ExtResource( 4 )
+crash = ExtResource( 6 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -6 )
+frames = ExtResource( 1 )
+animation = "intro"
+
+[node name="flash" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 0.752941, 0.752941, 1 )
+position = Vector2( 0, -6 )
+frames = SubResource( 5 )
+frame = 3
+playing = true
+
+[node name="sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 2 )
+volume_db = 6.118
+autoplay = true
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 5 )

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - AlternateVile - Intro.ogg-5353d9bcd90d8aed60a38427189fd1bd.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - AlternateVile - Intro.ogg"
+dest_files=[ "res://.import/OST - AlternateVile - Intro.ogg-5353d9bcd90d8aed60a38427189fd1bd.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

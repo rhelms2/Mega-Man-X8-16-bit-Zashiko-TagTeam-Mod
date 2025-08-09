@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OpticShield - Laser Prepare.ogg-26ce95875a7c64c9ece4901907ca7494.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OpticShield - Laser Prepare.ogg"
+dest_files=[ "res://.import/OpticShield - Laser Prepare.ogg-26ce95875a7c64c9ece4901907ca7494.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

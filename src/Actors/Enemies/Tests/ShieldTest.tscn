@@ -1,0 +1,205 @@
+[gd_scene load_steps=31 format=2]
+
+[ext_resource path="res://src/Actors/Enemies/AI.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Enemies/SmallCrab/CrabPatrol.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/Modules/Enemy/EnemyDamage.gd" type="Script" id=4]
+[ext_resource path="res://src/Actors/Modules/Enemy/EnemyDeath.gd" type="Script" id=5]
+[ext_resource path="res://src/Actors/Modules/Enemy/Enemy.gd" type="Script" id=6]
+[ext_resource path="res://src/Effects/Textures/remains.png" type="Texture" id=7]
+[ext_resource path="res://src/Sounds/56 - MMX - Enemy Death.wav" type="AudioStream" id=8]
+[ext_resource path="res://src/Sounds/HIT.wav" type="AudioStream" id=9]
+[ext_resource path="res://pisca_gradient.tres" type="Gradient" id=10]
+[ext_resource path="res://src/Effects/Remains Particle.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/Effects/enemy_shader.tres" type="Shader" id=12]
+[ext_resource path="res://src/Effects/Explosion Particles.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/Actors/Enemies/SmallCrab/scrab.res" type="SpriteFrames" id=14]
+[ext_resource path="res://src/Actors/Enemies/EnemyShield.gd" type="Script" id=15]
+[ext_resource path="res://src/Sounds/MMX - Enemy Helmet Hit.ogg" type="AudioStream" id=16]
+[ext_resource path="res://src/HUD/X_bar.png" type="Texture" id=17]
+
+[sub_resource type="RectangleShape2D" id=47]
+extents = Vector2( 5, 2 )
+
+[sub_resource type="ShaderMaterial" id=49]
+resource_local_to_scene = true
+shader = ExtResource( 12 )
+shader_param/Flash = 0.0
+shader_param/Should_Blink = 0.0
+shader_param/Darken = 1.0
+shader_param/Alpha = 1.0
+shader_param/Alpha_Blink = 0.0
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 12, 10 )
+
+[sub_resource type="RectangleShape2D" id=53]
+extents = Vector2( 10.5, 12.25 )
+
+[sub_resource type="RectangleShape2D" id=54]
+extents = Vector2( 12, 10 )
+
+[sub_resource type="Curve" id=10]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=13]
+curve = SubResource( 10 )
+
+[sub_resource type="ParticlesMaterial" id=50]
+resource_local_to_scene = true
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 13 )
+
+[sub_resource type="Curve" id=42]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=43]
+curve = SubResource( 42 )
+
+[sub_resource type="ParticlesMaterial" id=51]
+resource_local_to_scene = true
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 43 )
+
+[sub_resource type="GradientTexture" id=45]
+gradient = ExtResource( 10 )
+
+[sub_resource type="ParticlesMaterial" id=46]
+emission_shape = 1
+emission_sphere_radius = 18.34
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+gravity = Vector3( 0, 800, 0 )
+initial_velocity = 400.0
+initial_velocity_random = 0.69
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+color_ramp = SubResource( 45 )
+anim_offset = 1.0
+anim_offset_random = 1.0
+
+[node name="ShieldTest" type="KinematicBody2D" groups=["Enemies"]]
+collision_layer = 0
+script = ExtResource( 6 )
+
+[node name="AI" type="Node2D" parent="."]
+script = ExtResource( 1 )
+on_idle = [ NodePath("../CrabPatrol") ]
+
+[node name="vision" type="Area2D" parent="AI"]
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="AI/vision"]
+shape = SubResource( 47 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+modulate = Color( 0.0941176, 0.619608, 0, 1 )
+material = SubResource( 49 )
+z_index = 1
+frames = ExtResource( 14 )
+animation = "idle"
+frame = 1
+playing = true
+flip_h = true
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 15 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+scale = Vector2( 2, 2 )
+rect = Rect2( -5, -5, 10, 10 )
+
+[node name="EnemyShield" type="Node2D" parent="."]
+script = ExtResource( 15 )
+
+[node name="hittable_area" type="Area2D" parent="EnemyShield"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="EnemyShield/hittable_area"]
+position = Vector2( 6.75, -2 )
+shape = SubResource( 53 )
+
+[node name="sprite" type="Sprite" parent="EnemyShield/hittable_area"]
+position = Vector2( 17, -2 )
+scale = Vector2( 1, 1.45455 )
+texture = ExtResource( 17 )
+
+[node name="hitSound" type="AudioStreamPlayer2D" parent="EnemyShield"]
+stream = ExtResource( 16 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+shape = SubResource( 54 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+stream = ExtResource( 9 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="EnemyDeath" type="Node2D" parent="."]
+script = ExtResource( 5 )
+explosion_duration = 0.0
+
+[node name="Explosion Particles" parent="EnemyDeath" instance=ExtResource( 13 )]
+emitting = false
+process_material = SubResource( 50 )
+
+[node name="Remains" parent="EnemyDeath" instance=ExtResource( 11 )]
+process_material = SubResource( 51 )
+
+[node name="remains_particles" parent="EnemyDeath/Remains" index="0"]
+amount = 4
+process_material = SubResource( 46 )
+texture = ExtResource( 7 )
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="EnemyDeath"]
+stream = ExtResource( 8 )
+volume_db = -4.267
+max_distance = 600.0
+attenuation = 0.951366
+bus = "SFX"
+
+[node name="CrabPatrol" type="Node2D" parent="."]
+script = ExtResource( 3 )
+actions = [ "Event" ]
+animation = "walk"
+
+[connection signal="body_entered" from="AI/vision" to="AI" method="_on_vision_body_entered"]
+
+[editable path="EnemyDeath/Remains"]

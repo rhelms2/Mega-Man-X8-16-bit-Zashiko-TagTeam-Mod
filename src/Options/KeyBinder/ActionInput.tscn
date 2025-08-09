@@ -1,0 +1,117 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/Options/KeyBinder/ActionInput.gd" type="Script" id=1]
+[ext_resource path="res://src/Options/KeyBinder/MapInput.gd" type="Script" id=2]
+[ext_resource path="res://src/Fonts/Xclassicfont.fnt" type="BitmapFont" id=3]
+[ext_resource path="res://System/SFX/error.ogg" type="AudioStream" id=4]
+[ext_resource path="res://System/SFX/choose_x8.ogg" type="AudioStream" id=5]
+
+[node name="ActionInput" type="Control"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -140.0
+margin_right = 140.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 280, 8 )
+size_flags_horizontal = 0
+script = ExtResource( 1 )
+objects_to_light = [ NodePath("actionname") ]
+focus_group = [ NodePath("key"), NodePath("joypad") ]
+idle_color = Color( 0.407843, 0.568627, 1, 1 )
+focus_color = Color( 1, 0.988235, 0.301961, 1 )
+focus_multiplier = 4.0
+press_multiplier = 5.0
+
+[node name="key" type="TextureButton" parent="."]
+modulate = Color( 0.2, 0.247059, 0.415686, 1 )
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -29.0
+margin_top = -5.0
+margin_right = 60.0
+margin_bottom = 5.0
+action_mode = 0
+script = ExtResource( 2 )
+idle_color = Color( 0.2, 0.247059, 0.415686, 1 )
+
+[node name="text" type="Label" parent="key"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -7.0
+margin_right = 61.0
+margin_bottom = 7.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 3 )
+text = "(not set)"
+uppercase = true
+
+[node name="joypad" type="TextureButton" parent="."]
+modulate = Color( 0.2, 0.247059, 0.415686, 1 )
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 68.0
+margin_top = -5.0
+margin_right = 163.0
+margin_bottom = 5.0
+action_mode = 0
+script = ExtResource( 2 )
+idle_color = Color( 0.2, 0.247059, 0.415686, 1 )
+
+[node name="text" type="Label" parent="joypad"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -7.0
+margin_right = 61.0
+margin_bottom = 7.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 3 )
+text = "(not set)"
+uppercase = true
+
+[node name="actionname" type="Label" parent="."]
+modulate = Color( 0.407843, 0.568627, 1, 1 )
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -135.0
+margin_top = -11.0
+margin_right = -23.0
+margin_bottom = 3.0
+custom_colors/font_color_shadow = Color( 0.396078, 0.396078, 0.396078, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 3 )
+text = "_action"
+uppercase = true
+
+[node name="pick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -4.0
+bus = "SFX"
+
+[node name="cancel" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -4.0
+bus = "SFX"
+
+[connection signal="focus_entered" from="key" to="key" method="_on_focus_entered"]
+[connection signal="focus_exited" from="key" to="key" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="key" to="key" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="key" to="key" method="_on_mouse_exited"]
+[connection signal="pressed" from="key" to="key" method="_on_pressed"]
+[connection signal="focus_entered" from="joypad" to="joypad" method="_on_focus_entered"]
+[connection signal="focus_exited" from="joypad" to="joypad" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="joypad" to="joypad" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="joypad" to="joypad" method="_on_mouse_exited"]
+[connection signal="pressed" from="joypad" to="joypad" method="_on_pressed"]

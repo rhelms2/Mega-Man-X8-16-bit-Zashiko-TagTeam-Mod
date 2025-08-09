@@ -1,0 +1,287 @@
+{ "frames": [
+   {
+    "filename": "intro_text 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 64, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 16 },
+    "sourceSize": { "w": 64, "h": 16 },
+    "duration": 64
+   },
+   {
+    "filename": "intro_text 1.ase",
+    "frame": { "x": 64, "y": 0, "w": 64, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 16 },
+    "sourceSize": { "w": 64, "h": 16 },
+    "duration": 64
+   },
+   {
+    "filename": "intro_text 2.ase",
+    "frame": { "x": 128, "y": 0, "w": 64, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 16 },
+    "sourceSize": { "w": 64, "h": 16 },
+    "duration": 64
+   },
+   {
+    "filename": "intro_text 3.ase",
+    "frame": { "x": 192, "y": 0, "w": 64, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 16 },
+    "sourceSize": { "w": 64, "h": 16 },
+    "duration": 64
+   },
+   {
+    "filename": "intro_text 4.ase",
+    "frame": { "x": 256, "y": 0, "w": 64, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 16 },
+    "sourceSize": { "w": 64, "h": 16 },
+    "duration": 64
+   },
+   {
+    "filename": "intro_text 5.ase",
+    "frame": { "x": 320, "y": 0, "w": 64, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 16 },
+    "sourceSize": { "w": 64, "h": 16 },
+    "duration": 64
+   },
+   {
+    "filename": "intro_text 6.ase",
+    "frame": { "x": 0, "y": 16, "w": 64, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 16 },
+    "sourceSize": { "w": 64, "h": 16 },
+    "duration": 64
+   },
+   {
+    "filename": "intro_text 7.ase",
+    "frame": { "x": 64, "y": 16, "w": 64, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 16 },
+    "sourceSize": { "w": 64, "h": 16 },
+    "duration": 64
+   },
+   {
+    "filename": "intro_text 8.ase",
+    "frame": { "x": 128, "y": 16, "w": 64, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 16 },
+    "sourceSize": { "w": 64, "h": 16 },
+    "duration": 64
+   },
+   {
+    "filename": "intro_text 9.ase",
+    "frame": { "x": 192, "y": 16, "w": 64, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 16 },
+    "sourceSize": { "w": 64, "h": 16 },
+    "duration": 64
+   },
+   {
+    "filename": "intro_text 10.ase",
+    "frame": { "x": 256, "y": 16, "w": 64, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 16 },
+    "sourceSize": { "w": 64, "h": 16 },
+    "duration": 64
+   },
+   {
+    "filename": "intro_text 11.ase",
+    "frame": { "x": 320, "y": 16, "w": 64, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 16 },
+    "sourceSize": { "w": 64, "h": 16 },
+    "duration": 64
+   },
+   {
+    "filename": "intro_text 12.ase",
+    "frame": { "x": 0, "y": 32, "w": 64, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 16 },
+    "sourceSize": { "w": 64, "h": 16 },
+    "duration": 64
+   },
+   {
+    "filename": "intro_text 13.ase",
+    "frame": { "x": 64, "y": 32, "w": 64, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 16 },
+    "sourceSize": { "w": 64, "h": 16 },
+    "duration": 122
+   },
+   {
+    "filename": "intro_text 14.ase",
+    "frame": { "x": 0, "y": 32, "w": 64, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 16 },
+    "sourceSize": { "w": 64, "h": 16 },
+    "duration": 122
+   },
+   {
+    "filename": "intro_text 15.ase",
+    "frame": { "x": 128, "y": 32, "w": 64, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 16 },
+    "sourceSize": { "w": 64, "h": 16 },
+    "duration": 66
+   },
+   {
+    "filename": "intro_text 16.ase",
+    "frame": { "x": 192, "y": 32, "w": 64, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 16 },
+    "sourceSize": { "w": 64, "h": 16 },
+    "duration": 66
+   },
+   {
+    "filename": "intro_text 17.ase",
+    "frame": { "x": 256, "y": 32, "w": 64, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 16 },
+    "sourceSize": { "w": 64, "h": 16 },
+    "duration": 66
+   },
+   {
+    "filename": "intro_text 18.ase",
+    "frame": { "x": 320, "y": 32, "w": 64, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 16 },
+    "sourceSize": { "w": 64, "h": 16 },
+    "duration": 66
+   },
+   {
+    "filename": "intro_text 19.ase",
+    "frame": { "x": 0, "y": 48, "w": 64, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 16 },
+    "sourceSize": { "w": 64, "h": 16 },
+    "duration": 66
+   },
+   {
+    "filename": "intro_text 20.ase",
+    "frame": { "x": 64, "y": 48, "w": 64, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 16 },
+    "sourceSize": { "w": 64, "h": 16 },
+    "duration": 66
+   },
+   {
+    "filename": "intro_text 21.ase",
+    "frame": { "x": 128, "y": 48, "w": 64, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 16 },
+    "sourceSize": { "w": 64, "h": 16 },
+    "duration": 66
+   },
+   {
+    "filename": "intro_text 22.ase",
+    "frame": { "x": 192, "y": 48, "w": 64, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 16 },
+    "sourceSize": { "w": 64, "h": 16 },
+    "duration": 66
+   },
+   {
+    "filename": "intro_text 23.ase",
+    "frame": { "x": 256, "y": 48, "w": 64, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 16 },
+    "sourceSize": { "w": 64, "h": 16 },
+    "duration": 66
+   },
+   {
+    "filename": "intro_text 24.ase",
+    "frame": { "x": 320, "y": 48, "w": 64, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 16 },
+    "sourceSize": { "w": 64, "h": 16 },
+    "duration": 66
+   },
+   {
+    "filename": "intro_text 25.ase",
+    "frame": { "x": 0, "y": 64, "w": 64, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 16 },
+    "sourceSize": { "w": 64, "h": 16 },
+    "duration": 66
+   },
+   {
+    "filename": "intro_text 26.ase",
+    "frame": { "x": 64, "y": 64, "w": 64, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 16 },
+    "sourceSize": { "w": 64, "h": 16 },
+    "duration": 66
+   },
+   {
+    "filename": "intro_text 27.ase",
+    "frame": { "x": 128, "y": 64, "w": 64, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 16 },
+    "sourceSize": { "w": 64, "h": 16 },
+    "duration": 66
+   },
+   {
+    "filename": "intro_text 28.ase",
+    "frame": { "x": 64, "y": 32, "w": 64, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 16 },
+    "sourceSize": { "w": 64, "h": 16 },
+    "duration": 122
+   },
+   {
+    "filename": "intro_text 29.ase",
+    "frame": { "x": 128, "y": 64, "w": 64, "h": 16 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 64, "h": 16 },
+    "sourceSize": { "w": 64, "h": 16 },
+    "duration": 122
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3-beta14-x64",
+  "image": "intro.png",
+  "format": "RGBA8888",
+  "size": { "w": 384, "h": 80 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "ready", "from": 0, "to": 12, "direction": "forward", "color": "#000000ff" },
+   { "name": "ready_blink", "from": 13, "to": 14, "direction": "forward", "color": "#000000ff" },
+   { "name": "warning", "from": 15, "to": 27, "direction": "forward", "color": "#000000ff" },
+   { "name": "warning_blink", "from": 28, "to": 29, "direction": "forward", "color": "#000000ff" }
+  ]
+ }
+}

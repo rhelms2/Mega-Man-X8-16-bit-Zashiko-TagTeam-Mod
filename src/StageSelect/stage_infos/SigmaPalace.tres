@@ -1,0 +1,26 @@
+[gd_resource type="Resource" load_steps=13 format=2]
+
+[ext_resource path="res://src/Actors/Bosses/BossIntro/StageInfo.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Bosses/AvalancheYeti/yeti.res" type="SpriteFrames" id=2]
+[ext_resource path="res://src/StageSelect/stage_infos/Gateway.tres" type="Resource" id=3]
+[ext_resource path="res://src/StageSelect/stage_infos/Inferno.tres" type="Resource" id=4]
+[ext_resource path="res://src/StageSelect/stage_infos/PitchBlack.tres" type="Resource" id=5]
+[ext_resource path="res://src/StageSelect/stage_infos/JakobElevator.tres" type="Resource" id=6]
+[ext_resource path="res://src/StageSelect/stage_infos/MetalValley.tres" type="Resource" id=7]
+[ext_resource path="res://src/StageSelect/stage_infos/BoosterForest.tres" type="Resource" id=8]
+[ext_resource path="res://src/StageSelect/stage_infos/Dynasty.tres" type="Resource" id=9]
+[ext_resource path="res://src/StageSelect/stage_infos/TroiaBase.tres" type="Resource" id=10]
+[ext_resource path="res://src/StageSelect/stage_infos/Primrose.tres" type="Resource" id=11]
+[ext_resource path="res://src/StageSelect/stage_infos/CentralWhite.tres" type="Resource" id=12]
+
+[resource]
+script = ExtResource( 1 )
+save_flag = "seraph_lumine_defeated"
+beaten_condition = [ ExtResource( 8 ), ExtResource( 12 ), ExtResource( 9 ), ExtResource( 4 ), ExtResource( 7 ), ExtResource( 5 ), ExtResource( 11 ), ExtResource( 10 ), ExtResource( 6 ), ExtResource( 3 ) ]
+pointer_position = Vector2( 1, -258 )
+should_play_intro = false
+name_id = "SIGMA"
+collectibles = [  ]
+sprite_frames = ExtResource( 2 )
+animation_beats = [ "icestorm_loop", "intro_ready" ]
+inverse_sprites = false

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Yeti - Uppercut.ogg-91e788d8cf166c7e9941513ec616c761.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/Yeti - Uppercut.ogg"
+dest_files=[ "res://.import/Yeti - Uppercut.ogg-91e788d8cf166c7e9941513ec616c761.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

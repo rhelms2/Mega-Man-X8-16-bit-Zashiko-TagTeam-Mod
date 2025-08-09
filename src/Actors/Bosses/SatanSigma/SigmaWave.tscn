@@ -1,0 +1,97 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/DarkWave.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Enemies/SimpleProjectile.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Effects/Textures/sigmawave.png" type="Texture" id=3]
+[ext_resource path="res://src/Effects/Materials/lance_particles.tres" type="Material" id=4]
+[ext_resource path="res://src/Effects/Materials/sigmawave_particles.tres" type="Material" id=5]
+[ext_resource path="res://src/Effects/Materials/sigma_particles_mat.tres" type="Material" id=6]
+[ext_resource path="res://src/Effects/Textures/sigma_particles2.png" type="Texture" id=7]
+[ext_resource path="res://src/Effects/Textures/sigma_particles.png" type="Texture" id=8]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 70, 146 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 3 )
+region = Rect2( 70, 0, 70, 146 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 3 )
+region = Rect2( 140, 0, 70, 146 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 28.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 7, 59 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 8.39429, 34 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 38, 61 )
+
+[sub_resource type="CanvasItemMaterial" id=8]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 3
+particles_anim_loop = false
+
+[node name="SigmaWave" instance=ExtResource( 2 )]
+script = ExtResource( 1 )
+damage = 10.0
+time_off_screen = 2.0
+speed = 240.0
+
+[node name="animatedSprite" parent="." index="0"]
+z_index = -5
+frames = SubResource( 4 )
+frame = 2
+
+[node name="area2D" parent="." index="4"]
+visible = false
+
+[node name="collisionShape2D" parent="area2D" index="0"]
+position = Vector2( -4, 0 )
+shape = SubResource( 5 )
+
+[node name="collisionShape2D2" type="CollisionShape2D" parent="area2D" index="1"]
+position = Vector2( 16.3943, 0 )
+shape = SubResource( 6 )
+
+[node name="DamageOnTouch" parent="." index="5"]
+damage = 10.0
+
+[node name="visibilityNotifier2D" parent="." index="8"]
+visible = false
+
+[node name="collisionShape2D" parent="." index="9"]
+shape = SubResource( 7 )
+
+[node name="firetip" type="Particles2D" parent="." index="11"]
+material = SubResource( 8 )
+position = Vector2( 1, -2 )
+z_index = -6
+amount = 24
+lifetime = 0.5
+local_coords = false
+process_material = ExtResource( 5 )
+texture = ExtResource( 7 )
+
+[node name="evilfire_particles" type="Particles2D" parent="." index="12"]
+material = ExtResource( 6 )
+position = Vector2( 0, 8 )
+z_index = -7
+amount = 22
+lifetime = 0.5
+randomness = 0.3
+local_coords = false
+process_material = ExtResource( 4 )
+texture = ExtResource( 8 )

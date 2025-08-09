@@ -1,0 +1,6 @@
+[gd_resource type="BitmapFont" load_steps=2 format=2]
+
+[ext_resource path="res://src/Fonts/X8Bossfont.fnt" type="BitmapFont" id=1]
+
+[resource]
+fallback = ExtResource( 1 )

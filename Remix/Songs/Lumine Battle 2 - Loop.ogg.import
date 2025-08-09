@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Lumine Battle 2 - Loop.ogg-4ae28af4a7a3d3cd6a5d7c4ad2df8396.oggstr"
+
+[deps]
+
+source_file="res://Remix/Songs/Lumine Battle 2 - Loop.ogg"
+dest_files=[ "res://.import/Lumine Battle 2 - Loop.ogg-4ae28af4a7a3d3cd6a5d7c4ad2df8396.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

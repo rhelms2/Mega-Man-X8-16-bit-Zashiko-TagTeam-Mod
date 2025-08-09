@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://src/Actors/Bosses/BossIntro/StageInfo.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Bosses/BambooPandamonium/panda.res" type="SpriteFrames" id=2]
+[ext_resource path="res://src/StageSelect/preview/stage_5.png" type="Texture" id=3]
+
+[resource]
+script = ExtResource( 1 )
+save_flag = "panda_weapon"
+beaten_condition = [  ]
+pointer_position = Vector2( -90, 276 )
+should_play_intro = true
+name_id = "PANDA"
+collectibles = [ "panda_weapon", "icarus_legs", "life_up_panda", "defeated_panda_vile" ]
+preview = ExtResource( 3 )
+sprite_frames = ExtResource( 2 )
+animation_beats = [ "appear", "slash1", "rage_start", "slash2" ]
+inverse_sprites = false

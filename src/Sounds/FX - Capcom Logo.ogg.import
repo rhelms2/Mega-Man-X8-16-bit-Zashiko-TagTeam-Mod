@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/FX - Capcom Logo.ogg-c2b8f6100f26dd9ba494e3643e7beef5.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/FX - Capcom Logo.ogg"
+dest_files=[ "res://.import/FX - Capcom Logo.ogg-c2b8f6100f26dd9ba494e3643e7beef5.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

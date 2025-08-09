@@ -1,0 +1,175 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://src/Effects/Materials/ExplosionParticles.tres" type="Material" id=1]
+[ext_resource path="res://src/Effects/Materials/RemainsParticle.tres" type="Material" id=2]
+[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/Player/BossWeapons/CrystalBouncer/CrystalBouncerCharged.gd" type="Script" id=4]
+[ext_resource path="res://src/Effects/Textures/explosion.png" type="Texture" id=5]
+[ext_resource path="res://src/Sounds/Ice Break.wav" type="AudioStream" id=6]
+[ext_resource path="res://src/Sounds/Trilobyte - Create Crystal.ogg" type="AudioStream" id=7]
+[ext_resource path="res://src/Effects/Textures/remains_purple.png" type="Texture" id=8]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=9]
+[ext_resource path="res://src/Actors/Player/BossWeapons/CrystalBouncer/crystalwall.res" type="SpriteFrames" id=10]
+
+[sub_resource type="RectangleShape2D" id=9]
+extents = Vector2( 17, 32 )
+
+[sub_resource type="CanvasItemMaterial" id=5]
+render_priority = -1
+particles_animation = true
+particles_anim_h_frames = 6
+particles_anim_v_frames = 3
+particles_anim_loop = false
+
+[sub_resource type="RectangleShape2D" id=10]
+extents = Vector2( 11, 29.5 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 12.5, 35 )
+
+[sub_resource type="CanvasItemMaterial" id=4]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 4
+particles_anim_loop = false
+
+[node name="CrystalBouncerCharged" type="KinematicBody2D" groups=["Player Projectile"]]
+z_index = 4
+collision_layer = 4
+script = ExtResource( 4 )
+active = true
+damage = 40.0
+damage_to_bosses = 10.0
+damage_to_weakness = 35.0
+time_off_screen = 5.0
+break_guards = true
+
+[node name="playerDetector_left" type="Area2D" parent="."]
+visible = false
+position = Vector2( -24, -27 )
+collision_layer = 0
+collision_mask = 2
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="playerDetector_left"]
+modulate = Color( 0.756863, 1, 0, 1 )
+position = Vector2( 7, 0 )
+shape = SubResource( 9 )
+
+[node name="playerDetector_right" type="Area2D" parent="."]
+visible = false
+position = Vector2( 24, -27 )
+collision_layer = 0
+collision_mask = 2
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="playerDetector_right"]
+modulate = Color( 0.756863, 1, 0, 1 )
+position = Vector2( -7, 0 )
+shape = SubResource( 9 )
+
+[node name="remains" type="Particles2D" parent="."]
+modulate = Color( 0.780392, 1, 0.454902, 1 )
+material = SubResource( 5 )
+position = Vector2( 0, 3.5 )
+z_index = 5
+emitting = false
+amount = 12
+lifetime = 2.0
+one_shot = true
+explosiveness = 1.0
+visibility_rect = Rect2( -600, -100, 1200, 200 )
+process_material = ExtResource( 2 )
+texture = ExtResource( 8 )
+
+[node name="platform" type="RigidBody2D" parent="."]
+position = Vector2( 0, -31 )
+z_index = 5
+collision_layer = 66560
+collision_mask = 0
+mode = 1
+
+[node name="wallCheck_left" type="RayCast2D" parent="platform"]
+position = Vector2( -11, 16 )
+enabled = true
+cast_to = Vector2( -50, 0 )
+collision_mask = 65537
+
+[node name="wallCheck_right" type="RayCast2D" parent="platform"]
+position = Vector2( 11, 16 )
+enabled = true
+cast_to = Vector2( 50, 0 )
+collision_mask = 65537
+
+[node name="wallCheck_up" type="RayCast2D" parent="platform"]
+position = Vector2( 0, 19 )
+enabled = true
+cast_to = Vector2( 0, -50 )
+
+[node name="wallCheck_up2" type="RayCast2D" parent="platform"]
+position = Vector2( -15, 19 )
+enabled = true
+cast_to = Vector2( 0, -50 )
+
+[node name="wallCheck_up3" type="RayCast2D" parent="platform"]
+position = Vector2( 15, 19 )
+enabled = true
+cast_to = Vector2( 0, -50 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="platform"]
+position = Vector2( 0, 3.5 )
+shape = SubResource( 10 )
+disabled = true
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -34 )
+frames = ExtResource( 10 )
+animation = "start"
+frame = 7
+playing = true
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+position = Vector2( 4.76837e-07, -27 )
+scale = Vector2( 1.8, 3.5 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -32 )
+scale = Vector2( 2, 1 )
+shape = SubResource( 11 )
+disabled = true
+
+[node name="break" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+volume_db = -12.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 9 )
+
+[node name="appear" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
+volume_db = -12.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 9 )
+
+[node name="disabler" type="Node" parent="."]
+script = ExtResource( 3 )
+fade_out = true
+delete_after_fade = true
+undo_on_rotation_end = false
+
+[node name="explosion" type="Particles2D" parent="."]
+material = SubResource( 4 )
+z_index = 2
+emitting = false
+amount = 3
+lifetime = 2.0
+one_shot = true
+explosiveness = 0.9
+local_coords = false
+process_material = ExtResource( 1 )
+texture = ExtResource( 5 )
+
+[connection signal="body_entered" from="playerDetector_left" to="." method="_on_playerDetector_left_body_entered"]
+[connection signal="body_exited" from="playerDetector_left" to="." method="_on_playerDetector_left_body_exited"]
+[connection signal="body_entered" from="playerDetector_right" to="." method="_on_playerDetector_right_body_entered"]
+[connection signal="body_exited" from="playerDetector_right" to="." method="_on_playerDetector_right_body_exited"]

@@ -1,0 +1,60 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://src/Objects/Spikes/DestructibleSpike.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Objects/Spikes/spikepurple_02.png" type="Texture" id=2]
+[ext_resource path="res://src/Objects/Spikes/spikepurple_01.png" type="Texture" id=3]
+[ext_resource path="res://src/Objects/Spikes/spikepurple_00.png" type="Texture" id=4]
+[ext_resource path="res://src/Objects/Spikes/spikepurple_03.png" type="Texture" id=5]
+[ext_resource path="res://src/Effects/Textures/remains_purple.png" type="Texture" id=6]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 18, 20 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 18, 20 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 18, 20 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 5 )
+region = Rect2( 0, 0, 18, 20 )
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ SubResource( 1 ) ],
+"loop": true,
+"name": "middle",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 2 ) ],
+"loop": true,
+"name": "middle_destroyed",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 3 ) ],
+"loop": true,
+"name": "side",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 4 ) ],
+"loop": true,
+"name": "side_destroyed",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 3, 4 )
+
+[node name="DestructibleSpikeP" instance=ExtResource( 1 )]
+frames = SubResource( 5 )
+
+[node name="collisionShape2D" parent="death_plane" index="0"]
+shape = SubResource( 6 )
+
+[node name="remains_particles" parent="." index="2"]
+modulate = Color( 0.505882, 0.32549, 1, 1 )
+texture = ExtResource( 6 )

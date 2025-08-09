@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Rooster - RisingLava.ogg-ef0e97d6413066001863a757681e6596.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/Rooster - RisingLava.ogg"
+dest_files=[ "res://.import/Rooster - RisingLava.ogg-ef0e97d6413066001863a757681e6596.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

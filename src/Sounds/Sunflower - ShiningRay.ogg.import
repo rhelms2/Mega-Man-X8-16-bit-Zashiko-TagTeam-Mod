@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Sunflower - ShiningRay.ogg-2a147764272280d721bd98c1de703e75.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/Sunflower - ShiningRay.ogg"
+dest_files=[ "res://.import/Sunflower - ShiningRay.ogg-2a147764272280d721bd98c1de703e75.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/mmx7_angry_loop_b.ogg-5cff783522f3fc4e16a4a00bd60d0d4d.oggstr"
+
+[deps]
+
+source_file="res://System/BossMusic/mmx7_angry_loop_b.ogg"
+dest_files=[ "res://.import/mmx7_angry_loop_b.ogg-5cff783522f3fc4e16a4a00bd60d0d4d.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

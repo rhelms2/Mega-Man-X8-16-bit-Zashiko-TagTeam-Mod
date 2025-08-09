@@ -1,0 +1,191 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://src/Effects/enemy_shader.tres" type="Shader" id=1]
+[ext_resource path="res://src/Actors/Enemies/Shared/QuickEnemyDeath.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Actors/Enemies/AI.gd" type="Script" id=5]
+[ext_resource path="res://src/Actors/Enemies/Big Tractor/AttackIdle.gd" type="Script" id=6]
+[ext_resource path="res://src/Actors/Modules/Enemy/EnemyDamage.gd" type="Script" id=7]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=9]
+[ext_resource path="res://src/Actors/Modules/Enemy/Enemy.gd" type="Script" id=10]
+[ext_resource path="res://src/Actors/Enemies/EnemyShield.gd" type="Script" id=12]
+[ext_resource path="res://src/Sounds/HIT.wav" type="AudioStream" id=13]
+[ext_resource path="res://src/Actors/Enemies/SwordReploid/reploid_remains_palette.png" type="Texture" id=14]
+[ext_resource path="res://src/Effects/ShieldBreak/shieldbreak.res" type="SpriteFrames" id=15]
+[ext_resource path="res://src/Actors/Enemies/ShieldReploid/shield_reploid.res" type="SpriteFrames" id=16]
+[ext_resource path="res://src/Sounds/MMX - Enemy Helmet Hit.ogg" type="AudioStream" id=17]
+[ext_resource path="res://src/Actors/Enemies/ShieldReploid/PursuitAndDefend.gd" type="Script" id=18]
+[ext_resource path="res://src/Actors/Enemies/SwordReploid/AlarmIntro.gd" type="Script" id=19]
+[ext_resource path="res://src/Actors/Enemies/ShieldReploid/HoldPosition.gd" type="Script" id=20]
+[ext_resource path="res://src/Actors/Enemies/ShieldReploid/GuardBreak.gd" type="Script" id=21]
+[ext_resource path="res://src/Actors/Enemies/ShieldReploid/OnHitTurn.gd" type="Script" id=22]
+
+[sub_resource type="RectangleShape2D" id=67]
+extents = Vector2( 181.5, 30 )
+
+[sub_resource type="ShaderMaterial" id=63]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/Flash = 0.0
+shader_param/Should_Blink = 0.0
+shader_param/Darken = 1.0
+shader_param/Alpha = 1.0
+shader_param/Alpha_Blink = 0.0
+
+[sub_resource type="RectangleShape2D" id=68]
+extents = Vector2( 15, 20 )
+
+[sub_resource type="RectangleShape2D" id=70]
+extents = Vector2( 9, 20.125 )
+
+[sub_resource type="RectangleShape2D" id=69]
+extents = Vector2( 14, 20.5 )
+
+[node name="ShieldReploid" type="KinematicBody2D" groups=["Enemies"]]
+collision_layer = 0
+collision_mask = 513
+script = ExtResource( 10 )
+debug_logs = true
+max_health = 5.0
+
+[node name="AI" type="Node2D" parent="."]
+script = ExtResource( 5 )
+on_enter_screen = [ NodePath("../Intro") ]
+on_idle = [ NodePath("../Idle") ]
+on_see_player = [ NodePath("../Pursuit") ]
+on_shield_hit = [ NodePath("../Deflect") ]
+on_guard_break = [ NodePath("../GuardBreak") ]
+
+[node name="vision" type="Area2D" parent="AI"]
+visible = false
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="AI/vision"]
+position = Vector2( -0.5, 0 )
+shape = SubResource( 67 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = SubResource( 63 )
+position = Vector2( 2, 0 )
+z_index = 1
+frames = ExtResource( 16 )
+animation = "ready_start"
+frame = 7
+playing = true
+flip_h = true
+
+[node name="break_vfx" type="AnimatedSprite" parent="animatedSprite"]
+modulate = Color( 1, 1, 1, 0.670588 )
+position = Vector2( 18, 0 )
+z_index = 25
+frames = ExtResource( 15 )
+frame = 9
+playing = true
+
+[node name="flying_shield" type="AnimatedSprite" parent="animatedSprite"]
+visible = false
+material = SubResource( 63 )
+z_index = 1
+frames = ExtResource( 16 )
+animation = "shield_fly"
+frame = 4
+playing = true
+flip_h = true
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 3 )
+shape = SubResource( 68 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+scale = Vector2( 6, 4.8 )
+rect = Rect2( -2, -2, 4, 6 )
+
+[node name="EnemyShield" type="Node2D" parent="."]
+script = ExtResource( 12 )
+
+[node name="hittable_area" type="Area2D" parent="EnemyShield"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="EnemyShield/hittable_area"]
+position = Vector2( 23, 1 )
+shape = SubResource( 70 )
+
+[node name="hitSound" type="AudioStreamPlayer2D" parent="EnemyShield"]
+stream = ExtResource( 17 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="area2D" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+position = Vector2( 0, 3.5 )
+shape = SubResource( 69 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 9 )
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 7 )
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+stream = ExtResource( 13 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="Intro" type="Node2D" parent="."]
+script = ExtResource( 19 )
+actions = [ "Event" ]
+animation = "fall"
+horizontal_velocity = 30.0
+
+[node name="GuardBreak" type="Node2D" parent="."]
+script = ExtResource( 21 )
+actions = [ "Event" ]
+animation = "stun"
+jump_velocity = 90.0
+travel_time = 1.15
+
+[node name="Pursuit" type="Node2D" parent="."]
+script = ExtResource( 18 )
+conflicting_moves = [ "Deflect", "GuardBreak", "Intro" ]
+actions = [ "Event" ]
+horizontal_velocity = 140.0
+nearby_distance = Vector2( 64, 64 )
+
+[node name="Turn" type="Node2D" parent="."]
+script = ExtResource( 22 )
+actions = [ "Event" ]
+
+[node name="Deflect" type="Node2D" parent="."]
+script = ExtResource( 20 )
+conflicting_moves = [ "GuardBreak" ]
+actions = [ "Event" ]
+animation = "deflect"
+
+[node name="Idle" type="Node2D" parent="."]
+script = ExtResource( 6 )
+conflicting_moves = [ "Pursuit", "GuardBreak", "Intro", "Anything" ]
+actions = [ "Event" ]
+animation = "idle"
+
+[node name="EnemyDeath" parent="." instance=ExtResource( 2 )]
+
+[node name="remains_particles" parent="EnemyDeath/Remains" index="0"]
+texture = ExtResource( 14 )
+
+[connection signal="body_entered" from="AI/vision" to="AI" method="_on_vision_body_entered"]
+[connection signal="body_exited" from="AI/vision" to="AI" method="_on_vision_body_exited"]
+
+[editable path="EnemyDeath"]

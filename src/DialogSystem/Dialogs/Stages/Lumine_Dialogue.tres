@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://src/DialogSystem/Profiles/DialogueText.gd" type="Script" id=1]
+[ext_resource path="res://src/DialogSystem/Profiles/Lumine.tres" type="Resource" id=2]
+[ext_resource path="res://src/DialogSystem/Profiles/X.tres" type="Resource" id=3]
+[ext_resource path="res://src/DialogSystem/Profiles/EvilLumine.tres" type="Resource" id=4]
+
+[resource]
+script = ExtResource( 1 )
+dialog = [ ExtResource( 3 ), "FINALLUMINE1", ExtResource( 2 ), "FINALLUMINE2", "FINALLUMINE3", "FINALLUMINE4", ExtResource( 4 ), "FINALLUMINE5", ExtResource( 3 ), "FINALLUMINE6", "FINALLUMINE7", ExtResource( 4 ), "FINALLUMINE8", "FINALLUMINE9", ExtResource( 3 ), "FINALLUMINE10", ExtResource( 4 ), "FINALLUMINE11", "FINALLUMINE12", "FINALLUMINE13", "FINALLUMINE14", "FINALLUMINE15", ExtResource( 3 ), "FINALLUMINE16", ExtResource( 4 ), "FINALLUMINE17", ExtResource( 3 ), "FINALLUMINE18", ExtResource( 4 ), "FINALLUMINE19", "FINALLUMINE20", "FINALLUMINE21", "FINALLUMINE22", "FINALLUMINE23", "FINALLUMINE24", ExtResource( 3 ), "FINALLUMINE25", ExtResource( 4 ), "FINALLUMINE26", "FINALLUMINE27", "FINALLUMINE28", "FINALLUMINE29", "FINALLUMINE30", "FINALLUMINE31", ExtResource( 3 ), "FINALLUMINE32", "FINALLUMINE33", "FINALLUMINE34", "FINALLUMINE35", "FINALLUMINE36", ExtResource( 4 ), "FINALLUMINE37", "FINALLUMINE38", "FINALLUMINE39", "FINALLUMINE40" ]

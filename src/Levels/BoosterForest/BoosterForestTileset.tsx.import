@@ -1,0 +1,20 @@
+[remap]
+
+importer="vnen.tiled_tileset_importer"
+type="TileSet"
+path="res://.import/BoosterForestTileset.tsx-7cd00d3637eeffe7fa318aa1ab11682f.res"
+
+[deps]
+
+source_file="res://src/Levels/BoosterForest/BoosterForestTileset.tsx"
+dest_files=[ "res://.import/BoosterForestTileset.tsx-7cd00d3637eeffe7fa318aa1ab11682f.res" ]
+
+[params]
+
+custom_properties=true
+tile_metadata=false
+image_flags=7
+embed_internal_images=false
+save_tiled_properties=false
+apply_offset=false
+post_import_script=""

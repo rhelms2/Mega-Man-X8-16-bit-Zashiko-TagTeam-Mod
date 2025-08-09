@@ -1,0 +1,37 @@
+[gd_resource type="Resource" load_steps=12 format=2]
+
+[ext_resource path="res://src/Sounds/60 - MMX - Enemy Missile Fire.wav" type="AudioStream" id=1]
+[ext_resource path="res://src/Actors/Player/BossWeapons/WeaponResource.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Player/BossWeapons/blastlauncher_palette.png" type="Texture" id=3]
+[ext_resource path="res://src/Options/selectable_weapon_05.png" type="Texture" id=4]
+[ext_resource path="res://src/Actors/Player/BossWeapons/BlastLauncher/BlastLaunch.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Actors/Player/BossWeapons/BlastLauncher/BlastLaunchCharged.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Sounds/BlastLaunch - Fire.ogg" type="AudioStream" id=7]
+[ext_resource path="res://src/Options/Hotswap/faded_weapon_05.png" type="Texture" id=8]
+[ext_resource path="res://src/WeaponGet/palettes/blastlauncher_h.png" type="Texture" id=9]
+[ext_resource path="res://src/WeaponGet/palettes/blastlauncher_i.png" type="Texture" id=10]
+[ext_resource path="res://src/WeaponGet/Videos/sequence_blastlauncher.tres" type="Resource" id=11]
+
+[resource]
+script = ExtResource( 2 )
+short_name = "PANDA_WPNMENU"
+collectible = "panda_weapon"
+icon = ExtResource( 4 )
+faded_icon = ExtResource( 8 )
+palette = ExtResource( 3 )
+regular_shot = ExtResource( 5 )
+regular_ammo_cost = 3.0
+charged_shot = ExtResource( 6 )
+charged_ammo_cost = 4.0
+cooldown = 0.65
+sound = ExtResource( 7 )
+charged_sound = ExtResource( 1 )
+input_sequence = ExtResource( 11 )
+MainColor1 = Color( 0.384314, 0.847059, 0.384314, 1 )
+MainColor2 = Color( 0.243137, 0.619608, 0.309804, 1 )
+MainColor3 = Color( 0.211765, 0.368627, 0.356863, 1 )
+MainColor4 = Color( 0.882353, 0.917647, 0.662745, 1 )
+MainColor5 = Color( 0.568627, 0.658824, 0.321569, 1 )
+MainColor6 = Color( 0.317647, 0.439216, 0.266667, 1 )
+hermes_palette = ExtResource( 9 )
+icarus_palette = ExtResource( 10 )

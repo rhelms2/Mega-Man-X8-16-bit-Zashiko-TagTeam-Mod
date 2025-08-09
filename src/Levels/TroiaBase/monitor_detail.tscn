@@ -1,0 +1,85 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://src/Levels/BoosterForest/ForegroundObject.gd" type="Script" id=1]
+[ext_resource path="res://src/Effects/Textures/troia_monitor.png" type="Texture" id=2]
+
+[sub_resource type="AtlasTexture" id=116]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 64, 48, 16 )
+
+[sub_resource type="AtlasTexture" id=117]
+atlas = ExtResource( 2 )
+region = Rect2( 48, 64, 48, 16 )
+
+[sub_resource type="AtlasTexture" id=118]
+atlas = ExtResource( 2 )
+region = Rect2( 96, 64, 48, 16 )
+
+[sub_resource type="AtlasTexture" id=119]
+atlas = ExtResource( 2 )
+region = Rect2( 144, 64, 48, 16 )
+
+[sub_resource type="AtlasTexture" id=120]
+atlas = ExtResource( 2 )
+region = Rect2( 192, 64, 48, 16 )
+
+[sub_resource type="AtlasTexture" id=121]
+atlas = ExtResource( 2 )
+region = Rect2( 240, 64, 48, 16 )
+
+[sub_resource type="AtlasTexture" id=122]
+atlas = ExtResource( 2 )
+region = Rect2( 288, 64, 48, 16 )
+
+[sub_resource type="AtlasTexture" id=123]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 80, 48, 16 )
+
+[sub_resource type="AtlasTexture" id=124]
+atlas = ExtResource( 2 )
+region = Rect2( 48, 80, 48, 16 )
+
+[sub_resource type="AtlasTexture" id=125]
+atlas = ExtResource( 2 )
+region = Rect2( 96, 80, 48, 16 )
+
+[sub_resource type="AtlasTexture" id=126]
+atlas = ExtResource( 2 )
+region = Rect2( 144, 80, 48, 16 )
+
+[sub_resource type="AtlasTexture" id=127]
+atlas = ExtResource( 2 )
+region = Rect2( 192, 80, 48, 16 )
+
+[sub_resource type="AtlasTexture" id=128]
+atlas = ExtResource( 2 )
+region = Rect2( 240, 80, 48, 16 )
+
+[sub_resource type="AtlasTexture" id=129]
+atlas = ExtResource( 2 )
+region = Rect2( 288, 80, 48, 16 )
+
+[sub_resource type="SpriteFrames" id=130]
+animations = [ {
+"frames": [ SubResource( 116 ), SubResource( 117 ), SubResource( 118 ), SubResource( 119 ), SubResource( 120 ), SubResource( 121 ), SubResource( 122 ), SubResource( 123 ), SubResource( 124 ), SubResource( 125 ), SubResource( 126 ), SubResource( 127 ), SubResource( 128 ), SubResource( 129 ) ],
+"loop": true,
+"name": "default",
+"speed": 30.0
+} ]
+
+[node name="monitor_detail" type="Node2D"]
+z_index = 50
+script = ExtResource( 1 )
+
+[node name="sprite" type="AnimatedSprite" parent="."]
+z_index = 5
+frames = SubResource( 130 )
+frame = 6
+speed_scale = 0.8
+playing = true
+
+[node name="visibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+visible = false
+scale = Vector2( 13.7, 1 )
+process_parent = true
+physics_process_parent = true

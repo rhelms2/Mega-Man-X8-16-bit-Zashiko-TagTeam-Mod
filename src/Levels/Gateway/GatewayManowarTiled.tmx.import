@@ -1,0 +1,22 @@
+[remap]
+
+importer="vnen.tiled_importer"
+type="PackedScene"
+path="res://.import/GatewayManowarTiled.tmx-4c812320af7badd2c8d0518eb5620a4c.scn"
+
+[deps]
+
+source_file="res://src/Levels/Gateway/GatewayManowarTiled.tmx"
+dest_files=[ "res://.import/GatewayManowarTiled.tmx-4c812320af7badd2c8d0518eb5620a4c.scn" ]
+
+[params]
+
+custom_properties=true
+tile_metadata=false
+uv_clip=false
+image_flags=7
+collision_layer=1
+embed_internal_images=false
+save_tiled_properties=false
+add_background=true
+post_import_script=""

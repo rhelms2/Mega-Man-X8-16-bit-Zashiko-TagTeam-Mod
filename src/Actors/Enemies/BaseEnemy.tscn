@@ -1,0 +1,197 @@
+[gd_scene load_steps=28 format=2]
+
+[ext_resource path="res://src/Actors/Modules/Enemy/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://src/Sounds/HIT.wav" type="AudioStream" id=2]
+[ext_resource path="res://src/Actors/Enemies/ProjectileShot.gd" type="Script" id=3]
+[ext_resource path="res://src/Effects/Materials/default_material.tres" type="Material" id=4]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=5]
+[ext_resource path="res://src/Actors/Modules/Enemy/EnemyDeath.gd" type="Script" id=6]
+[ext_resource path="res://src/Actors/Modules/Enemy/EnemyDamage.gd" type="Script" id=7]
+[ext_resource path="res://src/Effects/Explosion Particles.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/Sounds/59 - MMX - Enemy Die (4).wav" type="AudioStream" id=9]
+[ext_resource path="res://src/Actors/Enemies/EnemyFall.gd" type="Script" id=10]
+[ext_resource path="res://src/IA/BaseEnemyIA.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/Actors/Enemies/Sprites/green_cannon.res" type="SpriteFrames" id=12]
+[ext_resource path="res://src/Actors/Enemies/EnemyMissile.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/Actors/Player/Idle.gd" type="Script" id=14]
+[ext_resource path="res://src/Sounds/60 - MMX - Enemy Missile Fire.wav" type="AudioStream" id=15]
+[ext_resource path="res://Turn.gd" type="Script" id=16]
+[ext_resource path="res://src/Sounds/MISSILE_MOUNT.wav" type="AudioStream" id=17]
+[ext_resource path="res://src/Sounds/64 - MMX - Enemy Sound (01).wav" type="AudioStream" id=18]
+[ext_resource path="res://src/Effects/Remains Particle.tscn" type="PackedScene" id=19]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 20, 28 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 18, 21.5 )
+
+[sub_resource type="Curve" id=10]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=43]
+curve = SubResource( 10 )
+
+[sub_resource type="ParticlesMaterial" id=11]
+resource_local_to_scene = true
+emission_shape = 1
+emission_sphere_radius = 16.0
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 43 )
+
+[sub_resource type="Curve" id=42]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=44]
+curve = SubResource( 42 )
+
+[sub_resource type="ParticlesMaterial" id=15]
+resource_local_to_scene = true
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 44 )
+
+[node name="Enemy" type="KinematicBody2D" groups=["Enemies"]]
+collision_layer = 0
+collision_mask = 513
+script = ExtResource( 1 )
+max_health = 15.0
+
+[node name="Artificial Intelligence" parent="." instance=ExtResource( 11 )]
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 4 )
+z_index = 1
+frames = ExtResource( 12 )
+animation = "idle"
+frame = 9
+playing = true
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 2 )
+shape = SubResource( 1 )
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+position = Vector2( 0, 4.5 )
+shape = SubResource( 2 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( -1.375, 1.5 )
+scale = Vector2( 4.075, 5.5 )
+rect = Rect2( -5, -5, 10, 10 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 5 )
+damage = 4.0
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 7 )
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+stream = ExtResource( 2 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="EnemyDeath" type="Node2D" parent="."]
+script = ExtResource( 6 )
+debug_logs = true
+
+[node name="Explosion Particles" parent="EnemyDeath" instance=ExtResource( 8 )]
+process_material = SubResource( 11 )
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="EnemyDeath"]
+stream = ExtResource( 9 )
+volume_db = -3.539
+max_distance = 600.0
+attenuation = 0.951366
+bus = "SFX"
+
+[node name="Remains" parent="EnemyDeath" instance=ExtResource( 19 )]
+process_material = SubResource( 15 )
+
+[node name="remains_particles" parent="EnemyDeath/Remains" index="0"]
+amount = 14
+
+[node name="Fall" type="Node2D" parent="."]
+script = ExtResource( 10 )
+shot_pos_adjust = Vector2( 0, 0 )
+
+[node name="ProjectileShot" type="Node2D" parent="."]
+script = ExtResource( 3 )
+conflicting_moves = [ "TurnRight", "TurnLeft" ]
+actions = [ "Event" ]
+sound = ExtResource( 15 )
+start_signal = "attack"
+animations = [ "prepare", "fire", "fire2", "recover" ]
+sound2 = ExtResource( 17 )
+projectile = ExtResource( 13 )
+
+[node name="shot_position" type="Node2D" parent="ProjectileShot"]
+position = Vector2( 31, -17 )
+
+[node name="shot_position2" type="Node2D" parent="ProjectileShot"]
+position = Vector2( 40, -6 )
+
+[node name="shot_position3" type="Node2D" parent="ProjectileShot"]
+position = Vector2( 31, 5 )
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer2D" parent="ProjectileShot"]
+volume_db = -2.118
+max_distance = 400.0
+bus = "SFX"
+
+[node name="TurnLeft" type="Node2D" parent="."]
+script = ExtResource( 16 )
+conflicting_moves = [ "ProjectileShot" ]
+sound = ExtResource( 18 )
+start_signal = "go_left"
+animations = [ "turn" ]
+new_direction = -1
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer2D" parent="TurnLeft"]
+volume_db = -9.819
+pitch_scale = 1.23
+max_distance = 400.0
+bus = "SFX"
+
+[node name="TurnRight" type="Node2D" parent="."]
+script = ExtResource( 16 )
+conflicting_moves = [ "ProjectileShot" ]
+sound = ExtResource( 18 )
+start_signal = "go_right"
+animations = [ "turn" ]
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer2D" parent="TurnRight"]
+volume_db = -9.819
+pitch_scale = 1.23
+max_distance = 400.0
+bus = "SFX"
+
+[node name="Idle" type="Node2D" parent="."]
+script = ExtResource( 14 )
+conflicting_moves = [ "ProjectileShot", "TurnLeft", "TurnRight" ]
+animation = "idle"
+
+[editable path="EnemyDeath/Remains"]

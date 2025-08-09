@@ -1,0 +1,295 @@
+[gd_resource type="VisualShader" load_steps=25 format=2]
+
+[sub_resource type="VisualShaderNodeExpression" id=67]
+size = Vector2( 1253.66, 1144.73 )
+expression = "vec3 current_color = texture(TEXTURE, UV).rgb;
+
+if (replace (current_color, main_color_1, replace_color_1, final_color, tolerance)){}
+else if (replace (current_color, main_color_2, replace_color_2, final_color, tolerance)){}
+else if (replace (current_color, main_color_3, replace_color_3, final_color, tolerance)){}
+else if (replace (current_color, main_color_4, replace_color_4, final_color, tolerance)){}
+else if (replace (current_color, main_color_5, replace_color_5, final_color, tolerance)){}
+else if (replace (current_color, main_color_6, replace_color_6, final_color, tolerance)){}
+else {final_color = current_color}"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=68]
+uniform_name = "MainColor1"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=69]
+uniform_name = "MainColor2"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=70]
+uniform_name = "MainColor3"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=71]
+uniform_name = "MainColor4"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=72]
+uniform_name = "MainColor5"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=73]
+uniform_name = "MainColor6"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=74]
+uniform_name = "R_MainColor1"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=75]
+uniform_name = "R_MainColor2"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=76]
+uniform_name = "R_MainColor3"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=77]
+uniform_name = "R_MainColor4"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=78]
+uniform_name = "R_MainColor5"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=79]
+uniform_name = "R_MainColor6"
+
+[sub_resource type="VisualShaderNodeGlobalExpression" id=80]
+size = Vector2( 641.04, 335.118 )
+expression = "bool replace (vec3 color, vec3 main_color, vec3 replace_color, out vec3 output, float tol) 
+{	vec3 diff3 = color - main_color;
+	float m = max(max(abs(diff3.r), abs(diff3.g)), abs(diff3.b));
+	float brightness = length(color);
+	
+	if (step(m, tol) == 1.0){ 
+		color = mix(color, replace_color * brightness, step(m, tol));
+		output = color;
+		return true;
+	}
+	return false;
+}"
+
+[sub_resource type="VisualShaderNodeTexture" id=81]
+source = 2
+
+[sub_resource type="VisualShaderNodeIf" id=82]
+
+[sub_resource type="VisualShaderNodeTexture" id=83]
+source = 2
+
+[sub_resource type="VisualShaderNodeVectorDecompose" id=84]
+
+[sub_resource type="VisualShaderNodeVectorDecompose" id=85]
+
+[sub_resource type="VisualShaderNodeScalarUniform" id=87]
+uniform_name = "tolerance"
+
+[sub_resource type="VisualShaderNodeInput" id=20]
+input_name = "color"
+
+[sub_resource type="VisualShaderNodeInput" id=26]
+input_name = "uv"
+
+[sub_resource type="VisualShaderNodeInput" id=27]
+input_name = "vertex"
+
+[sub_resource type="VisualShaderNodeInput" id=28]
+input_name = "alpha"
+
+[resource]
+code = "shader_type canvas_item;
+uniform vec4 MainColor1 : hint_color;
+uniform vec4 MainColor2 : hint_color;
+uniform vec4 MainColor3 : hint_color;
+uniform vec4 MainColor4 : hint_color;
+uniform vec4 MainColor5 : hint_color;
+uniform vec4 MainColor6 : hint_color;
+uniform vec4 R_MainColor1 : hint_color;
+uniform vec4 R_MainColor2 : hint_color;
+uniform vec4 R_MainColor3 : hint_color;
+uniform vec4 R_MainColor4 : hint_color;
+uniform vec4 R_MainColor5 : hint_color;
+uniform vec4 R_MainColor6 : hint_color;
+uniform float tolerance;
+
+
+// GlobalExpression:0
+	bool replace (vec3 color, vec3 main_color, vec3 replace_color, out vec3 output, float tol) 
+	{	vec3 diff3 = color - main_color;
+		float m = max(max(abs(diff3.r), abs(diff3.g)), abs(diff3.b));
+		float brightness = length(color);
+		
+		if (step(m, tol) == 1.0){ 
+			color = mix(color, replace_color * brightness, step(m, tol));
+			output = color;
+			return true;
+		}
+		return false;
+	}
+
+void vertex() {
+// Output:0
+
+}
+
+void fragment() {
+// ColorUniform:55
+	vec3 n_out55p0 = MainColor1.rgb;
+	float n_out55p1 = MainColor1.a;
+
+// ColorUniform:56
+	vec3 n_out56p0 = MainColor2.rgb;
+	float n_out56p1 = MainColor2.a;
+
+// ColorUniform:57
+	vec3 n_out57p0 = MainColor3.rgb;
+	float n_out57p1 = MainColor3.a;
+
+// ColorUniform:58
+	vec3 n_out58p0 = MainColor4.rgb;
+	float n_out58p1 = MainColor4.a;
+
+// ColorUniform:59
+	vec3 n_out59p0 = MainColor5.rgb;
+	float n_out59p1 = MainColor5.a;
+
+// ColorUniform:60
+	vec3 n_out60p0 = MainColor6.rgb;
+	float n_out60p1 = MainColor6.a;
+
+// ColorUniform:65
+	vec3 n_out65p0 = R_MainColor1.rgb;
+	float n_out65p1 = R_MainColor1.a;
+
+// ColorUniform:66
+	vec3 n_out66p0 = R_MainColor2.rgb;
+	float n_out66p1 = R_MainColor2.a;
+
+// ColorUniform:67
+	vec3 n_out67p0 = R_MainColor3.rgb;
+	float n_out67p1 = R_MainColor3.a;
+
+// ColorUniform:68
+	vec3 n_out68p0 = R_MainColor4.rgb;
+	float n_out68p1 = R_MainColor4.a;
+
+// ColorUniform:69
+	vec3 n_out69p0 = R_MainColor5.rgb;
+	float n_out69p1 = R_MainColor5.a;
+
+// ColorUniform:70
+	vec3 n_out70p0 = R_MainColor6.rgb;
+	float n_out70p1 = R_MainColor6.a;
+
+// ScalarUniform:78
+	float n_out78p0 = tolerance;
+
+// Expression:54
+	vec3 n_out54p0;
+	n_out54p0 = vec3(0.0, 0.0, 0.0);
+	{
+		vec3 current_color = texture(TEXTURE, UV).rgb;
+		
+		if (replace (current_color, n_out55p0, n_out65p0, n_out54p0, n_out78p0)){}
+		else if (replace (current_color, n_out56p0, n_out66p0, n_out54p0, n_out78p0)){}
+		else if (replace (current_color, n_out57p0, n_out67p0, n_out54p0, n_out78p0)){}
+		else if (replace (current_color, n_out58p0, n_out68p0, n_out54p0, n_out78p0)){}
+		else if (replace (current_color, n_out59p0, n_out69p0, n_out54p0, n_out78p0)){}
+		else if (replace (current_color, n_out60p0, n_out70p0, n_out54p0, n_out78p0)){}
+		else {n_out54p0 = current_color}
+	}
+
+// Texture:72
+	vec3 n_out72p0;
+	float n_out72p1;
+	{
+		vec4 _tex_read = texture(TEXTURE , UV.xy);
+		n_out72p0 = _tex_read.rgb;
+		n_out72p1 = _tex_read.a;
+	}
+
+// Output:0
+	COLOR.rgb = n_out54p0;
+	COLOR.a = n_out72p1;
+
+}
+
+void light() {
+// Output:0
+
+}
+"
+graph_offset = Vector2( -580.237, -281.836 )
+mode = 1
+flags/light_only = false
+nodes/vertex/2/node = SubResource( 20 )
+nodes/vertex/2/position = Vector2( 0, 200 )
+nodes/vertex/3/node = SubResource( 26 )
+nodes/vertex/3/position = Vector2( 140, 180 )
+nodes/vertex/4/node = SubResource( 27 )
+nodes/vertex/4/position = Vector2( 220, 120 )
+nodes/vertex/5/node = SubResource( 28 )
+nodes/vertex/5/position = Vector2( 120, 300 )
+nodes/fragment/0/position = Vector2( 1100, 880 )
+nodes/fragment/54/node = SubResource( 67 )
+nodes/fragment/54/position = Vector2( -480, 840 )
+nodes/fragment/54/size = Vector2( 1253.66, 1144.73 )
+nodes/fragment/54/input_ports = "0,1,main_color_1;1,1,main_color_2;2,1,main_color_3;3,1,main_color_4;4,1,main_color_5;5,1,main_color_6;6,1,replace_color_1;7,1,replace_color_2;8,1,replace_color_3;9,1,replace_color_4;10,1,replace_color_5;11,1,replace_color_6;12,0,tolerance;"
+nodes/fragment/54/output_ports = "0,1,final_color;"
+nodes/fragment/54/expression = "vec3 current_color = texture(TEXTURE, UV).rgb;
+
+if (replace (current_color, main_color_1, replace_color_1, final_color, tolerance)){}
+else if (replace (current_color, main_color_2, replace_color_2, final_color, tolerance)){}
+else if (replace (current_color, main_color_3, replace_color_3, final_color, tolerance)){}
+else if (replace (current_color, main_color_4, replace_color_4, final_color, tolerance)){}
+else if (replace (current_color, main_color_5, replace_color_5, final_color, tolerance)){}
+else if (replace (current_color, main_color_6, replace_color_6, final_color, tolerance)){}
+else {final_color = current_color}"
+nodes/fragment/55/node = SubResource( 68 )
+nodes/fragment/55/position = Vector2( -1900, 600 )
+nodes/fragment/56/node = SubResource( 69 )
+nodes/fragment/56/position = Vector2( -1900, 700 )
+nodes/fragment/57/node = SubResource( 70 )
+nodes/fragment/57/position = Vector2( -1900, 800 )
+nodes/fragment/58/node = SubResource( 71 )
+nodes/fragment/58/position = Vector2( -1900, 900 )
+nodes/fragment/59/node = SubResource( 72 )
+nodes/fragment/59/position = Vector2( -1900, 1000 )
+nodes/fragment/60/node = SubResource( 73 )
+nodes/fragment/60/position = Vector2( -1900, 1100 )
+nodes/fragment/65/node = SubResource( 74 )
+nodes/fragment/65/position = Vector2( -1900, 1240 )
+nodes/fragment/66/node = SubResource( 75 )
+nodes/fragment/66/position = Vector2( -1900, 1340 )
+nodes/fragment/67/node = SubResource( 76 )
+nodes/fragment/67/position = Vector2( -1900, 1440 )
+nodes/fragment/68/node = SubResource( 77 )
+nodes/fragment/68/position = Vector2( -1900, 1540 )
+nodes/fragment/69/node = SubResource( 78 )
+nodes/fragment/69/position = Vector2( -1900, 1640 )
+nodes/fragment/70/node = SubResource( 79 )
+nodes/fragment/70/position = Vector2( -1900, 1740 )
+nodes/fragment/71/node = SubResource( 80 )
+nodes/fragment/71/position = Vector2( -500, 360 )
+nodes/fragment/71/size = Vector2( 641.04, 335.118 )
+nodes/fragment/71/input_ports = ""
+nodes/fragment/71/output_ports = ""
+nodes/fragment/71/expression = "bool replace (vec3 color, vec3 main_color, vec3 replace_color, out vec3 output, float tol) 
+{	vec3 diff3 = color - main_color;
+	float m = max(max(abs(diff3.r), abs(diff3.g)), abs(diff3.b));
+	float brightness = length(color);
+	
+	if (step(m, tol) == 1.0){ 
+		color = mix(color, replace_color * brightness, step(m, tol));
+		output = color;
+		return true;
+	}
+	return false;
+}"
+nodes/fragment/72/node = SubResource( 81 )
+nodes/fragment/72/position = Vector2( 800, 940 )
+nodes/fragment/73/node = SubResource( 82 )
+nodes/fragment/73/position = Vector2( -1040, 480 )
+nodes/fragment/74/node = SubResource( 83 )
+nodes/fragment/74/position = Vector2( -2020, 380 )
+nodes/fragment/75/node = SubResource( 84 )
+nodes/fragment/75/position = Vector2( -1400, 440 )
+nodes/fragment/76/node = SubResource( 85 )
+nodes/fragment/76/position = Vector2( -1400, 600 )
+nodes/fragment/78/node = SubResource( 87 )
+nodes/fragment/78/position = Vector2( -720, 1420 )
+nodes/fragment/connections = PoolIntArray( 55, 0, 54, 0, 56, 0, 54, 1, 57, 0, 54, 2, 58, 0, 54, 3, 59, 0, 54, 4, 60, 0, 54, 5, 65, 0, 54, 6, 66, 0, 54, 7, 67, 0, 54, 8, 68, 0, 54, 9, 69, 0, 54, 10, 70, 0, 54, 11, 74, 0, 75, 0, 55, 0, 76, 0, 65, 0, 73, 3, 75, 0, 73, 0, 76, 0, 73, 1, 78, 0, 54, 12, 54, 0, 0, 0, 72, 1, 0, 1 )

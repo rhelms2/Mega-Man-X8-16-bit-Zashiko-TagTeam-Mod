@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Ridearmor - Jump.ogg-cb7d9bb96ca8fe8f7ac03a14bf322f7c.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/Ridearmor - Jump.ogg"
+dest_files=[ "res://.import/Ridearmor - Jump.ogg-cb7d9bb96ca8fe8f7ac03a14bf322f7c.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

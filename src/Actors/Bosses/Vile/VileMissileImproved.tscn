@@ -1,0 +1,79 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://src/Actors/Bosses/Vile/VileMissileProjectile.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Enemies/ProjectileDoT.gd" type="Script" id=2]
+[ext_resource path="res://src/Effects/Textures/explosion.png" type="Texture" id=3]
+[ext_resource path="res://src/Sounds/56 - MMX - Enemy Death.wav" type="AudioStream" id=4]
+[ext_resource path="res://src/Actors/Bosses/Vile/vile_missile2.res" type="SpriteFrames" id=5]
+[ext_resource path="res://src/Effects/Basic Hit.tscn" type="PackedScene" id=6]
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 6, 6 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 16, 16 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 4, 5 )
+
+[node name="VileMissile" type="KinematicBody2D" groups=["Enemy Projectile"]]
+z_index = 8
+collision_layer = 16
+script = ExtResource( 1 )
+damage = 10.0
+tracker_update_interval = 0.08
+transform_time = 0.85
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+frames = ExtResource( 5 )
+animation = "normal"
+frame = 3
+playing = true
+offset = Vector2( -16, 0 )
+flip_h = true
+
+[node name="Hit Particle" parent="." instance=ExtResource( 6 )]
+texture = ExtResource( 3 )
+hframes = 4
+vframes = 4
+animation_speed = 24.0
+vertical_flip_chance = 0.0
+
+[node name="explosion_sound" type="AudioStreamPlayer2D" parent="Hit Particle"]
+pause_mode = 2
+stream = ExtResource( 4 )
+volume_db = -6.0
+max_distance = 800.0
+bus = "SFX"
+
+[node name="area2D" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+shape = SubResource( 7 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 2 )
+damage = 3.0
+
+[node name="HittableArea" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 4
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="HittableArea"]
+shape = SubResource( 5 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource( 8 )
+
+[connection signal="guard_break" from="." to="." method="_on_guard_break"]
+[connection signal="shield_hit" from="." to="." method="_on_guard_break"]

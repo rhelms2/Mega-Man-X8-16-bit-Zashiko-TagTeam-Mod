@@ -1,0 +1,71 @@
+[gd_resource type="SpriteFrames" load_steps=16 format=2]
+
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossSpecials/IceGattling/frost_frame.png" type="Texture" id=1]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 398, 224 )
+
+[sub_resource type="StreamTexture" id=122]
+load_path = "res://.import/yeti.png-c0aa0c0f7117e77ab14b5472997a7722.stex"
+
+[sub_resource type="AtlasTexture" id=110]
+atlas = SubResource( 122 )
+region = Rect2( 2048, 512, 256, 128 )
+
+[sub_resource type="AtlasTexture" id=111]
+atlas = SubResource( 122 )
+region = Rect2( 2304, 512, 256, 128 )
+
+[sub_resource type="AtlasTexture" id=112]
+atlas = SubResource( 122 )
+region = Rect2( 2560, 512, 256, 128 )
+
+[sub_resource type="AtlasTexture" id=113]
+atlas = SubResource( 122 )
+region = Rect2( 2816, 512, 256, 128 )
+
+[sub_resource type="AtlasTexture" id=114]
+atlas = SubResource( 122 )
+region = Rect2( 3072, 512, 256, 128 )
+
+[sub_resource type="AtlasTexture" id=115]
+atlas = SubResource( 122 )
+region = Rect2( 1792, 512, 256, 128 )
+
+[sub_resource type="AtlasTexture" id=116]
+atlas = SubResource( 122 )
+region = Rect2( 0, 640, 256, 128 )
+
+[sub_resource type="AtlasTexture" id=117]
+atlas = SubResource( 122 )
+region = Rect2( 256, 640, 256, 128 )
+
+[sub_resource type="AtlasTexture" id=118]
+atlas = SubResource( 122 )
+region = Rect2( 512, 640, 256, 128 )
+
+[sub_resource type="AtlasTexture" id=119]
+atlas = SubResource( 122 )
+region = Rect2( 768, 640, 256, 128 )
+
+[sub_resource type="AtlasTexture" id=120]
+atlas = SubResource( 122 )
+region = Rect2( 1024, 640, 256, 128 )
+
+[sub_resource type="AtlasTexture" id=121]
+atlas = SubResource( 122 )
+region = Rect2( 1280, 640, 256, 128 )
+
+[resource]
+animations = [ {
+"frames": [ SubResource( 1 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 110 ), SubResource( 111 ), SubResource( 112 ), SubResource( 113 ), SubResource( 114 ), SubResource( 115 ), SubResource( 116 ), SubResource( 117 ), SubResource( 118 ), SubResource( 119 ), SubResource( 120 ), SubResource( 121 ) ],
+"loop": true,
+"name": "icestorm_loop",
+"speed": 28.0
+} ]

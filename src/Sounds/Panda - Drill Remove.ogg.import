@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Panda - Drill Remove.ogg-3fee5246da97c502fcfbdd13a5db231a.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/Panda - Drill Remove.ogg"
+dest_files=[ "res://.import/Panda - Drill Remove.ogg-3fee5246da97c502fcfbdd13a5db231a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

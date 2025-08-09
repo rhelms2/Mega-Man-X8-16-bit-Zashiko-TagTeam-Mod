@@ -1,0 +1,22 @@
+[remap]
+
+importer="vnen.tiled_importer"
+type="PackedScene"
+path="res://.import/boosterforest_full.tmx-0e26aa126f0180075e6d65c47f353640.scn"
+
+[deps]
+
+source_file="res://src/Levels/BoosterForest/boosterforest_full.tmx"
+dest_files=[ "res://.import/boosterforest_full.tmx-0e26aa126f0180075e6d65c47f353640.scn" ]
+
+[params]
+
+custom_properties=true
+tile_metadata=false
+uv_clip=true
+image_flags=7
+collision_layer=1
+embed_internal_images=false
+save_tiled_properties=false
+add_background=true
+post_import_script=""

@@ -1,0 +1,48 @@
+extends ZeroBlocking
+
+onready var armor_limit: = $"../../Limits/Black_Zero_Limit"
+onready var left_wall: = $leftwall
+onready var right_wall: = $rightwall
+
+
+func _ready() -> void :
+	if active:
+		call_deferred("connect_events")
+
+func connect_events() -> void :
+	if is_instance_valid(GameManager.player):
+		GameManager.player.connect("received_damage", self, "_on_block_event")
+
+func block_wall() -> void :
+	if block_if_collected:
+		if savefile_unlockable:
+			if collectible != "":
+				if collectible in GameManager.collectibles:
+					unlocked = false
+		else:
+			if permanent_unlock != "":
+				if permanent_unlock in CharacterManager:
+					if CharacterManager.get(permanent_unlock) == true:
+						unlocked = false
+	
+	if character_name != "":
+		if CharacterManager.current_player_character != character_name:
+			unlocked = false
+	
+	if need_all_weapons and not got_all_boss_weapons():
+		unlocked = false
+	
+	if need_all_zero_weapons and not got_all_zero_weapons():
+		unlocked = false
+	
+	if CharacterManager.game_mode < difficulty_minumum:
+		unlocked = false
+
+	blocking_wall.disabled = unlocked
+	armor_limit.disabled = not unlocked
+
+func _on_block_event() -> void :
+	armor_limit.disabled = true
+	left_wall.set_deferred("disabled", true)
+	right_wall.set_deferred("disabled", true)
+	blocking_wall.set_deferred("disabled", false)

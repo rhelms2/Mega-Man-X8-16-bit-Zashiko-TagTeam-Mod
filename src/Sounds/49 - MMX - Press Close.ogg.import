@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/49 - MMX - Press Close.ogg-1a18384655dbfeb1d1e26c2c379d7ecb.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/49 - MMX - Press Close.ogg"
+dest_files=[ "res://.import/49 - MMX - Press Close.ogg-1a18384655dbfeb1d1e26c2c379d7ecb.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - PitchBlack - AlarmLoop.ogg-7722110b66bf5d441799fb4e1baae5ee.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - PitchBlack - AlarmLoop.ogg"
+dest_files=[ "res://.import/OST - PitchBlack - AlarmLoop.ogg-7722110b66bf5d441799fb4e1baae5ee.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,62 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://X_mod/UltimateX/Player/Projectiles/Ultimate_Continue.gd" type="Script" id=1]
+[ext_resource path="res://X_mod/UltimateX/Player/Projectiles/ultimate_continue.png" type="Texture" id=2]
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 2 )
+region = Rect2( 48, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 2 )
+region = Rect2( 96, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 2 )
+region = Rect2( 144, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 2 )
+region = Rect2( 192, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 2 )
+region = Rect2( 240, 0, 48, 48 )
+
+[sub_resource type="SpriteFrames" id=22]
+animations = [ {
+"frames": [ SubResource( 20 ), SubResource( 21 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ) ],
+"loop": true,
+"name": "loop",
+"speed": 40.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 16, 16.75 )
+
+[node name="Ultimate Damage Ball" type="KinematicBody2D" groups=["Player Projectile"]]
+z_index = 17
+collision_layer = 4
+collision_mask = 0
+script = ExtResource( 1 )
+damage = 2.0
+damage_to_bosses = 2.0
+damage_to_weakness = 5.0
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 22 )
+animation = "loop"
+frame = 1
+playing = true
+flip_h = true
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 0.25 )
+z_index = -1
+shape = SubResource( 15 )

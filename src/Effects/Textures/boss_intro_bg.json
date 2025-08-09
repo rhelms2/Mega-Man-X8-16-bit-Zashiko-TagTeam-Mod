@@ -1,0 +1,140 @@
+{ "frames": [
+   {
+    "filename": "boss_intro_bg 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 28
+   },
+   {
+    "filename": "boss_intro_bg 1.ase",
+    "frame": { "x": 398, "y": 0, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 28
+   },
+   {
+    "filename": "boss_intro_bg 2.ase",
+    "frame": { "x": 796, "y": 0, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 28
+   },
+   {
+    "filename": "boss_intro_bg 3.ase",
+    "frame": { "x": 1194, "y": 0, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 28
+   },
+   {
+    "filename": "boss_intro_bg 4.ase",
+    "frame": { "x": 0, "y": 224, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 28
+   },
+   {
+    "filename": "boss_intro_bg 5.ase",
+    "frame": { "x": 398, "y": 224, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 28
+   },
+   {
+    "filename": "boss_intro_bg 6.ase",
+    "frame": { "x": 796, "y": 224, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 28
+   },
+   {
+    "filename": "boss_intro_bg 7.ase",
+    "frame": { "x": 1194, "y": 224, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 28
+   },
+   {
+    "filename": "boss_intro_bg 8.ase",
+    "frame": { "x": 0, "y": 448, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 28
+   },
+   {
+    "filename": "boss_intro_bg 9.ase",
+    "frame": { "x": 398, "y": 448, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 28
+   },
+   {
+    "filename": "boss_intro_bg 10.ase",
+    "frame": { "x": 796, "y": 448, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 28
+   },
+   {
+    "filename": "boss_intro_bg 11.ase",
+    "frame": { "x": 1194, "y": 448, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 28
+   },
+   {
+    "filename": "boss_intro_bg 12.ase",
+    "frame": { "x": 0, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 28
+   },
+   {
+    "filename": "boss_intro_bg 13.ase",
+    "frame": { "x": 398, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 28
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3-rc6-x64",
+  "image": "boss_intro_bg.png",
+  "format": "RGBA8888",
+  "size": { "w": 1592, "h": 896 },
+  "scale": "1",
+  "frameTags": [
+   { "name": " tag", "from": 0, "to": 13, "direction": "forward", "color": "#000000ff" }
+  ]
+ }
+}

@@ -1,0 +1,116 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://src/Actors/Bosses/CopyReploid/transform_reploid.res" type="SpriteFrames" id=1]
+[ext_resource path="res://src/Actors/Bosses/CopyReploid/Intro.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Bosses/CopyReploid/TransformReploid.gd" type="Script" id=3]
+[ext_resource path="res://src/Effects/Textures/transform_vfx.png" type="Texture" id=4]
+[ext_resource path="res://src/Actors/Bosses/Lumine/flash.gd" type="Script" id=5]
+[ext_resource path="res://src/Levels/PitchBlack/light.png" type="Texture" id=6]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=7]
+[ext_resource path="res://src/Sounds/LAND.wav" type="AudioStream" id=8]
+[ext_resource path="res://src/Sounds/MM - Equip.wav" type="AudioStream" id=9]
+[ext_resource path="res://src/Sounds/Lumine - Pick.wav" type="AudioStream" id=10]
+[ext_resource path="res://src/Sounds/Lumine - Transform.wav" type="AudioStream" id=11]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 15, 20 )
+
+[sub_resource type="AtlasTexture" id=64]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 81, 80 )
+
+[sub_resource type="AtlasTexture" id=65]
+atlas = ExtResource( 4 )
+region = Rect2( 81, 0, 81, 80 )
+
+[sub_resource type="AtlasTexture" id=66]
+atlas = ExtResource( 4 )
+region = Rect2( 162, 0, 81, 80 )
+
+[sub_resource type="AtlasTexture" id=67]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 80, 81, 80 )
+
+[sub_resource type="AtlasTexture" id=68]
+atlas = ExtResource( 4 )
+region = Rect2( 81, 80, 81, 80 )
+
+[sub_resource type="AtlasTexture" id=69]
+atlas = ExtResource( 4 )
+region = Rect2( 162, 80, 81, 80 )
+
+[sub_resource type="AtlasTexture" id=70]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 160, 81, 80 )
+
+[sub_resource type="SpriteFrames" id=71]
+animations = [ {
+"frames": [ SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ) ],
+"loop": false,
+"name": "default",
+"speed": 24.0
+} ]
+
+[node name="TransformReploid" type="KinematicBody2D"]
+collision_layer = 0
+script = ExtResource( 3 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+z_index = 5
+frames = ExtResource( 1 )
+animation = "land"
+frame = 3
+playing = true
+flip_h = true
+
+[node name="Intro" type="Node2D" parent="."]
+script = ExtResource( 2 )
+
+[node name="land" type="AudioStreamPlayer2D" parent="Intro"]
+stream = ExtResource( 8 )
+volume_db = 12.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 7 )
+
+[node name="pick" type="AudioStreamPlayer2D" parent="Intro"]
+pause_mode = 2
+stream = ExtResource( 10 )
+volume_db = -12.0
+bus = "SFX"
+script = ExtResource( 7 )
+
+[node name="start_transform" type="AudioStreamPlayer2D" parent="Intro"]
+pause_mode = 2
+stream = ExtResource( 11 )
+volume_db = -14.0
+bus = "SFX"
+script = ExtResource( 7 )
+
+[node name="transform" type="AudioStreamPlayer2D" parent="Intro"]
+pause_mode = 2
+stream = ExtResource( 9 )
+volume_db = -9.0
+bus = "SFX"
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 3 )
+shape = SubResource( 1 )
+
+[node name="flash" type="Sprite" parent="."]
+pause_mode = 2
+visible = false
+modulate = Color( 0.741176, 0.592157, 0.909804, 1 )
+scale = Vector2( 10, 5 )
+z_index = -1
+texture = ExtResource( 6 )
+script = ExtResource( 5 )
+
+[node name="spriteflash" type="AnimatedSprite" parent="."]
+pause_mode = 2
+z_index = 20
+frames = SubResource( 71 )
+frame = 6
+playing = true
+
+[connection signal="new_direction" from="." to="Intro" method="_on_new_direction"]

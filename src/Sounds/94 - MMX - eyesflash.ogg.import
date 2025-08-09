@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/94 - MMX - eyesflash.ogg-5f436df1bae0e0c27ee197146665a253.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/94 - MMX - eyesflash.ogg"
+dest_files=[ "res://.import/94 - MMX - eyesflash.ogg-5f436df1bae0e0c27ee197146665a253.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

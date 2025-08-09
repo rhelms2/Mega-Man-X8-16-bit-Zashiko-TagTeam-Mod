@@ -1,0 +1,91 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://src/Levels/NoahsPark/SigmaReploid.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Enemies/SigmaEnemy/sigma_enemy.res" type="SpriteFrames" id=2]
+[ext_resource path="res://src/Actors/Bosses/Lumine/flash.gd" type="Script" id=3]
+[ext_resource path="res://src/Effects/Textures/transform_vfx.png" type="Texture" id=4]
+[ext_resource path="res://src/Levels/PitchBlack/light.png" type="Texture" id=5]
+[ext_resource path="res://src/Actors/Bosses/CopyReploid/transform_reploid.res" type="SpriteFrames" id=6]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=7]
+[ext_resource path="res://src/Sounds/MM - Equip.wav" type="AudioStream" id=8]
+[ext_resource path="res://src/Sounds/Bike - Land.wav" type="AudioStream" id=9]
+
+[sub_resource type="AtlasTexture" id=64]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 81, 80 )
+
+[sub_resource type="AtlasTexture" id=65]
+atlas = ExtResource( 4 )
+region = Rect2( 81, 0, 81, 80 )
+
+[sub_resource type="AtlasTexture" id=66]
+atlas = ExtResource( 4 )
+region = Rect2( 162, 0, 81, 80 )
+
+[sub_resource type="AtlasTexture" id=67]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 80, 81, 80 )
+
+[sub_resource type="AtlasTexture" id=68]
+atlas = ExtResource( 4 )
+region = Rect2( 81, 80, 81, 80 )
+
+[sub_resource type="AtlasTexture" id=69]
+atlas = ExtResource( 4 )
+region = Rect2( 162, 80, 81, 80 )
+
+[sub_resource type="AtlasTexture" id=70]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 160, 81, 80 )
+
+[sub_resource type="SpriteFrames" id=71]
+animations = [ {
+"frames": [ SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ) ],
+"loop": false,
+"name": "default",
+"speed": 24.0
+} ]
+
+[node name="SigmaReploid" type="AnimatedSprite"]
+modulate = Color( 0.490196, 0.345098, 0.254902, 1 )
+position = Vector2( 282, 159 )
+scale = Vector2( -1, 1 )
+z_index = 1
+frames = ExtResource( 2 )
+animation = "shot"
+frame = 23
+playing = true
+flip_h = true
+script = ExtResource( 1 )
+reploid_frames = ExtResource( 6 )
+
+[node name="flash" type="Sprite" parent="."]
+pause_mode = 2
+visible = false
+modulate = Color( 0.741176, 0.592157, 0.909804, 1 )
+self_modulate = Color( 1, 1, 1, 0.0588235 )
+scale = Vector2( 10, 5 )
+z_index = -1
+texture = ExtResource( 5 )
+script = ExtResource( 3 )
+
+[node name="spriteflash" type="AnimatedSprite" parent="."]
+pause_mode = 2
+frames = SubResource( 71 )
+frame = 6
+playing = true
+
+[node name="transform" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
+stream = ExtResource( 8 )
+volume_db = -9.0
+bus = "SFX"
+script = ExtResource( 7 )
+
+[node name="step" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
+stream = ExtResource( 9 )
+volume_db = -11.0
+pitch_scale = 0.6
+bus = "SFX"
+script = ExtResource( 7 )

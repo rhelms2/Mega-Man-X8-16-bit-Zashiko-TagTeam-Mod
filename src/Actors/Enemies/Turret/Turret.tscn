@@ -1,0 +1,111 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://src/Actors/Enemies/AI.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Modules/Enemy/Enemy.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Modules/Enemy/EnemyDamage.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=4]
+[ext_resource path="res://src/Sounds/LEMON_SHOT2.wav" type="AudioStream" id=5]
+[ext_resource path="res://src/Actors/Enemies/Turret/TurnAndShoot.gd" type="Script" id=6]
+[ext_resource path="res://src/Actors/Enemies/Turret/turret.res" type="SpriteFrames" id=7]
+[ext_resource path="res://src/Effects/Materials/default_material.tres" type="Material" id=8]
+[ext_resource path="res://src/Sounds/HIT.wav" type="AudioStream" id=9]
+[ext_resource path="res://src/Actors/Enemies/SimpleProjectile.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/Actors/Enemies/Shared/TurretDeath.gd" type="Script" id=11]
+[ext_resource path="res://src/Actors/Enemies/Shared/QuickEnemyDeath.tscn" type="PackedScene" id=12]
+
+[sub_resource type="RectangleShape2D" id=49]
+extents = Vector2( 179, 78 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 13.5, 15.5 )
+
+[sub_resource type="RectangleShape2D" id=48]
+
+[node name="Turret" type="KinematicBody2D" groups=["Enemies"]]
+z_index = 5
+collision_layer = 0
+collision_mask = 0
+script = ExtResource( 2 )
+max_health = 3.0
+
+[node name="AI" type="Node2D" parent="."]
+script = ExtResource( 1 )
+on_see_player = [ NodePath("../TurnAndShoot") ]
+
+[node name="vision" type="Area2D" parent="AI"]
+visible = false
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="AI/vision"]
+position = Vector2( 0, -61 )
+shape = SubResource( 49 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 8 )
+z_index = 1
+frames = ExtResource( 7 )
+animation = "turn_to_diagonal"
+frame = 8
+playing = true
+flip_h = true
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( -0.5, 1.5 )
+shape = SubResource( 15 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+scale = Vector2( 2, 2 )
+rect = Rect2( -5, -5, 10, 10 )
+
+[node name="area2D" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+shape = SubResource( 48 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 3 )
+max_freeze_hits = 1
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+stream = ExtResource( 9 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="TurnAndShoot" type="Node2D" parent="."]
+script = ExtResource( 6 )
+actions = [ "Event" ]
+projectile = ExtResource( 10 )
+
+[node name="shot_sound" type="AudioStreamPlayer2D" parent="TurnAndShoot"]
+stream = ExtResource( 5 )
+volume_db = -12.079
+pitch_scale = 2.0
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="horizontal_spawn_point" type="Node2D" parent="TurnAndShoot"]
+position = Vector2( 15, 0 )
+
+[node name="diagonal_spawn_point" type="Node2D" parent="TurnAndShoot"]
+position = Vector2( 10, -8 )
+
+[node name="EnemyDeath" parent="." instance=ExtResource( 12 )]
+script = ExtResource( 11 )
+
+[connection signal="zero_health" from="." to="TurnAndShoot" method="_on_Turret_zero_health"]
+[connection signal="body_entered" from="AI/vision" to="AI" method="_on_vision_body_entered"]
+[connection signal="body_exited" from="AI/vision" to="AI" method="_on_vision_body_exited"]

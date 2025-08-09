@@ -1,0 +1,35 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/ridearmord_legs.png-24f1339f752874f679b0dea633976429.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://src/Actors/Props/RideArmor/ridearmord_legs.png"
+dest_files=[ "res://.import/ridearmord_legs.png-24f1339f752874f679b0dea633976429.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=false
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+process/normal_map_invert_y=false
+stream=false
+size_limit=0
+detect_3d=false
+svg/scale=1.0

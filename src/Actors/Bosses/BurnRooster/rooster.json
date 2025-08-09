@@ -1,0 +1,1773 @@
+{ "frames": [
+   {
+    "filename": "rooster 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 122
+   },
+   {
+    "filename": "rooster 1.ase",
+    "frame": { "x": 200, "y": 0, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 2.ase",
+    "frame": { "x": 400, "y": 0, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 3.ase",
+    "frame": { "x": 600, "y": 0, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 4.ase",
+    "frame": { "x": 800, "y": 0, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 5.ase",
+    "frame": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 122
+   },
+   {
+    "filename": "rooster 6.ase",
+    "frame": { "x": 200, "y": 0, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 7.ase",
+    "frame": { "x": 1000, "y": 0, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 8.ase",
+    "frame": { "x": 1200, "y": 0, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 9.ase",
+    "frame": { "x": 1400, "y": 0, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 10.ase",
+    "frame": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 122
+   },
+   {
+    "filename": "rooster 11.ase",
+    "frame": { "x": 200, "y": 0, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 12.ase",
+    "frame": { "x": 1600, "y": 0, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 13.ase",
+    "frame": { "x": 1800, "y": 0, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 14.ase",
+    "frame": { "x": 1400, "y": 0, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 15.ase",
+    "frame": { "x": 2000, "y": 0, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 16.ase",
+    "frame": { "x": 2200, "y": 0, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 17.ase",
+    "frame": { "x": 2400, "y": 0, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 18.ase",
+    "frame": { "x": 2600, "y": 0, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 19.ase",
+    "frame": { "x": 0, "y": 96, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 20.ase",
+    "frame": { "x": 200, "y": 96, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 21.ase",
+    "frame": { "x": 400, "y": 96, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 22.ase",
+    "frame": { "x": 600, "y": 96, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 23.ase",
+    "frame": { "x": 800, "y": 96, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 24.ase",
+    "frame": { "x": 1000, "y": 96, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 25.ase",
+    "frame": { "x": 1200, "y": 96, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 26.ase",
+    "frame": { "x": 1400, "y": 96, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 27.ase",
+    "frame": { "x": 1600, "y": 96, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 28.ase",
+    "frame": { "x": 1800, "y": 96, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 122
+   },
+   {
+    "filename": "rooster 29.ase",
+    "frame": { "x": 2000, "y": 96, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 122
+   },
+   {
+    "filename": "rooster 30.ase",
+    "frame": { "x": 2200, "y": 96, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 31.ase",
+    "frame": { "x": 2400, "y": 96, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 32.ase",
+    "frame": { "x": 2600, "y": 96, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 33.ase",
+    "frame": { "x": 0, "y": 192, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 34.ase",
+    "frame": { "x": 200, "y": 192, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 35.ase",
+    "frame": { "x": 400, "y": 192, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 36.ase",
+    "frame": { "x": 600, "y": 192, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 37.ase",
+    "frame": { "x": 800, "y": 192, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 38.ase",
+    "frame": { "x": 1000, "y": 192, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 39.ase",
+    "frame": { "x": 1200, "y": 192, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 40.ase",
+    "frame": { "x": 1400, "y": 192, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 41.ase",
+    "frame": { "x": 1600, "y": 192, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 66
+   },
+   {
+    "filename": "rooster 42.ase",
+    "frame": { "x": 1800, "y": 192, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 66
+   },
+   {
+    "filename": "rooster 43.ase",
+    "frame": { "x": 2000, "y": 192, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 44.ase",
+    "frame": { "x": 2200, "y": 192, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 128
+   },
+   {
+    "filename": "rooster 45.ase",
+    "frame": { "x": 2400, "y": 192, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 46.ase",
+    "frame": { "x": 2600, "y": 192, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 47.ase",
+    "frame": { "x": 0, "y": 288, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 48.ase",
+    "frame": { "x": 200, "y": 288, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 49.ase",
+    "frame": { "x": 2600, "y": 192, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 50.ase",
+    "frame": { "x": 0, "y": 288, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 51.ase",
+    "frame": { "x": 200, "y": 288, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 52.ase",
+    "frame": { "x": 400, "y": 288, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 53.ase",
+    "frame": { "x": 2200, "y": 96, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 54.ase",
+    "frame": { "x": 600, "y": 288, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 66
+   },
+   {
+    "filename": "rooster 55.ase",
+    "frame": { "x": 800, "y": 288, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 56.ase",
+    "frame": { "x": 1000, "y": 288, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 57.ase",
+    "frame": { "x": 1200, "y": 288, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 58.ase",
+    "frame": { "x": 1400, "y": 288, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 59.ase",
+    "frame": { "x": 1600, "y": 288, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 60.ase",
+    "frame": { "x": 1800, "y": 288, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 61.ase",
+    "frame": { "x": 2000, "y": 288, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 62.ase",
+    "frame": { "x": 2200, "y": 288, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 63.ase",
+    "frame": { "x": 2400, "y": 288, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 64.ase",
+    "frame": { "x": 2600, "y": 288, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 65.ase",
+    "frame": { "x": 0, "y": 384, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 66.ase",
+    "frame": { "x": 200, "y": 384, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 67.ase",
+    "frame": { "x": 400, "y": 384, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 68.ase",
+    "frame": { "x": 600, "y": 384, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 69.ase",
+    "frame": { "x": 800, "y": 384, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 70.ase",
+    "frame": { "x": 1000, "y": 384, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 71.ase",
+    "frame": { "x": 1200, "y": 384, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 72.ase",
+    "frame": { "x": 1400, "y": 384, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 73.ase",
+    "frame": { "x": 1600, "y": 384, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 74.ase",
+    "frame": { "x": 1800, "y": 384, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 75.ase",
+    "frame": { "x": 2000, "y": 384, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 76.ase",
+    "frame": { "x": 2200, "y": 384, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 77.ase",
+    "frame": { "x": 2400, "y": 384, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 78.ase",
+    "frame": { "x": 2600, "y": 384, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 79.ase",
+    "frame": { "x": 0, "y": 480, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 46
+   },
+   {
+    "filename": "rooster 80.ase",
+    "frame": { "x": 200, "y": 480, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 46
+   },
+   {
+    "filename": "rooster 81.ase",
+    "frame": { "x": 400, "y": 480, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 46
+   },
+   {
+    "filename": "rooster 82.ase",
+    "frame": { "x": 600, "y": 480, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 46
+   },
+   {
+    "filename": "rooster 83.ase",
+    "frame": { "x": 800, "y": 480, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 46
+   },
+   {
+    "filename": "rooster 84.ase",
+    "frame": { "x": 1000, "y": 480, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 46
+   },
+   {
+    "filename": "rooster 85.ase",
+    "frame": { "x": 1200, "y": 480, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 46
+   },
+   {
+    "filename": "rooster 86.ase",
+    "frame": { "x": 1400, "y": 480, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 46
+   },
+   {
+    "filename": "rooster 87.ase",
+    "frame": { "x": 1600, "y": 480, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 88.ase",
+    "frame": { "x": 1800, "y": 480, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 122
+   },
+   {
+    "filename": "rooster 89.ase",
+    "frame": { "x": 2000, "y": 480, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 90.ase",
+    "frame": { "x": 2200, "y": 480, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 66
+   },
+   {
+    "filename": "rooster 91.ase",
+    "frame": { "x": 2400, "y": 480, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 92.ase",
+    "frame": { "x": 2600, "y": 480, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 128
+   },
+   {
+    "filename": "rooster 93.ase",
+    "frame": { "x": 0, "y": 576, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 94.ase",
+    "frame": { "x": 200, "y": 576, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 95.ase",
+    "frame": { "x": 400, "y": 576, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 96.ase",
+    "frame": { "x": 600, "y": 576, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 97.ase",
+    "frame": { "x": 800, "y": 576, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 98.ase",
+    "frame": { "x": 1000, "y": 576, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 99.ase",
+    "frame": { "x": 1200, "y": 576, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 100.ase",
+    "frame": { "x": 1400, "y": 576, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 101.ase",
+    "frame": { "x": 1600, "y": 576, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 102.ase",
+    "frame": { "x": 1800, "y": 576, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 103.ase",
+    "frame": { "x": 1800, "y": 576, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 104.ase",
+    "frame": { "x": 2000, "y": 576, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 66
+   },
+   {
+    "filename": "rooster 105.ase",
+    "frame": { "x": 2200, "y": 576, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 66
+   },
+   {
+    "filename": "rooster 106.ase",
+    "frame": { "x": 2400, "y": 576, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 107.ase",
+    "frame": { "x": 2600, "y": 576, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 108.ase",
+    "frame": { "x": 0, "y": 672, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 109.ase",
+    "frame": { "x": 200, "y": 672, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 110.ase",
+    "frame": { "x": 400, "y": 672, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 111.ase",
+    "frame": { "x": 600, "y": 672, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 112.ase",
+    "frame": { "x": 800, "y": 672, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 113.ase",
+    "frame": { "x": 1000, "y": 672, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 114.ase",
+    "frame": { "x": 1200, "y": 672, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 115.ase",
+    "frame": { "x": 1400, "y": 672, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 116.ase",
+    "frame": { "x": 1600, "y": 672, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 117.ase",
+    "frame": { "x": 1800, "y": 672, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 118.ase",
+    "frame": { "x": 2000, "y": 672, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 119.ase",
+    "frame": { "x": 2200, "y": 672, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 120.ase",
+    "frame": { "x": 2400, "y": 672, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 121.ase",
+    "frame": { "x": 2600, "y": 672, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 122.ase",
+    "frame": { "x": 0, "y": 768, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 123.ase",
+    "frame": { "x": 200, "y": 768, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 124.ase",
+    "frame": { "x": 400, "y": 768, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 125.ase",
+    "frame": { "x": 600, "y": 768, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 126.ase",
+    "frame": { "x": 800, "y": 768, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 127.ase",
+    "frame": { "x": 1000, "y": 768, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 128.ase",
+    "frame": { "x": 1200, "y": 768, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 129.ase",
+    "frame": { "x": 1400, "y": 768, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 130.ase",
+    "frame": { "x": 1600, "y": 768, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 131.ase",
+    "frame": { "x": 1800, "y": 768, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 132.ase",
+    "frame": { "x": 2000, "y": 768, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 133.ase",
+    "frame": { "x": 2200, "y": 768, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 134.ase",
+    "frame": { "x": 2400, "y": 768, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 135.ase",
+    "frame": { "x": 2600, "y": 768, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 66
+   },
+   {
+    "filename": "rooster 136.ase",
+    "frame": { "x": 0, "y": 864, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 137.ase",
+    "frame": { "x": 200, "y": 864, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 138.ase",
+    "frame": { "x": 400, "y": 864, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 139.ase",
+    "frame": { "x": 600, "y": 864, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 140.ase",
+    "frame": { "x": 800, "y": 864, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 141.ase",
+    "frame": { "x": 1000, "y": 864, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 142.ase",
+    "frame": { "x": 1200, "y": 864, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 143.ase",
+    "frame": { "x": 1400, "y": 864, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 144.ase",
+    "frame": { "x": 1600, "y": 864, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 145.ase",
+    "frame": { "x": 1800, "y": 864, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 146.ase",
+    "frame": { "x": 2000, "y": 864, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 147.ase",
+    "frame": { "x": 2200, "y": 864, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 148.ase",
+    "frame": { "x": 2400, "y": 864, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 149.ase",
+    "frame": { "x": 2600, "y": 864, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 66
+   },
+   {
+    "filename": "rooster 150.ase",
+    "frame": { "x": 0, "y": 960, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 151.ase",
+    "frame": { "x": 200, "y": 960, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 152.ase",
+    "frame": { "x": 400, "y": 960, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 153.ase",
+    "frame": { "x": 600, "y": 960, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 154.ase",
+    "frame": { "x": 800, "y": 960, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 155.ase",
+    "frame": { "x": 1000, "y": 960, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 156.ase",
+    "frame": { "x": 1000, "y": 960, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 157.ase",
+    "frame": { "x": 1200, "y": 960, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 158.ase",
+    "frame": { "x": 1400, "y": 960, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 159.ase",
+    "frame": { "x": 1600, "y": 960, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 160.ase",
+    "frame": { "x": 1800, "y": 960, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 66
+   },
+   {
+    "filename": "rooster 161.ase",
+    "frame": { "x": 2000, "y": 960, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 162.ase",
+    "frame": { "x": 2200, "y": 960, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 46
+   },
+   {
+    "filename": "rooster 163.ase",
+    "frame": { "x": 2400, "y": 960, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 46
+   },
+   {
+    "filename": "rooster 164.ase",
+    "frame": { "x": 2600, "y": 960, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 46
+   },
+   {
+    "filename": "rooster 165.ase",
+    "frame": { "x": 0, "y": 1056, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 46
+   },
+   {
+    "filename": "rooster 166.ase",
+    "frame": { "x": 200, "y": 1056, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 46
+   },
+   {
+    "filename": "rooster 167.ase",
+    "frame": { "x": 400, "y": 1056, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 46
+   },
+   {
+    "filename": "rooster 168.ase",
+    "frame": { "x": 600, "y": 1056, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 46
+   },
+   {
+    "filename": "rooster 169.ase",
+    "frame": { "x": 800, "y": 1056, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 46
+   },
+   {
+    "filename": "rooster 170.ase",
+    "frame": { "x": 1000, "y": 1056, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 66
+   },
+   {
+    "filename": "rooster 171.ase",
+    "frame": { "x": 1200, "y": 1056, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 66
+   },
+   {
+    "filename": "rooster 172.ase",
+    "frame": { "x": 1400, "y": 1056, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 173.ase",
+    "frame": { "x": 1600, "y": 1056, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 174.ase",
+    "frame": { "x": 1800, "y": 1056, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 175.ase",
+    "frame": { "x": 2000, "y": 1056, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 176.ase",
+    "frame": { "x": 2200, "y": 1056, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 177.ase",
+    "frame": { "x": 2400, "y": 1056, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 178.ase",
+    "frame": { "x": 2600, "y": 1056, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 179.ase",
+    "frame": { "x": 0, "y": 1152, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 180.ase",
+    "frame": { "x": 2200, "y": 1056, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 181.ase",
+    "frame": { "x": 2400, "y": 1056, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 182.ase",
+    "frame": { "x": 2600, "y": 1056, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 183.ase",
+    "frame": { "x": 0, "y": 1152, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 184.ase",
+    "frame": { "x": 200, "y": 1152, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 66
+   },
+   {
+    "filename": "rooster 185.ase",
+    "frame": { "x": 400, "y": 1152, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 186.ase",
+    "frame": { "x": 600, "y": 1152, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 187.ase",
+    "frame": { "x": 800, "y": 1152, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 42
+   },
+   {
+    "filename": "rooster 188.ase",
+    "frame": { "x": 1000, "y": 1152, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 189.ase",
+    "frame": { "x": 1200, "y": 1152, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 190.ase",
+    "frame": { "x": 1400, "y": 1152, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 82
+   },
+   {
+    "filename": "rooster 191.ase",
+    "frame": { "x": 1600, "y": 1152, "w": 200, "h": 96 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 200, "h": 96 },
+    "sourceSize": { "w": 200, "h": 96 },
+    "duration": 444
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3.7-x64",
+  "image": "rooster.png",
+  "format": "RGBA8888",
+  "size": { "w": 2800, "h": 1248 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "appear_loop", "from": 0, "to": 14, "direction": "forward", "color": "#000000ff" },
+   { "name": "appear_end", "from": 15, "to": 22, "direction": "forward", "color": "#000000ff" },
+   { "name": "idle", "from": 23, "to": 30, "direction": "forward", "color": "#000000ff" },
+   { "name": "shot_prepare", "from": 31, "to": 34, "direction": "forward", "color": "#000000ff" },
+   { "name": "shot", "from": 35, "to": 42, "direction": "forward", "color": "#000000ff" },
+   { "name": "rage_prepare", "from": 43, "to": 45, "direction": "forward", "color": "#000000ff" },
+   { "name": "rage_loop", "from": 46, "to": 51, "direction": "forward", "color": "#000000ff" },
+   { "name": "rage_end", "from": 52, "to": 52, "direction": "forward", "color": "#000000ff" },
+   { "name": "spit_prepare", "from": 53, "to": 60, "direction": "forward", "color": "#000000ff" },
+   { "name": "spit_loop", "from": 61, "to": 63, "direction": "forward", "color": "#000000ff" },
+   { "name": "spit_end", "from": 64, "to": 72, "direction": "forward", "color": "#000000ff" },
+   { "name": "jump_prepare", "from": 73, "to": 78, "direction": "forward", "color": "#000000ff" },
+   { "name": "jump", "from": 79, "to": 86, "direction": "forward", "color": "#000000ff" },
+   { "name": "kick_prepare", "from": 87, "to": 93, "direction": "forward", "color": "#000000ff" },
+   { "name": "kick_end", "from": 94, "to": 105, "direction": "forward", "color": "#000000ff" },
+   { "name": "knee_prepare", "from": 106, "to": 108, "direction": "forward", "color": "#000000ff" },
+   { "name": "knee_prepare_loop", "from": 109, "to": 111, "direction": "forward", "color": "#000000ff" },
+   { "name": "knee", "from": 112, "to": 116, "direction": "forward", "color": "#000000ff" },
+   { "name": "knee_loop", "from": 114, "to": 116, "direction": "forward", "color": "#000000ff" },
+   { "name": "knee_end", "from": 117, "to": 121, "direction": "forward", "color": "#000000ff" },
+   { "name": "lowkick_prepare", "from": 122, "to": 126, "direction": "forward", "color": "#000000ff" },
+   { "name": "lowkick", "from": 127, "to": 134, "direction": "forward", "color": "#000000ff" },
+   { "name": "highkick_prepare", "from": 135, "to": 139, "direction": "forward", "color": "#000000ff" },
+   { "name": "highkick", "from": 140, "to": 148, "direction": "forward", "color": "#000000ff" },
+   { "name": "roundhouse_prepare", "from": 149, "to": 153, "direction": "forward", "color": "#000000ff" },
+   { "name": "roundhouse", "from": 154, "to": 161, "direction": "forward", "color": "#000000ff" },
+   { "name": "jump_backwards", "from": 162, "to": 169, "direction": "forward", "color": "#000000ff" },
+   { "name": "voadora_prepare", "from": 170, "to": 174, "direction": "forward", "color": "#000000ff" },
+   { "name": "voadora_loop_start", "from": 175, "to": 179, "direction": "forward", "color": "#000000ff" },
+   { "name": "voadora_loop", "from": 180, "to": 183, "direction": "forward", "color": "#000000ff" },
+   { "name": "land", "from": 184, "to": 190, "direction": "forward", "color": "#000000ff" },
+   { "name": "death", "from": 191, "to": 191, "direction": "forward", "color": "#000000ff" }
+  ]
+ }
+}

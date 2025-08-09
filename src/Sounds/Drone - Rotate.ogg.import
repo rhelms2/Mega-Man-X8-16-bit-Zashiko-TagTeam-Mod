@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Drone - Rotate.ogg-ef8c6aa77a757c603a0e01cd9aef66e9.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/Drone - Rotate.ogg"
+dest_files=[ "res://.import/Drone - Rotate.ogg-ef8c6aa77a757c603a0e01cd9aef66e9.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

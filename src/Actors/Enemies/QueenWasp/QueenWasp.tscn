@@ -1,0 +1,146 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://src/Actors/Enemies/AI.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Modules/Enemy/Enemy.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/Enemies/Shared/QuickEnemyDeath.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Actors/Modules/Enemy/EnemyDamage.gd" type="Script" id=5]
+[ext_resource path="res://src/Actors/Enemies/QueenWasp/QueenWaspPatrol.gd" type="Script" id=6]
+[ext_resource path="res://src/Effects/Materials/default_material.tres" type="Material" id=7]
+[ext_resource path="res://src/Sounds/HIT.wav" type="AudioStream" id=10]
+[ext_resource path="res://src/Actors/Enemies/QueenWasp/wasp.res" type="SpriteFrames" id=14]
+[ext_resource path="res://src/Sounds/LEMON_SHOT2.wav" type="AudioStream" id=15]
+[ext_resource path="res://src/Actors/Enemies/QueenWasp/QueenWaspShot.gd" type="Script" id=18]
+[ext_resource path="res://src/Actors/Enemies/QueenWasp/WaspShot6.tscn" type="PackedScene" id=19]
+[ext_resource path="res://src/Actors/Enemies/QueenWasp/WaspShot7.tscn" type="PackedScene" id=20]
+[ext_resource path="res://src/Actors/Enemies/QueenWasp/WaspShot5.tscn" type="PackedScene" id=21]
+[ext_resource path="res://src/Actors/Enemies/QueenWasp/WaspShot3.tscn" type="PackedScene" id=22]
+[ext_resource path="res://src/Actors/Enemies/QueenWasp/WaspShot1.tscn" type="PackedScene" id=23]
+[ext_resource path="res://src/Actors/Enemies/QueenWasp/WaspShot2.tscn" type="PackedScene" id=24]
+[ext_resource path="res://src/Actors/Enemies/QueenWasp/WaspShot8.tscn" type="PackedScene" id=25]
+[ext_resource path="res://src/Actors/Enemies/QueenWasp/WaspShot4.tscn" type="PackedScene" id=26]
+
+[sub_resource type="RectangleShape2D" id=49]
+extents = Vector2( 153, 76.5 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 13.5, 15.5 )
+
+[sub_resource type="RectangleShape2D" id=48]
+extents = Vector2( 14, 21.5 )
+
+[node name="QueenWasp" type="KinematicBody2D" groups=["Enemies"]]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource( 3 )
+max_health = 15.0
+
+[node name="AI" type="Node2D" parent="."]
+script = ExtResource( 1 )
+on_idle = [ NodePath("../BeePatrol") ]
+on_see_player = [ NodePath("../EnemyShot") ]
+
+[node name="vision" type="Area2D" parent="AI"]
+visible = false
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="AI/vision"]
+position = Vector2( 0, 1.5 )
+shape = SubResource( 49 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 7 )
+z_index = 1
+frames = ExtResource( 14 )
+animation = "idle"
+frame = 1
+playing = true
+flip_h = true
+
+[node name="shot_position" type="Node2D" parent="animatedSprite"]
+position = Vector2( 22, 21 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( -0.5, 1.5 )
+shape = SubResource( 15 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+scale = Vector2( 2, 2 )
+rect = Rect2( -5, -5, 10, 10 )
+
+[node name="area2D" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+position = Vector2( 0, 1.5 )
+shape = SubResource( 48 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 2 )
+damage = 4.0
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 5 )
+max_freeze_hits = 3
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+stream = ExtResource( 10 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="BeePatrol" type="Node2D" parent="."]
+script = ExtResource( 6 )
+conflicting_moves = [ "EnemyShot" ]
+actions = [ "Event" ]
+area = 16
+travel_time = 1.0
+rest_duration = 1.0
+
+[node name="EnemyDeath" parent="." instance=ExtResource( 4 )]
+
+[node name="EnemyShot" type="Node2D" parent="."]
+script = ExtResource( 18 )
+debug_logs = true
+actions = [ "Event" ]
+animation = "armed_start"
+shot_duration = 0.5
+shot_animation = "shot"
+recover_animation = "recover"
+shot_position = NodePath("../animatedSprite/shot_position")
+projectile = ExtResource( 23 )
+use_shot_position = true
+extra_projectiles = [ ExtResource( 24 ), ExtResource( 22 ), ExtResource( 26 ), ExtResource( 21 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 25 ) ]
+point_time = 0.5
+charge_time = 0.75
+
+[node name="shot_sound" type="AudioStreamPlayer2D" parent="EnemyShot"]
+stream = ExtResource( 15 )
+volume_db = -12.0
+pitch_scale = 0.87
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="prepare" type="AudioStreamPlayer2D" parent="EnemyShot"]
+volume_db = 1.268
+pitch_scale = 0.9
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="turn" type="AudioStreamPlayer2D" parent="EnemyShot"]
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[connection signal="body_entered" from="AI/vision" to="AI" method="_on_vision_body_entered"]
+[connection signal="body_exited" from="AI/vision" to="AI" method="_on_vision_body_exited"]

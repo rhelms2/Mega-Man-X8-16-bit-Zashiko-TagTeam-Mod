@@ -1,0 +1,637 @@
+{ "frames": [
+   {
+    "filename": "sigma_enemy 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_enemy 1.ase",
+    "frame": { "x": 160, "y": 0, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_enemy 2.ase",
+    "frame": { "x": 320, "y": 0, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_enemy 3.ase",
+    "frame": { "x": 480, "y": 0, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "sigma_enemy 4.ase",
+    "frame": { "x": 640, "y": 0, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "sigma_enemy 5.ase",
+    "frame": { "x": 800, "y": 0, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 1600
+   },
+   {
+    "filename": "sigma_enemy 6.ase",
+    "frame": { "x": 960, "y": 0, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "sigma_enemy 7.ase",
+    "frame": { "x": 1120, "y": 0, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "sigma_enemy 8.ase",
+    "frame": { "x": 0, "y": 112, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 1000
+   },
+   {
+    "filename": "sigma_enemy 9.ase",
+    "frame": { "x": 160, "y": 112, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_enemy 10.ase",
+    "frame": { "x": 320, "y": 112, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_enemy 11.ase",
+    "frame": { "x": 480, "y": 112, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_enemy 12.ase",
+    "frame": { "x": 640, "y": 112, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_enemy 13.ase",
+    "frame": { "x": 800, "y": 112, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma_enemy 14.ase",
+    "frame": { "x": 960, "y": 112, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma_enemy 15.ase",
+    "frame": { "x": 1120, "y": 112, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma_enemy 16.ase",
+    "frame": { "x": 0, "y": 224, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma_enemy 17.ase",
+    "frame": { "x": 160, "y": 224, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma_enemy 18.ase",
+    "frame": { "x": 320, "y": 224, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma_enemy 19.ase",
+    "frame": { "x": 1120, "y": 112, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 252
+   },
+   {
+    "filename": "sigma_enemy 20.ase",
+    "frame": { "x": 480, "y": 224, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_enemy 21.ase",
+    "frame": { "x": 640, "y": 224, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_enemy 22.ase",
+    "frame": { "x": 800, "y": 224, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_enemy 23.ase",
+    "frame": { "x": 960, "y": 224, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 126
+   },
+   {
+    "filename": "sigma_enemy 24.ase",
+    "frame": { "x": 1120, "y": 0, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 126
+   },
+   {
+    "filename": "sigma_enemy 25.ase",
+    "frame": { "x": 0, "y": 112, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 126
+   },
+   {
+    "filename": "sigma_enemy 26.ase",
+    "frame": { "x": 1120, "y": 224, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_enemy 27.ase",
+    "frame": { "x": 0, "y": 336, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_enemy 28.ase",
+    "frame": { "x": 160, "y": 336, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 420
+   },
+   {
+    "filename": "sigma_enemy 29.ase",
+    "frame": { "x": 320, "y": 336, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_enemy 30.ase",
+    "frame": { "x": 480, "y": 336, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_enemy 31.ase",
+    "frame": { "x": 640, "y": 336, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_enemy 32.ase",
+    "frame": { "x": 800, "y": 224, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_enemy 33.ase",
+    "frame": { "x": 960, "y": 224, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 126
+   },
+   {
+    "filename": "sigma_enemy 34.ase",
+    "frame": { "x": 1120, "y": 0, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 126
+   },
+   {
+    "filename": "sigma_enemy 35.ase",
+    "frame": { "x": 0, "y": 112, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 126
+   },
+   {
+    "filename": "sigma_enemy 36.ase",
+    "frame": { "x": 800, "y": 336, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_enemy 37.ase",
+    "frame": { "x": 960, "y": 336, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_enemy 38.ase",
+    "frame": { "x": 1120, "y": 336, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_enemy 39.ase",
+    "frame": { "x": 0, "y": 448, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 70
+   },
+   {
+    "filename": "sigma_enemy 40.ase",
+    "frame": { "x": 160, "y": 448, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 70
+   },
+   {
+    "filename": "sigma_enemy 41.ase",
+    "frame": { "x": 320, "y": 448, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 600
+   },
+   {
+    "filename": "sigma_enemy 42.ase",
+    "frame": { "x": 480, "y": 448, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_enemy 43.ase",
+    "frame": { "x": 640, "y": 448, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_enemy 44.ase",
+    "frame": { "x": 800, "y": 448, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_enemy 45.ase",
+    "frame": { "x": 960, "y": 448, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 70
+   },
+   {
+    "filename": "sigma_enemy 46.ase",
+    "frame": { "x": 1120, "y": 448, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 70
+   },
+   {
+    "filename": "sigma_enemy 47.ase",
+    "frame": { "x": 0, "y": 560, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 600
+   },
+   {
+    "filename": "sigma_enemy 48.ase",
+    "frame": { "x": 160, "y": 560, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_enemy 49.ase",
+    "frame": { "x": 320, "y": 560, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_enemy 50.ase",
+    "frame": { "x": 480, "y": 560, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_enemy 51.ase",
+    "frame": { "x": 640, "y": 560, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 126
+   },
+   {
+    "filename": "sigma_enemy 52.ase",
+    "frame": { "x": 800, "y": 560, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_enemy 53.ase",
+    "frame": { "x": 960, "y": 560, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_enemy 54.ase",
+    "frame": { "x": 1120, "y": 560, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_enemy 55.ase",
+    "frame": { "x": 0, "y": 672, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_enemy 56.ase",
+    "frame": { "x": 160, "y": 672, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_enemy 57.ase",
+    "frame": { "x": 320, "y": 672, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_enemy 58.ase",
+    "frame": { "x": 480, "y": 672, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_enemy 59.ase",
+    "frame": { "x": 640, "y": 672, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_enemy 60.ase",
+    "frame": { "x": 800, "y": 672, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_enemy 61.ase",
+    "frame": { "x": 960, "y": 672, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_enemy 62.ase",
+    "frame": { "x": 1120, "y": 672, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "sigma_enemy 63.ase",
+    "frame": { "x": 0, "y": 784, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 500
+   },
+   {
+    "filename": "sigma_enemy 64.ase",
+    "frame": { "x": 160, "y": 784, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_enemy 65.ase",
+    "frame": { "x": 320, "y": 784, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_enemy 66.ase",
+    "frame": { "x": 0, "y": 112, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "sigma_enemy 67.ase",
+    "frame": { "x": 480, "y": 784, "w": 160, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 112 },
+    "sourceSize": { "w": 160, "h": 112 },
+    "duration": 444
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3.5-x64",
+  "image": "sigma_enemy.png",
+  "format": "RGBA8888",
+  "size": { "w": 1280, "h": 896 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "turn", "from": 0, "to": 2, "direction": "forward", "color": "#000000ff" },
+   { "name": "idle", "from": 3, "to": 8, "direction": "forward", "color": "#000000ff" },
+   { "name": "shield_prepare", "from": 9, "to": 12, "direction": "forward", "color": "#000000ff" },
+   { "name": "shield", "from": 13, "to": 18, "direction": "forward", "color": "#000000ff" },
+   { "name": "shield_end", "from": 19, "to": 25, "direction": "forward", "color": "#000000ff" },
+   { "name": "stun", "from": 26, "to": 35, "direction": "forward", "color": "#000000ff" },
+   { "name": "step_left", "from": 36, "to": 41, "direction": "forward", "color": "#000000ff" },
+   { "name": "step_right", "from": 42, "to": 47, "direction": "forward", "color": "#000000ff" },
+   { "name": "shot_prepare", "from": 48, "to": 51, "direction": "forward", "color": "#000000ff" },
+   { "name": "shot_loop", "from": 52, "to": 59, "direction": "forward", "color": "#000000ff" },
+   { "name": "shot", "from": 60, "to": 66, "direction": "forward", "color": "#000000ff" },
+   { "name": "death", "from": 67, "to": 67, "direction": "forward", "color": "#000000ff" }
+  ]
+ }
+}

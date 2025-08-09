@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/Actors/Player/Fall.gd" type="Script" id=1]
+[ext_resource path="res://src/Sounds/LAND.wav" type="AudioStream" id=2]
+
+[node name="Fall" type="Node2D"]
+script = ExtResource( 1 )
+conflicting_moves = [ "Anything" ]
+animation = "fall"
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 21, -2 )
+stream = ExtResource( 2 )
+volume_db = -5.333

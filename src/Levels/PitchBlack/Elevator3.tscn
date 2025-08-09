@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/Objects/FlyingPlatform/FlyingPlatformWOBox.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Objects/FlyingPlatform/FlyingPlatform.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Levels/PitchBlack/pitchblack_tileset.tsx" type="TileSet" id=4]
+
+[sub_resource type="Curve2D" id=4]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 19, -492, 0, 0, 0, 0, 19, 752 )
+}
+
+[node name="Elevator3" type="Node2D"]
+pause_mode = 1
+position = Vector2( 5445, 1782 )
+
+[node name="path2D" type="Path2D" parent="."]
+curve = SubResource( 4 )
+
+[node name="FlyingPlatform9" parent="path2D" instance=ExtResource( 1 )]
+position = Vector2( 19, -492 )
+loop = true
+
+[node name="FlyingPlatform10" parent="path2D" instance=ExtResource( 1 )]
+position = Vector2( 19, -336.466 )
+offset = 156.007
+loop = true
+
+[node name="FlyingPlatform3" parent="path2D" instance=ExtResource( 2 )]
+position = Vector2( 19, -180.96 )
+offset = 311.896
+loop = true
+
+[node name="FlyingPlatform" parent="path2D" instance=ExtResource( 1 )]
+position = Vector2( 19, -26.3141 )
+offset = 467.897
+loop = true
+
+[node name="FlyingPlatform5" parent="path2D" instance=ExtResource( 2 )]
+position = Vector2( 19, 127.705 )
+offset = 623.791
+loop = true
+
+[node name="FlyingPlatform2" parent="path2D" instance=ExtResource( 1 )]
+position = Vector2( 19, 281.756 )
+offset = 779.786
+loop = true
+
+[node name="FlyingPlatform4" parent="path2D" instance=ExtResource( 1 )]
+position = Vector2( 19, 437.947 )
+offset = 935.669
+loop = true
+
+[node name="FlyingPlatform8" parent="path2D" instance=ExtResource( 2 )]
+position = Vector2( 19, 593.779 )
+offset = 1091.68
+loop = true
+
+[node name="tileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -1638390, 181, 0, -1638389, 181, 0, -1638388, 181, 0, -1638387, 181, 0, -1638386, 181, 0, -1638385, 181, 0, -1638384, 181, 0, -1638383, 181, 0, -1572854, 181, 0, -1572853, 181, 0, -1572852, 181, 0, -1572851, 181, 0, -1572850, 181, 0, -1572849, 181, 0, -1572848, 181, 0, -1572847, 181, 0, -1507318, 181, 0, -1507317, 181, 0, -1507316, 181, 0, -1507315, 181, 0, -1507314, 181, 0, -1507313, 181, 0, -1507312, 181, 0, -1507311, 181, 0, -1441782, 181, 0, -1441781, 181, 0, -1441780, 181, 0, -1441779, 181, 0, -1441778, 181, 0, -1441777, 181, 0, -1441776, 181, 0, -1441775, 181, 0, -1376246, 181, 0, -1376245, 181, 0, -1376244, 181, 0, -1376243, 181, 0, -1376242, 181, 0, -1376241, 181, 0, -1376240, 181, 0, -1376239, 181, 0 )
+
+[node name="visibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+position = Vector2( 23.5, 136.5 )
+scale = Vector2( 21.45, 64.15 )

@@ -1,0 +1,118 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://src/AchievementSystem/Popup.gd" type="Script" id=1]
+[ext_resource path="res://src/Effects/Materials/AchieveIcon_mat.tres" type="Material" id=2]
+[ext_resource path="res://src/Sounds/FX - Achievement.wav" type="AudioStream" id=3]
+[ext_resource path="res://src/AchievementSystem/icon_bg.png" type="Texture" id=4]
+[ext_resource path="res://src/AchievementSystem/Icons/achievicon_default.png" type="Texture" id=5]
+[ext_resource path="res://src/System/save_icon.png" type="Texture" id=6]
+[ext_resource path="res://src/Fonts/OpenSans-SemiBold.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://src/AchievementSystem/save_icon.gd" type="Script" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+size = 14
+use_filter = true
+font_data = ExtResource( 7 )
+
+[node name="PopupAchievementLayer" type="CanvasLayer"]
+pause_mode = 2
+layer = 128
+script = ExtResource( 1 )
+
+[node name="popup" type="Control" parent="."]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -125.0
+margin_top = -41.0
+margin_right = -2.0
+margin_bottom = -2.0
+
+[node name="bg" type="Button" parent="popup"]
+modulate = Color( 0.509804, 0.52549, 0.588235, 0.780392 )
+margin_left = 4.0
+margin_top = 1.0
+margin_right = 120.0
+margin_bottom = 37.0
+focus_mode = 0
+disabled = true
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+
+[node name="title" type="Label" parent="popup"]
+anchor_right = 0.1
+margin_left = 39.0
+margin_top = 6.0
+margin_right = 223.7
+margin_bottom = 37.0
+rect_scale = Vector2( 0.4, 0.4 )
+mouse_filter = 0
+size_flags_vertical = 1
+custom_colors/font_color_shadow = Color( 0, 0, 0, 0.415686 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 2
+custom_fonts/font = SubResource( 1 )
+text = "Long Time No See..."
+autowrap = true
+clip_text = true
+max_lines_visible = 3
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="disc" type="Label" parent="popup"]
+modulate = Color( 0.43895, 0.451941, 0.503906, 1 )
+anchor_right = 0.1
+margin_left = 39.0
+margin_top = 15.0
+margin_right = 223.1
+margin_bottom = 58.0
+rect_scale = Vector2( 0.4, 0.4 )
+mouse_filter = 0
+size_flags_vertical = 1
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 2
+custom_fonts/font = SubResource( 1 )
+text = "Not Unlocked due to DebugMode."
+autowrap = true
+clip_text = true
+max_lines_visible = 3
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="icon_bg" type="TextureRect" parent="popup"]
+modulate = Color( 1, 1, 1, 0.360784 )
+margin_left = 7.0
+margin_top = 4.0
+margin_right = 37.0
+margin_bottom = 34.0
+texture = ExtResource( 4 )
+
+[node name="icon" type="TextureRect" parent="popup"]
+material = ExtResource( 2 )
+margin_left = 10.0
+margin_top = 7.0
+margin_right = 34.0
+margin_bottom = 31.0
+rect_clip_content = true
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 3
+
+[node name="achieve_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+bus = "SFX"
+
+[node name="save_icon" type="TextureRect" parent="."]
+pause_mode = 2
+margin_left = 373.0
+margin_top = 8.0
+margin_right = 389.0
+margin_bottom = 24.0
+rect_clip_content = true
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 3
+script = ExtResource( 8 )

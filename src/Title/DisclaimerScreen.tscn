@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/Fonts/X8bitmapfont.fnt" type="BitmapFont" id=1]
+[ext_resource path="res://src/Title/title_bg.png" type="Texture" id=2]
+[ext_resource path="res://src/Title/DisclaimerScreen.gd" type="Script" id=3]
+[ext_resource path="res://src/Options/Options.tscn" type="PackedScene" id=4]
+
+[node name="DisclaimerScreen" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="inspired" type="Label" parent="."]
+margin_left = 72.0
+margin_top = 38.0
+margin_right = 325.0
+margin_bottom = 171.0
+custom_colors/font_color = Color( 0.639216, 0.713726, 0.898039, 1 )
+custom_colors/font_color_shadow = Color( 0.270588, 0.270588, 0.270588, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "DISCLAIMER1"
+align = 1
+autowrap = true
+
+[node name="bg" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 199, 112 )
+z_index = -1000
+texture = ExtResource( 2 )
+
+[node name="fade" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 0 )
+position = Vector2( 198, 112 )
+z_index = 2
+texture = ExtResource( 2 )
+
+[node name="OptionsMenu" parent="." instance=ExtResource( 4 )]
+visible = false

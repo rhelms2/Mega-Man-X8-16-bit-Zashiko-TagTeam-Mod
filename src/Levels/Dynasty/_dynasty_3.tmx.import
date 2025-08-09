@@ -1,0 +1,22 @@
+[remap]
+
+importer="vnen.tiled_importer"
+type="PackedScene"
+path="res://.import/_dynasty_3.tmx-184744d6c0be2f2a8f67b39c322f5ae4.scn"
+
+[deps]
+
+source_file="res://src/Levels/Dynasty/_dynasty_3.tmx"
+dest_files=[ "res://.import/_dynasty_3.tmx-184744d6c0be2f2a8f67b39c322f5ae4.scn" ]
+
+[params]
+
+custom_properties=true
+tile_metadata=false
+uv_clip=false
+image_flags=7
+collision_layer=1
+embed_internal_images=false
+save_tiled_properties=false
+add_background=true
+post_import_script=""

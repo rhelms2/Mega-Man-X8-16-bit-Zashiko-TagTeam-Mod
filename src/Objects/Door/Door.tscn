@@ -1,0 +1,86 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://src/Sounds/Door - Open.wav" type="AudioStream" id=1]
+[ext_resource path="res://src/Sounds/Door - Close.wav" type="AudioStream" id=2]
+[ext_resource path="res://src/Objects/Door/Door.gd" type="Script" id=3]
+[ext_resource path="res://src/Objects/Door/boss_door.res" type="SpriteFrames" id=4]
+[ext_resource path="res://src/Effects/Explosion Particles.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Sounds/EXPLOSION.wav" type="AudioStream" id=6]
+[ext_resource path="res://src/Effects/Textures/blue_explosion.png" type="Texture" id=7]
+[ext_resource path="res://src/Effects/Materials/door_explosion.tres" type="Material" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 5, 13 )
+
+[sub_resource type="RectangleShape2D" id=32]
+extents = Vector2( 35, 24 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 8, 29 )
+
+[node name="Door" type="Node2D"]
+z_as_relative = false
+script = ExtResource( 3 )
+reopenable = true
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+pause_mode = 2
+frames = ExtResource( 4 )
+animation = "closed"
+
+[node name="area2D" type="Area2D" parent="."]
+position = Vector2( 0, 11 )
+collision_layer = 0
+collision_mask = 2
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+position = Vector2( -8, 0 )
+shape = SubResource( 1 )
+
+[node name="bike_check" type="Area2D" parent="."]
+visible = false
+position = Vector2( 0, 11 )
+collision_layer = 0
+collision_mask = 2
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="bike_check"]
+position = Vector2( 0, -11 )
+shape = SubResource( 32 )
+
+[node name="staticBody2D" type="StaticBody2D" parent="."]
+visible = false
+collision_mask = 0
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="staticBody2D"]
+shape = SubResource( 2 )
+
+[node name="open" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
+stream = ExtResource( 1 )
+volume_db = -9.226
+bus = "SFX"
+
+[node name="boss_close" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 2 )
+volume_db = -5.226
+bus = "SFX"
+
+[node name="Explosion Particles" parent="." instance=ExtResource( 5 )]
+position = Vector2( 0, 0 )
+z_index = 5
+z_as_relative = false
+process_material = ExtResource( 8 )
+texture = ExtResource( 7 )
+
+[node name="explosion_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+volume_db = -10.6
+pitch_scale = 1.16
+max_distance = 600.0
+attenuation = 0.05
+bus = "SFX"
+
+[connection signal="animation_finished" from="animatedSprite" to="." method="_on_animatedSprite_animation_finished"]
+[connection signal="body_entered" from="area2D" to="." method="_on_area2D_body_entered"]
+[connection signal="body_exited" from="area2D" to="." method="_on_area2D_body_exited"]
+[connection signal="body_entered" from="bike_check" to="." method="_on_bike_check_body_entered"]

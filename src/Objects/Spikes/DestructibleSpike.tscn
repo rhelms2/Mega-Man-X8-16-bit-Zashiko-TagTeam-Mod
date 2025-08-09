@@ -1,0 +1,96 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://src/Objects/Spike.gd" type="Script" id=1]
+[ext_resource path="res://src/Objects/Spikes/spike_01.png" type="Texture" id=2]
+[ext_resource path="res://src/Objects/Spikes/spike_03.png" type="Texture" id=3]
+[ext_resource path="res://src/Objects/Spikes/spike_02.png" type="Texture" id=4]
+[ext_resource path="res://src/Objects/Spikes/spike_00.png" type="Texture" id=5]
+[ext_resource path="res://src/Objects/Spikes/DestructibleSpike.gd" type="Script" id=6]
+[ext_resource path="res://src/Effects/Textures/remains_gray.png" type="Texture" id=7]
+[ext_resource path="res://src/Effects/Materials/spike_remains_particle.tres" type="Material" id=8]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=9]
+[ext_resource path="res://src/Sounds/FX - Rocks.ogg" type="AudioStream" id=10]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "middle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "middle_destroyed",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "side",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "side_destroyed",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 2, 4 )
+
+[sub_resource type="RectangleShape2D" id=4]
+
+[sub_resource type="CanvasItemMaterial" id=12]
+render_priority = -1
+particles_animation = true
+particles_anim_h_frames = 6
+particles_anim_v_frames = 3
+particles_anim_loop = false
+
+[node name="DestructibleSpike" type="AnimatedSprite"]
+z_index = 4
+frames = SubResource( 2 )
+animation = "middle"
+script = ExtResource( 6 )
+
+[node name="death_plane" type="Area2D" parent="."]
+position = Vector2( 0, 2 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 1 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="death_plane"]
+shape = SubResource( 3 )
+
+[node name="damage_detector" type="Area2D" parent="."]
+z_index = -1
+collision_layer = 0
+collision_mask = 6
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="damage_detector"]
+modulate = Color( 0.984314, 0, 0.6, 1 )
+shape = SubResource( 4 )
+
+[node name="remains_particles" type="Particles2D" parent="."]
+material = SubResource( 12 )
+position = Vector2( 0, 0.5 )
+z_index = -1
+emitting = false
+amount = 1
+lifetime = 2.0
+one_shot = true
+explosiveness = 1.0
+visibility_rect = Rect2( -600, -100, 1200, 200 )
+local_coords = false
+process_material = ExtResource( 8 )
+texture = ExtResource( 7 )
+
+[node name="break" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 10 )
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 9 )
+minimum_time = 0.15
+
+[connection signal="body_entered" from="death_plane" to="death_plane" method="_on_area2D_body_entered"]
+[connection signal="body_exited" from="death_plane" to="death_plane" method="_on_area2D_body_exited"]
+[connection signal="body_entered" from="damage_detector" to="." method="_on_damage_detector_body_entered"]

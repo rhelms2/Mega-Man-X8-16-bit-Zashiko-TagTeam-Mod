@@ -1,0 +1,22 @@
+[remap]
+
+importer="vnen.tiled_importer"
+type="PackedScene"
+path="res://.import/sigmapalace_full.tmx-998adea25a517436a6c360259d33498f.scn"
+
+[deps]
+
+source_file="res://src/Levels/SigmaPalace/sigmapalace_full.tmx"
+dest_files=[ "res://.import/sigmapalace_full.tmx-998adea25a517436a6c360259d33498f.scn" ]
+
+[params]
+
+custom_properties=true
+tile_metadata=false
+uv_clip=false
+image_flags=7
+collision_layer=1
+embed_internal_images=false
+save_tiled_properties=false
+add_background=true
+post_import_script=""

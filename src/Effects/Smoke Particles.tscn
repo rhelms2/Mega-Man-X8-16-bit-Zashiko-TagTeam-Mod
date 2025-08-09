@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/Effects/Textures/smoke.png" type="Texture" id=1]
+[ext_resource path="res://src/Effects/Materials/BossSmokeParticlesMedium.tres" type="Material" id=2]
+
+[sub_resource type="CanvasItemMaterial" id=20]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 3
+particles_anim_loop = true
+
+[node name="Smoke Particles" type="Particles2D"]
+material = SubResource( 20 )
+amount = 15
+lifetime = 0.75
+process_material = ExtResource( 2 )
+texture = ExtResource( 1 )

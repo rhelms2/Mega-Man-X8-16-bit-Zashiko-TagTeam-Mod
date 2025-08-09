@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - RideArmor - Intro.ogg-8c6dd213a51fcee00c139f06e49bd482.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - RideArmor - Intro.ogg"
+dest_files=[ "res://.import/OST - RideArmor - Intro.ogg-8c6dd213a51fcee00c139f06e49bd482.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/FX - Teleport End.wav-7d22b0363cc1aabd2ed4d6e8b13b9187.sample"
+
+[deps]
+
+source_file="res://src/Sounds/FX - Teleport End.wav"
+dest_files=[ "res://.import/FX - Teleport End.wav-7d22b0363cc1aabd2ed4d6e8b13b9187.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

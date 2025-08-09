@@ -1,0 +1,647 @@
+[gd_scene load_steps=80 format=2]
+
+[ext_resource path="res://src/Actors/Bosses/CopySigma/Intro.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Panda.gd" type="Script" id=2]
+[ext_resource path="res://src/Sounds/Bike - Land.wav" type="AudioStream" id=3]
+[ext_resource path="res://src/Actors/Bosses/CopySigma/copysigma.res" type="SpriteFrames" id=4]
+[ext_resource path="res://src/Effects/Materials/BossExplosion.tres" type="Material" id=5]
+[ext_resource path="res://src/Actors/Enemies/EnemyIdle.gd" type="Script" id=6]
+[ext_resource path="res://src/Actors/Bosses/BossAI.gd" type="Script" id=7]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=8]
+[ext_resource path="res://src/Actors/Modules/Enemy/BossDamage.gd" type="Script" id=9]
+[ext_resource path="res://src/Actors/Bosses/BossStun.gd" type="Script" id=10]
+[ext_resource path="res://src/Sounds/HIT_BOSS.wav" type="AudioStream" id=11]
+[ext_resource path="res://src/Effects/Materials/default_material.tres" type="Material" id=12]
+[ext_resource path="res://src/Actors/MeleeEnemyAttack.gd" type="Script" id=13]
+[ext_resource path="res://src/Actors/Bosses/CopySigma/LandSpikeProjectile.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/Effects/Textures/smoke.png" type="Texture" id=15]
+[ext_resource path="res://src/Effects/Materials/x_dash_smoke.tres" type="Material" id=16]
+[ext_resource path="res://src/Effects/Textures/simple_gradient.png" type="Texture" id=17]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=18]
+[ext_resource path="res://src/Sounds/Mantis - Dash.ogg" type="AudioStream" id=19]
+[ext_resource path="res://src/Sounds/Mantis - Cut2.ogg" type="AudioStream" id=20]
+[ext_resource path="res://src/Actors/Bosses/CopySigma/CopyHighSlash.gd" type="Script" id=21]
+[ext_resource path="res://src/Sounds/CopySigma - HighSlash.wav" type="AudioStream" id=22]
+[ext_resource path="res://src/Actors/Bosses/CopySigma/CopyDash.gd" type="Script" id=23]
+[ext_resource path="res://src/Actors/Bosses/CopySigma/CopyFlash.gd" type="Script" id=24]
+[ext_resource path="res://src/Sounds/CopySigma - Charge.wav" type="AudioStream" id=25]
+[ext_resource path="res://src/Sounds/Mantis - DeathImage.ogg" type="AudioStream" id=26]
+[ext_resource path="res://src/Actors/Bosses/CopySigma/CopyWallJump.gd" type="Script" id=27]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/Mantis - Jump.wav" type="AudioStream" id=28]
+[ext_resource path="res://src/Sounds/Yeti - Stomp.ogg" type="AudioStream" id=29]
+[ext_resource path="res://src/Actors/Bosses/CopySigma/CopyEyeFlare.gd" type="Script" id=30]
+[ext_resource path="res://src/Effects/Textures/elec_particles.png" type="Texture" id=31]
+[ext_resource path="res://src/Effects/Fire/pinkfire2.png" type="Texture" id=32]
+[ext_resource path="res://src/Effects/Fire/pinkfire1.png" type="Texture" id=33]
+[ext_resource path="res://src/Effects/Fire/pinkfire3.png" type="Texture" id=34]
+[ext_resource path="res://src/Effects/Materials/pinkfire_mat.tres" type="Material" id=35]
+[ext_resource path="res://src/Actors/Enemies/Shared/LongBossDeath.tscn" type="PackedScene" id=36]
+[ext_resource path="res://src/Actors/Bosses/CopySigma/eyeliners.gd" type="Script" id=37]
+[ext_resource path="res://src/Effects/Materials/eyeflashflames_particles.tres" type="Material" id=38]
+[ext_resource path="res://src/Actors/Bosses/CopySigma/line2D.gd" type="Script" id=39]
+[ext_resource path="res://src/Effects/Materials/BossSmokeParticlesMedium.tres" type="Material" id=40]
+[ext_resource path="res://src/Sounds/Sunflower - LaserLoop.ogg" type="AudioStream" id=41]
+[ext_resource path="res://src/Sounds/Sunflower - OrbCharge.ogg" type="AudioStream" id=42]
+[ext_resource path="res://src/Effects/Textures/white_screen.png" type="Texture" id=43]
+[ext_resource path="res://src/Actors/Bosses/CopySigma/flash.gd" type="Script" id=44]
+[ext_resource path="res://src/DialogSystem/Dialogs/Stages/CopySigma_Dialogue.tres" type="Resource" id=45]
+[ext_resource path="res://src/Actors/Bosses/CopySigma/lowslash.gd" type="Script" id=46]
+[ext_resource path="res://src/AchievementSystem/Achievements/COPYDEFEATED.tres" type="Resource" id=47]
+[ext_resource path="res://src/AchievementSystem/BossAchievementHandler.gd" type="Script" id=48]
+[ext_resource path="res://src/AchievementSystem/Achievements/COPYNAKED.tres" type="Resource" id=49]
+[ext_resource path="res://src/AchievementSystem/Achievements/COPYBUSTERONLY.tres" type="Resource" id=50]
+[ext_resource path="res://src/AchievementSystem/Achievements/COPYNODAMAGE.tres" type="Resource" id=51]
+
+[sub_resource type="RectangleShape2D" id=73]
+extents = Vector2( 14, 31 )
+
+[sub_resource type="AtlasTexture" id=76]
+atlas = ExtResource( 31 )
+region = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=77]
+atlas = ExtResource( 31 )
+region = Rect2( 16, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=78]
+atlas = ExtResource( 31 )
+region = Rect2( 32, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=79]
+atlas = ExtResource( 31 )
+region = Rect2( 0, 16, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=80]
+atlas = ExtResource( 31 )
+region = Rect2( 16, 16, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=81]
+atlas = ExtResource( 31 )
+region = Rect2( 32, 16, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=82]
+atlas = ExtResource( 31 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=83]
+atlas = ExtResource( 31 )
+region = Rect2( 16, 32, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=84]
+atlas = ExtResource( 31 )
+region = Rect2( 32, 32, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=85]
+animations = [ {
+"frames": [ SubResource( 76 ), SubResource( 77 ), SubResource( 78 ), SubResource( 79 ), SubResource( 80 ), SubResource( 81 ), SubResource( 82 ), SubResource( 83 ), SubResource( 84 ) ],
+"loop": true,
+"name": "default",
+"speed": 60.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=87]
+extents = Vector2( 14, 6 )
+
+[sub_resource type="RectangleShape2D" id=65]
+extents = Vector2( 14, 7.5 )
+
+[sub_resource type="RectangleShape2D" id=64]
+extents = Vector2( 14, 8 )
+
+[sub_resource type="RectangleShape2D" id=86]
+extents = Vector2( 14, 7.625 )
+
+[sub_resource type="CapsuleShape2D" id=58]
+radius = 19.6366
+height = 107.81
+
+[sub_resource type="CapsuleShape2D" id=59]
+radius = 12.4513
+height = 77.479
+
+[sub_resource type="CapsuleShape2D" id=63]
+radius = 12.4513
+height = 77.479
+
+[sub_resource type="CapsuleShape2D" id=62]
+radius = 27.0
+height = 40.0
+
+[sub_resource type="Shader" id=88]
+code = "shader_type canvas_item;
+
+uniform sampler2D textureNoise: hint_white;
+uniform float radius: hint_range(0.0, 1.0) = 0.459;
+uniform float effectControl: hint_range(0.0, 1.0) = 0.309;
+uniform float burnSpeed: hint_range(0.0, 1.0) = 0.076;
+uniform float shape: hint_range(0.0, 1.0) = 1.0;
+
+void fragment() {
+    vec2 centerDistVec = vec2(0.5) - UV;
+    
+	float distToCircleEdge = length(centerDistVec) * radius;
+	float distToSquareEdge = 0.5*(0.5 - min(min(UV.x, 1.0 - UV.x), min(UV.y, 1.0 - UV.y)));
+	float distToEdge = mix(distToCircleEdge,distToSquareEdge,shape);
+
+    float gradient = smoothstep(0.5, 0.5 - radius, distToEdge);
+
+    vec2 direction = vec2(0, 1) * burnSpeed;
+    float noiseValue = texture(textureNoise, UV + direction * TIME).r;
+
+    float opacity = step(radius, mix(gradient, noiseValue, effectControl) - distToEdge);
+
+    COLOR = texture(TEXTURE, UV) * vec4(1.0, 1.0, 1.0, opacity);
+}
+"
+
+[sub_resource type="OpenSimplexNoise" id=71]
+period = 35.6
+
+[sub_resource type="NoiseTexture" id=89]
+width = 1024
+height = 1024
+seamless = true
+noise = SubResource( 71 )
+
+[sub_resource type="ShaderMaterial" id=70]
+shader = SubResource( 88 )
+shader_param/radius = 0.4
+shader_param/effectControl = 0.714
+shader_param/burnSpeed = 0.182
+shader_param/shape = 1.0
+shader_param/textureNoise = SubResource( 89 )
+
+[sub_resource type="RectangleShape2D" id=68]
+extents = Vector2( 2000, 256 )
+
+[sub_resource type="Curve" id=52]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=43]
+curve = SubResource( 52 )
+
+[sub_resource type="ParticlesMaterial" id=53]
+resource_local_to_scene = true
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 43 )
+
+[sub_resource type="CanvasItemMaterial" id=61]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 3
+particles_anim_loop = false
+
+[node name="CopySigma" type="KinematicBody2D" groups=["Bosses"]]
+z_index = 6
+collision_layer = 0
+script = ExtResource( 2 )
+max_health = 240.0
+
+[node name="BossAI" type="Node2D" parent="."]
+script = ExtResource( 7 )
+time_between_attacks = Vector2( 0.016, 0.4 )
+play_desperation_music = false
+desperation_chance = 0.0
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource( 73 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 12 )
+frames = ExtResource( 4 )
+animation = "eye_loop"
+playing = true
+flip_h = true
+
+[node name="Eye" type="Node2D" parent="animatedSprite"]
+visible = false
+script = ExtResource( 37 )
+positions = [ -75, 80, -80, 40 ]
+
+[node name="rayCast2D" type="RayCast2D" parent="animatedSprite/Eye"]
+position = Vector2( 7, -23 )
+cast_to = Vector2( 0, 256 )
+
+[node name="line2D" type="Line2D" parent="animatedSprite/Eye"]
+position = Vector2( -1, 0 )
+points = PoolVector2Array( 124, 30, 6, -24 )
+width = 1.5
+default_color = Color( 0.972549, 0.662745, 1, 1 )
+script = ExtResource( 39 )
+
+[node name="collision" type="AnimatedSprite" parent="animatedSprite/Eye"]
+self_modulate = Color( 0.972549, 0.662745, 1, 1 )
+position = Vector2( 123, 30 )
+frames = SubResource( 85 )
+frame = 7
+playing = true
+flip_h = true
+
+[node name="fire1" type="Particles2D" parent="animatedSprite/Eye/collision"]
+material = ExtResource( 35 )
+position = Vector2( 0, -6 )
+z_index = 1
+amount = 7
+local_coords = false
+process_material = ExtResource( 38 )
+texture = ExtResource( 33 )
+
+[node name="fire2" type="Particles2D" parent="animatedSprite/Eye/collision"]
+material = ExtResource( 35 )
+position = Vector2( 0, -6 )
+z_index = 1
+amount = 5
+local_coords = false
+process_material = ExtResource( 38 )
+texture = ExtResource( 32 )
+
+[node name="fire3" type="Particles2D" parent="animatedSprite/Eye/collision"]
+material = ExtResource( 35 )
+position = Vector2( 0, -6 )
+z_index = 1
+amount = 6
+local_coords = false
+process_material = ExtResource( 38 )
+texture = ExtResource( 34 )
+
+[node name="Eye2" type="Node2D" parent="animatedSprite"]
+visible = false
+position = Vector2( 4, 0 )
+script = ExtResource( 37 )
+positions = [ -70, -90, 65, 70 ]
+
+[node name="rayCast2D" type="RayCast2D" parent="animatedSprite/Eye2"]
+position = Vector2( 7, -23 )
+cast_to = Vector2( 0, 256 )
+
+[node name="line2D" type="Line2D" parent="animatedSprite/Eye2"]
+position = Vector2( -1, 0 )
+points = PoolVector2Array( 124, 30, 6, -24 )
+width = 1.5
+default_color = Color( 0.972549, 0.662745, 1, 1 )
+script = ExtResource( 39 )
+
+[node name="collision" type="AnimatedSprite" parent="animatedSprite/Eye2"]
+self_modulate = Color( 0.972549, 0.662745, 1, 1 )
+position = Vector2( 123, 30 )
+frames = SubResource( 85 )
+frame = 6
+playing = true
+flip_h = true
+
+[node name="fire1" type="Particles2D" parent="animatedSprite/Eye2/collision"]
+material = ExtResource( 35 )
+position = Vector2( 0, -6 )
+z_index = 1
+amount = 7
+local_coords = false
+process_material = ExtResource( 38 )
+texture = ExtResource( 33 )
+
+[node name="fire2" type="Particles2D" parent="animatedSprite/Eye2/collision"]
+material = ExtResource( 35 )
+position = Vector2( 0, -6 )
+z_index = 1
+amount = 5
+local_coords = false
+process_material = ExtResource( 38 )
+texture = ExtResource( 32 )
+
+[node name="fire3" type="Particles2D" parent="animatedSprite/Eye2/collision"]
+material = ExtResource( 35 )
+position = Vector2( 0, -6 )
+z_index = 1
+amount = 6
+local_coords = false
+process_material = ExtResource( 38 )
+texture = ExtResource( 34 )
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="high2" type="CollisionShape2D" parent="area2D"]
+position = Vector2( 0, -21 )
+shape = SubResource( 87 )
+
+[node name="high" type="CollisionShape2D" parent="area2D"]
+position = Vector2( 0, -7.5 )
+shape = SubResource( 65 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+position = Vector2( 0, 8 )
+shape = SubResource( 64 )
+
+[node name="low" type="CollisionShape2D" parent="area2D"]
+position = Vector2( 0, 23.625 )
+shape = SubResource( 86 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+position = Vector2( -6.5, 3.5 )
+scale = Vector2( 4.35, 4.25 )
+
+[node name="Intro" type="Node2D" parent="."]
+script = ExtResource( 1 )
+dialogue = ExtResource( 45 )
+defeated_var = "copy_sigma_defeated"
+
+[node name="Idle" type="Node2D" parent="."]
+script = ExtResource( 6 )
+conflicting_moves = [ "Anything" ]
+animation = "idle"
+
+[node name="CopyDash" type="Node2D" parent="."]
+script = ExtResource( 23 )
+actions = [ "Event" ]
+
+[node name="highslash" type="Node2D" parent="CopyDash"]
+visible = false
+script = ExtResource( 13 )
+active = false
+damage = 10.0
+active_duration = 0.05
+owner_character = NodePath("../..")
+damage_in_combo = 10.0
+
+[node name="area2D" type="Area2D" parent="CopyDash/highslash"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="CopyDash/highslash/area2D"]
+position = Vector2( 42, -13 )
+rotation = 1.67552
+shape = SubResource( 58 )
+
+[node name="lowslash" type="Node2D" parent="CopyDash"]
+visible = false
+script = ExtResource( 46 )
+__meta__ = {
+"_editor_description_": ""
+}
+active = false
+damage = 10.0
+active_duration = 0.05
+owner_character = NodePath("../..")
+previous_combo = NodePath("../highslash")
+
+[node name="area2D" type="Area2D" parent="CopyDash/lowslash"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="CopyDash/lowslash/area2D"]
+position = Vector2( 67, 7 )
+rotation = 1.34041
+shape = SubResource( 59 )
+
+[node name="dash" type="AudioStreamPlayer2D" parent="CopyDash"]
+stream = ExtResource( 19 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 18 )
+
+[node name="slash" type="AudioStreamPlayer2D" parent="CopyDash"]
+stream = ExtResource( 20 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 18 )
+
+[node name="CopyHighSlash" type="Node2D" parent="."]
+script = ExtResource( 21 )
+projectile = ExtResource( 14 )
+
+[node name="lowslash" type="Node2D" parent="CopyHighSlash"]
+visible = false
+script = ExtResource( 13 )
+active = false
+damage = 10.0
+active_duration = 3.0
+owner_character = NodePath("../..")
+
+[node name="area2D" type="Area2D" parent="CopyHighSlash/lowslash"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="CopyHighSlash/lowslash/area2D"]
+position = Vector2( 29, 23 )
+rotation = 1.5708
+shape = SubResource( 63 )
+
+[node name="highslash" type="Node2D" parent="CopyHighSlash"]
+visible = false
+script = ExtResource( 13 )
+active = false
+damage = 10.0
+active_duration = 2.0
+owner_character = NodePath("../..")
+previous_combo = NodePath("../lowslash")
+
+[node name="area2D" type="Area2D" parent="CopyHighSlash/highslash"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="CopyHighSlash/highslash/area2D"]
+position = Vector2( 45, -16 )
+rotation = 0.150098
+shape = SubResource( 62 )
+
+[node name="dash" type="AudioStreamPlayer2D" parent="CopyHighSlash"]
+stream = ExtResource( 19 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 18 )
+
+[node name="slash" type="AudioStreamPlayer2D" parent="CopyHighSlash"]
+stream = ExtResource( 29 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 18 )
+
+[node name="land" type="AudioStreamPlayer2D" parent="CopyHighSlash"]
+stream = ExtResource( 3 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 18 )
+
+[node name="CopyFlash" type="Node2D" parent="."]
+script = ExtResource( 24 )
+
+[node name="charge" type="AudioStreamPlayer2D" parent="CopyFlash"]
+stream = ExtResource( 25 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 18 )
+
+[node name="beam" type="AudioStreamPlayer2D" parent="CopyFlash"]
+stream = ExtResource( 26 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 18 )
+
+[node name="flash" type="Sprite" parent="CopyFlash"]
+modulate = Color( 1, 1, 1, 0 )
+material = SubResource( 70 )
+position = Vector2( 0, -93 )
+scale = Vector2( 16, 3 )
+z_index = -1
+texture = ExtResource( 17 )
+
+[node name="flash_area" type="Node2D" parent="CopyFlash"]
+position = Vector2( 0, -9 )
+script = ExtResource( 13 )
+active = false
+damage = 16.0
+active_duration = 0.05
+owner_character = NodePath("../..")
+
+[node name="area2D" type="Area2D" parent="CopyFlash/flash_area"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="CopyFlash/flash_area/area2D"]
+position = Vector2( 0, -244 )
+shape = SubResource( 68 )
+
+[node name="CopyWallJump" type="Node2D" parent="."]
+script = ExtResource( 27 )
+projectile = ExtResource( 14 )
+
+[node name="land" type="AudioStreamPlayer2D" parent="CopyWallJump"]
+stream = ExtResource( 3 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 18 )
+
+[node name="jump" type="AudioStreamPlayer2D" parent="CopyWallJump"]
+stream = ExtResource( 28 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 18 )
+
+[node name="dive" type="AudioStreamPlayer2D" parent="CopyWallJump"]
+stream = ExtResource( 29 )
+pitch_scale = 1.1
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 18 )
+
+[node name="CopyEyeFlare" type="Node2D" parent="."]
+script = ExtResource( 30 )
+desperation_attack = true
+
+[node name="charge" type="AudioStreamPlayer2D" parent="CopyEyeFlare"]
+stream = ExtResource( 42 )
+volume_db = 4.0
+pitch_scale = 0.8
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 18 )
+
+[node name="beam" type="AudioStreamPlayer2D" parent="CopyEyeFlare"]
+stream = ExtResource( 41 )
+volume_db = 4.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 18 )
+
+[node name="flash" type="Sprite" parent="CopyEyeFlare"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 0, 46 )
+scale = Vector2( 106.25, 15.0625 )
+z_index = 25
+texture = ExtResource( 43 )
+script = ExtResource( 44 )
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 9 )
+invulnerability_time = 0.1
+max_flash_time = 0.35
+weakenesses = [ "DarkArrow", "BlackArrow", "Rasetsusen" ]
+weakness_multiplier = 1.5
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+pause_mode = 2
+stream = ExtResource( 11 )
+max_distance = 600.0
+bus = "SFX"
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 8 )
+active = false
+damage = 10.0
+
+[node name="BossDeath" parent="." instance=ExtResource( 36 )]
+position = Vector2( 0, 0 )
+death_animation = "death"
+force_reploid_death = true
+defeated_flag = "copy_sigma_defeated"
+
+[node name="Explosion Particles" parent="BossDeath" index="0"]
+amount = 24
+process_material = ExtResource( 5 )
+
+[node name="Smoke Particles" parent="BossDeath" index="1"]
+process_material = ExtResource( 40 )
+
+[node name="Remains" parent="BossDeath" index="4"]
+process_material = SubResource( 53 )
+
+[node name="BossStun" type="Node2D" parent="."]
+script = ExtResource( 10 )
+conflicting_moves = [ "BossDeath" ]
+actions = [ "Event" ]
+animation = "death"
+horizontal_velocity = 120.0
+jump_velocity = 150.0
+
+[node name="smoke_dash" type="Particles2D" parent="."]
+material = SubResource( 61 )
+position = Vector2( 0, 29 )
+z_index = 1
+emitting = false
+amount = 20
+lifetime = 0.75
+local_coords = false
+process_material = ExtResource( 16 )
+texture = ExtResource( 15 )
+
+[node name="sword" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 22 )
+volume_db = -7.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 18 )
+
+[node name="AchievementHandler" type="Node" parent="."]
+script = ExtResource( 48 )
+defeated_any = false
+no_damage = ExtResource( 51 )
+buster_only = ExtResource( 50 )
+naked = ExtResource( 49 )
+defeated = ExtResource( 47 )
+
+[editable path="BossDeath"]

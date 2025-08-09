@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Mantis - DarkArrow.ogg-7608f428a532aec4501c49bb57268f41.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/Mantis - DarkArrow.ogg"
+dest_files=[ "res://.import/Mantis - DarkArrow.ogg-7608f428a532aec4501c49bb57268f41.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

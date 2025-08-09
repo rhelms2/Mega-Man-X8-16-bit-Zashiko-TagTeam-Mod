@@ -1,0 +1,229 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://src/Actors/Enemies/WallEnemy/wallenemy.res" type="SpriteFrames" id=1]
+[ext_resource path="res://src/Actors/Enemies/WallEnemy/BlockPassage.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Enemies/AI.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/Enemies/WallEnemy/bottomAnimation.gd" type="Script" id=4]
+[ext_resource path="res://src/Effects/Explosion Particles.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Actors/Enemies/WallEnemy/WallEnemy.gd" type="Script" id=6]
+[ext_resource path="res://src/Effects/Remains Particle.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Sounds/59 - MMX - Enemy Die (4).wav" type="AudioStream" id=8]
+[ext_resource path="res://src/Actors/Enemies/WallEnemy/WallDeath.gd" type="Script" id=9]
+[ext_resource path="res://src/Actors/Modules/Enemy/EnemyDamage.gd" type="Script" id=10]
+[ext_resource path="res://src/Actors/Enemies/WallEnemy/enemybarrier.png" type="Texture" id=11]
+[ext_resource path="res://src/Actors/Enemies/WallEnemy/AlarmAwareness.gd" type="Script" id=12]
+[ext_resource path="res://src/Effects/enemy_shader.tres" type="Shader" id=13]
+[ext_resource path="res://src/Sounds/HIT.wav" type="AudioStream" id=14]
+[ext_resource path="res://src/Actors/Enemies/SwordReploid/reploid_remains_palette.png" type="Texture" id=15]
+
+[sub_resource type="RectangleShape2D" id=49]
+extents = Vector2( 128, 128 )
+
+[sub_resource type="ShaderMaterial" id=57]
+resource_local_to_scene = true
+shader = ExtResource( 13 )
+shader_param/Flash = 0.0
+shader_param/Should_Blink = 0.0
+shader_param/Darken = 1.0
+shader_param/Alpha = 1.0
+shader_param/Alpha_Blink = 0.0
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 13.5, 15.5 )
+
+[sub_resource type="RectangleShape2D" id=48]
+extents = Vector2( 10, 0.5 )
+
+[sub_resource type="RectangleShape2D" id=50]
+extents = Vector2( 10, 0.5 )
+
+[sub_resource type="CanvasItemMaterial" id=8]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 4
+particles_anim_loop = false
+
+[sub_resource type="Curve" id=240]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=239]
+curve = SubResource( 240 )
+
+[sub_resource type="ParticlesMaterial" id=245]
+resource_local_to_scene = true
+resource_name = "explosion"
+emission_shape = 1
+emission_sphere_radius = 25.0
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 239 )
+
+[sub_resource type="CanvasItemMaterial" id=66]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 4
+particles_anim_loop = false
+
+[sub_resource type="Curve" id=244]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=243]
+curve = SubResource( 244 )
+
+[sub_resource type="ParticlesMaterial" id=246]
+resource_local_to_scene = true
+resource_name = "remains_single"
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 243 )
+
+[node name="WallEnemy" type="KinematicBody2D" groups=["Enemies"]]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource( 6 )
+max_health = 10.0
+
+[node name="AI" type="Node2D" parent="."]
+script = ExtResource( 3 )
+on_get_hit = [ NodePath("../BlockPassage") ]
+on_external_event = [ NodePath("../BlockPassage") ]
+
+[node name="vision" type="Area2D" parent="AI"]
+visible = false
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="AI/vision"]
+position = Vector2( 0, 1.5 )
+shape = SubResource( 49 )
+
+[node name="WallEnemyAlarmAwareness" type="Node2D" parent="AI"]
+script = ExtResource( 12 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = SubResource( 57 )
+z_index = 1
+frames = ExtResource( 1 )
+animation = "rest"
+playing = true
+flip_h = true
+
+[node name="bottomSprite" type="AnimatedSprite" parent="."]
+material = SubResource( 57 )
+z_index = 1
+frames = ExtResource( 1 )
+animation = "closed"
+playing = true
+flip_h = true
+script = ExtResource( 4 )
+
+[node name="rayCast2D" type="RayCast2D" parent="bottomSprite"]
+position = Vector2( 0, 0.5 )
+enabled = true
+cast_to = Vector2( 0, 8 )
+collide_with_areas = true
+
+[node name="ScrewTexture" type="Line2D" parent="."]
+material = SubResource( 57 )
+position = Vector2( 0, -8 )
+points = PoolVector2Array( 0, 0, 0, 0 )
+width = 16.0
+default_color = Color( 1, 1, 1, 1 )
+texture = ExtResource( 11 )
+texture_mode = 1
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -0.5, 1.5 )
+shape = SubResource( 15 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+scale = Vector2( 2, 2 )
+rect = Rect2( -5, -5, 10, 10 )
+
+[node name="area2D" type="Area2D" parent="."]
+visible = false
+position = Vector2( 0, -24 )
+scale = Vector2( 1, 32 )
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 48 )
+
+[node name="BlockPassage" type="Node2D" parent="."]
+script = ExtResource( 2 )
+actions = [ "Event" ]
+animation = "alert"
+speed = 250.0
+
+[node name="ceilcast" type="RayCast2D" parent="BlockPassage"]
+position = Vector2( 0, -25 )
+enabled = true
+cast_to = Vector2( 0, -64 )
+collide_with_areas = true
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 10 )
+max_freeze_hits = 6
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+stream = ExtResource( 14 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="WallArea" type="StaticBody2D" parent="."]
+position = Vector2( 0, -24 )
+scale = Vector2( 1, 24 )
+collision_layer = 512
+collision_mask = 0
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="WallArea"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 50 )
+
+[node name="EnemyDeath" type="Node2D" parent="."]
+position = Vector2( 0, 8 )
+script = ExtResource( 9 )
+explosion_duration = 1.0
+
+[node name="Explosion Particles" parent="EnemyDeath" instance=ExtResource( 5 )]
+material = SubResource( 8 )
+process_material = SubResource( 245 )
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="EnemyDeath"]
+stream = ExtResource( 8 )
+volume_db = -8.0
+max_distance = 600.0
+attenuation = 0.951366
+bus = "SFX"
+
+[node name="Remains" parent="EnemyDeath" instance=ExtResource( 7 )]
+material = SubResource( 66 )
+process_material = SubResource( 246 )
+
+[node name="remains_particles" parent="EnemyDeath/Remains" index="0"]
+texture = ExtResource( 15 )
+
+[connection signal="screen_entered" from="visibilityNotifier2D" to="." method="_on_visibilityNotifier2D_screen_entered"]
+
+[editable path="EnemyDeath/Remains"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/FX - Subtank Charge.ogg-14c1567370ca9e03e436032971a1c75d.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/FX - Subtank Charge.ogg"
+dest_files=[ "res://.import/FX - Subtank Charge.ogg-14c1567370ca9e03e436032971a1c75d.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,257 @@
+[gd_scene load_steps=47 format=2]
+
+[ext_resource path="res://src/Effects/Textures/strong_lightning_joint.png" type="Texture" id=1]
+[ext_resource path="res://src/Effects/StrongLightning/strong_lightning_00.png" type="Texture" id=2]
+[ext_resource path="res://src/Actors/Bosses/GigaboltManowar/StrongLightning.gd" type="Script" id=3]
+[ext_resource path="res://src/Effects/StrongLightning/strong_lightning_01.png" type="Texture" id=4]
+[ext_resource path="res://src/Effects/StrongLightning/strong_lightning_03.png" type="Texture" id=5]
+[ext_resource path="res://src/Effects/StrongLightning/strong_lightning_05.png" type="Texture" id=6]
+[ext_resource path="res://src/Effects/StrongLightning/strong_lightning_06.png" type="Texture" id=7]
+[ext_resource path="res://src/Effects/StrongLightning/strong_lightning_09.png" type="Texture" id=8]
+[ext_resource path="res://src/Effects/StrongLightning/strong_lightning_04.png" type="Texture" id=9]
+[ext_resource path="res://src/Effects/StrongLightning/strong_lightning_08.png" type="Texture" id=10]
+[ext_resource path="res://src/Effects/StrongLightning/strong_lightning_02.png" type="Texture" id=11]
+[ext_resource path="res://src/Effects/StrongLightning/strong_lightning_07.png" type="Texture" id=12]
+[ext_resource path="res://src/Effects/Textures/lightning_indicator.png" type="Texture" id=13]
+[ext_resource path="res://src/Effects/Textures/smoke.png" type="Texture" id=14]
+[ext_resource path="res://src/Effects/Materials/sparks_stron_lightning_particles.tres" type="Material" id=15]
+[ext_resource path="res://src/Effects/Textures/elec_particles.png" type="Texture" id=16]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=17]
+[ext_resource path="res://src/Sounds/Manowar - Warning.wav" type="AudioStream" id=18]
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 13 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 13 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 13 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 13 )
+region = Rect2( 32, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 13 )
+region = Rect2( 64, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 13 )
+region = Rect2( 96, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 13 )
+region = Rect2( 0, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 13 )
+region = Rect2( 32, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 13 )
+region = Rect2( 64, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 13 )
+region = Rect2( 96, 64, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=24]
+animations = [ {
+"frames": [ SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ) ],
+"loop": true,
+"name": "default",
+"speed": 30.0
+} ]
+
+[sub_resource type="CanvasItemMaterial" id=25]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 3
+particles_anim_loop = false
+
+[sub_resource type="CanvasItemMaterial" id=100]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 3
+particles_anim_loop = false
+
+[sub_resource type="ParticlesMaterial" id=101]
+lifetime_randomness = 0.51
+emission_shape = 2
+emission_box_extents = Vector3( 8, 32, 0 )
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+gravity = Vector3( 0, -200, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 250.0
+anim_speed = 1.0
+anim_offset_random = 1.0
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 48, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 48, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 48, 48, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 96, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 1 )
+region = Rect2( 48, 96, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 144, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 1 )
+region = Rect2( 48, 144, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 192, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 1 )
+region = Rect2( 48, 192, 48, 48 )
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
+"loop": true,
+"name": "default",
+"speed": 42.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=26]
+extents = Vector2( 14, 56 )
+
+[node name="StrongLightning" type="Node2D"]
+z_index = 5
+script = ExtResource( 3 )
+frames = [ ExtResource( 2 ), ExtResource( 4 ), ExtResource( 11 ), ExtResource( 5 ), ExtResource( 9 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 12 ), ExtResource( 10 ), ExtResource( 8 ) ]
+
+[node name="indicator" type="AnimatedSprite" parent="."]
+position = Vector2( 100, 0 )
+z_index = 20
+frames = SubResource( 24 )
+playing = true
+offset = Vector2( 0, -12 )
+
+[node name="warning" type="AudioStreamPlayer2D" parent="indicator"]
+position = Vector2( 0, 75 )
+stream = ExtResource( 18 )
+volume_db = -6.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 17 )
+
+[node name="collision" type="Particles2D" parent="."]
+material = SubResource( 25 )
+position = Vector2( 100, 0 )
+emitting = false
+amount = 48
+lifetime = 0.75
+one_shot = true
+explosiveness = 1.0
+local_coords = false
+process_material = ExtResource( 15 )
+texture = ExtResource( 14 )
+
+[node name="end" type="Particles2D" parent="."]
+material = SubResource( 100 )
+position = Vector2( 100, 36 )
+emitting = false
+amount = 3
+lifetime = 0.25
+one_shot = true
+explosiveness = 0.53
+local_coords = false
+process_material = SubResource( 101 )
+texture = ExtResource( 16 )
+
+[node name="end2" type="Particles2D" parent="."]
+material = SubResource( 100 )
+position = Vector2( 100, 36 )
+emitting = false
+amount = 3
+lifetime = 0.25
+one_shot = true
+explosiveness = 0.53
+local_coords = false
+process_material = SubResource( 101 )
+texture = ExtResource( 16 )
+
+[node name="start" type="AnimatedSprite" parent="."]
+frames = SubResource( 11 )
+frame = 9
+playing = true
+
+[node name="line" type="Line2D" parent="."]
+points = PoolVector2Array( 0, 0, 0, 64 )
+width = 48.0
+default_color = Color( 1, 1, 1, 1 )
+texture = ExtResource( 2 )
+texture_mode = 1
+
+[node name="joint" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 64 )
+frames = SubResource( 11 )
+frame = 9
+playing = true
+
+[node name="line2" type="Line2D" parent="."]
+position = Vector2( 0, 64 )
+points = PoolVector2Array( 0, 0, 0, 192 )
+width = 48.0
+default_color = Color( 1, 1, 1, 1 )
+texture = ExtResource( 2 )
+texture_mode = 1
+
+[node name="finish" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 256 )
+frames = SubResource( 11 )
+frame = 9
+playing = true
+
+[node name="start_right_raycast" type="RayCast2D" parent="."]
+collision_mask = 2
+
+[node name="start_left_raycast" type="RayCast2D" parent="."]
+collision_mask = 2
+
+[node name="lower_damage" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="lower_damage"]
+position = Vector2( 0, 46 )
+shape = SubResource( 26 )
+
+[connection signal="body_entered" from="lower_damage" to="." method="_on_lower_damage_body_entered"]
+[connection signal="body_exited" from="lower_damage" to="." method="_on_lower_damage_body_exited"]

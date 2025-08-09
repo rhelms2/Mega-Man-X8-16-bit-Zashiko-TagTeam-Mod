@@ -1,0 +1,22 @@
+[remap]
+
+importer="vnen.tiled_importer"
+type="PackedScene"
+path="res://.import/tiled_ceilingdoor.tmx-73a071e06e99e0c060e72b375cb362ad.scn"
+
+[deps]
+
+source_file="res://src/Levels/NoahsPark/tiled_ceilingdoor.tmx"
+dest_files=[ "res://.import/tiled_ceilingdoor.tmx-73a071e06e99e0c060e72b375cb362ad.scn" ]
+
+[params]
+
+custom_properties=true
+tile_metadata=false
+uv_clip=true
+image_flags=7
+collision_layer=1
+embed_internal_images=false
+save_tiled_properties=false
+add_background=true
+post_import_script=""

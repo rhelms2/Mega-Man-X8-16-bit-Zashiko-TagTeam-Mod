@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Panda - Drill Ground.ogg-dd5f14b66ef472b0978e8a17e1e51bdd.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/Panda - Drill Ground.ogg"
+dest_files=[ "res://.import/Panda - Drill Ground.ogg-dd5f14b66ef472b0978e8a17e1e51bdd.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,164 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://src/Actors/Enemies/Shared/QuickEnemyDeath.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Effects/enemy_shader.tres" type="Shader" id=4]
+[ext_resource path="res://src/Actors/Bosses/GravityAntonion/GravityBox.gd" type="Script" id=6]
+[ext_resource path="res://src/Actors/Bosses/GravityAntonion/GravityProjectilePursuit.gd" type="Script" id=7]
+[ext_resource path="res://src/Actors/Bosses/GravityAntonion/BoxCrash.gd" type="Script" id=8]
+[ext_resource path="res://src/Sounds/HIT.wav" type="AudioStream" id=9]
+[ext_resource path="res://src/Actors/Modules/Enemy/EnemyDamage.gd" type="Script" id=10]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=11]
+[ext_resource path="res://src/Actors/Enemies/AI.gd" type="Script" id=12]
+[ext_resource path="res://src/Effects/Textures/remains_gravity.png" type="Texture" id=14]
+[ext_resource path="res://src/Actors/Bosses/GravityAntonion/gravity_projectile.res" type="SpriteFrames" id=15]
+
+[sub_resource type="RectangleShape2D" id=72]
+extents = Vector2( 51.5, 30 )
+
+[sub_resource type="ShaderMaterial" id=63]
+resource_local_to_scene = true
+shader = ExtResource( 4 )
+shader_param/Flash = 0.0
+shader_param/Should_Blink = 0.0
+shader_param/Darken = 1.0
+shader_param/Alpha = 1.0
+shader_param/Alpha_Blink = 0.0
+
+[sub_resource type="RectangleShape2D" id=68]
+extents = Vector2( 26, 26.5 )
+
+[sub_resource type="RectangleShape2D" id=246]
+extents = Vector2( 15, 17 )
+
+[sub_resource type="Curve" id=238]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=239]
+curve = SubResource( 238 )
+
+[sub_resource type="ParticlesMaterial" id=247]
+resource_local_to_scene = true
+resource_name = "explosion"
+emission_shape = 1
+emission_sphere_radius = 25.0
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 239 )
+
+[sub_resource type="Curve" id=242]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=243]
+curve = SubResource( 242 )
+
+[sub_resource type="ParticlesMaterial" id=248]
+resource_local_to_scene = true
+resource_name = "remains_single"
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 243 )
+
+[node name="GravityProjectile" type="KinematicBody2D" groups=["Enemies"]]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource( 6 )
+max_health = 16.0
+
+[node name="AI" type="Node2D" parent="."]
+script = ExtResource( 12 )
+on_enter_screen = [ NodePath("../Pursuit") ]
+on_damage_on_touch_player = [ NodePath("../Crash") ]
+
+[node name="vision" type="Area2D" parent="AI"]
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="AI/vision"]
+visible = false
+position = Vector2( -0.5, 0 )
+shape = SubResource( 72 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = SubResource( 63 )
+z_index = 1
+frames = ExtResource( 15 )
+animation = "idle"
+frame = 13
+playing = true
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 0, 3.5 )
+shape = SubResource( 68 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+scale = Vector2( 6, 4.8 )
+rect = Rect2( -5, -5, 10, 10 )
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+shape = SubResource( 246 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 11 )
+active = false
+damage = 3.0
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 10 )
+minimum_damage = 2.0
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+stream = ExtResource( 9 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="Pursuit" type="Node2D" parent="."]
+script = ExtResource( 7 )
+conflicting_moves = [ "Crash" ]
+actions = [ "Event" ]
+horizontal_velocity = 30.0
+
+[node name="Crash" type="Node2D" parent="."]
+script = ExtResource( 8 )
+actions = [ "Event" ]
+
+[node name="EnemyDeath" parent="." instance=ExtResource( 1 )]
+should_spawn_item = false
+should_emit_kill_signal = false
+
+[node name="Explosion Particles" parent="EnemyDeath" index="0"]
+process_material = SubResource( 247 )
+
+[node name="Remains" parent="EnemyDeath" index="1"]
+process_material = SubResource( 248 )
+
+[node name="remains_particles" parent="EnemyDeath/Remains" index="0"]
+texture = ExtResource( 14 )
+
+[connection signal="body_entered" from="AI/vision" to="AI" method="_on_vision_body_entered"]
+[connection signal="body_exited" from="AI/vision" to="AI" method="_on_vision_body_exited"]
+
+[editable path="EnemyDeath"]

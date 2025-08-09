@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Yeti - Quake Up.ogg-644db1612c0780fa049f978d5b7a905a.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/Yeti - Quake Up.ogg"
+dest_files=[ "res://.import/Yeti - Quake Up.ogg-644db1612c0780fa049f978d5b7a905a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

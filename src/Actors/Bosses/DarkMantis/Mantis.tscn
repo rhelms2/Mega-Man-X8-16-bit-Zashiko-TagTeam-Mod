@@ -1,0 +1,435 @@
+[gd_scene load_steps=51 format=2]
+
+[ext_resource path="res://src/Actors/Enemies/Shared/LongBossDeath.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Effects/Materials/BossSmokeParticlesMedium.tres" type="Material" id=2]
+[ext_resource path="res://src/Effects/Materials/BossExplosion.tres" type="Material" id=3]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=4]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/Idle.gd" type="Script" id=5]
+[ext_resource path="res://src/Actors/Panda.gd" type="Script" id=6]
+[ext_resource path="res://src/Actors/Modules/Enemy/BossDamage.gd" type="Script" id=7]
+[ext_resource path="res://src/DialogSystem/Dialogs/Stages/Mantis_Dialogue.tres" type="Resource" id=8]
+[ext_resource path="res://src/Actors/Bosses/BossAI.gd" type="Script" id=9]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/MantisIntro.gd" type="Script" id=10]
+[ext_resource path="res://src/Actors/Bosses/BossStun.gd" type="Script" id=11]
+[ext_resource path="res://src/Effects/Materials/default_material.tres" type="Material" id=12]
+[ext_resource path="res://src/AchievementSystem/BossAchievementHandler.gd" type="Script" id=13]
+[ext_resource path="res://src/AchievementSystem/Achievements/MANTISNAKED.tres" type="Resource" id=14]
+[ext_resource path="res://src/AchievementSystem/Achievements/MANTISBUSTERONLY.tres" type="Resource" id=15]
+[ext_resource path="res://src/Sounds/HIT_BOSS.wav" type="AudioStream" id=16]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/mantis.res" type="SpriteFrames" id=17]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/DarkDive.gd" type="Script" id=18]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/DarkDash.gd" type="Script" id=19]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/DarkArrows.gd" type="Script" id=20]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/DarkHug.gd" type="Script" id=21]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/DarkSlash.gd" type="Script" id=22]
+[ext_resource path="res://src/Actors/MeleeEnemyAttack.gd" type="Script" id=23]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/DarkWave.tscn" type="PackedScene" id=24]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/DarkSlashLight.png" type="Texture" id=25]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/DarkSlash.png" type="Texture" id=26]
+[ext_resource path="res://src/Effects/Textures/smoke.png" type="Texture" id=27]
+[ext_resource path="res://src/AchievementSystem/Achievements/MANTISNODAMAGE.tres" type="Resource" id=28]
+[ext_resource path="res://src/Sounds/Mantis - Cut1.ogg" type="AudioStream" id=29]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/DarkArrow.tscn" type="PackedScene" id=30]
+[ext_resource path="res://src/Sounds/Mantis - Dash2.ogg" type="AudioStream" id=31]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/Mantis - Drain.wav" type="AudioStream" id=32]
+[ext_resource path="res://src/Sounds/Mantis - DarkSlash.ogg" type="AudioStream" id=33]
+[ext_resource path="res://src/Sounds/Mantis - Dash.ogg" type="AudioStream" id=34]
+[ext_resource path="res://src/Sounds/Mantis - Land.ogg" type="AudioStream" id=35]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/Mantis - Jump.wav" type="AudioStream" id=36]
+[ext_resource path="res://src/Sounds/Mantis - DarkArrow.ogg" type="AudioStream" id=37]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/dps_hud.gd" type="Script" id=38]
+[ext_resource path="res://src/Sounds/Mantis - Desperation.ogg" type="AudioStream" id=39]
+
+[sub_resource type="RectangleShape2D" id=75]
+extents = Vector2( 20, 30 )
+
+[sub_resource type="RectangleShape2D" id=77]
+extents = Vector2( 18, 20 )
+
+[sub_resource type="CapsuleShape2D" id=47]
+radius = 32.0
+height = 92.0
+
+[sub_resource type="CanvasItemMaterial" id=49]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 3
+particles_anim_loop = false
+
+[sub_resource type="Curve" id=50]
+_data = [ Vector2( 0, 0 ), 0.0, 1.0, 0, 1, Vector2( 1, 1 ), 1.0, 0.0, 1, 0 ]
+
+[sub_resource type="CurveTexture" id=52]
+curve = SubResource( 50 )
+
+[sub_resource type="ParticlesMaterial" id=51]
+emission_shape = 1
+emission_sphere_radius = 0.01
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 155.0
+damping = 1.63
+anim_speed = 1.0
+anim_speed_curve = SubResource( 52 )
+
+[sub_resource type="CapsuleShape2D" id=48]
+radius = 18.7774
+height = 66.3686
+
+[sub_resource type="Curve" id=42]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=54]
+curve = SubResource( 42 )
+
+[sub_resource type="ParticlesMaterial" id=53]
+resource_local_to_scene = true
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 54 )
+
+[node name="Mantis" type="KinematicBody2D" groups=["Bosses"]]
+z_index = 4
+collision_layer = 0
+script = ExtResource( 6 )
+max_health = 160.0
+
+[node name="BossAI" type="Node2D" parent="."]
+script = ExtResource( 9 )
+time_between_attacks = Vector2( 0.032, 0.85 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 0, 17 )
+shape = SubResource( 75 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 12 )
+z_index = 1
+frames = ExtResource( 17 )
+animation = "ult_prepare"
+offset = Vector2( 0, 7 )
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+position = Vector2( 0, 15 )
+shape = SubResource( 77 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+position = Vector2( -6.5, 3.5 )
+scale = Vector2( 4.35, 4.25 )
+
+[node name="Intro" type="Node2D" parent="."]
+script = ExtResource( 10 )
+actions = [ "Event" ]
+animation = "walljump_prepare"
+dialogue = ExtResource( 8 )
+
+[node name="wallhit" type="AudioStreamPlayer2D" parent="Intro"]
+stream = ExtResource( 35 )
+volume_db = -8.0
+pitch_scale = 1.9
+max_distance = 600.0
+bus = "SFX"
+
+[node name="land" type="AudioStreamPlayer2D" parent="Intro"]
+stream = ExtResource( 35 )
+volume_db = -6.0
+max_distance = 600.0
+bus = "SFX"
+
+[node name="jump" type="AudioStreamPlayer2D" parent="Intro"]
+stream = ExtResource( 36 )
+volume_db = -5.0
+pitch_scale = 1.25
+max_distance = 600.0
+bus = "SFX"
+
+[node name="Idle" type="Node2D" parent="."]
+script = ExtResource( 5 )
+conflicting_moves = [ "Anything" ]
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 7 )
+invulnerability_time = 0.1
+max_flash_time = 0.35
+weakenesses = [ "OpticShield", "RayGun" ]
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+pause_mode = 2
+stream = ExtResource( 16 )
+volume_db = -3.0
+max_distance = 600.0
+bus = "SFX"
+
+[node name="dps" type="RichTextLabel" parent="Damage"]
+margin_left = -18.0
+margin_top = -69.0
+margin_right = 59.0
+margin_bottom = -52.0
+text = "0.0"
+script = ExtResource( 38 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 4 )
+damage = 6.0
+
+[node name="DarkDash" type="Node2D" parent="."]
+script = ExtResource( 19 )
+actions = [ "Event" ]
+animation = "dash_prepare"
+horizontal_velocity = 450.0
+jump_velocity = 400.0
+projectile = ExtResource( 24 )
+
+[node name="EnemyMeleeAttack" type="Node2D" parent="DarkDash"]
+visible = false
+script = ExtResource( 23 )
+active = false
+damage = 6.0
+owner_character = NodePath("../..")
+
+[node name="area2D" type="Area2D" parent="DarkDash/EnemyMeleeAttack"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="DarkDash/EnemyMeleeAttack/area2D"]
+position = Vector2( 51, -4 )
+rotation = 1.5708
+shape = SubResource( 47 )
+
+[node name="dash_smoke" type="Particles2D" parent="DarkDash"]
+material = SubResource( 49 )
+position = Vector2( 0, 48 )
+z_index = 1
+emitting = false
+amount = 11
+lifetime = 0.75
+local_coords = false
+process_material = SubResource( 51 )
+texture = ExtResource( 27 )
+
+[node name="dash" type="AudioStreamPlayer2D" parent="DarkDash"]
+stream = ExtResource( 34 )
+volume_db = -5.0
+max_distance = 600.0
+bus = "SFX"
+
+[node name="cut1" type="AudioStreamPlayer2D" parent="DarkDash"]
+stream = ExtResource( 29 )
+volume_db = -4.0
+pitch_scale = 1.5
+max_distance = 600.0
+bus = "SFX"
+
+[node name="cut2" type="AudioStreamPlayer2D" parent="DarkDash"]
+stream = ExtResource( 29 )
+volume_db = -4.0
+pitch_scale = 0.85
+max_distance = 600.0
+bus = "SFX"
+
+[node name="land" type="AudioStreamPlayer2D" parent="DarkDash"]
+stream = ExtResource( 35 )
+volume_db = -6.0
+max_distance = 600.0
+bus = "SFX"
+
+[node name="DarkDive" type="Node2D" parent="."]
+script = ExtResource( 18 )
+actions = [ "Event" ]
+animation = "jump_prepare"
+horizontal_velocity = 500.0
+jump_velocity = 400.0
+
+[node name="dive" type="AudioStreamPlayer2D" parent="DarkDive"]
+stream = ExtResource( 31 )
+volume_db = -4.0
+max_distance = 600.0
+bus = "SFX"
+
+[node name="jump" type="AudioStreamPlayer2D" parent="DarkDive"]
+stream = ExtResource( 36 )
+volume_db = -4.0
+pitch_scale = 1.25
+max_distance = 600.0
+bus = "SFX"
+
+[node name="land" type="AudioStreamPlayer2D" parent="DarkDive"]
+stream = ExtResource( 35 )
+volume_db = -8.0
+pitch_scale = 1.9
+max_distance = 600.0
+bus = "SFX"
+
+[node name="DarkArrows" type="Node2D" parent="."]
+script = ExtResource( 20 )
+actions = [ "Event" ]
+animation = "prepare_throw"
+projectiles = [ ExtResource( 30 ) ]
+
+[node name="arrowshot" type="AudioStreamPlayer2D" parent="DarkArrows"]
+stream = ExtResource( 37 )
+volume_db = -4.0
+pitch_scale = 1.25
+max_distance = 600.0
+bus = "SFX"
+
+[node name="DarkHug" type="Node2D" parent="."]
+script = ExtResource( 21 )
+actions = [ "Event" ]
+animation = "hug_prepare"
+horizontal_velocity = 425.0
+
+[node name="GrabArea" type="Node2D" parent="DarkHug"]
+visible = false
+script = ExtResource( 23 )
+active = false
+damage = 0.0
+owner_character = NodePath("../..")
+dont_deal_damage = true
+
+[node name="area2D" type="Area2D" parent="DarkHug/GrabArea"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="DarkHug/GrabArea/area2D"]
+position = Vector2( 29, -9.53674e-07 )
+rotation = 0.375246
+shape = SubResource( 48 )
+
+[node name="drain" type="AudioStreamPlayer2D" parent="DarkHug"]
+stream = ExtResource( 32 )
+volume_db = -10.915
+max_distance = 900.0
+bus = "SFX"
+
+[node name="dash_smoke" type="Particles2D" parent="DarkHug"]
+material = SubResource( 49 )
+position = Vector2( 0, 48 )
+z_index = 1
+emitting = false
+amount = 11
+lifetime = 0.75
+local_coords = false
+process_material = SubResource( 51 )
+texture = ExtResource( 27 )
+
+[node name="dash" type="AudioStreamPlayer2D" parent="DarkHug"]
+stream = ExtResource( 31 )
+volume_db = -3.0
+pitch_scale = 0.85
+max_distance = 600.0
+bus = "SFX"
+
+[node name="DarkSlash" type="Node2D" parent="."]
+script = ExtResource( 22 )
+actions = [ "Event" ]
+animation = "desperation_prepare"
+jump_velocity = 600.0
+desperation_attack = true
+
+[node name="darkSlash" type="Sprite" parent="DarkSlash"]
+visible = false
+position = Vector2( -56, 48 )
+texture = ExtResource( 26 )
+
+[node name="light2D" type="Light2D" parent="DarkSlash"]
+position = Vector2( -56, 48 )
+texture = ExtResource( 25 )
+color = Color( 0.670588, 0.278431, 1, 1 )
+energy = 0.0
+range_layer_min = -512
+range_layer_max = 3
+
+[node name="SlashHitbox" type="Node2D" parent="DarkSlash"]
+script = ExtResource( 23 )
+active = false
+damage = 25.0
+owner_character = NodePath("../..")
+
+[node name="area2D" type="Area2D" parent="DarkSlash/SlashHitbox"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionPolygon2D" type="CollisionPolygon2D" parent="DarkSlash/SlashHitbox/area2D"]
+polygon = PoolVector2Array( -42, -52, -203, -52, -200, 169, 79, 167, 79, 143, -42, 71 )
+
+[node name="jump" type="AudioStreamPlayer2D" parent="DarkSlash"]
+stream = ExtResource( 36 )
+max_distance = 600.0
+bus = "SFX"
+
+[node name="land" type="AudioStreamPlayer2D" parent="DarkSlash"]
+stream = ExtResource( 35 )
+volume_db = -4.0
+max_distance = 600.0
+bus = "SFX"
+
+[node name="darkslash" type="AudioStreamPlayer2D" parent="DarkSlash"]
+stream = ExtResource( 33 )
+volume_db = 1.5
+max_distance = 600.0
+bus = "SFX"
+
+[node name="desperation" type="AudioStreamPlayer2D" parent="DarkSlash"]
+stream = ExtResource( 39 )
+volume_db = 2.0
+max_distance = 600.0
+bus = "SFX"
+
+[node name="BossDeath" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, 0 )
+death_animation = "death"
+collectible = "mantis_weapon"
+
+[node name="Explosion Particles" parent="BossDeath" index="0"]
+amount = 24
+process_material = ExtResource( 3 )
+
+[node name="Smoke Particles" parent="BossDeath" index="1"]
+process_material = ExtResource( 2 )
+
+[node name="Remains" parent="BossDeath" index="4"]
+process_material = SubResource( 53 )
+
+[node name="BossStun" type="Node2D" parent="."]
+script = ExtResource( 11 )
+conflicting_moves = [ "BossDeath" ]
+actions = [ "Event" ]
+animation = "death"
+horizontal_velocity = 120.0
+jump_velocity = 150.0
+
+[node name="AchievementHandler" type="Node" parent="."]
+script = ExtResource( 13 )
+_desperation = NodePath("../DarkSlash")
+no_damage = ExtResource( 28 )
+buster_only = ExtResource( 15 )
+naked = ExtResource( 14 )
+
+[connection signal="dps" from="Damage" to="Damage/dps" method="_on_Damage_dps"]
+[connection signal="ability_start" from="DarkSlash" to="BossStun" method="deactivate"]
+[connection signal="ready_for_stun" from="DarkSlash" to="BossStun" method="reactivate"]
+
+[editable path="BossDeath"]

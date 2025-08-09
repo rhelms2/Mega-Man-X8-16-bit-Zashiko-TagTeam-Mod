@@ -1,0 +1,62 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/Objects/FlyingPlatform/FlyingPlatformWOBox.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Objects/FlyingPlatform/FlyingPlatform.tscn" type="PackedScene" id=2]
+
+[sub_resource type="Curve2D" id=4]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 19, -492, 0, 0, 0, 0, 19, 752 )
+}
+
+[node name="Elevator2" type="Node2D"]
+pause_mode = 1
+position = Vector2( 2709, 1346 )
+
+[node name="path2D" type="Path2D" parent="."]
+curve = SubResource( 4 )
+
+[node name="FlyingPlatform9" parent="path2D" instance=ExtResource( 1 )]
+position = Vector2( 19, -492 )
+loop = true
+
+[node name="FlyingPlatform2" parent="path2D" instance=ExtResource( 2 )]
+position = Vector2( 19, -336.471 )
+offset = 156.002
+loop = true
+
+[node name="FlyingPlatform" parent="path2D" instance=ExtResource( 1 )]
+position = Vector2( 19, -180.965 )
+offset = 311.89
+loop = true
+
+[node name="FlyingPlatform4" parent="path2D" instance=ExtResource( 2 )]
+position = Vector2( 19, -26.3131 )
+offset = 467.898
+loop = true
+
+[node name="FlyingPlatform3" parent="path2D" instance=ExtResource( 1 )]
+position = Vector2( 19, 128.936 )
+offset = 625.029
+loop = true
+
+[node name="FlyingPlatform6" parent="path2D" instance=ExtResource( 2 )]
+position = Vector2( 19, 281.764 )
+offset = 779.794
+loop = true
+
+[node name="FlyingPlatform5" parent="path2D" instance=ExtResource( 1 )]
+position = Vector2( 19, 437.947 )
+offset = 935.669
+loop = true
+
+[node name="FlyingPlatform8" parent="path2D" instance=ExtResource( 2 )]
+position = Vector2( 19, 593.779 )
+offset = 1091.68
+loop = true
+
+[node name="visibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+position = Vector2( 16, 58 )
+scale = Vector2( 19, 53.3 )
+pause_particles = false
+process_parent = true
+physics_process_parent = true

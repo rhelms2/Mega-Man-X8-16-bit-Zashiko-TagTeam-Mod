@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Rooster - FirePillar.ogg-a518f7b63e31883676b974a48740669c.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/Rooster - FirePillar.ogg"
+dest_files=[ "res://.import/Rooster - FirePillar.ogg-a518f7b63e31883676b974a48740669c.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,164 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://src/Actors/Enemies/MantaRay/manta.res" type="SpriteFrames" id=1]
+[ext_resource path="res://src/Actors/Enemies/MantaRay/DeathTeleport.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Enemies/MantaRay/MantaRay.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/Enemies/MantaRay/FlyIdle.gd" type="Script" id=4]
+[ext_resource path="res://src/Actors/Enemies/MantaRay/Damage.gd" type="Script" id=5]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=6]
+[ext_resource path="res://src/Effects/enemy_shader.tres" type="Shader" id=7]
+[ext_resource path="res://src/Effects/Materials/ExpansiveMiniBossExplosionParticles.tres" type="Material" id=8]
+[ext_resource path="res://src/Actors/Bosses/BossAI.gd" type="Script" id=9]
+[ext_resource path="res://src/Actors/Enemies/MantaRay/MantaDrop.gd" type="Script" id=10]
+[ext_resource path="res://src/Actors/Enemies/MantaRay/MantaDive.gd" type="Script" id=11]
+[ext_resource path="res://src/Sounds/HIT.wav" type="AudioStream" id=12]
+[ext_resource path="res://src/Actors/Enemies/Shared/LongEnemyDeath.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/Actors/Enemies/Wheeler.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/Actors/Enemies/MantaRay/MantaIntro.gd" type="Script" id=15]
+[ext_resource path="res://src/Actors/Bosses/Vile/RNGUpdate.gd" type="Script" id=16]
+
+[sub_resource type="ShaderMaterial" id=63]
+resource_local_to_scene = true
+shader = ExtResource( 7 )
+shader_param/Flash = 0.0
+shader_param/Should_Blink = 0.0
+shader_param/Darken = 1.0
+shader_param/Alpha = 1.0
+shader_param/Alpha_Blink = 0.0
+
+[sub_resource type="RectangleShape2D" id=64]
+extents = Vector2( 33, 18.5 )
+
+[sub_resource type="RectangleShape2D" id=65]
+extents = Vector2( 87.5, 20.5 )
+
+[sub_resource type="RectangleShape2D" id=66]
+extents = Vector2( 45, 50 )
+
+[sub_resource type="Curve" id=42]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=43]
+curve = SubResource( 42 )
+
+[sub_resource type="ParticlesMaterial" id=68]
+resource_local_to_scene = true
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 43 )
+
+[node name="MantaRay" type="KinematicBody2D" groups=["Enemies"]]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource( 3 )
+max_health = 80.0
+
+[node name="BossAI" type="Node2D" parent="."]
+script = ExtResource( 9 )
+time_between_attacks = Vector2( 1, 1.25 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = SubResource( 63 )
+position = Vector2( 2, 0 )
+frames = ExtResource( 1 )
+animation = "idle_loop"
+playing = true
+offset = Vector2( -64, 0 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 3.5 )
+shape = SubResource( 64 )
+disabled = true
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+scale = Vector2( -6, 4.8 )
+rect = Rect2( -5, -5, 10, 10 )
+
+[node name="Intro" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 15 )
+actions = [ "Event" ]
+manual_start = true
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+shape = SubResource( 65 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 6 )
+damage = 4.0
+
+[node name="area2D" type="Area2D" parent="DamageOnTouch"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="DamageOnTouch/area2D"]
+position = Vector2( 0, -3 )
+shape = SubResource( 66 )
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 5 )
+invulnerability_time = 0.035
+only_on_screen = false
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+stream = ExtResource( 12 )
+max_distance = 400.0
+bus = "SFX"
+
+[node name="EnemyDeath" parent="." instance=ExtResource( 13 )]
+script = ExtResource( 2 )
+explosion_duration = 3.6
+
+[node name="Explosion Particles" parent="EnemyDeath" index="0"]
+amount = 42
+process_material = ExtResource( 8 )
+
+[node name="Remains" parent="EnemyDeath" index="2"]
+process_material = SubResource( 68 )
+
+[node name="remains_particles" parent="EnemyDeath/Remains" index="0"]
+amount = 32
+
+[node name="Idle" type="Node2D" parent="."]
+script = ExtResource( 4 )
+conflicting_moves = [ "Anything" ]
+animation = "idle_loop"
+
+[node name="MantaDive" type="Node2D" parent="."]
+script = ExtResource( 11 )
+__meta__ = {
+"_editor_description_": ""
+}
+actions = [ "Event" ]
+animation = "dive"
+
+[node name="MantaDrop" type="Node2D" parent="."]
+script = ExtResource( 10 )
+__meta__ = {
+"_editor_description_": ""
+}
+actions = [ "Event" ]
+animation = "open"
+drop_enemy = ExtResource( 14 )
+
+[node name="RNGUpdate" type="Node" parent="."]
+script = ExtResource( 16 )
+
+[connection signal="ability_start" from="EnemyDeath" to="RNGUpdate" method="_on_BossDeath_ability_start"]
+
+[editable path="EnemyDeath"]
+[editable path="EnemyDeath/Remains"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - Gateway - Intro.ogg-46732e838c1e9bf89d890e9242bce30d.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - Gateway - Intro.ogg"
+dest_files=[ "res://.import/OST - Gateway - Intro.ogg-46732e838c1e9bf89d890e9242bce30d.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

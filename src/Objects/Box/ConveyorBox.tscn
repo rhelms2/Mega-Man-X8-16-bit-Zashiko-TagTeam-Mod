@@ -1,0 +1,212 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=1]
+[ext_resource path="res://src/Effects/Materials/ExplosionParticles.tres" type="Material" id=2]
+[ext_resource path="res://src/Effects/Textures/explosion.png" type="Texture" id=3]
+[ext_resource path="res://src/Effects/Materials/default_material.tres" type="Material" id=4]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=5]
+[ext_resource path="res://src/Effects/Materials/RemainsParticle.tres" type="Material" id=6]
+[ext_resource path="res://src/Sounds/HIT.wav" type="AudioStream" id=7]
+[ext_resource path="res://src/Actors/Bosses/BambooPandamonium/Health.gd" type="Script" id=8]
+[ext_resource path="res://src/Objects/Box/kinematicPlatform.gd" type="Script" id=9]
+[ext_resource path="res://src/Objects/Box/X8Sprite.gd" type="Script" id=10]
+[ext_resource path="res://src/Objects/Box/ConveyorBox.gd" type="Script" id=11]
+[ext_resource path="res://src/Actors/Bosses/BambooPandamonium/DamageReceiver.gd" type="Script" id=12]
+[ext_resource path="res://src/Objects/Box/Crush.gd" type="Script" id=13]
+[ext_resource path="res://src/Objects/Box/Blinker.gd" type="Script" id=14]
+[ext_resource path="res://src/Objects/Box/SimpleDeath.gd" type="Script" id=15]
+[ext_resource path="res://src/Objects/Box/box.res" type="SpriteFrames" id=16]
+[ext_resource path="res://src/Sounds/56 - MMX - Enemy Death.wav" type="AudioStream" id=17]
+[ext_resource path="res://src/Effects/Textures/remains_gray.png" type="Texture" id=18]
+
+[sub_resource type="RectangleShape2D" id=211]
+extents = Vector2( 22, 18 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 29, 24 )
+
+[sub_resource type="CanvasItemMaterial" id=4]
+render_priority = -1
+particles_animation = true
+particles_anim_h_frames = 6
+particles_anim_v_frames = 3
+particles_anim_loop = false
+
+[sub_resource type="CanvasItemMaterial" id=210]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 4
+particles_anim_loop = false
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 24, 26.5 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 20, 22 )
+
+[sub_resource type="RectangleShape2D" id=212]
+extents = Vector2( 22, 5 )
+
+[node name="ConveyorBox" type="StaticBody2D" groups=["Movable"]]
+collision_layer = 66048
+script = ExtResource( 11 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 5 )
+z_index = 1
+shape = SubResource( 211 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 4 )
+frames = ExtResource( 16 )
+animation = "breakable"
+playing = true
+flip_h = true
+script = ExtResource( 10 )
+
+[node name="ground_check" type="RayCast2D" parent="."]
+position = Vector2( -23, 0 )
+enabled = true
+cast_to = Vector2( 0, 23 )
+collision_mask = 769
+
+[node name="ground_check2" type="RayCast2D" parent="."]
+position = Vector2( 23, 0 )
+enabled = true
+cast_to = Vector2( 0, 23 )
+collision_mask = 769
+
+[node name="ground_check3" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 0, 23 )
+collision_mask = 769
+
+[node name="DamageReceiver" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 16388
+script = ExtResource( 12 )
+health_path = NodePath("../Health")
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="DamageReceiver"]
+shape = SubResource( 2 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Blinker" type="Node" parent="."]
+script = ExtResource( 14 )
+
+[node name="Health" type="Node" parent="."]
+script = ExtResource( 8 )
+current_health = 6
+
+[node name="hit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
+volume_db = -6.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 5 )
+
+[node name="explode" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 17 )
+volume_db = -3.5
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 5 )
+
+[node name="Death" type="Node2D" parent="."]
+script = ExtResource( 15 )
+
+[node name="remains" type="Particles2D" parent="Death"]
+material = SubResource( 4 )
+emitting = false
+amount = 12
+lifetime = 2.0
+one_shot = true
+explosiveness = 1.0
+visibility_rect = Rect2( -600, -100, 1200, 200 )
+local_coords = false
+process_material = ExtResource( 6 )
+texture = ExtResource( 18 )
+
+[node name="explosion" type="Particles2D" parent="Death"]
+material = SubResource( 210 )
+position = Vector2( 0, 0.5 )
+z_index = 2
+emitting = false
+amount = 3
+lifetime = 2.0
+one_shot = true
+explosiveness = 0.95
+local_coords = false
+process_material = ExtResource( 2 )
+texture = ExtResource( 3 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 1 )
+active = false
+damage = 3.0
+
+[node name="area2D" type="Area2D" parent="DamageOnTouch"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="DamageOnTouch/area2D"]
+position = Vector2( 0, 14.5 )
+shape = SubResource( 5 )
+
+[node name="Crush" type="Node2D" parent="."]
+script = ExtResource( 13 )
+active = false
+
+[node name="crush_area" type="Area2D" parent="Crush"]
+collision_layer = 0
+collision_mask = 8192
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="Crush/crush_area"]
+position = Vector2( 0, 10 )
+shape = SubResource( 6 )
+
+[node name="kinematicBody2D" type="RigidBody2D" parent="."]
+position = Vector2( 0, -36 )
+collision_layer = 512
+collision_mask = 0
+mode = 3
+gravity_scale = 0.0
+script = ExtResource( 9 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="kinematicBody2D"]
+position = Vector2( 0, 18 )
+z_index = 1
+shape = SubResource( 212 )
+
+[node name="left_wall_check" type="RayCast2D" parent="."]
+position = Vector2( -20, 0 )
+enabled = true
+cast_to = Vector2( -12, 0 )
+collision_mask = 65537
+
+[node name="right_wall_check" type="RayCast2D" parent="."]
+position = Vector2( 20, 0 )
+enabled = true
+cast_to = Vector2( 12, 0 )
+collision_mask = 65537
+
+[connection signal="area_entered" from="DamageReceiver" to="DamageReceiver" method="_on_DamageReceiver_area_entered"]
+[connection signal="body_entered" from="DamageReceiver" to="DamageReceiver" method="_on_area2D_body_entered"]
+[connection signal="body_exited" from="DamageReceiver" to="DamageReceiver" method="_on_area2D_body_exited"]
+[connection signal="friendly_fire" from="DamageReceiver" to="Health" method="set_health_to_zero"]
+[connection signal="received_damage" from="DamageReceiver" to="Health" method="_on_DamageReceiver_received_damage"]
+[connection signal="reduced_health" from="Health" to="Blinker" method="blink"]
+[connection signal="reduced_health" from="Health" to="hit" method="play_rp"]
+[connection signal="zero_health" from="Health" to="." method="_on_zero_health"]
+[connection signal="zero_health" from="Health" to="animatedSprite" method="make_invisible"]
+[connection signal="zero_health" from="Health" to="DamageReceiver" method="deactivate"]
+[connection signal="zero_health" from="Health" to="explode" method="play_rp"]
+[connection signal="zero_health" from="Health" to="Death" method="activate"]
+[connection signal="zero_health" from="Health" to="Crush" method="deactivate"]
+[connection signal="crush" from="Crush" to="Health" method="set_health_to_zero"]
+[connection signal="crush" from="Crush" to="DamageOnTouch" method="activate"]
+[connection signal="body_entered" from="Crush/crush_area" to="Crush" method="_on_crush_area_body_entered"]

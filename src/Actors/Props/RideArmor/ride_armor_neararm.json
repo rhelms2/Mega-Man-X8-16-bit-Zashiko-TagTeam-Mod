@@ -1,0 +1,658 @@
+{ "frames": [
+   {
+    "filename": "RA_neararm 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 82
+   },
+   {
+    "filename": "RA_neararm 1.ase",
+    "frame": { "x": 160, "y": 0, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 60
+   },
+   {
+    "filename": "RA_neararm 2.ase",
+    "frame": { "x": 320, "y": 0, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 60
+   },
+   {
+    "filename": "RA_neararm 3.ase",
+    "frame": { "x": 480, "y": 0, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 60
+   },
+   {
+    "filename": "RA_neararm 4.ase",
+    "frame": { "x": 640, "y": 0, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 82
+   },
+   {
+    "filename": "RA_neararm 5.ase",
+    "frame": { "x": 800, "y": 0, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 444
+   },
+   {
+    "filename": "RA_neararm 6.ase",
+    "frame": { "x": 800, "y": 0, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 444
+   },
+   {
+    "filename": "RA_neararm 7.ase",
+    "frame": { "x": 960, "y": 0, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "RA_neararm 8.ase",
+    "frame": { "x": 1120, "y": 0, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 84
+   },
+   {
+    "filename": "RA_neararm 9.ase",
+    "frame": { "x": 0, "y": 80, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 84
+   },
+   {
+    "filename": "RA_neararm 10.ase",
+    "frame": { "x": 160, "y": 80, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 60
+   },
+   {
+    "filename": "RA_neararm 11.ase",
+    "frame": { "x": 320, "y": 80, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "RA_neararm 12.ase",
+    "frame": { "x": 480, "y": 80, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "RA_neararm 13.ase",
+    "frame": { "x": 480, "y": 80, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "RA_neararm 14.ase",
+    "frame": { "x": 640, "y": 80, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "RA_neararm 15.ase",
+    "frame": { "x": 800, "y": 80, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "RA_neararm 16.ase",
+    "frame": { "x": 960, "y": 80, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "RA_neararm 17.ase",
+    "frame": { "x": 960, "y": 80, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "RA_neararm 18.ase",
+    "frame": { "x": 960, "y": 80, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "RA_neararm 19.ase",
+    "frame": { "x": 960, "y": 80, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "RA_neararm 20.ase",
+    "frame": { "x": 1120, "y": 80, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "RA_neararm 21.ase",
+    "frame": { "x": 0, "y": 160, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "RA_neararm 22.ase",
+    "frame": { "x": 160, "y": 160, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "RA_neararm 23.ase",
+    "frame": { "x": 160, "y": 160, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "RA_neararm 24.ase",
+    "frame": { "x": 160, "y": 160, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "RA_neararm 25.ase",
+    "frame": { "x": 320, "y": 160, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "RA_neararm 26.ase",
+    "frame": { "x": 480, "y": 160, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "RA_neararm 27.ase",
+    "frame": { "x": 640, "y": 160, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "RA_neararm 28.ase",
+    "frame": { "x": 640, "y": 160, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "RA_neararm 29.ase",
+    "frame": { "x": 640, "y": 160, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "RA_neararm 30.ase",
+    "frame": { "x": 800, "y": 160, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 66
+   },
+   {
+    "filename": "RA_neararm 31.ase",
+    "frame": { "x": 960, "y": 160, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 66
+   },
+   {
+    "filename": "RA_neararm 32.ase",
+    "frame": { "x": 1120, "y": 160, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "RA_neararm 33.ase",
+    "frame": { "x": 1120, "y": 160, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "RA_neararm 34.ase",
+    "frame": { "x": 1120, "y": 160, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "RA_neararm 35.ase",
+    "frame": { "x": 1120, "y": 160, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "RA_neararm 36.ase",
+    "frame": { "x": 0, "y": 240, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 66
+   },
+   {
+    "filename": "RA_neararm 37.ase",
+    "frame": { "x": 160, "y": 240, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 66
+   },
+   {
+    "filename": "RA_neararm 38.ase",
+    "frame": { "x": 320, "y": 240, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "RA_neararm 39.ase",
+    "frame": { "x": 320, "y": 240, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "RA_neararm 40.ase",
+    "frame": { "x": 320, "y": 240, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "RA_neararm 41.ase",
+    "frame": { "x": 320, "y": 240, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "RA_neararm 42.ase",
+    "frame": { "x": 480, "y": 240, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 66
+   },
+   {
+    "filename": "RA_neararm 43.ase",
+    "frame": { "x": 640, "y": 240, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 82
+   },
+   {
+    "filename": "RA_neararm 44.ase",
+    "frame": { "x": 800, "y": 240, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 444
+   },
+   {
+    "filename": "RA_neararm 45.ase",
+    "frame": { "x": 960, "y": 240, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 82
+   },
+   {
+    "filename": "RA_neararm 46.ase",
+    "frame": { "x": 1120, "y": 240, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 82
+   },
+   {
+    "filename": "RA_neararm 47.ase",
+    "frame": { "x": 0, "y": 320, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 82
+   },
+   {
+    "filename": "RA_neararm 48.ase",
+    "frame": { "x": 160, "y": 320, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "RA_neararm 49.ase",
+    "frame": { "x": 320, "y": 320, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "RA_neararm 50.ase",
+    "frame": { "x": 480, "y": 320, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "RA_neararm 51.ase",
+    "frame": { "x": 640, "y": 320, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 100
+   },
+   {
+    "filename": "RA_neararm 52.ase",
+    "frame": { "x": 800, "y": 320, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 82
+   },
+   {
+    "filename": "RA_neararm 53.ase",
+    "frame": { "x": 160, "y": 320, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 82
+   },
+   {
+    "filename": "RA_neararm 54.ase",
+    "frame": { "x": 960, "y": 320, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "RA_neararm 55.ase",
+    "frame": { "x": 1120, "y": 320, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "RA_neararm 56.ase",
+    "frame": { "x": 0, "y": 400, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "RA_neararm 57.ase",
+    "frame": { "x": 160, "y": 400, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 100
+   },
+   {
+    "filename": "RA_neararm 58.ase",
+    "frame": { "x": 160, "y": 400, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 82
+   },
+   {
+    "filename": "RA_neararm 59.ase",
+    "frame": { "x": 960, "y": 320, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 82
+   },
+   {
+    "filename": "RA_neararm 60.ase",
+    "frame": { "x": 320, "y": 400, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "RA_neararm 61.ase",
+    "frame": { "x": 480, "y": 400, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 82
+   },
+   {
+    "filename": "RA_neararm 62.ase",
+    "frame": { "x": 640, "y": 400, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "RA_neararm 63.ase",
+    "frame": { "x": 800, "y": 400, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "RA_neararm 64.ase",
+    "frame": { "x": 960, "y": 400, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "RA_neararm 65.ase",
+    "frame": { "x": 1120, "y": 400, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 100
+   },
+   {
+    "filename": "RA_neararm 66.ase",
+    "frame": { "x": 0, "y": 480, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 82
+   },
+   {
+    "filename": "RA_neararm 67.ase",
+    "frame": { "x": 320, "y": 400, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "RA_neararm 68.ase",
+    "frame": { "x": 160, "y": 480, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "RA_neararm 69.ase",
+    "frame": { "x": 960, "y": 80, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3.2-x64",
+  "image": "ride_armor_neararm.png",
+  "format": "RGBA8888",
+  "size": { "w": 1280, "h": 560 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "deactivate", "from": 0, "to": 5, "direction": "forward", "color": "#000000ff" },
+   { "name": "deactivated", "from": 6, "to": 6, "direction": "forward", "color": "#000000ff" },
+   { "name": "activate", "from": 7, "to": 18, "direction": "forward", "color": "#000000ff" },
+   { "name": "idle", "from": 19, "to": 19, "direction": "forward", "color": "#000000ff" },
+   { "name": "walk", "from": 20, "to": 29, "direction": "forward", "color": "#000000ff" },
+   { "name": "dash", "from": 30, "to": 35, "direction": "forward", "color": "#000000ff" },
+   { "name": "dash_loop", "from": 34, "to": 35, "direction": "forward", "color": "#000000ff" },
+   { "name": "jump", "from": 36, "to": 41, "direction": "forward", "color": "#000000ff" },
+   { "name": "jump_loop", "from": 40, "to": 41, "direction": "forward", "color": "#000000ff" },
+   { "name": "fall", "from": 42, "to": 44, "direction": "forward", "color": "#000000ff" },
+   { "name": "recover", "from": 45, "to": 47, "direction": "forward", "color": "#000000ff" },
+   { "name": "punch_1", "from": 48, "to": 59, "direction": "forward", "color": "#000000ff" },
+   { "name": "punch_2", "from": 54, "to": 59, "direction": "forward", "color": "#000000ff" },
+   { "name": "punch_3", "from": 60, "to": 67, "direction": "forward", "color": "#000000ff" },
+   { "name": "punch_end", "from": 68, "to": 69, "direction": "forward", "color": "#000000ff" }
+  ]
+ }
+}

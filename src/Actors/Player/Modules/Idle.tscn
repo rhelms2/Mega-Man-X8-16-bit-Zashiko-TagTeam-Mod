@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/Actors/Player/IdleWeak.gd" type="Script" id=1]
+
+[node name="Idle" type="Node2D"]
+script = ExtResource( 1 )
+conflicting_moves = [ "Anything" ]
+animation = "recover"
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="."]
+bus = "SFX"

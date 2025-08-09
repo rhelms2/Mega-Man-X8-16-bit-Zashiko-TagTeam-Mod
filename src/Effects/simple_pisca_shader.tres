@@ -1,0 +1,68 @@
+[gd_resource type="VisualShader" load_steps=9 format=2]
+
+[sub_resource type="VisualShaderNodeTexture" id=8]
+source = 2
+
+[sub_resource type="VisualShaderNodeScalarOp" id=9]
+default_input_values = [ 0, 0.0, 1, 0.3 ]
+operator = 1
+
+[sub_resource type="VisualShaderNodeInput" id=2]
+input_name = "time"
+
+[sub_resource type="VisualShaderNodeScalarFunc" id=3]
+function = 12
+
+[sub_resource type="VisualShaderNodeVectorFunc" id=4]
+function = 14
+
+[sub_resource type="VisualShaderNodeScalarFunc" id=5]
+function = 15
+
+[sub_resource type="VisualShaderNodeScalarOp" id=6]
+operator = 2
+
+[sub_resource type="VisualShaderNodeScalarOp" id=7]
+default_input_values = [ 0, 0.0, 1, 42.0 ]
+operator = 2
+
+[resource]
+code = "shader_type canvas_item;
+
+
+
+void vertex() {
+// Output:0
+
+}
+
+void fragment() {
+// Output:0
+
+}
+
+void light() {
+// Output:0
+
+}
+"
+graph_offset = Vector2( -587.006, 378.107 )
+mode = 1
+flags/light_only = false
+nodes/fragment/3/node = SubResource( 2 )
+nodes/fragment/3/position = Vector2( -660, 460 )
+nodes/fragment/4/node = SubResource( 3 )
+nodes/fragment/4/position = Vector2( 0, 580 )
+nodes/fragment/5/node = SubResource( 4 )
+nodes/fragment/5/position = Vector2( -160, 480 )
+nodes/fragment/6/node = SubResource( 5 )
+nodes/fragment/6/position = Vector2( 240, 500 )
+nodes/fragment/7/node = SubResource( 6 )
+nodes/fragment/7/position = Vector2( 100, 340 )
+nodes/fragment/9/node = SubResource( 7 )
+nodes/fragment/9/position = Vector2( -360, 440 )
+nodes/fragment/10/node = SubResource( 8 )
+nodes/fragment/10/position = Vector2( 0, 160 )
+nodes/fragment/11/node = SubResource( 9 )
+nodes/fragment/11/position = Vector2( 220, 600 )
+nodes/fragment/connections = PoolIntArray( 10, 1, 7, 0, 9, 0, 5, 0, 5, 0, 4, 0, 6, 0, 7, 1, 4, 0, 11, 0, 11, 0, 6, 0 )

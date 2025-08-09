@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Sunflower - Appear.ogg-8b5fafe48313ac9efb4879cde867b9ca.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/Sunflower - Appear.ogg"
+dest_files=[ "res://.import/Sunflower - Appear.ogg-8b5fafe48313ac9efb4879cde867b9ca.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

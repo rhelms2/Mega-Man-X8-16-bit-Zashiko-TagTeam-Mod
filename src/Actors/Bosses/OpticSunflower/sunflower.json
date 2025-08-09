@@ -1,0 +1,1118 @@
+{ "frames": [
+   {
+    "filename": "sunflower 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 100
+   },
+   {
+    "filename": "sunflower 1.ase",
+    "frame": { "x": 160, "y": 0, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 100
+   },
+   {
+    "filename": "sunflower 2.ase",
+    "frame": { "x": 320, "y": 0, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 80
+   },
+   {
+    "filename": "sunflower 3.ase",
+    "frame": { "x": 480, "y": 0, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 300
+   },
+   {
+    "filename": "sunflower 4.ase",
+    "frame": { "x": 640, "y": 0, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 82
+   },
+   {
+    "filename": "sunflower 5.ase",
+    "frame": { "x": 800, "y": 0, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 80
+   },
+   {
+    "filename": "sunflower 6.ase",
+    "frame": { "x": 960, "y": 0, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 100
+   },
+   {
+    "filename": "sunflower 7.ase",
+    "frame": { "x": 1120, "y": 0, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 80
+   },
+   {
+    "filename": "sunflower 8.ase",
+    "frame": { "x": 1280, "y": 0, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 300
+   },
+   {
+    "filename": "sunflower 9.ase",
+    "frame": { "x": 1440, "y": 0, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 10.ase",
+    "frame": { "x": 1600, "y": 0, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 11.ase",
+    "frame": { "x": 0, "y": 116, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 12.ase",
+    "frame": { "x": 160, "y": 116, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 168
+   },
+   {
+    "filename": "sunflower 13.ase",
+    "frame": { "x": 320, "y": 116, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 14.ase",
+    "frame": { "x": 480, "y": 116, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 15.ase",
+    "frame": { "x": 640, "y": 116, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 252
+   },
+   {
+    "filename": "sunflower 16.ase",
+    "frame": { "x": 800, "y": 116, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 17.ase",
+    "frame": { "x": 960, "y": 116, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 18.ase",
+    "frame": { "x": 1280, "y": 0, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 19.ase",
+    "frame": { "x": 1120, "y": 116, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 20.ase",
+    "frame": { "x": 1280, "y": 116, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 21.ase",
+    "frame": { "x": 1440, "y": 116, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 22.ase",
+    "frame": { "x": 1600, "y": 116, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 168
+   },
+   {
+    "filename": "sunflower 23.ase",
+    "frame": { "x": 0, "y": 232, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 24.ase",
+    "frame": { "x": 160, "y": 232, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 25.ase",
+    "frame": { "x": 320, "y": 232, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 26.ase",
+    "frame": { "x": 480, "y": 232, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 27.ase",
+    "frame": { "x": 640, "y": 232, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 28.ase",
+    "frame": { "x": 800, "y": 232, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 29.ase",
+    "frame": { "x": 960, "y": 232, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 30.ase",
+    "frame": { "x": 1120, "y": 232, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 31.ase",
+    "frame": { "x": 1280, "y": 232, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 32.ase",
+    "frame": { "x": 1440, "y": 232, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 33.ase",
+    "frame": { "x": 1600, "y": 232, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 34.ase",
+    "frame": { "x": 0, "y": 348, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 35.ase",
+    "frame": { "x": 160, "y": 116, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 36.ase",
+    "frame": { "x": 160, "y": 348, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 37.ase",
+    "frame": { "x": 320, "y": 348, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 38.ase",
+    "frame": { "x": 480, "y": 348, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 39.ase",
+    "frame": { "x": 640, "y": 348, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 252
+   },
+   {
+    "filename": "sunflower 40.ase",
+    "frame": { "x": 800, "y": 348, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 41.ase",
+    "frame": { "x": 960, "y": 348, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 42.ase",
+    "frame": { "x": 1120, "y": 348, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 43.ase",
+    "frame": { "x": 1280, "y": 348, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 44.ase",
+    "frame": { "x": 1280, "y": 0, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 45.ase",
+    "frame": { "x": 1440, "y": 348, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 46.ase",
+    "frame": { "x": 1600, "y": 348, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 47.ase",
+    "frame": { "x": 0, "y": 464, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 48.ase",
+    "frame": { "x": 160, "y": 464, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 49.ase",
+    "frame": { "x": 320, "y": 464, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 50.ase",
+    "frame": { "x": 480, "y": 464, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 51.ase",
+    "frame": { "x": 640, "y": 464, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 52.ase",
+    "frame": { "x": 800, "y": 464, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 53.ase",
+    "frame": { "x": 960, "y": 464, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 54.ase",
+    "frame": { "x": 1120, "y": 464, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 55.ase",
+    "frame": { "x": 1280, "y": 464, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 56.ase",
+    "frame": { "x": 1440, "y": 464, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 57.ase",
+    "frame": { "x": 1600, "y": 464, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 58.ase",
+    "frame": { "x": 0, "y": 580, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 59.ase",
+    "frame": { "x": 160, "y": 580, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 60.ase",
+    "frame": { "x": 320, "y": 580, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 61.ase",
+    "frame": { "x": 480, "y": 580, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 62.ase",
+    "frame": { "x": 640, "y": 580, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 63.ase",
+    "frame": { "x": 1280, "y": 0, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 64.ase",
+    "frame": { "x": 800, "y": 580, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 65.ase",
+    "frame": { "x": 960, "y": 580, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 66.ase",
+    "frame": { "x": 1120, "y": 580, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 63
+   },
+   {
+    "filename": "sunflower 67.ase",
+    "frame": { "x": 1280, "y": 580, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 63
+   },
+   {
+    "filename": "sunflower 68.ase",
+    "frame": { "x": 1440, "y": 580, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 63
+   },
+   {
+    "filename": "sunflower 69.ase",
+    "frame": { "x": 1600, "y": 580, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 70.ase",
+    "frame": { "x": 0, "y": 696, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 71.ase",
+    "frame": { "x": 160, "y": 696, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 72.ase",
+    "frame": { "x": 320, "y": 696, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 73.ase",
+    "frame": { "x": 480, "y": 696, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 74.ase",
+    "frame": { "x": 640, "y": 696, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 75.ase",
+    "frame": { "x": 800, "y": 696, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 66
+   },
+   {
+    "filename": "sunflower 76.ase",
+    "frame": { "x": 960, "y": 696, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 77.ase",
+    "frame": { "x": 1120, "y": 696, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 78.ase",
+    "frame": { "x": 1280, "y": 696, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 79.ase",
+    "frame": { "x": 1440, "y": 696, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 80.ase",
+    "frame": { "x": 1600, "y": 696, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 81.ase",
+    "frame": { "x": 0, "y": 812, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 126
+   },
+   {
+    "filename": "sunflower 82.ase",
+    "frame": { "x": 160, "y": 812, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 63
+   },
+   {
+    "filename": "sunflower 83.ase",
+    "frame": { "x": 320, "y": 812, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 84.ase",
+    "frame": { "x": 480, "y": 812, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 63
+   },
+   {
+    "filename": "sunflower 85.ase",
+    "frame": { "x": 640, "y": 812, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 63
+   },
+   {
+    "filename": "sunflower 86.ase",
+    "frame": { "x": 800, "y": 812, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 63
+   },
+   {
+    "filename": "sunflower 87.ase",
+    "frame": { "x": 960, "y": 812, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 88.ase",
+    "frame": { "x": 1120, "y": 812, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 89.ase",
+    "frame": { "x": 1280, "y": 812, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 90.ase",
+    "frame": { "x": 1440, "y": 812, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 91.ase",
+    "frame": { "x": 1600, "y": 812, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 92.ase",
+    "frame": { "x": 0, "y": 928, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 93.ase",
+    "frame": { "x": 160, "y": 928, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 94.ase",
+    "frame": { "x": 320, "y": 928, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 95.ase",
+    "frame": { "x": 480, "y": 928, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 96.ase",
+    "frame": { "x": 640, "y": 928, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 97.ase",
+    "frame": { "x": 800, "y": 928, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 252
+   },
+   {
+    "filename": "sunflower 98.ase",
+    "frame": { "x": 960, "y": 928, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 99.ase",
+    "frame": { "x": 1120, "y": 928, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 100.ase",
+    "frame": { "x": 1280, "y": 928, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 101.ase",
+    "frame": { "x": 1440, "y": 928, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 102.ase",
+    "frame": { "x": 1600, "y": 928, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 103.ase",
+    "frame": { "x": 0, "y": 1044, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 104.ase",
+    "frame": { "x": 160, "y": 1044, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 105.ase",
+    "frame": { "x": 320, "y": 1044, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 106.ase",
+    "frame": { "x": 480, "y": 1044, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 107.ase",
+    "frame": { "x": 160, "y": 1044, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 108.ase",
+    "frame": { "x": 640, "y": 1044, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 109.ase",
+    "frame": { "x": 800, "y": 1044, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 110.ase",
+    "frame": { "x": 960, "y": 1044, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 111.ase",
+    "frame": { "x": 1120, "y": 1044, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 112.ase",
+    "frame": { "x": 1280, "y": 1044, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 113.ase",
+    "frame": { "x": 1440, "y": 1044, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 114.ase",
+    "frame": { "x": 960, "y": 1044, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 252
+   },
+   {
+    "filename": "sunflower 115.ase",
+    "frame": { "x": 1600, "y": 1044, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 116.ase",
+    "frame": { "x": 0, "y": 1160, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 42
+   },
+   {
+    "filename": "sunflower 117.ase",
+    "frame": { "x": 160, "y": 1160, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 118.ase",
+    "frame": { "x": 1280, "y": 0, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   },
+   {
+    "filename": "sunflower 119.ase",
+    "frame": { "x": 320, "y": 1160, "w": 160, "h": 116 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 116 },
+    "sourceSize": { "w": 160, "h": 116 },
+    "duration": 84
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3-rc6-x64",
+  "image": "sunflower.png",
+  "format": "RGBA8888",
+  "size": { "w": 1760, "h": 1276 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "idle", "from": 0, "to": 8, "direction": "forward", "color": "#000000ff" },
+   { "name": "ready", "from": 9, "to": 15, "direction": "forward", "color": "#000000ff" },
+   { "name": "ready_end", "from": 16, "to": 18, "direction": "forward", "color": "#000000ff" },
+   { "name": "attack1_prepare", "from": 19, "to": 22, "direction": "forward", "color": "#000000ff" },
+   { "name": "attack1", "from": 23, "to": 26, "direction": "forward", "color": "#000000ff" },
+   { "name": "attack1_end", "from": 27, "to": 30, "direction": "forward", "color": "#000000ff" },
+   { "name": "attack2_prepare", "from": 31, "to": 35, "direction": "forward", "color": "#000000ff" },
+   { "name": "attack2", "from": 36, "to": 39, "direction": "forward", "color": "#000000ff" },
+   { "name": "attack2_end", "from": 40, "to": 44, "direction": "forward", "color": "#000000ff" },
+   { "name": "attack3_prepare", "from": 45, "to": 48, "direction": "forward", "color": "#000000ff" },
+   { "name": "attack3_loop", "from": 49, "to": 51, "direction": "forward", "color": "#000000ff" },
+   { "name": "attack3_start", "from": 52, "to": 54, "direction": "forward", "color": "#000000ff" },
+   { "name": "attack3", "from": 55, "to": 58, "direction": "forward", "color": "#000000ff" },
+   { "name": "attack3_end", "from": 59, "to": 63, "direction": "forward", "color": "#000000ff" },
+   { "name": "tp_out", "from": 64, "to": 76, "direction": "forward", "color": "#000000ff" },
+   { "name": "tp_appear_prepare", "from": 77, "to": 84, "direction": "forward", "color": "#000000ff" },
+   { "name": "tp_appear", "from": 85, "to": 93, "direction": "forward", "color": "#000000ff" },
+   { "name": "rage_prepare", "from": 94, "to": 98, "direction": "forward", "color": "#000000ff" },
+   { "name": "rage_loop", "from": 99, "to": 101, "direction": "forward", "color": "#000000ff" },
+   { "name": "desp_prepare", "from": 102, "to": 104, "direction": "forward", "color": "#000000ff" },
+   { "name": "desp_prepare_loop", "from": 105, "to": 107, "direction": "forward", "repeat": "3", "color": "#000000ff" },
+   { "name": "desp", "from": 108, "to": 110, "direction": "forward", "color": "#000000ff" },
+   { "name": "desp_loop", "from": 111, "to": 113, "direction": "forward", "color": "#000000ff" },
+   { "name": "desp_end", "from": 114, "to": 118, "direction": "forward", "color": "#000000ff" },
+   { "name": "death", "from": 119, "to": 119, "direction": "forward", "color": "#000000ff" }
+  ]
+ }
+}

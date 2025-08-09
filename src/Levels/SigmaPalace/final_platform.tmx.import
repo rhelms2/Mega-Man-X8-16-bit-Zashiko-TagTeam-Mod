@@ -1,0 +1,22 @@
+[remap]
+
+importer="vnen.tiled_importer"
+type="PackedScene"
+path="res://.import/final_platform.tmx-215e50843d6af4e129608dc60250425e.scn"
+
+[deps]
+
+source_file="res://src/Levels/SigmaPalace/final_platform.tmx"
+dest_files=[ "res://.import/final_platform.tmx-215e50843d6af4e129608dc60250425e.scn" ]
+
+[params]
+
+custom_properties=true
+tile_metadata=false
+uv_clip=false
+image_flags=7
+collision_layer=1
+embed_internal_images=false
+save_tiled_properties=false
+add_background=true
+post_import_script=""

@@ -1,0 +1,17 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://addons/crt-shader/crt.gdshader" type="Shader" id=1]
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/res = Vector2( 398, 224 )
+shader_param/mask_type = 0
+shader_param/bloom_type = 1
+shader_param/hardScan = -3.0
+shader_param/hardPix = -2.0
+shader_param/hardBloomScan = -3.15
+shader_param/hardBloomPix = -1.5
+shader_param/bloomAmount = 4.18
+shader_param/warp = Vector2( 64, 24 )
+shader_param/maskDark = 0.38
+shader_param/maskLight = 1.7

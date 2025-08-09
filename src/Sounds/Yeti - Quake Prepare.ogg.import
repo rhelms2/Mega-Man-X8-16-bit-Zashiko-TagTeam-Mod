@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Yeti - Quake Prepare.ogg-958536da47e7aa6eeb82dab62c96451e.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/Yeti - Quake Prepare.ogg"
+dest_files=[ "res://.import/Yeti - Quake Prepare.ogg-958536da47e7aa6eeb82dab62c96451e.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

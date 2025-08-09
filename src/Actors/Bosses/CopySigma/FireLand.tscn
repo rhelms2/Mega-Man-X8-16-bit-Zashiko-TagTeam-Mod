@@ -1,0 +1,118 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=1]
+[ext_resource path="res://src/Effects/Fire/pinkfire2.png" type="Texture" id=2]
+[ext_resource path="res://src/Effects/Fire/pinkfire1.png" type="Texture" id=3]
+[ext_resource path="res://src/Effects/Fire/pinkfire3.png" type="Texture" id=4]
+[ext_resource path="res://src/Effects/Materials/pinkfire_mat.tres" type="Material" id=5]
+[ext_resource path="res://src/Effects/Materials/ground_fire_particles.tres" type="Material" id=6]
+[ext_resource path="res://src/Actors/Bosses/CopySigma/FireLand.gd" type="Script" id=7]
+[ext_resource path="res://src/Effects/Textures/simple_gradient.png" type="Texture" id=8]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=9]
+[ext_resource path="res://src/Sounds/Rooster - RisingLava.ogg" type="AudioStream" id=10]
+[ext_resource path="res://src/Sounds/Rooster - FireUp.ogg" type="AudioStream" id=11]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 28, 10 )
+
+[sub_resource type="Shader" id=69]
+code = "shader_type canvas_item;
+
+uniform sampler2D textureNoise: hint_white;
+uniform float radius: hint_range(0.0, 1.0) = 0.459;
+uniform float effectControl: hint_range(0.0, 1.0) = 0.309;
+uniform float burnSpeed: hint_range(0.0, 1.0) = 0.076;
+uniform float shape: hint_range(0.0, 1.0) = 1.0;
+
+void fragment() {
+    vec2 centerDistVec = vec2(0.5) - UV;
+    
+	float distToCircleEdge = length(centerDistVec) * radius;
+	float distToSquareEdge = 0.5*(0.5 - min(min(UV.x, 1.0 - UV.x), min(UV.y, 1.0 - UV.y)));
+	float distToEdge = mix(distToCircleEdge,distToSquareEdge,shape);
+
+    float gradient = smoothstep(0.5, 0.5 - radius, distToEdge);
+
+    vec2 direction = vec2(0, 1) * burnSpeed;
+    float noiseValue = texture(textureNoise, UV + direction * TIME).r;
+
+    float opacity = step(radius, mix(gradient, noiseValue, effectControl) - distToEdge);
+
+    COLOR = texture(TEXTURE, UV) * vec4(1.0, 1.0, 1.0, opacity);
+}
+"
+
+[sub_resource type="OpenSimplexNoise" id=73]
+period = 35.6
+
+[sub_resource type="NoiseTexture" id=72]
+width = 1024
+height = 1024
+seamless = true
+noise = SubResource( 73 )
+
+[sub_resource type="ShaderMaterial" id=74]
+shader = SubResource( 69 )
+shader_param/radius = 0.4
+shader_param/effectControl = 0.805
+shader_param/burnSpeed = 0.541
+shader_param/shape = 1.0
+shader_param/textureNoise = SubResource( 72 )
+
+[node name="Fireland" type="Node2D"]
+z_index = 20
+script = ExtResource( 7 )
+
+[node name="fire1" type="Particles2D" parent="."]
+material = ExtResource( 5 )
+z_index = 1
+amount = 9
+local_coords = false
+process_material = ExtResource( 6 )
+texture = ExtResource( 3 )
+
+[node name="fire2" type="Particles2D" parent="."]
+material = ExtResource( 5 )
+z_index = 1
+amount = 10
+local_coords = false
+process_material = ExtResource( 6 )
+texture = ExtResource( 2 )
+
+[node name="fire3" type="Particles2D" parent="."]
+material = ExtResource( 5 )
+z_index = 1
+local_coords = false
+process_material = ExtResource( 6 )
+texture = ExtResource( 4 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 1 )
+damage = 10.0
+
+[node name="area2D" type="Area2D" parent="DamageOnTouch"]
+position = Vector2( 0, 6 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="DamageOnTouch/area2D"]
+shape = SubResource( 1 )
+
+[node name="backflames" type="Sprite" parent="."]
+modulate = Color( 0.901961, 0.337255, 0.639216, 0.898039 )
+material = SubResource( 74 )
+position = Vector2( 0, 18 )
+scale = Vector2( 1.15, 1 )
+texture = ExtResource( 8 )
+
+[node name="loop" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 10 )
+volume_db = -25.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 9 )
+
+[node name="start" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 11 )
+volume_db = -6.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 9 )

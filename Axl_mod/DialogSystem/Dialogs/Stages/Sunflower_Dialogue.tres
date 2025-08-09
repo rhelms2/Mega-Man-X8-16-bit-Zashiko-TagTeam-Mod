@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://src/DialogSystem/Profiles/DialogueText.gd" type="Script" id=1]
+[ext_resource path="res://Axl_mod/DialogSystem/Profiles/Axl.tres" type="Resource" id=2]
+[ext_resource path="res://src/DialogSystem/Profiles/Sunflower.tres" type="Resource" id=3]
+
+[resource]
+script = ExtResource( 1 )
+dialog = [ ExtResource( 3 ), "SUNFLOWER1_AXL", ExtResource( 2 ), "SUNFLOWER2_AXL", ExtResource( 3 ), "SUNFLOWER3_AXL", "SUNFLOWER4_AXL", "SUNFLOWER5_AXL", ExtResource( 2 ), "SUNFLOWER6_AXL" ]

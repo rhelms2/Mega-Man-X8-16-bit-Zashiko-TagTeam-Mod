@@ -1,0 +1,290 @@
+[gd_scene load_steps=49 format=2]
+
+[ext_resource path="res://src/Actors/Panda.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Bosses/OpticSunflower/OpticAI.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Modules/Enemy/BossDamage.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/Bosses/BossStun.gd" type="Script" id=4]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=5]
+[ext_resource path="res://src/Actors/Bosses/OpticSunflower/sunflower.res" type="SpriteFrames" id=6]
+[ext_resource path="res://src/Effects/Materials/BossSmokeParticlesMedium.tres" type="Material" id=7]
+[ext_resource path="res://src/Effects/Materials/BossExplosion.tres" type="Material" id=8]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/dps_hud.gd" type="Script" id=9]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/Idle.gd" type="Script" id=10]
+[ext_resource path="res://src/Actors/Bosses/OpticSunflower/SunflowerIntro.gd" type="Script" id=11]
+[ext_resource path="res://src/Actors/Bosses/OpticSunflower/ShiningRay.gd" type="Script" id=12]
+[ext_resource path="res://src/Effects/Materials/default_material.tres" type="Material" id=13]
+[ext_resource path="res://src/Sounds/HIT_BOSS.wav" type="AudioStream" id=14]
+[ext_resource path="res://src/Actors/Bosses/OpticSunflower/OpticGun.gd" type="Script" id=15]
+[ext_resource path="res://src/Actors/Bosses/OpticSunflower/OpticShield.gd" type="Script" id=16]
+[ext_resource path="res://src/Actors/Bosses/OpticSunflower/OpticCrush.gd" type="Script" id=17]
+[ext_resource path="res://src/Actors/Bosses/OpticSunflower/OpticTeleport.gd" type="Script" id=18]
+[ext_resource path="res://src/Actors/Bosses/OpticSunflower/ShiningRay.tscn" type="PackedScene" id=19]
+[ext_resource path="res://src/Actors/Bosses/OpticSunflower/OpticGun.tscn" type="PackedScene" id=20]
+[ext_resource path="res://src/Actors/Bosses/OpticSunflower/LaserBeams.gd" type="Script" id=21]
+[ext_resource path="res://src/Actors/Bosses/OpticSunflower/CrushTarget.tscn" type="PackedScene" id=22]
+[ext_resource path="res://src/Actors/Bosses/OpticSunflower/CrushBeam.tscn" type="PackedScene" id=23]
+[ext_resource path="res://src/Actors/Bosses/OpticSunflower/OpticOrb.tscn" type="PackedScene" id=24]
+[ext_resource path="res://src/Sounds/Sunflower - OrbCharge.ogg" type="AudioStream" id=25]
+[ext_resource path="res://src/Sounds/Sunflower - Orb.ogg" type="AudioStream" id=26]
+[ext_resource path="res://src/Sounds/Sunflower - ShiningRay.ogg" type="AudioStream" id=27]
+[ext_resource path="res://src/Sounds/Sunflower - Appear.ogg" type="AudioStream" id=28]
+[ext_resource path="res://src/Sounds/Sunflower - Teleport.ogg" type="AudioStream" id=29]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=30]
+[ext_resource path="res://src/Sounds/Sunflower - Desperation.ogg" type="AudioStream" id=31]
+[ext_resource path="res://src/Effects/Materials/plant_laser_leaves_material.tres" type="Material" id=32]
+[ext_resource path="res://src/Effects/leaves/leaves.png" type="Texture" id=33]
+[ext_resource path="res://src/Effects/Materials/sunflower_leaves_particle.tres" type="Material" id=34]
+[ext_resource path="res://src/DialogSystem/Dialogs/Stages/Sunflower_Dialogue.tres" type="Resource" id=35]
+[ext_resource path="res://src/Actors/Enemies/Shared/LongBossDeath.tscn" type="PackedScene" id=36]
+[ext_resource path="res://src/Actors/Bosses/GigaboltManowar/Space.gd" type="Script" id=37]
+[ext_resource path="res://src/HUD/Boss_bar.png" type="Texture" id=38]
+[ext_resource path="res://src/AchievementSystem/BossAchievementHandler.gd" type="Script" id=39]
+[ext_resource path="res://src/AchievementSystem/Achievements/SUNFLOWERNODAMAGE.tres" type="Resource" id=40]
+[ext_resource path="res://src/AchievementSystem/Achievements/SUNFLOWERNAKED.tres" type="Resource" id=41]
+[ext_resource path="res://src/AchievementSystem/Achievements/SUNFLOWERBUSTERONLY.tres" type="Resource" id=42]
+
+[sub_resource type="RectangleShape2D" id=63]
+extents = Vector2( 11, 31.5 )
+
+[sub_resource type="RectangleShape2D" id=48]
+extents = Vector2( 14, 21.625 )
+
+[sub_resource type="RectangleShape2D" id=64]
+extents = Vector2( 11, 36.5 )
+
+[sub_resource type="Curve" id=42]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=65]
+curve = SubResource( 42 )
+
+[sub_resource type="ParticlesMaterial" id=61]
+resource_local_to_scene = true
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 65 )
+
+[node name="Sunflower" type="KinematicBody2D" groups=["Bosses"]]
+z_index = 5
+collision_layer = 0
+script = ExtResource( 1 )
+max_health = 160.0
+
+[node name="Space" type="Node" parent="."]
+script = ExtResource( 37 )
+wall_check = 1
+border_distance = 64
+low_height_segments = 3
+
+[node name="BossAI" type="Node2D" parent="."]
+script = ExtResource( 2 )
+time_between_attacks = Vector2( 0.5, 0.5 )
+order_size = 48
+desperation_chance = 0
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 18.5 )
+shape = SubResource( 63 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 13 )
+z_index = 1
+frames = ExtResource( 6 )
+animation = "idle"
+frame = 9
+playing = true
+flip_h = true
+
+[node name="area2D" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+position = Vector2( 1, 14.375 )
+shape = SubResource( 48 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+position = Vector2( -6.5, 3.5 )
+scale = Vector2( 4.35, 4.25 )
+
+[node name="Intro" type="Node2D" parent="."]
+script = ExtResource( 11 )
+actions = [ "Event" ]
+dialogue = ExtResource( 35 )
+bar = ExtResource( 38 )
+
+[node name="Optic360Ray" type="Node2D" parent="."]
+script = ExtResource( 12 )
+shining_ray = ExtResource( 19 )
+
+[node name="prepare" type="AudioStreamPlayer2D" parent="Optic360Ray"]
+stream = ExtResource( 27 )
+volume_db = -6.0
+max_distance = 600.0
+attenuation = 1.93187
+bus = "SFX"
+script = ExtResource( 30 )
+
+[node name="OpticGun" type="Node2D" parent="."]
+script = ExtResource( 15 )
+optic_gun = ExtResource( 20 )
+
+[node name="OpticShield" type="Node2D" parent="."]
+script = ExtResource( 16 )
+optic_orb = ExtResource( 24 )
+
+[node name="charge" type="AudioStreamPlayer2D" parent="OpticShield"]
+stream = ExtResource( 25 )
+volume_db = 4.0
+pitch_scale = 0.7
+max_distance = 600.0
+attenuation = 1.93187
+bus = "SFX"
+script = ExtResource( 30 )
+
+[node name="shot" type="AudioStreamPlayer2D" parent="OpticShield"]
+stream = ExtResource( 26 )
+volume_db = 8.0
+max_distance = 600.0
+attenuation = 1.93187
+bus = "SFX"
+script = ExtResource( 30 )
+
+[node name="OpticTeleport" type="Node2D" parent="."]
+script = ExtResource( 18 )
+
+[node name="disappear" type="AudioStreamPlayer2D" parent="OpticTeleport"]
+stream = ExtResource( 29 )
+max_distance = 600.0
+attenuation = 1.93187
+bus = "SFX"
+script = ExtResource( 30 )
+
+[node name="appear" type="AudioStreamPlayer2D" parent="OpticTeleport"]
+stream = ExtResource( 28 )
+volume_db = -6.0
+max_distance = 600.0
+attenuation = 1.93187
+bus = "SFX"
+script = ExtResource( 30 )
+
+[node name="leaves" type="Particles2D" parent="OpticTeleport"]
+material = ExtResource( 32 )
+position = Vector2( 0, 12 )
+z_index = 1
+emitting = false
+amount = 16
+explosiveness = 0.5
+randomness = 1.0
+local_coords = false
+process_material = ExtResource( 34 )
+texture = ExtResource( 33 )
+
+[node name="OpticCrush" type="Node2D" parent="."]
+script = ExtResource( 17 )
+desperation_attack = true
+
+[node name="LaserBeamManager" type="Node2D" parent="OpticCrush"]
+script = ExtResource( 21 )
+crosshair = ExtResource( 22 )
+laser_beam = ExtResource( 23 )
+boss = NodePath("../..")
+
+[node name="rage" type="AudioStreamPlayer2D" parent="OpticCrush"]
+stream = ExtResource( 31 )
+max_distance = 600.0
+attenuation = 1.93187
+bus = "SFX"
+script = ExtResource( 30 )
+
+[node name="Idle" type="Node2D" parent="."]
+script = ExtResource( 10 )
+conflicting_moves = [ "Anything" ]
+animation = "idle"
+
+[node name="Damage" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 3 )
+invulnerability_time = 0.1
+max_flash_time = 0.35
+weakenesses = [ "BlastLaunch", "BlastLauncher", "Youdantotsu" ]
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+pause_mode = 2
+stream = ExtResource( 14 )
+volume_db = -3.0
+max_distance = 600.0
+bus = "SFX"
+
+[node name="dps" type="RichTextLabel" parent="Damage"]
+margin_left = -18.0
+margin_top = -69.0
+margin_right = 59.0
+margin_bottom = -52.0
+text = "0.0"
+script = ExtResource( 9 )
+
+[node name="area2D" type="Area2D" parent="Damage"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="Damage/area2D"]
+position = Vector2( 1, 14.5 )
+shape = SubResource( 64 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 5 )
+damage = 5.0
+
+[node name="BossDeath" parent="." instance=ExtResource( 36 )]
+position = Vector2( 0, 8 )
+death_animation = "death"
+collectible = "sunflower_weapon"
+
+[node name="Explosion Particles" parent="BossDeath" index="0"]
+amount = 24
+process_material = ExtResource( 8 )
+
+[node name="Smoke Particles" parent="BossDeath" index="1"]
+process_material = ExtResource( 7 )
+
+[node name="Remains" parent="BossDeath" index="4"]
+process_material = SubResource( 61 )
+
+[node name="BossStun" type="Node2D" parent="."]
+script = ExtResource( 4 )
+conflicting_moves = [ "BossDeath" ]
+actions = [ "Event" ]
+animation = "death"
+horizontal_velocity = 120.0
+jump_velocity = 150.0
+
+[node name="AchievementHandler" type="Node" parent="."]
+script = ExtResource( 39 )
+_desperation = NodePath("../OpticCrush")
+no_damage = ExtResource( 40 )
+buster_only = ExtResource( 42 )
+naked = ExtResource( 41 )
+
+[connection signal="zero_health" from="." to="OpticCrush/LaserBeamManager" method="end"]
+[connection signal="ability_start" from="Intro" to="OpticTeleport" method="_on_Intro_ability_start"]
+[connection signal="ability_start" from="OpticCrush" to="BossStun" method="deactivate"]
+[connection signal="beam" from="OpticCrush" to="Optic360Ray" method="deactivate"]
+[connection signal="beam" from="OpticCrush" to="OpticGun" method="deactivate"]
+[connection signal="beam" from="OpticCrush" to="OpticShield" method="deactivate"]
+[connection signal="laser" from="OpticCrush" to="OpticCrush/LaserBeamManager" method="_on_signal"]
+[connection signal="ready_for_stun" from="OpticCrush" to="BossStun" method="reactivate"]
+[connection signal="dps" from="Damage" to="Damage/dps" method="_on_Damage_dps"]
+
+[editable path="BossDeath"]

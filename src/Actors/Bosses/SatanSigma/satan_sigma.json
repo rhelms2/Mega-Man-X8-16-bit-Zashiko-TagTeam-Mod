@@ -1,0 +1,2925 @@
+{ "frames": [
+   {
+    "filename": "sigma_satan 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 1.ase",
+    "frame": { "x": 398, "y": 0, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 2.ase",
+    "frame": { "x": 796, "y": 0, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 3.ase",
+    "frame": { "x": 1194, "y": 0, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 4.ase",
+    "frame": { "x": 1592, "y": 0, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 5.ase",
+    "frame": { "x": 1990, "y": 0, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 6.ase",
+    "frame": { "x": 2388, "y": 0, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 7.ase",
+    "frame": { "x": 2786, "y": 0, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 8.ase",
+    "frame": { "x": 3184, "y": 0, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 9.ase",
+    "frame": { "x": 3582, "y": 0, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 10.ase",
+    "frame": { "x": 3980, "y": 0, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 11.ase",
+    "frame": { "x": 4378, "y": 0, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 12.ase",
+    "frame": { "x": 4776, "y": 0, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 13.ase",
+    "frame": { "x": 5174, "y": 0, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 14.ase",
+    "frame": { "x": 5572, "y": 0, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 15.ase",
+    "frame": { "x": 5970, "y": 0, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 16.ase",
+    "frame": { "x": 6368, "y": 0, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 17.ase",
+    "frame": { "x": 6766, "y": 0, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 18.ase",
+    "frame": { "x": 0, "y": 192, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 19.ase",
+    "frame": { "x": 398, "y": 192, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 20.ase",
+    "frame": { "x": 796, "y": 192, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 21.ase",
+    "frame": { "x": 1194, "y": 192, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 22.ase",
+    "frame": { "x": 1592, "y": 192, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 23.ase",
+    "frame": { "x": 1990, "y": 192, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 24.ase",
+    "frame": { "x": 2388, "y": 192, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 25.ase",
+    "frame": { "x": 2786, "y": 192, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 26.ase",
+    "frame": { "x": 3184, "y": 192, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 27.ase",
+    "frame": { "x": 3582, "y": 192, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 28.ase",
+    "frame": { "x": 3980, "y": 192, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 29.ase",
+    "frame": { "x": 4378, "y": 192, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 126
+   },
+   {
+    "filename": "sigma_satan 30.ase",
+    "frame": { "x": 4776, "y": 192, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 31.ase",
+    "frame": { "x": 5174, "y": 192, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 32.ase",
+    "frame": { "x": 5572, "y": 192, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 33.ase",
+    "frame": { "x": 5970, "y": 192, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 34.ase",
+    "frame": { "x": 6368, "y": 192, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 35.ase",
+    "frame": { "x": 6766, "y": 192, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 126
+   },
+   {
+    "filename": "sigma_satan 36.ase",
+    "frame": { "x": 0, "y": 384, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 126
+   },
+   {
+    "filename": "sigma_satan 37.ase",
+    "frame": { "x": 398, "y": 384, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 38.ase",
+    "frame": { "x": 796, "y": 384, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 39.ase",
+    "frame": { "x": 1194, "y": 384, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 40.ase",
+    "frame": { "x": 1592, "y": 384, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 41.ase",
+    "frame": { "x": 1990, "y": 384, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 42.ase",
+    "frame": { "x": 2388, "y": 384, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 43.ase",
+    "frame": { "x": 2388, "y": 384, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 44.ase",
+    "frame": { "x": 2786, "y": 384, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 45.ase",
+    "frame": { "x": 2786, "y": 384, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 46.ase",
+    "frame": { "x": 3184, "y": 384, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 47.ase",
+    "frame": { "x": 3582, "y": 384, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 48.ase",
+    "frame": { "x": 3980, "y": 384, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 49.ase",
+    "frame": { "x": 4378, "y": 384, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 50.ase",
+    "frame": { "x": 4776, "y": 384, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 51.ase",
+    "frame": { "x": 5174, "y": 384, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 52.ase",
+    "frame": { "x": 5572, "y": 384, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 53.ase",
+    "frame": { "x": 5970, "y": 384, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 54.ase",
+    "frame": { "x": 6368, "y": 384, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 55.ase",
+    "frame": { "x": 6766, "y": 384, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 56.ase",
+    "frame": { "x": 0, "y": 576, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 57.ase",
+    "frame": { "x": 398, "y": 576, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 58.ase",
+    "frame": { "x": 796, "y": 576, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 59.ase",
+    "frame": { "x": 1194, "y": 576, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 60.ase",
+    "frame": { "x": 1592, "y": 576, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 61.ase",
+    "frame": { "x": 1990, "y": 576, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 62.ase",
+    "frame": { "x": 2388, "y": 576, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 63.ase",
+    "frame": { "x": 2786, "y": 576, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 64.ase",
+    "frame": { "x": 3184, "y": 576, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 65.ase",
+    "frame": { "x": 3582, "y": 576, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 66.ase",
+    "frame": { "x": 3980, "y": 576, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 67.ase",
+    "frame": { "x": 4378, "y": 576, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 68.ase",
+    "frame": { "x": 4776, "y": 576, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 69.ase",
+    "frame": { "x": 5174, "y": 576, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 70.ase",
+    "frame": { "x": 5572, "y": 576, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 71.ase",
+    "frame": { "x": 5970, "y": 576, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 72.ase",
+    "frame": { "x": 6368, "y": 576, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 73.ase",
+    "frame": { "x": 6766, "y": 576, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 74.ase",
+    "frame": { "x": 0, "y": 768, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 75.ase",
+    "frame": { "x": 398, "y": 768, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 76.ase",
+    "frame": { "x": 796, "y": 768, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 77.ase",
+    "frame": { "x": 1194, "y": 768, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 78.ase",
+    "frame": { "x": 1592, "y": 768, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 79.ase",
+    "frame": { "x": 1990, "y": 768, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 80.ase",
+    "frame": { "x": 2388, "y": 768, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 81.ase",
+    "frame": { "x": 2786, "y": 768, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 82.ase",
+    "frame": { "x": 3184, "y": 768, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 83.ase",
+    "frame": { "x": 3582, "y": 768, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 84.ase",
+    "frame": { "x": 3184, "y": 384, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 85.ase",
+    "frame": { "x": 3582, "y": 384, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 86.ase",
+    "frame": { "x": 3980, "y": 384, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 87.ase",
+    "frame": { "x": 4378, "y": 384, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 88.ase",
+    "frame": { "x": 3980, "y": 768, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 89.ase",
+    "frame": { "x": 4378, "y": 768, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 90.ase",
+    "frame": { "x": 4776, "y": 768, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 91.ase",
+    "frame": { "x": 5174, "y": 768, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 92.ase",
+    "frame": { "x": 5572, "y": 768, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 93.ase",
+    "frame": { "x": 5970, "y": 768, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 94.ase",
+    "frame": { "x": 6368, "y": 768, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 95.ase",
+    "frame": { "x": 6766, "y": 768, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 122
+   },
+   {
+    "filename": "sigma_satan 96.ase",
+    "frame": { "x": 0, "y": 960, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 97.ase",
+    "frame": { "x": 398, "y": 960, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 98.ase",
+    "frame": { "x": 796, "y": 960, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 99.ase",
+    "frame": { "x": 1194, "y": 960, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 100.ase",
+    "frame": { "x": 1592, "y": 960, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 101.ase",
+    "frame": { "x": 1990, "y": 960, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 102.ase",
+    "frame": { "x": 2388, "y": 960, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 103.ase",
+    "frame": { "x": 2786, "y": 960, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 104.ase",
+    "frame": { "x": 3184, "y": 960, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 105.ase",
+    "frame": { "x": 3582, "y": 960, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 106.ase",
+    "frame": { "x": 3980, "y": 960, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 107.ase",
+    "frame": { "x": 4378, "y": 960, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 108.ase",
+    "frame": { "x": 4776, "y": 960, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 109.ase",
+    "frame": { "x": 5174, "y": 960, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 110.ase",
+    "frame": { "x": 5572, "y": 960, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 111.ase",
+    "frame": { "x": 5970, "y": 960, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 112.ase",
+    "frame": { "x": 6368, "y": 960, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 113.ase",
+    "frame": { "x": 6766, "y": 960, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 122
+   },
+   {
+    "filename": "sigma_satan 114.ase",
+    "frame": { "x": 0, "y": 1152, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 122
+   },
+   {
+    "filename": "sigma_satan 115.ase",
+    "frame": { "x": 398, "y": 1152, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 122
+   },
+   {
+    "filename": "sigma_satan 116.ase",
+    "frame": { "x": 796, "y": 1152, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 120
+   },
+   {
+    "filename": "sigma_satan 117.ase",
+    "frame": { "x": 1194, "y": 1152, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 120
+   },
+   {
+    "filename": "sigma_satan 118.ase",
+    "frame": { "x": 1592, "y": 1152, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 120
+   },
+   {
+    "filename": "sigma_satan 119.ase",
+    "frame": { "x": 1990, "y": 1152, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 120
+   },
+   {
+    "filename": "sigma_satan 120.ase",
+    "frame": { "x": 2388, "y": 1152, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 120
+   },
+   {
+    "filename": "sigma_satan 121.ase",
+    "frame": { "x": 2786, "y": 1152, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 120
+   },
+   {
+    "filename": "sigma_satan 122.ase",
+    "frame": { "x": 3184, "y": 1152, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 123.ase",
+    "frame": { "x": 3582, "y": 1152, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 124.ase",
+    "frame": { "x": 3980, "y": 1152, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 125.ase",
+    "frame": { "x": 4378, "y": 1152, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 126.ase",
+    "frame": { "x": 4776, "y": 1152, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 127.ase",
+    "frame": { "x": 5174, "y": 1152, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 128.ase",
+    "frame": { "x": 5572, "y": 1152, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 129.ase",
+    "frame": { "x": 5970, "y": 1152, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 130.ase",
+    "frame": { "x": 6368, "y": 1152, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 131.ase",
+    "frame": { "x": 6766, "y": 1152, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 132.ase",
+    "frame": { "x": 0, "y": 1344, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 133.ase",
+    "frame": { "x": 398, "y": 1344, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 126
+   },
+   {
+    "filename": "sigma_satan 134.ase",
+    "frame": { "x": 796, "y": 1344, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 135.ase",
+    "frame": { "x": 1194, "y": 1344, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 136.ase",
+    "frame": { "x": 1592, "y": 1344, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 137.ase",
+    "frame": { "x": 1990, "y": 1344, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 138.ase",
+    "frame": { "x": 2388, "y": 1344, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 139.ase",
+    "frame": { "x": 2786, "y": 1344, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 140.ase",
+    "frame": { "x": 3184, "y": 1344, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 141.ase",
+    "frame": { "x": 3582, "y": 1344, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 142.ase",
+    "frame": { "x": 3980, "y": 1344, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 143.ase",
+    "frame": { "x": 4378, "y": 1344, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 144.ase",
+    "frame": { "x": 4776, "y": 1344, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 145.ase",
+    "frame": { "x": 5174, "y": 1344, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 146.ase",
+    "frame": { "x": 5572, "y": 1344, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 147.ase",
+    "frame": { "x": 5970, "y": 1344, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 148.ase",
+    "frame": { "x": 6368, "y": 1344, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 149.ase",
+    "frame": { "x": 6766, "y": 1344, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 150.ase",
+    "frame": { "x": 0, "y": 1536, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 151.ase",
+    "frame": { "x": 398, "y": 1536, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 152.ase",
+    "frame": { "x": 6368, "y": 960, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 153.ase",
+    "frame": { "x": 796, "y": 1536, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 154.ase",
+    "frame": { "x": 1194, "y": 1536, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 155.ase",
+    "frame": { "x": 1592, "y": 1536, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 156.ase",
+    "frame": { "x": 796, "y": 1536, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 157.ase",
+    "frame": { "x": 1194, "y": 1536, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 158.ase",
+    "frame": { "x": 1990, "y": 1536, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 159.ase",
+    "frame": { "x": 2388, "y": 1536, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 160.ase",
+    "frame": { "x": 2786, "y": 1536, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 161.ase",
+    "frame": { "x": 3184, "y": 1536, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 162.ase",
+    "frame": { "x": 3582, "y": 1536, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 163.ase",
+    "frame": { "x": 3980, "y": 1536, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 164.ase",
+    "frame": { "x": 4378, "y": 1536, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 165.ase",
+    "frame": { "x": 4776, "y": 1536, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 166.ase",
+    "frame": { "x": 5174, "y": 1536, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 167.ase",
+    "frame": { "x": 5572, "y": 1536, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 168.ase",
+    "frame": { "x": 5970, "y": 1536, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 169.ase",
+    "frame": { "x": 6368, "y": 1536, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma_satan 170.ase",
+    "frame": { "x": 6766, "y": 1536, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma_satan 171.ase",
+    "frame": { "x": 0, "y": 1728, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma_satan 172.ase",
+    "frame": { "x": 398, "y": 1728, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma_satan 173.ase",
+    "frame": { "x": 796, "y": 1728, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 174.ase",
+    "frame": { "x": 1194, "y": 1728, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 175.ase",
+    "frame": { "x": 1592, "y": 1728, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 176.ase",
+    "frame": { "x": 1990, "y": 1728, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 800
+   },
+   {
+    "filename": "sigma_satan 177.ase",
+    "frame": { "x": 5970, "y": 960, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 178.ase",
+    "frame": { "x": 2388, "y": 1728, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 179.ase",
+    "frame": { "x": 2786, "y": 1728, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 180.ase",
+    "frame": { "x": 3184, "y": 1728, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 181.ase",
+    "frame": { "x": 3582, "y": 1728, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 182.ase",
+    "frame": { "x": 3980, "y": 1728, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 183.ase",
+    "frame": { "x": 4378, "y": 1728, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 184.ase",
+    "frame": { "x": 4776, "y": 1728, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 185.ase",
+    "frame": { "x": 5174, "y": 1728, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 186.ase",
+    "frame": { "x": 4776, "y": 1728, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 187.ase",
+    "frame": { "x": 5572, "y": 1728, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 188.ase",
+    "frame": { "x": 5970, "y": 1728, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 189.ase",
+    "frame": { "x": 5572, "y": 1728, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 190.ase",
+    "frame": { "x": 4776, "y": 1728, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 191.ase",
+    "frame": { "x": 6368, "y": 1728, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 192.ase",
+    "frame": { "x": 6766, "y": 1728, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 193.ase",
+    "frame": { "x": 0, "y": 1920, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 194.ase",
+    "frame": { "x": 398, "y": 1920, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 195.ase",
+    "frame": { "x": 796, "y": 1920, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 196.ase",
+    "frame": { "x": 1194, "y": 1920, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 197.ase",
+    "frame": { "x": 1592, "y": 1920, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 198.ase",
+    "frame": { "x": 1990, "y": 1920, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 199.ase",
+    "frame": { "x": 2388, "y": 1920, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 200.ase",
+    "frame": { "x": 2786, "y": 1920, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 201.ase",
+    "frame": { "x": 3184, "y": 1920, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 202.ase",
+    "frame": { "x": 3582, "y": 1920, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 203.ase",
+    "frame": { "x": 5970, "y": 960, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 204.ase",
+    "frame": { "x": 3980, "y": 1920, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 205.ase",
+    "frame": { "x": 4378, "y": 1920, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 206.ase",
+    "frame": { "x": 4776, "y": 1920, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 122
+   },
+   {
+    "filename": "sigma_satan 207.ase",
+    "frame": { "x": 5174, "y": 1920, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 208.ase",
+    "frame": { "x": 5572, "y": 1920, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 209.ase",
+    "frame": { "x": 5970, "y": 1920, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 210.ase",
+    "frame": { "x": 6368, "y": 1920, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 211.ase",
+    "frame": { "x": 6766, "y": 1920, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 212.ase",
+    "frame": { "x": 0, "y": 2112, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 213.ase",
+    "frame": { "x": 398, "y": 2112, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 214.ase",
+    "frame": { "x": 796, "y": 2112, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 215.ase",
+    "frame": { "x": 1194, "y": 2112, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 122
+   },
+   {
+    "filename": "sigma_satan 216.ase",
+    "frame": { "x": 1592, "y": 2112, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 217.ase",
+    "frame": { "x": 1990, "y": 2112, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 218.ase",
+    "frame": { "x": 2388, "y": 2112, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 219.ase",
+    "frame": { "x": 2786, "y": 2112, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 220.ase",
+    "frame": { "x": 3184, "y": 2112, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 221.ase",
+    "frame": { "x": 3582, "y": 2112, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 222.ase",
+    "frame": { "x": 3980, "y": 2112, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 223.ase",
+    "frame": { "x": 5174, "y": 1920, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 224.ase",
+    "frame": { "x": 5572, "y": 1920, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 225.ase",
+    "frame": { "x": 5970, "y": 1920, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 226.ase",
+    "frame": { "x": 6368, "y": 1920, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 227.ase",
+    "frame": { "x": 6766, "y": 1920, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 228.ase",
+    "frame": { "x": 4378, "y": 2112, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 66
+   },
+   {
+    "filename": "sigma_satan 229.ase",
+    "frame": { "x": 4776, "y": 2112, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 230.ase",
+    "frame": { "x": 5174, "y": 2112, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 231.ase",
+    "frame": { "x": 5572, "y": 2112, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 66
+   },
+   {
+    "filename": "sigma_satan 232.ase",
+    "frame": { "x": 5970, "y": 2112, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 233.ase",
+    "frame": { "x": 6368, "y": 2112, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma_satan 234.ase",
+    "frame": { "x": 6766, "y": 2112, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma_satan 235.ase",
+    "frame": { "x": 0, "y": 2304, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma_satan 236.ase",
+    "frame": { "x": 398, "y": 2304, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 237.ase",
+    "frame": { "x": 796, "y": 2304, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 238.ase",
+    "frame": { "x": 1194, "y": 2304, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 239.ase",
+    "frame": { "x": 1592, "y": 2304, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 240.ase",
+    "frame": { "x": 1990, "y": 2304, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 241.ase",
+    "frame": { "x": 2388, "y": 2304, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 242.ase",
+    "frame": { "x": 2786, "y": 2304, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 243.ase",
+    "frame": { "x": 3184, "y": 2304, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 244.ase",
+    "frame": { "x": 3582, "y": 2304, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 245.ase",
+    "frame": { "x": 3980, "y": 2304, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 246.ase",
+    "frame": { "x": 4378, "y": 2304, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 247.ase",
+    "frame": { "x": 4776, "y": 2304, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 248.ase",
+    "frame": { "x": 5174, "y": 2304, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 249.ase",
+    "frame": { "x": 5572, "y": 2304, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 250.ase",
+    "frame": { "x": 5970, "y": 2304, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 251.ase",
+    "frame": { "x": 6368, "y": 2304, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 252.ase",
+    "frame": { "x": 6766, "y": 2304, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 253.ase",
+    "frame": { "x": 0, "y": 2496, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 254.ase",
+    "frame": { "x": 398, "y": 2496, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 255.ase",
+    "frame": { "x": 796, "y": 2496, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 256.ase",
+    "frame": { "x": 1194, "y": 2496, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 257.ase",
+    "frame": { "x": 1592, "y": 2496, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 258.ase",
+    "frame": { "x": 1990, "y": 2496, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 259.ase",
+    "frame": { "x": 2388, "y": 2496, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 260.ase",
+    "frame": { "x": 2786, "y": 2496, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 261.ase",
+    "frame": { "x": 3184, "y": 2496, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 262.ase",
+    "frame": { "x": 3582, "y": 2496, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 263.ase",
+    "frame": { "x": 3980, "y": 2496, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 264.ase",
+    "frame": { "x": 4378, "y": 2496, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 265.ase",
+    "frame": { "x": 4776, "y": 2496, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 266.ase",
+    "frame": { "x": 5174, "y": 2496, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 267.ase",
+    "frame": { "x": 5572, "y": 2496, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 268.ase",
+    "frame": { "x": 5970, "y": 2496, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 269.ase",
+    "frame": { "x": 6368, "y": 2496, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 270.ase",
+    "frame": { "x": 6766, "y": 2496, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 271.ase",
+    "frame": { "x": 0, "y": 2688, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 272.ase",
+    "frame": { "x": 398, "y": 2688, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 273.ase",
+    "frame": { "x": 796, "y": 2688, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 274.ase",
+    "frame": { "x": 1194, "y": 2688, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 275.ase",
+    "frame": { "x": 1592, "y": 2688, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 276.ase",
+    "frame": { "x": 1990, "y": 2688, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 277.ase",
+    "frame": { "x": 2388, "y": 2688, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 278.ase",
+    "frame": { "x": 2786, "y": 2688, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 279.ase",
+    "frame": { "x": 3184, "y": 2688, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 280.ase",
+    "frame": { "x": 3582, "y": 2688, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 281.ase",
+    "frame": { "x": 5174, "y": 2496, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 282.ase",
+    "frame": { "x": 5572, "y": 2496, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 283.ase",
+    "frame": { "x": 3980, "y": 2688, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 284.ase",
+    "frame": { "x": 4378, "y": 2688, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 285.ase",
+    "frame": { "x": 4776, "y": 2688, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 286.ase",
+    "frame": { "x": 5174, "y": 2688, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 287.ase",
+    "frame": { "x": 5572, "y": 2688, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 288.ase",
+    "frame": { "x": 5970, "y": 2688, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 289.ase",
+    "frame": { "x": 6368, "y": 2688, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 290.ase",
+    "frame": { "x": 6766, "y": 2688, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 291.ase",
+    "frame": { "x": 0, "y": 2880, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 292.ase",
+    "frame": { "x": 398, "y": 2880, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 293.ase",
+    "frame": { "x": 796, "y": 2880, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma_satan 294.ase",
+    "frame": { "x": 1194, "y": 2880, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma_satan 295.ase",
+    "frame": { "x": 1592, "y": 2880, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma_satan 296.ase",
+    "frame": { "x": 1990, "y": 2880, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma_satan 297.ase",
+    "frame": { "x": 2388, "y": 2880, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma_satan 298.ase",
+    "frame": { "x": 2786, "y": 2880, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma_satan 299.ase",
+    "frame": { "x": 3184, "y": 2880, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma_satan 300.ase",
+    "frame": { "x": 3582, "y": 2880, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma_satan 301.ase",
+    "frame": { "x": 3980, "y": 2880, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 302.ase",
+    "frame": { "x": 4378, "y": 2880, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 303.ase",
+    "frame": { "x": 4776, "y": 2880, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 304.ase",
+    "frame": { "x": 5174, "y": 2880, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 305.ase",
+    "frame": { "x": 5572, "y": 2880, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma_satan 306.ase",
+    "frame": { "x": 5970, "y": 2880, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 307.ase",
+    "frame": { "x": 6368, "y": 2880, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 308.ase",
+    "frame": { "x": 6766, "y": 2880, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 309.ase",
+    "frame": { "x": 5970, "y": 960, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma_satan 310.ase",
+    "frame": { "x": 0, "y": 3072, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 311.ase",
+    "frame": { "x": 398, "y": 3072, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma_satan 312.ase",
+    "frame": { "x": 796, "y": 3072, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma_satan 313.ase",
+    "frame": { "x": 1194, "y": 3072, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma_satan 314.ase",
+    "frame": { "x": 1592, "y": 3072, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma_satan 315.ase",
+    "frame": { "x": 1990, "y": 3072, "w": 398, "h": 192 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 192 },
+    "sourceSize": { "w": 398, "h": 192 },
+    "duration": 32
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3.7-x64",
+  "image": "satan_sigma.png",
+  "format": "RGBA8888",
+  "size": { "w": 7164, "h": 3264 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "fire_prepare", "from": 0, "to": 4, "direction": "forward", "color": "#000000ff" },
+   { "name": "fire_loop", "from": 5, "to": 7, "direction": "forward", "repeat": "2", "color": "#000000ff" },
+   { "name": "fire_end", "from": 8, "to": 14, "direction": "forward", "color": "#000000ff" },
+   { "name": "slashjump_prepare", "from": 15, "to": 20, "direction": "forward", "color": "#000000ff" },
+   { "name": "slashjump_prepare_loop", "from": 18, "to": 20, "direction": "forward", "repeat": "2", "color": "#000000ff" },
+   { "name": "slashjump_start", "from": 21, "to": 24, "direction": "forward", "color": "#000000ff" },
+   { "name": "slashjump_slash", "from": 25, "to": 29, "direction": "forward", "color": "#000000ff" },
+   { "name": "slashjump_jump", "from": 30, "to": 36, "direction": "forward", "color": "#000000ff" },
+   { "name": "slashjump_fall", "from": 37, "to": 41, "direction": "forward", "color": "#000000ff" },
+   { "name": "slashjump_fall_loop", "from": 39, "to": 41, "direction": "forward", "repeat": "2", "color": "#000000ff" },
+   { "name": "slashjump_land", "from": 42, "to": 49, "direction": "forward", "color": "#000000ff" },
+   { "name": "slashjump_land_loop", "from": 47, "to": 49, "direction": "forward", "repeat": "2", "color": "#000000ff" },
+   { "name": "slashjump_end", "from": 50, "to": 53, "direction": "forward", "color": "#000000ff" },
+   { "name": "slash_1_prepare", "from": 54, "to": 62, "direction": "forward", "color": "#000000ff" },
+   { "name": "slash_1_prepare_loop", "from": 60, "to": 62, "direction": "forward", "color": "#000000ff" },
+   { "name": "slash_1_start", "from": 63, "to": 64, "direction": "forward", "color": "#000000ff" },
+   { "name": "slash_1", "from": 65, "to": 71, "direction": "forward", "color": "#000000ff" },
+   { "name": "slash_1_loop", "from": 69, "to": 71, "direction": "forward", "color": "#000000ff" },
+   { "name": "slash_2_prepare", "from": 72, "to": 79, "direction": "forward", "color": "#000000ff" },
+   { "name": "slash_2_prepare_loop", "from": 77, "to": 79, "direction": "forward", "color": "#000000ff" },
+   { "name": "slash_2", "from": 80, "to": 87, "direction": "forward", "color": "#000000ff" },
+   { "name": "slash_2_loop", "from": 85, "to": 87, "direction": "forward", "repeat": "1", "color": "#000000ff" },
+   { "name": "slash_2_end", "from": 88, "to": 92, "direction": "forward", "color": "#000000ff" },
+   { "name": "slash_3_prepare", "from": 93, "to": 96, "direction": "forward", "color": "#000000ff" },
+   { "name": "slash_3", "from": 97, "to": 105, "direction": "forward", "color": "#000000ff" },
+   { "name": "slash_3_loop", "from": 103, "to": 105, "direction": "forward", "repeat": "2", "color": "#000000ff" },
+   { "name": "slash_3_end", "from": 106, "to": 112, "direction": "forward", "color": "#000000ff" },
+   { "name": "seated_loop", "from": 113, "to": 115, "direction": "forward", "color": "#000000ff" },
+   { "name": "talk", "from": 116, "to": 121, "direction": "forward", "color": "#000000ff" },
+   { "name": "intro", "from": 122, "to": 136, "direction": "forward", "color": "#000000ff" },
+   { "name": "intro2", "from": 137, "to": 142, "direction": "forward", "color": "#000000ff" },
+   { "name": "intro_loop", "from": 140, "to": 142, "direction": "forward", "repeat": "4", "color": "#000000ff" },
+   { "name": "intro_end", "from": 143, "to": 151, "direction": "forward", "color": "#000000ff" },
+   { "name": "idle", "from": 152, "to": 168, "direction": "forward", "color": "#000000ff" },
+   { "name": "death", "from": 169, "to": 175, "direction": "forward", "color": "#000000ff" },
+   { "name": "death_2", "from": 176, "to": 176, "direction": "forward", "color": "#000000ff" },
+   { "name": "spear_jump_prepare", "from": 177, "to": 180, "direction": "forward", "color": "#000000ff" },
+   { "name": "spear_prepare", "from": 181, "to": 189, "direction": "forward", "color": "#000000ff" },
+   { "name": "spear_throw", "from": 190, "to": 192, "direction": "forward", "color": "#000000ff" },
+   { "name": "spear_throw_end", "from": 193, "to": 198, "direction": "forward", "color": "#000000ff" },
+   { "name": "spear_loop", "from": 196, "to": 198, "direction": "forward", "color": "#000000ff" },
+   { "name": "land", "from": 200, "to": 203, "direction": "forward", "color": "#000000ff" },
+   { "name": "jump_prepare", "from": 204, "to": 206, "direction": "forward", "color": "#000000ff" },
+   { "name": "jump", "from": 207, "to": 211, "direction": "forward", "color": "#000000ff" },
+   { "name": "jumpslash_prepare", "from": 212, "to": 215, "direction": "forward", "color": "#000000ff" },
+   { "name": "jumpslash", "from": 216, "to": 220, "direction": "forward", "color": "#000000ff" },
+   { "name": "jumplash_tojump", "from": 221, "to": 227, "direction": "forward", "color": "#000000ff" },
+   { "name": "dive_prepare", "from": 228, "to": 232, "direction": "forward", "color": "#000000ff" },
+   { "name": "dive", "from": 233, "to": 235, "direction": "forward", "repeat": "5", "color": "#000000ff" },
+   { "name": "dive_land", "from": 236, "to": 241, "direction": "forward", "color": "#000000ff" },
+   { "name": "dive_land_loop", "from": 239, "to": 241, "direction": "forward", "color": "#000000ff" },
+   { "name": "dive_end", "from": 242, "to": 247, "direction": "forward", "color": "#000000ff" },
+   { "name": "throw_prepare", "from": 248, "to": 254, "direction": "forward", "color": "#000000ff" },
+   { "name": "throw_prepare_loop", "from": 252, "to": 254, "direction": "forward", "repeat": "2", "color": "#000000ff" },
+   { "name": "throw_start", "from": 255, "to": 256, "direction": "forward", "color": "#000000ff" },
+   { "name": "throw", "from": 257, "to": 261, "direction": "forward", "color": "#000000ff" },
+   { "name": "throw_loop", "from": 259, "to": 261, "direction": "forward", "color": "#000000ff" },
+   { "name": "throw_end", "from": 262, "to": 268, "direction": "forward", "color": "#000000ff" },
+   { "name": "throw_end_loop", "from": 266, "to": 268, "direction": "forward", "color": "#000000ff" },
+   { "name": "dash_prepare", "from": 269, "to": 271, "direction": "forward", "color": "#000000ff" },
+   { "name": "dash", "from": 272, "to": 274, "direction": "forward", "repeat": "4", "color": "#000000ff" },
+   { "name": "dash_backwards", "from": 275, "to": 277, "direction": "forward", "repeat": "4", "color": "#000000ff" },
+   { "name": "cannon_prepare", "from": 278, "to": 290, "direction": "forward", "color": "#000000ff" },
+   { "name": "cannon_prepare_loop", "from": 288, "to": 290, "direction": "forward", "repeat": "8", "color": "#000000ff" },
+   { "name": "cannon_start", "from": 291, "to": 292, "direction": "forward", "color": "#000000ff" },
+   { "name": "cannon_loop", "from": 293, "to": 300, "direction": "forward", "repeat": "6", "color": "#000000ff" },
+   { "name": "cannon_end_loop", "from": 301, "to": 303, "direction": "forward", "color": "#000000ff" },
+   { "name": "cannon_end", "from": 304, "to": 309, "direction": "forward", "color": "#000000ff" }
+  ]
+ }
+}

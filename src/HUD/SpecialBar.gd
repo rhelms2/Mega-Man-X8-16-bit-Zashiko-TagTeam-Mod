@@ -1,0 +1,188 @@
+extends NinePatchRect
+
+onready var hermes_fill: TextureProgress = $hermes_fill
+onready var icarus_fill: TextureProgress = $icarus_fill
+onready var ultimate_fill: TextureProgress = $ultimate_fill
+onready var axl_fill: TextureProgress = $axl_fill
+onready var axl_fill_texture: Texture = preload("res://Axl_mod/HUD/special_bar_fill.png")
+onready var empty_bar: Texture = preload("res://src/Effects/Textures/special_bar.png")
+onready var tween: TweenController = TweenController.new(self, false)
+onready var h_blink: TextureProgress = $hermes_fill / blink
+onready var i_blink: TextureProgress = $icarus_fill / blink
+onready var u_blink: TextureProgress = $ultimate_fill / blink
+
+var hermes_weapon
+var icarus_weapon
+var ultimate_weapon
+
+
+func _ready() -> void :
+	visible = false
+	hide()
+	Event.connect("collected", self, "hide_or_show")
+	Event.connect("special_activated", self, "activate")
+	Event.connect("special_deactivated", self, "deactivate")
+
+func activate(weapon) -> void :
+	if weapon.name == "XDrive":
+		visible = true
+		set_process(true)
+		hermes_fill.visible = true
+		icarus_fill.visible = false
+		ultimate_fill.visible = false
+		hermes_weapon = weapon
+	elif weapon.name == "GigaCrash":
+		visible = true
+		set_process(true)
+		hermes_fill.visible = false
+		icarus_fill.visible = true
+		ultimate_fill.visible = false
+		icarus_weapon = weapon
+	elif weapon.name == "NovaStrike":
+		visible = true
+		set_process(true)
+		icarus_fill.visible = false
+		hermes_fill.visible = false
+		ultimate_fill.visible = true
+		ultimate_weapon = weapon
+	else:
+		visible = false
+		set_process(false)
+		icarus_fill.visible = false
+		hermes_fill.visible = false
+		ultimate_fill.visible = false
+
+func deactivate(_weapon) -> void :
+	visible = false
+	set_process(false)
+	hermes_fill.visible = false
+	h_blink.visible = false
+	icarus_fill.visible = false
+	i_blink.visible = false
+	ultimate_fill.visible = false
+	u_blink.visible = false
+	
+func _process(delta: float) -> void :
+	process_blink(delta)
+	if hermes_weapon and hermes_weapon.active:
+		var value = get_bar_value(hermes_weapon)
+		hermes_fill.value = value
+		if value >= 43:
+			h_blink.visible = true
+		else:
+			h_blink.visible = false
+			
+	if icarus_weapon and icarus_weapon.active:
+		var value = get_bar_value(icarus_weapon)
+		icarus_fill.value = value
+		if value >= 43:
+			i_blink.visible = true
+		else:
+			i_blink.visible = false
+			
+	if ultimate_weapon and ultimate_weapon.active:
+		var value = get_bar_value(ultimate_weapon)
+		ultimate_fill.value = value
+		if value >= 43:
+			u_blink.visible = true
+		else:
+			u_blink.visible = false
+			
+	if icarus_weapon:
+		if get_current_set() == "axl":
+			icarus_fill.texture_progress = axl_fill_texture
+			if CharacterManager.white_axl_armor:
+				i_blink.texture_progress = empty_bar
+				icarus_fill.material = load("res://Axl_mod/Player/Axl_Material_Shader.tres")
+				CharacterManager.set_axl_colors(icarus_fill)
+			var blink_value = 43
+			if is_instance_valid(GameManager.player):
+				var _weapon = GameManager.player.get_node("Special").current_weapon
+				if _weapon:
+					blink_value = (_weapon.ammo_per_shot / icarus_weapon.max_ammo) * 43
+			var fill_value = get_bar_value(icarus_weapon)
+			icarus_fill.value = fill_value
+			if fill_value >= blink_value:
+				i_blink.visible = true
+			else:
+				i_blink.visible = false
+
+var blink_timer: float = 0.0
+func process_blink(delta: float) -> void :
+	blink_timer += delta * 30
+	if h_blink.visible:
+		h_blink.modulate.a = sin(blink_timer)
+	elif i_blink.visible:
+		i_blink.modulate.a = sin(blink_timer)
+	elif u_blink.visible:
+		u_blink.modulate.a = sin(blink_timer)
+
+func get_bar_value(current_weapon) -> float:
+	return inverse_lerp(0.0, current_weapon.max_ammo, current_weapon.current_ammo) * 43
+
+func hide() -> void :
+	visible = false
+	set_process(false)
+	h_blink.visible = false
+	i_blink.visible = false
+	u_blink.visible = false
+
+func unhide() -> void :
+	if get_current_set() == "hermes":
+		visible = true
+		set_process(true)
+		hermes_fill.visible = true
+		icarus_fill.visible = false
+		ultimate_fill.visible = false
+		i_blink.visible = false
+		u_blink.visible = false
+	elif get_current_set() == "icarus":
+		visible = true
+		set_process(true)
+		hermes_fill.visible = false
+		icarus_fill.visible = true
+		ultimate_fill.visible = false
+		h_blink.visible = false
+		u_blink.visible = false
+	elif get_current_set() == "ultimate":
+		visible = true
+		set_process(true)
+		hermes_fill.visible = false
+		icarus_fill.visible = false
+		ultimate_fill.visible = true
+		i_blink.visible = false
+		h_blink.visible = false
+	elif get_current_set() == "axl":
+		visible = true
+		set_process(true)
+		hermes_fill.visible = false
+		icarus_fill.visible = true
+		ultimate_fill.visible = false
+		h_blink.visible = false
+		u_blink.visible = false
+	else:
+		visible = false
+
+func get_current_set() -> String:
+	if is_instance_valid(GameManager.player):
+		return GameManager.player.is_full_armor()
+	return "none"
+
+func _on_WeaponBar_displayed(weapon) -> void :
+	if weapon.name == "XDrive" or weapon.name == "GigaCrash" or weapon.name == "NovaStrike":
+		hide()
+	else:
+		unhide()
+
+func hide_or_show(_d) -> void :
+	call_deferred("check")
+
+func check() -> void :
+	yield(get_tree(), "idle_frame")
+	if get_current_set() == "hermes" or get_current_set() == "icarus" or get_current_set() == "ultimate" or get_current_set() == "axl":
+		call_deferred("unhide")
+	else:
+		call_deferred("hide")
+
+func _on_WeaponBar_hidden() -> void :
+	unhide()

@@ -1,0 +1,83 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://src/Actors/Weapons/Projectiles/icarus_lemon.res" type="SpriteFrames" id=1]
+[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=2]
+[ext_resource path="res://SpriteEffect.gd" type="Script" id=3]
+[ext_resource path="res://src/Effects/Basic Hit.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Effects/Materials/buster_icarus_particles.tres" type="Material" id=5]
+[ext_resource path="res://Lemon.gd" type="Script" id=6]
+[ext_resource path="res://src/Sounds/LEMON_SHOT2.wav" type="AudioStream" id=7]
+[ext_resource path="res://src/Sounds/MEDIUM_SHOT2.wav" type="AudioStream" id=8]
+[ext_resource path="res://src/Effects/Deflect/small_deflect.png" type="Texture" id=9]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 15, 13 )
+
+[node name="Lemon" type="KinematicBody2D" groups=["Player Projectile"]]
+z_index = 6
+collision_layer = 4
+collision_mask = 0
+script = ExtResource( 6 )
+damage = 4.0
+damage_to_bosses = 1.15
+damage_to_weakness = 3.0
+time_outside_screen = 0.2
+fire_sound = ExtResource( 7 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+frames = ExtResource( 1 )
+animation = "Tag"
+playing = true
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 1, 0 )
+shape = SubResource( 1 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+position = Vector2( -3, -2.98023e-07 )
+scale = Vector2( 1, 0.3 )
+
+[node name="particles2D" type="Particles2D" parent="."]
+position = Vector2( 10, 0 )
+amount = 4
+lifetime = 0.54
+local_coords = false
+process_material = ExtResource( 5 )
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
+stream = ExtResource( 8 )
+volume_db = -9.109
+pitch_scale = 1.08
+bus = "SFX"
+
+[node name="Hit Particle" parent="." instance=ExtResource( 4 )]
+position = Vector2( 14, 0 )
+
+[node name="disabler" type="Node" parent="Hit Particle"]
+script = ExtResource( 2 )
+fade_out = true
+delete_after_fade = true
+
+[node name="deflect_particle" type="Sprite" parent="."]
+visible = false
+position = Vector2( 14, -1 )
+z_index = 4
+z_as_relative = false
+texture = ExtResource( 9 )
+hframes = 2
+vframes = 2
+script = ExtResource( 3 )
+animation_speed = 32.0
+one_shot = true
+
+[node name="disabler" type="Node" parent="deflect_particle"]
+script = ExtResource( 2 )
+fade_out = true
+delete_after_fade = true
+
+[node name="disabler" type="Node" parent="."]
+script = ExtResource( 2 )
+fade_out = true
+delete_after_fade = true

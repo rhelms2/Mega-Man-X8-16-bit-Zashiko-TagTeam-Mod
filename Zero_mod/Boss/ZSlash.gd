@@ -1,0 +1,62 @@
+extends BambooSlash
+
+var activated: bool = false
+
+
+func _ready() -> void :
+	CharacterManager.set_zero_normal_colors(animated_sprite)
+	CharacterManager.set_saber_green(animated_sprite)
+	if CharacterManager.current_player_character == "Zero" and not CharacterManager.black_zero_armor:
+		CharacterManager.set_black_zero_colors(animated_sprite)
+		CharacterManager.set_saber_purple(animated_sprite)
+	animated_sprite.frame = 0
+	animated_sprite.playing = true
+	randomize()
+	var chance = randf() * 100
+	if is_between(chance, 0, 20):
+		animated_sprite.animation = "d1"
+	elif is_between(chance, 20, 40):
+		animated_sprite.animation = "d2"
+	elif is_between(chance, 40, 60):
+		animated_sprite.animation = "d3"
+	elif is_between(chance, 60, 80):
+		animated_sprite.animation = "d4"
+	
+	
+	
+	if chance >= 10:
+		animated_sprite.flip_h = true
+		if chance >= 75:
+			animated_sprite.flip_v = true
+	else:
+		animated_sprite.flip_v = true
+		if chance <= 25:
+			animated_sprite.flip_h = true
+
+	var offset_x = randf() * 32
+	var offset_y = randf() * 32
+	var positive_x = randi() %2
+	var positive_y = randi() %2
+	if positive_x >= 1:
+		offset_x *= - 1
+	if positive_y >= 1:
+		offset_y *= - 1
+	animated_sprite.offset = Vector2(offset_x, offset_y)
+
+func activate(duration: float = 0.55) -> void :
+	emit_signal("activated")
+	animated_sprite.offset = Vector2(0, 0)
+	z_index += 1
+	animated_sprite.play("fire")
+	animated_sprite.frame = 0
+	
+	Tools.timer(duration, "queue_free", self)
+
+func _process(delta: float) -> void :
+	if not activated:
+		if animated_sprite.animation == "fire" and animated_sprite.frame >= 3:
+			activated = true
+			slash_hitbox.activate()
+
+func is_between(c, _min, _max) -> bool:
+	return c > _min and c <= _max

@@ -1,0 +1,99 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://src/Effects/StrongLightning/strong_lightning_00.png" type="Texture" id=1]
+[ext_resource path="res://src/Effects/Textures/gigabolt_flash.png" type="Texture" id=2]
+[ext_resource path="res://src/Actors/MeleeEnemyAttack.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/Bosses/GigaboltManowar/Flash.gd" type="Script" id=4]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=5]
+[ext_resource path="res://src/Sounds/Manowar - Flash.wav" type="AudioStream" id=6]
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 2 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 2 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 2 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 2 )
+region = Rect2( 128, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 2 )
+region = Rect2( 32, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 2 )
+region = Rect2( 64, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 2 )
+region = Rect2( 96, 32, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
+"loop": true,
+"name": "default",
+"speed": 52.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 320, 5 )
+
+[node name="Flash" type="Node2D"]
+z_index = 12
+script = ExtResource( 4 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 1, 1, 0.4 )
+position = Vector2( 182, 0 )
+scale = Vector2( 20, 1 )
+frames = SubResource( 11 )
+frame = 3
+playing = true
+
+[node name="SlashHitbox" type="Node2D" parent="."]
+visible = false
+position = Vector2( 320, 0 )
+script = ExtResource( 3 )
+active = false
+damage = 3.0
+owner_character = NodePath("..")
+
+[node name="area2D" type="Area2D" parent="SlashHitbox"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="SlashHitbox/area2D"]
+shape = SubResource( 1 )
+
+[node name="line" type="Line2D" parent="."]
+visible = false
+position = Vector2( -138, 0 )
+points = PoolVector2Array( 0, 0, 640, 0 )
+width = 48.0
+default_color = Color( 1, 1, 1, 1 )
+texture = ExtResource( 1 )
+texture_mode = 1
+
+[node name="bolt" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 187, 1 )
+stream = ExtResource( 6 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 5 )

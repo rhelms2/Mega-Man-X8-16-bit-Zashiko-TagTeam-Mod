@@ -1,0 +1,137 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=1]
+[ext_resource path="res://src/Levels/PitchBlack/X_Lightsource.gd" type="Script" id=2]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/RayGun/RayGun.gd" type="Script" id=3]
+[ext_resource path="res://src/Effects/Basic Hit.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Levels/PitchBlack/light.png" type="Texture" id=5]
+[ext_resource path="res://src/Sounds/MEDIUM_SHOT2.wav" type="AudioStream" id=6]
+[ext_resource path="res://src/Effects/Materials/buster_icarus_particles.tres" type="Material" id=7]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/RayGun/RayGun_Muzzle.png" type="Texture" id=8]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/RayGun/RayGun_End.png" type="Texture" id=9]
+[ext_resource path="res://Axl_mod/SFX/axl_raygun.wav" type="AudioStream" id=10]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/RayGun/RayGun_BeamStart.png" type="Texture" id=11]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/RayGun/RayGun_BeamEnd.png" type="Texture" id=12]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/RayGun/RayGun.res" type="SpriteFrames" id=13]
+[ext_resource path="res://SpriteEffect.gd" type="Script" id=14]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 2.5 )
+
+[node name="RayGun" type="KinematicBody2D" groups=["Player Projectile"]]
+z_index = 6
+collision_layer = 4
+script = ExtResource( 3 )
+damage = 0.5
+damage_to_bosses = 1.5
+damage_to_weakness = 15.0
+horizontal_velocity = 400.0
+vertical_velocity = 400.0
+fire_sound = ExtResource( 10 )
+
+[node name="light" type="Light2D" parent="."]
+position = Vector2( 8, 1 )
+scale = Vector2( 0.75, 0.5 )
+z_index = 277
+texture = ExtResource( 5 )
+energy = 0.35
+range_layer_min = -2
+range_layer_max = -1
+script = ExtResource( 2 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 8, 1 )
+z_index = 6
+frames = ExtResource( 13 )
+animation = "Tag"
+playing = true
+
+[node name="beam_start" type="Sprite" parent="animatedSprite"]
+position = Vector2( 11, 0 )
+z_index = -1
+texture = ExtResource( 11 )
+
+[node name="beam_end" type="Sprite" parent="animatedSprite"]
+position = Vector2( -11, 0 )
+z_index = -1
+texture = ExtResource( 12 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 8, 1 )
+shape = SubResource( 1 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( 5, 1 )
+scale = Vector2( 1.05, 0.25 )
+
+[node name="particles2D" type="Particles2D" parent="."]
+visible = false
+position = Vector2( 10, 0 )
+amount = 4
+lifetime = 0.54
+local_coords = false
+process_material = ExtResource( 7 )
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
+visible = false
+stream = ExtResource( 6 )
+volume_db = 1.378
+pitch_scale = 1.08
+bus = "SFX"
+
+[node name="Start Particle" parent="." instance=ExtResource( 4 )]
+modulate = Color( 1, 1, 1, 0.784314 )
+z_index = 7
+z_as_relative = false
+texture = ExtResource( 8 )
+hframes = 3
+vframes = 1
+animation_speed = 40.0
+vertical_flip_chance = 0.0
+
+[node name="disabler" type="Node" parent="Start Particle"]
+script = ExtResource( 1 )
+fade_out = true
+delete_after_fade = true
+queue_free = true
+undo_on_rotation_end = false
+
+[node name="Hit Particle" parent="." instance=ExtResource( 4 )]
+position = Vector2( 17, 0 )
+z_index = 1
+texture = ExtResource( 9 )
+hframes = 3
+vframes = 1
+animation_speed = 30.0
+vertical_flip_chance = 0.0
+
+[node name="disabler" type="Node" parent="Hit Particle"]
+script = ExtResource( 1 )
+fade_out = true
+delete_after_fade = true
+queue_free = true
+undo_on_rotation_end = false
+
+[node name="deflect_particle" type="Sprite" parent="."]
+visible = false
+position = Vector2( 17, 0 )
+z_index = 1
+texture = ExtResource( 9 )
+hframes = 3
+script = ExtResource( 14 )
+animation_speed = 30.0
+one_shot = true
+
+[node name="disabler" type="Node" parent="deflect_particle"]
+script = ExtResource( 1 )
+fade_out = true
+delete_after_fade = true
+queue_free = true
+undo_on_rotation_end = false
+
+[node name="disabler" type="Node" parent="."]
+script = ExtResource( 1 )
+fade_out = true
+delete_after_fade = true
+undo_on_rotation_end = false

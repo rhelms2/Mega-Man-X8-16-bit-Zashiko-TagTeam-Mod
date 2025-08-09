@@ -1,0 +1,418 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://src/Sounds/16 - MMX - X Upgrade Complete.wav" type="AudioStream" id=1]
+[ext_resource path="res://src/Fonts/menuFont.tres" type="BitmapFont" id=2]
+[ext_resource path="res://src/Fonts/X8Bossfont.fnt" type="BitmapFont" id=3]
+[ext_resource path="res://src/Options/SimpleMusicPlayer.gd" type="Script" id=4]
+[ext_resource path="res://src/Options/CoverScreen.gd" type="Script" id=5]
+[ext_resource path="res://src/Sounds/OST - StageSelect2 - Intro.ogg" type="AudioStream" id=6]
+[ext_resource path="res://src/Sounds/OST - StageSelect2 - Loop.ogg" type="AudioStream" id=7]
+[ext_resource path="res://src/Options/Options.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/Options/selectable_options.png" type="Texture" id=9]
+[ext_resource path="res://src/Options/KeymapExit.gd" type="Script" id=10]
+[ext_resource path="res://src/Options/KeyBinder/KeyConfig.gd" type="Script" id=11]
+[ext_resource path="res://src/Options/StageSelecter.gd" type="Script" id=12]
+[ext_resource path="res://src/Options/selectable_keyconfig.png" type="Texture" id=13]
+[ext_resource path="res://src/Options/AutonomousMenuButton.gd" type="Script" id=14]
+[ext_resource path="res://src/Sounds/FX - Menu Switch.ogg" type="AudioStream" id=15]
+[ext_resource path="res://src/Options/pause_bg.png" type="Texture" id=16]
+[ext_resource path="res://src/Options/KeyConfig.tscn" type="PackedScene" id=17]
+
+[sub_resource type="ShortCut" id=1]
+
+[node name="StageSelectBeta" type="CanvasLayer"]
+pause_mode = 2
+layer = 2
+script = ExtResource( 11 )
+menu_path = NodePath("Menu")
+initial_focus = NodePath("Menu/OptionHolder/CentralWhite")
+exit_action = "select"
+
+[node name="Menu" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="bg" type="TextureRect" parent="Menu"]
+modulate = Color( 0.101961, 0.101961, 0.101961, 1 )
+margin_right = 398.0
+margin_bottom = 224.0
+texture = ExtResource( 16 )
+
+[node name="Title" type="Control" parent="Menu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -30.0
+margin_top = -106.0
+margin_right = 30.0
+margin_bottom = -90.0
+rect_min_size = Vector2( 0, 16 )
+
+[node name="text" type="Label" parent="Menu/Title"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -42.0
+margin_right = 40.0
+margin_bottom = 14.0
+custom_colors/font_color_shadow = Color( 0.372549, 0.372549, 0.372549, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "stage select"
+align = 1
+uppercase = true
+
+[node name="detail" type="Label" parent="Menu/Title"]
+modulate = Color( 0.2, 0.247059, 0.415686, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -51.0
+margin_top = -7.0
+margin_right = 48.0
+margin_bottom = 7.0
+custom_colors/font_color_shadow = Color( 0.372549, 0.372549, 0.372549, 1 )
+custom_fonts/font = ExtResource( 3 )
+text = "-                 -"
+align = 1
+uppercase = true
+
+[node name="OptionHolder" type="VBoxContainer" parent="Menu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -60.0
+margin_right = 100.0
+margin_bottom = -19.0
+grow_horizontal = 2
+custom_constants/separation = 3
+
+[node name="NoahsPark" type="TextureButton" parent="Menu/OptionHolder"]
+modulate = Color( 0.603922, 0.603922, 0.603922, 1 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_right = 200.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 200, 8 )
+action_mode = 0
+script = ExtResource( 12 )
+idle_color = Color( 0.603922, 0.603922, 0.603922, 1 )
+focus_color = Color( 0.984314, 1, 0.686275, 1 )
+menu_path = NodePath("../../..")
+
+[node name="text" type="Label" parent="Menu/OptionHolder/NoahsPark"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -94.5
+margin_top = -7.0
+margin_right = 94.5
+margin_bottom = 7.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Noah's Park"
+align = 1
+uppercase = true
+
+[node name="CentralWhite" type="TextureButton" parent="Menu/OptionHolder"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_top = 11.0
+margin_right = 200.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 200, 8 )
+action_mode = 0
+script = ExtResource( 12 )
+idle_color = Color( 0.407843, 0.792157, 1, 1 )
+focus_color = Color( 0.984314, 1, 0.686275, 1 )
+menu_path = NodePath("../../..")
+
+[node name="text" type="Label" parent="Menu/OptionHolder/CentralWhite"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -94.5
+margin_top = -7.0
+margin_right = 94.5
+margin_bottom = 7.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Central white"
+align = 1
+uppercase = true
+
+[node name="PitchBlack" type="TextureButton" parent="Menu/OptionHolder"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_top = 22.0
+margin_right = 200.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 200, 8 )
+action_mode = 0
+script = ExtResource( 12 )
+idle_color = Color( 0.407843, 0.792157, 1, 1 )
+focus_color = Color( 0.984314, 1, 0.686275, 1 )
+menu_path = NodePath("../../..")
+
+[node name="text" type="Label" parent="Menu/OptionHolder/PitchBlack"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -94.5
+margin_top = -7.0
+margin_right = 94.5
+margin_bottom = 7.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Pitch Black"
+align = 1
+uppercase = true
+
+[node name="Inferno" type="TextureButton" parent="Menu/OptionHolder"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_top = 33.0
+margin_right = 200.0
+margin_bottom = 41.0
+rect_min_size = Vector2( 200, 8 )
+action_mode = 0
+script = ExtResource( 12 )
+idle_color = Color( 0.407843, 0.792157, 1, 1 )
+focus_color = Color( 0.984314, 1, 0.686275, 1 )
+menu_path = NodePath("../../..")
+
+[node name="text" type="Label" parent="Menu/OptionHolder/Inferno"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -94.5
+margin_top = -7.0
+margin_right = 94.5
+margin_bottom = 7.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Inferno"
+align = 1
+uppercase = true
+
+[node name="BoosterForest" type="TextureButton" parent="Menu/OptionHolder"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_top = 44.0
+margin_right = 200.0
+margin_bottom = 52.0
+rect_min_size = Vector2( 200, 8 )
+action_mode = 0
+script = ExtResource( 12 )
+idle_color = Color( 0.407843, 0.792157, 1, 1 )
+focus_color = Color( 0.984314, 1, 0.686275, 1 )
+menu_path = NodePath("../../..")
+
+[node name="text" type="Label" parent="Menu/OptionHolder/BoosterForest"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -94.5
+margin_top = -7.0
+margin_right = 94.5
+margin_bottom = 7.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 2 )
+text = "Booster Forest"
+align = 1
+uppercase = true
+
+[node name="exit" type="TextureButton" parent="Menu"]
+visible = false
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -32.0
+margin_top = -20.0
+margin_right = 32.0
+margin_bottom = -10.0
+action_mode = 0
+script = ExtResource( 10 )
+idle_color = Color( 0.407843, 0.792157, 1, 1 )
+focus_color = Color( 0.984314, 1, 0.686275, 1 )
+menu_path = NodePath("../..")
+
+[node name="text" type="Label" parent="Menu/exit"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -30.5
+margin_top = -7.0
+margin_right = 30.5
+margin_bottom = 7.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 2 )
+text = "eXIT"
+align = 1
+uppercase = true
+
+[node name="Keycfg" type="TextureButton" parent="Menu"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 118.0
+margin_top = 182.0
+margin_right = 191.0
+margin_bottom = 200.0
+rect_min_size = Vector2( 18, 18 )
+action_mode = 0
+shortcut = SubResource( 1 )
+texture_normal = ExtResource( 13 )
+script = ExtResource( 14 )
+menu_path = NodePath("../..")
+pick_sound = NodePath("../../pick")
+
+[node name="KeyConfig" parent="Menu/Keycfg" instance=ExtResource( 17 )]
+layer = 5
+visible = false
+
+[node name="text" type="Label" parent="Menu/Keycfg"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -24.5
+margin_top = -9.0
+margin_right = 39.5
+margin_bottom = 5.0
+rect_min_size = Vector2( 64, 14 )
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 2 )
+text = "KeyCFG"
+align = 1
+uppercase = true
+
+[node name="Options" type="TextureButton" parent="Menu"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 118.0
+margin_top = 201.0
+margin_right = 186.0
+margin_bottom = 219.0
+rect_min_size = Vector2( 18, 18 )
+action_mode = 0
+shortcut = SubResource( 1 )
+texture_normal = ExtResource( 9 )
+script = ExtResource( 14 )
+menu_path = NodePath("../..")
+pick_sound = NodePath("../../pick")
+
+[node name="OptionsMenu" parent="Menu/Options" instance=ExtResource( 8 )]
+layer = 5
+visible = false
+
+[node name="text" type="Label" parent="Menu/Options"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -20.0
+margin_top = -9.0
+margin_right = 44.0
+margin_bottom = 5.0
+rect_min_size = Vector2( 64, 14 )
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 2 )
+text = "options"
+align = 1
+uppercase = true
+
+[node name="choice" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+volume_db = -4.0
+bus = "SFX"
+
+[node name="pick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = -12.849
+bus = "SFX"
+
+[node name="Song" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -6.0
+bus = "Music"
+script = ExtResource( 4 )
+loop = ExtResource( 7 )
+
+[node name="Fader" type="ColorRect" parent="."]
+visible = false
+margin_right = 398.0
+margin_bottom = 224.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 1 )
+script = ExtResource( 5 )
+menu = NodePath("../Menu")
+
+[connection signal="focus_entered" from="Menu/OptionHolder/NoahsPark" to="Menu/OptionHolder/NoahsPark" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/OptionHolder/NoahsPark" to="Menu/OptionHolder/NoahsPark" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/OptionHolder/NoahsPark" to="Menu/OptionHolder/NoahsPark" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/OptionHolder/NoahsPark" to="Menu/OptionHolder/NoahsPark" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/OptionHolder/NoahsPark" to="Menu/OptionHolder/NoahsPark" method="_on_pressed"]
+[connection signal="focus_entered" from="Menu/OptionHolder/CentralWhite" to="Menu/OptionHolder/CentralWhite" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/OptionHolder/CentralWhite" to="Menu/OptionHolder/CentralWhite" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/OptionHolder/CentralWhite" to="Menu/OptionHolder/CentralWhite" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/OptionHolder/CentralWhite" to="Menu/OptionHolder/CentralWhite" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/OptionHolder/CentralWhite" to="Menu/OptionHolder/CentralWhite" method="_on_pressed"]
+[connection signal="focus_entered" from="Menu/OptionHolder/PitchBlack" to="Menu/OptionHolder/PitchBlack" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/OptionHolder/PitchBlack" to="Menu/OptionHolder/PitchBlack" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/OptionHolder/PitchBlack" to="Menu/OptionHolder/PitchBlack" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/OptionHolder/PitchBlack" to="Menu/OptionHolder/PitchBlack" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/OptionHolder/PitchBlack" to="Menu/OptionHolder/PitchBlack" method="_on_pressed"]
+[connection signal="focus_entered" from="Menu/OptionHolder/Inferno" to="Menu/OptionHolder/Inferno" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/OptionHolder/Inferno" to="Menu/OptionHolder/Inferno" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/OptionHolder/Inferno" to="Menu/OptionHolder/Inferno" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/OptionHolder/Inferno" to="Menu/OptionHolder/Inferno" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/OptionHolder/Inferno" to="Menu/OptionHolder/Inferno" method="_on_pressed"]
+[connection signal="focus_entered" from="Menu/OptionHolder/BoosterForest" to="Menu/OptionHolder/BoosterForest" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/OptionHolder/BoosterForest" to="Menu/OptionHolder/BoosterForest" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/OptionHolder/BoosterForest" to="Menu/OptionHolder/BoosterForest" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/OptionHolder/BoosterForest" to="Menu/OptionHolder/BoosterForest" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/OptionHolder/BoosterForest" to="Menu/OptionHolder/BoosterForest" method="_on_pressed"]
+[connection signal="focus_entered" from="Menu/exit" to="Menu/exit" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/exit" to="Menu/exit" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/exit" to="Menu/exit" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/exit" to="Menu/exit" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/exit" to="Menu/exit" method="_on_pressed"]
+[connection signal="focus_entered" from="Menu/Keycfg" to="Menu/Keycfg" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/Keycfg" to="Menu/Keycfg" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/Keycfg" to="Menu/Keycfg" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/Keycfg" to="Menu/Keycfg" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/Keycfg" to="Menu/Keycfg" method="_on_pressed"]
+[connection signal="focus_entered" from="Menu/Options" to="Menu/Options" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/Options" to="Menu/Options" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/Options" to="Menu/Options" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/Options" to="Menu/Options" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/Options" to="Menu/Options" method="_on_pressed"]

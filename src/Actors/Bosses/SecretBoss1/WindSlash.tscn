@@ -1,0 +1,115 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://src/Actors/MeleeEnemyAttack.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Bosses/BambooPandamonium/slash.gd" type="Script" id=2]
+[ext_resource path="res://src/Effects/Textures/windslash.png" type="Texture" id=3]
+[ext_resource path="res://src/Sounds/Mantis - Cut1.ogg" type="AudioStream" id=4]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=5]
+
+[sub_resource type="AtlasTexture" id=39]
+atlas = ExtResource( 3 )
+region = Rect2( 64, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 3 )
+region = Rect2( 96, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 3 )
+region = Rect2( 128, 64, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=44]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 96, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=45]
+atlas = ExtResource( 3 )
+region = Rect2( 32, 96, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=46]
+atlas = ExtResource( 3 )
+region = Rect2( 64, 96, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=48]
+atlas = ExtResource( 3 )
+region = Rect2( 128, 96, 32, 32 )
+
+[sub_resource type="StreamTexture" id=1]
+load_path = "res://.import/panda_slash.png-0ac17edb3ea631b1db4d8736984cd1ce.stex"
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = SubResource( 1 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = SubResource( 1 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = SubResource( 1 )
+region = Rect2( 96, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = SubResource( 1 )
+region = Rect2( 128, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = SubResource( 1 )
+region = Rect2( 0, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = SubResource( 1 )
+region = Rect2( 64, 32, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=36]
+animations = [ {
+"frames": [ SubResource( 39 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 48 ) ],
+"loop": false,
+"name": "fire",
+"speed": 35.0
+}, {
+"frames": [ SubResource( 16 ), SubResource( 15 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 22 ) ],
+"loop": false,
+"name": "ready",
+"speed": 22.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=37]
+extents = Vector2( 320, 5 )
+
+[node name="Slash" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 40, 1 )
+frames = SubResource( 36 )
+animation = "ready"
+frame = 5
+playing = true
+
+[node name="SlashHitbox" type="Node2D" parent="."]
+script = ExtResource( 1 )
+active = false
+owner_character = NodePath("..")
+damage_in_combo = 1.0
+
+[node name="area2D" type="Area2D" parent="SlashHitbox"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="SlashHitbox/area2D"]
+shape = SubResource( 37 )
+
+[node name="cut" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+volume_db = -10.0
+pitch_scale = 1.5
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 5 )
+
+[connection signal="activated" from="." to="cut" method="play_r"]

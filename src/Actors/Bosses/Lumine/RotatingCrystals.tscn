@@ -1,0 +1,265 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://src/Effects/Textures/chaos_emeralds_sheet.png" type="Texture" id=1]
+[ext_resource path="res://src/Actors/Bosses/Lumine/RotatingCrystals.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Bosses/Lumine/Crystal.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/Bosses/Lumine/trail.gd" type="Script" id=4]
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ SubResource( 9 ) ],
+"loop": false,
+"name": "default",
+"speed": 25.0
+} ]
+
+[sub_resource type="Curve" id=7]
+_data = [ Vector2( 0, 0 ), 0.0, 1.0, 0, 1, Vector2( 1, 1 ), 1.0, 0.0, 1, 0 ]
+
+[sub_resource type="Gradient" id=8]
+offsets = PoolRealArray( 0.0634146, 0.631111, 0.831111, 1 )
+colors = PoolColorArray( 0.694118, 0.694118, 0.694118, 0, 0.537255, 0.537255, 0.537255, 0.109804, 1, 1, 1, 0.27451, 1, 1, 1, 0.521569 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 1 )
+region = Rect2( 16, 0, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=12]
+animations = [ {
+"frames": [ SubResource( 11 ) ],
+"loop": false,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 1 )
+region = Rect2( 32, 0, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=14]
+animations = [ {
+"frames": [ SubResource( 13 ) ],
+"loop": false,
+"name": "default",
+"speed": 30.0
+} ]
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 16, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=16]
+animations = [ {
+"frames": [ SubResource( 15 ) ],
+"loop": false,
+"name": "default",
+"speed": 24.0
+} ]
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 1 )
+region = Rect2( 16, 16, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=18]
+animations = [ {
+"frames": [ SubResource( 17 ) ],
+"loop": false,
+"name": "default",
+"speed": 2.0
+} ]
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 1 )
+region = Rect2( 32, 16, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=20]
+animations = [ {
+"frames": [ SubResource( 19 ) ],
+"loop": false,
+"name": "default",
+"speed": 6.0
+} ]
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 32, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=22]
+animations = [ {
+"frames": [ SubResource( 21 ) ],
+"loop": false,
+"name": "default",
+"speed": 80.0
+} ]
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 1 )
+region = Rect2( 16, 32, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=24]
+animations = [ {
+"frames": [ SubResource( 23 ) ],
+"loop": false,
+"name": "default",
+"speed": 15.0
+} ]
+
+[node name="RotatingCrystals" type="Node2D"]
+z_index = -1
+script = ExtResource( 2 )
+
+[node name="Crystal" type="AnimatedSprite" parent="."]
+position = Vector2( -29, 0 )
+z_index = 1
+frames = SubResource( 10 )
+script = ExtResource( 3 )
+
+[node name="node" type="Node" parent="Crystal"]
+
+[node name="trail" type="Line2D" parent="Crystal/node"]
+z_index = 6
+z_as_relative = false
+width = 8.0
+width_curve = SubResource( 7 )
+default_color = Color( 0.427451, 0.564706, 0.141176, 1 )
+gradient = SubResource( 8 )
+script = ExtResource( 4 )
+length = 21
+object_to_follow = NodePath("../..")
+
+[node name="Crystal2" type="AnimatedSprite" parent="."]
+position = Vector2( -21, 0 )
+z_index = 1
+frames = SubResource( 12 )
+script = ExtResource( 3 )
+
+[node name="node" type="Node" parent="Crystal2"]
+
+[node name="trail" type="Line2D" parent="Crystal2/node"]
+z_index = 6
+z_as_relative = false
+width = 8.0
+width_curve = SubResource( 7 )
+default_color = Color( 0.862745, 0.203922, 0.431373, 1 )
+gradient = SubResource( 8 )
+script = ExtResource( 4 )
+length = 21
+object_to_follow = NodePath("../..")
+
+[node name="Crystal3" type="AnimatedSprite" parent="."]
+position = Vector2( -13, 0 )
+z_index = 1
+frames = SubResource( 14 )
+script = ExtResource( 3 )
+
+[node name="node" type="Node" parent="Crystal3"]
+
+[node name="trail" type="Line2D" parent="Crystal3/node"]
+z_index = 6
+z_as_relative = false
+width = 8.0
+width_curve = SubResource( 7 )
+default_color = Color( 0.447059, 0.141176, 0.639216, 1 )
+gradient = SubResource( 8 )
+script = ExtResource( 4 )
+length = 21
+object_to_follow = NodePath("../..")
+
+[node name="Crystal4" type="AnimatedSprite" parent="."]
+position = Vector2( -5, 0 )
+z_index = 1
+frames = SubResource( 16 )
+script = ExtResource( 3 )
+
+[node name="node" type="Node" parent="Crystal4"]
+
+[node name="trail" type="Line2D" parent="Crystal4/node"]
+z_index = 6
+z_as_relative = false
+width = 8.0
+width_curve = SubResource( 7 )
+default_color = Color( 0.0823529, 0.396078, 0.47451, 1 )
+gradient = SubResource( 8 )
+script = ExtResource( 4 )
+length = 21
+object_to_follow = NodePath("../..")
+
+[node name="Crystal5" type="AnimatedSprite" parent="."]
+position = Vector2( 5, 0 )
+z_index = 1
+frames = SubResource( 18 )
+script = ExtResource( 3 )
+
+[node name="node" type="Node" parent="Crystal5"]
+
+[node name="trail" type="Line2D" parent="Crystal5/node"]
+z_index = 6
+z_as_relative = false
+width = 8.0
+width_curve = SubResource( 7 )
+default_color = Color( 0.109804, 0.52549, 0.317647, 1 )
+gradient = SubResource( 8 )
+script = ExtResource( 4 )
+length = 21
+object_to_follow = NodePath("../..")
+
+[node name="Crystal6" type="AnimatedSprite" parent="."]
+position = Vector2( 13, 0 )
+z_index = 1
+frames = SubResource( 20 )
+script = ExtResource( 3 )
+
+[node name="node" type="Node" parent="Crystal6"]
+
+[node name="trail" type="Line2D" parent="Crystal6/node"]
+z_index = 6
+z_as_relative = false
+width = 8.0
+width_curve = SubResource( 7 )
+default_color = Color( 0.537255, 0.345098, 0.164706, 1 )
+gradient = SubResource( 8 )
+script = ExtResource( 4 )
+length = 21
+object_to_follow = NodePath("../..")
+
+[node name="Crystal7" type="AnimatedSprite" parent="."]
+position = Vector2( 21, 0 )
+z_index = 1
+frames = SubResource( 22 )
+script = ExtResource( 3 )
+
+[node name="node" type="Node" parent="Crystal7"]
+
+[node name="trail" type="Line2D" parent="Crystal7/node"]
+z_index = 6
+z_as_relative = false
+width = 8.0
+width_curve = SubResource( 7 )
+default_color = Color( 0.631373, 0.631373, 0.870588, 1 )
+gradient = SubResource( 8 )
+script = ExtResource( 4 )
+length = 21
+object_to_follow = NodePath("../..")
+
+[node name="Crystal8" type="AnimatedSprite" parent="."]
+position = Vector2( 29, 0 )
+z_index = 1
+frames = SubResource( 24 )
+script = ExtResource( 3 )
+
+[node name="node" type="Node" parent="Crystal8"]
+
+[node name="trail" type="Line2D" parent="Crystal8/node"]
+z_index = 6
+z_as_relative = false
+width = 8.0
+width_curve = SubResource( 7 )
+default_color = Color( 0.949219, 0.418991, 0.418991, 1 )
+gradient = SubResource( 8 )
+script = ExtResource( 4 )
+length = 21
+object_to_follow = NodePath("../..")

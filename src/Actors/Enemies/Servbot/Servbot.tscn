@@ -1,0 +1,112 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://src/Actors/Enemies/AI.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Modules/Enemy/Enemy.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Modules/Enemy/EnemyDamage.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/Enemies/Shared/QuickEnemyDeath.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=7]
+[ext_resource path="res://src/Effects/Materials/default_material.tres" type="Material" id=10]
+[ext_resource path="res://src/Sounds/HIT.wav" type="AudioStream" id=12]
+[ext_resource path="res://src/Actors/Enemies/Conjuntivite/VerticalSin.gd" type="Script" id=14]
+[ext_resource path="res://src/Actors/Enemies/Servbot/servbot.res" type="SpriteFrames" id=15]
+[ext_resource path="res://src/Sounds/LEMON_SHOT2.wav" type="AudioStream" id=16]
+[ext_resource path="res://src/Actors/Enemies/Servbot/ServbotShot.gd" type="Script" id=18]
+[ext_resource path="res://src/Actors/Enemies/SimpleProjectile.tscn" type="PackedScene" id=19]
+
+[sub_resource type="RectangleShape2D" id=47]
+extents = Vector2( 102, 86.5 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 13.5, 15.5 )
+
+[sub_resource type="RectangleShape2D" id=48]
+
+[node name="Servbot" type="KinematicBody2D" groups=["Enemies"]]
+z_index = 3
+collision_layer = 0
+collision_mask = 0
+script = ExtResource( 2 )
+max_health = 1.0
+
+[node name="AI" type="Node2D" parent="."]
+script = ExtResource( 1 )
+on_idle = [ NodePath("../Patrol") ]
+on_see_player = [ NodePath("../ServbotShot") ]
+
+[node name="vision" type="Area2D" parent="AI"]
+visible = false
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="AI/vision"]
+position = Vector2( 0, 1.5 )
+shape = SubResource( 47 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 10 )
+z_index = 1
+frames = ExtResource( 15 )
+animation = "idle"
+frame = 3
+playing = true
+flip_h = true
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( -0.5, 1.5 )
+shape = SubResource( 15 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+scale = Vector2( 2, 2 )
+rect = Rect2( -5, -5, 10, 10 )
+
+[node name="area2D" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+shape = SubResource( 48 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 7 )
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 3 )
+max_freeze_hits = 1
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+stream = ExtResource( 12 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="Patrol" type="Node2D" parent="."]
+script = ExtResource( 14 )
+actions = [ "Event" ]
+h_frequency = 2
+h_range = 16
+v_range = 16
+
+[node name="EnemyDeath" parent="." instance=ExtResource( 4 )]
+
+[node name="ServbotShot" type="Node2D" parent="."]
+script = ExtResource( 18 )
+actions = [ "Event" ]
+animation = "shot_prepare"
+projectile = ExtResource( 19 )
+
+[node name="shot_sound" type="AudioStreamPlayer2D" parent="ServbotShot"]
+stream = ExtResource( 16 )
+volume_db = -12.079
+pitch_scale = 2.0
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[connection signal="body_entered" from="AI/vision" to="AI" method="_on_vision_body_entered"]
+[connection signal="body_exited" from="AI/vision" to="AI" method="_on_vision_body_exited"]

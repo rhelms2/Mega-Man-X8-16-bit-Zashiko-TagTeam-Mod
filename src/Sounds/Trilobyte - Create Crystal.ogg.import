@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Trilobyte - Create Crystal.ogg-6d34e69e44cd74e1f1fc06838e17fc08.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/Trilobyte - Create Crystal.ogg"
+dest_files=[ "res://.import/Trilobyte - Create Crystal.ogg-6d34e69e44cd74e1f1fc06838e17fc08.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

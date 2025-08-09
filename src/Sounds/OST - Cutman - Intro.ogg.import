@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - Cutman - Intro.ogg-f4ded9c5750d69b5dc6fcee389195aed.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - Cutman - Intro.ogg"
+dest_files=[ "res://.import/OST - Cutman - Intro.ogg-f4ded9c5750d69b5dc6fcee389195aed.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

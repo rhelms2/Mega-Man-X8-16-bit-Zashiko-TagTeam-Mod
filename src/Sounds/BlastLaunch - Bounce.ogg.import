@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/BlastLaunch - Bounce.ogg-eeec0abe1d66bc88d8e31533f153a410.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/BlastLaunch - Bounce.ogg"
+dest_files=[ "res://.import/BlastLaunch - Bounce.ogg-eeec0abe1d66bc88d8e31533f153a410.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

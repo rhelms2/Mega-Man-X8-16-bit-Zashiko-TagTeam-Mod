@@ -1,0 +1,186 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Enemies/ProjectileDoT.gd" type="Script" id=2]
+[ext_resource path="res://src/Sounds/56 - MMX - Enemy Death.wav" type="AudioStream" id=3]
+[ext_resource path="res://src/Effects/Textures/sigma_lilspike.png" type="Texture" id=4]
+[ext_resource path="res://src/Actors/Bosses/CopySigma/WallSpikeProjectile.gd" type="Script" id=5]
+[ext_resource path="res://src/Effects/Fire/pinkfire2.png" type="Texture" id=6]
+[ext_resource path="res://src/Effects/Fire/pinkfire1.png" type="Texture" id=7]
+[ext_resource path="res://src/Effects/Fire/pinkfire3.png" type="Texture" id=8]
+[ext_resource path="res://src/Effects/Materials/pinkfire_mat.tres" type="Material" id=9]
+[ext_resource path="res://src/Effects/Materials/pinkfire_particles.tres" type="Material" id=10]
+[ext_resource path="res://Zero_mod/Boss/enkoujin_projectile_small.tres" type="SpriteFrames" id=11]
+[ext_resource path="res://Zero_mod/Boss/fire2.png" type="Texture" id=12]
+[ext_resource path="res://Zero_mod/Boss/fire3.png" type="Texture" id=13]
+[ext_resource path="res://Zero_mod/Boss/fire1.png" type="Texture" id=14]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 48, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 4 )
+region = Rect2( 48, 48, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 4 )
+region = Rect2( 96, 48, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 4 )
+region = Rect2( 144, 48, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 96, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 4 )
+region = Rect2( 48, 96, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 4 )
+region = Rect2( 96, 96, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 4 )
+region = Rect2( 0, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 4 )
+region = Rect2( 48, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 4 )
+region = Rect2( 96, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 4 )
+region = Rect2( 144, 0, 48, 48 )
+
+[sub_resource type="SpriteFrames" id=12]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ) ],
+"loop": false,
+"name": "explode",
+"speed": 24.0
+}, {
+"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ) ],
+"loop": true,
+"name": "idle",
+"speed": 28.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 24, 12 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 5, 6 )
+
+[node name="WallSpikeProjectile" type="KinematicBody2D" groups=["Enemy Projectile"]]
+z_index = 10
+collision_layer = 16
+script = ExtResource( 5 )
+damage = 8.0
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 11 )
+frames = SubResource( 12 )
+animation = "idle"
+frame = 3
+playing = true
+
+[node name="fire1" type="Particles2D" parent="animatedSprite"]
+material = ExtResource( 9 )
+position = Vector2( -8, -11 )
+z_index = 1
+amount = 2
+local_coords = false
+process_material = ExtResource( 10 )
+texture = ExtResource( 7 )
+
+[node name="fire2" type="Particles2D" parent="animatedSprite"]
+material = ExtResource( 9 )
+position = Vector2( -8, -11 )
+z_index = 1
+amount = 3
+local_coords = false
+process_material = ExtResource( 10 )
+texture = ExtResource( 6 )
+
+[node name="fire3" type="Particles2D" parent="animatedSprite"]
+material = ExtResource( 9 )
+position = Vector2( -8, -11 )
+z_index = 1
+amount = 1
+local_coords = false
+process_material = ExtResource( 10 )
+texture = ExtResource( 8 )
+
+[node name="animatedSprite_zero" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 0, 11 )
+frames = ExtResource( 11 )
+animation = "idle"
+playing = true
+
+[node name="fire1" type="Particles2D" parent="animatedSprite_zero"]
+material = ExtResource( 9 )
+position = Vector2( -8, -11 )
+z_index = 1
+emitting = false
+amount = 2
+local_coords = false
+process_material = ExtResource( 10 )
+texture = ExtResource( 14 )
+
+[node name="fire2" type="Particles2D" parent="animatedSprite_zero"]
+material = ExtResource( 9 )
+position = Vector2( -8, -11 )
+z_index = 1
+emitting = false
+amount = 3
+local_coords = false
+process_material = ExtResource( 10 )
+texture = ExtResource( 12 )
+
+[node name="fire3" type="Particles2D" parent="animatedSprite_zero"]
+material = ExtResource( 9 )
+position = Vector2( -8, -11 )
+z_index = 1
+emitting = false
+amount = 1
+local_coords = false
+process_material = ExtResource( 10 )
+texture = ExtResource( 13 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 1 )
+shape = SubResource( 13 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+position = Vector2( -0.500003, 1.5 )
+scale = Vector2( 3.05, 3.05 )
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+position = Vector2( 0, -3 )
+shape = SubResource( 14 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 2 )
+damage = 8.0
+
+[node name="vanish" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+volume_db = -2.0
+pitch_scale = 1.2
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 1 )

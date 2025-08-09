@@ -1,0 +1,150 @@
+extends Node2D
+
+const bar_pos = 147
+
+export  var weapons: Array
+export  var text_palette: Texture
+
+onready var parts: Array = get_children()
+onready var tween: = TweenController.new(self, false)
+onready var music: AudioStreamPlayer = $"../audioStreamPlayer"
+onready var text: Node2D = $"../text"
+onready var you_get: Label = $"../text/you_get"
+onready var weapon_name: Label = $"../text/weapon_name"
+onready var get_shadow: Label = $"../text/get_shadow"
+onready var name_shadow: Label = $"../text/name_shadow"
+onready var names: Array = [you_get, weapon_name, get_shadow, name_shadow]
+onready var bar2: Sprite = $"../bar2"
+onready var bar: Sprite = $"../bar"
+onready var green_bg: Polygon2D = $"../green_bg"
+onready var green_bg_pos: = green_bg.position
+onready var o_pos: Vector2 = position
+onready var you_get_pos: Vector2 = you_get.rect_position
+onready var weapon_name_pos: Vector2 = weapon_name.rect_position
+onready var fullblack: Sprite = $"../fullblack"
+onready var lines_2: Node2D = $"../lines2"
+onready var audio: AudioStreamPlayer = $"../audioStreamPlayer"
+
+var current_weapon: WeaponResource
+var ending: bool = false
+var fading_out: bool = false
+
+signal move_in
+signal start
+signal reset
+signal color(weapon)
+signal defined_weapon(weapon)
+
+
+func _input(event: InputEvent) -> void :
+	if not ending:
+		if event.is_action_pressed("pause"):
+			tween.reset()
+			fadeout(0.5)
+			GameManager.pause("weaponget")
+			ending = true
+
+func _ready() -> void :
+	get_parent().connect("initialize", self, "delayed_initialize")
+	reset()
+	Tools.timer(2.0, "start_loop", lines_2)
+	you_get.material.set_shader_param("palette", text_palette)
+
+func delayed_initialize() -> void :
+	Tools.timer(1.0, "initialize", self)
+
+func initialize() -> void :
+	if ending:
+		return
+	music.play()
+	bars_expand()
+	Tools.timer(5.5, "start", self, null, true)
+	Tools.timer(7.2, "flash", self, null, true)
+	Tools.timer(11.0, "move_things_away", self, null, true)
+	Tools.timer(11.0, "fadeout", self, null, true)
+
+func define_weapon_gotten() -> void :
+	var weapon_gotten = GameManager.weapon_got
+	if not weapon_gotten or weapon_gotten == "none":
+		push_error("No Weapon defined, defining it as rooster_weapon for debug purposes")
+		weapon_gotten = "rooster_weapon"
+	for weapon in weapons:
+		if weapon.collectible == weapon_gotten:
+			current_weapon = weapon
+	you_get.text = tr("YOUGOT_TITLE")
+	get_shadow.text = tr("YOUGOT_TITLE")
+	weapon_name.text = tr(current_weapon.collectible.to_upper())
+	name_shadow.text = tr(current_weapon.collectible.to_upper())
+	emit_signal("defined_weapon", current_weapon)
+
+func reset() -> void :
+	tween.reset()
+	define_weapon_gotten()
+	fullblack.modulate.a = 1
+	visible = false
+	bar.position.y = bar_pos
+	bar2.position.y = bar_pos
+	green_bg.scale.y = 0
+	position = o_pos
+	green_bg.position = green_bg_pos
+	you_get.rect_position = you_get_pos
+	weapon_name.rect_position = weapon_name_pos
+	for n in names:
+		n.visible = false
+	emit_signal("reset")
+
+func start() -> void :
+	if ending:
+		return
+	visible = true
+	tween.reset()
+	tween.create(Tween.EASE_OUT, Tween.TRANS_CUBIC, true)
+	for part in parts:
+		part.position.x = 280 + part.animation_z * 2
+		tween.add_attribute("position:x", 0, 1.5, part)
+	emit_signal("move_in")
+
+func flash() -> void :
+	if ending:
+		return
+	tween.create(Tween.EASE_OUT, Tween.TRANS_CUBIC, true)
+	tween.set_ignore_pause_mode()
+	for n in names:
+		n.visible = true
+	for part in parts:
+		part.modulate = Color(11, 11, 11, 1)
+		tween.add_attribute("modulate", Color.white, 1.15, part)
+	emit_signal("color", current_weapon)
+
+func bars_expand() -> void :
+	tween.create(Tween.EASE_OUT, Tween.TRANS_CUBIC, true)
+	tween.add_attribute("modulate:a", 0.0, 0.5, fullblack)
+	tween.add_attribute("position:y", bar.position.y + 40, 0.5, bar)
+	tween.add_attribute("position:y", bar2.position.y - 39, 0.5, bar2)
+	tween.add_attribute("scale:y", 1.0, 0.5, green_bg)
+	emit_signal("start")
+
+func fadeout(duration: float = 1.0):
+	
+	if not fading_out:
+		
+		tween.create(Tween.EASE_OUT, Tween.TRANS_LINEAR, true)
+		tween.set_ignore_pause_mode()
+		tween.add_attribute("modulate:a", 1.0, duration, fullblack)
+		tween.add_attribute("volume_db", - 40, duration, audio)
+		tween.add_callback("end", self, [duration + 0.5])
+		fading_out = true
+
+func move_things_away() -> void :
+	if ending:
+		return
+	tween.create(Tween.EASE_OUT, Tween.TRANS_LINEAR, true)
+	tween.set_ignore_pause_mode()
+	tween.add_attribute("position:y", bar.position.y - 256, 0.8, bar)
+	tween.add_attribute("position:y", bar2.position.y - 256, 0.8, bar2)
+	tween.add_attribute("position:y", green_bg.position.y - 256, 0.8, green_bg)
+	tween.add_attribute("position:x", position.x - 256, 0.75, self)
+	tween.add_attribute("position:x", text.position.x + 156, 0.5, text)
+
+func end(wait_time: float = 1.0) -> void :
+	Tools.timer(wait_time, "go_to_stage_select", GameManager)

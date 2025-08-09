@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - Lumine - Loop.ogg-d1a15fb3eedcb3e95a41ff3e7cebc5d9.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - Lumine - Loop.ogg"
+dest_files=[ "res://.import/OST - Lumine - Loop.ogg-d1a15fb3eedcb3e95a41ff3e7cebc5d9.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

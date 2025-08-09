@@ -1,0 +1,117 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://src/Objects/Box/DeflectBox.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Effects/enemy_shader.tres" type="Shader" id=2]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=3]
+[ext_resource path="res://src/Objects/Box/TimedExplosion.gd" type="Script" id=4]
+[ext_resource path="res://src/Sounds/FX - beep.ogg" type="AudioStream" id=5]
+[ext_resource path="res://src/Actors/Bosses/BambooPandamonium/GrenadeExplosion.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Objects/Box/break_vfx.gd" type="Script" id=7]
+[ext_resource path="res://src/Actors/Bosses/BambooPandamonium/DamageReceiver.gd" type="Script" id=8]
+
+[sub_resource type="ShaderMaterial" id=240]
+resource_local_to_scene = true
+shader = ExtResource( 2 )
+shader_param/Flash = 0.0
+shader_param/Should_Blink = 0.0
+shader_param/Darken = 1.0
+shader_param/Alpha = 1.0
+shader_param/Alpha_Blink = 0.0
+
+[sub_resource type="RectangleShape2D" id=242]
+extents = Vector2( 48, 19 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 29, 24 )
+
+[sub_resource type="Curve" id=243]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=239]
+curve = SubResource( 243 )
+
+[sub_resource type="ParticlesMaterial" id=241]
+resource_local_to_scene = true
+emission_shape = 1
+emission_sphere_radius = 25.0
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 239 )
+
+[node name="ExplodingBox" instance=ExtResource( 1 )]
+collision_layer = 512
+
+[node name="animatedSprite" parent="." index="1"]
+material = SubResource( 240 )
+animation = "flash"
+frame = 3
+
+[node name="DamageReceiver" parent="." index="7"]
+collision_mask = 0
+monitoring = false
+monitorable = false
+
+[node name="Health" parent="." index="10"]
+current_health = 15
+
+[node name="EnemyShield" parent="." index="11"]
+visible = false
+
+[node name="break_vfx" parent="." index="12"]
+script = ExtResource( 7 )
+
+[node name="TimedExplosion" type="Node" parent="." index="13"]
+script = ExtResource( 4 )
+blast_area = ExtResource( 6 )
+
+[node name="beep" type="AudioStreamPlayer2D" parent="." index="14"]
+stream = ExtResource( 5 )
+volume_db = -18.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 3 )
+
+[node name="player_detector" type="Area2D" parent="." index="15"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="player_detector" index="0"]
+position = Vector2( 0, -9 )
+shape = SubResource( 242 )
+
+[node name="DamageReceiver2" type="Area2D" parent="." index="16"]
+visible = false
+collision_layer = 0
+collision_mask = 16384
+script = ExtResource( 8 )
+health_path = NodePath("../Health")
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="DamageReceiver2" index="0"]
+shape = SubResource( 2 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="explosion" parent="Death" index="1"]
+visible = false
+process_material = SubResource( 241 )
+
+[connection signal="landed" from="." to="TimedExplosion" method="activate"]
+[connection signal="zero_health" from="Health" to="TimedExplosion" method="_on_Health_zero_health"]
+[connection signal="shield_hit" from="EnemyShield" to="TimedExplosion" method="_on_EnemyShield_shield_hit"]
+[connection signal="beep" from="TimedExplosion" to="animatedSprite" method="restart"]
+[connection signal="beep" from="TimedExplosion" to="beep" method="play"]
+[connection signal="exploded" from="TimedExplosion" to="Health" method="set_health_to_zero"]
+[connection signal="body_entered" from="player_detector" to="TimedExplosion" method="_on_player_detector_body_entered"]
+[connection signal="area_entered" from="DamageReceiver2" to="DamageReceiver2" method="_on_DamageReceiver_area_entered"]
+[connection signal="body_entered" from="DamageReceiver2" to="DamageReceiver2" method="_on_area2D_body_entered"]
+[connection signal="body_exited" from="DamageReceiver2" to="DamageReceiver2" method="_on_area2D_body_exited"]
+[connection signal="friendly_fire" from="DamageReceiver2" to="TimedExplosion" method="activate"]
+[connection signal="crush" from="Crush" to="break_vfx" method="make_invisible"]

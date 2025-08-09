@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/Objects/Spikes/spike_02.png" type="Texture" id=2]
+[ext_resource path="res://src/Objects/Spikes/spike_01.png" type="Texture" id=3]
+[ext_resource path="res://src/Objects/Spikes/spike_00.png" type="Texture" id=4]
+[ext_resource path="res://src/Objects/Spikes/spike_03.png" type="Texture" id=5]
+[ext_resource path="res://src/Objects/Spikes/DestructibleSpike.tscn" type="PackedScene" id=6]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "middle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "middle_destroyed",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "side",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 5 ) ],
+"loop": true,
+"name": "side_destroyed",
+"speed": 5.0
+} ]
+
+[node name="spikes" type="Node2D"]
+position = Vector2( 5158, -508 )
+
+[node name="DestructibleSpike" parent="." instance=ExtResource( 6 )]
+position = Vector2( -36, -10 )
+frames = SubResource( 2 )
+animation = "side"
+flip_h = true
+
+[node name="DestructibleSpike2" parent="." instance=ExtResource( 6 )]
+position = Vector2( -23, -10 )
+frames = SubResource( 2 )
+flip_h = true
+
+[node name="DestructibleSpike3" parent="." instance=ExtResource( 6 )]
+position = Vector2( -7, -10 )
+frames = SubResource( 2 )
+flip_h = true
+
+[node name="DestructibleSpike4" parent="." instance=ExtResource( 6 )]
+position = Vector2( 9, -10 )
+frames = SubResource( 2 )
+flip_h = true
+
+[node name="DestructibleSpike6" parent="." instance=ExtResource( 6 )]
+position = Vector2( 24, -10 )
+frames = SubResource( 2 )
+flip_h = true
+
+[node name="DestructibleSpike5" parent="." instance=ExtResource( 6 )]
+position = Vector2( 40, -10 )
+frames = SubResource( 2 )
+animation = "side"

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Mantis - Desperation.ogg-32e6e9edb9278c4426be12f51fcc348e.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/Mantis - Desperation.ogg"
+dest_files=[ "res://.import/Mantis - Desperation.ogg-32e6e9edb9278c4426be12f51fcc348e.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

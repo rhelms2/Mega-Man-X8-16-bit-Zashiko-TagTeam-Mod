@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Mantis - DarkSlash.ogg-2f2e203964f87c7f9970f587e1fb688f.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/Mantis - DarkSlash.ogg"
+dest_files=[ "res://.import/Mantis - DarkSlash.ogg-2f2e203964f87c7f9970f587e1fb688f.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

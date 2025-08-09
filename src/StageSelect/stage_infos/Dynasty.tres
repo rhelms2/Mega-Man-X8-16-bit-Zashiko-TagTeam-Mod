@@ -1,0 +1,18 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://src/Actors/Bosses/BossIntro/StageInfo.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Bosses/GigaboltManowar/manowar.res" type="SpriteFrames" id=2]
+[ext_resource path="res://src/StageSelect/preview/stage_4.png" type="Texture" id=3]
+
+[resource]
+script = ExtResource( 1 )
+save_flag = "manowar_weapon"
+beaten_condition = [  ]
+pointer_position = Vector2( 21, 278 )
+should_play_intro = true
+name_id = "MANOWAR"
+collectibles = [ "manowar_weapon", "life_up_manowar", "icarus_arms" ]
+preview = ExtResource( 3 )
+sprite_frames = ExtResource( 2 )
+animation_beats = [ "storm_loop", "thunder_prepare", "thunder_loop", "intro" ]
+inverse_sprites = false

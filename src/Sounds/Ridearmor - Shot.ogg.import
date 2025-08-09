@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Ridearmor - Shot.ogg-68c43c807cef7e1a804b61dd59f96e65.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/Ridearmor - Shot.ogg"
+dest_files=[ "res://.import/Ridearmor - Shot.ogg-68c43c807cef7e1a804b61dd59f96e65.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

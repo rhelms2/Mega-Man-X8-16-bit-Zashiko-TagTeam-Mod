@@ -1,0 +1,103 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://src/Effects/Materials/FireParticles.tres" type="Material" id=1]
+[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=2]
+[ext_resource path="res://src/Effects/Textures/fire_dash.png" type="Texture" id=3]
+[ext_resource path="res://src/Effects/Fire/fire2.png" type="Texture" id=4]
+[ext_resource path="res://src/Actors/Player/BossWeapons/FireDash/DefaultDeflectable.gd" type="Script" id=5]
+[ext_resource path="res://src/Actors/Player/BossWeapons/FireDash/FireDashProjectile.gd" type="Script" id=6]
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 3 )
+region = Rect2( 64, 0, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 48, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 3 )
+region = Rect2( 64, 48, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 96, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 3 )
+region = Rect2( 64, 96, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 64, 48 )
+
+[sub_resource type="SpriteFrames" id=19]
+animations = [ {
+"frames": [ SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 13 ) ],
+"loop": true,
+"name": "default",
+"speed": 28.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 21, 23 )
+
+[sub_resource type="CanvasItemMaterial" id=21]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 3
+particles_anim_loop = false
+
+[sub_resource type="RectangleShape2D" id=23]
+extents = Vector2( 17, 12 )
+
+[node name="FireDash" type="KinematicBody2D" groups=["Player Projectile"]]
+z_index = 10
+collision_layer = 4
+collision_mask = 0
+script = ExtResource( 6 )
+active = true
+damage = 10.0
+damage_to_bosses = 5.0
+damage_to_weakness = 15.0
+break_guards = true
+pop_in_time = 0.0
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 19 )
+frame = 4
+playing = true
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+z_index = -1
+shape = SubResource( 22 )
+
+[node name="fire2" type="Particles2D" parent="."]
+modulate = Color( 1, 0.662745, 0.662745, 1 )
+material = SubResource( 21 )
+z_index = -1
+amount = 12
+lifetime = 0.35
+local_coords = false
+process_material = ExtResource( 1 )
+texture = ExtResource( 4 )
+
+[node name="disabler" type="Node" parent="fire2"]
+script = ExtResource( 2 )
+fade_out = true
+delete_after_fade = true
+
+[node name="Deflectable" type="RigidBody2D" parent="." groups=["Deflectable", "Player Projectile"]]
+collision_layer = 4
+collision_mask = 0
+mode = 3
+script = ExtResource( 5 )
+break_guards = true
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="Deflectable"]
+position = Vector2( 3, 0 )
+shape = SubResource( 23 )
+
+[connection signal="disabled" from="." to="Deflectable" method="deactivate"]

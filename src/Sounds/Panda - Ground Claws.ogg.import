@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Panda - Ground Claws.ogg-96635a9cb800aebda8d5dadec743f1d9.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/Panda - Ground Claws.ogg"
+dest_files=[ "res://.import/Panda - Ground Claws.ogg-96635a9cb800aebda8d5dadec743f1d9.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

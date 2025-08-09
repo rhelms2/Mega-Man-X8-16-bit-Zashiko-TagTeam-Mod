@@ -1,0 +1,2338 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "Node2D",
+"class": "AI",
+"language": "GDScript",
+"path": "res://src/Actors/Enemies/AI.gd"
+}, {
+"base": "BaseAbility",
+"class": "Ability",
+"language": "GDScript",
+"path": "res://src/Actors/Ability.gd"
+}, {
+"base": "Resource",
+"class": "AbilityResource",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/BossAbilities/AbilityResource.gd"
+}, {
+"base": "Reference",
+"class": "AbilityStage",
+"language": "GDScript",
+"path": "res://src/Actors/NewStateMachine/AbilityState.gd"
+}, {
+"base": "Actor",
+"class": "AbilityUser",
+"language": "GDScript",
+"path": "res://src/Actors/AbilityUser.gd"
+}, {
+"base": "BikeMovement",
+"class": "Accelerate",
+"language": "GDScript",
+"path": "res://src/Actors/Props/RideChaser/Accelerate.gd"
+}, {
+"base": "Resource",
+"class": "Achievement",
+"language": "GDScript",
+"path": "res://src/AchievementSystem/Achievement.gd"
+}, {
+"base": "Resource",
+"class": "AchievementOrder",
+"language": "GDScript",
+"path": "res://src/AchievementSystem/AchievementOrder.gd"
+}, {
+"base": "CanvasLayer",
+"class": "AchievementPopup",
+"language": "GDScript",
+"path": "res://src/AchievementSystem/Popup.gd"
+}, {
+"base": "Resource",
+"class": "ActionPresses",
+"language": "GDScript",
+"path": "res://src/WeaponGet/MovementArray.gd"
+}, {
+"base": "Area2D",
+"class": "ActiveArea2D",
+"language": "GDScript",
+"path": "res://src/Actors/Props/RideArmor/ActiveArea2D.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Actor",
+"language": "GDScript",
+"path": "res://src/Actors/Actor.gd"
+}, {
+"base": "Command",
+"class": "AddToVector2CMD",
+"language": "GDScript",
+"path": "res://AddCMD.gd"
+}, {
+"base": "Command",
+"class": "AddVectorCMD",
+"language": "GDScript",
+"path": "res://AddVectorCMD.gd"
+}, {
+"base": "Reference",
+"class": "AffectedTargets",
+"language": "GDScript",
+"path": "res://AffectedTargets.gd"
+}, {
+"base": "Dash",
+"class": "AirDash",
+"language": "GDScript",
+"path": "res://src/Actors/Player/AirDash.gd"
+}, {
+"base": "DashAxl",
+"class": "AirDashAxl",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Scripts/AirDashAxl.gd"
+}, {
+"base": "DashZero",
+"class": "AirDashZero",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/AirDashZero.gd"
+}, {
+"base": "AnimatedSprite",
+"class": "AnimatedMirror",
+"language": "GDScript",
+"path": "res://src/Actors/Props/RideArmor/RepeatAnimation.gd"
+}, {
+"base": "Reference",
+"class": "AnimationController",
+"language": "GDScript",
+"path": "res://src/Actors/NewStateMachine/AnimationController.gd"
+}, {
+"base": "Node2D",
+"class": "ArtificialIntelligence",
+"language": "GDScript",
+"path": "res://src/Actors/Enemies/Artificial Intelligence.gd"
+}, {
+"base": "Movement",
+"class": "Attack",
+"language": "GDScript",
+"path": "res://src/Actors/Attack.gd"
+}, {
+"base": "EnemyAbility",
+"class": "AttackAbility",
+"language": "GDScript",
+"path": "res://src/Actors/Enemies/AttackAbility.gd"
+}, {
+"base": "EnemyAbilityAxl",
+"class": "AttackAbilityAxl",
+"language": "GDScript",
+"path": "res://Axl_mod/Enemies/AttackAbilityAxl.gd"
+}, {
+"base": "Character",
+"class": "Axl",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Scripts/PlayerAxl.gd"
+}, {
+"base": "Node2D",
+"class": "AxlTransform",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Projectiles/Transform/Transform.gd"
+}, {
+"base": "Reference",
+"class": "BSON",
+"language": "GDScript",
+"path": "res://System/utils/bson/bson.gd"
+}, {
+"base": "Area2D",
+"class": "BackgroundSwapper",
+"language": "GDScript",
+"path": "res://src/Levels/BackgroundSwapper.gd"
+}, {
+"base": "GenericProjectile",
+"class": "BambooGrenade",
+"language": "GDScript",
+"path": "res://src/Actors/Bosses/BambooPandamonium/BambooGrenade.gd"
+}, {
+"base": "Node2D",
+"class": "BambooSlash",
+"language": "GDScript",
+"path": "res://src/Actors/Bosses/BambooPandamonium/slash.gd"
+}, {
+"base": "Node2D",
+"class": "BaseAbility",
+"language": "GDScript",
+"path": "res://src/Actors/BaseAbility.gd"
+}, {
+"base": "AttackAbility",
+"class": "BeeAttack",
+"language": "GDScript",
+"path": "res://src/Actors/Enemies/Small Bee/BeeAttack.gd"
+}, {
+"base": "AttackAbility",
+"class": "BeePatrol",
+"language": "GDScript",
+"path": "res://src/Actors/Enemies/Small Bee/BeePatrol.gd"
+}, {
+"base": "Character",
+"class": "Bike",
+"language": "GDScript",
+"path": "res://src/Actors/Props/RideChaser/Bike.gd"
+}, {
+"base": "Damage",
+"class": "BikeDamage",
+"language": "GDScript",
+"path": "res://src/Actors/Props/RideChaser/BikeDamage.gd"
+}, {
+"base": "Accelerate",
+"class": "BikeDash",
+"language": "GDScript",
+"path": "res://src/Actors/Props/RideChaser/BikeDash.gd"
+}, {
+"base": "Ability",
+"class": "BikeDeath",
+"language": "GDScript",
+"path": "res://src/Actors/Props/RideChaser/Death.gd"
+}, {
+"base": "Ability",
+"class": "BikeEject",
+"language": "GDScript",
+"path": "res://src/Actors/Props/RideChaser/BikeEject.gd"
+}, {
+"base": "BikeMovement",
+"class": "BikeJump",
+"language": "GDScript",
+"path": "res://src/Actors/Props/RideChaser/BikeJump.gd"
+}, {
+"base": "Movement",
+"class": "BikeMovement",
+"language": "GDScript",
+"path": "res://src/Actors/Props/RideChaser/BikeMovement.gd"
+}, {
+"base": "BikeMovement",
+"class": "BikeOnTouchDamage",
+"language": "GDScript",
+"path": "res://src/Actors/Props/RideChaser/BikeOnTouchDamage.gd"
+}, {
+"base": "BikeMovement",
+"class": "BikeRest",
+"language": "GDScript",
+"path": "res://src/Actors/Props/RideChaser/BikeRest.gd"
+}, {
+"base": "WeaponShot",
+"class": "BikeShot",
+"language": "GDScript",
+"path": "res://src/Actors/Weapons/Projectiles/BikeShot.gd"
+}, {
+"base": "Node2D",
+"class": "BlackZeroArmor",
+"language": "GDScript",
+"path": "res://Zero_mod/Objects/Pickups/Armor.gd"
+}, {
+"base": "BossWeaponAxl",
+"class": "BlastLauncher",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Projectiles/BossWeapons/BlastLauncher/BlastLauncherProjectile.gd"
+}, {
+"base": "Node2D",
+"class": "BossAI",
+"language": "GDScript",
+"path": "res://src/Actors/Bosses/BossAI.gd"
+}, {
+"base": "Node",
+"class": "BossAbilityZero",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/BossAbilities/BossAbilityZero.gd"
+}, {
+"base": "Node",
+"class": "BossAbilityZeroX8",
+"language": "GDScript",
+"path": "res://Zero_mod/X8/Player/BossAbilities/BossAbilityZero.gd"
+}, {
+"base": "Node",
+"class": "BossAchievementHandler",
+"language": "GDScript",
+"path": "res://src/AchievementSystem/BossAchievementHandler.gd"
+}, {
+"base": "EnemyDamage",
+"class": "BossDamage",
+"language": "GDScript",
+"path": "res://src/Actors/Modules/Enemy/BossDamage.gd"
+}, {
+"base": "EnemyDeath",
+"class": "BossDeath",
+"language": "GDScript",
+"path": "res://src/Actors/Modules/Enemy/BossDeath.gd"
+}, {
+"base": "EnemyIdle",
+"class": "BossIdle",
+"language": "GDScript",
+"path": "res://src/Actors/Bosses/DarkMantis/Idle.gd"
+}, {
+"base": "EnemyAbility",
+"class": "BossIntro",
+"language": "GDScript",
+"path": "res://src/Actors/Bosses/BossIntro.gd"
+}, {
+"base": "AttackAbility",
+"class": "BossStun",
+"language": "GDScript",
+"path": "res://src/Actors/Bosses/BossStun.gd"
+}, {
+"base": "Node",
+"class": "BossWeapon",
+"language": "GDScript",
+"path": "res://src/Actors/Player/X/BossWeapon.gd"
+}, {
+"base": "Actor",
+"class": "BossWeaponAxl",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Projectiles/BossWeaponAxl.gd"
+}, {
+"base": "AnimatedSprite",
+"class": "BoxSprite",
+"language": "GDScript",
+"path": "res://src/Objects/Box/X8Sprite.gd"
+}, {
+"base": "BikeMovement",
+"class": "Break",
+"language": "GDScript",
+"path": "res://src/Actors/Props/RideChaser/Brake.gd"
+}, {
+"base": "Weapon",
+"class": "Buster",
+"language": "GDScript",
+"path": "res://src/Actors/Weapons/Buster.gd"
+}, {
+"base": "X8TextureButton",
+"class": "CallbackButton",
+"language": "GDScript",
+"path": "res://src/Options/CallbackButton.gd"
+}, {
+"base": "Area2D",
+"class": "CameraLimits",
+"language": "GDScript",
+"path": "res://src/System/CameraLimits.gd"
+}, {
+"base": "Node",
+"class": "CameraMode",
+"language": "GDScript",
+"path": "res://src/System/CameraMode.gd"
+}, {
+"base": "AbilityUser",
+"class": "Character",
+"language": "GDScript",
+"path": "res://src/Actors/Player/Character.gd"
+}, {
+"base": "BaseAbility",
+"class": "CharacterAbility",
+"language": "GDScript",
+"path": "res://src/Actors/Props/RideArmor/Deactivated.gd"
+}, {
+"base": "EventAbility",
+"class": "CharacterSwitchWarpIn",
+"language": "GDScript",
+"path": "res://TagTeam_Mod/CharacterSwitchWarpIn.gd"
+}, {
+"base": "EventAbility",
+"class": "CharacterSwitchWarpOut",
+"language": "GDScript",
+"path": "res://TagTeam_Mod/CharacterSwitchWarpOut.gd"
+}, {
+"base": "Ability",
+"class": "Charge",
+"language": "GDScript",
+"path": "res://src/Actors/Player/Charge.gd"
+}, {
+"base": "MediumBuster",
+"class": "ChargedBuster",
+"language": "GDScript",
+"path": "res://src/Actors/Weapons/Projectiles/Charged Buster.gd"
+}, {
+"base": "Object",
+"class": "CheckpointSettings",
+"language": "GDScript",
+"path": "res://src/System/CheckpointSettings.gd"
+}, {
+"base": "GenericProjectile",
+"class": "ClawAttack",
+"language": "GDScript",
+"path": "res://src/Actors/Bosses/KingCrab/ClawAttack.gd"
+}, {
+"base": "Reference",
+"class": "Command",
+"language": "GDScript",
+"path": "res://Command.gd"
+}, {
+"base": "Reference",
+"class": "CommandList",
+"language": "GDScript",
+"path": "res://CommandList.gd"
+}, {
+"base": "X8TextureButton",
+"class": "ConfirmButton",
+"language": "GDScript",
+"path": "res://src/Options/ResetConfigs.gd"
+}, {
+"base": "WeaponShot",
+"class": "CopyBullet",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Projectiles/CopyBulletAxl.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "CopyPickUp",
+"language": "GDScript",
+"path": "res://Axl_mod/Objects/Pickups/AxlCopyPickUp.gd"
+}, {
+"base": "AttackAbility",
+"class": "CrabPatrol",
+"language": "GDScript",
+"path": "res://src/Actors/Enemies/SmallCrab/CrabPatrol.gd"
+}, {
+"base": "Node2D",
+"class": "CrushCheck",
+"language": "GDScript",
+"path": "res://src/Actors/Player/X/CrushCheck.gd"
+}, {
+"base": "Movement",
+"class": "Damage",
+"language": "GDScript",
+"path": "res://src/Actors/Player/Damage.gd"
+}, {
+"base": "Node2D",
+"class": "DamageOnTouch",
+"language": "GDScript",
+"path": "res://src/Actors/Modules/Enemy/DamageOnTouch.gd"
+}, {
+"base": "Area2D",
+"class": "DamageReceiver",
+"language": "GDScript",
+"path": "res://src/Actors/Bosses/BambooPandamonium/DamageReceiver.gd"
+}, {
+"base": "Reference",
+"class": "DamageValue",
+"language": "GDScript",
+"path": "res://src/Actors/NewStateMachine/DamageValue.gd"
+}, {
+"base": "AttackAbility",
+"class": "DarkSlash",
+"language": "GDScript",
+"path": "res://src/Actors/Bosses/DarkMantis/DarkSlash.gd"
+}, {
+"base": "Node2D",
+"class": "Darkness",
+"language": "GDScript",
+"path": "res://src/Levels/PitchBlack/Darkness.gd"
+}, {
+"base": "Movement",
+"class": "Dash",
+"language": "GDScript",
+"path": "res://src/Actors/Player/Dash.gd"
+}, {
+"base": "Movement",
+"class": "DashAxl",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Scripts/DashAxl.gd"
+}, {
+"base": "Jump",
+"class": "DashJump",
+"language": "GDScript",
+"path": "res://src/Actors/Player/DashJump.gd"
+}, {
+"base": "JumpAxl",
+"class": "DashJumpAxl",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Scripts/DashJumpAxl.gd"
+}, {
+"base": "JumpZero",
+"class": "DashJumpZero",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/DashJumpZero.gd"
+}, {
+"base": "WallJump",
+"class": "DashWallJump",
+"language": "GDScript",
+"path": "res://src/Actors/Player/DashWallJump.gd"
+}, {
+"base": "WallJumpAxl",
+"class": "DashWallJumpAxl",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Scripts/DashWallJumpAxl.gd"
+}, {
+"base": "WallJumpZero",
+"class": "DashWallJumpZero",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/DashWallJumpZero.gd"
+}, {
+"base": "Movement",
+"class": "DashZero",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/DashZero.gd"
+}, {
+"base": "BikeMovement",
+"class": "Deaccelerate",
+"language": "GDScript",
+"path": "res://src/Actors/Props/RideChaser/Deaccelerate.gd"
+}, {
+"base": "Movement",
+"class": "Death",
+"language": "GDScript",
+"path": "res://src/Actors/Player/PlayerDeath.gd"
+}, {
+"base": "Label",
+"class": "DialogBox",
+"language": "GDScript",
+"path": "res://src/DialogSystem/AnimatedText.gd"
+}, {
+"base": "Resource",
+"class": "DialogueProfile",
+"language": "GDScript",
+"path": "res://src/DialogSystem/Profiles/Profile.gd"
+}, {
+"base": "Resource",
+"class": "DialogueText",
+"language": "GDScript",
+"path": "res://src/DialogSystem/Profiles/DialogueText.gd"
+}, {
+"base": "GenericProjectile",
+"class": "DirtProjectile",
+"language": "GDScript",
+"path": "res://src/Actors/Enemies/Big Tractor/DirtyProjectile.gd"
+}, {
+"base": "Movement",
+"class": "DodgeAxl",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Scripts/DodgeAxl.gd"
+}, {
+"base": "Node",
+"class": "DoorCameraTranslator",
+"language": "GDScript",
+"path": "res://src/Objects/Door/CameraTranslator.gd"
+}, {
+"base": "NewAbility",
+"class": "DoorClose",
+"language": "GDScript",
+"path": "res://src/Objects/Door/Close.gd"
+}, {
+"base": "NewAbility",
+"class": "DoorPassThrough",
+"language": "GDScript",
+"path": "res://src/Objects/Door/PassThrough.gd"
+}, {
+"base": "Object",
+"class": "Encryption",
+"language": "GDScript",
+"path": "res://System/old_encryption.gd"
+}, {
+"base": "AbilityUser",
+"class": "Enemy",
+"language": "GDScript",
+"path": "res://src/Actors/Modules/Enemy/Enemy.gd"
+}, {
+"base": "Movement",
+"class": "EnemyAbility",
+"language": "GDScript",
+"path": "res://src/Actors/Enemies/EnemyAbility.gd"
+}, {
+"base": "Movement",
+"class": "EnemyAbilityAxl",
+"language": "GDScript",
+"path": "res://Axl_mod/Enemies/EnemyAbilityAxl.gd"
+}, {
+"base": "Node2D",
+"class": "EnemyDamage",
+"language": "GDScript",
+"path": "res://src/Actors/Modules/Enemy/EnemyDamage.gd"
+}, {
+"base": "BaseAbility",
+"class": "EnemyDeath",
+"language": "GDScript",
+"path": "res://src/Actors/Modules/Enemy/EnemyDeath.gd"
+}, {
+"base": "Movement",
+"class": "EnemyIdle",
+"language": "GDScript",
+"path": "res://src/Actors/Enemies/EnemyIdle.gd"
+}, {
+"base": "DamageOnTouch",
+"class": "EnemyMeleeAttack",
+"language": "GDScript",
+"path": "res://src/Actors/MeleeEnemyAttack.gd"
+}, {
+"base": "HitDetector",
+"class": "EnemyShield",
+"language": "GDScript",
+"path": "res://src/Actors/Enemies/EnemyShield.gd"
+}, {
+"base": "HitDetectorTransformed",
+"class": "EnemyShieldTransformed",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Projectiles/Transform/Transfomed Enemies/Metool/EnemyShield_Transformed.gd"
+}, {
+"base": "AttackAbility",
+"class": "EnemyShot",
+"language": "GDScript",
+"path": "res://src/Actors/Enemies/EnemyShot.gd"
+}, {
+"base": "AttackAbility",
+"class": "EnemyStun",
+"language": "GDScript",
+"path": "res://src/Actors/Enemies/EnemyStun.gd"
+}, {
+"base": "AbilityUser",
+"class": "EnemyTransformed",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Projectiles/Transform/Transfomed Enemies/Enemy_Transformed.gd"
+}, {
+"base": "AttackAbility",
+"class": "EnemyWalkTransformed",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Projectiles/Transform/Transfomed Enemies/Metool/MetoolWalk_Transformed.gd"
+}, {
+"base": "BossAbilityZero",
+"class": "EnkoujinAbility",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/BossAbilities/Enkoujin.gd"
+}, {
+"base": "BossAbilityZero",
+"class": "EnkoujinAbilityX8",
+"language": "GDScript",
+"path": "res://Zero_mod/X8/Player/BossAbilities/Enkoujin.gd"
+}, {
+"base": "SaberZeroHitbox",
+"class": "EnkoujinZeroHitbox",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/Hitboxes/Enkoujin_Hitbox.gd"
+}, {
+"base": "SaberZeroHitbox",
+"class": "EnkoukyakuZeroHitbox",
+"language": "GDScript",
+"path": "res://Zero_mod/X8/Player/Hitboxes/Enkoukyaku_Hitbox.gd"
+}, {
+"base": "Movement",
+"class": "EventAbility",
+"language": "GDScript",
+"path": "res://src/Actors/Player/Modules/EventAbility.gd"
+}, {
+"base": "Movement",
+"class": "Fall",
+"language": "GDScript",
+"path": "res://src/Actors/Player/Fall.gd"
+}, {
+"base": "Movement",
+"class": "FallAxl",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Scripts/FallAxl.gd"
+}, {
+"base": "Movement",
+"class": "FallEnemyTransformed",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Projectiles/Transform/Transfomed Enemies/FallEnemy_Transformed.gd"
+}, {
+"base": "Movement",
+"class": "FallZero",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/FallZero.gd"
+}, {
+"base": "EventAbility",
+"class": "Finish",
+"language": "GDScript",
+"path": "res://src/Actors/Player/Modules/Finish.gd"
+}, {
+"base": "EventAbility",
+"class": "FinishAxl",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Scripts/FinishAxl.gd"
+}, {
+"base": "EventAbility",
+"class": "FinishZero",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/FinishZero.gd"
+}, {
+"base": "SimplePlayerProjectile",
+"class": "FireDash",
+"language": "GDScript",
+"path": "res://src/Actors/Player/BossWeapons/FireDash/FireDashProjectile.gd"
+}, {
+"base": "AttackAbility",
+"class": "GenericIntro",
+"language": "GDScript",
+"path": "res://src/Actors/Bosses/GenericIntro.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "GenericProjectile",
+"language": "GDScript",
+"path": "res://src/Actors/GenericProjectile.gd"
+}, {
+"base": "AttackAbility",
+"class": "GrabAttack",
+"language": "GDScript",
+"path": "res://src/Actors/Enemies/GrabAttack.gd"
+}, {
+"base": "Node2D",
+"class": "HitDetector",
+"language": "GDScript",
+"path": "res://src/Actors/Enemies/HitDetector.gd"
+}, {
+"base": "Node2D",
+"class": "HitDetectorTransformed",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Projectiles/Transform/Transfomed Enemies/HitDetector_Transformed.gd"
+}, {
+"base": "BossAbilityZero",
+"class": "HyouryuushouAbility",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/BossAbilities/Hyouryuushou.gd"
+}, {
+"base": "BossAbilityZero",
+"class": "HyouryuushouAbilityX8",
+"language": "GDScript",
+"path": "res://Zero_mod/X8/Player/BossAbilities/Hyouryuushou.gd"
+}, {
+"base": "SaberZeroHitbox",
+"class": "HyouryuushouZeroHitbox",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/Hitboxes/Hyouryuushou_Hitbox.gd"
+}, {
+"base": "BikeMovement",
+"class": "HyperDash",
+"language": "GDScript",
+"path": "res://src/Actors/Props/RideChaser/BikeHyperDash.gd"
+}, {
+"base": "AttackAbility",
+"class": "IceDash",
+"language": "GDScript",
+"path": "res://src/Actors/Bosses/AvalancheYeti/IceDash.gd"
+}, {
+"base": "AttackAbility",
+"class": "IceJump",
+"language": "GDScript",
+"path": "res://src/Actors/Bosses/AvalancheYeti/IceJump.gd"
+}, {
+"base": "Node2D",
+"class": "IceShooter",
+"language": "GDScript",
+"path": "res://src/Actors/Bosses/AvalancheYeti/IceShooter.gd"
+}, {
+"base": "AttackAbility",
+"class": "IceSpikes",
+"language": "GDScript",
+"path": "res://src/Actors/Bosses/AvalancheYeti/IceSpikes.gd"
+}, {
+"base": "AttackAbility",
+"class": "IceStomp",
+"language": "GDScript",
+"path": "res://src/Actors/Bosses/AvalancheYeti/IceStomp.gd"
+}, {
+"base": "Movement",
+"class": "Idle",
+"language": "GDScript",
+"path": "res://src/Actors/Player/Idle.gd"
+}, {
+"base": "AttackAbility",
+"class": "IdleEnemyTransformed",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Projectiles/Transform/Transfomed Enemies/IdleEnemy_Transformed.gd"
+}, {
+"base": "Movement",
+"class": "IdleZero",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/IdleZero.gd"
+}, {
+"base": "AnimatedSprite",
+"class": "InheritorAnimatedSprite",
+"language": "GDScript",
+"path": "res://src/Actors/InheritorAnimatedSprite.gd"
+}, {
+"base": "Resource",
+"class": "InputPressCombo",
+"language": "GDScript",
+"path": "res://src/System/InputPressCombo.gd"
+}, {
+"base": "Area2D",
+"class": "InstantDeathArea",
+"language": "GDScript",
+"path": "res://src/Objects/Spike.gd"
+}, {
+"base": "EventAbility",
+"class": "Intro",
+"language": "GDScript",
+"path": "res://src/Actors/Player/Modules/Intro.gd"
+}, {
+"base": "EventAbility",
+"class": "IntroAxl",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Scripts/IntroAxl.gd"
+}, {
+"base": "EventAbility",
+"class": "IntroZero",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/IntroZero.gd"
+}, {
+"base": "Fall",
+"class": "Jump",
+"language": "GDScript",
+"path": "res://src/Actors/Player/Jump.gd"
+}, {
+"base": "FallAxl",
+"class": "JumpAxl",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Scripts/JumpAxl.gd"
+}, {
+"base": "FallZero",
+"class": "JumpZero",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/JumpZero.gd"
+}, {
+"base": "BossAbilityZero",
+"class": "JuuhazanAbility",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/BossAbilities/Juuhazan.gd"
+}, {
+"base": "BossAbilityZero",
+"class": "JuuhazanAbilityX8",
+"language": "GDScript",
+"path": "res://Zero_mod/X8/Player/BossAbilities/Juuhazan.gd"
+}, {
+"base": "SaberZeroHitbox",
+"class": "JuuhazanZeroHitbox",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/Hitboxes/Juuhazan_Hitbox.gd"
+}, {
+"base": "AttackAbility",
+"class": "KingCrabArmShot",
+"language": "GDScript",
+"path": "res://src/Actors/Bosses/KingCrab/KingCrabArmShot.gd"
+}, {
+"base": "EventAbility",
+"class": "KingCrabIntro",
+"language": "GDScript",
+"path": "res://src/Actors/Bosses/KingCrab/KingCrabIntro.gd"
+}, {
+"base": "EnemyStun",
+"class": "KingCrabStun",
+"language": "GDScript",
+"path": "res://src/Actors/Bosses/KingCrab/KingCrabStun.gd"
+}, {
+"base": "AttackAbility",
+"class": "KingCrabWalk",
+"language": "GDScript",
+"path": "res://src/Actors/Bosses/KingCrab/KingCrabWalk.gd"
+}, {
+"base": "SaberBaseZeroX8",
+"class": "KnuckleComboZeroX8",
+"language": "GDScript",
+"path": "res://Zero_mod/X8/Player/Knuckle/KnuckleComboZeroX8.gd"
+}, {
+"base": "SaberBaseZeroX8",
+"class": "KnuckleDashZeroX8",
+"language": "GDScript",
+"path": "res://Zero_mod/X8/Player/Knuckle/KnuckleDashZeroX8.gd"
+}, {
+"base": "FallZero",
+"class": "KnuckleZeroX8Jump",
+"language": "GDScript",
+"path": "res://Zero_mod/X8/Player/Knuckle/KnuckleZeroX8_Jump.gd"
+}, {
+"base": "ChargedBuster",
+"class": "LaserBuster",
+"language": "GDScript",
+"path": "res://src/Actors/Weapons/Projectiles/Laser Buster.gd"
+}, {
+"base": "WeaponShot",
+"class": "Lemon",
+"language": "GDScript",
+"path": "res://Lemon.gd"
+}, {
+"base": "Node2D",
+"class": "LifeUp",
+"language": "GDScript",
+"path": "res://src/Objects/LifeUp.gd"
+}, {
+"base": "Control",
+"class": "LightGroup",
+"language": "GDScript",
+"path": "res://src/Options/Highlighter.gd"
+}, {
+"base": "Node",
+"class": "Locale",
+"language": "GDScript",
+"path": "res://src/Actors/Locale.gd"
+}, {
+"base": "Lemon",
+"class": "MediumBuster",
+"language": "GDScript",
+"path": "res://src/Actors/Weapons/Projectiles/Medium Buster.gd"
+}, {
+"base": "EventAbility",
+"class": "Melee",
+"language": "GDScript",
+"path": "res://src/Actors/Props/RideChaser/MeleeHit.gd"
+}, {
+"base": "AttackAbility",
+"class": "MetoolHide",
+"language": "GDScript",
+"path": "res://src/Actors/Enemies/Metool/Hide.gd"
+}, {
+"base": "GenericProjectile",
+"class": "MissileClaw",
+"language": "GDScript",
+"path": "res://src/Actors/Enemies/SimpleEnemyProjectile.gd"
+}, {
+"base": "Ability",
+"class": "Movement",
+"language": "GDScript",
+"path": "res://src/Actors/Movement.gd"
+}, {
+"base": "Node",
+"class": "MovementRecorder",
+"language": "GDScript",
+"path": "res://src/Actors/Player/MovementRecorder.gd"
+}, {
+"base": "BossWeapon",
+"class": "MultiShotWeapon",
+"language": "GDScript",
+"path": "res://src/Actors/Player/BossWeapons/DriftDiamond/DriftDiamond.gd"
+}, {
+"base": "EnemyShot",
+"class": "MultipleShot",
+"language": "GDScript",
+"path": "res://src/Actors/Enemies/Big Tractor/SimpleEnemyShot.gd"
+}, {
+"base": "AudioStreamPlayer",
+"class": "MusicPlayer",
+"language": "GDScript",
+"path": "res://src/Levels/music_player.gd"
+}, {
+"base": "Node2D",
+"class": "NewAbility",
+"language": "GDScript",
+"path": "res://src/Actors/NewStateMachine/Ability.gd"
+}, {
+"base": "StaticBody2D",
+"class": "NewBox",
+"language": "GDScript",
+"path": "res://src/Objects/Box/StaticFallingBody.gd"
+}, {
+"base": "StaticBody2D",
+"class": "NewDoor",
+"language": "GDScript",
+"path": "res://src/Objects/Door/NewDoor.gd"
+}, {
+"base": "X8TextureButton",
+"class": "NewGamePlusButton",
+"language": "GDScript",
+"path": "res://src/Options/NewGamePlus.gd"
+}, {
+"base": "Movement",
+"class": "NovaStrike",
+"language": "GDScript",
+"path": "res://X_mod/UltimateX/Player/NovaStrike/NovaStrike_Skill.gd"
+}, {
+"base": "Actor",
+"class": "NovaStrikeHitbox",
+"language": "GDScript",
+"path": "res://X_mod/UltimateX/Player/NovaStrike/NovaStrike_Hitbox.gd"
+}, {
+"base": "Node2D",
+"class": "Optic360",
+"language": "GDScript",
+"path": "res://src/Actors/Bosses/OpticSunflower/Optic360.gd"
+}, {
+"base": "Enemy",
+"class": "Panda",
+"language": "GDScript",
+"path": "res://src/Actors/Panda.gd"
+}, {
+"base": "Reference",
+"class": "Physics",
+"language": "GDScript",
+"path": "res://src/Actors/NewStateMachine/Physics.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "PickUp",
+"language": "GDScript",
+"path": "res://src/Objects/PickUp.gd"
+}, {
+"base": "WeaponAxl",
+"class": "Pistol",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Scripts/Pistol.gd"
+}, {
+"base": "WeaponAxl",
+"class": "PistolAlternate",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Scripts/PistolAlternate.gd"
+}, {
+"base": "WeaponShot",
+"class": "PistolBullet",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Projectiles/BulletAxl.gd"
+}, {
+"base": "AudioStreamPlayer2D",
+"class": "PitchStreamPlayer2D",
+"language": "GDScript",
+"path": "res://src/Actors/NewStateMachine/audioplayer.gd"
+}, {
+"base": "AttackAbility",
+"class": "PizzaAbility",
+"language": "GDScript",
+"path": "res://src/Actors/Enemies/GroundPizza/PizzaAbility.gd"
+}, {
+"base": "PizzaAbility",
+"class": "PizzaDeflect",
+"language": "GDScript",
+"path": "res://src/Actors/Enemies/GroundPizza/Deflect.gd"
+}, {
+"base": "PizzaAbility",
+"class": "PizzaJuggleAndMove",
+"language": "GDScript",
+"path": "res://src/Actors/Enemies/GroundPizza/JuggleAndMove.gd"
+}, {
+"base": "Node2D",
+"class": "Press",
+"language": "GDScript",
+"path": "res://src/Objects/Press.gd"
+}, {
+"base": "Shot",
+"class": "PrimaryShot",
+"language": "GDScript",
+"path": "res://src/Actors/Player/X/PrimaryShot.gd"
+}, {
+"base": "ShotAxl",
+"class": "PrimaryShotAxl",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Scripts/PrimaryShotAxl.gd"
+}, {
+"base": "DamageOnTouch",
+"class": "ProjectileDOT",
+"language": "GDScript",
+"path": "res://src/Actors/Enemies/ProjectileDoT.gd"
+}, {
+"base": "Attack",
+"class": "ProjectileShot",
+"language": "GDScript",
+"path": "res://src/Actors/Enemies/ProjectileShot.gd"
+}, {
+"base": "BossAbilityZero",
+"class": "RaikousenAbility",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/BossAbilities/Raikousen.gd"
+}, {
+"base": "BossAbilityZero",
+"class": "RaikousenAbilityX8",
+"language": "GDScript",
+"path": "res://Zero_mod/X8/Player/BossAbilities/Raikousen.gd"
+}, {
+"base": "SaberZeroHitbox",
+"class": "RaikousenZeroHitbox",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/Hitboxes/Raikousen_Hitbox.gd"
+}, {
+"base": "BossAbilityZero",
+"class": "RasetsusenAbility",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/BossAbilities/Rasetsusen.gd"
+}, {
+"base": "BossAbilityZero",
+"class": "RasetsusenAbilityX8",
+"language": "GDScript",
+"path": "res://Zero_mod/X8/Player/BossAbilities/Rasetsusen.gd"
+}, {
+"base": "SaberZeroHitbox",
+"class": "RasetsusenZeroHitbox",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/Hitboxes/Rasetsusen_Hitbox.gd"
+}, {
+"base": "BossAbilityZero",
+"class": "RekkyoudanAbility",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/BossAbilities/Rekkyoudan.gd"
+}, {
+"base": "BossAbilityZero",
+"class": "RekkyoudanAbilityX8",
+"language": "GDScript",
+"path": "res://Zero_mod/X8/Player/BossAbilities/Rekkyoudan.gd"
+}, {
+"base": "SaberZeroHitbox",
+"class": "RekkyoudanZeroHitbox",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/Hitboxes/Rekkyoudan_Hitbox.gd"
+}, {
+"base": "Node2D",
+"class": "Respawner",
+"language": "GDScript",
+"path": "res://src/Actors/Enemies/Respawner.gd"
+}, {
+"base": "Ability",
+"class": "Ride",
+"language": "GDScript",
+"path": "res://src/Actors/Props/RideChaser/Ride.gd"
+}, {
+"base": "Ability",
+"class": "Rider",
+"language": "GDScript",
+"path": "res://src/Actors/Player/Modules/Ride.gd"
+}, {
+"base": "Ability",
+"class": "RiderAxl",
+"language": "GDScript",
+"path": "res://Axl_mod/Ride/RideAxl.gd"
+}, {
+"base": "StaticBody2D",
+"class": "RisingPlatform",
+"language": "GDScript",
+"path": "res://src/Levels/BoosterForest/rising_platform.gd"
+}, {
+"base": "AttackAbility",
+"class": "SFlierPatrol",
+"language": "GDScript",
+"path": "res://src/Actors/Enemies/ShieldFlier/SFlierPatrol.gd"
+}, {
+"base": "Movement",
+"class": "SaberBaseZeroX8",
+"language": "GDScript",
+"path": "res://Zero_mod/X8/Player/Saber/SaberZeroX8_Base.gd"
+}, {
+"base": "SaberZeroBase",
+"class": "SaberComboZero",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/Saber/SaberZeroCombo.gd"
+}, {
+"base": "SaberBaseZeroX8",
+"class": "SaberComboZeroX8",
+"language": "GDScript",
+"path": "res://Zero_mod/X8/Player/Saber/SaberComboZeroX8.gd"
+}, {
+"base": "FallZero",
+"class": "SaberEnkoujin",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/BossAbilities/Enkoujin_Skill.gd"
+}, {
+"base": "FallZero",
+"class": "SaberEnkoujinX8",
+"language": "GDScript",
+"path": "res://Zero_mod/X8/Player/BossAbilities/Enkoujin_Skill.gd"
+}, {
+"base": "FallZero",
+"class": "SaberEnkoukyakuX8",
+"language": "GDScript",
+"path": "res://Zero_mod/X8/Player/BossAbilities/Enkoukyaku_Skill.gd"
+}, {
+"base": "FallZero",
+"class": "SaberHyouryuushou",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/BossAbilities/Hyouryuushou_Skill.gd"
+}, {
+"base": "FallZero",
+"class": "SaberHyouryuushouX8",
+"language": "GDScript",
+"path": "res://Zero_mod/X8/Player/BossAbilities/Hyouryuushou_Skill.gd"
+}, {
+"base": "Movement",
+"class": "SaberJuuhazan",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/BossAbilities/Juuhazan_Skill.gd"
+}, {
+"base": "Movement",
+"class": "SaberJuuhazanX8",
+"language": "GDScript",
+"path": "res://Zero_mod/X8/Player/BossAbilities/Juuhazan_Skill.gd"
+}, {
+"base": "Movement",
+"class": "SaberRaikousen",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/BossAbilities/Raikousen_Skill.gd"
+}, {
+"base": "Movement",
+"class": "SaberRaikousenX8",
+"language": "GDScript",
+"path": "res://Zero_mod/X8/Player/BossAbilities/Raikousen_Skill.gd"
+}, {
+"base": "FallZero",
+"class": "SaberRasetsusen",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/BossAbilities/Rasetsusen_Skill.gd"
+}, {
+"base": "FallZero",
+"class": "SaberRasetsusenX8",
+"language": "GDScript",
+"path": "res://Zero_mod/X8/Player/BossAbilities/Rasetsusen_Skill.gd"
+}, {
+"base": "Movement",
+"class": "SaberTenshouha",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/BossAbilities/Tenshouha_Skill.gd"
+}, {
+"base": "Movement",
+"class": "SaberTenshouhaX8",
+"language": "GDScript",
+"path": "res://Zero_mod/X8/Player/BossAbilities/Tenshouha_Skill.gd"
+}, {
+"base": "Movement",
+"class": "SaberYoudantotsu",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/BossAbilities/Youdantotsu_Skill.gd"
+}, {
+"base": "Movement",
+"class": "SaberYoudantotsuX8",
+"language": "GDScript",
+"path": "res://Zero_mod/X8/Player/BossAbilities/Youdantotsu_Skill.gd"
+}, {
+"base": "Movement",
+"class": "SaberZero",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/Saber/SaberZero.gd"
+}, {
+"base": "Movement",
+"class": "SaberZeroBase",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/Saber/SaberZero_Base.gd"
+}, {
+"base": "SaberZeroBase",
+"class": "SaberZeroDash",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/Saber/SaberZero_Dash.gd"
+}, {
+"base": "Actor",
+"class": "SaberZeroHitbox",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/Hitboxes/Saber_Hitbox.gd"
+}, {
+"base": "FallZero",
+"class": "SaberZeroJump",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/Saber/SaberZero_Jump.gd"
+}, {
+"base": "WallSlideZero",
+"class": "SaberZeroWall",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/Saber/SaberZero_Wall.gd"
+}, {
+"base": "Movement",
+"class": "SaberZeroX8",
+"language": "GDScript",
+"path": "res://Zero_mod/X8/Player/Saber/SaberZeroX8.gd"
+}, {
+"base": "SaberBaseZeroX8",
+"class": "SaberZeroX8Dash",
+"language": "GDScript",
+"path": "res://Zero_mod/X8/Player/Saber/SaberZeroX8_Dash.gd"
+}, {
+"base": "FallZero",
+"class": "SaberZeroX8Jump",
+"language": "GDScript",
+"path": "res://Zero_mod/X8/Player/Saber/SaberZeroX8_Jump.gd"
+}, {
+"base": "WallSlideZero",
+"class": "SaberZeroX8Wall",
+"language": "GDScript",
+"path": "res://Zero_mod/X8/Player/Saber/SaberZeroX8_Wall.gd"
+}, {
+"base": "AttackAbility",
+"class": "ShieldClaw",
+"language": "GDScript",
+"path": "res://src/Actors/Bosses/KingCrab/KingCrabShieldClaw.gd"
+}, {
+"base": "Node2D",
+"class": "ShootableButton",
+"language": "GDScript",
+"path": "res://src/Objects/Button/Button.gd"
+}, {
+"base": "Ability",
+"class": "Shot",
+"language": "GDScript",
+"path": "res://src/Actors/Player/Shot.gd"
+}, {
+"base": "Ability",
+"class": "ShotAxl",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Scripts/ShotAxl.gd"
+}, {
+"base": "Sprite",
+"class": "SigmaFlash",
+"language": "GDScript",
+"path": "res://src/Actors/Bosses/SatanSigma/flash.gd"
+}, {
+"base": "AudioStreamPlayer",
+"class": "SimpleMusicPlayer",
+"language": "GDScript",
+"path": "res://src/Options/SimpleMusicPlayer.gd"
+}, {
+"base": "GenericProjectile",
+"class": "SimplePlayerProjectile",
+"language": "GDScript",
+"path": "res://src/Actors/Player/BossWeapons/DriftDiamond/SimplePlayerProjectile.gd"
+}, {
+"base": "GenericProjectile",
+"class": "SimpleProjectile",
+"language": "GDScript",
+"path": "res://src/Actors/Enemies/SimpleProjectile.gd"
+}, {
+"base": "GenericProjectile",
+"class": "SimpleProjectileTransformed",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Projectiles/Transform/Transfomed Enemies/SimpleProjectile_Transformed.gd"
+}, {
+"base": "Node2D",
+"class": "Spawner",
+"language": "GDScript",
+"path": "res://src/Actors/Spawners/Spawner.gd"
+}, {
+"base": "Node",
+"class": "SpawnerSwitcher",
+"language": "GDScript",
+"path": "res://SpawnerSwitcher.gd"
+}, {
+"base": "Node2D",
+"class": "SpecialAbilityAxl",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Projectiles/BossSpecials/SpecialAbility.gd"
+}, {
+"base": "Sprite",
+"class": "SpriteEffect",
+"language": "GDScript",
+"path": "res://SpriteEffect.gd"
+}, {
+"base": "Resource",
+"class": "StageInfo",
+"language": "GDScript",
+"path": "res://src/Actors/Bosses/BossIntro/StageInfo.gd"
+}, {
+"base": "CanvasModulate",
+"class": "StageLights",
+"language": "GDScript",
+"path": "res://src/Levels/PitchBlack/StageLights.gd"
+}, {
+"base": "Camera2D",
+"class": "StateCamera",
+"language": "GDScript",
+"path": "res://src/System/StateCamera.gd"
+}, {
+"base": "Node",
+"class": "StaticVariables",
+"language": "GDScript",
+"path": "res://src/System/StaticVariables.gd"
+}, {
+"base": "Node2D",
+"class": "StrongLightning",
+"language": "GDScript",
+"path": "res://src/Actors/Bosses/GigaboltManowar/StrongLightning.gd"
+}, {
+"base": "Resource",
+"class": "Subtank",
+"language": "GDScript",
+"path": "res://src/Objects/Pickups/Subtanks/Subtank.gd"
+}, {
+"base": "Node2D",
+"class": "TeleportPortal",
+"language": "GDScript",
+"path": "res://src/Levels/Primrose/Portal.gd"
+}, {
+"base": "BossAbilityZero",
+"class": "TenshouhaAbility",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/BossAbilities/Tenshouha.gd"
+}, {
+"base": "BossAbilityZero",
+"class": "TenshouhaAbilityX8",
+"language": "GDScript",
+"path": "res://Zero_mod/X8/Player/BossAbilities/Tenshouha.gd"
+}, {
+"base": "Object",
+"class": "TimerController",
+"language": "GDScript",
+"path": "res://src/Actors/NewStateMachine/TimerController.gd"
+}, {
+"base": "Node",
+"class": "Tools",
+"language": "GDScript",
+"path": "res://Tools.gd"
+}, {
+"base": "Node",
+"class": "TouchControls",
+"language": "GDScript",
+"path": "res://System/Android/TouchControl.gd"
+}, {
+"base": "AttackAbility",
+"class": "TractorAttackIdle",
+"language": "GDScript",
+"path": "res://src/Actors/Enemies/Big Tractor/AttackIdle.gd"
+}, {
+"base": "Node2D",
+"class": "TransformedEnemyDamage",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Projectiles/Transform/Transfomed Enemies/TransformedEnemyDamage.gd"
+}, {
+"base": "CameraMode",
+"class": "TranslateCameraMode",
+"language": "GDScript",
+"path": "res://src/System/CameraDirectTranslate.gd"
+}, {
+"base": "CameraMode",
+"class": "TranslateCameraMode2",
+"language": "GDScript",
+"path": "res://src/Levels/CameraManualTranslate.gd"
+}, {
+"base": "AttackAbility",
+"class": "TrilobyteBounce",
+"language": "GDScript",
+"path": "res://src/Actors/Bosses/EarthrockTrilobyte/Bounce.gd"
+}, {
+"base": "Attack",
+"class": "Turn",
+"language": "GDScript",
+"path": "res://Turn.gd"
+}, {
+"base": "Object",
+"class": "TweenController",
+"language": "GDScript",
+"path": "res://src/Actors/NewStateMachine/TweenController.gd"
+}, {
+"base": "Resource",
+"class": "UltimateResource",
+"language": "GDScript",
+"path": "res://X_mod/UltimateX/Player/NovaStrike/UltimateXResource.gd"
+}, {
+"base": "AttackAbility",
+"class": "VileAirCannon",
+"language": "GDScript",
+"path": "res://src/Actors/Bosses/Vile/VileAirCannon.gd"
+}, {
+"base": "Node2D",
+"class": "VileLightning",
+"language": "GDScript",
+"path": "res://src/Actors/Bosses/Vile/VileLightningBeam.gd"
+}, {
+"base": "AttackAbility",
+"class": "VileShot",
+"language": "GDScript",
+"path": "res://src/Actors/Bosses/Vile/VileMissiles.gd"
+}, {
+"base": "AnimatedSprite",
+"class": "VisualArmorPart",
+"language": "GDScript",
+"path": "res://src/Actors/Player/X/ArmorPart.gd"
+}, {
+"base": "Movement",
+"class": "Walk",
+"language": "GDScript",
+"path": "res://src/Actors/Player/Walk.gd"
+}, {
+"base": "Movement",
+"class": "WalkAxl",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Scripts/WalkAxl.gd"
+}, {
+"base": "Movement",
+"class": "WalkZero",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/WalkZero.gd"
+}, {
+"base": "Node2D",
+"class": "WallEnemyAlarmAwareness",
+"language": "GDScript",
+"path": "res://src/Actors/Enemies/WallEnemy/AlarmAwareness.gd"
+}, {
+"base": "AttackAbility",
+"class": "WallEnemyTransformed",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Projectiles/Transform/Transfomed Enemies/WallEnemy_Transformed.gd"
+}, {
+"base": "Jump",
+"class": "WallJump",
+"language": "GDScript",
+"path": "res://src/Actors/Player/Walljump.gd"
+}, {
+"base": "JumpAxl",
+"class": "WallJumpAxl",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Scripts/WalljumpAxl.gd"
+}, {
+"base": "JumpZero",
+"class": "WallJumpZero",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/WalljumpZero.gd"
+}, {
+"base": "Movement",
+"class": "WallSlide",
+"language": "GDScript",
+"path": "res://src/Actors/Player/Wallslide.gd"
+}, {
+"base": "Movement",
+"class": "WallSlideAxl",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Scripts/WallSlideAxl.gd"
+}, {
+"base": "Movement",
+"class": "WallSlideZero",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/WallSlideZero.gd"
+}, {
+"base": "SimpleProjectile",
+"class": "WaspProjectile",
+"language": "GDScript",
+"path": "res://src/Actors/Enemies/QueenWasp/WaspShot.gd"
+}, {
+"base": "Node2D",
+"class": "Weapon",
+"language": "GDScript",
+"path": "res://src/Actors/Player/Weapon.gd"
+}, {
+"base": "Node2D",
+"class": "WeaponAxl",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Scripts/WeaponAxl.gd"
+}, {
+"base": "WeaponAxl",
+"class": "WeaponBossAxl",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Scripts/WeaponBossAxl.gd"
+}, {
+"base": "Node",
+"class": "WeaponChanger",
+"language": "GDScript",
+"path": "res://src/Actors/Player/WeaponChanger.gd"
+}, {
+"base": "Node",
+"class": "WeaponChangerAxl",
+"language": "GDScript",
+"path": "res://Axl_mod/Player/Scripts/WeaponChangerAxl.gd"
+}, {
+"base": "Node",
+"class": "WeaponChangerZero",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/WeaponChangerZero.gd"
+}, {
+"base": "RigidBody2D",
+"class": "WeaponDeflectable",
+"language": "GDScript",
+"path": "res://src/Actors/Weapons/Projectiles/Deflectable.gd"
+}, {
+"base": "Resource",
+"class": "WeaponResource",
+"language": "GDScript",
+"path": "res://src/Actors/Player/BossWeapons/WeaponResource.gd"
+}, {
+"base": "Actor",
+"class": "WeaponShot",
+"language": "GDScript",
+"path": "res://src/Actors/Player/WeaponShot.gd"
+}, {
+"base": "AttackAbility",
+"class": "WheelerHorizontalMovement",
+"language": "GDScript",
+"path": "res://src/Actors/Enemies/Wheeler/MoveAndFall.gd"
+}, {
+"base": "Character",
+"class": "X",
+"language": "GDScript",
+"path": "res://src/Actors/Player/X/PlayerX.gd"
+}, {
+"base": "Camera2D",
+"class": "X8Camera",
+"language": "GDScript",
+"path": "res://src/System/X8Camera.gd"
+}, {
+"base": "CanvasLayer",
+"class": "X8Menu",
+"language": "GDScript",
+"path": "res://src/Options/KeyBinder/KeyConfig.gd"
+}, {
+"base": "X8TextureButton",
+"class": "X8OptionButton",
+"language": "GDScript",
+"path": "res://src/Options/BidirectionalButton.gd"
+}, {
+"base": "TextureButton",
+"class": "X8TextureButton",
+"language": "GDScript",
+"path": "res://src/Options/Button.gd"
+}, {
+"base": "Node2D",
+"class": "XDeathParticle",
+"language": "GDScript",
+"path": "res://src/Effects/Player Death.gd"
+}, {
+"base": "Fall",
+"class": "XShoryuuken",
+"language": "GDScript",
+"path": "res://X_mod/UltimateX/Player/Shoryuuken/Shoryuuken.gd"
+}, {
+"base": "BossAbilityZero",
+"class": "YoudantotsuAbility",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/BossAbilities/Youdantotsu.gd"
+}, {
+"base": "BossAbilityZero",
+"class": "YoudantotsuAbilityX8",
+"language": "GDScript",
+"path": "res://Zero_mod/X8/Player/BossAbilities/Youdantotsu.gd"
+}, {
+"base": "SaberZeroHitbox",
+"class": "YoudantotsuZeroHitbox",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/Hitboxes/Youdantotsu_Hitbox.gd"
+}, {
+"base": "Node",
+"class": "ZeroBlocking",
+"language": "GDScript",
+"path": "res://Zero_mod/System/armor_block.gd"
+}, {
+"base": "ZeroWeapon",
+"class": "ZeroSpecialWeapon",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/Weapons/SpecialWeapon.gd"
+}, {
+"base": "Node",
+"class": "ZeroWeapon",
+"language": "GDScript",
+"path": "res://Zero_mod/Player/Weapons/Base_Weapon.gd"
+}, {
+"base": "Node2D",
+"class": "ZeroWeaponCollectible",
+"language": "GDScript",
+"path": "res://Zero_mod/Objects/Pickups/WeaponCollect.gd"
+}, {
+"base": "CameraMode",
+"class": "ZoneTranslateCameraMode",
+"language": "GDScript",
+"path": "res://src/System/CameraZoneTranslate.gd"
+}, {
+"base": "Area2D",
+"class": "passarin_area",
+"language": "GDScript",
+"path": "res://src/Levels/NoahsPark/passari_area.gd"
+} ]
+_global_script_class_icons={
+"AI": "",
+"Ability": "",
+"AbilityResource": "",
+"AbilityStage": "",
+"AbilityUser": "",
+"Accelerate": "",
+"Achievement": "",
+"AchievementOrder": "",
+"AchievementPopup": "",
+"ActionPresses": "",
+"ActiveArea2D": "",
+"Actor": "",
+"AddToVector2CMD": "",
+"AddVectorCMD": "",
+"AffectedTargets": "",
+"AirDash": "",
+"AirDashAxl": "",
+"AirDashZero": "",
+"AnimatedMirror": "",
+"AnimationController": "",
+"ArtificialIntelligence": "",
+"Attack": "",
+"AttackAbility": "",
+"AttackAbilityAxl": "",
+"Axl": "",
+"AxlTransform": "",
+"BSON": "",
+"BackgroundSwapper": "",
+"BambooGrenade": "",
+"BambooSlash": "",
+"BaseAbility": "",
+"BeeAttack": "",
+"BeePatrol": "",
+"Bike": "",
+"BikeDamage": "",
+"BikeDash": "",
+"BikeDeath": "",
+"BikeEject": "",
+"BikeJump": "",
+"BikeMovement": "",
+"BikeOnTouchDamage": "",
+"BikeRest": "",
+"BikeShot": "",
+"BlackZeroArmor": "",
+"BlastLauncher": "",
+"BossAI": "",
+"BossAbilityZero": "",
+"BossAbilityZeroX8": "",
+"BossAchievementHandler": "",
+"BossDamage": "",
+"BossDeath": "",
+"BossIdle": "",
+"BossIntro": "",
+"BossStun": "",
+"BossWeapon": "",
+"BossWeaponAxl": "",
+"BoxSprite": "",
+"Break": "",
+"Buster": "",
+"CallbackButton": "",
+"CameraLimits": "",
+"CameraMode": "",
+"Character": "",
+"CharacterAbility": "",
+"CharacterSwitchWarpIn": "",
+"CharacterSwitchWarpOut": "",
+"Charge": "",
+"ChargedBuster": "",
+"CheckpointSettings": "",
+"ClawAttack": "",
+"Command": "",
+"CommandList": "",
+"ConfirmButton": "",
+"CopyBullet": "",
+"CopyPickUp": "",
+"CrabPatrol": "",
+"CrushCheck": "",
+"Damage": "",
+"DamageOnTouch": "",
+"DamageReceiver": "",
+"DamageValue": "",
+"DarkSlash": "",
+"Darkness": "",
+"Dash": "",
+"DashAxl": "",
+"DashJump": "",
+"DashJumpAxl": "",
+"DashJumpZero": "",
+"DashWallJump": "",
+"DashWallJumpAxl": "",
+"DashWallJumpZero": "",
+"DashZero": "",
+"Deaccelerate": "",
+"Death": "",
+"DialogBox": "",
+"DialogueProfile": "",
+"DialogueText": "",
+"DirtProjectile": "",
+"DodgeAxl": "",
+"DoorCameraTranslator": "",
+"DoorClose": "",
+"DoorPassThrough": "",
+"Encryption": "",
+"Enemy": "",
+"EnemyAbility": "",
+"EnemyAbilityAxl": "",
+"EnemyDamage": "",
+"EnemyDeath": "",
+"EnemyIdle": "",
+"EnemyMeleeAttack": "",
+"EnemyShield": "",
+"EnemyShieldTransformed": "",
+"EnemyShot": "",
+"EnemyStun": "",
+"EnemyTransformed": "",
+"EnemyWalkTransformed": "",
+"EnkoujinAbility": "",
+"EnkoujinAbilityX8": "",
+"EnkoujinZeroHitbox": "",
+"EnkoukyakuZeroHitbox": "",
+"EventAbility": "",
+"Fall": "",
+"FallAxl": "",
+"FallEnemyTransformed": "",
+"FallZero": "",
+"Finish": "",
+"FinishAxl": "",
+"FinishZero": "",
+"FireDash": "",
+"GenericIntro": "",
+"GenericProjectile": "",
+"GrabAttack": "",
+"HitDetector": "",
+"HitDetectorTransformed": "",
+"HyouryuushouAbility": "",
+"HyouryuushouAbilityX8": "",
+"HyouryuushouZeroHitbox": "",
+"HyperDash": "",
+"IceDash": "",
+"IceJump": "",
+"IceShooter": "",
+"IceSpikes": "",
+"IceStomp": "",
+"Idle": "",
+"IdleEnemyTransformed": "",
+"IdleZero": "",
+"InheritorAnimatedSprite": "",
+"InputPressCombo": "",
+"InstantDeathArea": "",
+"Intro": "",
+"IntroAxl": "",
+"IntroZero": "",
+"Jump": "",
+"JumpAxl": "",
+"JumpZero": "",
+"JuuhazanAbility": "",
+"JuuhazanAbilityX8": "",
+"JuuhazanZeroHitbox": "",
+"KingCrabArmShot": "",
+"KingCrabIntro": "",
+"KingCrabStun": "",
+"KingCrabWalk": "",
+"KnuckleComboZeroX8": "",
+"KnuckleDashZeroX8": "",
+"KnuckleZeroX8Jump": "",
+"LaserBuster": "",
+"Lemon": "",
+"LifeUp": "",
+"LightGroup": "",
+"Locale": "",
+"MediumBuster": "",
+"Melee": "",
+"MetoolHide": "",
+"MissileClaw": "",
+"Movement": "",
+"MovementRecorder": "",
+"MultiShotWeapon": "",
+"MultipleShot": "",
+"MusicPlayer": "",
+"NewAbility": "res://src/HUD/ability_icon.png",
+"NewBox": "",
+"NewDoor": "",
+"NewGamePlusButton": "",
+"NovaStrike": "",
+"NovaStrikeHitbox": "",
+"Optic360": "",
+"Panda": "",
+"Physics": "",
+"PickUp": "",
+"Pistol": "",
+"PistolAlternate": "",
+"PistolBullet": "",
+"PitchStreamPlayer2D": "",
+"PizzaAbility": "",
+"PizzaDeflect": "",
+"PizzaJuggleAndMove": "",
+"Press": "",
+"PrimaryShot": "",
+"PrimaryShotAxl": "",
+"ProjectileDOT": "",
+"ProjectileShot": "",
+"RaikousenAbility": "",
+"RaikousenAbilityX8": "",
+"RaikousenZeroHitbox": "",
+"RasetsusenAbility": "",
+"RasetsusenAbilityX8": "",
+"RasetsusenZeroHitbox": "",
+"RekkyoudanAbility": "",
+"RekkyoudanAbilityX8": "",
+"RekkyoudanZeroHitbox": "",
+"Respawner": "",
+"Ride": "",
+"Rider": "",
+"RiderAxl": "",
+"RisingPlatform": "",
+"SFlierPatrol": "",
+"SaberBaseZeroX8": "",
+"SaberComboZero": "",
+"SaberComboZeroX8": "",
+"SaberEnkoujin": "",
+"SaberEnkoujinX8": "",
+"SaberEnkoukyakuX8": "",
+"SaberHyouryuushou": "",
+"SaberHyouryuushouX8": "",
+"SaberJuuhazan": "",
+"SaberJuuhazanX8": "",
+"SaberRaikousen": "",
+"SaberRaikousenX8": "",
+"SaberRasetsusen": "",
+"SaberRasetsusenX8": "",
+"SaberTenshouha": "",
+"SaberTenshouhaX8": "",
+"SaberYoudantotsu": "",
+"SaberYoudantotsuX8": "",
+"SaberZero": "",
+"SaberZeroBase": "",
+"SaberZeroDash": "",
+"SaberZeroHitbox": "",
+"SaberZeroJump": "",
+"SaberZeroWall": "",
+"SaberZeroX8": "",
+"SaberZeroX8Dash": "",
+"SaberZeroX8Jump": "",
+"SaberZeroX8Wall": "",
+"ShieldClaw": "",
+"ShootableButton": "",
+"Shot": "",
+"ShotAxl": "",
+"SigmaFlash": "",
+"SimpleMusicPlayer": "",
+"SimplePlayerProjectile": "",
+"SimpleProjectile": "",
+"SimpleProjectileTransformed": "",
+"Spawner": "",
+"SpawnerSwitcher": "",
+"SpecialAbilityAxl": "",
+"SpriteEffect": "",
+"StageInfo": "",
+"StageLights": "",
+"StateCamera": "",
+"StaticVariables": "",
+"StrongLightning": "",
+"Subtank": "",
+"TeleportPortal": "",
+"TenshouhaAbility": "",
+"TenshouhaAbilityX8": "",
+"TimerController": "",
+"Tools": "",
+"TouchControls": "",
+"TractorAttackIdle": "",
+"TransformedEnemyDamage": "",
+"TranslateCameraMode": "",
+"TranslateCameraMode2": "",
+"TrilobyteBounce": "",
+"Turn": "",
+"TweenController": "",
+"UltimateResource": "",
+"VileAirCannon": "",
+"VileLightning": "",
+"VileShot": "",
+"VisualArmorPart": "",
+"Walk": "",
+"WalkAxl": "",
+"WalkZero": "",
+"WallEnemyAlarmAwareness": "",
+"WallEnemyTransformed": "",
+"WallJump": "",
+"WallJumpAxl": "",
+"WallJumpZero": "",
+"WallSlide": "",
+"WallSlideAxl": "",
+"WallSlideZero": "",
+"WaspProjectile": "",
+"Weapon": "",
+"WeaponAxl": "",
+"WeaponBossAxl": "",
+"WeaponChanger": "",
+"WeaponChangerAxl": "",
+"WeaponChangerZero": "",
+"WeaponDeflectable": "",
+"WeaponResource": "",
+"WeaponShot": "",
+"WheelerHorizontalMovement": "",
+"X": "",
+"X8Camera": "",
+"X8Menu": "",
+"X8OptionButton": "",
+"X8TextureButton": "",
+"XDeathParticle": "",
+"XShoryuuken": "",
+"YoudantotsuAbility": "",
+"YoudantotsuAbilityX8": "",
+"YoudantotsuZeroHitbox": "",
+"ZeroBlocking": "",
+"ZeroSpecialWeapon": "",
+"ZeroWeapon": "",
+"ZeroWeaponCollectible": "",
+"ZoneTranslateCameraMode": "",
+"passarin_area": ""
+}
+
+[application]
+
+config/name="Mega Man X8 Demake (Zashiko Mod Free)"
+run/main_scene="res://src/Title/DisclaimerScreen.tscn"
+boot_splash/show_image=false
+boot_splash/image="res://src/Screens/bootsplash.png"
+boot_splash/use_filter=false
+boot_splash/bg_color=Color( 0, 0, 0, 1 )
+config/icon="res://icon.png"
+config/windows_native_icon="res://icon.ico"
+
+[aseprite_animation_importer]
+
+aseprite_executable_path="D:\\Programme\\Aseprite\\aseprite.exe"
+
+[audio]
+
+default_bus_layout="res://src/Audio Buses/MasterBus.tres"
+
+[autoload]
+
+Achievements="*res://src/AchievementSystem/AchievementManager.gd"
+Log="*res://src/Scripts/Log.gd"
+BossRNG="*res://BossRNG.gd"
+GameManager="*res://src/Scripts/GameManager.gd"
+InputManager="*res://src/System/InputManager.gd"
+Savefile="*res://src/System/Savefile.gd"
+ShaderCacheManager="*res://addons/gd-shader-cache/src/ShaderCacheManager.gd"
+Configurations="*res://src/System/GlobalVariables.gd"
+GlobalVariables="*res://src/System/GlobalVariables.gd"
+CRT="*res://src/Screens/CRTManager.gd"
+ParticleCache="*res://src/System/ParticleCache.gd"
+Event="*res://Event.gd"
+GatewayManager="*res://src/Levels/Gateway/GatewayManager.gd"
+CharacterManager="*res://System/CharacterManager.gd"
+IGT="*res://System/IGT/Autoload/IGT.gd"
+ShaderManager="*res://System/ShaderManager.gd"
+
+[debug]
+
+settings/physics_interpolation/enable_warnings=false
+gdscript/warnings/unused_variable=false
+gdscript/warnings/narrowing_conversion=false
+gdscript/warnings/unused_signal=false
+gdscript/warnings/return_value_discarded=false
+gdscript/warnings/integer_division=false
+
+[display]
+
+window/size/width=398
+window/size/height=224
+window/size/test_width=1194
+window/size/test_height=672
+window/vsync/use_vsync=false
+window/handheld/orientation="sensor_landscape"
+window/ios/hide_home_indicator=false
+window/stretch/mode="2d"
+window/stretch/aspect="keep"
+
+[editor]
+
+version_control_autoload_on_startup=true
+version_control_plugin_name="GitAPI"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/gd-shader-cache/plugin.cfg", "res://addons/vnen.tiled_importer/plugin.cfg" )
+
+[global]
+
+low=false
+widt=false
+FPS=false
+frames=false
+export=false
+syn=false
+warn=false
+
+[importer_defaults]
+
+texture={
+"compress/bptc_ldr": 0,
+"compress/hdr_mode": 0,
+"compress/lossy_quality": 0.7,
+"compress/mode": 0,
+"compress/normal_map": 0,
+"detect_3d": false,
+"flags/anisotropic": false,
+"flags/filter": false,
+"flags/mipmaps": false,
+"flags/repeat": 0,
+"flags/srgb": 2,
+"process/HDR_as_SRGB": false,
+"process/fix_alpha_border": true,
+"process/invert_color": false,
+"process/normal_map_invert_y": false,
+"process/premult_alpha": false,
+"size_limit": 0,
+"stream": false,
+"svg/scale": 1.0
+}
+ogg_vorbis={
+"loop": false,
+"loop_offset": 0
+}
+
+[input]
+
+ui_accept={
+"deadzone": 0.85,
+"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":2,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":68,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+ui_select={
+"deadzone": 0.85,
+"events": [  ]
+}
+ui_cancel={
+"deadzone": 0.85,
+"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":1,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+ui_focus_next={
+"deadzone": 0.85,
+"events": [  ]
+}
+ui_focus_prev={
+"deadzone": 0.85,
+"events": [  ]
+}
+ui_left={
+"deadzone": 0.85,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777231,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":14,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+ui_right={
+"deadzone": 0.85,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777233,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":15,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+ui_up={
+"deadzone": 0.85,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777232,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":12,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+ui_down={
+"deadzone": 0.85,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777234,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":13,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+ui_page_up={
+"deadzone": 0.85,
+"events": [  ]
+}
+ui_page_down={
+"deadzone": 0.85,
+"events": [  ]
+}
+ui_home={
+"deadzone": 0.85,
+"events": [  ]
+}
+ui_end={
+"deadzone": 0.85,
+"events": [  ]
+}
+move_left={
+"deadzone": 0.85,
+"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":14,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777231,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+move_right={
+"deadzone": 0.85,
+"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":15,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777233,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+move_up={
+"deadzone": 0.85,
+"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":12,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777232,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+move_down={
+"deadzone": 0.85,
+"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":13,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777234,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+dash={
+"deadzone": 0.85,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":1,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+fire={
+"deadzone": 0.85,
+"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":2,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":68,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+alt_fire={
+"deadzone": 0.85,
+"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":3,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":70,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+jump={
+"deadzone": 0.85,
+"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+weapon_select_left={
+"deadzone": 0.85,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":81,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":4,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+weapon_select_right={
+"deadzone": 0.85,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":69,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":5,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+pause={
+"deadzone": 0.85,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777221,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":11,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+select={
+"deadzone": 0.85,
+"events": [  ]
+}
+debug={
+"deadzone": 0.85,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":96,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+debug2={
+"deadzone": 0.85,
+"events": [  ]
+}
+debug3={
+"deadzone": 0.85,
+"events": [  ]
+}
+fullscreen={
+"deadzone": 0.85,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777254,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+analog_left={
+"deadzone": 0.32,
+"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":2,"axis_value":-1.0,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":71,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+analog_right={
+"deadzone": 0.32,
+"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":2,"axis_value":1.0,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":74,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+analog_up={
+"deadzone": 0.32,
+"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":3,"axis_value":-1.0,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":89,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+analog_down={
+"deadzone": 0.32,
+"events": [ Object(InputEventJoypadMotion,"resource_local_to_scene":false,"resource_name":"","device":0,"axis":3,"axis_value":1.0,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":72,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+reset_weapon={
+"deadzone": 0.5,
+"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":9,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+select_special={
+"deadzone": 0.5,
+"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":7,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":90,"unicode":0,"echo":false,"script":null)
+ ]
+}
+dash_emulated={
+"deadzone": 0.5,
+"events": [  ]
+}
+fire_emulated={
+"deadzone": 0.5,
+"events": [  ]
+}
+jump_emulated={
+"deadzone": 0.5,
+"events": [  ]
+}
+right_emulated={
+"deadzone": 0.5,
+"events": [  ]
+}
+left_emulated={
+"deadzone": 0.5,
+"events": [  ]
+}
+up_emulated={
+"deadzone": 0.5,
+"events": [  ]
+}
+down_emulated={
+"deadzone": 0.5,
+"events": [  ]
+}
+shoryuuken={
+"deadzone": 0.5,
+"events": [  ]
+}
+char_switch={
+"deadzone": 0.5,
+"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":6,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[layer_names]
+
+2d_physics/layer_1="Scenery"
+2d_physics/layer_2="Players"
+2d_physics/layer_3="Player Projectiles"
+2d_physics/layer_4="Enemies"
+2d_physics/layer_5="Enemy Projectiles"
+2d_physics/layer_6="Items"
+2d_physics/layer_9="Unclimbable Walls"
+2d_physics/layer_10="Climbable Non-Obstruct"
+2d_physics/layer_11="Climbable Player-Only"
+2d_physics/layer_12="Camera Boundaries"
+2d_physics/layer_13="CollisionBoxes"
+2d_physics/layer_14="TruePlayerCollider"
+2d_physics/layer_15="Enemy FriendlyFire"
+2d_physics/layer_16="Camera"
+2d_physics/layer_17="Movable Objects"
+2d_physics/layer_19="Giant Claw"
+2d_physics/layer_20="Mechaniloid Punch"
+2d_physics/layer_21="Trilobyte Armor"
+2d_physics/layer_22="Generator Lamp"
+2d_physics/layer_24="IceWall"
+2d_physics/layer_29="Background Platform"
+2d_physics/layer_30="Solid Ride-Only"
+2d_physics/layer_31="Solid Player-Only"
+
+[locale]
+
+test="en"
+translations=PoolStringArray( "res://src/Localization/real_translations.br.translation", "res://src/Localization/real_translations.en.translation", "res://src/Localization/real_translations.es.translation", "res://src/Localization/real_translations.ja_JP.translation", "res://src/Localization/real_translations.pr.translation" )
+
+[logging]
+
+file_logging/enable_file_logging.pc=false
+
+[network]
+
+limits/debugger_stdout/max_chars_per_second=204800
+limits/debugger_stdout/max_messages_per_frame=300
+limits/debugger_stdout/max_errors_per_second=500
+
+[node]
+
+name_casing=1
+
+[physics]
+
+common/physics_jitter_fix=0.0
+2d/physics_engine="GodotPhysics"
+2d/default_gravity=800
+common/enable_object_picking=false
+
+[rendering]
+
+quality/driver/fallback_to_gles2=true
+2d/snapping/use_gpu_pixel_snap=true
+threads/thread_model=2
+quality/filters/anisotropic_filter_level=2
+misc/occlusion_culling/max_active_spheres=4
+misc/occlusion_culling/max_active_polygons=4
+gles3/shaders/shader_compilation_mode=2
+gles3/shaders/shader_compilation_mode.mobile=2
+gles3/shaders/shader_compilation_mode.web=2
+
+[tiled_importer]
+
+enable_json_format=false
+
+[world]
+
+2d/cell_size=32

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Mantis - Dash.ogg-0dc30e5f075c9dc61a1f5fa08e5b4684.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/Mantis - Dash.ogg"
+dest_files=[ "res://.import/Mantis - Dash.ogg-0dc30e5f075c9dc61a1f5fa08e5b4684.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

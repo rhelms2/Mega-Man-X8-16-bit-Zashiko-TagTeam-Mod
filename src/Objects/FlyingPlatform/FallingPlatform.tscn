@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/Objects/FlyingPlatform/fly_platform.res" type="SpriteFrames" id=1]
+[ext_resource path="res://src/Objects/FlyingPlatform/FallingPlatform.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 40, 11 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 41, 15 )
+
+[node name="FallingPlatform" type="KinematicBody2D"]
+collision_mask = 0
+script = ExtResource( 2 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 3 )
+z_index = 2
+shape = SubResource( 1 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+z_index = 32
+z_as_relative = false
+frames = ExtResource( 1 )
+animation = "flying"
+playing = true
+
+[node name="player_detector" type="Area2D" parent="."]
+position = Vector2( 0, -12 )
+collision_layer = 0
+collision_mask = 2
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="player_detector"]
+position = Vector2( 0, 11 )
+shape = SubResource( 2 )
+
+[connection signal="body_entered" from="player_detector" to="." method="_on_area2D_body_entered"]

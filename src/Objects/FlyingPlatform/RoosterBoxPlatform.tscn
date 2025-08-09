@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/Objects/FlyingPlatform/fly_platform.res" type="SpriteFrames" id=1]
+[ext_resource path="res://src/Objects/Box/StaticBreakBox.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Objects/FlyingPlatform/FlyingPlatform.gd" type="Script" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 40, 11 )
+
+[node name="BoxPlatform" type="PathFollow2D"]
+rotate = false
+loop = false
+script = ExtResource( 3 )
+
+[node name="kinematicBody2D" type="KinematicBody2D" parent="."]
+collision_mask = 0
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="kinematicBody2D"]
+position = Vector2( 0, 3 )
+z_index = 2
+shape = SubResource( 1 )
+
+[node name="BreakBox" parent="kinematicBody2D" instance=ExtResource( 2 )]
+position = Vector2( 0, -31 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="kinematicBody2D"]
+z_index = 1
+z_as_relative = false
+frames = ExtResource( 1 )
+animation = "flying"
+playing = true

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/FX - Giga Crash Shot.ogg-aab84ec27d3549f7e09262ab25f6fcfa.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/FX - Giga Crash Shot.ogg"
+dest_files=[ "res://.import/FX - Giga Crash Shot.ogg-aab84ec27d3549f7e09262ab25f6fcfa.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

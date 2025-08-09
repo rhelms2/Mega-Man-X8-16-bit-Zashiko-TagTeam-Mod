@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Trilobyte - Desperation.ogg-96f0ebbc2758f16ebd722d46f42416e9.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/Trilobyte - Desperation.ogg"
+dest_files=[ "res://.import/Trilobyte - Desperation.ogg-96f0ebbc2758f16ebd722d46f42416e9.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

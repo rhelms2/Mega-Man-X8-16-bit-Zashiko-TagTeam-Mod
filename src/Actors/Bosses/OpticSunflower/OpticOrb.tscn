@@ -1,0 +1,42 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/Actors/Player/BossWeapons/OpticShield/optic_shield.res" type="SpriteFrames" id=1]
+[ext_resource path="res://src/Actors/Bosses/OpticSunflower/OpticOrb.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=3]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 18.0
+
+[node name="OpticOrb" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="front_shield" type="AnimatedSprite" parent="."]
+z_index = 8
+frames = ExtResource( 1 )
+animation = "idle"
+frame = 4
+playing = true
+
+[node name="back_shield" type="AnimatedSprite" parent="."]
+z_index = 4
+frames = ExtResource( 1 )
+animation = "idle"
+frame = 9
+playing = true
+flip_h = true
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 3 )
+damage = 3.0
+
+[node name="area2D" type="Area2D" parent="DamageOnTouch"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="DamageOnTouch/area2D"]
+z_index = 16
+shape = SubResource( 1 )
+
+[connection signal="expired" from="." to="DamageOnTouch" method="deactivate"]
+[connection signal="touch_target" from="DamageOnTouch" to="." method="_on_inflict_damage"]
+[connection signal="touch_target" from="DamageOnTouch" to="DamageOnTouch" method="deactivate"]

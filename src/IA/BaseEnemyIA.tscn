@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/IA/BaseEnemyIA.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 200, 26.75 )
+
+[node name="Artificial Intelligence" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="player_detector" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="player_detector"]
+position = Vector2( 0, -2.75 )
+shape = SubResource( 12 )

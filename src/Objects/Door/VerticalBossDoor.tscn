@@ -1,0 +1,80 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://src/Objects/Door/BossClose.gd" type="Script" id=1]
+[ext_resource path="res://src/Objects/Door/ExplosionClose.gd" type="Script" id=2]
+[ext_resource path="res://src/Objects/Door/NewBossDoor.gd" type="Script" id=3]
+[ext_resource path="res://src/Objects/Door/boss_door.res" type="SpriteFrames" id=4]
+[ext_resource path="res://src/Objects/Door/VerticalPassThrough.gd" type="Script" id=5]
+[ext_resource path="res://src/Objects/Door/NewDoor.tscn" type="PackedScene" id=6]
+
+[sub_resource type="RectangleShape2D" id=34]
+extents = Vector2( 10, 23.5 )
+
+[sub_resource type="Curve" id=33]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=29]
+curve = SubResource( 33 )
+
+[sub_resource type="ParticlesMaterial" id=31]
+resource_local_to_scene = true
+emission_shape = 1
+emission_sphere_radius = 16.0
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 29 )
+
+[sub_resource type="RectangleShape2D" id=32]
+extents = Vector2( 10, 144 )
+
+[node name="BossDoor" instance=ExtResource( 6 )]
+script = ExtResource( 3 )
+able_to_explode = false
+alternate_sprite_frames = ExtResource( 4 )
+open_signal = "boss_door_open"
+
+[node name="animatedSprite" parent="." index="1"]
+frames = ExtResource( 4 )
+
+[node name="collisionShape2D" parent="Open/player_detector" index="0"]
+position = Vector2( -13, -11.5 )
+shape = SubResource( 34 )
+
+[node name="PassThrough" parent="." index="3"]
+script = ExtResource( 5 )
+
+[node name="Close" parent="." index="4"]
+script = ExtResource( 1 )
+signal_to_emit = "boss_door_closed"
+
+[node name="punch_detector" parent="Explode" index="0"]
+monitoring = false
+
+[node name="bike_detector" parent="Explode" index="1"]
+visible = true
+monitoring = false
+
+[node name="Explosion Particles" parent="Explode" index="2"]
+process_material = SubResource( 31 )
+
+[node name="ExplosionCloser" type="Area2D" parent="." index="7"]
+position = Vector2( 71, 0 )
+collision_layer = 0
+collision_mask = 2
+monitoring = false
+script = ExtResource( 2 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="ExplosionCloser" index="0"]
+position = Vector2( 0, -52 )
+shape = SubResource( 32 )
+
+[connection signal="start" from="Explode" to="ExplosionCloser" method="activate"]
+[connection signal="body_entered" from="ExplosionCloser" to="ExplosionCloser" method="_on_area2D_body_entered"]
+[connection signal="player_enter" from="ExplosionCloser" to="Close" method="_on_signal"]

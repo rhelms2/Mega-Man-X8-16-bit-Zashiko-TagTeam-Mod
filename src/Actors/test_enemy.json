@@ -1,0 +1,32 @@
+{ "frames": [
+   {
+    "filename": "test_enemy 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 51, "h": 63 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 51, "h": 63 },
+    "sourceSize": { "w": 51, "h": 63 },
+    "duration": 100
+   },
+   {
+    "filename": "test_enemy 1.ase",
+    "frame": { "x": 0, "y": 0, "w": 51, "h": 63 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 51, "h": 63 },
+    "sourceSize": { "w": 51, "h": 63 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.2.33-x64",
+  "image": "test_enemy.png",
+  "format": "RGBA8888",
+  "size": { "w": 51, "h": 63 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "idle", "from": 0, "to": 1, "direction": "forward" }
+  ]
+ }
+}

@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/Actors/Player/Subtank.gd" type="Script" id=1]
+[ext_resource path="res://src/Sounds/12 - MMX - X Life Gain.wav" type="AudioStream" id=2]
+[ext_resource path="res://src/Sounds/FX - Subtank Charge.ogg" type="AudioStream" id=3]
+[ext_resource path="res://src/Sounds/FX - Subtank Full.ogg" type="AudioStream" id=4]
+
+[node name="Subtank 1" type="Node"]
+pause_mode = 2
+script = ExtResource( 1 )
+capacity = 24
+
+[node name="heal" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -10.0
+bus = "SFX"
+
+[node name="charge" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+volume_db = -8.0
+pitch_scale = 0.94
+bus = "SFX"
+
+[node name="full" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -10.0
+bus = "SFX"

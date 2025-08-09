@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/punch_2.ogg-bf653922d1198a3d84a562bda1e03ba1.oggstr"
+
+[deps]
+
+source_file="res://Zero_mod/SFX/punch_2.ogg"
+dest_files=[ "res://.import/punch_2.ogg-bf653922d1198a3d84a562bda1e03ba1.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

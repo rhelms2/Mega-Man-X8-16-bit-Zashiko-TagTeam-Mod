@@ -1,0 +1,87 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://src/Levels/PitchBlack/GeneratorLamp.gd" type="Script" id=1]
+[ext_resource path="res://src/Levels/PitchBlack/generator_door.png" type="Texture" id=2]
+[ext_resource path="res://src/Levels/PitchBlack/generator_ceil.png" type="Texture" id=3]
+[ext_resource path="res://src/Levels/PitchBlack/generator_lamp.png" type="Texture" id=4]
+[ext_resource path="res://src/Levels/PitchBlack/X_Lightsource.gd" type="Script" id=5]
+[ext_resource path="res://src/Levels/PitchBlack/light.png" type="Texture" id=6]
+[ext_resource path="res://src/Sounds/Press Open.ogg" type="AudioStream" id=7]
+[ext_resource path="res://src/Sounds/Button Press.ogg" type="AudioStream" id=8]
+[ext_resource path="res://src/AchievementSystem/Achievements/MANTISLIT.tres" type="Resource" id=9]
+[ext_resource path="res://src/AchievementSystem/AchievementUnlocker.gd" type="Script" id=10]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 46, 51 )
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[node name="PowerGenerator" type="Node2D"]
+
+[node name="lamp" type="Sprite" parent="."]
+position = Vector2( 64, -38 )
+texture = ExtResource( 4 )
+
+[node name="wall" type="Sprite" parent="."]
+position = Vector2( 0, -93 )
+z_index = 1
+texture = ExtResource( 3 )
+
+[node name="doors" type="Node2D" parent="."]
+
+[node name="door" type="Sprite" parent="doors"]
+position = Vector2( 7, 5 )
+texture = ExtResource( 2 )
+
+[node name="door2" type="Sprite" parent="doors"]
+position = Vector2( -25, 5 )
+texture = ExtResource( 2 )
+
+[node name="door3" type="Sprite" parent="doors"]
+position = Vector2( -57, 5 )
+texture = ExtResource( 2 )
+
+[node name="collider" type="KinematicBody2D" parent="doors"]
+collision_mask = 0
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="doors/collider"]
+position = Vector2( -25, 0 )
+shape = SubResource( 2 )
+
+[node name="Lamp" type="KinematicBody2D" parent="."]
+position = Vector2( 64, -44 )
+collision_layer = 2097152
+collision_mask = 0
+script = ExtResource( 1 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="Lamp"]
+shape = SubResource( 1 )
+
+[node name="light" type="Light2D" parent="Lamp"]
+scale = Vector2( 1.5, 1 )
+z_index = 277
+texture = ExtResource( 6 )
+texture_scale = 8.0
+energy = 0.0
+range_layer_min = -2
+range_layer_max = -1
+script = ExtResource( 5 )
+
+[node name="charge_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 8 )
+volume_db = -5.0
+pitch_scale = 0.85
+max_distance = 600.0
+bus = "SFX"
+
+[node name="full_energy" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 7 )
+pitch_scale = 1.1
+max_distance = 600.0
+bus = "SFX"
+
+[node name="AchievementUnlocker" type="Node" parent="."]
+script = ExtResource( 10 )
+achievement = ExtResource( 9 )
+
+[connection signal="lit" from="Lamp" to="AchievementUnlocker" method="fire_achievement"]

@@ -1,0 +1,22 @@
+[remap]
+
+importer="vnen.tiled_importer"
+type="PackedScene"
+path="res://.import/pitchblack_s5.tmx-f845e1d6891ac6c2419500b9393cc2b1.scn"
+
+[deps]
+
+source_file="res://src/Levels/PitchBlack/pitchblack_s5.tmx"
+dest_files=[ "res://.import/pitchblack_s5.tmx-f845e1d6891ac6c2419500b9393cc2b1.scn" ]
+
+[params]
+
+custom_properties=true
+tile_metadata=false
+uv_clip=true
+image_flags=7
+collision_layer=1
+embed_internal_images=false
+save_tiled_properties=false
+add_background=true
+post_import_script=""

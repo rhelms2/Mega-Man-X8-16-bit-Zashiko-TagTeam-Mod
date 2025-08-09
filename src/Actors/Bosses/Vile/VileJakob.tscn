@@ -1,0 +1,586 @@
+[gd_scene load_steps=59 format=2]
+
+[ext_resource path="res://src/Actors/Bosses/BossAI.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Bosses/Vile/Idle.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/dps_hud.gd" type="Script" id=3]
+[ext_resource path="res://src/Sounds/17 - MMX - X Fade In.wav" type="AudioStream" id=4]
+[ext_resource path="res://src/Sounds/18 - MMX - X Fade Out.wav" type="AudioStream" id=5]
+[ext_resource path="res://src/Sounds/LEMON_SHOT2.wav" type="AudioStream" id=6]
+[ext_resource path="res://src/Sounds/60 - MMX - Enemy Missile Fire.wav" type="AudioStream" id=7]
+[ext_resource path="res://src/Sounds/Vile - Defeat.ogg" type="AudioStream" id=8]
+[ext_resource path="res://src/Sounds/Rooster - Lowkick.ogg" type="AudioStream" id=9]
+[ext_resource path="res://src/Sounds/Mantis - Dash.ogg" type="AudioStream" id=10]
+[ext_resource path="res://src/Sounds/Mantis - Dash2.ogg" type="AudioStream" id=11]
+[ext_resource path="res://src/Effects/Textures/smoke.png" type="Texture" id=12]
+[ext_resource path="res://src/Effects/Textures/explosion.png" type="Texture" id=13]
+[ext_resource path="res://src/Effects/Materials/default_material.tres" type="Material" id=14]
+[ext_resource path="res://src/Sounds/56 - MMX - Enemy Death.wav" type="AudioStream" id=15]
+[ext_resource path="res://src/Sounds/HIT_BOSS.wav" type="AudioStream" id=16]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=17]
+[ext_resource path="res://src/Actors/Bosses/Vile/Intro.gd" type="Script" id=18]
+[ext_resource path="res://src/Actors/Bosses/Vile/vile.res" type="SpriteFrames" id=19]
+[ext_resource path="res://src/Actors/Bosses/Vile/VileMissiles.gd" type="Script" id=20]
+[ext_resource path="res://src/Actors/Bosses/Vile/VileCannon.gd" type="Script" id=21]
+[ext_resource path="res://src/Actors/Bosses/Vile/VileDash.gd" type="Script" id=22]
+[ext_resource path="res://src/Actors/Bosses/Vile/VileDefeat.gd" type="Script" id=23]
+[ext_resource path="res://src/Actors/Bosses/Vile/VileJump.gd" type="Script" id=24]
+[ext_resource path="res://src/Actors/Bosses/Vile/VileAirDash.gd" type="Script" id=25]
+[ext_resource path="res://src/Actors/Bosses/Vile/CannonShotImproved.tscn" type="PackedScene" id=26]
+[ext_resource path="res://src/Effects/Materials/x_dash_smoke.tres" type="Material" id=27]
+[ext_resource path="res://src/Actors/Panda.gd" type="Script" id=28]
+[ext_resource path="res://src/Effects/Materials/RemainsParticleSingleExplosion.tres" type="Material" id=29]
+[ext_resource path="res://src/Actors/Modules/Enemy/BossDamage.gd" type="Script" id=30]
+[ext_resource path="res://src/Actors/Bosses/BossStun.gd" type="Script" id=31]
+[ext_resource path="res://src/Actors/Bosses/Vile/FirePillar.tscn" type="PackedScene" id=32]
+[ext_resource path="res://src/DialogSystem/Dialogs/Stages/Vile_jakob_Dialogue.tres" type="Resource" id=33]
+[ext_resource path="res://src/Actors/Bosses/Vile/VileLightning.gd" type="Script" id=34]
+[ext_resource path="res://src/Actors/Bosses/GigaboltManowar/Space.gd" type="Script" id=35]
+[ext_resource path="res://src/Actors/Bosses/Vile/VileLightning.tscn" type="PackedScene" id=36]
+[ext_resource path="res://src/Sounds/Manowar - StrongLightning.wav" type="AudioStream" id=37]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=38]
+[ext_resource path="res://src/Sounds/Manowar - Warning.wav" type="AudioStream" id=39]
+[ext_resource path="res://src/Sounds/Vile - Lightning.wav" type="AudioStream" id=40]
+[ext_resource path="res://src/Sounds/Manowar - Flash.wav" type="AudioStream" id=41]
+[ext_resource path="res://src/Actors/Bosses/Vile/VileAirCannon.gd" type="Script" id=42]
+[ext_resource path="res://src/Actors/Bosses/Vile/FirePillarImproved.tscn" type="PackedScene" id=43]
+[ext_resource path="res://src/Actors/Bosses/Vile/VileMissileImproved.tscn" type="PackedScene" id=44]
+[ext_resource path="res://src/Actors/Bosses/Vile/VileAirCannonAngled.gd" type="Script" id=45]
+[ext_resource path="res://src/Actors/Bosses/BambooPandamonium/PandaAchievementHandler.gd" type="Script" id=46]
+[ext_resource path="res://src/AchievementSystem/Achievements/VILEJAKOBDEFEATED.tres" type="Resource" id=47]
+[ext_resource path="res://src/AchievementSystem/Achievements/VILEJAKOBNODAMAGE.tres" type="Resource" id=48]
+[ext_resource path="res://src/AchievementSystem/Achievements/VILEJAKOBBUSTERONLY.tres" type="Resource" id=49]
+[ext_resource path="res://src/AchievementSystem/Achievements/VILEJAKOBNAKED.tres" type="Resource" id=50]
+[ext_resource path="res://src/Levels/PitchBlack/light.png" type="Texture" id=51]
+[ext_resource path="res://src/Actors/Bosses/SatanSigma/flash.gd" type="Script" id=52]
+
+[sub_resource type="RectangleShape2D" id=62]
+extents = Vector2( 12, 24 )
+
+[sub_resource type="RectangleShape2D" id=64]
+extents = Vector2( 14, 16 )
+
+[sub_resource type="RectangleShape2D" id=67]
+extents = Vector2( 8, 16 )
+
+[sub_resource type="CanvasItemMaterial" id=65]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 3
+particles_anim_loop = false
+
+[sub_resource type="RectangleShape2D" id=63]
+extents = Vector2( 8, 8 )
+
+[sub_resource type="CanvasItemMaterial" id=66]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 4
+particles_anim_loop = false
+
+[node name="Vile" type="KinematicBody2D" groups=["Bosses", "Enemies"]]
+z_index = 5
+collision_layer = 8
+collision_mask = 257
+script = ExtResource( 28 )
+max_health = 180.0
+
+[node name="Space" type="Node" parent="."]
+script = ExtResource( 35 )
+border_distance = 64
+low_height_segments = 3
+
+[node name="BossAI" type="Node2D" parent="."]
+script = ExtResource( 1 )
+time_between_attacks = Vector2( 0.016, 0 )
+desperation_threshold = 0.75
+play_desperation_music = false
+order_size = 64
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 62 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 14 )
+position = Vector2( 0, -19 )
+z_index = 1
+frames = ExtResource( 19 )
+animation = "flight_missile_fire"
+frame = 4
+playing = true
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+position = Vector2( -6.5, 3.5 )
+scale = Vector2( 4.35, 4.25 )
+
+[node name="Intro" type="Node2D" parent="."]
+script = ExtResource( 18 )
+debug_logs = true
+actions = [ "Event" ]
+animation = "beam_in"
+dialogue = ExtResource( 33 )
+defeated_var = "vile3_defeated"
+boss_vile = true
+
+[node name="beam_in" type="AudioStreamPlayer2D" parent="Intro"]
+stream = ExtResource( 4 )
+volume_db = -11.0
+pitch_scale = 0.8
+max_distance = 600.0
+bus = "SFX"
+
+[node name="Idle" type="Node2D" parent="."]
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_description_": ""
+}
+conflicting_moves = [ "Anything" ]
+animation = "laugh"
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 30 )
+invulnerability_time = 0.1
+max_flash_time = 0.35
+weakenesses = [ "DriftDiamond", "RideArmor", "IceGattling", "Hyouryuushou" ]
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+pause_mode = 2
+stream = ExtResource( 16 )
+volume_db = -3.0
+max_distance = 600.0
+bus = "SFX"
+
+[node name="dps" type="RichTextLabel" parent="Damage"]
+margin_left = -18.0
+margin_top = -69.0
+margin_right = 59.0
+margin_bottom = -52.0
+text = "0.0"
+script = ExtResource( 3 )
+
+[node name="area2D" type="Area2D" parent="Damage"]
+position = Vector2( 0, -11 )
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="Damage/area2D"]
+position = Vector2( 1, 8 )
+shape = SubResource( 64 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 17 )
+damage = 8.0
+
+[node name="area2D" type="Area2D" parent="DamageOnTouch"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="DamageOnTouch/area2D"]
+position = Vector2( 1, 7 )
+shape = SubResource( 67 )
+
+[node name="BossStun" type="Node2D" parent="."]
+script = ExtResource( 31 )
+conflicting_moves = [ "BossDeath" ]
+actions = [ "Event" ]
+animation = "defeat_fall"
+horizontal_velocity = 120.0
+jump_velocity = 150.0
+
+[node name="VileJump" type="Node2D" parent="."]
+position = Vector2( 0, 26 )
+script = ExtResource( 24 )
+__meta__ = {
+"_editor_description_": ""
+}
+actions = [ "Event" ]
+animation = "jump_prepare"
+horizontal_velocity = 250.0
+jump_velocity = 450.0
+projectile = ExtResource( 43 )
+
+[node name="land_particles" type="Particles2D" parent="VileJump"]
+material = SubResource( 65 )
+position = Vector2( 0, -2 )
+z_index = 1
+emitting = false
+amount = 11
+lifetime = 0.75
+local_coords = false
+process_material = ExtResource( 27 )
+texture = ExtResource( 12 )
+
+[node name="land" type="AudioStreamPlayer2D" parent="VileJump"]
+stream = ExtResource( 9 )
+volume_db = -9.0
+pitch_scale = 1.6
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="jump" type="AudioStreamPlayer2D" parent="VileJump"]
+stream = ExtResource( 11 )
+volume_db = -8.476
+pitch_scale = 1.15
+max_distance = 1200.0
+bus = "SFX"
+
+[node name="shot_sound" type="AudioStreamPlayer2D" parent="VileJump"]
+stream = ExtResource( 7 )
+volume_db = -9.0
+pitch_scale = 1.6
+max_distance = 1200.0
+bus = "SFX"
+
+[node name="VileDash" type="Node2D" parent="."]
+script = ExtResource( 22 )
+actions = [ "Event" ]
+animation = "dash_start"
+horizontal_velocity = 400.0
+
+[node name="dash_particles" type="Particles2D" parent="VileDash"]
+material = SubResource( 65 )
+position = Vector2( 0, 24 )
+z_index = 1
+emitting = false
+amount = 11
+lifetime = 0.75
+local_coords = false
+process_material = ExtResource( 27 )
+texture = ExtResource( 12 )
+
+[node name="dash" type="AudioStreamPlayer2D" parent="VileDash"]
+stream = ExtResource( 10 )
+volume_db = -8.0
+pitch_scale = 0.8
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="VileCannon" type="Node2D" parent="."]
+position = Vector2( 31, -5 )
+script = ExtResource( 21 )
+__meta__ = {
+"_editor_description_": ""
+}
+actions = [ "Event" ]
+animation = "cannon_prepare"
+projectile = ExtResource( 26 )
+shots = 9
+initial_speed = Vector2( 300, 300 )
+shoot_towards_player = true
+
+[node name="shot_sound" type="AudioStreamPlayer2D" parent="VileCannon"]
+stream = ExtResource( 6 )
+volume_db = -12.079
+pitch_scale = 0.84
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="VileMissiles" type="Node2D" parent="."]
+position = Vector2( 0, -5 )
+script = ExtResource( 20 )
+__meta__ = {
+"_editor_description_": ""
+}
+actions = [ "Event" ]
+animation = "missile_prepare"
+projectile = ExtResource( 44 )
+shots = 3
+initial_speed = Vector2( 130, 130 )
+
+[node name="shot_sound" type="AudioStreamPlayer2D" parent="VileMissiles"]
+stream = ExtResource( 7 )
+volume_db = -6.0
+pitch_scale = 0.9
+max_distance = 1200.0
+bus = "SFX"
+
+[node name="VileLightning" type="Node2D" parent="."]
+script = ExtResource( 34 )
+desperation_attack = true
+damage_reduction = 0.25
+
+[node name="VileLightning" parent="VileLightning" instance=ExtResource( 36 )]
+
+[node name="VileLightning2" parent="VileLightning" instance=ExtResource( 36 )]
+rotation = 1.0472
+
+[node name="VileLightning3" parent="VileLightning" instance=ExtResource( 36 )]
+rotation = 2.0944
+
+[node name="VileLightning4" parent="VileLightning" instance=ExtResource( 36 )]
+rotation = -1.0472
+
+[node name="VileLightning5" parent="VileLightning" instance=ExtResource( 36 )]
+rotation = -2.0944
+
+[node name="VileLightning6" parent="VileLightning" instance=ExtResource( 36 )]
+rotation = 3.14159
+
+[node name="lightning" type="AudioStreamPlayer2D" parent="VileLightning"]
+stream = ExtResource( 37 )
+volume_db = -7.0
+pitch_scale = 0.6
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 38 )
+
+[node name="lightning_loop" type="AudioStreamPlayer2D" parent="VileLightning"]
+stream = ExtResource( 40 )
+volume_db = -9.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 38 )
+
+[node name="warning" type="AudioStreamPlayer2D" parent="VileLightning"]
+position = Vector2( 0, 75 )
+stream = ExtResource( 39 )
+volume_db = -5.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 38 )
+
+[node name="end" type="AudioStreamPlayer2D" parent="VileLightning"]
+position = Vector2( 0, 75 )
+stream = ExtResource( 41 )
+volume_db = -8.0
+max_distance = 600.0
+bus = "SFX"
+
+[node name="rise" type="AudioStreamPlayer2D" parent="VileLightning"]
+stream = ExtResource( 11 )
+volume_db = -8.476
+pitch_scale = 0.8
+max_distance = 1200.0
+bus = "SFX"
+
+[node name="flash" type="Sprite" parent="VileLightning"]
+pause_mode = 2
+visible = false
+scale = Vector2( 10, 5 )
+z_index = -35
+texture = ExtResource( 51 )
+script = ExtResource( 52 )
+initial_alpha = 1.0
+tween_scale_y = false
+final_color = Color( 1, 1, 1, 1 )
+duration = 0.064
+
+[node name="VileAirCannon" type="Node2D" parent="."]
+position = Vector2( 27, 2 )
+script = ExtResource( 45 )
+__meta__ = {
+"_editor_description_": ""
+}
+actions = [ "Event" ]
+shots = 10
+projectile = ExtResource( 26 )
+
+[node name="traverse" type="AudioStreamPlayer2D" parent="VileAirCannon"]
+stream = ExtResource( 11 )
+volume_db = -8.476
+pitch_scale = 1.15
+max_distance = 1200.0
+bus = "SFX"
+
+[node name="shot_sound" type="AudioStreamPlayer2D" parent="VileAirCannon"]
+stream = ExtResource( 7 )
+volume_db = -9.0
+pitch_scale = 1.6
+max_distance = 1200.0
+bus = "SFX"
+
+[node name="VileAirMissile" type="Node2D" parent="."]
+position = Vector2( 7, -7 )
+script = ExtResource( 42 )
+__meta__ = {
+"_editor_description_": ""
+}
+actions = [ "Event" ]
+prepare_anim = "flight_missile_prepare"
+shot_anim = "flight_missile_fire"
+end_anim = "flight_missile_end"
+shots = 4
+projectile = ExtResource( 44 )
+
+[node name="traverse" type="AudioStreamPlayer2D" parent="VileAirMissile"]
+stream = ExtResource( 11 )
+volume_db = -8.476
+pitch_scale = 1.15
+max_distance = 1200.0
+bus = "SFX"
+
+[node name="shot_sound" type="AudioStreamPlayer2D" parent="VileAirMissile"]
+stream = ExtResource( 7 )
+volume_db = -6.0
+pitch_scale = 0.9
+max_distance = 1200.0
+bus = "SFX"
+
+[node name="VileAirDash" type="Node2D" parent="."]
+position = Vector2( 0, 26 )
+script = ExtResource( 25 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="rise" type="AudioStreamPlayer2D" parent="VileAirDash"]
+stream = ExtResource( 11 )
+volume_db = -8.476
+pitch_scale = 0.95
+max_distance = 1200.0
+bus = "SFX"
+
+[node name="traverse" type="AudioStreamPlayer2D" parent="VileAirDash"]
+stream = ExtResource( 11 )
+volume_db = -8.476
+pitch_scale = 1.15
+max_distance = 1200.0
+bus = "SFX"
+
+[node name="land" type="AudioStreamPlayer2D" parent="VileAirDash"]
+stream = ExtResource( 9 )
+volume_db = -9.0
+pitch_scale = 1.6
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="land_particles" type="Particles2D" parent="VileAirDash"]
+material = SubResource( 65 )
+position = Vector2( 0, -2 )
+z_index = 1
+emitting = false
+amount = 11
+lifetime = 0.75
+local_coords = false
+process_material = ExtResource( 27 )
+texture = ExtResource( 12 )
+
+[node name="dash_particles" type="Particles2D" parent="VileAirDash"]
+material = SubResource( 65 )
+position = Vector2( 0, -2 )
+z_index = 1
+emitting = false
+amount = 11
+lifetime = 0.75
+local_coords = false
+process_material = ExtResource( 27 )
+texture = ExtResource( 12 )
+
+[node name="VileAirKnee" type="Node2D" parent="."]
+position = Vector2( 0, 26 )
+script = ExtResource( 24 )
+__meta__ = {
+"_editor_description_": ""
+}
+active = false
+actions = [ "Event" ]
+animation = "jump_prepare"
+horizontal_velocity = 250.0
+jump_velocity = 450.0
+projectile = ExtResource( 32 )
+
+[node name="land_particles" type="Particles2D" parent="VileAirKnee"]
+material = SubResource( 65 )
+position = Vector2( 0, -2 )
+z_index = 1
+emitting = false
+amount = 11
+lifetime = 0.75
+local_coords = false
+process_material = ExtResource( 27 )
+texture = ExtResource( 12 )
+
+[node name="land" type="AudioStreamPlayer2D" parent="VileAirKnee"]
+stream = ExtResource( 9 )
+volume_db = -9.0
+pitch_scale = 1.6
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="jump" type="AudioStreamPlayer2D" parent="VileAirKnee"]
+stream = ExtResource( 11 )
+volume_db = -8.476
+pitch_scale = 1.15
+max_distance = 1200.0
+bus = "SFX"
+
+[node name="shot_sound" type="AudioStreamPlayer2D" parent="VileAirKnee"]
+stream = ExtResource( 7 )
+volume_db = -9.0
+pitch_scale = 1.6
+max_distance = 1200.0
+bus = "SFX"
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+position = Vector2( 1, 15 )
+shape = SubResource( 63 )
+
+[node name="BossDeath" type="Node2D" parent="."]
+script = ExtResource( 23 )
+debug_logs = true
+actions = [ "Event" ]
+animation = "defeat_fall"
+jump_velocity = 180.0
+defeat_flag = "vile3_defeated"
+
+[node name="explosion" type="AudioStreamPlayer2D" parent="BossDeath"]
+pause_mode = 2
+stream = ExtResource( 15 )
+volume_db = -0.553
+max_distance = 600.0
+attenuation = 0.951366
+bus = "SFX"
+
+[node name="sparks" type="AudioStreamPlayer2D" parent="BossDeath"]
+pause_mode = 2
+stream = ExtResource( 8 )
+volume_db = -2.229
+pitch_scale = 1.05
+max_distance = 600.0
+attenuation = 0.951366
+bus = "SFX"
+
+[node name="explosion_particles" type="Particles2D" parent="BossDeath"]
+pause_mode = 2
+material = SubResource( 66 )
+position = Vector2( 0, 0.5 )
+z_index = 10
+emitting = false
+amount = 1
+lifetime = 2.0
+one_shot = true
+local_coords = false
+process_material = ExtResource( 29 )
+texture = ExtResource( 13 )
+
+[node name="beam_out" type="AudioStreamPlayer2D" parent="BossDeath"]
+stream = ExtResource( 5 )
+volume_db = -6.555
+max_distance = 600.0
+bus = "SFX"
+
+[node name="AchievementHandler" type="Node" parent="."]
+script = ExtResource( 46 )
+defeated_any = false
+_desperation = NodePath("../VileLightning")
+no_damage = ExtResource( 48 )
+buster_only = ExtResource( 49 )
+naked = ExtResource( 50 )
+defeated = ExtResource( 47 )
+
+[connection signal="dps" from="Damage" to="Damage/dps" method="_on_Damage_dps"]
+[connection signal="ability_start" from="VileLightning" to="BossStun" method="deactivate"]
+[connection signal="ready_for_stun" from="VileLightning" to="Idle" method="on_desperation"]
+[connection signal="ready_for_stun" from="VileLightning" to="BossStun" method="reactivate"]

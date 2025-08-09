@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="5" height="8" tilewidth="16" tileheight="16" infinite="0" nextlayerid="3" nextobjectid="1">
+ <tileset firstgid="1" source="NoahsPark.tsx"/>
+ <layer id="2" name="Tile Layer 2" width="5" height="8">
+  <data encoding="csv">
+0,0,0,0,0,
+0,0,0,0,0,
+0,0,0,0,0,
+0,0,0,0,0,
+0,0,0,0,0,
+0,0,0,0,0,
+0,0,0,0,0,
+0,0,0,0,0
+</data>
+ </layer>
+ <layer id="1" name="Tile Layer 1" width="5" height="8">
+  <data encoding="csv">
+903,904,904,904,905,
+967,1073742823,968,969,937,
+1073742791,999,1000,1073742793,937,
+1073742759,936,936,936,937,
+935,936,936,936,937,
+967,1073742823,968,969,937,
+1073742791,999,1000,1073742793,937,
+1073742727,1073742728,1073742728,1073742728,1073742729
+</data>
+ </layer>
+</map>

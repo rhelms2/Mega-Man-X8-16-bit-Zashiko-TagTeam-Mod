@@ -1,0 +1,101 @@
+extends AttackAbility
+
+onready var boss_ai = get_parent().get_node("BossAI")
+
+onready var effect = animatedSprite.get_node("effectSprite")
+onready var awakened_effect = animatedSprite.get_node("awakenedEffect")
+onready var reflector: Node2D = $"../DamageReflector"
+onready var dmg: Node2D = $"../Damage"
+onready var damage: Node2D = $"../DamageOnTouch"
+onready var sfx = $sfx
+
+var chance = randf() * 100
+var heal_chance = 40
+var max_deflects = 4
+
+
+func set_game_mode() -> void :
+	if CharacterManager.game_mode < 0:
+		max_deflects = 3
+	elif CharacterManager.game_mode == 0:
+		max_deflects = 4
+	elif CharacterManager.game_mode == 1:
+		max_deflects = 5
+	elif CharacterManager.game_mode == 2:
+		max_deflects = 5
+	elif CharacterManager.game_mode >= 3:
+		max_deflects = 5
+
+func _Setup() -> void :
+	set_game_mode()
+	turn_and_face_player()
+	play_animation("idle")
+	chance = randf() * 100
+	if reflector.deflects > 0 or chance >= 50:
+		EndAbility()
+		return
+
+func _Update(delta: float) -> void :
+	process_gravity(delta)
+	
+	if attack_stage == 0:
+		play_animation("awakened_start")
+		if boss_ai.used_desperation:
+			awakened_effect.visible = true
+			awakened_effect.animation = "awakened_start"
+		CharacterManager.set_saber_red(animatedSprite)
+		next_attack_stage()
+		
+	if attack_stage == 1 and has_finished_last_animation():
+
+
+
+		sfx.play()
+		screenshake(2.0)
+		if boss_ai.used_desperation:
+			play_animation("awakened2_loop")
+			awakened_effect.animation = "awakened_loop"
+			effect.visible = false
+		else:
+			play_animation("awakened_loop")
+		next_attack_stage()
+		Tools.timer(1.5, "next_attack_stage", self)
+	
+	elif attack_stage == 2:
+		if boss_ai.used_desperation:
+			screenshake(1.0)
+		
+	elif attack_stage == 3:
+		if boss_ai.used_desperation:
+			awakened_effect.animation = "awakened_end"
+		if boss_ai.used_desperation:
+			reflector.deflects_max = max_deflects * 2
+		else:
+			reflector.deflects_max = max_deflects
+		reflector.reset()
+		reflector.activate()
+		next_attack_stage()
+	
+	elif attack_stage == 4:
+		play_animation("recover")
+		go_to_attack_stage(10)
+		
+	elif attack_stage == 5:
+		play_animation("raikousen")
+		go_to_attack_stage(10)
+		
+	elif attack_stage == 10 and has_finished_last_animation() or attack_stage == 10 and animatedSprite.animation == "idle":
+		CharacterManager.set_saber_green(animatedSprite)
+		if CharacterManager.current_player_character == "Zero" and not CharacterManager.black_zero_armor:
+			CharacterManager.set_fake_zero_colors(animatedSprite)
+		
+		EndAbility()
+
+func _Interrupt() -> void :
+	._Interrupt()
+	damage.activate()
+
+func _on_DamageReflector_shield_broken() -> void :
+	var player_pos = GameManager.get_player_position()
+	get_parent().global_position = player_pos
+	turn_and_face_player()

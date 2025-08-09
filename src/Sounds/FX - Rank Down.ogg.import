@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/FX - Rank Down.ogg-24b4283bce84a4d0da86ed363c9ee44d.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/FX - Rank Down.ogg"
+dest_files=[ "res://.import/FX - Rank Down.ogg-24b4283bce84a4d0da86ed363c9ee44d.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

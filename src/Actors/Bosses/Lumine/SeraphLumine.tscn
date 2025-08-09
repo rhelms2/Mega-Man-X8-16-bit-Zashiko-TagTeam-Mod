@@ -1,0 +1,860 @@
+[gd_scene load_steps=112 format=2]
+
+[ext_resource path="res://src/Actors/Panda.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Bosses/Lumine/lumine_main.res" type="SpriteFrames" id=2]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=3]
+[ext_resource path="res://src/Effects/Textures/smoke.png" type="Texture" id=4]
+[ext_resource path="res://SpriteEffect.gd" type="Script" id=5]
+[ext_resource path="res://src/Effects/Textures/windspark.png" type="Texture" id=6]
+[ext_resource path="res://src/Actors/Bosses/Lumine/lumine_backwings.res" type="SpriteFrames" id=7]
+[ext_resource path="res://src/Actors/Bosses/Lumine/lumine_frontwings.res" type="SpriteFrames" id=8]
+[ext_resource path="res://src/Actors/Bosses/GigaboltManowar/Space.gd" type="Script" id=9]
+[ext_resource path="res://src/Actors/Bosses/Lumine/SeraphIntro.gd" type="Script" id=10]
+[ext_resource path="res://src/Sounds/OST - SeraphLumine - Loop.ogg" type="AudioStream" id=11]
+[ext_resource path="res://src/Sounds/OST - SeraphLumine - Intro.ogg" type="AudioStream" id=12]
+[ext_resource path="res://src/Actors/Bosses/SatanSigma/flash.gd" type="Script" id=13]
+[ext_resource path="res://src/Levels/PitchBlack/light.png" type="Texture" id=14]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=15]
+[ext_resource path="res://src/Sounds/Seraph - Wing2.wav" type="AudioStream" id=16]
+[ext_resource path="res://src/Sounds/Seraph - Wing1.ogg" type="AudioStream" id=17]
+[ext_resource path="res://src/Effects/Materials/feather_particles.tres" type="Material" id=18]
+[ext_resource path="res://src/Effects/Materials/feather_mat.tres" type="Material" id=19]
+[ext_resource path="res://src/Effects/Textures/feathers.png" type="Texture" id=20]
+[ext_resource path="res://src/Effects/Materials/feather_explosion_particles.tres" type="Material" id=21]
+[ext_resource path="res://src/Actors/Bosses/Lumine/DeathWall.tscn" type="PackedScene" id=22]
+[ext_resource path="res://src/Actors/Bosses/Lumine/Darkness.gd" type="Script" id=23]
+[ext_resource path="res://src/Sounds/HIT_BOSS.wav" type="AudioStream" id=24]
+[ext_resource path="res://src/Effects/Materials/default_material.tres" type="Material" id=25]
+[ext_resource path="res://src/Effects/Materials/feather_particles2.tres" type="Material" id=26]
+[ext_resource path="res://src/Sounds/OST - ParadiseLost.ogg" type="AudioStream" id=27]
+[ext_resource path="res://src/Effects/Materials/feather_exp2.tres" type="Material" id=28]
+[ext_resource path="res://src/Actors/Bosses/Lumine/LumineDeath.gd" type="Script" id=29]
+[ext_resource path="res://src/Effects/Textures/blue_explosion.png" type="Texture" id=30]
+[ext_resource path="res://src/Sounds/BOSS_DEATH.wav" type="AudioStream" id=31]
+[ext_resource path="res://src/Actors/Props/RideArmor/RepeatAnimation.gd" type="Script" id=32]
+[ext_resource path="res://src/Effects/Materials/BossSmokeParticles.tres" type="Material" id=33]
+[ext_resource path="res://src/Actors/MeleeEnemyAttack.gd" type="Script" id=34]
+[ext_resource path="res://src/Effects/Textures/blue_screen.png" type="Texture" id=35]
+[ext_resource path="res://src/Actors/Bosses/Lumine/ParadiseTackle.gd" type="Script" id=36]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/Idle.gd" type="Script" id=37]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/dps_hud.gd" type="Script" id=38]
+[ext_resource path="res://src/Actors/Bosses/Lumine/ParadiseBlast.gd" type="Script" id=39]
+[ext_resource path="res://src/Effects/Textures/lumine_laser.png" type="Texture" id=40]
+[ext_resource path="res://src/Sounds/OpticShield - Laser Hit.ogg" type="AudioStream" id=41]
+[ext_resource path="res://src/Actors/Bosses/Lumine/SeraphBossAI.gd" type="Script" id=42]
+[ext_resource path="res://src/Sounds/Manowar - FlashPrepare.wav" type="AudioStream" id=43]
+[ext_resource path="res://src/Actors/Modules/Enemy/BossDamage.gd" type="Script" id=44]
+[ext_resource path="res://src/Actors/Bosses/Lumine/ParadiseDive.gd" type="Script" id=45]
+[ext_resource path="res://src/Effects/Textures/wallwave.png" type="Texture" id=46]
+[ext_resource path="res://src/Sounds/Rooster - Explosion.ogg" type="AudioStream" id=47]
+[ext_resource path="res://src/Sounds/CopySigma - Charge.wav" type="AudioStream" id=48]
+[ext_resource path="res://src/Effects/Textures/thunderbeam.png" type="Texture" id=49]
+[ext_resource path="res://src/Effects/Materials/lumine_explosion.tres" type="Material" id=50]
+[ext_resource path="res://src/Actors/Bosses/Lumine/ParadiseRays.gd" type="Script" id=51]
+[ext_resource path="res://src/Actors/Bosses/Lumine/RotatingLaser.tscn" type="PackedScene" id=52]
+[ext_resource path="res://src/Effects/Textures/simple_texture1.png" type="Texture" id=53]
+[ext_resource path="res://src/Sounds/Seraph - LaserFire.wav" type="AudioStream" id=54]
+[ext_resource path="res://src/Sounds/Seraph - LaserReady.wav" type="AudioStream" id=55]
+[ext_resource path="res://src/Sounds/Antonion - BoxPrepare.wav" type="AudioStream" id=56]
+[ext_resource path="res://src/Effects/Materials/mat_smokeparticle.tres" type="Material" id=57]
+[ext_resource path="res://src/Effects/Materials/x_dash_smoke.tres" type="Material" id=58]
+[ext_resource path="res://src/Effects/Textures/anime_flash.png" type="Texture" id=59]
+[ext_resource path="res://src/AchievementSystem/BossAchievementHandler.gd" type="Script" id=60]
+[ext_resource path="res://src/AchievementSystem/Achievements/SERAPHNAKED.tres" type="Resource" id=61]
+[ext_resource path="res://src/AchievementSystem/Achievements/SERAPHNODAMAGE.tres" type="Resource" id=62]
+[ext_resource path="res://src/AchievementSystem/Achievements/SERAPHDEFEATED.tres" type="Resource" id=63]
+
+[sub_resource type="RectangleShape2D" id=49]
+extents = Vector2( 15, 20 )
+
+[sub_resource type="AtlasTexture" id=74]
+atlas = ExtResource( 40 )
+region = Rect2( 1194, 208, 398, 208 )
+
+[sub_resource type="AtlasTexture" id=75]
+atlas = ExtResource( 40 )
+region = Rect2( 0, 416, 398, 208 )
+
+[sub_resource type="AtlasTexture" id=76]
+atlas = ExtResource( 40 )
+region = Rect2( 398, 416, 398, 208 )
+
+[sub_resource type="AtlasTexture" id=77]
+atlas = ExtResource( 40 )
+region = Rect2( 796, 416, 398, 208 )
+
+[sub_resource type="AtlasTexture" id=78]
+atlas = ExtResource( 40 )
+region = Rect2( 1194, 416, 398, 208 )
+
+[sub_resource type="AtlasTexture" id=79]
+atlas = ExtResource( 40 )
+region = Rect2( 0, 624, 398, 208 )
+
+[sub_resource type="AtlasTexture" id=80]
+atlas = ExtResource( 40 )
+region = Rect2( 398, 624, 398, 208 )
+
+[sub_resource type="AtlasTexture" id=81]
+atlas = ExtResource( 40 )
+region = Rect2( 796, 624, 398, 208 )
+
+[sub_resource type="AtlasTexture" id=82]
+atlas = ExtResource( 40 )
+region = Rect2( 1194, 624, 398, 208 )
+
+[sub_resource type="AtlasTexture" id=83]
+atlas = ExtResource( 40 )
+region = Rect2( 796, 208, 398, 208 )
+
+[sub_resource type="AtlasTexture" id=84]
+atlas = ExtResource( 40 )
+region = Rect2( 0, 0, 398, 208 )
+
+[sub_resource type="AtlasTexture" id=85]
+atlas = ExtResource( 40 )
+region = Rect2( 398, 0, 398, 208 )
+
+[sub_resource type="AtlasTexture" id=86]
+atlas = ExtResource( 40 )
+region = Rect2( 796, 0, 398, 208 )
+
+[sub_resource type="AtlasTexture" id=87]
+atlas = ExtResource( 40 )
+region = Rect2( 1194, 0, 398, 208 )
+
+[sub_resource type="AtlasTexture" id=88]
+atlas = ExtResource( 40 )
+region = Rect2( 0, 208, 398, 208 )
+
+[sub_resource type="AtlasTexture" id=89]
+atlas = ExtResource( 40 )
+region = Rect2( 398, 208, 398, 208 )
+
+[sub_resource type="SpriteFrames" id=90]
+animations = [ {
+"frames": [ SubResource( 74 ), SubResource( 75 ), SubResource( 76 ), SubResource( 77 ), SubResource( 78 ), SubResource( 79 ), SubResource( 80 ), SubResource( 81 ), SubResource( 82 ) ],
+"loop": false,
+"name": "cannon_end",
+"speed": 31.0
+}, {
+"frames": [ SubResource( 83 ), SubResource( 84 ), SubResource( 85 ), SubResource( 86 ), SubResource( 87 ), SubResource( 88 ), SubResource( 89 ) ],
+"loop": true,
+"name": "cannon_loop",
+"speed": 31.0
+} ]
+
+[sub_resource type="CanvasItemMaterial" id=60]
+blend_mode = 1
+
+[sub_resource type="AtlasTexture" id=61]
+atlas = ExtResource( 49 )
+region = Rect2( 0, 0, 128, 312 )
+
+[sub_resource type="AtlasTexture" id=62]
+atlas = ExtResource( 49 )
+region = Rect2( 128, 0, 128, 312 )
+
+[sub_resource type="AtlasTexture" id=63]
+atlas = ExtResource( 49 )
+region = Rect2( 256, 0, 128, 312 )
+
+[sub_resource type="AtlasTexture" id=64]
+atlas = ExtResource( 49 )
+region = Rect2( 384, 0, 128, 312 )
+
+[sub_resource type="AtlasTexture" id=65]
+atlas = ExtResource( 49 )
+region = Rect2( 512, 0, 128, 312 )
+
+[sub_resource type="AtlasTexture" id=66]
+atlas = ExtResource( 49 )
+region = Rect2( 640, 0, 128, 312 )
+
+[sub_resource type="AtlasTexture" id=67]
+atlas = ExtResource( 49 )
+region = Rect2( 0, 312, 128, 312 )
+
+[sub_resource type="AtlasTexture" id=68]
+atlas = ExtResource( 49 )
+region = Rect2( 128, 312, 128, 312 )
+
+[sub_resource type="AtlasTexture" id=69]
+atlas = ExtResource( 49 )
+region = Rect2( 256, 312, 128, 312 )
+
+[sub_resource type="AtlasTexture" id=70]
+atlas = ExtResource( 49 )
+region = Rect2( 384, 312, 128, 312 )
+
+[sub_resource type="AtlasTexture" id=71]
+atlas = ExtResource( 49 )
+region = Rect2( 512, 312, 128, 312 )
+
+[sub_resource type="AtlasTexture" id=72]
+atlas = ExtResource( 49 )
+region = Rect2( 640, 312, 128, 312 )
+
+[sub_resource type="SpriteFrames" id=73]
+animations = [ {
+"frames": [ SubResource( 61 ), SubResource( 62 ), SubResource( 63 ), SubResource( 64 ), SubResource( 65 ), SubResource( 66 ), SubResource( 67 ), SubResource( 68 ), SubResource( 69 ), SubResource( 70 ), SubResource( 71 ), SubResource( 72 ) ],
+"loop": false,
+"name": "default",
+"speed": 24.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=48]
+extents = Vector2( 14, 21.3125 )
+
+[sub_resource type="CanvasItemMaterial" id=92]
+blend_mode = 1
+
+[sub_resource type="RectangleShape2D" id=59]
+extents = Vector2( 151.065, 7.5 )
+
+[sub_resource type="RectangleShape2D" id=57]
+extents = Vector2( 151.065, 70.8126 )
+
+[sub_resource type="CircleShape2D" id=58]
+radius = 70.0071
+
+[sub_resource type="CanvasItemMaterial" id=52]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 4
+particles_anim_loop = false
+
+[sub_resource type="CanvasItemMaterial" id=53]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 3
+particles_anim_loop = true
+
+[sub_resource type="VisualShaderNodeTexture" id=93]
+source = 2
+
+[sub_resource type="VisualShaderNodeVectorOp" id=94]
+
+[sub_resource type="VisualShaderNodeScalarUniform" id=95]
+uniform_name = "Color"
+
+[sub_resource type="VisualShaderNodeScalarOp" id=96]
+operator = 2
+
+[sub_resource type="VisualShaderNodeScalarUniform" id=97]
+uniform_name = "Alpha"
+
+[sub_resource type="VisualShader" id=98]
+code = "shader_type canvas_item;
+render_mode blend_add;
+
+uniform float Color;
+uniform float Alpha;
+
+
+
+void vertex() {
+// Output:0
+
+}
+
+void fragment() {
+// ScalarUniform:4
+	float n_out4p0 = Color;
+
+// Texture:2
+	vec3 n_out2p0;
+	float n_out2p1;
+	{
+		vec4 _tex_read = texture(TEXTURE , UV.xy);
+		n_out2p0 = _tex_read.rgb;
+		n_out2p1 = _tex_read.a;
+	}
+
+// VectorOp:3
+	vec3 n_out3p0 = vec3(n_out4p0) + n_out2p0;
+
+// ScalarUniform:6
+	float n_out6p0 = Alpha;
+
+// ScalarOp:5
+	float n_out5p0 = n_out2p1 * n_out6p0;
+
+// Output:0
+	COLOR.rgb = n_out3p0;
+	COLOR.a = n_out5p0;
+
+}
+
+void light() {
+// Output:0
+
+}
+"
+mode = 1
+modes/blend = 1
+flags/light_only = false
+nodes/fragment/2/node = SubResource( 93 )
+nodes/fragment/2/position = Vector2( -60, 120 )
+nodes/fragment/3/node = SubResource( 94 )
+nodes/fragment/3/position = Vector2( 180, 60 )
+nodes/fragment/4/node = SubResource( 95 )
+nodes/fragment/4/position = Vector2( -60, 20 )
+nodes/fragment/5/node = SubResource( 96 )
+nodes/fragment/5/position = Vector2( 200, 200 )
+nodes/fragment/6/node = SubResource( 97 )
+nodes/fragment/6/position = Vector2( -100, 300 )
+nodes/fragment/connections = PoolIntArray( 2, 0, 3, 1, 3, 0, 0, 0, 4, 0, 3, 0, 6, 0, 5, 1, 2, 1, 5, 0, 5, 0, 0, 1 )
+
+[sub_resource type="ShaderMaterial" id=54]
+shader = SubResource( 98 )
+shader_param/Color = 0.0
+shader_param/Alpha = 0.0
+
+[sub_resource type="RectangleShape2D" id=50]
+extents = Vector2( 14, 21.3125 )
+
+[sub_resource type="RectangleShape2D" id=91]
+extents = Vector2( 19, 25.6875 )
+
+[node name="SeraphLumine" type="KinematicBody2D" groups=["Bosses"]]
+z_index = 4
+collision_layer = 0
+collision_mask = 0
+script = ExtResource( 1 )
+max_health = 400.0
+
+[node name="Space" type="Node" parent="."]
+script = ExtResource( 9 )
+define_at_start = false
+wall_check = 2
+border_distance = 80
+low_height_segments = 3
+
+[node name="BossAI" type="Node2D" parent="."]
+script = ExtResource( 42 )
+time_between_attacks = Vector2( 0.1, 0.1 )
+desperation_threshold = 0.25
+desperation_chance = 0
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 6 )
+shape = SubResource( 49 )
+
+[node name="backWings" type="AnimatedSprite" parent="."]
+frames = ExtResource( 7 )
+animation = "idle"
+frame = 5
+playing = true
+flip_h = true
+script = ExtResource( 32 )
+reference = NodePath("../animatedSprite")
+copy_position = true
+copy_scale_x = true
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 25 )
+z_index = 1
+frames = ExtResource( 2 )
+animation = "punch"
+frame = 11
+playing = true
+flip_h = true
+
+[node name="cannon" type="AnimatedSprite" parent="animatedSprite"]
+position = Vector2( 151, 157 )
+rotation = 0.811578
+z_index = 15
+frames = SubResource( 90 )
+animation = "cannon_end"
+frame = 8
+playing = true
+offset = Vector2( 0, -6 )
+flip_h = true
+
+[node name="feather_particles" type="Particles2D" parent="animatedSprite"]
+material = ExtResource( 19 )
+position = Vector2( 0, 9 )
+z_index = -3
+emitting = false
+amount = 20
+lifetime = 3.0
+randomness = 0.3
+visibility_rect = Rect2( -2000, -500, 4000, 1000 )
+local_coords = false
+process_material = ExtResource( 18 )
+texture = ExtResource( 20 )
+
+[node name="move_feathers" type="Particles2D" parent="animatedSprite"]
+material = ExtResource( 19 )
+z_index = -3
+emitting = false
+amount = 256
+lifetime = 3.0
+randomness = 0.3
+visibility_rect = Rect2( -2000, -500, 4000, 1000 )
+local_coords = false
+process_material = ExtResource( 26 )
+texture = ExtResource( 20 )
+
+[node name="shockwave" type="Sprite" parent="animatedSprite"]
+visible = false
+modulate = Color( 1, 1, 1, 0.533333 )
+position = Vector2( 2, 35 )
+rotation = 1.5708
+scale = Vector2( 0.5, 3 )
+z_index = -1
+texture = ExtResource( 46 )
+
+[node name="smoke" type="Particles2D" parent="animatedSprite/shockwave"]
+modulate = Color( 0.784314, 1, 0.819608, 1 )
+material = ExtResource( 57 )
+position = Vector2( -9.99905, 61.6667 )
+z_index = 1
+amount = 42
+lifetime = 0.75
+local_coords = false
+process_material = ExtResource( 58 )
+texture = ExtResource( 4 )
+
+[node name="smoke2" type="Particles2D" parent="animatedSprite/shockwave"]
+modulate = Color( 0.784314, 1, 0.819608, 1 )
+material = ExtResource( 57 )
+position = Vector2( -10.0017, -61 )
+z_index = 1
+amount = 42
+lifetime = 0.75
+local_coords = false
+process_material = ExtResource( 58 )
+texture = ExtResource( 4 )
+
+[node name="thunder" type="AnimatedSprite" parent="animatedSprite"]
+modulate = Color( 1, 1, 1, 0.309804 )
+material = SubResource( 60 )
+position = Vector2( 4, -113 )
+z_index = 5
+frames = SubResource( 73 )
+frame = 11
+playing = true
+
+[node name="frontWings" type="AnimatedSprite" parent="."]
+z_index = 2
+frames = ExtResource( 8 )
+animation = "idle"
+frame = 6
+playing = true
+flip_h = true
+script = ExtResource( 32 )
+reference = NodePath("../animatedSprite")
+copy_position = true
+copy_scale_x = true
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+position = Vector2( 0, 4.6875 )
+shape = SubResource( 48 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+position = Vector2( -6.5, 3.5 )
+scale = Vector2( 4.35, 4.25 )
+
+[node name="Intro" type="Node2D" parent="."]
+script = ExtResource( 10 )
+intro = ExtResource( 12 )
+loop = ExtResource( 11 )
+
+[node name="flash" type="Sprite" parent="Intro"]
+pause_mode = 2
+visible = false
+modulate = Color( 0.560784, 0.984314, 0.533333, 1 )
+scale = Vector2( 10, 5 )
+z_index = -1
+texture = ExtResource( 14 )
+script = ExtResource( 13 )
+initial_alpha = 0.75
+final_color = Color( 0.866667, 0.960784, 0.0352941, 1 )
+duration = 0.1
+
+[node name="windspark" type="Sprite" parent="Intro"]
+visible = false
+modulate = Color( 1, 1, 1, 0.705882 )
+position = Vector2( -16, 4 )
+z_index = 45
+texture = ExtResource( 6 )
+hframes = 2
+vframes = 5
+script = ExtResource( 5 )
+animation_speed = 18.0
+one_shot = true
+
+[node name="woosh" type="AudioStreamPlayer2D" parent="Intro"]
+stream = ExtResource( 17 )
+volume_db = -6.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 15 )
+
+[node name="flap" type="AudioStreamPlayer2D" parent="Intro"]
+stream = ExtResource( 16 )
+volume_db = -6.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 15 )
+
+[node name="flash2" type="Sprite" parent="Intro"]
+pause_mode = 2
+visible = false
+material = SubResource( 92 )
+scale = Vector2( 1, 2 )
+z_index = 5
+texture = ExtResource( 59 )
+script = ExtResource( 13 )
+initial_alpha = 0.22
+initial_scale = 1.0
+tween_scale_y = false
+final_color = Color( 1, 0.796078, 0, 1 )
+duration = 0.12
+flip_chance = true
+
+[node name="Idle" type="Node2D" parent="."]
+script = ExtResource( 37 )
+conflicting_moves = [ "Anything" ]
+animation = "idle"
+should_turn = false
+calculate_gravity = false
+
+[node name="ParadiseRays" type="Node2D" parent="."]
+script = ExtResource( 51 )
+rotating_laser = ExtResource( 52 )
+
+[node name="flap" type="AudioStreamPlayer2D" parent="ParadiseRays"]
+stream = ExtResource( 16 )
+volume_db = -6.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 15 )
+
+[node name="charge" type="AudioStreamPlayer2D" parent="ParadiseRays"]
+stream = ExtResource( 55 )
+volume_db = -6.0
+pitch_scale = 1.2
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 15 )
+
+[node name="fire" type="AudioStreamPlayer2D" parent="ParadiseRays"]
+stream = ExtResource( 54 )
+volume_db = 5.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 15 )
+
+[node name="ParadiseDive" type="Node2D" parent="."]
+script = ExtResource( 45 )
+
+[node name="flash" type="Sprite" parent="ParadiseDive"]
+pause_mode = 2
+visible = false
+modulate = Color( 0, 0, 0, 1 )
+scale = Vector2( 10, 5 )
+z_index = -1
+texture = ExtResource( 14 )
+script = ExtResource( 13 )
+initial_alpha = 0.75
+final_color = Color( 0, 0, 0, 1 )
+duration = 0.1
+
+[node name="charge" type="AudioStreamPlayer2D" parent="ParadiseDive"]
+stream = ExtResource( 48 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 15 )
+
+[node name="fire" type="AudioStreamPlayer2D" parent="ParadiseDive"]
+stream = ExtResource( 47 )
+volume_db = 2.0
+pitch_scale = 1.1
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 15 )
+
+[node name="flap" type="AudioStreamPlayer2D" parent="ParadiseDive"]
+stream = ExtResource( 16 )
+volume_db = -6.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 15 )
+
+[node name="damagearea" type="Node2D" parent="ParadiseDive"]
+script = ExtResource( 34 )
+active = false
+damage = 8.0
+active_duration = 0.1
+owner_character = NodePath("../..")
+damage_in_combo = 10.0
+
+[node name="area2D" type="Area2D" parent="ParadiseDive/damagearea"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="ParadiseDive/damagearea/area2D"]
+position = Vector2( 0, 37.5 )
+z_index = 3
+shape = SubResource( 59 )
+
+[node name="ParadiseBlast" type="Node2D" parent="."]
+script = ExtResource( 39 )
+
+[node name="flash" type="Sprite" parent="ParadiseBlast"]
+pause_mode = 2
+visible = false
+modulate = Color( 0.560784, 0.984314, 0.533333, 1 )
+scale = Vector2( 10, 5 )
+z_index = -1
+texture = ExtResource( 14 )
+script = ExtResource( 13 )
+initial_alpha = 1.0
+initial_scale = 6.0
+final_color = Color( 1, 1, 1, 1 )
+duration = 0.12
+
+[node name="cannon" type="Node2D" parent="ParadiseBlast"]
+z_index = 60
+script = ExtResource( 34 )
+active = false
+damage = 16.0
+active_duration = 1.0
+owner_character = NodePath("../..")
+damage_in_combo = 10.0
+
+[node name="area2D" type="Area2D" parent="ParadiseBlast/cannon"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="ParadiseBlast/cannon/area2D"]
+position = Vector2( 184.744, 191.86 )
+rotation = 0.811578
+z_index = 3
+shape = SubResource( 57 )
+
+[node name="collisionShape2D2" type="CollisionShape2D" parent="ParadiseBlast/cannon/area2D"]
+position = Vector2( 79, 78 )
+z_index = 3
+shape = SubResource( 58 )
+
+[node name="charge" type="AudioStreamPlayer2D" parent="ParadiseBlast"]
+stream = ExtResource( 43 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 15 )
+
+[node name="fire" type="AudioStreamPlayer2D" parent="ParadiseBlast"]
+stream = ExtResource( 41 )
+volume_db = -6.0
+pitch_scale = 1.1
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 15 )
+
+[node name="ParadiseTackle" type="Node2D" parent="."]
+script = ExtResource( 36 )
+
+[node name="woosh" type="AudioStreamPlayer2D" parent="ParadiseTackle"]
+stream = ExtResource( 17 )
+volume_db = -6.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 15 )
+
+[node name="flap" type="AudioStreamPlayer2D" parent="ParadiseTackle"]
+stream = ExtResource( 16 )
+volume_db = -6.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 15 )
+
+[node name="charge" type="AudioStreamPlayer2D" parent="ParadiseTackle"]
+stream = ExtResource( 56 )
+volume_db = -2.0
+pitch_scale = 1.3
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 15 )
+
+[node name="ParadiseLost" type="Node2D" parent="."]
+script = ExtResource( 23 )
+desperation_attack = true
+death_walls = ExtResource( 22 )
+music = ExtResource( 27 )
+
+[node name="flap" type="AudioStreamPlayer2D" parent="ParadiseLost"]
+stream = ExtResource( 16 )
+volume_db = -6.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 15 )
+
+[node name="BossDeath" type="Node2D" parent="."]
+script = ExtResource( 29 )
+
+[node name="explosion_particles" type="Particles2D" parent="BossDeath"]
+material = SubResource( 52 )
+position = Vector2( 0, 0.5 )
+z_index = 12
+emitting = false
+amount = 70
+lifetime = 2.0
+local_coords = false
+process_material = ExtResource( 50 )
+texture = ExtResource( 30 )
+
+[node name="smoke" type="Particles2D" parent="BossDeath"]
+material = SubResource( 53 )
+z_index = 6
+emitting = false
+amount = 32
+lifetime = 0.75
+process_material = ExtResource( 33 )
+texture = ExtResource( 4 )
+
+[node name="final_explosion" type="AudioStreamPlayer2D" parent="BossDeath"]
+stream = ExtResource( 31 )
+volume_db = -2.0
+max_distance = 900.0
+bus = "SFX"
+
+[node name="fullscreen_light" type="Sprite" parent="BossDeath"]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+scale = Vector2( 50, 40 )
+z_index = 100
+texture = ExtResource( 14 )
+
+[node name="background_light" type="Sprite" parent="BossDeath"]
+material = SubResource( 54 )
+position = Vector2( 5.99998, 7.49999 )
+scale = Vector2( 100, 40 )
+z_index = -2
+texture = ExtResource( 35 )
+
+[node name="windspark" type="Sprite" parent="BossDeath"]
+visible = false
+position = Vector2( -16, 21 )
+z_index = 45
+texture = ExtResource( 6 )
+hframes = 2
+vframes = 5
+script = ExtResource( 5 )
+animation_speed = 18.0
+one_shot = true
+horizontal_flip_chance = 0.5
+vertical_flip_chance = 0.5
+
+[node name="flash" type="Sprite" parent="BossDeath"]
+pause_mode = 2
+visible = false
+modulate = Color( 0.560784, 0.984314, 0.533333, 1 )
+scale = Vector2( 10, 5 )
+z_index = -31
+texture = ExtResource( 14 )
+script = ExtResource( 13 )
+initial_alpha = 1.0
+tween_scale_y = false
+final_color = Color( 1, 1, 1, 1 )
+duration = 0.064
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 44 )
+invulnerability_time = 0.1
+max_flash_time = 0.35
+weakenesses = [ "SqueezeBomb", "SpiralMagnum", "Juuhazan" ]
+weakness_multiplier = 1.3
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+pause_mode = 2
+stream = ExtResource( 24 )
+volume_db = -3.0
+max_distance = 600.0
+bus = "SFX"
+
+[node name="dps" type="RichTextLabel" parent="Damage"]
+visible = false
+margin_left = -18.0
+margin_top = -69.0
+margin_right = 59.0
+margin_bottom = -52.0
+text = "0.0"
+script = ExtResource( 38 )
+
+[node name="area2D" type="Area2D" parent="Damage"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="Damage/area2D"]
+position = Vector2( 0, 4.6875 )
+shape = SubResource( 50 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 3 )
+damage = 14.0
+
+[node name="area2D" type="Area2D" parent="DamageOnTouch"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="DamageOnTouch/area2D"]
+position = Vector2( 0, 4.6875 )
+shape = SubResource( 91 )
+
+[node name="debug_visual" type="Sprite" parent="DamageOnTouch"]
+visible = false
+modulate = Color( 1, 1, 1, 0.458824 )
+position = Vector2( 0, 6.5 )
+scale = Vector2( 600, 0.913 )
+texture = ExtResource( 53 )
+
+[node name="feather_explosion" type="Particles2D" parent="."]
+material = ExtResource( 19 )
+position = Vector2( 0, 9 )
+z_index = -3
+emitting = false
+amount = 120
+one_shot = true
+explosiveness = 0.95
+randomness = 0.98
+visibility_rect = Rect2( -2000, -500, 4000, 1000 )
+local_coords = false
+process_material = ExtResource( 21 )
+texture = ExtResource( 20 )
+
+[node name="feather_decay" type="Particles2D" parent="."]
+material = ExtResource( 19 )
+position = Vector2( 0, 9 )
+z_index = -25
+emitting = false
+amount = 700
+randomness = 0.98
+visibility_rect = Rect2( -2000, -500, 4000, 1000 )
+local_coords = false
+process_material = ExtResource( 28 )
+texture = ExtResource( 20 )
+
+[node name="AchievementHandler" type="Node" parent="."]
+script = ExtResource( 60 )
+defeated_any = false
+no_damage = ExtResource( 62 )
+naked = ExtResource( 61 )
+defeated = ExtResource( 63 )
+
+[connection signal="dps" from="Damage" to="Damage/dps" method="_on_Damage_dps"]

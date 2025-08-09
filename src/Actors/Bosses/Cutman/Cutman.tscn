@@ -1,0 +1,229 @@
+[gd_scene load_steps=37 format=2]
+
+[ext_resource path="res://src/Actors/Bosses/Cutman/cutman.res" type="SpriteFrames" id=1]
+[ext_resource path="res://src/Actors/Enemies/Shared/LongBossDeath.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Actors/Bosses/Cutman/Intro.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/Bosses/Cutman/Pursuit.gd" type="Script" id=4]
+[ext_resource path="res://src/Actors/Bosses/Cutman/Jump.gd" type="Script" id=5]
+[ext_resource path="res://src/Sounds/OST - Cutman - Loop.ogg" type="AudioStream" id=6]
+[ext_resource path="res://src/Actors/Bosses/Cutman/Throw.gd" type="Script" id=7]
+[ext_resource path="res://src/Sounds/OST - Cutman - Intro.ogg" type="AudioStream" id=8]
+[ext_resource path="res://src/Actors/Bosses/Cutman/Tesora.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/Actors/Bosses/Cutman/cutman_hat.res" type="SpriteFrames" id=10]
+[ext_resource path="res://src/Actors/Bosses/Cutman/cutma_hair.gd" type="Script" id=11]
+[ext_resource path="res://src/Actors/NewStateMachine/NewSongPlayer.gd" type="Script" id=12]
+[ext_resource path="res://src/Actors/Bosses/Cutman/Cutman.gd" type="Script" id=13]
+[ext_resource path="res://src/Sounds/FX - CutmanDamage.wav" type="AudioStream" id=14]
+[ext_resource path="res://src/Sounds/FX - CutmanLand.wav" type="AudioStream" id=15]
+[ext_resource path="res://src/Actors/Bosses/Cutman/teleport.png" type="Texture" id=16]
+[ext_resource path="res://src/AchievementSystem/Achievements/SECRET1DEFEATED.tres" type="Resource" id=17]
+[ext_resource path="res://src/Actors/Modules/Enemy/BossDamage.gd" type="Script" id=33]
+[ext_resource path="res://src/Actors/Bosses/BossAI.gd" type="Script" id=34]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=35]
+[ext_resource path="res://src/Effects/Materials/BossExplosion.tres" type="Material" id=38]
+[ext_resource path="res://src/Effects/Materials/default_material.tres" type="Material" id=39]
+[ext_resource path="res://src/Actors/Bosses/BambooPandamonium/PandaAchievementHandler.gd" type="Script" id=42]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/Idle.gd" type="Script" id=45]
+[ext_resource path="res://src/Actors/Bosses/BossStun.gd" type="Script" id=48]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/dps_hud.gd" type="Script" id=49]
+[ext_resource path="res://src/Effects/Materials/BossSmokeParticlesMedium.tres" type="Material" id=52]
+
+[sub_resource type="RectangleShape2D" id=63]
+extents = Vector2( 13, 14 )
+
+[sub_resource type="AtlasTexture" id=65]
+atlas = ExtResource( 16 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=66]
+atlas = ExtResource( 16 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=67]
+atlas = ExtResource( 16 )
+region = Rect2( 64, 0, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=68]
+animations = [ {
+"frames": [ null, SubResource( 65 ), SubResource( 66 ), SubResource( 67 ), null ],
+"loop": false,
+"name": "default",
+"speed": 16.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=64]
+extents = Vector2( 9, 12 )
+
+[sub_resource type="Curve" id=42]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=62]
+curve = SubResource( 42 )
+
+[sub_resource type="ParticlesMaterial" id=61]
+resource_local_to_scene = true
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 62 )
+
+[node name="Cutman" type="KinematicBody2D" groups=["Bosses"]]
+z_index = 5
+collision_layer = 0
+script = ExtResource( 13 )
+max_health = 160.0
+
+[node name="BossAI" type="Node2D" parent="."]
+script = ExtResource( 34 )
+time_between_attacks = Vector2( 0.3, 0.6 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 1 )
+shape = SubResource( 63 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+material = ExtResource( 39 )
+z_index = 1
+frames = ExtResource( 1 )
+animation = "idle"
+frame = 1
+playing = true
+offset = Vector2( 0, 1 )
+flip_h = true
+
+[node name="animatedSprite2" type="AnimatedSprite" parent="animatedSprite"]
+material = ExtResource( 39 )
+frames = ExtResource( 10 )
+animation = "idle"
+frame = 1
+playing = true
+offset = Vector2( 0, 1 )
+flip_h = true
+script = ExtResource( 11 )
+
+[node name="arrive" type="AnimatedSprite" parent="."]
+material = ExtResource( 39 )
+z_index = 1
+frames = SubResource( 68 )
+offset = Vector2( 0, 1 )
+flip_h = true
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+position = Vector2( 0, 3 )
+shape = SubResource( 64 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+position = Vector2( -6.5, 3.5 )
+scale = Vector2( 4.35, 4.25 )
+
+[node name="Intro" type="Node2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="BattleSong" type="AudioStreamPlayer" parent="Intro"]
+pause_mode = 2
+stream = ExtResource( 8 )
+volume_db = -4.0
+bus = "Music"
+script = ExtResource( 12 )
+
+[node name="loop" type="AudioStreamPlayer" parent="Intro/BattleSong"]
+pause_mode = 2
+stream = ExtResource( 6 )
+bus = "Music"
+
+[node name="land" type="AudioStreamPlayer2D" parent="Intro"]
+stream = ExtResource( 15 )
+volume_db = -4.0
+max_distance = 900.0
+bus = "SFX"
+
+[node name="Idle" type="Node2D" parent="."]
+script = ExtResource( 45 )
+conflicting_moves = [ "Anything" ]
+animation = "Idle"
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 33 )
+invulnerability_time = 0.1
+max_flash_time = 0.35
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+pause_mode = 2
+stream = ExtResource( 14 )
+max_distance = 600.0
+bus = "SFX"
+
+[node name="dps" type="RichTextLabel" parent="Damage"]
+visible = false
+margin_left = -18.0
+margin_top = -69.0
+margin_right = 59.0
+margin_bottom = -52.0
+text = "0.0"
+script = ExtResource( 49 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 35 )
+damage = 6.0
+
+[node name="BossDeath" parent="." instance=ExtResource( 2 )]
+position = Vector2( 0, 8 )
+
+[node name="Explosion Particles" parent="BossDeath" index="0"]
+amount = 24
+process_material = ExtResource( 38 )
+
+[node name="Smoke Particles" parent="BossDeath" index="1"]
+process_material = ExtResource( 52 )
+
+[node name="Remains" parent="BossDeath" index="4"]
+process_material = SubResource( 61 )
+
+[node name="BossStun" type="Node2D" parent="."]
+script = ExtResource( 48 )
+conflicting_moves = [ "BossDeath" ]
+actions = [ "Event" ]
+animation = "death"
+horizontal_velocity = 120.0
+jump_velocity = 150.0
+
+[node name="AchievementHandler" type="Node" parent="."]
+script = ExtResource( 42 )
+defeated_any = false
+perfect_kill = false
+gigacrush_kill = false
+defeated = ExtResource( 17 )
+
+[node name="Pursuit" type="Node2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="Jump" type="Node2D" parent="."]
+script = ExtResource( 5 )
+
+[node name="land" type="AudioStreamPlayer2D" parent="Jump"]
+stream = ExtResource( 15 )
+volume_db = -4.0
+max_distance = 900.0
+bus = "SFX"
+
+[node name="Throw" type="Node2D" parent="."]
+script = ExtResource( 7 )
+projectile = ExtResource( 9 )
+
+[connection signal="dps" from="Damage" to="Damage/dps" method="_on_Damage_dps"]
+[connection signal="executed" from="BossDeath" to="Intro/BattleSong" method="fade_out"]
+
+[editable path="BossDeath"]

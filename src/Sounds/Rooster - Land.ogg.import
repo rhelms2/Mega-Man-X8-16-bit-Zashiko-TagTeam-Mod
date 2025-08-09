@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Rooster - Land.ogg-cb485a1a20301547305811fc9c96819d.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/Rooster - Land.ogg"
+dest_files=[ "res://.import/Rooster - Land.ogg-cb485a1a20301547305811fc9c96819d.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

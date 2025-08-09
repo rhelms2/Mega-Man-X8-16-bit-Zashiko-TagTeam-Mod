@@ -1,0 +1,261 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://Axl_mod/Player/Projectiles/Transform/Transfomed Enemies/Enemy_Transformed.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Enemy Collision Detector.gd" type="Script" id=2]
+[ext_resource path="res://Axl_mod/Player/Projectiles/Transform/Transfomed Enemies/TransformedEnemyDamage.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/Player/BossWeapons/DarkArrow/Tracker.gd" type="Script" id=4]
+[ext_resource path="res://Axl_mod/Player/Projectiles/Transform/Transfomed Enemies/Metool/MetoolWalk_Transformed.gd" type="Script" id=5]
+[ext_resource path="res://Axl_mod/Player/Projectiles/Transform/Transfomed Enemies/Metool/Shot_Transformed.gd" type="Script" id=6]
+[ext_resource path="res://Axl_mod/Player/Projectiles/Transform/Transfomed Enemies/SimpleProjectile_Transformed.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Axl_mod/Player/Projectiles/Transform/Transfomed Enemies/Metool/Hide_Transformed.gd" type="Script" id=8]
+[ext_resource path="res://src/Actors/Enemies/EnemyStun.gd" type="Script" id=9]
+[ext_resource path="res://Axl_mod/Player/Projectiles/Transform/Transfomed Enemies/Metool/EnemyShield_Transformed.gd" type="Script" id=10]
+[ext_resource path="res://Axl_mod/Player/Projectiles/Transform/Transfomed Enemies/FallEnemy_Transformed.gd" type="Script" id=11]
+[ext_resource path="res://Axl_mod/Player/Projectiles/Transform/Transfomed Enemies/IdleEnemy_Transformed.gd" type="Script" id=12]
+[ext_resource path="res://src/Effects/enemy_shader.tres" type="Shader" id=13]
+[ext_resource path="res://src/Sounds/EXPLOSION.wav" type="AudioStream" id=14]
+[ext_resource path="res://src/Sounds/HIT.wav" type="AudioStream" id=17]
+[ext_resource path="res://src/Sounds/MMX - Enemy Helmet Hit.ogg" type="AudioStream" id=18]
+[ext_resource path="res://src/Effects/ShieldBreak/shieldbreak.res" type="SpriteFrames" id=19]
+[ext_resource path="res://src/Sounds/LEMON_SHOT2.wav" type="AudioStream" id=20]
+[ext_resource path="res://src/Actors/Enemies/Metool/metool_queatira.res" type="SpriteFrames" id=23]
+
+[sub_resource type="ShaderMaterial" id=49]
+resource_local_to_scene = true
+shader = ExtResource( 13 )
+shader_param/Flash = 0.0
+shader_param/Should_Blink = 0.0
+shader_param/Darken = 1.0
+shader_param/Alpha = 1.0
+shader_param/Alpha_Blink = 0.0
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 9.5, 10 )
+
+[sub_resource type="RectangleShape2D" id=58]
+extents = Vector2( 9, 10 )
+
+[sub_resource type="RectangleShape2D" id=57]
+extents = Vector2( 8.5, 6 )
+
+[sub_resource type="CircleShape2D" id=59]
+radius = 209.0
+
+[node name="MetoolQueatiraTransformed" type="KinematicBody2D" groups=["Enemy Transformed", "Player"]]
+collision_layer = 8192
+collision_mask = 1073743617
+script = ExtResource( 1 )
+abilities = [ "Hide", "EnemyShot" ]
+y_offset = -6
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = SubResource( 49 )
+z_index = 1
+frames = ExtResource( 23 )
+animation = "defense"
+frame = 14
+playing = true
+flip_h = true
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 15 )
+
+[node name="Enemy Collision Detector" type="KinematicBody2D" parent="." groups=["Enemy Transformed", "Player"]]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy Collision Detector"]
+modulate = Color( 1, 0.913725, 0, 1 )
+shape = SubResource( 58 )
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 3 )
+ignore_hits_if_shield = true
+bypass_hit_invulnerable = true
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+stream = ExtResource( 17 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="EnemyShield" type="Node2D" parent="."]
+script = ExtResource( 10 )
+active = false
+invulnerability = true
+breakable = false
+
+[node name="hittable_area" type="Area2D" parent="EnemyShield"]
+collision_layer = 16
+collision_mask = 22
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="EnemyShield/hittable_area"]
+position = Vector2( 0.5, 4 )
+shape = SubResource( 57 )
+
+[node name="hitSound" type="AudioStreamPlayer2D" parent="EnemyShield"]
+stream = ExtResource( 18 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="Idle" type="Node2D" parent="."]
+script = ExtResource( 12 )
+conflicting_moves = [ "Anything" ]
+animation = "idle"
+
+[node name="Fall" type="Node2D" parent="."]
+script = ExtResource( 11 )
+conflicting_moves = [ "Anything" ]
+animation = "fall"
+
+[node name="Hide" type="Node2D" parent="."]
+script = ExtResource( 8 )
+conflicting_moves = [ "EnemyShot", "EnemyStun" ]
+actions = [ "move_down" ]
+animation = "defense"
+
+[node name="Patrol" type="Node2D" parent="."]
+script = ExtResource( 5 )
+conflicting_moves = [ "Hide", "EnemyShot", "EnemyStun" ]
+actions = [ "move_left", "move_right" ]
+animation = "walk"
+travel_speed = 50.0
+
+[node name="EnemyShot" type="Node2D" parent="."]
+script = ExtResource( 6 )
+conflicting_moves = [ "Hide", "EnemyStun" ]
+actions = [ "fire" ]
+animation = "shot_prepare"
+projectile = ExtResource( 7 )
+
+[node name="shot_sound" type="AudioStreamPlayer2D" parent="EnemyShot"]
+stream = ExtResource( 20 )
+volume_db = -5.466
+pitch_scale = 1.47
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="shot_position" type="Node2D" parent="EnemyShot"]
+
+[node name="EnemyStun" type="Node2D" parent="."]
+script = ExtResource( 9 )
+debug_logs = true
+conflicting_moves = [ "EnemyStun" ]
+actions = [ "Event" ]
+animation = "stun"
+reactivate_shield_on_end = false
+stun_duration = 1.65
+recover_animation = ""
+
+[node name="break_vfx" type="AnimatedSprite" parent="EnemyStun"]
+modulate = Color( 1, 1, 1, 0.670588 )
+position = Vector2( 12, 0 )
+z_index = 25
+frames = ExtResource( 19 )
+frame = 9
+
+[node name="break_sound" type="AudioStreamPlayer2D" parent="EnemyStun"]
+stream = ExtResource( 14 )
+volume_db = -8.0
+pitch_scale = 0.78
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="tracker" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 8
+script = ExtResource( 4 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="tracker"]
+shape = SubResource( 59 )
+
+[node name="_raycasts" type="Node2D" parent="."]
+visible = false
+
+[node name="Wallcheck Right" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 2, -15 )
+enabled = true
+cast_to = Vector2( 6, 0 )
+collision_mask = 1537
+
+[node name="Wallcheck Right2" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 2, 0 )
+enabled = true
+cast_to = Vector2( 6, 0 )
+collision_mask = 1537
+
+[node name="Wallcheck Right3" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 2, 14.95 )
+enabled = true
+cast_to = Vector2( 6, 0 )
+collision_mask = 1537
+
+[node name="Wallcheck Left" type="RayCast2D" parent="_raycasts"]
+position = Vector2( -2, -15 )
+enabled = true
+cast_to = Vector2( -6, 0 )
+collision_mask = 1537
+
+[node name="Wallcheck Left2" type="RayCast2D" parent="_raycasts"]
+position = Vector2( -2, 0 )
+enabled = true
+exclude_parent = false
+cast_to = Vector2( -6, 0 )
+collision_mask = 1537
+
+[node name="Wallcheck Left3" type="RayCast2D" parent="_raycasts"]
+position = Vector2( -2, 14.95 )
+enabled = true
+cast_to = Vector2( -6, 0 )
+collision_mask = 1537
+
+[node name="WallJumpCast Right" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 2, -14 )
+enabled = true
+cast_to = Vector2( 13, 0 )
+collision_mask = 1537
+
+[node name="WallJumpCast Right2" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 2, 0 )
+enabled = true
+cast_to = Vector2( 13, 0 )
+collision_mask = 1537
+
+[node name="WallJumpCast Right3" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 2, 15 )
+enabled = true
+cast_to = Vector2( 13, 0 )
+collision_mask = 1537
+
+[node name="WallJumpCast Left" type="RayCast2D" parent="_raycasts"]
+position = Vector2( -2, -14 )
+enabled = true
+cast_to = Vector2( -13, 0 )
+collision_mask = 1537
+
+[node name="WallJumpCast Left2" type="RayCast2D" parent="_raycasts"]
+position = Vector2( -2, 0 )
+enabled = true
+cast_to = Vector2( -13, 0 )
+collision_mask = 1537
+
+[node name="WallJumpCast Left3" type="RayCast2D" parent="_raycasts"]
+position = Vector2( -2, 15 )
+enabled = true
+cast_to = Vector2( -13, 0 )
+collision_mask = 1537
+
+[node name="Groundcheck" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 0, 15 )
+enabled = true
+cast_to = Vector2( 0, 8 )
+
+[connection signal="body_entered" from="tracker" to="tracker" method="_on_tracker_body_entered"]
+[connection signal="body_exited" from="tracker" to="tracker" method="_on_tracker_body_exited"]

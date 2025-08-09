@@ -1,0 +1,119 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://src/Actors/Weapons/Projectiles/Lemon.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Actors/Bosses/AvalancheYeti/icewave.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://src/Actors/Enemies/SnowWave.gd" type="Script" id=3]
+[ext_resource path="res://src/Effects/Textures/small_snow.png" type="Texture" id=4]
+[ext_resource path="res://src/Actors/Enemies/ProjectileDoT.gd" type="Script" id=5]
+[ext_resource path="res://src/Effects/Textures/explosion.png" type="Texture" id=6]
+[ext_resource path="res://src/Effects/Textures/blue_explosion.png" type="Texture" id=7]
+[ext_resource path="res://src/Effects/Explosion Particles.tscn" type="PackedScene" id=8]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 6, 4 )
+
+[sub_resource type="CanvasItemMaterial" id=12]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 2
+particles_anim_loop = false
+
+[sub_resource type="ParticlesMaterial" id=13]
+lifetime_randomness = 0.33
+emission_shape = 2
+emission_box_extents = Vector3( 8, 0, 0 )
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+spread = 0.0
+gravity = Vector3( 0, 1200, 0 )
+initial_velocity = 500.0
+initial_velocity_random = 0.69
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+angle = 720.0
+angle_random = 1.0
+scale_random = 1.0
+color = Color( 0.972549, 0.972549, 0.972549, 1 )
+anim_speed = 1.0
+
+[sub_resource type="Curve" id=10]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=9]
+curve = SubResource( 10 )
+
+[sub_resource type="ParticlesMaterial" id=11]
+resource_local_to_scene = true
+emission_shape = 1
+emission_sphere_radius = 11.73
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 9 )
+
+[node name="SnowWave" groups=["Enemy Projectile"] instance=ExtResource( 1 )]
+z_index = 14
+collision_layer = 16
+script = ExtResource( 3 )
+damage = 4.0
+horizontal_velocity = 210.0
+time_outside_screen = 4.0
+fire_sound = null
+
+[node name="animatedSprite" parent="." index="0"]
+frames = ExtResource( 2 )
+animation = "default"
+frame = 1
+offset = Vector2( 4, -38 )
+flip_h = true
+
+[node name="collisionShape2D" parent="." index="1"]
+shape = SubResource( 3 )
+
+[node name="particles2D" parent="." index="3"]
+material = SubResource( 12 )
+position = Vector2( 34, -8 )
+z_index = -1
+amount = 64
+lifetime = 0.5
+visibility_rect = Rect2( -800, -130, 1680, 220 )
+process_material = SubResource( 13 )
+texture = ExtResource( 4 )
+
+[node name="audioStreamPlayer2D" parent="." index="4"]
+pitch_scale = 0.87
+
+[node name="Hit Particle" parent="." index="5"]
+position = Vector2( 0, 0 )
+texture = ExtResource( 6 )
+hframes = 4
+vframes = 4
+animation_speed = 24.0
+horizontal_flip_chance = 0.0
+vertical_flip_chance = 0.0
+
+[node name="area2D" type="Area2D" parent="." index="6"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionPolygon2D" type="CollisionPolygon2D" parent="area2D" index="0"]
+visible = false
+polygon = PoolVector2Array( 0, -70, 50, 0, -50, 0 )
+
+[node name="DamageOnTouch" type="Node2D" parent="." index="7"]
+script = ExtResource( 5 )
+damage = 3.0
+
+[node name="Explosion Particles" parent="." index="8" instance=ExtResource( 8 )]
+visible = false
+position = Vector2( 0, -10 )
+amount = 24
+process_material = SubResource( 11 )
+texture = ExtResource( 7 )

@@ -1,0 +1,232 @@
+{ "frames": [
+   {
+    "filename": "gravitybox 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "gravitybox 1.ase",
+    "frame": { "x": 112, "y": 0, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "gravitybox 2.ase",
+    "frame": { "x": 224, "y": 0, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "gravitybox 3.ase",
+    "frame": { "x": 336, "y": 0, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "gravitybox 4.ase",
+    "frame": { "x": 448, "y": 0, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "gravitybox 5.ase",
+    "frame": { "x": 0, "y": 112, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "gravitybox 6.ase",
+    "frame": { "x": 112, "y": 112, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "gravitybox 7.ase",
+    "frame": { "x": 224, "y": 112, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "gravitybox 8.ase",
+    "frame": { "x": 336, "y": 112, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "gravitybox 9.ase",
+    "frame": { "x": 448, "y": 112, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "gravitybox 10.ase",
+    "frame": { "x": 0, "y": 224, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "gravitybox 11.ase",
+    "frame": { "x": 112, "y": 224, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "gravitybox 12.ase",
+    "frame": { "x": 224, "y": 224, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "gravitybox 13.ase",
+    "frame": { "x": 336, "y": 224, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "gravitybox 14.ase",
+    "frame": { "x": 448, "y": 224, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "gravitybox 15.ase",
+    "frame": { "x": 0, "y": 336, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "gravitybox 16.ase",
+    "frame": { "x": 112, "y": 336, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 66
+   },
+   {
+    "filename": "gravitybox 17.ase",
+    "frame": { "x": 224, "y": 336, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 66
+   },
+   {
+    "filename": "gravitybox 18.ase",
+    "frame": { "x": 336, "y": 336, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 66
+   },
+   {
+    "filename": "gravitybox 19.ase",
+    "frame": { "x": 448, "y": 336, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 66
+   },
+   {
+    "filename": "gravitybox 20.ase",
+    "frame": { "x": 0, "y": 448, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 66
+   },
+   {
+    "filename": "gravitybox 21.ase",
+    "frame": { "x": 112, "y": 448, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 66
+   },
+   {
+    "filename": "gravitybox 22.ase",
+    "frame": { "x": 224, "y": 448, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 66
+   },
+   {
+    "filename": "gravitybox 23.ase",
+    "frame": { "x": 336, "y": 448, "w": 112, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 112, "h": 112 },
+    "sourceSize": { "w": 112, "h": 112 },
+    "duration": 66
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3.2-x64",
+  "image": "gravity_box.png",
+  "format": "RGBA8888",
+  "size": { "w": 560, "h": 560 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "intro", "from": 0, "to": 10, "direction": "forward", "color": "#000000ff" },
+   { "name": "ready", "from": 11, "to": 15, "direction": "forward", "color": "#000000ff" },
+   { "name": "idle", "from": 16, "to": 23, "direction": "forward", "color": "#000000ff" }
+  ]
+ }
+}

@@ -1,0 +1,122 @@
+{ "frames": [
+   {
+    "filename": "pandamon 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 163, "h": 121 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 163, "h": 121 },
+    "sourceSize": { "w": 163, "h": 121 },
+    "duration": 66
+   },
+   {
+    "filename": "pandamon 1.ase",
+    "frame": { "x": 163, "y": 0, "w": 163, "h": 121 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 163, "h": 121 },
+    "sourceSize": { "w": 163, "h": 121 },
+    "duration": 66
+   },
+   {
+    "filename": "pandamon 2.ase",
+    "frame": { "x": 326, "y": 0, "w": 163, "h": 121 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 163, "h": 121 },
+    "sourceSize": { "w": 163, "h": 121 },
+    "duration": 82
+   },
+   {
+    "filename": "pandamon 3.ase",
+    "frame": { "x": 489, "y": 0, "w": 163, "h": 121 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 163, "h": 121 },
+    "sourceSize": { "w": 163, "h": 121 },
+    "duration": 111
+   },
+   {
+    "filename": "pandamon 4.ase",
+    "frame": { "x": 0, "y": 121, "w": 163, "h": 121 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 163, "h": 121 },
+    "sourceSize": { "w": 163, "h": 121 },
+    "duration": 266
+   },
+   {
+    "filename": "pandamon 5.ase",
+    "frame": { "x": 163, "y": 121, "w": 163, "h": 121 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 163, "h": 121 },
+    "sourceSize": { "w": 163, "h": 121 },
+    "duration": 100
+   },
+   {
+    "filename": "pandamon 6.ase",
+    "frame": { "x": 326, "y": 121, "w": 163, "h": 121 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 163, "h": 121 },
+    "sourceSize": { "w": 163, "h": 121 },
+    "duration": 66
+   },
+   {
+    "filename": "pandamon 7.ase",
+    "frame": { "x": 489, "y": 121, "w": 163, "h": 121 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 163, "h": 121 },
+    "sourceSize": { "w": 163, "h": 121 },
+    "duration": 66
+   },
+   {
+    "filename": "pandamon 8.ase",
+    "frame": { "x": 0, "y": 242, "w": 163, "h": 121 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 163, "h": 121 },
+    "sourceSize": { "w": 163, "h": 121 },
+    "duration": 82
+   },
+   {
+    "filename": "pandamon 9.ase",
+    "frame": { "x": 163, "y": 242, "w": 163, "h": 121 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 163, "h": 121 },
+    "sourceSize": { "w": 163, "h": 121 },
+    "duration": 82
+   },
+   {
+    "filename": "pandamon 10.ase",
+    "frame": { "x": 326, "y": 242, "w": 163, "h": 121 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 163, "h": 121 },
+    "sourceSize": { "w": 163, "h": 121 },
+    "duration": 266
+   },
+   {
+    "filename": "pandamon 11.ase",
+    "frame": { "x": 163, "y": 121, "w": 163, "h": 121 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 163, "h": 121 },
+    "sourceSize": { "w": 163, "h": 121 },
+    "duration": 100
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.2.33-x64",
+  "image": "panda.png",
+  "format": "RGBA8888",
+  "size": { "w": 652, "h": 363 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "Tag", "from": 0, "to": 11, "direction": "forward" }
+  ]
+ }
+}

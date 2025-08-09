@@ -1,0 +1,89 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://src/Actors/Props/RideArmor/RideArmor.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Actors/Props/RideArmor/ridearmord_neararm.res" type="SpriteFrames" id=2]
+[ext_resource path="res://src/Actors/Props/RideArmor/ridearmord_back.res" type="SpriteFrames" id=3]
+[ext_resource path="res://src/Actors/Props/RideArmor/ridearmord_legs.res" type="SpriteFrames" id=4]
+[ext_resource path="res://src/Actors/Props/RideArmor/ridearmord_chest.res" type="SpriteFrames" id=5]
+[ext_resource path="res://src/Actors/Props/RideArmor/ridearmord_fararm.res" type="SpriteFrames" id=6]
+[ext_resource path="res://src/Effects/enemy_shader.tres" type="Shader" id=7]
+[ext_resource path="res://src/Effects/Textures/remains_greenarmor.png" type="Texture" id=8]
+[ext_resource path="res://src/Actors/NewStateMachine/InputListener.gd" type="Script" id=9]
+
+[sub_resource type="ShaderMaterial" id=48]
+resource_local_to_scene = true
+shader = ExtResource( 7 )
+shader_param/Flash = 0.0
+shader_param/Should_Blink = 1.0
+shader_param/Darken = 1.0
+shader_param/Alpha = 1.0
+shader_param/Alpha_Blink = 0.0
+
+[sub_resource type="Curve" id=47]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=9]
+curve = SubResource( 47 )
+
+[sub_resource type="ParticlesMaterial" id=49]
+resource_local_to_scene = true
+emission_shape = 1
+emission_sphere_radius = 32.0
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 9 )
+
+[node name="RideArmorNoCannon" instance=ExtResource( 1 )]
+song_intro = null
+song_loop = null
+damage_reduction = 0.45
+
+[node name="animatedSprite" parent="." index="4"]
+material = SubResource( 48 )
+
+[node name="near_arm" parent="animatedSprite" index="0"]
+material = SubResource( 48 )
+frames = ExtResource( 2 )
+
+[node name="torso" parent="animatedSprite" index="1"]
+material = SubResource( 48 )
+frames = ExtResource( 5 )
+
+[node name="legs" parent="animatedSprite" index="2"]
+material = SubResource( 48 )
+frames = ExtResource( 4 )
+
+[node name="back" parent="animatedSprite" index="3"]
+material = SubResource( 48 )
+frames = ExtResource( 3 )
+
+[node name="cannon" parent="animatedSprite" index="4"]
+visible = false
+material = SubResource( 48 )
+
+[node name="far_arm" parent="animatedSprite" index="5"]
+material = SubResource( 48 )
+frames = ExtResource( 6 )
+
+[node name="alt_fire" type="Node" parent="Punch" index="1"]
+script = ExtResource( 9 )
+inputs = [ "alt_fire" ]
+
+[node name="Shot" parent="." index="15"]
+active = false
+
+[node name="explosion" parent="Death" index="1"]
+process_material = SubResource( 49 )
+
+[node name="remains" parent="Death" index="2"]
+texture = ExtResource( 8 )
+
+[connection signal="force_eject" from="." to="Eject" method="_on_signal"]
+[connection signal="just_pressed" from="Punch/alt_fire" to="Punch" method="_on_fire"]

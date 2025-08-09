@@ -1,0 +1,21 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://src/Options/selectable_weapon_10.png" type="Texture" id=1]
+[ext_resource path="res://src/Actors/Player/BossWeapons/WeaponResource.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Player/BossWeapons/firedash_palette.png" type="Texture" id=3]
+
+[resource]
+script = ExtResource( 2 )
+short_name = "G. Impact"
+collectible = "full_icarus"
+icon = ExtResource( 1 )
+palette = ExtResource( 3 )
+regular_ammo_cost = 1.0
+charged_ammo_cost = 4.0
+cooldown = 0.1
+MainColor1 = Color( 0.972549, 0.752941, 0, 1 )
+MainColor2 = Color( 1, 0.215686, 0.215686, 1 )
+MainColor3 = Color( 0.890196, 0, 0.168627, 1 )
+MainColor4 = Color( 0.470588, 0.941176, 0.917647, 1 )
+MainColor5 = Color( 0.239216, 0.698039, 0.756863, 1 )
+MainColor6 = Color( 0.0784314, 0.439216, 0.490196, 1 )

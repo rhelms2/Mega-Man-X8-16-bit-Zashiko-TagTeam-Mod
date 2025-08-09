@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/Effects/Textures/smoke.png" type="Texture" id=1]
+[ext_resource path="res://src/Effects/Materials/InfernoVerticalSmoke.tres" type="Material" id=2]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 3
+particles_anim_loop = false
+
+[node name="VerticalSmoke" type="Particles2D"]
+material = SubResource( 1 )
+position = Vector2( -14, 10.99 )
+z_index = 1
+lifetime = 0.55
+explosiveness = 0.14
+local_coords = false
+process_material = ExtResource( 2 )
+texture = ExtResource( 1 )

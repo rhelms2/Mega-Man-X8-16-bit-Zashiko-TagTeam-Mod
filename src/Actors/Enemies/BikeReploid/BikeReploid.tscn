@@ -1,0 +1,169 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://src/Actors/Enemies/BikeReploid/RushDown.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Enemies/BikeReploid/Shot.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Enemies/BikeReploid/Pursuit.gd" type="Script" id=3]
+[ext_resource path="res://src/Sounds/HIT.wav" type="AudioStream" id=4]
+[ext_resource path="res://src/Actors/Enemies/BikeReploid/Turn.gd" type="Script" id=5]
+[ext_resource path="res://src/Actors/Enemies/BikeReploid/bike_reploid.res" type="SpriteFrames" id=6]
+[ext_resource path="res://src/Actors/Enemies/SimpleProjectile.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Actors/Enemies/SwordReploid/reploid_remains_palette.png" type="Texture" id=8]
+[ext_resource path="res://src/Actors/Modules/Enemy/Enemy.gd" type="Script" id=9]
+[ext_resource path="res://src/Actors/Modules/Enemy/EnemyDamage.gd" type="Script" id=10]
+[ext_resource path="res://src/Actors/Enemies/BikeReploid/Idle.gd" type="Script" id=11]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=12]
+[ext_resource path="res://src/Effects/enemy_shader.tres" type="Shader" id=13]
+[ext_resource path="res://src/Actors/Enemies/BikeReploid/SpawnBikeOnDeath.gd" type="Script" id=15]
+[ext_resource path="res://src/Actors/Enemies/Shared/QuickEnemyDeath.tscn" type="PackedScene" id=16]
+[ext_resource path="res://src/Actors/Props/RideChaser/RideChaser.tscn" type="PackedScene" id=17]
+
+[sub_resource type="ShaderMaterial" id=63]
+resource_local_to_scene = true
+shader = ExtResource( 13 )
+shader_param/Flash = 0.0
+shader_param/Should_Blink = 0.0
+shader_param/Darken = 1.0
+shader_param/Alpha = 1.0
+shader_param/Alpha_Blink = 0.0
+
+[sub_resource type="RectangleShape2D" id=68]
+extents = Vector2( 10, 20 )
+
+[sub_resource type="RectangleShape2D" id=69]
+extents = Vector2( 12, 20.5 )
+
+[sub_resource type="Curve" id=238]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=239]
+curve = SubResource( 238 )
+
+[sub_resource type="ParticlesMaterial" id=244]
+resource_local_to_scene = true
+emission_shape = 1
+emission_sphere_radius = 25.0
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 239 )
+
+[sub_resource type="Curve" id=242]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=243]
+curve = SubResource( 242 )
+
+[sub_resource type="ParticlesMaterial" id=245]
+resource_local_to_scene = true
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 243 )
+
+[node name="BikeReploid" type="KinematicBody2D" groups=["Enemies"]]
+collision_layer = 0
+collision_mask = 513
+script = ExtResource( 9 )
+max_health = 10.0
+
+[node name="BikerAI" type="Node2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = SubResource( 63 )
+position = Vector2( 2, 0 )
+z_index = 1
+frames = ExtResource( 6 )
+animation = "wheelie_loop"
+frame = 1
+playing = true
+
+[node name="shot_origin" type="Node2D" parent="animatedSprite"]
+position = Vector2( -39, -9 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 3 )
+shape = SubResource( 68 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+scale = Vector2( 6, 4.8 )
+rect = Rect2( -5, -5, 10, 10 )
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+position = Vector2( 0, 3.5 )
+shape = SubResource( 69 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 12 )
+damage = 6.0
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 10 )
+max_freeze_hits = 3
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+stream = ExtResource( 4 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="EnemyDeath" parent="." instance=ExtResource( 16 )]
+
+[node name="Explosion Particles" parent="EnemyDeath" index="0"]
+process_material = SubResource( 244 )
+
+[node name="Remains" parent="EnemyDeath" index="1"]
+process_material = SubResource( 245 )
+
+[node name="remains_particles" parent="EnemyDeath/Remains" index="0"]
+texture = ExtResource( 8 )
+
+[node name="RushDown" type="Node2D" parent="."]
+script = ExtResource( 1 )
+conflicting_moves = [ "Turn" ]
+actions = [ "Event" ]
+animation = "dash"
+horizontal_velocity = 280.0
+
+[node name="Shot" type="Node2D" parent="."]
+script = ExtResource( 2 )
+conflicting_moves = [ "RushDown", "Turn" ]
+actions = [ "Event" ]
+animation = "shot_prepare"
+horizontal_velocity = 160.0
+projectile = ExtResource( 7 )
+
+[node name="Turn" type="Node2D" parent="."]
+script = ExtResource( 5 )
+actions = [ "Event" ]
+animation = "break"
+
+[node name="Idle" type="Node2D" parent="."]
+script = ExtResource( 11 )
+conflicting_moves = [ "RushDown", "Shot", "Turn" ]
+animation = "idle"
+horizontal_velocity = 40.0
+
+[node name="SpawnBikeOnDeath" type="Node" parent="."]
+script = ExtResource( 15 )
+bike = ExtResource( 17 )
+
+[editable path="EnemyDeath"]

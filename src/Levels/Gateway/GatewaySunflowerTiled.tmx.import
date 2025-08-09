@@ -1,0 +1,22 @@
+[remap]
+
+importer="vnen.tiled_importer"
+type="PackedScene"
+path="res://.import/GatewaySunflowerTiled.tmx-8e93f08a18e5ff810339f2f37dc67bf8.scn"
+
+[deps]
+
+source_file="res://src/Levels/Gateway/GatewaySunflowerTiled.tmx"
+dest_files=[ "res://.import/GatewaySunflowerTiled.tmx-8e93f08a18e5ff810339f2f37dc67bf8.scn" ]
+
+[params]
+
+custom_properties=true
+tile_metadata=false
+uv_clip=false
+image_flags=7
+collision_layer=1
+embed_internal_images=false
+save_tiled_properties=false
+add_background=true
+post_import_script=""

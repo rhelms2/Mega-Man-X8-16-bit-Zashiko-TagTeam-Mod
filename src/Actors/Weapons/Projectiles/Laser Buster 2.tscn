@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://SpriteEffect.gd" type="Script" id=1]
+[ext_resource path="res://src/Effects/Deflect/small_deflect.png" type="Texture" id=2]
+[ext_resource path="res://src/Actors/Weapons/Projectiles/Laser Buster 2.gd" type="Script" id=3]
+[ext_resource path="res://src/Effects/Basic Hit.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Sounds/LASER_BEAM_MIX.wav" type="AudioStream" id=5]
+[ext_resource path="res://src/Actors/Weapons/Projectiles/laser_beam.res" type="SpriteFrames" id=6]
+[ext_resource path="res://src/Actors/Weapons/Projectiles/laser_shot.res" type="SpriteFrames" id=7]
+[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=8]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 351.5, 17 )
+
+[node name="Laser Buster" type="KinematicBody2D" groups=["Player Projectile"]]
+z_index = 3
+collision_layer = 4
+collision_mask = 0
+script = ExtResource( 3 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="." groups=["Player Projectile"]]
+visible = false
+position = Vector2( 313.5, 0 )
+shape = SubResource( 1 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+frames = ExtResource( 7 )
+animation = "loop"
+frame = 2
+playing = true
+
+[node name="animatedSprite2" type="AnimatedSprite" parent="animatedSprite"]
+position = Vector2( 353.5, 1 )
+scale = Vector2( 19.5938, 1 )
+frames = ExtResource( 6 )
+animation = "loop"
+playing = true
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+position = Vector2( -3, -2.98023e-07 )
+scale = Vector2( 1, 0.3 )
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
+stream = ExtResource( 5 )
+volume_db = -9.109
+bus = "SFX"
+
+[node name="Hit Particle" parent="." instance=ExtResource( 4 )]
+
+[node name="deflect_particle" type="Sprite" parent="."]
+visible = false
+position = Vector2( 14, -1 )
+z_index = 4
+z_as_relative = false
+texture = ExtResource( 2 )
+hframes = 2
+vframes = 2
+script = ExtResource( 1 )
+animation_speed = 32.0
+one_shot = true
+
+[node name="disabler" type="Node" parent="."]
+script = ExtResource( 8 )
+disable_or_deactivate = true
+fade_out = true
+undo_on_rotation_end = false

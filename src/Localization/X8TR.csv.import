@@ -1,0 +1,16 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+
+[deps]
+
+files=[ "res://src/Localization/X8TR.en.translation", "res://src/Localization/X8TR.br.translation", "res://src/Localization/X8TR.es.translation", "res://src/Localization/X8TR.pr.translation" ]
+
+source_file="res://src/Localization/X8TR.csv"
+dest_files=[ "res://src/Localization/X8TR.en.translation", "res://src/Localization/X8TR.br.translation", "res://src/Localization/X8TR.es.translation", "res://src/Localization/X8TR.pr.translation" ]
+
+[params]
+
+compress=true
+delimiter=0

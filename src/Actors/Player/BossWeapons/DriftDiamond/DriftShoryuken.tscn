@@ -1,0 +1,122 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://src/Effects/Materials/IceRemains.tres" type="Material" id=1]
+[ext_resource path="res://src/Effects/Materials/drift_diamond_particles.tres" type="Material" id=2]
+[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=3]
+[ext_resource path="res://SpriteEffect.gd" type="Script" id=4]
+[ext_resource path="res://src/Actors/Bosses/AvalancheYeti/ice_remains.png" type="Texture" id=5]
+[ext_resource path="res://src/Sounds/Ice Break.wav" type="AudioStream" id=6]
+[ext_resource path="res://src/Effects/Textures/snow_sparkle.png" type="Texture" id=7]
+[ext_resource path="res://src/Sounds/Yeti - Stomp.ogg" type="AudioStream" id=8]
+[ext_resource path="res://src/Actors/Bosses/boss_sprites/icejump.png" type="Texture" id=9]
+[ext_resource path="res://src/Actors/Player/BossWeapons/DriftDiamond/shoryuken.png" type="Texture" id=10]
+[ext_resource path="res://src/Actors/Player/BossWeapons/DriftDiamond/DriftShoryuken.gd" type="Script" id=11]
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 10 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="SpriteFrames" id=25]
+animations = [ {
+"frames": [ SubResource( 24 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=26]
+extents = Vector2( 20.5, 31 )
+
+[sub_resource type="CanvasItemMaterial" id=27]
+render_priority = -1
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 2
+particles_anim_loop = false
+
+[sub_resource type="CanvasItemMaterial" id=28]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 2
+particles_anim_loop = false
+
+[node name="DriftDiamondCharged" type="KinematicBody2D" groups=["Player Projectile"]]
+pause_mode = 2
+z_index = 10
+collision_layer = 4
+collision_mask = 0
+script = ExtResource( 11 )
+damage = 40.0
+damage_to_bosses = 10.0
+damage_to_weakness = 20.0
+break_guards = true
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 25 )
+playing = true
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 9.5, 0 )
+z_index = -1
+shape = SubResource( 26 )
+
+[node name="dash_particle" type="Sprite" parent="."]
+pause_mode = 2
+visible = false
+position = Vector2( 14, -33 )
+z_index = 45
+texture = ExtResource( 9 )
+hframes = 7
+vframes = 2
+script = ExtResource( 4 )
+animation_speed = 32.0
+one_shot = true
+
+[node name="remains_particles" type="Particles2D" parent="."]
+material = SubResource( 27 )
+position = Vector2( 0, -8 )
+z_index = 1
+emitting = false
+amount = 5
+lifetime = 2.0
+one_shot = true
+explosiveness = 1.0
+visibility_rect = Rect2( -600, -100, 1200, 200 )
+local_coords = false
+process_material = ExtResource( 1 )
+texture = ExtResource( 5 )
+
+[node name="disabler" type="Node" parent="remains_particles"]
+script = ExtResource( 3 )
+make_invisible = true
+undo_on_rotation_end = false
+
+[node name="particles2D" type="Particles2D" parent="."]
+material = SubResource( 28 )
+position = Vector2( 0, 1 )
+rotation = 1.5708
+z_index = -1
+amount = 13
+lifetime = 0.45
+local_coords = false
+process_material = ExtResource( 2 )
+texture = ExtResource( 7 )
+
+[node name="stomp" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 8 )
+volume_db = -20.0
+pitch_scale = 1.25
+autoplay = true
+max_distance = 600.0
+bus = "SFX"
+
+[node name="icebreak" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
+stream = ExtResource( 6 )
+volume_db = -20.0
+pitch_scale = 0.77
+autoplay = true
+max_distance = 800.0
+bus = "SFX"

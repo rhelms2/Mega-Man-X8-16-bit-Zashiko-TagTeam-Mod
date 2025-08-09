@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/Actors/Weapons/Projectiles/Lemon.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Actors/Weapons/Buster.gd" type="Script" id=2]
+
+[node name="Buster" type="Node2D"]
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_description_": ""
+}
+shots = [ ExtResource( 1 ) ]
+max_charged_shots_alive = 0
+max_ammo = 3.0
+ammo_per_shot = 0.0

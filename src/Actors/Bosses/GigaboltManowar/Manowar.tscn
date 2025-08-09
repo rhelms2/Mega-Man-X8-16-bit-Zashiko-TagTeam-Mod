@@ -1,0 +1,352 @@
+[gd_scene load_steps=53 format=2]
+
+[ext_resource path="res://src/Actors/Bosses/GigaboltManowar/manowar.res" type="SpriteFrames" id=1]
+[ext_resource path="res://src/Actors/Bosses/GigaboltManowar/Idle.gd" type="Script" id=2]
+[ext_resource path="res://src/Effects/Materials/BossSmokeParticlesMedium.tres" type="Material" id=3]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/dps_hud.gd" type="Script" id=4]
+[ext_resource path="res://src/Actors/Bosses/GigaboltManowar/Intro.gd" type="Script" id=5]
+[ext_resource path="res://src/Actors/Bosses/GigaboltManowar/Stomp.gd" type="Script" id=6]
+[ext_resource path="res://src/Actors/Bosses/BossAI.gd" type="Script" id=7]
+[ext_resource path="res://src/Actors/Enemies/Shared/LongBossDeath.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/Actors/Bosses/GigaboltManowar/Manowar.gd" type="Script" id=9]
+[ext_resource path="res://src/Actors/Bosses/GigaboltManowar/Space.gd" type="Script" id=10]
+[ext_resource path="res://src/Effects/Materials/default_material.tres" type="Material" id=11]
+[ext_resource path="res://src/Actors/Bosses/GigaboltManowar/Spawn.gd" type="Script" id=12]
+[ext_resource path="res://src/Actors/Bosses/GigaboltManowar/Jellyfish.tscn" type="PackedScene" id=13]
+[ext_resource path="res://src/Effects/Materials/BossExplosion.tres" type="Material" id=14]
+[ext_resource path="res://src/Actors/Modules/Enemy/BossDamage.gd" type="Script" id=15]
+[ext_resource path="res://src/Actors/Bosses/GigaboltManowar/BossStun.gd" type="Script" id=16]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=17]
+[ext_resource path="res://src/Actors/Bosses/GigaboltManowar/GigaLightining.gd" type="Script" id=18]
+[ext_resource path="res://src/Actors/Bosses/GigaboltManowar/GigaThunder.gd" type="Script" id=19]
+[ext_resource path="res://src/Actors/Bosses/GigaboltManowar/GigaStorm.gd" type="Script" id=20]
+[ext_resource path="res://src/Actors/Bosses/GigaboltManowar/StrongLightning.tscn" type="PackedScene" id=21]
+[ext_resource path="res://src/Actors/Bosses/GigaboltManowar/Flash.tscn" type="PackedScene" id=22]
+[ext_resource path="res://src/Actors/MeleeEnemyAttack.gd" type="Script" id=23]
+[ext_resource path="res://src/Effects/Textures/melee_lightning.png" type="Texture" id=24]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=25]
+[ext_resource path="res://src/Sounds/Yeti - Stomp.ogg" type="AudioStream" id=26]
+[ext_resource path="res://src/Sounds/Manowar - Spin.wav" type="AudioStream" id=27]
+[ext_resource path="res://src/Sounds/Manowar - Bolt.wav" type="AudioStream" id=28]
+[ext_resource path="res://src/Sounds/Manowar - FlashPrepare.wav" type="AudioStream" id=29]
+[ext_resource path="res://src/Sounds/Manowar - StrongLightning.wav" type="AudioStream" id=30]
+[ext_resource path="res://src/Sounds/Manowar - Move.wav" type="AudioStream" id=31]
+[ext_resource path="res://src/DialogSystem/Dialogs/Stages/Manowar_Dialogue.tres" type="Resource" id=32]
+[ext_resource path="res://src/AchievementSystem/BossAchievementHandler.gd" type="Script" id=33]
+[ext_resource path="res://src/Sounds/HIT_BOSS.wav" type="AudioStream" id=34]
+[ext_resource path="res://src/AchievementSystem/Achievements/MANOWARBUSTERONLY.tres" type="Resource" id=35]
+[ext_resource path="res://src/AchievementSystem/Achievements/MANOWARNAKED.tres" type="Resource" id=36]
+[ext_resource path="res://src/AchievementSystem/Achievements/MANOWARNODAMAGE.tres" type="Resource" id=37]
+[ext_resource path="res://src/Levels/PitchBlack/light.png" type="Texture" id=38]
+[ext_resource path="res://src/Actors/Bosses/SatanSigma/flash.gd" type="Script" id=39]
+
+[sub_resource type="RectangleShape2D" id=67]
+extents = Vector2( 11, 16 )
+
+[sub_resource type="RectangleShape2D" id=68]
+extents = Vector2( 13, 12.5 )
+
+[sub_resource type="RectangleShape2D" id=69]
+extents = Vector2( 46, 21 )
+
+[sub_resource type="AtlasTexture" id=70]
+atlas = ExtResource( 24 )
+region = Rect2( 0, 0, 98, 47 )
+
+[sub_resource type="AtlasTexture" id=71]
+atlas = ExtResource( 24 )
+region = Rect2( 98, 0, 98, 47 )
+
+[sub_resource type="AtlasTexture" id=72]
+atlas = ExtResource( 24 )
+region = Rect2( 0, 47, 98, 47 )
+
+[sub_resource type="AtlasTexture" id=73]
+atlas = ExtResource( 24 )
+region = Rect2( 98, 47, 98, 47 )
+
+[sub_resource type="AtlasTexture" id=74]
+atlas = ExtResource( 24 )
+region = Rect2( 0, 94, 98, 47 )
+
+[sub_resource type="SpriteFrames" id=75]
+animations = [ {
+"frames": [ SubResource( 70 ), SubResource( 71 ), SubResource( 72 ), SubResource( 73 ), SubResource( 74 ) ],
+"loop": true,
+"name": "default",
+"speed": 35.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=66]
+extents = Vector2( 11, 20.5 )
+
+[sub_resource type="Curve" id=42]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=62]
+curve = SubResource( 42 )
+
+[sub_resource type="ParticlesMaterial" id=61]
+resource_local_to_scene = true
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 62 )
+
+[node name="Manowar" type="KinematicBody2D" groups=["Bosses"]]
+z_index = 5
+collision_layer = 0
+script = ExtResource( 9 )
+max_health = 160.0
+
+[node name="Space" type="Node" parent="."]
+script = ExtResource( 10 )
+define_at_start = false
+wall_check = 2
+
+[node name="BossAI" type="Node2D" parent="."]
+script = ExtResource( 7 )
+time_between_attacks = Vector2( 0.25, 0.75 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, -4 )
+z_index = 2
+shape = SubResource( 67 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 11 )
+z_index = 1
+frames = ExtResource( 1 )
+animation = "idle"
+frame = 4
+playing = true
+flip_h = true
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+position = Vector2( 0, -7.5 )
+shape = SubResource( 68 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+position = Vector2( -6.5, 3.5 )
+scale = Vector2( 4.35, 4.25 )
+
+[node name="Intro" type="Node2D" parent="."]
+script = ExtResource( 5 )
+dialogue = ExtResource( 32 )
+
+[node name="move" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 31 )
+volume_db = -8.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 25 )
+
+[node name="GigaStomp" type="Node2D" parent="."]
+script = ExtResource( 6 )
+
+[node name="spin" type="AudioStreamPlayer2D" parent="GigaStomp"]
+stream = ExtResource( 27 )
+volume_db = -6.0
+max_distance = 600.0
+bus = "SFX"
+
+[node name="land" type="AudioStreamPlayer2D" parent="GigaStomp"]
+stream = ExtResource( 26 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 25 )
+
+[node name="GigaSpawn" type="Node2D" parent="."]
+script = ExtResource( 12 )
+horizontal_velocity = 540.0
+jump_velocity = 380.0
+jellyfish = ExtResource( 13 )
+
+[node name="spin" type="AudioStreamPlayer2D" parent="GigaSpawn"]
+stream = ExtResource( 27 )
+volume_db = -6.0
+pitch_scale = 1.4
+max_distance = 600.0
+bus = "SFX"
+
+[node name="GigaLightning" type="Node2D" parent="."]
+script = ExtResource( 18 )
+
+[node name="Hitbox" type="Node2D" parent="GigaLightning"]
+script = ExtResource( 23 )
+active = false
+damage = 3.0
+active_duration = 0.5
+owner_character = NodePath("../..")
+
+[node name="area2D" type="Area2D" parent="GigaLightning/Hitbox"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="GigaLightning/Hitbox/area2D"]
+position = Vector2( 54, 0 )
+shape = SubResource( 69 )
+
+[node name="light_vfx" type="AnimatedSprite" parent="GigaLightning/Hitbox/area2D/collisionShape2D"]
+visible = false
+position = Vector2( 15, -4 )
+z_index = 1
+frames = SubResource( 75 )
+playing = true
+
+[node name="bolt" type="AudioStreamPlayer2D" parent="GigaLightning"]
+stream = ExtResource( 28 )
+volume_db = 1.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 25 )
+
+[node name="GigaThunder" type="Node2D" parent="."]
+script = ExtResource( 19 )
+flash = ExtResource( 22 )
+
+[node name="prepare" type="AudioStreamPlayer2D" parent="GigaThunder"]
+stream = ExtResource( 29 )
+volume_db = -3.0
+max_distance = 600.0
+bus = "SFX"
+
+[node name="GigaStorm" type="Node2D" parent="."]
+script = ExtResource( 20 )
+desperation_attack = true
+strong_lightining = ExtResource( 21 )
+
+[node name="check" type="RayCast2D" parent="GigaStorm"]
+cast_to = Vector2( -132, 250 )
+
+[node name="check2" type="RayCast2D" parent="GigaStorm"]
+cast_to = Vector2( -65, 250 )
+
+[node name="check3" type="RayCast2D" parent="GigaStorm"]
+cast_to = Vector2( 0, 250 )
+
+[node name="check4" type="RayCast2D" parent="GigaStorm"]
+cast_to = Vector2( 65, 250 )
+
+[node name="check5" type="RayCast2D" parent="GigaStorm"]
+cast_to = Vector2( 132, 250 )
+
+[node name="spin" type="AudioStreamPlayer2D" parent="GigaStorm"]
+stream = ExtResource( 27 )
+volume_db = -2.67
+pitch_scale = 0.87
+max_distance = 600.0
+bus = "SFX"
+
+[node name="lightning" type="AudioStreamPlayer2D" parent="GigaStorm"]
+stream = ExtResource( 30 )
+volume_db = 2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 25 )
+
+[node name="flash" type="Sprite" parent="GigaStorm"]
+pause_mode = 2
+visible = false
+self_modulate = Color( 1, 1, 1, 0.478431 )
+scale = Vector2( 10, 5 )
+z_index = -35
+texture = ExtResource( 38 )
+script = ExtResource( 39 )
+initial_alpha = 1.0
+tween_scale_y = false
+final_color = Color( 1, 1, 1, 1 )
+duration = 0.064
+
+[node name="Idle" type="Node2D" parent="."]
+script = ExtResource( 2 )
+conflicting_moves = [ "Anything" ]
+animation = "idle"
+
+[node name="Damage" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 15 )
+invulnerability_time = 0.1
+max_flash_time = 0.35
+weakenesses = [ "CrystalBouncer", "BoundBlaster", "Rekkyoudan" ]
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+pause_mode = 2
+stream = ExtResource( 34 )
+volume_db = -3.0
+max_distance = 600.0
+bus = "SFX"
+
+[node name="dps" type="RichTextLabel" parent="Damage"]
+margin_left = -18.0
+margin_top = -69.0
+margin_right = 59.0
+margin_bottom = -52.0
+text = "0.0"
+script = ExtResource( 4 )
+
+[node name="area2D" type="Area2D" parent="Damage"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="Damage/area2D"]
+shape = SubResource( 66 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 17 )
+damage = 4.0
+
+[node name="BossDeath" parent="." instance=ExtResource( 8 )]
+position = Vector2( 0, 8 )
+death_animation = "death"
+collectible = "manowar_weapon"
+
+[node name="Explosion Particles" parent="BossDeath" index="0"]
+amount = 24
+process_material = ExtResource( 14 )
+
+[node name="Smoke Particles" parent="BossDeath" index="1"]
+process_material = ExtResource( 3 )
+
+[node name="background_light" parent="BossDeath" index="3"]
+position = Vector2( 6, 7 )
+
+[node name="Remains" parent="BossDeath" index="4"]
+process_material = SubResource( 61 )
+
+[node name="BossStun" type="Node2D" parent="."]
+script = ExtResource( 16 )
+__meta__ = {
+"_editor_description_": ""
+}
+conflicting_moves = [ "BossDeath" ]
+actions = [ "Event" ]
+animation = "death"
+horizontal_velocity = 120.0
+jump_velocity = 150.0
+
+[node name="AchievementHandler" type="Node" parent="."]
+script = ExtResource( 33 )
+no_damage = ExtResource( 37 )
+buster_only = ExtResource( 35 )
+naked = ExtResource( 36 )
+
+[connection signal="ability_start" from="GigaStorm" to="BossStun" method="deactivate"]
+[connection signal="ready_for_stun" from="GigaStorm" to="BossStun" method="reactivate"]
+[connection signal="dps" from="Damage" to="Damage/dps" method="_on_Damage_dps"]
+
+[editable path="BossDeath"]

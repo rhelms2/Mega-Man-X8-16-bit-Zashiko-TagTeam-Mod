@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Rooster - FireCharge.ogg-89bdc32fb4dea1021d5880de613eccf4.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/Rooster - FireCharge.ogg"
+dest_files=[ "res://.import/Rooster - FireCharge.ogg-89bdc32fb4dea1021d5880de613eccf4.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

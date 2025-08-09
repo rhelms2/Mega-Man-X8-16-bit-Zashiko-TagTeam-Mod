@@ -1,0 +1,8 @@
+[gd_resource type="Resource" load_steps=3 format=2]
+
+[ext_resource path="res://src/DialogSystem/Profiles/DialogueText.gd" type="Script" id=1]
+[ext_resource path="res://src/DialogSystem/Profiles/DrLight.tres" type="Resource" id=2]
+
+[resource]
+script = ExtResource( 1 )
+dialog = [ ExtResource( 2 ), "X... I thought something like this might happen someday, so I've prepared parts for you.", "However, I have no friggin' idea which parts are in this capsule, as this is a placeholder dialogue.", "You shouldn't be seeing this, I kindly ask you to report this bug to Alysson or whoever provided you this build.", "Feel free to board the capsule or not. I wouldn't, though. Who knows what might be in here?" ]

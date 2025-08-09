@@ -1,0 +1,470 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://src/Fonts/menuFont.tres" type="BitmapFont" id=1]
+[ext_resource path="res://System/Screens/Loading/Loading_Slot.png" type="Texture" id=3]
+[ext_resource path="res://System/Screens/Loading/slot_load.gd" type="Script" id=4]
+[ext_resource path="res://System/Screens/Loading/icons/bosses.res" type="SpriteFrames" id=5]
+[ext_resource path="res://src/Options/selectable_subtank2.png" type="Texture" id=6]
+[ext_resource path="res://src/Options/selectable_lifeup.png" type="Texture" id=7]
+[ext_resource path="res://System/Screens/Loading/icons/ultimate_head.png" type="Texture" id=8]
+[ext_resource path="res://System/Screens/Loading/icons/black_zero_head.png" type="Texture" id=9]
+[ext_resource path="res://System/Screens/Loading/icons/white_axl_head.png" type="Texture" id=10]
+[ext_resource path="res://System/Screens/Loading/icons/hermes_head.png" type="Texture" id=11]
+[ext_resource path="res://System/Screens/Loading/icons/icarus_head.png" type="Texture" id=12]
+[ext_resource path="res://System/Screens/Loading/difficulty_text.gd" type="Script" id=13]
+[ext_resource path="res://src/Fonts/Xclassicfont.fnt" type="BitmapFont" id=14]
+
+[node name="slot1" type="TextureButton"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+margin_right = 266.0
+margin_bottom = 44.0
+rect_min_size = Vector2( 266, 44 )
+mouse_filter = 1
+action_mode = 0
+script = ExtResource( 4 )
+menu_path = NodePath("../../../..")
+
+[node name="difficulty" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -129.0
+margin_top = -27.0
+margin_right = 131.0
+margin_bottom = -13.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 14 )
+text = "Difficulty"
+uppercase = true
+script = ExtResource( 13 )
+
+[node name="newgameplus" type="Label" parent="."]
+modulate = Color( 0.464844, 0.547176, 1, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -14.0
+margin_top = -27.0
+margin_right = 130.0
+margin_bottom = -13.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 14 )
+text = "NEW GAME +"
+align = 2
+uppercase = true
+
+[node name="completion" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 15.0
+margin_top = -3.0
+margin_right = 130.0
+margin_bottom = 11.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 14 )
+align = 2
+
+[node name="sprite" type="Sprite" parent="."]
+position = Vector2( 133, 40 )
+texture = ExtResource( 3 )
+
+[node name="number" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -130.0
+margin_top = 20.0
+margin_right = 130.0
+margin_bottom = 28.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "0"
+uppercase = true
+
+[node name="igt" type="Label" parent="."]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -82.0
+margin_top = 8.0
+margin_right = 33.0
+margin_bottom = 22.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 14 )
+text = "HH:MM:SS.MS"
+align = 2
+
+[node name="last_saved" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -128.0
+margin_top = 20.0
+margin_right = 130.0
+margin_bottom = 28.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "last_saved"
+align = 2
+uppercase = true
+
+[node name="item_icons" type="HBoxContainer" parent="."]
+margin_left = 4.0
+margin_top = 22.0
+margin_right = 114.0
+margin_bottom = 35.0
+rect_min_size = Vector2( 110, 0 )
+custom_constants/separation = 2
+
+[node name="hearts" type="Control" parent="item_icons"]
+visible = false
+margin_right = 12.0
+margin_bottom = 13.0
+rect_min_size = Vector2( 12, 12 )
+
+[node name="Sprite" type="Sprite" parent="item_icons/hearts"]
+position = Vector2( 6, 5 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 7 )
+
+[node name="number" type="Label" parent="item_icons/hearts/Sprite"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -12.0
+margin_top = 8.5
+margin_right = -4.0
+margin_bottom = 16.5
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "2"
+uppercase = true
+
+[node name="subtanks" type="Control" parent="item_icons"]
+visible = false
+margin_left = 14.0
+margin_right = 26.0
+margin_bottom = 13.0
+rect_min_size = Vector2( 12, 12 )
+
+[node name="Sprite" type="Sprite" parent="item_icons/subtanks"]
+position = Vector2( 6, 5 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 6 )
+
+[node name="number" type="Label" parent="item_icons/subtanks/Sprite"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -14.0
+margin_top = 6.5
+margin_right = -6.0
+margin_bottom = 14.5
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "2"
+uppercase = true
+
+[node name="hermes" type="Control" parent="item_icons"]
+visible = false
+margin_left = 28.0
+margin_right = 42.0
+margin_bottom = 13.0
+rect_min_size = Vector2( 14, 13 )
+
+[node name="Sprite" type="Sprite" parent="item_icons/hermes"]
+position = Vector2( 7, 7 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 11 )
+
+[node name="number" type="Label" parent="item_icons/hermes/Sprite"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -11.6667
+margin_top = -6.33333
+margin_right = -3.66666
+margin_bottom = 1.66667
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "2"
+uppercase = true
+
+[node name="icarus" type="Control" parent="item_icons"]
+visible = false
+margin_left = 44.0
+margin_right = 58.0
+margin_bottom = 13.0
+rect_min_size = Vector2( 14, 13 )
+
+[node name="Sprite" type="Sprite" parent="item_icons/icarus"]
+position = Vector2( 7, 7 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 12 )
+
+[node name="number" type="Label" parent="item_icons/icarus/Sprite"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -11.6667
+margin_top = -6.33333
+margin_right = -3.66667
+margin_bottom = 1.66667
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "2"
+uppercase = true
+
+[node name="ultima_head" type="Control" parent="item_icons"]
+visible = false
+margin_left = 60.0
+margin_right = 74.0
+margin_bottom = 13.0
+rect_min_size = Vector2( 14, 13 )
+
+[node name="Sprite" type="Sprite" parent="item_icons/ultima_head"]
+position = Vector2( 7, 7 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 8 )
+
+[node name="black_zero_armor" type="Control" parent="item_icons"]
+visible = false
+margin_left = 76.0
+margin_right = 90.0
+margin_bottom = 13.0
+rect_min_size = Vector2( 14, 13 )
+
+[node name="Sprite" type="Sprite" parent="item_icons/black_zero_armor"]
+position = Vector2( 7, 6 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 9 )
+
+[node name="white_axl_armor" type="Control" parent="item_icons"]
+visible = false
+margin_left = 92.0
+margin_right = 106.0
+margin_bottom = 13.0
+rect_min_size = Vector2( 14, 13 )
+
+[node name="Sprite" type="Sprite" parent="item_icons/white_axl_armor"]
+position = Vector2( 7, 7 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 10 )
+
+[node name="boss_icons" type="HBoxContainer" parent="."]
+visible = false
+margin_left = 4.0
+margin_top = 9.0
+margin_right = 156.0
+margin_bottom = 21.0
+rect_min_size = Vector2( 16, 12 )
+custom_constants/separation = 2
+alignment = 2
+
+[node name="sunflower" type="Control" parent="boss_icons"]
+margin_right = 12.0
+margin_bottom = 12.0
+rect_min_size = Vector2( 12, 12 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="boss_icons/sunflower"]
+position = Vector2( 6, 6 )
+scale = Vector2( 0.3, 0.3 )
+frames = ExtResource( 5 )
+animation = "Sunflower"
+
+[node name="antonion" type="Control" parent="boss_icons"]
+margin_left = 14.0
+margin_right = 26.0
+margin_bottom = 12.0
+rect_min_size = Vector2( 12, 12 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="boss_icons/antonion"]
+position = Vector2( 6, 6 )
+scale = Vector2( 0.3, 0.3 )
+frames = ExtResource( 5 )
+animation = "Antonion"
+
+[node name="mantis" type="Control" parent="boss_icons"]
+margin_left = 28.0
+margin_right = 40.0
+margin_bottom = 12.0
+rect_min_size = Vector2( 12, 12 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="boss_icons/mantis"]
+position = Vector2( 6, 6 )
+scale = Vector2( 0.3, 0.3 )
+frames = ExtResource( 5 )
+animation = "Mantis"
+
+[node name="trilobyte" type="Control" parent="boss_icons"]
+margin_left = 42.0
+margin_right = 54.0
+margin_bottom = 12.0
+rect_min_size = Vector2( 12, 12 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="boss_icons/trilobyte"]
+position = Vector2( 6, 6 )
+scale = Vector2( 0.3, 0.3 )
+frames = ExtResource( 5 )
+animation = "Trilobyte"
+
+[node name="rooster" type="Control" parent="boss_icons"]
+margin_left = 56.0
+margin_right = 68.0
+margin_bottom = 12.0
+rect_min_size = Vector2( 12, 12 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="boss_icons/rooster"]
+position = Vector2( 6, 6 )
+scale = Vector2( 0.3, 0.3 )
+frames = ExtResource( 5 )
+animation = "Rooster"
+
+[node name="manowar" type="Control" parent="boss_icons"]
+margin_left = 70.0
+margin_right = 82.0
+margin_bottom = 12.0
+rect_min_size = Vector2( 12, 12 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="boss_icons/manowar"]
+position = Vector2( 6, 6 )
+scale = Vector2( 0.3, 0.3 )
+frames = ExtResource( 5 )
+animation = "Manowar"
+
+[node name="yeti" type="Control" parent="boss_icons"]
+margin_left = 84.0
+margin_right = 96.0
+margin_bottom = 12.0
+rect_min_size = Vector2( 12, 12 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="boss_icons/yeti"]
+position = Vector2( 6, 6 )
+scale = Vector2( 0.3, 0.3 )
+frames = ExtResource( 5 )
+animation = "Yeti"
+
+[node name="panda" type="Control" parent="boss_icons"]
+margin_left = 98.0
+margin_right = 110.0
+margin_bottom = 12.0
+rect_min_size = Vector2( 12, 12 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="boss_icons/panda"]
+position = Vector2( 6, 6 )
+scale = Vector2( 0.3, 0.3 )
+frames = ExtResource( 5 )
+animation = "Panda"
+
+[node name="vile" type="Control" parent="boss_icons"]
+margin_left = 112.0
+margin_right = 124.0
+margin_bottom = 12.0
+rect_min_size = Vector2( 12, 12 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="boss_icons/vile"]
+position = Vector2( 6, 6 )
+scale = Vector2( 0.375, 0.375 )
+frames = ExtResource( 5 )
+animation = "Vile"
+
+[node name="sigma" type="Control" parent="boss_icons"]
+margin_left = 126.0
+margin_right = 138.0
+margin_bottom = 12.0
+rect_min_size = Vector2( 12, 12 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="boss_icons/sigma"]
+position = Vector2( 6, 6 )
+scale = Vector2( 0.3, 0.3 )
+frames = ExtResource( 5 )
+animation = "Sigma"
+
+[node name="lumine" type="Control" parent="boss_icons"]
+margin_left = 140.0
+margin_right = 152.0
+margin_bottom = 12.0
+rect_min_size = Vector2( 12, 12 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="boss_icons/lumine"]
+position = Vector2( 6, 6 )
+scale = Vector2( 0.375, 0.375 )
+frames = ExtResource( 5 )
+animation = "Lumine"
+
+[node name="red" type="Control" parent="boss_icons"]
+visible = false
+margin_left = 154.0
+margin_right = 166.0
+margin_bottom = 12.0
+rect_min_size = Vector2( 12, 12 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="boss_icons/red"]
+position = Vector2( 6, 6 )
+scale = Vector2( 0.375, 0.375 )
+frames = ExtResource( 5 )
+animation = "Red"
+
+[node name="serenade" type="Control" parent="boss_icons"]
+visible = false
+margin_left = 154.0
+margin_right = 166.0
+margin_bottom = 12.0
+rect_min_size = Vector2( 12, 12 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="boss_icons/serenade"]
+position = Vector2( 6, 6 )
+scale = Vector2( 0.375, 0.375 )
+frames = ExtResource( 5 )
+animation = "Serenade"
+
+[node name="zero" type="Control" parent="boss_icons"]
+visible = false
+margin_left = 154.0
+margin_right = 166.0
+margin_bottom = 12.0
+rect_min_size = Vector2( 12, 12 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="boss_icons/zero"]
+position = Vector2( 6, 6 )
+scale = Vector2( 0.375, 0.375 )
+frames = ExtResource( 5 )
+animation = "Zero"
+
+[connection signal="focus_entered" from="." to="." method="_on_focus_entered"]
+[connection signal="focus_entered" from="." to="difficulty" method="_on_focus_entered"]
+[connection signal="focus_exited" from="." to="." method="_on_focus_exited"]
+[connection signal="focus_exited" from="." to="difficulty" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="." to="." method="_on_pressed"]

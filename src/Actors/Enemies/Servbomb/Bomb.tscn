@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/Actors/Enemies/Servbomb/Bomb.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Enemies/ProjectileDoT.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Enemies/Servbomb/servbomb.res" type="SpriteFrames" id=6]
+[ext_resource path="res://src/Actors/Bosses/BambooPandamonium/GrenadeExplosion.tscn" type="PackedScene" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 10, 11 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10, 11 )
+
+[node name="ServbombBomb" type="KinematicBody2D" groups=["Enemies"]]
+z_index = 8
+collision_layer = 16
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+damage = 5.0
+blast_area = ExtResource( 7 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+frames = ExtResource( 6 )
+animation = "bomb"
+offset = Vector2( 0, -5 )
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+shape = SubResource( 1 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 2 )
+damage = 5.0
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )

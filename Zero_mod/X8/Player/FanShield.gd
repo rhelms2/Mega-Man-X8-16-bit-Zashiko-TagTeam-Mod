@@ -1,0 +1,70 @@
+extends Node2D
+
+export  var active: bool = false
+export  var shield_hitbox: Resource = preload("res://Zero_mod/Player/Hitboxes/Rasetsusen_Hitbox.tscn")
+
+onready var character = get_parent()
+onready var shieldSprite = $fan_shield
+onready var deflect_sound = $deflect
+
+var current_hitbox = null
+var hitbox_name: String = "Fan Shield"
+var hitbox_radius: float = 32
+var hitbox_inner_radius: float = 0
+var hitbox_upleft_corner: Vector2 = Vector2( - hitbox_radius, - hitbox_radius)
+var hitbox_downright_corner: Vector2 = Vector2(hitbox_radius, hitbox_radius)
+var hitbox_upgraded: bool = false
+var hitbox_canhit: bool = false
+var hitbox_spawn_effect: bool = false
+var deflectable: bool = true
+var deflectable_type: int = 0
+var only_deflect_weak: bool = true
+
+
+func _ready() -> void :
+	deactivate()
+
+func activate() -> void :
+	active = true
+	set_physics_process(true)
+	shieldSprite.show()
+
+func deactivate() -> void :
+	active = false
+	set_physics_process(false)
+	shieldSprite.hide()
+
+func _physics_process(_delta: float) -> void :
+	if active:
+		hitbox_radius = 32
+		hitbox_upleft_corner = Vector2( - hitbox_radius, - hitbox_radius)
+		hitbox_downright_corner = Vector2(hitbox_radius, hitbox_radius)
+		spawn_shield(Vector2(0, - 6), hitbox_upleft_corner, hitbox_downright_corner)
+		shieldSprite.modulate = Color(1, 1, 1, 0.5)
+		
+	if character.saber_node.current_weapon.name != "B-Fan" or character.animatedSprite.animation != "idle":
+		deactivate()
+
+func spawn_shield(_position: Vector2, _hitbox_upleft: Vector2, _hitbox_downright: Vector2) -> void :
+	current_hitbox = shield_hitbox.instance()
+	add_child(current_hitbox)
+	
+	var size = _hitbox_downright - _hitbox_upleft
+	var radius = min(size.x, size.y) / 2
+
+	current_hitbox.set_hitbox(_position, radius)
+	current_hitbox.name = hitbox_name
+	current_hitbox.damage = 0
+	current_hitbox.damage_to_bosses = 0
+	current_hitbox.damage_to_weakness = 0
+	current_hitbox.break_guard_damage = 0
+	current_hitbox.break_guards = false
+	current_hitbox.saber_rehit = 0
+	current_hitbox.upgraded = hitbox_upgraded
+	current_hitbox.inner_radius = hitbox_inner_radius
+	current_hitbox.canhit = hitbox_canhit
+	current_hitbox.spawn_effect = hitbox_spawn_effect
+	current_hitbox.deflectable = deflectable
+	current_hitbox.deflectable_type = deflectable_type
+	current_hitbox.only_deflect_weak = only_deflect_weak
+	current_hitbox.remove_from_group("Player Projectile")

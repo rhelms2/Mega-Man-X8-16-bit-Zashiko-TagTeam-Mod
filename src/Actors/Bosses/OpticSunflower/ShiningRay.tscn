@@ -1,0 +1,87 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://src/Actors/Enemies/LaserLine/AnimateChildren.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Enemies/LaserLine/laser_line1.png" type="Texture" id=2]
+[ext_resource path="res://src/Actors/Enemies/LaserLine/laser_line2.png" type="Texture" id=3]
+[ext_resource path="res://src/Actors/Enemies/LaserLine/laser_line3.png" type="Texture" id=4]
+[ext_resource path="res://src/Actors/Bosses/OpticSunflower/Optic360.gd" type="Script" id=5]
+[ext_resource path="res://src/Actors/Bosses/OpticSunflower/plant_laser.res" type="SpriteFrames" id=6]
+[ext_resource path="res://src/Actors/Enemies/LaserLine/laser_line.res" type="SpriteFrames" id=7]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=8]
+[ext_resource path="res://src/Effects/Materials/optic_laser_paletteswap.tres" type="Material" id=9]
+[ext_resource path="res://src/Effects/Materials/plant_laser_leaves_material.tres" type="Material" id=10]
+[ext_resource path="res://src/Effects/Materials/plant_laser_leaves_particle.tres" type="Material" id=11]
+[ext_resource path="res://src/Effects/leaves/leaves.png" type="Texture" id=12]
+[ext_resource path="res://src/Sounds/Sunflower - LaserLoop.ogg" type="AudioStream" id=13]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=14]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 1, 1 )
+
+[node name="ShiningRay" type="Node2D"]
+rotation = -6.28319
+script = ExtResource( 5 )
+
+[node name="rayCast2D" type="RayCast2D" parent="."]
+visible = false
+enabled = true
+cast_to = Vector2( 400, 0 )
+collision_mask = 268436993
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+z_index = 32
+frames = ExtResource( 6 )
+animation = "alternate"
+frame = 2
+playing = true
+script = ExtResource( 1 )
+line_frames = [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ) ]
+
+[node name="collision" type="AnimatedSprite" parent="animatedSprite"]
+visible = false
+material = ExtResource( 9 )
+position = Vector2( 402, 0 )
+z_index = -1
+frames = ExtResource( 7 )
+animation = "end"
+frame = 2
+
+[node name="collision_noise" type="AudioStreamPlayer2D" parent="animatedSprite/collision"]
+stream = ExtResource( 13 )
+max_distance = 600.0
+attenuation = 1.93187
+bus = "SFX"
+script = ExtResource( 14 )
+
+[node name="line" type="Line2D" parent="animatedSprite"]
+visible = false
+material = ExtResource( 9 )
+z_index = -2
+points = PoolVector2Array( 0, 0, 400, 0 )
+width = 16.0
+default_color = Color( 1, 1, 1, 1 )
+texture = ExtResource( 3 )
+texture_mode = 2
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 8 )
+active = false
+damage = 3.0
+
+[node name="area2D" type="Area2D" parent="DamageOnTouch"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="DamageOnTouch/area2D"]
+shape = SubResource( 1 )
+
+[node name="leaves" type="Particles2D" parent="."]
+material = ExtResource( 10 )
+emitting = false
+amount = 6
+lifetime = 0.55
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+process_material = ExtResource( 11 )
+texture = ExtResource( 12 )

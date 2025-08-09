@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Panda - Claw Retreat.ogg-a6ae76e71f928b4216a76a6f8669f782.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/Panda - Claw Retreat.ogg"
+dest_files=[ "res://.import/Panda - Claw Retreat.ogg-a6ae76e71f928b4216a76a6f8669f782.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

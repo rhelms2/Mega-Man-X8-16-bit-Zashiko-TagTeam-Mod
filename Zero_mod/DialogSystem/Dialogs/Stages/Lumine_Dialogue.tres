@@ -1,0 +1,10 @@
+[gd_resource type="Resource" load_steps=5 format=2]
+
+[ext_resource path="res://src/DialogSystem/Profiles/DialogueText.gd" type="Script" id=1]
+[ext_resource path="res://src/DialogSystem/Profiles/Lumine.tres" type="Resource" id=2]
+[ext_resource path="res://Zero_mod/DialogSystem/Profiles/Zero.tres" type="Resource" id=3]
+[ext_resource path="res://src/DialogSystem/Profiles/EvilLumine.tres" type="Resource" id=4]
+
+[resource]
+script = ExtResource( 1 )
+dialog = [ ExtResource( 3 ), "FINALLUMINE1_ZERO", ExtResource( 2 ), "FINALLUMINE2_ZERO", "FINALLUMINE3_ZERO", "FINALLUMINE4_ZERO", ExtResource( 3 ), "FINALLUMINE5_ZERO", ExtResource( 2 ), "FINALLUMINE6_ZERO", "FINALLUMINE7_ZERO", ExtResource( 4 ), "FINALLUMINE8_ZERO", ExtResource( 3 ), "FINALLUMINE9_ZERO", ExtResource( 4 ), "FINALLUMINE10_ZERO", "FINALLUMINE11_ZERO", ExtResource( 3 ), "FINALLUMINE12_ZERO", ExtResource( 4 ), "FINALLUMINE13_ZERO", "FINALLUMINE14_ZERO", "FINALLUMINE15_ZERO", "FINALLUMINE16_ZERO", "FINALLUMINE17_ZERO", ExtResource( 3 ), "FINALLUMINE18_ZERO", ExtResource( 4 ), "FINALLUMINE19_ZERO", "FINALLUMINE20_ZERO", "FINALLUMINE21_ZERO", "FINALLUMINE22_ZERO", "FINALLUMINE23_ZERO", "FINALLUMINE24_ZERO", "FINALLUMINE25_ZERO", ExtResource( 3 ), "FINALLUMINE26_ZERO", ExtResource( 4 ), "FINALLUMINE27_ZERO", "FINALLUMINE28_ZERO", "FINALLUMINE29_ZERO", "FINALLUMINE30_ZERO", "FINALLUMINE31_ZERO", "FINALLUMINE32_ZERO", "FINALLUMINE33_ZERO", "FINALLUMINE34_ZERO", ExtResource( 3 ), "FINALLUMINE35_ZERO", "FINALLUMINE36_ZERO", "FINALLUMINE37_ZERO", ExtResource( 4 ), "FINALLUMINE38_ZERO", "FINALLUMINE39_ZERO", "FINALLUMINE40_ZERO", ExtResource( 3 ), "FINALLUMINE41_ZERO" ]

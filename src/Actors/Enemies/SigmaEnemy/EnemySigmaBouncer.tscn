@@ -1,0 +1,120 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://src/Effects/Textures/sigma_bouncy_projectile.png" type="Texture" id=1]
+[ext_resource path="res://src/Actors/Enemies/SigmaEnemy/EnemySigmaBouncer.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/Enemies/ProjectileDoT.gd" type="Script" id=4]
+[ext_resource path="res://src/Sounds/Ice Break.wav" type="AudioStream" id=5]
+[ext_resource path="res://src/Sounds/BlastLaunch - Bounce.ogg" type="AudioStream" id=6]
+[ext_resource path="res://src/Effects/Basic Hit.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Effects/Textures/explosion.png" type="Texture" id=8]
+[ext_resource path="res://src/Effects/Materials/sigmabouncy_mat.tres" type="Material" id=9]
+[ext_resource path="res://src/Effects/Textures/vile_spark.png" type="Texture" id=10]
+[ext_resource path="res://src/Effects/Materials/sigmabouncy_particles.tres" type="Material" id=11]
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 1 )
+region = Rect2( 48, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 1 )
+region = Rect2( 96, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 1 )
+region = Rect2( 144, 0, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 48, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 1 )
+region = Rect2( 48, 48, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 1 )
+region = Rect2( 96, 48, 48, 48 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 1 )
+region = Rect2( 144, 48, 48, 48 )
+
+[sub_resource type="SpriteFrames" id=17]
+animations = [ {
+"frames": [ SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ],
+"loop": true,
+"name": "default",
+"speed": 32.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 6, 6 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 4, 5 )
+
+[node name="EnemyBouncer" type="KinematicBody2D" groups=["Enemy Projectile"]]
+z_index = 8
+collision_layer = 16
+collision_mask = 1025
+script = ExtResource( 2 )
+damage = 10.0
+time_off_screen = 5.0
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 17 )
+frame = 3
+playing = true
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
+stream = ExtResource( 5 )
+volume_db = -10.895
+pitch_scale = 0.87
+max_distance = 800.0
+bus = "SFX"
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+shape = SubResource( 7 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 4 )
+damage = 2.0
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 8 )
+
+[node name="sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 3 )
+
+[node name="Hit Particle" parent="." instance=ExtResource( 7 )]
+texture = ExtResource( 8 )
+hframes = 4
+vframes = 4
+animation_speed = 24.0
+vertical_flip_chance = 0.0
+
+[node name="particles2D" type="Particles2D" parent="."]
+self_modulate = Color( 0.984314, 0.521569, 1, 1 )
+material = ExtResource( 9 )
+z_index = -1
+amount = 12
+lifetime = 0.5
+local_coords = false
+process_material = ExtResource( 11 )
+texture = ExtResource( 10 )

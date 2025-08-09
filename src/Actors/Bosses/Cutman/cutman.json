@@ -1,0 +1,98 @@
+{ "frames": [
+   {
+    "filename": "cutman 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 52, "h": 46 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 52, "h": 46 },
+    "sourceSize": { "w": 52, "h": 46 },
+    "duration": 126
+   },
+   {
+    "filename": "cutman 1.ase",
+    "frame": { "x": 52, "y": 0, "w": 52, "h": 46 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 52, "h": 46 },
+    "sourceSize": { "w": 52, "h": 46 },
+    "duration": 126
+   },
+   {
+    "filename": "cutman 2.ase",
+    "frame": { "x": 104, "y": 0, "w": 52, "h": 46 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 52, "h": 46 },
+    "sourceSize": { "w": 52, "h": 46 },
+    "duration": 126
+   },
+   {
+    "filename": "cutman 3.ase",
+    "frame": { "x": 0, "y": 46, "w": 52, "h": 46 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 52, "h": 46 },
+    "sourceSize": { "w": 52, "h": 46 },
+    "duration": 126
+   },
+   {
+    "filename": "cutman 4.ase",
+    "frame": { "x": 52, "y": 46, "w": 52, "h": 46 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 52, "h": 46 },
+    "sourceSize": { "w": 52, "h": 46 },
+    "duration": 126
+   },
+   {
+    "filename": "cutman 5.ase",
+    "frame": { "x": 0, "y": 46, "w": 52, "h": 46 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 52, "h": 46 },
+    "sourceSize": { "w": 52, "h": 46 },
+    "duration": 126
+   },
+   {
+    "filename": "cutman 6.ase",
+    "frame": { "x": 104, "y": 46, "w": 52, "h": 46 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 52, "h": 46 },
+    "sourceSize": { "w": 52, "h": 46 },
+    "duration": 100
+   },
+   {
+    "filename": "cutman 7.ase",
+    "frame": { "x": 0, "y": 92, "w": 52, "h": 46 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 52, "h": 46 },
+    "sourceSize": { "w": 52, "h": 46 },
+    "duration": 126
+   },
+   {
+    "filename": "cutman 8.ase",
+    "frame": { "x": 52, "y": 92, "w": 52, "h": 46 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 52, "h": 46 },
+    "sourceSize": { "w": 52, "h": 46 },
+    "duration": 126
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3.7-x64",
+  "image": "cutman.png",
+  "format": "RGBA8888",
+  "size": { "w": 156, "h": 138 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "Idle", "from": 0, "to": 1, "direction": "forward", "color": "#000000ff" },
+   { "name": "Walk", "from": 2, "to": 5, "direction": "forward", "color": "#000000ff" },
+   { "name": "Jump", "from": 6, "to": 6, "direction": "forward", "color": "#000000ff" },
+   { "name": "Throw", "from": 7, "to": 8, "direction": "forward", "color": "#000000ff" }
+  ]
+ }
+}

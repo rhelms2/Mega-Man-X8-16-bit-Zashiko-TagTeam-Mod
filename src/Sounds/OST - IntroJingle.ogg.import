@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - IntroJingle.ogg-5a2d3e3642cbb37290fcc53b48d02b56.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - IntroJingle.ogg"
+dest_files=[ "res://.import/OST - IntroJingle.ogg-5a2d3e3642cbb37290fcc53b48d02b56.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

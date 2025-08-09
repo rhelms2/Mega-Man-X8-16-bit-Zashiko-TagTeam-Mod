@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Boss Battle - Intro.ogg-c139d9ab4e07d41751dbd02df18f8d51.oggstr"
+
+[deps]
+
+source_file="res://Remix/Songs/Boss Battle - Intro.ogg"
+dest_files=[ "res://.import/Boss Battle - Intro.ogg-c139d9ab4e07d41751dbd02df18f8d51.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

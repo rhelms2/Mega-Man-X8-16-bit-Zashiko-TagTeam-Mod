@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Stage Select 3 - Intro.ogg-46695041811eb2ebfb464e627ef16b1d.oggstr"
+
+[deps]
+
+source_file="res://Remix/Songs/Stage Select 3 - Intro.ogg"
+dest_files=[ "res://.import/Stage Select 3 - Intro.ogg-46695041811eb2ebfb464e627ef16b1d.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

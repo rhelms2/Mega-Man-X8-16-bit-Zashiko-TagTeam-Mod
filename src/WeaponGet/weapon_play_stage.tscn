@@ -1,0 +1,729 @@
+[gd_scene load_steps=78 format=2]
+
+[ext_resource path="res://src/Levels/StageSegmentManager.gd" type="Script" id=1]
+[ext_resource path="res://src/Levels/music_player.gd" type="Script" id=2]
+[ext_resource path="res://src/System/StateCamera.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Sounds/OST - AngryBoss - Intro.ogg" type="AudioStream" id=4]
+[ext_resource path="res://src/Sounds/OST - AngryBoss - Loop.ogg" type="AudioStream" id=5]
+[ext_resource path="res://addons/PaletteSwap/PaletteSwap.gdshader" type="Shader" id=6]
+[ext_resource path="res://src/WeaponGet/test.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/HUD/intro.res" type="SpriteFrames" id=8]
+[ext_resource path="res://src/Levels/Test/test_tileset.tres" type="TileSet" id=9]
+[ext_resource path="res://src/Sounds/OST - boss.ogg" type="AudioStream" id=10]
+[ext_resource path="res://src/Sounds/OST - Capsule.ogg" type="AudioStream" id=11]
+[ext_resource path="res://src/Sounds/38 - MMX - Boss Alert.wav" type="AudioStream" id=12]
+[ext_resource path="res://src/Sounds/OST - Stage Clear.ogg" type="AudioStream" id=13]
+[ext_resource path="res://src/Sounds/OST - boss - Intro.ogg" type="AudioStream" id=14]
+[ext_resource path="res://src/Levels/skip_ready.gd" type="Script" id=15]
+[ext_resource path="res://src/Actors/Player/Player.tscn" type="PackedScene" id=16]
+[ext_resource path="res://src/Actors/Player/charge_shader.tres" type="Shader" id=17]
+[ext_resource path="res://src/Objects/Spikes/spike_01.png" type="Texture" id=18]
+[ext_resource path="res://src/Objects/Spikes/spike_02.png" type="Texture" id=19]
+[ext_resource path="res://src/Objects/Spikes/spike_00.png" type="Texture" id=20]
+[ext_resource path="res://src/Objects/Spikes/spike_03.png" type="Texture" id=21]
+[ext_resource path="res://src/Objects/Spikes/DestructibleSpike.tscn" type="PackedScene" id=22]
+[ext_resource path="res://src/WeaponGet/TestLevelModifier.gd" type="Script" id=23]
+[ext_resource path="res://src/Actors/Enemies/Drone/Drone.tscn" type="PackedScene" id=24]
+[ext_resource path="res://src/IA/PlayerIA.gd" type="Script" id=54]
+[ext_resource path="res://src/Effects/enemy_shader.tres" type="Shader" id=89]
+[ext_resource path="res://src/Effects/ShieldBreak/shieldbreak.res" type="SpriteFrames" id=121]
+[ext_resource path="res://src/Actors/Player/BossWeapons/firedash_palette.png" type="Texture" id=124]
+[ext_resource path="res://src/Levels/HUD.gd" type="Script" id=125]
+[ext_resource path="res://src/HUD/RidearmorBar.gd" type="Script" id=126]
+[ext_resource path="res://src/Sounds/12 - MMX - X Life Gain.wav" type="AudioStream" id=127]
+[ext_resource path="res://src/HUD/WeaponBar.gd" type="Script" id=128]
+[ext_resource path="res://src/Fonts/font.tres" type="DynamicFont" id=129]
+[ext_resource path="res://src/HUD/DebugAndCheats.tscn" type="PackedScene" id=130]
+[ext_resource path="res://src/DialogSystem/DialogBox.tscn" type="PackedScene" id=131]
+[ext_resource path="res://src/HUD/X_bar.png" type="Texture" id=132]
+[ext_resource path="res://src/HUD/Boss_bar.png" type="Texture" id=133]
+[ext_resource path="res://src/HUD/hp_fill.png" type="Texture" id=134]
+[ext_resource path="res://src/Options/selectable_weapon_00.png" type="Texture" id=135]
+[ext_resource path="res://src/HUD/R_bar.png" type="Texture" id=136]
+[ext_resource path="res://src/HUD/Weapon_bar.png" type="Texture" id=137]
+[ext_resource path="res://src/HUD/R2_bar.png" type="Texture" id=138]
+[ext_resource path="res://src/Effects/Materials/crt_shader_1.tres" type="Material" id=139]
+[ext_resource path="res://src/System/CameraLimits.gd" type="Script" id=140]
+[ext_resource path="res://src/WeaponGet/WeaponGet_Screen.tscn" type="PackedScene" id=141]
+[ext_resource path="res://src/Actors/Enemies/Servbot/ServbotWpnTest.tscn" type="PackedScene" id=142]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=143]
+[ext_resource path="res://src/Actors/Enemies/Big Tractor/DirtyProjectile3.tscn" type="PackedScene" id=144]
+[ext_resource path="res://src/Sounds/HIT.wav" type="AudioStream" id=145]
+[ext_resource path="res://src/Actors/Enemies/Big Tractor/DirtyProjectile2.tscn" type="PackedScene" id=146]
+[ext_resource path="res://src/Actors/Enemies/Shared/LongEnemyDeath.tscn" type="PackedScene" id=147]
+[ext_resource path="res://src/Actors/Modules/Enemy/Enemy.gd" type="Script" id=148]
+[ext_resource path="res://src/Actors/Enemies/AI.gd" type="Script" id=149]
+[ext_resource path="res://src/Actors/Enemies/Big Tractor/DirtyProjectile.tscn" type="PackedScene" id=150]
+[ext_resource path="res://src/Actors/Modules/Enemy/EnemyDamage.gd" type="Script" id=151]
+[ext_resource path="res://src/Actors/Enemies/Big Tractor/bigtractor.res" type="SpriteFrames" id=152]
+[ext_resource path="res://src/Actors/Enemies/Big Tractor/AttackIdle.gd" type="Script" id=153]
+[ext_resource path="res://src/Actors/Enemies/EnemyStun.gd" type="Script" id=154]
+[ext_resource path="res://src/Actors/Enemies/Big Tractor/SimpleEnemyShot.gd" type="Script" id=155]
+[ext_resource path="res://src/Actors/Enemies/EnemyShield.gd" type="Script" id=156]
+[ext_resource path="res://src/Sounds/EXPLOSION.wav" type="AudioStream" id=157]
+[ext_resource path="res://src/Sounds/MMX - Enemy Helmet Hit.ogg" type="AudioStream" id=158]
+[ext_resource path="res://src/Sounds/ThrowRocks.ogg" type="AudioStream" id=159]
+[ext_resource path="res://src/Sounds/RockThrow Prepare.ogg" type="AudioStream" id=160]
+[ext_resource path="res://src/Sounds/64 - MMX - Enemy Sound (01).wav" type="AudioStream" id=161]
+
+[sub_resource type="ShaderMaterial" id=52]
+resource_local_to_scene = true
+shader = ExtResource( 89 )
+shader_param/Flash = 0.0
+shader_param/Should_Blink = 1.0
+shader_param/Darken = 1.0
+shader_param/Alpha = 1.0
+shader_param/Alpha_Blink = 0.0
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 135 )
+region = Rect2( 3, 3, 10, 10 )
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 6 )
+shader_param/skip_first_row = true
+shader_param/use_palette_alpha = false
+shader_param/fps = 6.0
+shader_param/palette = ExtResource( 124 )
+
+[sub_resource type="ShaderMaterial" id=68]
+resource_local_to_scene = true
+shader = ExtResource( 17 )
+shader_param/Flash = 0.0
+shader_param/Charge = 0.0
+shader_param/Color = Color( 0, 0, 0, 1 )
+shader_param/MainColor1 = Color( 0, 0.501961, 0.972549, 1 )
+shader_param/MainColor2 = Color( 0, 0.25098, 0.941176, 1 )
+shader_param/MainColor3 = Color( 0.12549, 0.188235, 0.501961, 1 )
+shader_param/MainColor4 = Color( 0.470588, 0.847059, 0.941176, 1 )
+shader_param/MainColor5 = Color( 0.313726, 0.627451, 0.941176, 1 )
+shader_param/MainColor6 = Color( 0.0941176, 0.345098, 0.690196, 1 )
+shader_param/R_MainColor1 = Color( 0, 0.501961, 0.972549, 1 )
+shader_param/R_MainColor2 = Color( 0, 0.25098, 0.941176, 1 )
+shader_param/R_MainColor3 = Color( 0.12549, 0.188235, 0.501961, 1 )
+shader_param/R_MainColor4 = Color( 0.470588, 0.847059, 0.941176, 1 )
+shader_param/R_MainColor5 = Color( 0.313726, 0.627451, 0.941176, 1 )
+shader_param/R_MainColor6 = Color( 0.0941176, 0.345098, 0.690196, 1 )
+shader_param/CrystalColor1 = Color( 0.909804, 1, 0.733333, 1 )
+shader_param/CrystalColor2 = Color( 0.541176, 0.854902, 0.341176, 1 )
+shader_param/CrystalColor3 = Color( 0.207843, 0.619608, 0.415686, 1 )
+shader_param/R_CrystalColor1 = Color( 0.941176, 0.941176, 0.941176, 1 )
+shader_param/Alert = 0.0
+shader_param/R_CrystalColor2 = Color( 0.941176, 0.25098, 0.0627451, 1 )
+shader_param/R_CrystalColor3 = Color( 0.447059, 0.133333, 0.215686, 1 )
+shader_param/tolerance = 0.01
+shader_param/Alpha = 1.0
+
+[sub_resource type="ShaderMaterial" id=74]
+resource_local_to_scene = true
+shader = ExtResource( 89 )
+shader_param/Flash = 0.0
+shader_param/Should_Blink = 0.0
+shader_param/Darken = 0.5
+shader_param/Alpha = 1.0
+shader_param/Alpha_Blink = 0.0
+
+[sub_resource type="RectangleShape2D" id=65]
+extents = Vector2( 146.5, 59 )
+
+[sub_resource type="ShaderMaterial" id=67]
+resource_local_to_scene = true
+shader = ExtResource( 89 )
+shader_param/Flash = 0.0
+shader_param/Should_Blink = 0.0
+shader_param/Darken = 1.0
+shader_param/Alpha = 1.0
+shader_param/Alpha_Blink = 0.0
+
+[sub_resource type="RectangleShape2D" id=56]
+extents = Vector2( 33, 30 )
+
+[sub_resource type="RectangleShape2D" id=64]
+extents = Vector2( 15.75, 30 )
+
+[sub_resource type="RectangleShape2D" id=66]
+extents = Vector2( 33, 32 )
+
+[sub_resource type="SpriteFrames" id=75]
+animations = [ {
+"frames": [ ExtResource( 20 ) ],
+"loop": true,
+"name": "middle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ) ],
+"loop": true,
+"name": "middle_destroyed",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 19 ) ],
+"loop": true,
+"name": "side",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 21 ) ],
+"loop": true,
+"name": "side_destroyed",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=53]
+extents = Vector2( 544, 278.5 )
+
+[node name="Stage" type="Node2D"]
+
+[node name="Hud" type="CanvasLayer" parent="."]
+pause_mode = 2
+visible = false
+script = ExtResource( 125 )
+
+[node name="WhiteScreen" type="ColorRect" parent="Hud"]
+visible = false
+margin_right = 399.0
+margin_bottom = 224.0
+mouse_filter = 2
+
+[node name="X Debug Info" type="RichTextLabel" parent="Hud"]
+visible = false
+self_modulate = Color( 1, 1, 1, 0.780392 )
+margin_right = 206.0
+margin_bottom = 106.0
+mouse_filter = 2
+custom_fonts/normal_font = ExtResource( 129 )
+text = "Debug Information"
+
+[node name="vBoxContainer" type="VBoxContainer" parent="Hud/X Debug Info"]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="Input Info" type="RichTextLabel" parent="Hud"]
+visible = false
+self_modulate = Color( 1, 1, 1, 0.780392 )
+margin_top = 211.0
+margin_right = 206.0
+margin_bottom = 317.0
+mouse_filter = 2
+custom_fonts/normal_font = ExtResource( 129 )
+text = "Input Info"
+
+[node name="textureRect" type="TextureRect" parent="Hud"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+mouse_filter = 2
+stretch_mode = 3
+
+[node name="Rec Info" type="RichTextLabel" parent="Hud"]
+visible = false
+self_modulate = Color( 1, 1, 1, 0.780392 )
+margin_left = 301.0
+margin_top = 214.0
+margin_right = 518.0
+margin_bottom = 320.0
+mouse_filter = 2
+custom_fonts/normal_font = ExtResource( 129 )
+text = "X8FC 0.6.1.0 Demo03"
+
+[node name="Chronometer" type="RichTextLabel" parent="Hud"]
+visible = false
+self_modulate = Color( 1, 1, 1, 0.780392 )
+margin_left = 305.0
+margin_top = 206.0
+margin_right = 522.0
+margin_bottom = 312.0
+mouse_filter = 2
+custom_fonts/normal_font = ExtResource( 129 )
+text = "MM:SS:MM"
+
+[node name="Bars" type="Control" parent="Hud"]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="X Bar" type="NinePatchRect" parent="Hud"]
+material = SubResource( 52 )
+margin_left = 8.0
+margin_top = 56.0
+margin_right = 22.0
+margin_bottom = 108.0
+texture = ExtResource( 132 )
+patch_margin_top = 4
+patch_margin_bottom = 17
+
+[node name="textureProgress2" type="TextureProgress" parent="Hud/X Bar"]
+modulate = Color( 0.737255, 0.0941176, 0.0941176, 1 )
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = -80.0
+margin_right = 10.0
+margin_bottom = -17.0
+max_value = 32.0
+texture_progress = ExtResource( 134 )
+fill_mode = 3
+
+[node name="textureProgress" type="TextureProgress" parent="Hud/X Bar"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = -80.0
+margin_right = 10.0
+margin_bottom = -17.0
+max_value = 32.0
+value = 16.0
+texture_progress = ExtResource( 134 )
+fill_mode = 3
+
+[node name="WeaponIcon" type="TextureRect" parent="Hud/X Bar"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 17.0
+margin_top = -14.0
+margin_right = 33.0
+margin_bottom = 2.0
+rect_clip_content = true
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = SubResource( 2 )
+
+[node name="WeaponBar" type="NinePatchRect" parent="Hud/X Bar"]
+material = SubResource( 52 )
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 15.0
+margin_top = -76.0
+margin_right = 29.0
+texture = ExtResource( 137 )
+patch_margin_top = 4
+patch_margin_bottom = 17
+script = ExtResource( 128 )
+
+[node name="textureProgress" type="TextureProgress" parent="Hud/X Bar/WeaponBar"]
+material = SubResource( 3 )
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = -80.0
+margin_right = 10.0
+margin_bottom = -17.0
+max_value = 32.0
+value = 28.0
+texture_progress = ExtResource( 134 )
+fill_mode = 3
+
+[node name="Ride Bar" type="NinePatchRect" parent="Hud"]
+margin_left = -14.0
+margin_top = 56.0
+margin_bottom = 108.0
+texture = ExtResource( 136 )
+patch_margin_top = 4
+patch_margin_bottom = 17
+
+[node name="textureProgress" type="TextureProgress" parent="Hud/Ride Bar"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = -80.0
+margin_right = 10.0
+margin_bottom = -17.0
+max_value = 32.0
+value = 16.0
+texture_progress = ExtResource( 134 )
+fill_mode = 3
+
+[node name="RideArmor Bar" type="NinePatchRect" parent="Hud"]
+margin_left = -14.0
+margin_top = 24.0
+margin_bottom = 108.0
+texture = ExtResource( 138 )
+patch_margin_top = 4
+patch_margin_bottom = 17
+script = ExtResource( 126 )
+
+[node name="textureProgress" type="TextureProgress" parent="Hud/RideArmor Bar"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = -80.0
+margin_right = 10.0
+margin_bottom = -17.0
+max_value = 32.0
+value = 32.0
+texture_progress = ExtResource( 134 )
+fill_mode = 3
+
+[node name="Boss Bar" type="NinePatchRect" parent="Hud"]
+visible = false
+margin_left = 377.0
+margin_top = 24.0
+margin_right = 391.0
+margin_bottom = 108.0
+texture = ExtResource( 133 )
+patch_margin_top = 4
+patch_margin_bottom = 17
+
+[node name="textureProgress" type="TextureProgress" parent="Hud/Boss Bar"]
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 10.0
+margin_bottom = 67.0
+max_value = 32.0
+value = 32.0
+texture_progress = ExtResource( 134 )
+fill_mode = 3
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="Hud"]
+stream = ExtResource( 127 )
+bus = "SFX"
+
+[node name="BlackScreen" type="ColorRect" parent="Hud"]
+visible = false
+margin_right = 399.0
+margin_bottom = 224.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 1 )
+
+[node name="GLES2warning" type="RichTextLabel" parent="Hud"]
+visible = false
+self_modulate = Color( 0, 0, 0, 1 )
+margin_left = 1.0
+margin_top = 194.0
+margin_right = 289.0
+margin_bottom = 223.0
+custom_fonts/normal_font = ExtResource( 129 )
+text = "Your graphics card driver does not support GLS3.3. Visual effects will not appear. Update your video driver."
+
+[node name="GLES2warning2" type="RichTextLabel" parent="Hud/GLES2warning"]
+modulate = Color( 1, 0, 0, 1 )
+self_modulate = Color( 1, 0, 0, 1 )
+margin_left = -1.0
+margin_top = -1.0
+margin_right = 287.0
+margin_bottom = 28.0
+custom_fonts/normal_font = ExtResource( 129 )
+text = "Your graphics card driver does not support GLS3.3. Visual effects will not appear. Update your video driver."
+
+[node name="DialogBox" parent="Hud" instance=ExtResource( 131 )]
+margin_left = 104.0
+margin_top = 42.0
+margin_right = 255.2
+margin_bottom = 109.0
+mouse_filter = 2
+
+[node name="colorRect" type="ColorRect" parent="Hud"]
+visible = false
+material = ExtResource( 139 )
+margin_right = 398.0
+margin_bottom = 224.0
+mouse_filter = 2
+
+[node name="Boss and Weapon Info" type="RichTextLabel" parent="Hud"]
+visible = false
+self_modulate = Color( 1, 1, 1, 0.780392 )
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -138.0
+margin_bottom = 169.0
+mouse_filter = 2
+custom_fonts/normal_font = ExtResource( 129 )
+text = "Input Info"
+
+[node name="DebugAndCheats" parent="Hud/Boss and Weapon Info" instance=ExtResource( 130 )]
+margin_left = 137.0
+margin_right = 137.0
+
+[node name="Music Player" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+bus = "Music"
+script = ExtResource( 2 )
+boss_intro = ExtResource( 14 )
+boss_song = ExtResource( 10 )
+angry_boss_intro = ExtResource( 4 )
+angry_boss_song = ExtResource( 5 )
+stage_clear_song = ExtResource( 13 )
+capsule_song = ExtResource( 11 )
+
+[node name="X" parent="." instance=ExtResource( 16 )]
+skip_intro = true
+
+[node name="animatedSprite" parent="X" index="3"]
+material = SubResource( 68 )
+frame = 41
+
+[node name="Damage" parent="X" index="16"]
+active = false
+
+[node name="duringImage" parent="X/AirDash" index="2"]
+material = SubResource( 74 )
+
+[node name="duringImage" parent="X/Dash" index="2"]
+material = SubResource( 74 )
+
+[node name="StateCamera" parent="." instance=ExtResource( 3 )]
+
+[node name="Ready Warning Text" type="AnimatedSprite" parent="StateCamera"]
+modulate = Color( 1, 1, 1, 0 )
+frames = ExtResource( 8 )
+animation = "ready"
+script = ExtResource( 15 )
+
+[node name="audioStreamPlayer2" type="AudioStreamPlayer" parent="StateCamera/Ready Warning Text"]
+stream = ExtResource( 12 )
+volume_db = -10.0
+bus = "SFX"
+
+[node name="WeaponGetScreen" parent="StateCamera" instance=ExtResource( 141 )]
+pause_mode = 2
+position = Vector2( -199, -112 )
+z_index = -25
+
+[node name="InputEmulator" type="Node" parent="."]
+script = ExtResource( 54 )
+
+[node name="Scenery" type="Node" parent="."]
+
+[node name="Collision" type="TileMap" parent="Scenery"]
+modulate = Color( 1, 1, 1, 0.498039 )
+z_index = 1
+tile_set = ExtResource( 9 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -1966047, 7, 0, -1966046, 7, 0, -1966045, 7, 0, -1966044, 7, 0, -1900511, 7, 0, -1900508, 7, 0, -1834975, 7, 0, -1834972, 7, 0, -1769439, 7, 0, -1769436, 7, 0, -1703903, 7, 0, -1703900, 7, 0, -1638367, 7, 0, -1638364, 7, 0, -1572831, 7, 0, -1572828, 7, 0, -1507295, 7, 0, -1507292, 7, 0, -1441759, 7, 0, -1441756, 7, 0, -1376223, 7, 0, -1376220, 7, 0, -1376211, 7, 0, -1376210, 7, 0, -1376209, 7, 0, -1376208, 7, 0, -1376207, 7, 0, -1376206, 7, 0, -1376205, 7, 0, -1376204, 7, 0, -1376203, 7, 0, -1376202, 7, 0, -1376201, 7, 0, -1310687, 7, 0, -1310684, 7, 0, -1310675, 7, 0, -1310665, 7, 0, -1245151, 7, 0, -1245148, 7, 0, -1245139, 7, 0, -1245129, 7, 0, -1179615, 7, 0, -1179612, 7, 0, -1179603, 7, 0, -1179600, 7, 0, -1179599, 7, 0, -1179598, 7, 0, -1179597, 7, 0, -1179596, 7, 0, -1179595, 7, 0, -1179594, 7, 0, -1179593, 7, 0, -1114079, 7, 0, -1114076, 7, 0, -1114067, 7, 0, -1114064, 7, 0, -1048543, 7, 0, -1048540, 7, 0, -1048531, 7, 0, -1048528, 7, 0, -983007, 7, 0, -983004, 7, 0, -982995, 7, 0, -982992, 7, 0, -917471, 7, 0, -917468, 7, 0, -917459, 7, 0, -917456, 7, 0, -851935, 7, 0, -851932, 7, 0, -851923, 7, 0, -851920, 7, 0, -786399, 7, 0, -786396, 7, 0, -786387, 7, 0, -786384, 7, 0, -720863, 7, 0, -720860, 7, 0, -720851, 7, 0, -720848, 7, 0, -655327, 7, 0, -655324, 7, 0, -655315, 7, 0, -655312, 7, 0, -589791, 7, 0, -589788, 7, 0, -589779, 7, 0, -589776, 7, 0, -524255, 7, 0, -524252, 7, 0, -524243, 7, 0, -524240, 7, 0, -458719, 7, 0, -458716, 7, 0, -458707, 7, 0, -458704, 7, 0, -393183, 7, 0, -393182, 7, 0, -393181, 7, 0, -393180, 7, 0, -393171, 7, 0, -393170, 7, 0, -393169, 7, 0, -393168, 7, 0, 131068, 7, 0, 131069, 7, 0, 131070, 7, 0, 131071, 7, 0, 65536, 7, 0, 65537, 7, 0, 65538, 7, 0, 65539, 7, 0, 65540, 7, 0, 65541, 7, 0, 65542, 7, 0, 65543, 7, 0, 65544, 7, 0, 65545, 7, 0, 65546, 7, 0, 65547, 7, 0, 65548, 7, 0, 65549, 7, 0, 65550, 7, 0, 65551, 7, 0, 65552, 7, 0, 65553, 7, 0, 65554, 7, 0, 65555, 7, 0, 65556, 7, 0, 65557, 7, 0, 65558, 7, 0, 65559, 7, 0, 65560, 7, 0, 65561, 7, 0, 65562, 7, 0, 65563, 7, 0, 65564, 7, 0, 65565, 7, 0, 65566, 7, 0, 65567, 7, 0, 65568, 7, 0, 65569, 7, 0, 65570, 7, 0, 65571, 7, 0, 65572, 7, 0, 65573, 7, 0, 65574, 7, 0, 65575, 7, 0, 65576, 7, 0, 65577, 7, 0, 65578, 7, 0, 65579, 7, 0, 65580, 7, 0, 65581, 7, 0, 65582, 7, 0, 65583, 7, 0, 65584, 7, 0, 65585, 7, 0, 65586, 7, 0, 65587, 7, 0, 65588, 7, 0, 65589, 7, 0, 65590, 7, 0, 65591, 7, 0, 65592, 7, 0, 65593, 7, 0, 65594, 7, 0, 65595, 7, 0, 65596, 7, 0, 65597, 7, 0, 65598, 7, 0, 65599, 7, 0, 65600, 7, 0, 65601, 7, 0, 65602, 7, 0, 65603, 7, 0 )
+
+[node name="UnclimbableWalls" type="TileMap" parent="Scenery/Collision"]
+modulate = Color( 1, 0, 0, 1 )
+tile_set = ExtResource( 9 )
+cell_size = Vector2( 16, 16 )
+collision_layer = 256
+collision_mask = 256
+format = 1
+
+[node name="StageSegments" type="Node2D" parent="Scenery"]
+script = ExtResource( 1 )
+
+[node name="Checkpoints" type="Node" parent="."]
+
+[node name="Objects" type="Node2D" parent="."]
+
+[node name="Servbot" parent="Objects" instance=ExtResource( 142 )]
+
+[node name="Servbot2" parent="Objects" instance=ExtResource( 142 )]
+position = Vector2( 238, -23 )
+
+[node name="Servbot3" parent="Objects" instance=ExtResource( 142 )]
+position = Vector2( 286, -35 )
+
+[node name="Drone2" parent="Objects" instance=ExtResource( 24 )]
+position = Vector2( 180, -2 )
+
+[node name="BigTractor" type="KinematicBody2D" parent="Objects" groups=["Enemies"]]
+position = Vector2( 646, -14 )
+z_index = 1
+collision_layer = 0
+collision_mask = 513
+script = ExtResource( 148 )
+max_health = 15.0
+
+[node name="AI" type="Node2D" parent="Objects/BigTractor"]
+script = ExtResource( 149 )
+on_idle = [ NodePath("../Idle") ]
+on_see_player = [ NodePath("../EnemyShot") ]
+on_guard_break = [ NodePath("../EnemyStun") ]
+
+[node name="vision" type="Area2D" parent="Objects/BigTractor/AI"]
+visible = false
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="Objects/BigTractor/AI/vision"]
+position = Vector2( -0.5, 0 )
+shape = SubResource( 65 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="Objects/BigTractor"]
+material = SubResource( 67 )
+position = Vector2( 0, -16 )
+z_index = 1
+frames = ExtResource( 152 )
+animation = "idle"
+playing = true
+flip_h = true
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="Objects/BigTractor"]
+visible = false
+shape = SubResource( 56 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="Objects/BigTractor"]
+scale = Vector2( 6, 4.8 )
+rect = Rect2( -5, -5, 10, 10 )
+
+[node name="EnemyShield" type="Node2D" parent="Objects/BigTractor"]
+visible = false
+script = ExtResource( 156 )
+
+[node name="hittable_area" type="Area2D" parent="Objects/BigTractor/EnemyShield"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="Objects/BigTractor/EnemyShield/hittable_area"]
+position = Vector2( 17.25, 0 )
+shape = SubResource( 64 )
+
+[node name="hitSound" type="AudioStreamPlayer2D" parent="Objects/BigTractor/EnemyShield"]
+stream = ExtResource( 158 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="area2D" type="Area2D" parent="Objects/BigTractor"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="Objects/BigTractor/area2D"]
+shape = SubResource( 66 )
+
+[node name="DamageOnTouch" type="Node2D" parent="Objects/BigTractor"]
+script = ExtResource( 143 )
+damage = 3.0
+
+[node name="Damage" type="Node2D" parent="Objects/BigTractor"]
+script = ExtResource( 151 )
+minimum_damage = 2.0
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Objects/BigTractor/Damage"]
+stream = ExtResource( 145 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="EnemyStun" type="Node2D" parent="Objects/BigTractor"]
+script = ExtResource( 154 )
+conflicting_moves = [ "EnemyStun" ]
+actions = [ "Event" ]
+animation = "stun"
+stun_duration = 1.65
+recover_animation = "stun_end"
+
+[node name="break_vfx" type="AnimatedSprite" parent="Objects/BigTractor/EnemyStun"]
+modulate = Color( 1, 1, 1, 0.670588 )
+position = Vector2( 12, 0 )
+z_index = 25
+frames = ExtResource( 121 )
+frame = 9
+
+[node name="break_sound" type="AudioStreamPlayer2D" parent="Objects/BigTractor/EnemyStun"]
+stream = ExtResource( 157 )
+volume_db = -6.0
+pitch_scale = 0.78
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="shot_position" type="Node2D" parent="Objects/BigTractor"]
+
+[node name="EnemyShot" type="Node2D" parent="Objects/BigTractor"]
+script = ExtResource( 155 )
+active = false
+conflicting_moves = [ "EnemyStun" ]
+actions = [ "Event" ]
+animation = "prepare"
+shot_animation = "attack"
+deactivate_shield = false
+recover_animation = "recover"
+shot_position = NodePath("../shot_position")
+projectile = ExtResource( 150 )
+extra_projectiles = [ ExtResource( 146 ), ExtResource( 144 ) ]
+
+[node name="shot_sound" type="AudioStreamPlayer2D" parent="Objects/BigTractor/EnemyShot"]
+stream = ExtResource( 159 )
+volume_db = -2.0
+pitch_scale = 0.9
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="prepare" type="AudioStreamPlayer2D" parent="Objects/BigTractor/EnemyShot"]
+stream = ExtResource( 160 )
+volume_db = -4.0
+pitch_scale = 0.9
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="turn" type="AudioStreamPlayer2D" parent="Objects/BigTractor/EnemyShot"]
+stream = ExtResource( 161 )
+volume_db = -6.0
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="Idle" type="Node2D" parent="Objects/BigTractor"]
+script = ExtResource( 153 )
+debug_logs = true
+conflicting_moves = [ "Everything" ]
+actions = [ "Event" ]
+animation = "idle"
+
+[node name="EnemyDeath" parent="Objects/BigTractor" instance=ExtResource( 147 )]
+
+[node name="SpikeRow" type="Node2D" parent="Objects"]
+position = Vector2( 457, 20 )
+
+[node name="DestructibleSpike11" parent="Objects/SpikeRow" instance=ExtResource( 22 )]
+position = Vector2( 16, -10 )
+frames = SubResource( 75 )
+flip_h = true
+
+[node name="DestructibleSpike12" parent="Objects/SpikeRow" instance=ExtResource( 22 )]
+position = Vector2( -29, -9.99969 )
+frames = SubResource( 75 )
+animation = "side"
+flip_h = true
+
+[node name="DestructibleSpike7" parent="Objects/SpikeRow" instance=ExtResource( 22 )]
+position = Vector2( -16, -10 )
+frames = SubResource( 75 )
+flip_h = true
+
+[node name="DestructibleSpike13" parent="Objects/SpikeRow" instance=ExtResource( 22 )]
+position = Vector2( 0, -10 )
+frames = SubResource( 75 )
+flip_h = true
+
+[node name="DestructibleSpike14" parent="Objects/SpikeRow" instance=ExtResource( 22 )]
+position = Vector2( 32, -10 )
+frames = SubResource( 75 )
+animation = "side"
+
+[node name="Limits" type="Node2D" parent="."]
+visible = false
+
+[node name="camera" type="Area2D" parent="Limits"]
+position = Vector2( 150, -37 )
+z_index = 3
+collision_layer = 2048
+collision_mask = 0
+script = ExtResource( 140 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="Limits/camera"]
+position = Vector2( 343, -166.5 )
+shape = SubResource( 53 )
+
+[node name="recorder" parent="." instance=ExtResource( 7 )]
+
+[node name="LevelModifier" type="Node" parent="."]
+script = ExtResource( 23 )
+
+[connection signal="animation_finished" from="StateCamera/Ready Warning Text" to="StateCamera/Ready Warning Text" method="_on_animatedSprite_animation_finished"]
+[connection signal="initialize" from="StateCamera/WeaponGetScreen" to="InputEmulator" method="start"]
+[connection signal="weapon_defined" from="StateCamera/WeaponGetScreen" to="InputEmulator" method="_on_weapon_defined"]
+[connection signal="weapon_defined" from="StateCamera/WeaponGetScreen" to="recorder" method="_on_weapon_defined"]
+[connection signal="weapon_defined" from="StateCamera/WeaponGetScreen" to="LevelModifier" method="_on_WeaponGetScreen_weapon_defined"]
+[connection signal="body_entered" from="Objects/BigTractor/AI/vision" to="Objects/BigTractor/AI" method="_on_vision_body_entered"]
+[connection signal="body_exited" from="Objects/BigTractor/AI/vision" to="Objects/BigTractor/AI" method="_on_vision_body_exited"]
+
+[editable path="X"]

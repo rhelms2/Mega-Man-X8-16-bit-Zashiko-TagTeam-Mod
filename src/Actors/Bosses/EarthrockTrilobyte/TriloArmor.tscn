@@ -1,0 +1,80 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://src/Actors/Bosses/EarthrockTrilobyte/trilobyte.res" type="SpriteFrames" id=1]
+[ext_resource path="res://src/Actors/Enemies/EnemyShield.gd" type="Script" id=2]
+[ext_resource path="res://src/Sounds/MMX - Enemy Helmet Hit.ogg" type="AudioStream" id=4]
+[ext_resource path="res://src/Actors/Bosses/EarthrockTrilobyte/ArmorBounce.gd" type="Script" id=5]
+[ext_resource path="res://src/Actors/Bosses/EarthrockTrilobyte/ArmorDashDetector.gd" type="Script" id=6]
+[ext_resource path="res://src/Actors/Bosses/EarthrockTrilobyte/ArmorAnimation.gd" type="Script" id=7]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=8]
+[ext_resource path="res://src/Sounds/BlastLaunch - Bounce.ogg" type="AudioStream" id=9]
+[ext_resource path="res://src/Actors/Bosses/EarthrockTrilobyte/TriloArmor.gd" type="Script" id=12]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 16, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 12, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 16, 10 )
+
+[node name="TriloArmor" type="KinematicBody2D"]
+collision_layer = 1048576
+script = ExtResource( 12 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -23 )
+frames = ExtResource( 1 )
+animation = "armor_idle"
+
+[node name="AnimationController" type="Node" parent="."]
+script = ExtResource( 7 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Bounce" type="Node2D" parent="."]
+script = ExtResource( 5 )
+
+[node name="bounce" type="AudioStreamPlayer2D" parent="Bounce"]
+stream = ExtResource( 9 )
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 8 )
+
+[node name="EnemyShield" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 2 )
+
+[node name="hittable_area" type="Area2D" parent="EnemyShield"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="EnemyShield/hittable_area"]
+shape = SubResource( 2 )
+
+[node name="hitSound" type="AudioStreamPlayer2D" parent="EnemyShield"]
+stream = ExtResource( 4 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="PlayerDetector" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 6 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="PlayerDetector"]
+shape = SubResource( 3 )
+
+[connection signal="spawned" from="." to="Bounce" method="_on_TriloArmor_spawned"]
+[connection signal="bounce" from="Bounce" to="." method="_on_bounce"]
+[connection signal="guard_broken" from="EnemyShield" to="Bounce" method="_on_guard_broken"]
+[connection signal="body_entered" from="PlayerDetector" to="PlayerDetector" method="_on_DashDetector_body_entered"]
+[connection signal="body_exited" from="PlayerDetector" to="PlayerDetector" method="_on_DashDetector_body_exited"]
+[connection signal="dash_detected" from="PlayerDetector" to="Bounce" method="_on_dash_detected"]
+[connection signal="jump_detected" from="PlayerDetector" to="Bounce" method="_on_jump_detected"]
+[connection signal="player_detected" from="PlayerDetector" to="Bounce" method="_on_player_detected"]

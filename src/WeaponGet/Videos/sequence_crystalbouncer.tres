@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://src/WeaponGet/MovementArray.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+presses = [ "right", "fire", "fire_release", "dash", "fire", "fire_release", "fire", "fire_release", "fire", "fire_release", "fire", "dash_release", "fire_release", "dash", "jump", "fire", "jump_release", "dash_release", "dash", "jump", "jump_release", "dash_release", "right_release", "fire_release", "jump", "right", "jump_release", "jump", "jump_release", "right_release" ]
+timings = [ 0.566667, 0.75, 0.85, 1.06667, 1.36667, 1.45, 1.55, 1.61667, 1.73333, 1.78333, 1.9, 1.95, 2.03333, 2.1, 2.23333, 2.53333, 2.66667, 2.68333, 3.03333, 3.28333, 3.48333, 3.56667, 4.25, 5.83333, 6.38333, 6.41667, 6.58333, 6.61667, 6.81667, 7.1 ]
+limit = 750

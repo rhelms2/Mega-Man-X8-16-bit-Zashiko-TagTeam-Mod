@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://addons/PaletteSwap/PaletteSwap.gdshader" type="Shader" id=1]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=2]
+[ext_resource path="res://src/Levels/Dynasty/dynasty_elec_pallette.png" type="Texture" id=3]
+[ext_resource path="res://src/Levels/Dynasty/elec_plat4.png" type="Texture" id=4]
+
+[sub_resource type="ShaderMaterial" id=1]
+shader = ExtResource( 1 )
+shader_param/skip_first_row = true
+shader_param/use_palette_alpha = false
+shader_param/fps = 16.0
+shader_param/palette = ExtResource( 3 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 39, 9.5 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 38, 2.25 )
+
+[node name="LongElecPlatform" type="Node2D"]
+
+[node name="sprite" type="Sprite" parent="."]
+material = SubResource( 1 )
+z_index = 3
+texture = ExtResource( 4 )
+
+[node name="staticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 0, -2 )
+z_index = 3
+collision_mask = 0
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="staticBody2D"]
+position = Vector2( 0, -3.5 )
+shape = SubResource( 2 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 2 )
+damage = 5.0
+
+[node name="area2D" type="Area2D" parent="DamageOnTouch"]
+position = Vector2( 0, -5 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="DamageOnTouch/area2D"]
+position = Vector2( 0, 11.75 )
+shape = SubResource( 3 )

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - StageSelect2 - Intro.ogg-ca4549bfbfab41bf99b12a0b5a140d14.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - StageSelect2 - Intro.ogg"
+dest_files=[ "res://.import/OST - StageSelect2 - Intro.ogg-ca4549bfbfab41bf99b12a0b5a140d14.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

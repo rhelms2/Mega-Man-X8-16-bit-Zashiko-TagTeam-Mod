@@ -1,0 +1,16 @@
+[remap]
+
+importer="csv_translation"
+type="Translation"
+
+[deps]
+
+files=[ "res://src/Localization/real_translations.en.translation", "res://src/Localization/real_translations.br.translation", "res://src/Localization/real_translations.es.translation", "res://src/Localization/real_translations.ja_JP.translation", "res://src/Localization/real_translations.pr.translation" ]
+
+source_file="res://src/Localization/real_translations.csv"
+dest_files=[ "res://src/Localization/real_translations.en.translation", "res://src/Localization/real_translations.br.translation", "res://src/Localization/real_translations.es.translation", "res://src/Localization/real_translations.ja_JP.translation", "res://src/Localization/real_translations.pr.translation" ]
+
+[params]
+
+compress=true
+delimiter=0

@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/Effects/Materials/gateway_mat.tres" type="Material" id=1]
+[ext_resource path="res://src/Levels/Gateway/GatewayRoosterTiled.tmx" type="PackedScene" id=2]
+
+[node name="GatewayRoosterTiled" instance=ExtResource( 2 )]
+
+[node name="Background" parent="." index="0"]
+material = ExtResource( 1 )
+
+[node name="Main" parent="." index="2"]
+material = ExtResource( 1 )

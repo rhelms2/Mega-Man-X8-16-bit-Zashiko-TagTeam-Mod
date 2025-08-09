@@ -1,0 +1,1114 @@
+[gd_scene load_steps=131 format=2]
+
+[ext_resource path="res://src/Actors/Player/x_sprites/x.res" type="SpriteFrames" id=1]
+[ext_resource path="res://src/Actors/Player.gd" type="Script" id=2]
+[ext_resource path="res://src/Sounds/JUMP.wav" type="AudioStream" id=3]
+[ext_resource path="res://Jump.gd" type="Script" id=4]
+[ext_resource path="res://Dash.gd" type="Script" id=5]
+[ext_resource path="res://src/Sounds/DASH.wav" type="AudioStream" id=6]
+[ext_resource path="res://Walk.gd" type="Script" id=7]
+[ext_resource path="res://src/Actors/Player/WeaponChanger.gd" type="Script" id=8]
+[ext_resource path="res://Walljump.gd" type="Script" id=9]
+[ext_resource path="res://src/Actors/Player/x_sprites/x_leftarm.res" type="SpriteFrames" id=10]
+[ext_resource path="res://Wallslide.gd" type="Script" id=11]
+[ext_resource path="res://src/Actors/Player/BossWeapons/DriftDiamond/DriftShoryukenDiamondWeapon.gd" type="Script" id=12]
+[ext_resource path="res://src/Actors/Player/Modules/Idle.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Damage.gd" type="Script" id=15]
+[ext_resource path="res://src/Sounds/DAMAGE.wav" type="AudioStream" id=16]
+[ext_resource path="res://DashJump.gd" type="Script" id=17]
+[ext_resource path="res://src/Actors/Player/Modules/Fall.tscn" type="PackedScene" id=18]
+[ext_resource path="res://AirDash.gd" type="Script" id=19]
+[ext_resource path="res://DashWallJump.gd" type="Script" id=20]
+[ext_resource path="res://src/Actors/Weapons/Lemon_Only.tscn" type="PackedScene" id=21]
+[ext_resource path="res://src/Actors/PrimaryShot.gd" type="Script" id=22]
+[ext_resource path="res://src/Effects/Materials/mat_x_armor.tres" type="Material" id=23]
+[ext_resource path="res://Charge.gd" type="Script" id=24]
+[ext_resource path="res://src/Actors/Weapons/AltFire.gd" type="Script" id=25]
+[ext_resource path="res://src/Actors/x_collision_box.tres" type="Shape2D" id=26]
+[ext_resource path="res://src/Sounds/CHARGE_MAX.wav" type="AudioStream" id=27]
+[ext_resource path="res://src/Actors/Enemy Collision Detector.gd" type="Script" id=28]
+[ext_resource path="res://src/Effects/Textures/old_lemon_hit.png" type="Texture" id=29]
+[ext_resource path="res://src/Effects/Textures/smoke.png" type="Texture" id=30]
+[ext_resource path="res://src/Effects/Textures/dash.png" type="Texture" id=31]
+[ext_resource path="res://src/Effects/Textures/charge_1.png" type="Texture" id=32]
+[ext_resource path="res://src/Effects/Textures/charge_2.png" type="Texture" id=33]
+[ext_resource path="res://src/Effects/Textures/airdash.png" type="Texture" id=34]
+[ext_resource path="res://SpriteEffect.gd" type="Script" id=35]
+[ext_resource path="res://src/Actors/Modules/Forced.gd" type="Script" id=36]
+[ext_resource path="res://src/Actors/Weapons/Hermes Buster.tscn" type="PackedScene" id=37]
+[ext_resource path="res://PlayerDeath.gd" type="Script" id=38]
+[ext_resource path="res://src/Sounds/11 - MMX - X Die.wav" type="AudioStream" id=39]
+[ext_resource path="res://src/Effects/Player Death.tscn" type="PackedScene" id=40]
+[ext_resource path="res://src/Effects/Textures/blue_screen.png" type="Texture" id=41]
+[ext_resource path="res://src/Actors/Modules/Ride.gd" type="Script" id=42]
+[ext_resource path="res://src/Actors/Weapons/Icarus Buster.tscn" type="PackedScene" id=43]
+[ext_resource path="res://src/Actors/Player/Subtank.tscn" type="PackedScene" id=44]
+[ext_resource path="res://src/Actors/Modules/ExtraDashJump.gd" type="Script" id=45]
+[ext_resource path="res://src/Actors/Player/x_sprites/arms.res" type="SpriteFrames" id=46]
+[ext_resource path="res://src/Actors/Player/Armor.gd" type="Script" id=47]
+[ext_resource path="res://src/Actors/Player/x_sprites/head.res" type="SpriteFrames" id=48]
+[ext_resource path="res://src/Actors/Player/x_sprites/body.res" type="SpriteFrames" id=49]
+[ext_resource path="res://src/Actors/Player/x_sprites/legs.res" type="SpriteFrames" id=50]
+[ext_resource path="res://src/Actors/Player/x_sprites/arms_point.res" type="SpriteFrames" id=51]
+[ext_resource path="res://src/Effects/Materials/mat_x_death.tres" type="Material" id=52]
+[ext_resource path="res://src/Effects/Materials/Player_Material_Shader.tres" type="Material" id=53]
+[ext_resource path="res://src/Actors/Player/ArmorPart.gd" type="Script" id=54]
+[ext_resource path="res://src/Actors/Player/Modules/JumpDamage.tscn" type="PackedScene" id=55]
+[ext_resource path="res://src/Actors/Modules/Intro.gd" type="Script" id=56]
+[ext_resource path="res://src/Sounds/17 - MMX - X Fade In.wav" type="AudioStream" id=57]
+[ext_resource path="res://src/Sounds/MM - Equip.wav" type="AudioStream" id=58]
+[ext_resource path="res://src/Actors/Player/Modules/LifeSteal.tscn" type="PackedScene" id=59]
+[ext_resource path="res://src/Actors/Player/BossWeapons/DriftDiamond/DriftDiamond.gd" type="Script" id=60]
+[ext_resource path="res://src/Actors/Player/SubtankManager.gd" type="Script" id=61]
+[ext_resource path="res://src/Objects/Pickups/Subtanks/subtank_CentralWhite.tres" type="Resource" id=62]
+[ext_resource path="res://src/Effects/Materials/duringimage_mat.tres" type="Material" id=63]
+[ext_resource path="res://src/Effects/Textures/follow_shot.png" type="Texture" id=64]
+[ext_resource path="res://src/Objects/Pickups/Subtanks/subtank_MetalValley.tres" type="Resource" id=65]
+[ext_resource path="res://src/Actors/Modules/Finish.gd" type="Script" id=66]
+[ext_resource path="res://src/Sounds/18 - MMX - X Fade Out.wav" type="AudioStream" id=67]
+[ext_resource path="res://src/Sounds/16 - MMX - X Upgrade Complete.wav" type="AudioStream" id=68]
+[ext_resource path="res://src/Objects/Pickups/Subtanks/subtank_Inferno.tres" type="Resource" id=69]
+[ext_resource path="res://src/Objects/Pickups/Subtanks/subtank_TroiaBase.tres" type="Resource" id=70]
+[ext_resource path="res://src/Actors/Player/BossWeapons/DriftDiamond/Drift Diamond.tres" type="Resource" id=71]
+[ext_resource path="res://src/Sounds/Yeti - Throw.ogg" type="AudioStream" id=72]
+[ext_resource path="res://src/Actors/Player/BossWeapon.gd" type="Script" id=73]
+[ext_resource path="res://src/Actors/Player/BossWeapons/DarkArrow/Dark Arrow.tres" type="Resource" id=74]
+[ext_resource path="res://src/Actors/WeaponStasis.gd" type="Script" id=75]
+[ext_resource path="res://src/Actors/Player/BossWeapons/FireDash/FireDash.gd" type="Script" id=76]
+[ext_resource path="res://src/Actors/Player/BossWeapons/FireDash/Fire Dash.tres" type="Resource" id=77]
+[ext_resource path="res://src/Actors/Player/BossWeapons/ThunderDancer/Thunder Dancer.tres" type="Resource" id=78]
+[ext_resource path="res://src/Actors/Player/BossWeapons/ThunderDancer/ThunderDancerWeapon.gd" type="Script" id=79]
+[ext_resource path="res://src/Effects/Materials/x_dash_smoke.tres" type="Material" id=80]
+[ext_resource path="res://src/Effects/Materials/x_walljump_particle.tres" type="Material" id=81]
+[ext_resource path="res://src/Effects/Materials/x_supercharged_particle.tres" type="Material" id=82]
+[ext_resource path="res://src/Effects/Materials/x_wallslide_smoke.tres" type="Material" id=83]
+[ext_resource path="res://src/Effects/Materials/x_charging_particle.tres" type="Material" id=84]
+[ext_resource path="res://src/Effects/Materials/x_charged_particle.tres" type="Material" id=85]
+[ext_resource path="res://src/Effects/Materials/x_dash_invinc_particles.tres" type="Material" id=86]
+[ext_resource path="res://src/Actors/CrushCheck.gd" type="Script" id=87]
+[ext_resource path="res://src/Actors/Player/BossWeapons/BlastLauncher/Blast Launcher.tres" type="Resource" id=88]
+[ext_resource path="res://src/Actors/Player/BossWeapons/CrystalBouncer/Crystal Bouncer.tres" type="Resource" id=89]
+[ext_resource path="res://src/Actors/Player/BossWeapons/OpticShield/Optic Shield.tres" type="Resource" id=90]
+[ext_resource path="res://src/Actors/Player/BossWeapons/OpticShield/OpticShieldWeapon.gd" type="Script" id=91]
+[ext_resource path="res://src/Actors/Player/BossWeapons/GigaCrash/GigaCrashWeapon.gd" type="Script" id=92]
+[ext_resource path="res://src/Actors/Player/BossWeapons/GigaCrash/CrashIllusion.tscn" type="PackedScene" id=93]
+[ext_resource path="res://src/Actors/Player/BossWeapons/GigaCrash/Giga Crash.tres" type="Resource" id=94]
+[ext_resource path="res://src/Effects/ShieldBreak/shieldbreak.res" type="SpriteFrames" id=95]
+[ext_resource path="res://src/Actors/Player/trail.gd" type="Script" id=96]
+[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=97]
+[ext_resource path="res://src/Actors/rotation_particle_disabler.gd" type="Script" id=98]
+[ext_resource path="res://src/Actors/Player/BossWeapons/SqueezeBomb/Squeeze Bomb.tres" type="Resource" id=99]
+[ext_resource path="res://src/Effects/Materials/mat_chargeparticle.tres" type="Material" id=100]
+[ext_resource path="res://src/Actors/Player/BossWeapons/XDrive/X Drive.tres" type="Resource" id=101]
+[ext_resource path="res://src/Actors/Player/BossWeapons/XDrive/XDrive.gd" type="Script" id=102]
+[ext_resource path="res://src/Sounds/MMX - Charge.wav" type="AudioStream" id=103]
+[ext_resource path="res://src/Effects/Materials/wallkick_sprite.tres" type="Material" id=104]
+[ext_resource path="res://src/Sounds/FX - Subtank Charge.ogg" type="AudioStream" id=105]
+[ext_resource path="res://src/Options/HotSwap.tscn" type="PackedScene" id=106]
+[ext_resource path="res://src/Actors/Player/Talk.gd" type="Script" id=107]
+[ext_resource path="res://src/Effects/Textures/hit_vfx.png" type="Texture" id=108]
+[ext_resource path="res://src/Actors/Bosses/Lumine/afterImages.gd" type="Script" id=109]
+[ext_resource path="res://src/Effects/Materials/mat_smokeparticle.tres" type="Material" id=110]
+[ext_resource path="res://src/Effects/Materials/mat_x_armor_5.tres" type="Material" id=111]
+[ext_resource path="res://src/Effects/Materials/mat_x_armor_2.tres" type="Material" id=112]
+[ext_resource path="res://src/Effects/Materials/mat_x_armor_3.tres" type="Material" id=113]
+[ext_resource path="res://src/Effects/Materials/mat_x_armor_4.tres" type="Material" id=114]
+[ext_resource path="res://src/Actors/Weapons/Projectiles/Icarus Lemon.tscn" type="PackedScene" id=115]
+[ext_resource path="res://src/Levels/PitchBlack/light.png" type="Texture" id=116]
+[ext_resource path="res://src/Actors/Bosses/SatanSigma/flash.gd" type="Script" id=117]
+[ext_resource path="res://src/Effects/Textures/elec_particles.png" type="Texture" id=118]
+[ext_resource path="res://src/Effects/Materials/xdrive_particles.tres" type="Material" id=119]
+
+[sub_resource type="RectangleShape2D" id=32]
+extents = Vector2( 6.995, 7 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 7, 8 )
+
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 108 )
+region = Rect2( 64, 56, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=39]
+atlas = ExtResource( 108 )
+region = Rect2( 0, 0, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 108 )
+region = Rect2( 64, 0, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 108 )
+region = Rect2( 128, 0, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 108 )
+region = Rect2( 0, 56, 64, 56 )
+
+[sub_resource type="SpriteFrames" id=44]
+animations = [ {
+"frames": [ null, SubResource( 43 ), null, SubResource( 43 ), null, SubResource( 43 ), null ],
+"loop": false,
+"name": "back",
+"speed": 31.0
+}, {
+"frames": [ SubResource( 39 ), null, SubResource( 40 ), null, SubResource( 41 ), null, SubResource( 42 ), null, SubResource( 39 ), null, SubResource( 40 ), null, SubResource( 41 ), null, SubResource( 42 ), null ],
+"loop": false,
+"name": "sparks",
+"speed": 32.0
+} ]
+
+[sub_resource type="Curve" id=33]
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 0.378906, 0.836364 ), 0.0, 0.0, 0, 0, Vector2( 0.835937, 0.572727 ), 3.4355, 3.4355, 0, 0, Vector2( 1, 0.563636 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="Gradient" id=34]
+offsets = PoolRealArray( 0, 0.631111, 0.831111, 1 )
+colors = PoolColorArray( 0.313726, 0, 0.72549, 0.419608, 0.0117647, 0.67451, 1, 0.560784, 0.537255, 1, 0.988235, 0.764706, 1, 1, 1, 1 )
+
+[sub_resource type="CanvasItemMaterial" id=45]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 3
+particles_anim_loop = false
+
+[sub_resource type="CanvasItemMaterial" id=31]
+particles_animation = true
+particles_anim_h_frames = 2
+particles_anim_v_frames = 2
+particles_anim_loop = false
+
+[node name="X" type="KinematicBody2D" groups=["Player"]]
+z_index = 2
+z_as_relative = false
+collision_layer = 8192
+collision_mask = 1073743617
+script = ExtResource( 2 )
+max_health = 16.0
+
+[node name="Armor" type="Node2D" parent="."]
+pause_mode = 2
+script = ExtResource( 47 )
+NeutralColor1 = Color( 0.909804, 0.878431, 0.25098, 1 )
+NeutralColor2 = Color( 0.945098, 0.6, 0.27451, 1 )
+NeutralColor3 = Color( 0.670588, 0.313726, 0.266667, 1 )
+HermesColor1 = Color( 0.470588, 0.847059, 0.941176, 1 )
+HermesColor2 = Color( 0.313726, 0.627451, 0.941176, 1 )
+HermesColor3 = Color( 0.0941176, 0.345098, 0.690196, 1 )
+IcarusColor1 = Color( 1, 0.611765, 0.301961, 1 )
+IcarusColor2 = Color( 0.921569, 0.301961, 0.0627451, 1 )
+IcarusColor3 = Color( 0.584314, 0.2, 0.290196, 1 )
+BodyColor1 = Color( 0.52549, 0.345098, 0.458824, 1 )
+BodyColor2 = Color( 0.34902, 0.211765, 0.298039, 1 )
+
+[node name="CrushCheck" type="Node2D" parent="."]
+script = ExtResource( 87 )
+ride_ability = NodePath("../Ride")
+
+[node name="death_up" type="RayCast2D" parent="CrushCheck"]
+modulate = Color( 0.172549, 1, 0, 1 )
+z_index = 11
+z_as_relative = false
+enabled = true
+cast_to = Vector2( 0, 15 )
+collision_mask = 257
+
+[node name="death_down" type="RayCast2D" parent="CrushCheck"]
+modulate = Color( 0.172549, 1, 0, 1 )
+z_index = 11
+z_as_relative = false
+enabled = true
+cast_to = Vector2( 0, -15 )
+collision_mask = 257
+
+[node name="death_right" type="RayCast2D" parent="CrushCheck"]
+modulate = Color( 0.172549, 1, 0, 1 )
+position = Vector2( 0, -8 )
+z_index = 11
+z_as_relative = false
+enabled = true
+cast_to = Vector2( 7, 0 )
+collision_mask = 257
+
+[node name="death_left" type="RayCast2D" parent="CrushCheck"]
+modulate = Color( 0.172549, 1, 0, 1 )
+position = Vector2( 0, -8 )
+z_index = 11
+z_as_relative = false
+enabled = true
+cast_to = Vector2( -7, 0 )
+collision_mask = 257
+
+[node name="death_right2" type="RayCast2D" parent="CrushCheck"]
+modulate = Color( 0.172549, 1, 0, 1 )
+position = Vector2( 0, 8 )
+z_index = 11
+z_as_relative = false
+enabled = true
+cast_to = Vector2( 7, 0 )
+collision_mask = 257
+
+[node name="death_left2" type="RayCast2D" parent="CrushCheck"]
+modulate = Color( 0.172549, 1, 0, 1 )
+position = Vector2( 0, 8 )
+z_index = 11
+z_as_relative = false
+enabled = true
+cast_to = Vector2( -7, 0 )
+collision_mask = 257
+
+[node name="Subtanks" type="Node" parent="."]
+pause_mode = 2
+script = ExtResource( 61 )
+
+[node name="Subtank 1" parent="Subtanks" instance=ExtResource( 44 )]
+subtank = ExtResource( 62 )
+
+[node name="Subtank 2" parent="Subtanks" instance=ExtResource( 44 )]
+subtank = ExtResource( 69 )
+
+[node name="Subtank 3" parent="Subtanks" instance=ExtResource( 44 )]
+subtank = ExtResource( 65 )
+
+[node name="Subtank 4" parent="Subtanks" instance=ExtResource( 44 )]
+subtank = ExtResource( 70 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 53 )
+position = Vector2( 0, -4 )
+z_index = 5
+frames = ExtResource( 1 )
+animation = "idle"
+frame = 40
+playing = true
+
+[node name="head_armor" type="AnimatedSprite" parent="animatedSprite"]
+visible = false
+material = ExtResource( 23 )
+frames = ExtResource( 48 )
+animation = "idle"
+script = ExtResource( 54 )
+
+[node name="body_armor" type="AnimatedSprite" parent="animatedSprite"]
+visible = false
+material = ExtResource( 112 )
+frames = ExtResource( 49 )
+animation = "idle"
+script = ExtResource( 54 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="arms_armor" type="AnimatedSprite" parent="animatedSprite"]
+visible = false
+material = ExtResource( 113 )
+frames = ExtResource( 46 )
+animation = "idle"
+script = ExtResource( 54 )
+
+[node name="cannon_armor" type="AnimatedSprite" parent="animatedSprite"]
+visible = false
+material = ExtResource( 114 )
+frames = ExtResource( 51 )
+animation = "shot"
+script = ExtResource( 54 )
+
+[node name="legs_armor" type="AnimatedSprite" parent="animatedSprite"]
+visible = false
+material = ExtResource( 111 )
+frames = ExtResource( 50 )
+animation = "idle"
+script = ExtResource( 54 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="animatedSprite"]
+visible = false
+position = Vector2( 0, 3.99 )
+scale = Vector2( 0.6, 1.6 )
+
+[node name="Dash Smoke Particles" type="Particles2D" parent="animatedSprite"]
+material = ExtResource( 110 )
+position = Vector2( -10, 17.99 )
+z_index = 1
+emitting = false
+amount = 11
+lifetime = 0.75
+local_coords = false
+process_material = ExtResource( 80 )
+texture = ExtResource( 30 )
+
+[node name="particle_disabler" type="Node" parent="animatedSprite/Dash Smoke Particles"]
+script = ExtResource( 98 )
+
+[node name="WallSlide Particles" type="Particles2D" parent="animatedSprite"]
+material = ExtResource( 110 )
+position = Vector2( -14, 10.99 )
+z_index = 1
+emitting = false
+amount = 6
+lifetime = 0.55
+local_coords = false
+process_material = ExtResource( 83 )
+texture = ExtResource( 30 )
+
+[node name="particle_disabler" type="Node" parent="animatedSprite/WallSlide Particles"]
+script = ExtResource( 98 )
+
+[node name="WallJump Particle" type="Particles2D" parent="animatedSprite"]
+material = ExtResource( 104 )
+position = Vector2( 14, 17 )
+z_index = 1
+emitting = false
+amount = 1
+lifetime = 0.03
+one_shot = true
+local_coords = false
+process_material = ExtResource( 81 )
+texture = ExtResource( 29 )
+
+[node name="ChargingParticle" type="Particles2D" parent="animatedSprite"]
+pause_mode = 2
+visible = false
+material = ExtResource( 100 )
+position = Vector2( 0, 3.99 )
+z_index = 4
+amount = 1
+lifetime = 0.3
+process_material = ExtResource( 84 )
+texture = ExtResource( 32 )
+
+[node name="ChargedParticle" type="Particles2D" parent="animatedSprite"]
+pause_mode = 2
+visible = false
+material = ExtResource( 100 )
+position = Vector2( 0, 3.99 )
+z_index = 4
+amount = 1
+lifetime = 0.3
+process_material = ExtResource( 85 )
+texture = ExtResource( 33 )
+
+[node name="SuperChargeParticle" type="Particles2D" parent="animatedSprite"]
+pause_mode = 2
+visible = false
+material = ExtResource( 100 )
+position = Vector2( 0, 3.99 )
+z_index = 4
+amount = 1
+lifetime = 0.3
+process_material = ExtResource( 82 )
+texture = ExtResource( 33 )
+
+[node name="Talk" type="Node" parent="animatedSprite"]
+script = ExtResource( 107 )
+_animatedSprite = NodePath("..")
+
+[node name="afterImages" type="Node" parent="animatedSprite"]
+script = ExtResource( 109 )
+frequency = 0.055
+duration = 0.35
+initial_color = Color( 0.435294, 0.419608, 0.913725, 0.47451 )
+final_color = Color( 0.258824, 0.172549, 0.576471, 0 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = ExtResource( 26 )
+
+[node name="Enemy Collision Detector" type="KinematicBody2D" parent="." groups=["Player"]]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource( 28 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy Collision Detector"]
+modulate = Color( 1, 0.913725, 0, 1 )
+position = Vector2( 0, -8 )
+shape = SubResource( 32 )
+
+[node name="DashShape" type="CollisionShape2D" parent="Enemy Collision Detector"]
+modulate = Color( 0.756863, 0, 1, 1 )
+position = Vector2( 0, 7 )
+shape = SubResource( 4 )
+
+[node name="_raycasts" type="Node2D" parent="."]
+visible = false
+
+[node name="Wallcheck Right" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 2, -15 )
+enabled = true
+cast_to = Vector2( 6, 0 )
+collision_mask = 1537
+
+[node name="Wallcheck Right2" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 2, 0 )
+enabled = true
+cast_to = Vector2( 6, 0 )
+collision_mask = 1537
+
+[node name="Wallcheck Right3" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 2, 14.95 )
+enabled = true
+cast_to = Vector2( 6, 0 )
+collision_mask = 1537
+
+[node name="Wallcheck Left" type="RayCast2D" parent="_raycasts"]
+position = Vector2( -2, -15 )
+enabled = true
+cast_to = Vector2( -6, 0 )
+collision_mask = 1537
+
+[node name="Wallcheck Left2" type="RayCast2D" parent="_raycasts"]
+position = Vector2( -2, 0 )
+enabled = true
+exclude_parent = false
+cast_to = Vector2( -6, 0 )
+collision_mask = 1537
+
+[node name="Wallcheck Left3" type="RayCast2D" parent="_raycasts"]
+position = Vector2( -2, 14.95 )
+enabled = true
+cast_to = Vector2( -6, 0 )
+collision_mask = 1537
+
+[node name="WallJumpCast Right" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 2, -14 )
+enabled = true
+cast_to = Vector2( 13, 0 )
+collision_mask = 1537
+
+[node name="WallJumpCast Right2" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 2, 0 )
+enabled = true
+cast_to = Vector2( 13, 0 )
+collision_mask = 1537
+
+[node name="WallJumpCast Right3" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 2, 15 )
+enabled = true
+cast_to = Vector2( 13, 0 )
+collision_mask = 1537
+
+[node name="WallJumpCast Left" type="RayCast2D" parent="_raycasts"]
+position = Vector2( -2, -14 )
+enabled = true
+cast_to = Vector2( -13, 0 )
+collision_mask = 1537
+
+[node name="WallJumpCast Left2" type="RayCast2D" parent="_raycasts"]
+position = Vector2( -2, 0 )
+enabled = true
+cast_to = Vector2( -13, 0 )
+collision_mask = 1537
+
+[node name="WallJumpCast Left3" type="RayCast2D" parent="_raycasts"]
+position = Vector2( -2, 15 )
+enabled = true
+cast_to = Vector2( -13, 0 )
+collision_mask = 1537
+
+[node name="Groundcheck" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 0, 15 )
+enabled = true
+cast_to = Vector2( 0, 8 )
+
+[node name="_crush_raycasts" type="Node2D" parent="."]
+visible = false
+
+[node name="Shot Position" type="Node2D" parent="."]
+position = Vector2( 18, -2 )
+
+[node name="WeaponChanger" type="Node2D" parent="."]
+script = ExtResource( 8 )
+active = true
+
+[node name="HotSwap" parent="WeaponChanger" instance=ExtResource( 106 )]
+
+[node name="Intro" type="Node2D" parent="."]
+pause_mode = 2
+script = ExtResource( 56 )
+__meta__ = {
+"_editor_description_": ""
+}
+conflicting_moves = [ "Finish" ]
+actions = [ "Event" ]
+animation = "beam"
+sound = ExtResource( 57 )
+start_event = "intro_x"
+global_event = true
+force_start = true
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer2D" parent="Intro"]
+volume_db = -14.0
+max_distance = 600.0
+bus = "SFX"
+
+[node name="audioStreamPlayer2" type="AudioStreamPlayer2D" parent="Intro"]
+stream = ExtResource( 58 )
+volume_db = -9.0
+pitch_scale = 1.19
+max_distance = 600.0
+bus = "SFX"
+
+[node name="Death" type="Node2D" parent="."]
+pause_mode = 2
+script = ExtResource( 38 )
+actions = [ "Event" ]
+animation = "damage"
+sound = ExtResource( 39 )
+
+[node name="X Death Particles" parent="Death" instance=ExtResource( 40 )]
+z_index = 15
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer2D" parent="Death"]
+volume_db = -10.0
+bus = "SFX"
+
+[node name="background_light" type="Sprite" parent="Death"]
+visible = false
+material = ExtResource( 52 )
+position = Vector2( 5.99998, 7.49999 )
+scale = Vector2( 100, 40 )
+z_index = 100
+z_as_relative = false
+texture = ExtResource( 41 )
+
+[node name="Forced" type="Node2D" parent="."]
+script = ExtResource( 36 )
+conflicting_moves = [ "Damage", "Death", "Forced", "Ride" ]
+actions = [ "Event" ]
+start_event = "force_movement"
+force_start = true
+
+[node name="WeaponStasis" type="Node2D" parent="."]
+script = ExtResource( 75 )
+conflicting_moves = [ "Damage", "Death", "Forced", "Ride" ]
+actions = [ "Event" ]
+start_event = "weapon_stasis"
+
+[node name="Ride" type="Node2D" parent="."]
+script = ExtResource( 42 )
+actions = [ "Event" ]
+
+[node name="LifeSteal" parent="." instance=ExtResource( 59 )]
+debug_logs = false
+first_decay = 1.5
+lifesteal_decay = 0.65
+minimum_time_between_heals = 0.33
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 15 )
+conflicting_moves = [ "Death", "WallSlide", "Ride" ]
+actions = [ "Event" ]
+animation = "damage"
+sound = ExtResource( 16 )
+horizontal_velocity = 45.0
+jump_velocity = 190.0
+invulnerability_time = 1.75
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="Damage"]
+pause_mode = 2
+bus = "SFX"
+
+[node name="sparks" type="AnimatedSprite" parent="Damage"]
+position = Vector2( 0, -8 )
+z_index = 5
+frames = SubResource( 44 )
+animation = "sparks"
+frame = 15
+playing = true
+
+[node name="back" type="AnimatedSprite" parent="Damage"]
+visible = false
+position = Vector2( 0, -8 )
+frames = SubResource( 44 )
+animation = "back"
+frame = 6
+playing = true
+
+[node name="Shot" type="Node2D" parent="."]
+script = ExtResource( 22 )
+__meta__ = {
+"_editor_description_": ""
+}
+conflicting_moves = [ "Death", "WeaponStasis", "Damage", "Ride", "Nothing" ]
+actions = [ "fire" ]
+normal_sprites = ExtResource( 1 )
+arm_pointing_sprites = ExtResource( 10 )
+
+[node name="Icarus Buster" parent="Shot" instance=ExtResource( 43 )]
+active = false
+
+[node name="Hermes Buster" parent="Shot" instance=ExtResource( 37 )]
+
+[node name="OpticShield" type="Node" parent="Shot"]
+script = ExtResource( 91 )
+can_buffer = false
+weapon = ExtResource( 90 )
+
+[node name="SqueezeBomb" type="Node" parent="Shot"]
+script = ExtResource( 73 )
+can_buffer = false
+weapon = ExtResource( 99 )
+
+[node name="DarkArrow" type="Node" parent="Shot"]
+script = ExtResource( 73 )
+weapon = ExtResource( 74 )
+
+[node name="ThunderDancer" type="Node" parent="Shot"]
+script = ExtResource( 79 )
+weapon = ExtResource( 78 )
+horizontal_speed = 1000.0
+
+[node name="BlastLauncher" type="Node" parent="Shot"]
+script = ExtResource( 73 )
+weapon = ExtResource( 88 )
+
+[node name="CrystalBouncer" type="Node" parent="Shot"]
+script = ExtResource( 60 )
+weapon = ExtResource( 89 )
+number_of_shots = 3
+speed = 420
+step = 120
+
+[node name="DriftDiamond" type="Node" parent="Shot"]
+script = ExtResource( 12 )
+__meta__ = {
+"_editor_description_": ""
+}
+weapon = ExtResource( 71 )
+
+[node name="FireDash" type="Node" parent="Shot"]
+script = ExtResource( 76 )
+can_buffer = false
+weapon = ExtResource( 77 )
+dash_speed = Vector2( 280, 280 )
+
+[node name="GigaCrash" type="Node2D" parent="Shot"]
+script = ExtResource( 92 )
+__meta__ = {
+"_editor_description_": ""
+}
+active = false
+shots = [ ExtResource( 93 ) ]
+max_shots_alive = 1
+max_charged_shots_alive = 1
+max_ammo = 60.0
+ammo_per_shot = 60.0
+MainColor1 = Color( 0.823529, 0.388235, 0.388235, 1 )
+MainColor2 = Color( 0.52549, 0.345098, 0.458824, 1 )
+MainColor3 = Color( 0.34902, 0.211765, 0.298039, 1 )
+MainColor4 = Color( 0.470588, 0.941176, 0.917647, 1 )
+MainColor5 = Color( 0.239216, 0.698039, 0.756863, 1 )
+MainColor6 = Color( 0.0784314, 0.439216, 0.490196, 1 )
+weapon = ExtResource( 94 )
+
+[node name="break_vfx" type="AnimatedSprite" parent="Shot/GigaCrash"]
+modulate = Color( 1, 0.258824, 0.258824, 0.654902 )
+position = Vector2( -1, 3 )
+z_index = 25
+frames = ExtResource( 95 )
+frame = 9
+playing = true
+
+[node name="XDrive" type="Node2D" parent="Shot"]
+script = ExtResource( 102 )
+__meta__ = {
+"_editor_description_": ""
+}
+active = false
+shots = [ ExtResource( 93 ) ]
+max_shots_alive = 1
+max_charged_shots_alive = 1
+max_ammo = 60.0
+ammo_per_shot = 0.0
+MainColor1 = Color( 0.313726, 0.627451, 0.941176, 1 )
+MainColor2 = Color( 0.0941176, 0.345098, 0.690196, 1 )
+MainColor3 = Color( 0.054902, 0.231373, 0.47451, 1 )
+MainColor4 = Color( 0.470588, 0.847059, 0.941176, 1 )
+MainColor5 = Color( 0.313726, 0.627451, 0.941176, 1 )
+MainColor6 = Color( 0.0941176, 0.345098, 0.690196, 1 )
+weapon = ExtResource( 101 )
+
+[node name="break_vfx" type="AnimatedSprite" parent="Shot/XDrive"]
+modulate = Color( 0.258824, 0.705882, 1, 0.654902 )
+position = Vector2( -1, 3 )
+z_index = 25
+frames = ExtResource( 95 )
+frame = 9
+playing = true
+
+[node name="node" type="Node" parent="Shot/XDrive"]
+
+[node name="trail" type="Line2D" parent="Shot/XDrive/node"]
+visible = false
+z_index = 6
+z_as_relative = false
+width = 8.0
+width_curve = SubResource( 33 )
+gradient = SubResource( 34 )
+script = ExtResource( 96 )
+length = 10
+
+[node name="activate" type="AudioStreamPlayer2D" parent="Shot/XDrive"]
+stream = ExtResource( 58 )
+volume_db = -9.0
+pitch_scale = 1.19
+max_distance = 600.0
+bus = "SFX"
+
+[node name="flash" type="Sprite" parent="Shot/XDrive"]
+pause_mode = 2
+visible = false
+modulate = Color( 0.741176, 0.592157, 0.909804, 1 )
+scale = Vector2( 10, 5 )
+z_index = -1
+texture = ExtResource( 116 )
+script = ExtResource( 117 )
+initial_alpha = 0.8
+tween_scale_y = false
+final_color = Color( 0, 0.552941, 1, 1 )
+duration = 0.16
+
+[node name="particles2D" type="Particles2D" parent="Shot/XDrive"]
+modulate = Color( 1, 1, 1, 0.941176 )
+material = SubResource( 45 )
+emitting = false
+amount = 6
+lifetime = 0.5
+explosiveness = 0.1
+local_coords = false
+process_material = ExtResource( 119 )
+texture = ExtResource( 118 )
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="Shot"]
+pause_mode = 2
+volume_db = -10.0
+bus = "SFX"
+
+[node name="label" type="Label" parent="Shot"]
+visible = false
+margin_left = 21.0
+margin_right = 61.0
+margin_bottom = 14.0
+
+[node name="charge" type="AudioStreamPlayer" parent="Shot"]
+stream = ExtResource( 105 )
+volume_db = -8.0
+pitch_scale = 0.94
+bus = "SFX"
+
+[node name="Charge" type="Node2D" parent="."]
+script = ExtResource( 24 )
+conflicting_moves = [ "Death", "WeaponStasis", "Nothing" ]
+actions = [ "fire" ]
+sound = ExtResource( 103 )
+super_charged_sound = ExtResource( 27 )
+color = Color( 0, 0.25098, 0.941176, 1 )
+super_color = Color( 0.282353, 0.533333, 0.698039, 1 )
+minimum_charge_time = 0.75
+level_3_charge = 2.0
+level_4_charge = 3.0
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="Charge"]
+pause_mode = 2
+volume_db = -13.5
+bus = "SFX"
+
+[node name="audioStreamPlayer2" type="AudioStreamPlayer" parent="Charge"]
+pause_mode = 2
+volume_db = -14.0
+bus = "SFX"
+
+[node name="AltFire" type="Node2D" parent="."]
+script = ExtResource( 25 )
+__meta__ = {
+"_editor_description_": ""
+}
+conflicting_moves = [ "Death", "WeaponStasis", "Damage", "Ride", "Nothing" ]
+actions = [ "alt_fire" ]
+normal_sprites = ExtResource( 1 )
+arm_pointing_sprites = ExtResource( 10 )
+
+[node name="Buster" parent="AltFire" instance=ExtResource( 21 )]
+
+[node name="Icarus Buster" parent="AltFire" instance=ExtResource( 43 )]
+active = false
+shots = [ ExtResource( 115 ) ]
+max_charged_shots_alive = 0
+
+[node name="DashWallJump" type="Node2D" parent="."]
+script = ExtResource( 20 )
+conflicting_moves = [ "DashWallJump", "WallJump", "AirDash" ]
+actions = [ "jump" ]
+animation = "walljump"
+sound = ExtResource( 3 )
+horizontal_velocity = 210.0
+shot_pos_adjust = Vector2( 4, 0 )
+leeway_time = 0.0
+minimum_upwards_time = 0.235
+start_delay = 0.116
+move_away_duration = 0.134
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="DashWallJump"]
+pause_mode = 2
+stream = ExtResource( 72 )
+bus = "SFX"
+
+[node name="WallJump" type="Node2D" parent="."]
+script = ExtResource( 9 )
+conflicting_moves = [ "WallJump", "DashWallJump", "AirDash" ]
+actions = [ "jump" ]
+animation = "walljump"
+sound = ExtResource( 3 )
+shot_pos_adjust = Vector2( 4, 0 )
+leeway_time = 0.0
+minimum_upwards_time = 0.235
+start_delay = 0.116
+move_away_duration = 0.15
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="WallJump"]
+pause_mode = 2
+bus = "SFX"
+
+[node name="AirDash" type="Node2D" parent="."]
+script = ExtResource( 19 )
+conflicting_moves = [ "DashWallJump", "WallJump", "WallSlide", "DashJump", "AirDash", "AirJump" ]
+actions = [ "dash" ]
+animation = "dash"
+sound = ExtResource( 6 )
+horizontal_velocity = 210.0
+dash_duration = 0.475
+leeway = 0.0
+shot_pos_adjust = Vector2( 14, 4 )
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="AirDash"]
+pause_mode = 2
+volume_db = -0.676
+bus = "SFX"
+
+[node name="dash_particle" type="Sprite" parent="AirDash"]
+visible = false
+position = Vector2( -16, 4 )
+z_index = 45
+texture = ExtResource( 34 )
+hframes = 3
+vframes = 2
+script = ExtResource( 35 )
+animation_speed = 32.0
+one_shot = true
+
+[node name="disabler" type="Node" parent="AirDash/dash_particle"]
+script = ExtResource( 97 )
+make_invisible = true
+undo_on_rotation_end = false
+
+[node name="duringImage" type="AnimatedSprite" parent="AirDash"]
+visible = false
+modulate = Color( 0, 0.65098, 0.776471, 0.552941 )
+material = ExtResource( 63 )
+position = Vector2( 0, -4 )
+z_index = 4
+frames = ExtResource( 1 )
+animation = "dash"
+frame = 15
+playing = true
+
+[node name="particles2D" type="Particles2D" parent="AirDash"]
+pause_mode = 1
+material = SubResource( 31 )
+position = Vector2( 0, -1 )
+z_index = 4
+emitting = false
+amount = 5
+lifetime = 0.35
+local_coords = false
+process_material = ExtResource( 86 )
+texture = ExtResource( 64 )
+
+[node name="disabler" type="Node" parent="AirDash/particles2D"]
+script = ExtResource( 97 )
+fade_out = true
+
+[node name="label" type="Label" parent="AirDash"]
+visible = false
+margin_left = -8.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = -18.0
+text = "3w"
+
+[node name="WallSlide" type="Node2D" parent="."]
+script = ExtResource( 11 )
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="WallSlide"]
+pause_mode = 2
+bus = "SFX"
+
+[node name="DashJump" type="Node2D" parent="."]
+script = ExtResource( 17 )
+conflicting_moves = [ "WallSlide", "WallJump", "DashWallJump", "AirJump", "AirDash" ]
+actions = [ "jump" ]
+animation = "jump"
+sound = ExtResource( 3 )
+horizontal_velocity = 210.0
+shot_pos_adjust = Vector2( 4, 0 )
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="DashJump"]
+pause_mode = 2
+bus = "SFX"
+
+[node name="Jump" type="Node2D" parent="."]
+script = ExtResource( 4 )
+conflicting_moves = [ "DashJump", "WallSlide", "AirDash", "WallJump", "DashWallJump", "AirJump" ]
+actions = [ "jump" ]
+animation = "jump"
+sound = ExtResource( 3 )
+shot_pos_adjust = Vector2( 4, 0 )
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="Jump"]
+pause_mode = 2
+bus = "SFX"
+
+[node name="AirJump" type="Node2D" parent="."]
+script = ExtResource( 45 )
+__meta__ = {
+"_editor_description_": ""
+}
+conflicting_moves = [ "WallSlide", "AirDash" ]
+actions = [ "jump" ]
+animation = "jump"
+sound = ExtResource( 3 )
+jump_velocity = 190.0
+shot_pos_adjust = Vector2( 4, 0 )
+leeway_time = 0.0
+fullspeed_proportion = 0.3
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="AirJump"]
+pause_mode = 2
+bus = "SFX"
+
+[node name="jump_particle" type="Sprite" parent="AirJump"]
+visible = false
+position = Vector2( 0, 24 )
+rotation = -1.5708
+scale = Vector2( 0.35, 1 )
+z_index = 45
+texture = ExtResource( 34 )
+hframes = 3
+vframes = 2
+script = ExtResource( 35 )
+animation_speed = 48.0
+one_shot = true
+
+[node name="disabler" type="Node" parent="AirJump/jump_particle"]
+script = ExtResource( 97 )
+fade_out = true
+
+[node name="Dash" type="Node2D" parent="."]
+script = ExtResource( 5 )
+conflicting_moves = [ "Jump", "DashJump", "WallJump", "WallSlide", "AirDash" ]
+actions = [ "dash" ]
+animation = "dash"
+sound = ExtResource( 6 )
+horizontal_velocity = 210.0
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="Dash"]
+pause_mode = 2
+volume_db = -0.676
+bus = "SFX"
+
+[node name="dash_particle" type="Sprite" parent="Dash"]
+visible = false
+position = Vector2( -22, 0 )
+z_index = 45
+texture = ExtResource( 31 )
+hframes = 3
+vframes = 2
+script = ExtResource( 35 )
+animation_speed = 24.0
+one_shot = true
+
+[node name="disabler" type="Node" parent="Dash/dash_particle"]
+script = ExtResource( 97 )
+make_invisible = true
+undo_on_rotation_end = false
+
+[node name="duringImage" type="AnimatedSprite" parent="Dash"]
+visible = false
+modulate = Color( 0, 0.65098, 0.776471, 0.552941 )
+material = ExtResource( 63 )
+position = Vector2( 0, -4 )
+z_index = 4
+frames = ExtResource( 1 )
+animation = "dash"
+frame = 15
+playing = true
+
+[node name="particles2D" type="Particles2D" parent="Dash"]
+pause_mode = 1
+material = SubResource( 31 )
+position = Vector2( 0, -1 )
+z_index = 4
+emitting = false
+amount = 5
+lifetime = 0.35
+local_coords = false
+process_material = ExtResource( 86 )
+texture = ExtResource( 64 )
+
+[node name="disabler" type="Node" parent="Dash/particles2D"]
+script = ExtResource( 97 )
+fade_out = true
+
+[node name="Walk" type="Node2D" parent="."]
+script = ExtResource( 7 )
+conflicting_moves = [ "Dash", "Jump", "WallJump", "DashJump", "Fall" ]
+actions = [ "move_right", "move_left" ]
+animation = "walk"
+
+[node name="Fall" parent="." instance=ExtResource( 18 )]
+
+[node name="Idle" parent="." instance=ExtResource( 14 )]
+
+[node name="JumpDamage" parent="." instance=ExtResource( 55 )]
+
+[node name="Finish" type="Node2D" parent="."]
+pause_mode = 2
+script = ExtResource( 66 )
+__meta__ = {
+"_editor_description_": ""
+}
+actions = [ "Event" ]
+animation = "idle"
+start_event = "stage_clear"
+global_event = true
+force_start = true
+beam_speed = 640.0
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer2D" parent="Finish"]
+stream = ExtResource( 68 )
+volume_db = -8.0
+max_distance = 600.0
+bus = "SFX"
+
+[node name="audioStreamPlayer2" type="AudioStreamPlayer2D" parent="Finish"]
+stream = ExtResource( 67 )
+volume_db = -6.555
+pitch_scale = 1.19
+max_distance = 600.0
+bus = "SFX"
+
+[node name="label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+
+[node name="lowjumpcast" type="Label" parent="."]
+visible = false
+margin_left = -53.0
+margin_top = 2.0
+margin_right = -13.0
+margin_bottom = 16.0
+text = "x"
+
+[connection signal="at_max_hp" from="." to="Damage" method="set_death_protection"]
+[connection signal="zero_health" from="." to="animatedSprite/afterImages" method="deactivate"]
+[connection signal="max_subtank_used" from="Subtanks" to="Damage" method="set_death_protection"]
+[connection signal="ability_start" from="Forced" to="Shot/DriftDiamond" method="_on_Forced_ability_start"]
+[connection signal="activated" from="Shot/XDrive" to="animatedSprite/afterImages" method="activate"]
+[connection signal="deactivated" from="Shot/XDrive" to="animatedSprite/afterImages" method="deactivate"]

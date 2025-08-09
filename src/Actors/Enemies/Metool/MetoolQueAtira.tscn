@@ -1,0 +1,187 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://src/Actors/Enemies/AI.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Modules/Enemy/Enemy.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Modules/Enemy/EnemyDamage.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/Enemies/Shared/QuickEnemyDeath.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=5]
+[ext_resource path="res://src/Actors/Enemies/SmallCrab/CrabPatrol.gd" type="Script" id=6]
+[ext_resource path="res://src/Actors/Enemies/EnemyStun.gd" type="Script" id=9]
+[ext_resource path="res://src/Actors/Enemies/Metool/FullShield.gd" type="Script" id=10]
+[ext_resource path="res://src/Actors/Enemies/Metool/HideShot.gd" type="Script" id=11]
+[ext_resource path="res://src/Effects/enemy_shader.tres" type="Shader" id=13]
+[ext_resource path="res://src/Sounds/EXPLOSION.wav" type="AudioStream" id=14]
+[ext_resource path="res://src/Sounds/HIT.wav" type="AudioStream" id=17]
+[ext_resource path="res://src/Sounds/MMX - Enemy Helmet Hit.ogg" type="AudioStream" id=18]
+[ext_resource path="res://src/Effects/ShieldBreak/shieldbreak.res" type="SpriteFrames" id=19]
+[ext_resource path="res://src/Sounds/LEMON_SHOT2.wav" type="AudioStream" id=20]
+[ext_resource path="res://src/Actors/Enemies/Metool/Shot.gd" type="Script" id=21]
+[ext_resource path="res://src/Actors/Enemies/SimpleProjectile.tscn" type="PackedScene" id=22]
+[ext_resource path="res://src/Actors/Enemies/Metool/metool_queatira.res" type="SpriteFrames" id=23]
+
+[sub_resource type="RectangleShape2D" id=58]
+extents = Vector2( 158, 18 )
+
+[sub_resource type="ShaderMaterial" id=49]
+resource_local_to_scene = true
+shader = ExtResource( 13 )
+shader_param/Flash = 0.0
+shader_param/Should_Blink = 0.0
+shader_param/Darken = 1.0
+shader_param/Alpha = 1.0
+shader_param/Alpha_Blink = 0.0
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 12, 10 )
+
+[sub_resource type="RectangleShape2D" id=57]
+extents = Vector2( 12, 6 )
+
+[sub_resource type="RectangleShape2D" id=56]
+extents = Vector2( 9, 10 )
+
+[node name="MetoolQueatira" type="KinematicBody2D" groups=["Enemies"]]
+collision_layer = 0
+collision_mask = 513
+script = ExtResource( 2 )
+max_health = 2.0
+
+[node name="AI" type="Node2D" parent="."]
+script = ExtResource( 1 )
+on_idle = [ NodePath("../Patrol") ]
+on_see_player = [ NodePath("../Hide"), NodePath("../EnemyShot") ]
+on_guard_break = [ NodePath("../EnemyStun") ]
+
+[node name="vision" type="Area2D" parent="AI"]
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="AI/vision"]
+position = Vector2( 0, -6 )
+shape = SubResource( 58 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = SubResource( 49 )
+z_index = 1
+frames = ExtResource( 23 )
+animation = "defense"
+frame = 14
+playing = true
+flip_h = true
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 15 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+scale = Vector2( 2, 2 )
+rect = Rect2( -5, -5, 10, 10 )
+
+[node name="EnemyShield" type="Node2D" parent="."]
+script = ExtResource( 10 )
+active = false
+
+[node name="hittable_area" type="Area2D" parent="EnemyShield"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="EnemyShield/hittable_area"]
+position = Vector2( 0, 4 )
+shape = SubResource( 57 )
+
+[node name="hitSound" type="AudioStreamPlayer2D" parent="EnemyShield"]
+stream = ExtResource( 18 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+shape = SubResource( 56 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 5 )
+damage = 3.0
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 3 )
+ignore_hits_if_shield = true
+bypass_hit_invulnerable = true
+max_freeze_hits = 1
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+stream = ExtResource( 17 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="EnemyDeath" parent="." instance=ExtResource( 4 )]
+
+[node name="EnemyStun" type="Node2D" parent="."]
+script = ExtResource( 9 )
+debug_logs = true
+conflicting_moves = [ "EnemyStun" ]
+actions = [ "Event" ]
+animation = "stun"
+reactivate_shield_on_end = false
+stun_duration = 1.65
+recover_animation = ""
+
+[node name="break_vfx" type="AnimatedSprite" parent="EnemyStun"]
+modulate = Color( 1, 1, 1, 0.670588 )
+position = Vector2( 12, 0 )
+z_index = 25
+frames = ExtResource( 19 )
+frame = 9
+
+[node name="break_sound" type="AudioStreamPlayer2D" parent="EnemyStun"]
+stream = ExtResource( 14 )
+volume_db = -8.0
+pitch_scale = 0.78
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="Hide" type="Node2D" parent="."]
+script = ExtResource( 11 )
+conflicting_moves = [ "EnemyStun" ]
+actions = [ "Event" ]
+animation = "defense"
+horizontal_velocity = 120.0
+
+[node name="Patrol" type="Node2D" parent="."]
+script = ExtResource( 6 )
+conflicting_moves = [ "Hide", "EnemyShot", "EnemyStun", "Anything" ]
+actions = [ "Event" ]
+animation = "walk"
+random_turn = false
+travel_time = 0.8
+travel_speed = 25.0
+rest_time = 2.0
+
+[node name="EnemyShot" type="Node2D" parent="."]
+script = ExtResource( 21 )
+conflicting_moves = [ "Hide", "EnemyStun" ]
+actions = [ "Event" ]
+animation = "shot_prepare"
+projectile = ExtResource( 22 )
+
+[node name="shot_sound" type="AudioStreamPlayer2D" parent="EnemyShot"]
+stream = ExtResource( 20 )
+volume_db = -5.466
+pitch_scale = 1.47
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="shot_position" type="Node2D" parent="EnemyShot"]
+
+[connection signal="body_entered" from="AI/vision" to="AI" method="_on_vision_body_entered"]
+[connection signal="body_exited" from="AI/vision" to="AI" method="_on_vision_body_exited"]

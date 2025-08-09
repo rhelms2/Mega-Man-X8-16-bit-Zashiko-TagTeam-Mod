@@ -1,0 +1,1525 @@
+[gd_scene load_steps=36 format=2]
+
+[ext_resource path="res://src/Fonts/Xclassicfont.fnt" type="BitmapFont" id=1]
+[ext_resource path="res://src/Fonts/X8Bossfont.fnt" type="BitmapFont" id=2]
+[ext_resource path="res://src/Options/Language.gd" type="Script" id=3]
+[ext_resource path="res://src/Options/Highlighter.gd" type="Script" id=4]
+[ext_resource path="res://src/Options/Fullscreen.gd" type="Script" id=5]
+[ext_resource path="res://src/Options/CoverScreen.gd" type="Script" id=6]
+[ext_resource path="res://src/Options/KeyBinder/KeyConfig.gd" type="Script" id=7]
+[ext_resource path="res://src/Options/KeymapExit.gd" type="Script" id=8]
+[ext_resource path="res://System/SFX/option_b_select.ogg" type="AudioStream" id=9]
+[ext_resource path="res://src/Options/pause_bg.png" type="Texture" id=10]
+[ext_resource path="res://src/Options/DashOption.gd" type="Script" id=11]
+[ext_resource path="res://src/Options/VolumeButton.gd" type="Script" id=12]
+[ext_resource path="res://src/Options/FPS.gd" type="Script" id=13]
+[ext_resource path="res://src/Options/Size.gd" type="Script" id=14]
+[ext_resource path="res://src/Options/DebugOption.gd" type="Script" id=15]
+[ext_resource path="res://src/Options/ResetConfigs.gd" type="Script" id=16]
+[ext_resource path="res://src/Options/ChargeFadeOut.gd" type="Script" id=17]
+[ext_resource path="res://src/Options/KeyBinder/scrollbar.tres" type="Theme" id=18]
+[ext_resource path="res://src/Options/Vsync.gd" type="Script" id=19]
+[ext_resource path="res://src/Options/SkipDialogOption.gd" type="Script" id=20]
+[ext_resource path="res://src/Options/CRTButton.gd" type="Script" id=21]
+[ext_resource path="res://src/Options/AchievButton.gd" type="Script" id=22]
+[ext_resource path="res://src/Options/clearachiev.gd" type="Script" id=23]
+[ext_resource path="res://System/IGT/Options/Option_GatewaySkip.gd" type="Script" id=24]
+[ext_resource path="res://System/IGT/Options/Option_IGT.gd" type="Script" id=25]
+[ext_resource path="res://System/SFX/error.ogg" type="AudioStream" id=26]
+[ext_resource path="res://System/SFX/option_select.ogg" type="AudioStream" id=27]
+[ext_resource path="res://Remix/Options/Option_Remix.gd" type="Script" id=28]
+[ext_resource path="res://src/Options/Option_BossTheme.gd" type="Script" id=29]
+[ext_resource path="res://src/Options/FPS_Physics.gd" type="Script" id=30]
+[ext_resource path="res://src/Options/NewGamePlus.gd" type="Script" id=31]
+[ext_resource path="res://src/Sounds/FX - Cancel.ogg" type="AudioStream" id=32]
+[ext_resource path="res://src/Options/exittomainmenu.gd" type="Script" id=33]
+[ext_resource path="res://src/Options/Stretch_Mode.gd" type="Script" id=34]
+
+[sub_resource type="ShortCut" id=1]
+
+[node name="OptionsMenu" type="CanvasLayer"]
+pause_mode = 2
+layer = 2
+script = ExtResource( 7 )
+menu_path = NodePath("Menu")
+initial_focus = NodePath("Menu/exit")
+exit_action = "ui_cancel"
+exit_action_2 = "pause"
+start_emit_event = "update_options"
+
+[node name="Menu" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="bg" type="TextureRect" parent="Menu"]
+modulate = Color( 0.101961, 0.101961, 0.101961, 1 )
+margin_right = 398.0
+margin_bottom = 224.0
+texture = ExtResource( 10 )
+
+[node name="Title" type="Control" parent="Menu"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -30.0
+margin_top = 5.0
+margin_right = 30.0
+margin_bottom = 21.0
+rect_min_size = Vector2( 0, 16 )
+
+[node name="detail" type="Label" parent="Menu/Title"]
+modulate = Color( 0.2, 0.247059, 0.415686, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -44.5
+margin_top = -7.0
+margin_right = 44.5
+margin_bottom = 9.0
+custom_colors/font_color_shadow = Color( 0.372549, 0.372549, 0.372549, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "-               -"
+align = 1
+uppercase = true
+
+[node name="text" type="Label" parent="Menu/Title"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -61.0
+margin_top = -7.0
+margin_right = 60.0
+margin_bottom = 9.0
+custom_colors/font_color_shadow = Color( 0.372549, 0.372549, 0.372549, 1 )
+custom_fonts/font = ExtResource( 2 )
+text = "OPTIONS_TITLE"
+align = 1
+uppercase = true
+
+[node name="scrollContainer" type="ScrollContainer" parent="Menu"]
+margin_left = 96.0
+margin_top = 31.0
+margin_right = 346.0
+margin_bottom = 194.0
+theme = ExtResource( 18 )
+follow_focus = true
+
+[node name="OptionHolder" type="VBoxContainer" parent="Menu/scrollContainer"]
+margin_right = 200.0
+margin_bottom = 219.0
+grow_horizontal = 2
+custom_constants/separation = 3
+
+[node name="Language" type="Control" parent="Menu/scrollContainer/OptionHolder"]
+margin_right = 200.0
+margin_bottom = 8.0
+rect_min_size = Vector2( 200, 8 )
+size_flags_horizontal = 0
+script = ExtResource( 4 )
+objects_to_light = [ NodePath("OptionName") ]
+focus_group = [ NodePath("Button") ]
+idle_color = Color( 0.407843, 0.792157, 1, 1 )
+focus_color = Color( 0.984314, 1, 0.686275, 1 )
+
+[node name="OptionName" type="Label" parent="Menu/scrollContainer/OptionHolder/Language"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -9.0
+margin_right = 92.0
+margin_bottom = 5.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "LANGUAGE_OPTION"
+uppercase = true
+
+[node name="Button" type="TextureButton" parent="Menu/scrollContainer/OptionHolder/Language"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -6.0
+margin_bottom = 2.0
+rect_min_size = Vector2( 0, 8 )
+focus_neighbour_top = NodePath("../../../../exit")
+action_mode = 0
+shortcut = SubResource( 1 )
+script = ExtResource( 3 )
+menu_path = NodePath("../../../../..")
+
+[node name="Value" type="Label" parent="Menu/scrollContainer/OptionHolder/Language/Button"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -135.0
+margin_top = -7.0
+margin_bottom = 7.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "Value"
+align = 2
+valign = 1
+uppercase = true
+
+[node name="BossThemeRemix" type="Control" parent="Menu/scrollContainer/OptionHolder"]
+margin_top = 11.0
+margin_right = 200.0
+margin_bottom = 19.0
+rect_min_size = Vector2( 200, 8 )
+size_flags_horizontal = 0
+script = ExtResource( 4 )
+objects_to_light = [ NodePath("OptionName") ]
+focus_group = [ NodePath("Button") ]
+idle_color = Color( 0.407843, 0.792157, 1, 1 )
+focus_color = Color( 0.984314, 1, 0.686275, 1 )
+
+[node name="OptionName" type="Label" parent="Menu/scrollContainer/OptionHolder/BossThemeRemix"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -9.0
+margin_right = 92.0
+margin_bottom = 5.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "BOSS_REMIX_OPTION"
+uppercase = true
+
+[node name="Button" type="TextureButton" parent="Menu/scrollContainer/OptionHolder/BossThemeRemix"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -6.0
+margin_bottom = 2.0
+rect_min_size = Vector2( 0, 8 )
+action_mode = 0
+shortcut = SubResource( 1 )
+script = ExtResource( 29 )
+menu_path = NodePath("../../../../..")
+
+[node name="Value" type="Label" parent="Menu/scrollContainer/OptionHolder/BossThemeRemix/Button"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -135.0
+margin_top = -7.0
+margin_bottom = 7.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "VALUE"
+align = 2
+valign = 1
+uppercase = true
+
+[node name="RemixMusic" type="Control" parent="Menu/scrollContainer/OptionHolder"]
+visible = false
+margin_top = 22.0
+margin_right = 200.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 200, 8 )
+size_flags_horizontal = 0
+script = ExtResource( 4 )
+objects_to_light = [ NodePath("OptionName") ]
+focus_group = [ NodePath("Button") ]
+idle_color = Color( 0.407843, 0.792157, 1, 1 )
+focus_color = Color( 0.984314, 1, 0.686275, 1 )
+
+[node name="OptionName" type="Label" parent="Menu/scrollContainer/OptionHolder/RemixMusic"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -9.0
+margin_right = 92.0
+margin_bottom = 5.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "REMIX_OPTION"
+uppercase = true
+
+[node name="Button" type="TextureButton" parent="Menu/scrollContainer/OptionHolder/RemixMusic"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -6.0
+margin_bottom = 2.0
+rect_min_size = Vector2( 0, 8 )
+action_mode = 0
+shortcut = SubResource( 1 )
+script = ExtResource( 28 )
+menu_path = NodePath("../../../../..")
+
+[node name="Value" type="Label" parent="Menu/scrollContainer/OptionHolder/RemixMusic/Button"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -135.0
+margin_top = -7.0
+margin_bottom = 7.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "VALUE"
+align = 2
+valign = 1
+uppercase = true
+
+[node name="Dash Command" type="Control" parent="Menu/scrollContainer/OptionHolder"]
+margin_top = 22.0
+margin_right = 200.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 200, 8 )
+size_flags_horizontal = 0
+script = ExtResource( 4 )
+objects_to_light = [ NodePath("OptionName") ]
+focus_group = [ NodePath("Button") ]
+idle_color = Color( 0.407843, 0.792157, 1, 1 )
+focus_color = Color( 0.984314, 1, 0.686275, 1 )
+
+[node name="OptionName" type="Label" parent="Menu/scrollContainer/OptionHolder/Dash Command"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -9.0
+margin_right = 92.0
+margin_bottom = 5.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "DT_DASH_OPTION"
+uppercase = true
+
+[node name="Button" type="TextureButton" parent="Menu/scrollContainer/OptionHolder/Dash Command"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -6.0
+margin_bottom = 2.0
+rect_min_size = Vector2( 0, 8 )
+action_mode = 0
+shortcut = SubResource( 1 )
+script = ExtResource( 11 )
+menu_path = NodePath("../../../../..")
+
+[node name="Value" type="Label" parent="Menu/scrollContainer/OptionHolder/Dash Command/Button"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -135.0
+margin_top = -7.0
+margin_bottom = 7.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "Value"
+align = 2
+valign = 1
+uppercase = true
+
+[node name="Skip Dialogs" type="Control" parent="Menu/scrollContainer/OptionHolder"]
+margin_top = 33.0
+margin_right = 200.0
+margin_bottom = 41.0
+rect_min_size = Vector2( 200, 8 )
+size_flags_horizontal = 0
+script = ExtResource( 4 )
+objects_to_light = [ NodePath("OptionName") ]
+focus_group = [ NodePath("Button") ]
+idle_color = Color( 0.407843, 0.792157, 1, 1 )
+focus_color = Color( 0.984314, 1, 0.686275, 1 )
+
+[node name="OptionName" type="Label" parent="Menu/scrollContainer/OptionHolder/Skip Dialogs"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -9.0
+margin_right = 92.0
+margin_bottom = 5.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "SKIP_DIAG_OPTION"
+uppercase = true
+
+[node name="Button" type="TextureButton" parent="Menu/scrollContainer/OptionHolder/Skip Dialogs"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -6.0
+margin_bottom = 2.0
+rect_min_size = Vector2( 0, 8 )
+action_mode = 0
+shortcut = SubResource( 1 )
+script = ExtResource( 20 )
+menu_path = NodePath("../../../../..")
+
+[node name="Value" type="Label" parent="Menu/scrollContainer/OptionHolder/Skip Dialogs/Button"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -135.0
+margin_top = -7.0
+margin_bottom = 7.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "Value"
+align = 2
+valign = 1
+uppercase = true
+
+[node name="Charge Fadeout" type="Control" parent="Menu/scrollContainer/OptionHolder"]
+margin_top = 44.0
+margin_right = 200.0
+margin_bottom = 52.0
+rect_min_size = Vector2( 200, 8 )
+size_flags_horizontal = 0
+script = ExtResource( 4 )
+objects_to_light = [ NodePath("OptionName") ]
+focus_group = [ NodePath("Button") ]
+idle_color = Color( 0.407843, 0.792157, 1, 1 )
+focus_color = Color( 0.984314, 1, 0.686275, 1 )
+
+[node name="OptionName" type="Label" parent="Menu/scrollContainer/OptionHolder/Charge Fadeout"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -9.0
+margin_right = 92.0
+margin_bottom = 5.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "CHARGE_OPTION"
+uppercase = true
+
+[node name="Button" type="TextureButton" parent="Menu/scrollContainer/OptionHolder/Charge Fadeout"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -6.0
+margin_bottom = 2.0
+rect_min_size = Vector2( 0, 8 )
+action_mode = 0
+shortcut = SubResource( 1 )
+script = ExtResource( 17 )
+menu_path = NodePath("../../../../..")
+
+[node name="Value" type="Label" parent="Menu/scrollContainer/OptionHolder/Charge Fadeout/Button"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -135.0
+margin_top = -7.0
+margin_bottom = 7.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "Value"
+align = 2
+valign = 1
+uppercase = true
+
+[node name="Show Achiev" type="Control" parent="Menu/scrollContainer/OptionHolder"]
+margin_top = 55.0
+margin_right = 200.0
+margin_bottom = 63.0
+rect_min_size = Vector2( 200, 8 )
+size_flags_horizontal = 0
+script = ExtResource( 4 )
+objects_to_light = [ NodePath("OptionName") ]
+focus_group = [ NodePath("Button") ]
+idle_color = Color( 0.407843, 0.792157, 1, 1 )
+focus_color = Color( 0.984314, 1, 0.686275, 1 )
+
+[node name="OptionName" type="Label" parent="Menu/scrollContainer/OptionHolder/Show Achiev"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -9.0
+margin_right = 92.0
+margin_bottom = 5.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "ACHIEV_OPTION"
+uppercase = true
+
+[node name="Button" type="TextureButton" parent="Menu/scrollContainer/OptionHolder/Show Achiev"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -6.0
+margin_bottom = 2.0
+rect_min_size = Vector2( 0, 8 )
+action_mode = 0
+shortcut = SubResource( 1 )
+script = ExtResource( 22 )
+menu_path = NodePath("../../../../..")
+
+[node name="Value" type="Label" parent="Menu/scrollContainer/OptionHolder/Show Achiev/Button"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -135.0
+margin_top = -7.0
+margin_bottom = 7.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "Value"
+align = 2
+valign = 1
+uppercase = true
+
+[node name="Music Volume" type="Control" parent="Menu/scrollContainer/OptionHolder"]
+margin_top = 66.0
+margin_right = 200.0
+margin_bottom = 74.0
+rect_min_size = Vector2( 200, 8 )
+size_flags_horizontal = 0
+script = ExtResource( 4 )
+objects_to_light = [ NodePath("OptionName") ]
+focus_group = [ NodePath("Button") ]
+idle_color = Color( 0.407843, 0.792157, 1, 1 )
+focus_color = Color( 0.984314, 1, 0.686275, 1 )
+
+[node name="OptionName" type="Label" parent="Menu/scrollContainer/OptionHolder/Music Volume"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -9.0
+margin_right = 92.0
+margin_bottom = 5.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "MUSIC_OPTION"
+uppercase = true
+
+[node name="Button" type="TextureButton" parent="Menu/scrollContainer/OptionHolder/Music Volume"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -6.0
+margin_bottom = 2.0
+rect_min_size = Vector2( 0, 8 )
+action_mode = 0
+shortcut = SubResource( 1 )
+script = ExtResource( 12 )
+menu_path = NodePath("../../../../..")
+
+[node name="Value" type="Label" parent="Menu/scrollContainer/OptionHolder/Music Volume/Button"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -135.0
+margin_top = -7.0
+margin_bottom = 7.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "Value"
+align = 2
+valign = 1
+uppercase = true
+
+[node name="Sound Volume" type="Control" parent="Menu/scrollContainer/OptionHolder"]
+margin_top = 77.0
+margin_right = 200.0
+margin_bottom = 85.0
+rect_min_size = Vector2( 200, 8 )
+size_flags_horizontal = 0
+script = ExtResource( 4 )
+objects_to_light = [ NodePath("OptionName") ]
+focus_group = [ NodePath("Button") ]
+idle_color = Color( 0.407843, 0.792157, 1, 1 )
+focus_color = Color( 0.984314, 1, 0.686275, 1 )
+
+[node name="OptionName" type="Label" parent="Menu/scrollContainer/OptionHolder/Sound Volume"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -9.0
+margin_right = 92.0
+margin_bottom = 5.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "SOUND_OPTION"
+uppercase = true
+
+[node name="Button" type="TextureButton" parent="Menu/scrollContainer/OptionHolder/Sound Volume"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -6.0
+margin_bottom = 2.0
+rect_min_size = Vector2( 0, 8 )
+action_mode = 0
+shortcut = SubResource( 1 )
+script = ExtResource( 12 )
+menu_path = NodePath("../../../../..")
+key = "SFX"
+
+[node name="Value" type="Label" parent="Menu/scrollContainer/OptionHolder/Sound Volume/Button"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -135.0
+margin_top = -7.0
+margin_bottom = 7.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "Value"
+align = 2
+valign = 1
+uppercase = true
+
+[node name="Vsync" type="Control" parent="Menu/scrollContainer/OptionHolder"]
+margin_top = 88.0
+margin_right = 200.0
+margin_bottom = 96.0
+rect_min_size = Vector2( 200, 8 )
+size_flags_horizontal = 0
+script = ExtResource( 4 )
+objects_to_light = [ NodePath("OptionName") ]
+focus_group = [ NodePath("Button") ]
+idle_color = Color( 0.407843, 0.792157, 1, 1 )
+focus_color = Color( 0.984314, 1, 0.686275, 1 )
+
+[node name="OptionName" type="Label" parent="Menu/scrollContainer/OptionHolder/Vsync"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -9.0
+margin_right = 92.0
+margin_bottom = 5.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "VSync"
+uppercase = true
+
+[node name="Button" type="TextureButton" parent="Menu/scrollContainer/OptionHolder/Vsync"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -6.0
+margin_bottom = 2.0
+rect_min_size = Vector2( 0, 8 )
+action_mode = 0
+shortcut = SubResource( 1 )
+script = ExtResource( 19 )
+menu_path = NodePath("../../../../..")
+
+[node name="Value" type="Label" parent="Menu/scrollContainer/OptionHolder/Vsync/Button"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -135.0
+margin_top = -7.0
+margin_bottom = 7.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "Value"
+align = 2
+valign = 1
+uppercase = true
+
+[node name="FPS" type="Control" parent="Menu/scrollContainer/OptionHolder"]
+margin_top = 99.0
+margin_right = 200.0
+margin_bottom = 107.0
+rect_min_size = Vector2( 200, 8 )
+size_flags_horizontal = 0
+script = ExtResource( 4 )
+objects_to_light = [ NodePath("OptionName") ]
+focus_group = [ NodePath("Button") ]
+idle_color = Color( 0.407843, 0.792157, 1, 1 )
+focus_color = Color( 0.984314, 1, 0.686275, 1 )
+
+[node name="OptionName" type="Label" parent="Menu/scrollContainer/OptionHolder/FPS"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -9.0
+margin_right = 92.0
+margin_bottom = 5.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "FPS_OPTION"
+uppercase = true
+
+[node name="Button" type="TextureButton" parent="Menu/scrollContainer/OptionHolder/FPS"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -6.0
+margin_bottom = 2.0
+rect_min_size = Vector2( 0, 8 )
+action_mode = 0
+shortcut = SubResource( 1 )
+script = ExtResource( 13 )
+menu_path = NodePath("../../../../..")
+
+[node name="Value" type="Label" parent="Menu/scrollContainer/OptionHolder/FPS/Button"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -135.0
+margin_top = -7.0
+margin_bottom = 7.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "Value"
+align = 2
+valign = 1
+uppercase = true
+
+[node name="FPS Physics" type="Control" parent="Menu/scrollContainer/OptionHolder"]
+margin_top = 110.0
+margin_right = 200.0
+margin_bottom = 118.0
+rect_min_size = Vector2( 200, 8 )
+size_flags_horizontal = 0
+script = ExtResource( 4 )
+objects_to_light = [ NodePath("OptionName") ]
+focus_group = [ NodePath("Button") ]
+idle_color = Color( 0.407843, 0.792157, 1, 1 )
+focus_color = Color( 0.984314, 1, 0.686275, 1 )
+
+[node name="OptionName" type="Label" parent="Menu/scrollContainer/OptionHolder/FPS Physics"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -9.0
+margin_right = 92.0
+margin_bottom = 5.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "FPS_PHYSICS_OPTION"
+uppercase = true
+
+[node name="Button" type="TextureButton" parent="Menu/scrollContainer/OptionHolder/FPS Physics"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -6.0
+margin_bottom = 2.0
+rect_min_size = Vector2( 0, 8 )
+action_mode = 0
+shortcut = SubResource( 1 )
+script = ExtResource( 30 )
+menu_path = NodePath("../../../../..")
+
+[node name="Value" type="Label" parent="Menu/scrollContainer/OptionHolder/FPS Physics/Button"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -135.0
+margin_top = -7.0
+margin_bottom = 7.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "Value"
+align = 2
+valign = 1
+uppercase = true
+
+[node name="Window Size" type="Control" parent="Menu/scrollContainer/OptionHolder"]
+margin_top = 121.0
+margin_right = 200.0
+margin_bottom = 129.0
+rect_min_size = Vector2( 200, 8 )
+size_flags_horizontal = 0
+script = ExtResource( 4 )
+objects_to_light = [ NodePath("OptionName") ]
+focus_group = [ NodePath("Button") ]
+idle_color = Color( 0.407843, 0.792157, 1, 1 )
+focus_color = Color( 0.984314, 1, 0.686275, 1 )
+
+[node name="OptionName" type="Label" parent="Menu/scrollContainer/OptionHolder/Window Size"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -9.0
+margin_right = 92.0
+margin_bottom = 5.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "WSIZE_OPTION"
+uppercase = true
+
+[node name="Button" type="TextureButton" parent="Menu/scrollContainer/OptionHolder/Window Size"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -6.0
+margin_bottom = 2.0
+rect_min_size = Vector2( 0, 8 )
+action_mode = 0
+shortcut = SubResource( 1 )
+script = ExtResource( 14 )
+menu_path = NodePath("../../../../..")
+
+[node name="Value" type="Label" parent="Menu/scrollContainer/OptionHolder/Window Size/Button"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -135.0
+margin_top = -7.0
+margin_bottom = 7.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "Value"
+align = 2
+valign = 1
+uppercase = true
+
+[node name="Fullscreen" type="Control" parent="Menu/scrollContainer/OptionHolder"]
+margin_top = 132.0
+margin_right = 200.0
+margin_bottom = 140.0
+rect_min_size = Vector2( 200, 8 )
+size_flags_horizontal = 0
+script = ExtResource( 4 )
+objects_to_light = [ NodePath("OptionName") ]
+focus_group = [ NodePath("Button") ]
+idle_color = Color( 0.407843, 0.792157, 1, 1 )
+focus_color = Color( 0.984314, 1, 0.686275, 1 )
+
+[node name="OptionName" type="Label" parent="Menu/scrollContainer/OptionHolder/Fullscreen"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -9.0
+margin_right = 92.0
+margin_bottom = 5.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "FULLSCREEN_OPTION"
+uppercase = true
+
+[node name="Button" type="TextureButton" parent="Menu/scrollContainer/OptionHolder/Fullscreen"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -6.0
+margin_bottom = 2.0
+rect_min_size = Vector2( 0, 8 )
+action_mode = 0
+shortcut = SubResource( 1 )
+script = ExtResource( 5 )
+menu_path = NodePath("../../../../..")
+
+[node name="Value" type="Label" parent="Menu/scrollContainer/OptionHolder/Fullscreen/Button"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -135.0
+margin_top = -7.0
+margin_bottom = 7.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "Value"
+align = 2
+valign = 1
+uppercase = true
+
+[node name="Stretch Mode" type="Control" parent="Menu/scrollContainer/OptionHolder"]
+margin_top = 143.0
+margin_right = 200.0
+margin_bottom = 151.0
+rect_min_size = Vector2( 200, 8 )
+size_flags_horizontal = 0
+script = ExtResource( 4 )
+objects_to_light = [ NodePath("OptionName") ]
+focus_group = [ NodePath("Button") ]
+idle_color = Color( 0.407843, 0.792157, 1, 1 )
+focus_color = Color( 0.984314, 1, 0.686275, 1 )
+
+[node name="OptionName" type="Label" parent="Menu/scrollContainer/OptionHolder/Stretch Mode"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -9.0
+margin_right = 92.0
+margin_bottom = 5.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "STRETCH_OPTION"
+uppercase = true
+
+[node name="Button" type="TextureButton" parent="Menu/scrollContainer/OptionHolder/Stretch Mode"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -6.0
+margin_bottom = 2.0
+rect_min_size = Vector2( 0, 8 )
+action_mode = 0
+shortcut = SubResource( 1 )
+script = ExtResource( 34 )
+menu_path = NodePath("../../../../..")
+
+[node name="Value" type="Label" parent="Menu/scrollContainer/OptionHolder/Stretch Mode/Button"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -135.0
+margin_top = -7.0
+margin_bottom = 7.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "Value"
+align = 2
+valign = 1
+uppercase = true
+
+[node name="CRT" type="Control" parent="Menu/scrollContainer/OptionHolder"]
+margin_top = 154.0
+margin_right = 200.0
+margin_bottom = 162.0
+rect_min_size = Vector2( 200, 8 )
+size_flags_horizontal = 0
+script = ExtResource( 4 )
+objects_to_light = [ NodePath("OptionName") ]
+focus_group = [ NodePath("Button") ]
+idle_color = Color( 0.407843, 0.792157, 1, 1 )
+focus_color = Color( 0.984314, 1, 0.686275, 1 )
+
+[node name="OptionName" type="Label" parent="Menu/scrollContainer/OptionHolder/CRT"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -9.0
+margin_right = 92.0
+margin_bottom = 5.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "CRT_OPTION"
+uppercase = true
+
+[node name="Button" type="TextureButton" parent="Menu/scrollContainer/OptionHolder/CRT"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -6.0
+margin_bottom = 2.0
+rect_min_size = Vector2( 0, 8 )
+action_mode = 0
+shortcut = SubResource( 1 )
+script = ExtResource( 21 )
+menu_path = NodePath("../../../../..")
+
+[node name="Value" type="Label" parent="Menu/scrollContainer/OptionHolder/CRT/Button"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -135.0
+margin_top = -7.0
+margin_bottom = 7.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "Value"
+align = 2
+valign = 1
+uppercase = true
+
+[node name="SkipGateway" type="Control" parent="Menu/scrollContainer/OptionHolder"]
+margin_top = 165.0
+margin_right = 200.0
+margin_bottom = 173.0
+rect_min_size = Vector2( 200, 8 )
+size_flags_horizontal = 0
+script = ExtResource( 4 )
+objects_to_light = [ NodePath("OptionName") ]
+focus_group = [ NodePath("Button") ]
+idle_color = Color( 0.407843, 0.792157, 1, 1 )
+focus_color = Color( 0.984314, 1, 0.686275, 1 )
+
+[node name="OptionName" type="Label" parent="Menu/scrollContainer/OptionHolder/SkipGateway"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -9.0
+margin_right = 92.0
+margin_bottom = 5.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "GATEWAYSKIP_OPTION"
+uppercase = true
+
+[node name="Button" type="TextureButton" parent="Menu/scrollContainer/OptionHolder/SkipGateway"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -6.0
+margin_bottom = 2.0
+rect_min_size = Vector2( 0, 8 )
+action_mode = 0
+shortcut = SubResource( 1 )
+script = ExtResource( 24 )
+menu_path = NodePath("../../../../..")
+
+[node name="Value" type="Label" parent="Menu/scrollContainer/OptionHolder/SkipGateway/Button"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -135.0
+margin_top = -7.0
+margin_bottom = 7.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "VALUE"
+align = 2
+valign = 1
+uppercase = true
+
+[node name="ShowIGT" type="Control" parent="Menu/scrollContainer/OptionHolder"]
+margin_top = 176.0
+margin_right = 200.0
+margin_bottom = 184.0
+rect_min_size = Vector2( 200, 8 )
+size_flags_horizontal = 0
+script = ExtResource( 4 )
+objects_to_light = [ NodePath("OptionName") ]
+focus_group = [ NodePath("Button") ]
+idle_color = Color( 0.407843, 0.792157, 1, 1 )
+focus_color = Color( 0.984314, 1, 0.686275, 1 )
+
+[node name="OptionName" type="Label" parent="Menu/scrollContainer/OptionHolder/ShowIGT"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -9.0
+margin_right = 92.0
+margin_bottom = 5.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "SHOWIGT_OPTION"
+uppercase = true
+
+[node name="Button" type="TextureButton" parent="Menu/scrollContainer/OptionHolder/ShowIGT"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -6.0
+margin_bottom = 2.0
+rect_min_size = Vector2( 0, 8 )
+action_mode = 0
+shortcut = SubResource( 1 )
+script = ExtResource( 25 )
+menu_path = NodePath("../../../../..")
+
+[node name="Value" type="Label" parent="Menu/scrollContainer/OptionHolder/ShowIGT/Button"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -135.0
+margin_top = -7.0
+margin_bottom = 7.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "VALUE"
+align = 2
+valign = 1
+uppercase = true
+
+[node name="ShowDebug" type="Control" parent="Menu/scrollContainer/OptionHolder"]
+visible = false
+margin_top = 165.0
+margin_right = 200.0
+margin_bottom = 173.0
+rect_min_size = Vector2( 200, 8 )
+size_flags_horizontal = 0
+script = ExtResource( 4 )
+objects_to_light = [ NodePath("OptionName") ]
+focus_group = [ NodePath("Button") ]
+idle_color = Color( 0.407843, 0.792157, 1, 1 )
+focus_color = Color( 0.984314, 1, 0.686275, 1 )
+
+[node name="OptionName" type="Label" parent="Menu/scrollContainer/OptionHolder/ShowDebug"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -9.0
+margin_right = 92.0
+margin_bottom = 5.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "DEBUG_OPTION"
+uppercase = true
+
+[node name="Button" type="TextureButton" parent="Menu/scrollContainer/OptionHolder/ShowDebug"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -200.0
+margin_top = -6.0
+margin_bottom = 2.0
+rect_min_size = Vector2( 0, 8 )
+action_mode = 0
+shortcut = SubResource( 1 )
+script = ExtResource( 15 )
+menu_path = NodePath("../../../../..")
+
+[node name="Value" type="Label" parent="Menu/scrollContainer/OptionHolder/ShowDebug/Button"]
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = -135.0
+margin_top = -7.0
+margin_bottom = 7.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "VALUE"
+align = 2
+valign = 1
+uppercase = true
+
+[node name="exittomainmenu" type="TextureButton" parent="Menu/scrollContainer/OptionHolder"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_top = 187.0
+margin_right = 200.0
+margin_bottom = 195.0
+rect_min_size = Vector2( 200, 8 )
+action_mode = 0
+script = ExtResource( 33 )
+idle_color = Color( 0.407843, 0.792157, 1, 1 )
+focus_color = Color( 0.984314, 1, 0.686275, 1 )
+menu_path = NodePath("../../../..")
+default_label = "EXIT_MAINMENU"
+
+[node name="text" type="Label" parent="Menu/scrollContainer/OptionHolder/exittomainmenu"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -7.0
+margin_right = 189.0
+margin_bottom = 7.0
+rect_min_size = Vector2( 200, 0 )
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "EXIT_MAINMENU"
+align = 1
+uppercase = true
+
+[node name="newgameplus" type="TextureButton" parent="Menu/scrollContainer/OptionHolder"]
+visible = false
+modulate = Color( 0.0745098, 0.466667, 0.0745098, 1 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_top = 187.0
+margin_right = 200.0
+margin_bottom = 195.0
+rect_min_size = Vector2( 200, 8 )
+action_mode = 0
+script = ExtResource( 31 )
+idle_color = Color( 0.0745098, 0.466667, 0.0745098, 1 )
+focus_color = Color( 0.447059, 0.882353, 0, 1 )
+menu_path = NodePath("../../../..")
+confirmation = "CLEARSAVE_CONFIRM"
+
+[node name="text" type="Label" parent="Menu/scrollContainer/OptionHolder/newgameplus"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -7.0
+margin_right = 200.0
+margin_bottom = 7.0
+rect_min_size = Vector2( 200, 0 )
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "NEWGAME_OPTION"
+align = 1
+uppercase = true
+
+[node name="clearsave" type="TextureButton" parent="Menu/scrollContainer/OptionHolder"]
+modulate = Color( 0.466667, 0.0745098, 0.0745098, 1 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_top = 198.0
+margin_right = 200.0
+margin_bottom = 206.0
+rect_min_size = Vector2( 0, 8 )
+action_mode = 0
+script = ExtResource( 16 )
+idle_color = Color( 0.466667, 0.0745098, 0.0745098, 1 )
+focus_color = Color( 1, 0.447059, 0, 1 )
+menu_path = NodePath("../../../..")
+
+[node name="text" type="Label" parent="Menu/scrollContainer/OptionHolder/clearsave"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -7.0
+margin_right = 189.0
+margin_bottom = 7.0
+rect_min_size = Vector2( 200, 0 )
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "CLEARSAVE_OPTION"
+align = 1
+uppercase = true
+
+[node name="clearachiev" type="TextureButton" parent="Menu/scrollContainer/OptionHolder"]
+modulate = Color( 0.466667, 0.0745098, 0.0745098, 1 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_top = 209.0
+margin_right = 200.0
+margin_bottom = 219.0
+rect_min_size = Vector2( 0, 10 )
+action_mode = 0
+script = ExtResource( 23 )
+idle_color = Color( 0.466667, 0.0745098, 0.0745098, 1 )
+focus_color = Color( 1, 0.447059, 0, 1 )
+menu_path = NodePath("../../../..")
+default_label = "RESET_ACHIEV"
+post_confirm = "RESET_ACHIEV_FINISHED"
+
+[node name="text" type="Label" parent="Menu/scrollContainer/OptionHolder/clearachiev"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = -7.0
+margin_right = 189.0
+margin_bottom = 7.0
+rect_min_size = Vector2( 200, 0 )
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "RESET_ACHIEV"
+align = 1
+uppercase = true
+
+[node name="exit" type="TextureButton" parent="Menu"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -32.0
+margin_top = -20.0
+margin_right = 32.0
+margin_bottom = -10.0
+focus_neighbour_top = NodePath("../scrollContainer/OptionHolder/clearachiev")
+focus_neighbour_bottom = NodePath("../scrollContainer/OptionHolder/Language/Button")
+action_mode = 0
+script = ExtResource( 8 )
+idle_color = Color( 0.407843, 0.792157, 1, 1 )
+focus_color = Color( 0.984314, 1, 0.686275, 1 )
+menu_path = NodePath("../..")
+
+[node name="text" type="Label" parent="Menu/exit"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -30.5
+margin_top = -7.0
+margin_right = 30.5
+margin_bottom = 7.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 1 )
+text = "EXIT_BUTTON"
+align = 1
+uppercase = true
+
+[node name="Fader" type="ColorRect" parent="."]
+margin_right = 398.0
+margin_bottom = 224.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 0 )
+script = ExtResource( 6 )
+menu = NodePath("../Menu")
+
+[node name="choice" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 27 )
+volume_db = -4.0
+bus = "SFX"
+
+[node name="equip" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 26 )
+volume_db = -4.0
+bus = "SFX"
+
+[node name="pick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+volume_db = -4.0
+bus = "SFX"
+
+[node name="cancel" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 32 )
+volume_db = -4.0
+bus = "SFX"
+
+[connection signal="initialize" from="." to="Menu/scrollContainer/OptionHolder/ShowDebug/Button" method="_on_OptionsMenu_initialize"]
+[connection signal="focus_entered" from="Menu/scrollContainer/OptionHolder/Language/Button" to="Menu/scrollContainer/OptionHolder/Language/Button" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/scrollContainer/OptionHolder/Language/Button" to="Menu/scrollContainer/OptionHolder/Language/Button" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/scrollContainer/OptionHolder/Language/Button" to="Menu/scrollContainer/OptionHolder/Language/Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/scrollContainer/OptionHolder/Language/Button" to="Menu/scrollContainer/OptionHolder/Language/Button" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/scrollContainer/OptionHolder/Language/Button" to="Menu/scrollContainer/OptionHolder/Language/Button" method="_on_pressed"]
+[connection signal="translation_updated" from="Menu/scrollContainer/OptionHolder/Language/Button" to="Menu/scrollContainer/OptionHolder/Dash Command/Button" method="display_dash"]
+[connection signal="translation_updated" from="Menu/scrollContainer/OptionHolder/Language/Button" to="Menu/scrollContainer/OptionHolder/Charge Fadeout/Button" method="display"]
+[connection signal="translation_updated" from="Menu/scrollContainer/OptionHolder/Language/Button" to="Menu/scrollContainer/OptionHolder/Fullscreen/Button" method="display"]
+[connection signal="translation_updated" from="Menu/scrollContainer/OptionHolder/Language/Button" to="Menu/scrollContainer/OptionHolder/ShowDebug/Button" method="display"]
+[connection signal="focus_entered" from="Menu/scrollContainer/OptionHolder/BossThemeRemix/Button" to="Menu/scrollContainer/OptionHolder/BossThemeRemix/Button" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/scrollContainer/OptionHolder/BossThemeRemix/Button" to="Menu/scrollContainer/OptionHolder/BossThemeRemix/Button" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/scrollContainer/OptionHolder/BossThemeRemix/Button" to="Menu/scrollContainer/OptionHolder/BossThemeRemix/Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/scrollContainer/OptionHolder/BossThemeRemix/Button" to="Menu/scrollContainer/OptionHolder/BossThemeRemix/Button" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/scrollContainer/OptionHolder/BossThemeRemix/Button" to="Menu/scrollContainer/OptionHolder/BossThemeRemix/Button" method="_on_pressed"]
+[connection signal="focus_entered" from="Menu/scrollContainer/OptionHolder/RemixMusic/Button" to="Menu/scrollContainer/OptionHolder/RemixMusic/Button" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/scrollContainer/OptionHolder/RemixMusic/Button" to="Menu/scrollContainer/OptionHolder/RemixMusic/Button" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/scrollContainer/OptionHolder/RemixMusic/Button" to="Menu/scrollContainer/OptionHolder/RemixMusic/Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/scrollContainer/OptionHolder/RemixMusic/Button" to="Menu/scrollContainer/OptionHolder/RemixMusic/Button" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/scrollContainer/OptionHolder/RemixMusic/Button" to="Menu/scrollContainer/OptionHolder/RemixMusic/Button" method="_on_pressed"]
+[connection signal="focus_entered" from="Menu/scrollContainer/OptionHolder/Dash Command/Button" to="Menu/scrollContainer/OptionHolder/Dash Command/Button" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/scrollContainer/OptionHolder/Dash Command/Button" to="Menu/scrollContainer/OptionHolder/Dash Command/Button" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/scrollContainer/OptionHolder/Dash Command/Button" to="Menu/scrollContainer/OptionHolder/Dash Command/Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/scrollContainer/OptionHolder/Dash Command/Button" to="Menu/scrollContainer/OptionHolder/Dash Command/Button" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/scrollContainer/OptionHolder/Dash Command/Button" to="Menu/scrollContainer/OptionHolder/Dash Command/Button" method="_on_pressed"]
+[connection signal="focus_entered" from="Menu/scrollContainer/OptionHolder/Skip Dialogs/Button" to="Menu/scrollContainer/OptionHolder/Skip Dialogs/Button" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/scrollContainer/OptionHolder/Skip Dialogs/Button" to="Menu/scrollContainer/OptionHolder/Skip Dialogs/Button" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/scrollContainer/OptionHolder/Skip Dialogs/Button" to="Menu/scrollContainer/OptionHolder/Skip Dialogs/Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/scrollContainer/OptionHolder/Skip Dialogs/Button" to="Menu/scrollContainer/OptionHolder/Skip Dialogs/Button" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/scrollContainer/OptionHolder/Skip Dialogs/Button" to="Menu/scrollContainer/OptionHolder/Skip Dialogs/Button" method="_on_pressed"]
+[connection signal="focus_entered" from="Menu/scrollContainer/OptionHolder/Charge Fadeout/Button" to="Menu/scrollContainer/OptionHolder/Charge Fadeout/Button" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/scrollContainer/OptionHolder/Charge Fadeout/Button" to="Menu/scrollContainer/OptionHolder/Charge Fadeout/Button" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/scrollContainer/OptionHolder/Charge Fadeout/Button" to="Menu/scrollContainer/OptionHolder/Charge Fadeout/Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/scrollContainer/OptionHolder/Charge Fadeout/Button" to="Menu/scrollContainer/OptionHolder/Charge Fadeout/Button" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/scrollContainer/OptionHolder/Charge Fadeout/Button" to="Menu/scrollContainer/OptionHolder/Charge Fadeout/Button" method="_on_pressed"]
+[connection signal="focus_entered" from="Menu/scrollContainer/OptionHolder/Show Achiev/Button" to="Menu/scrollContainer/OptionHolder/Show Achiev/Button" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/scrollContainer/OptionHolder/Show Achiev/Button" to="Menu/scrollContainer/OptionHolder/Show Achiev/Button" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/scrollContainer/OptionHolder/Show Achiev/Button" to="Menu/scrollContainer/OptionHolder/Show Achiev/Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/scrollContainer/OptionHolder/Show Achiev/Button" to="Menu/scrollContainer/OptionHolder/Show Achiev/Button" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/scrollContainer/OptionHolder/Show Achiev/Button" to="Menu/scrollContainer/OptionHolder/Show Achiev/Button" method="_on_pressed"]
+[connection signal="focus_entered" from="Menu/scrollContainer/OptionHolder/Music Volume/Button" to="Menu/scrollContainer/OptionHolder/Music Volume/Button" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/scrollContainer/OptionHolder/Music Volume/Button" to="Menu/scrollContainer/OptionHolder/Music Volume/Button" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/scrollContainer/OptionHolder/Music Volume/Button" to="Menu/scrollContainer/OptionHolder/Music Volume/Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/scrollContainer/OptionHolder/Music Volume/Button" to="Menu/scrollContainer/OptionHolder/Music Volume/Button" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/scrollContainer/OptionHolder/Music Volume/Button" to="Menu/scrollContainer/OptionHolder/Music Volume/Button" method="_on_pressed"]
+[connection signal="focus_entered" from="Menu/scrollContainer/OptionHolder/Sound Volume/Button" to="Menu/scrollContainer/OptionHolder/Sound Volume/Button" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/scrollContainer/OptionHolder/Sound Volume/Button" to="Menu/scrollContainer/OptionHolder/Sound Volume/Button" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/scrollContainer/OptionHolder/Sound Volume/Button" to="Menu/scrollContainer/OptionHolder/Sound Volume/Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/scrollContainer/OptionHolder/Sound Volume/Button" to="Menu/scrollContainer/OptionHolder/Sound Volume/Button" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/scrollContainer/OptionHolder/Sound Volume/Button" to="Menu/scrollContainer/OptionHolder/Sound Volume/Button" method="_on_pressed"]
+[connection signal="focus_entered" from="Menu/scrollContainer/OptionHolder/Vsync/Button" to="Menu/scrollContainer/OptionHolder/Vsync/Button" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/scrollContainer/OptionHolder/Vsync/Button" to="Menu/scrollContainer/OptionHolder/Vsync/Button" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/scrollContainer/OptionHolder/Vsync/Button" to="Menu/scrollContainer/OptionHolder/Vsync/Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/scrollContainer/OptionHolder/Vsync/Button" to="Menu/scrollContainer/OptionHolder/Vsync/Button" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/scrollContainer/OptionHolder/Vsync/Button" to="Menu/scrollContainer/OptionHolder/Vsync/Button" method="_on_pressed"]
+[connection signal="focus_entered" from="Menu/scrollContainer/OptionHolder/FPS/Button" to="Menu/scrollContainer/OptionHolder/FPS/Button" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/scrollContainer/OptionHolder/FPS/Button" to="Menu/scrollContainer/OptionHolder/FPS/Button" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/scrollContainer/OptionHolder/FPS/Button" to="Menu/scrollContainer/OptionHolder/FPS/Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/scrollContainer/OptionHolder/FPS/Button" to="Menu/scrollContainer/OptionHolder/FPS/Button" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/scrollContainer/OptionHolder/FPS/Button" to="Menu/scrollContainer/OptionHolder/FPS/Button" method="_on_pressed"]
+[connection signal="focus_entered" from="Menu/scrollContainer/OptionHolder/FPS Physics/Button" to="Menu/scrollContainer/OptionHolder/FPS Physics/Button" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/scrollContainer/OptionHolder/FPS Physics/Button" to="Menu/scrollContainer/OptionHolder/FPS Physics/Button" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/scrollContainer/OptionHolder/FPS Physics/Button" to="Menu/scrollContainer/OptionHolder/FPS Physics/Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/scrollContainer/OptionHolder/FPS Physics/Button" to="Menu/scrollContainer/OptionHolder/FPS Physics/Button" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/scrollContainer/OptionHolder/FPS Physics/Button" to="Menu/scrollContainer/OptionHolder/FPS Physics/Button" method="_on_pressed"]
+[connection signal="focus_entered" from="Menu/scrollContainer/OptionHolder/Window Size/Button" to="Menu/scrollContainer/OptionHolder/Window Size/Button" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/scrollContainer/OptionHolder/Window Size/Button" to="Menu/scrollContainer/OptionHolder/Window Size/Button" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/scrollContainer/OptionHolder/Window Size/Button" to="Menu/scrollContainer/OptionHolder/Window Size/Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/scrollContainer/OptionHolder/Window Size/Button" to="Menu/scrollContainer/OptionHolder/Window Size/Button" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/scrollContainer/OptionHolder/Window Size/Button" to="Menu/scrollContainer/OptionHolder/Window Size/Button" method="_on_pressed"]
+[connection signal="focus_entered" from="Menu/scrollContainer/OptionHolder/Fullscreen/Button" to="Menu/scrollContainer/OptionHolder/Fullscreen/Button" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/scrollContainer/OptionHolder/Fullscreen/Button" to="Menu/scrollContainer/OptionHolder/Fullscreen/Button" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/scrollContainer/OptionHolder/Fullscreen/Button" to="Menu/scrollContainer/OptionHolder/Fullscreen/Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/scrollContainer/OptionHolder/Fullscreen/Button" to="Menu/scrollContainer/OptionHolder/Fullscreen/Button" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/scrollContainer/OptionHolder/Fullscreen/Button" to="Menu/scrollContainer/OptionHolder/Fullscreen/Button" method="_on_pressed"]
+[connection signal="focus_entered" from="Menu/scrollContainer/OptionHolder/Stretch Mode/Button" to="Menu/scrollContainer/OptionHolder/Stretch Mode/Button" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/scrollContainer/OptionHolder/Stretch Mode/Button" to="Menu/scrollContainer/OptionHolder/Stretch Mode/Button" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/scrollContainer/OptionHolder/Stretch Mode/Button" to="Menu/scrollContainer/OptionHolder/Stretch Mode/Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/scrollContainer/OptionHolder/Stretch Mode/Button" to="Menu/scrollContainer/OptionHolder/Stretch Mode/Button" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/scrollContainer/OptionHolder/Stretch Mode/Button" to="Menu/scrollContainer/OptionHolder/Stretch Mode/Button" method="_on_pressed"]
+[connection signal="focus_entered" from="Menu/scrollContainer/OptionHolder/CRT/Button" to="Menu/scrollContainer/OptionHolder/CRT/Button" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/scrollContainer/OptionHolder/CRT/Button" to="Menu/scrollContainer/OptionHolder/CRT/Button" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/scrollContainer/OptionHolder/CRT/Button" to="Menu/scrollContainer/OptionHolder/CRT/Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/scrollContainer/OptionHolder/CRT/Button" to="Menu/scrollContainer/OptionHolder/CRT/Button" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/scrollContainer/OptionHolder/CRT/Button" to="Menu/scrollContainer/OptionHolder/CRT/Button" method="_on_pressed"]
+[connection signal="focus_entered" from="Menu/scrollContainer/OptionHolder/SkipGateway/Button" to="Menu/scrollContainer/OptionHolder/SkipGateway/Button" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/scrollContainer/OptionHolder/SkipGateway/Button" to="Menu/scrollContainer/OptionHolder/SkipGateway/Button" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/scrollContainer/OptionHolder/SkipGateway/Button" to="Menu/scrollContainer/OptionHolder/SkipGateway/Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/scrollContainer/OptionHolder/SkipGateway/Button" to="Menu/scrollContainer/OptionHolder/SkipGateway/Button" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/scrollContainer/OptionHolder/SkipGateway/Button" to="Menu/scrollContainer/OptionHolder/SkipGateway/Button" method="_on_pressed"]
+[connection signal="focus_entered" from="Menu/scrollContainer/OptionHolder/ShowIGT/Button" to="Menu/scrollContainer/OptionHolder/ShowIGT/Button" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/scrollContainer/OptionHolder/ShowIGT/Button" to="Menu/scrollContainer/OptionHolder/ShowIGT/Button" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/scrollContainer/OptionHolder/ShowIGT/Button" to="Menu/scrollContainer/OptionHolder/ShowIGT/Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/scrollContainer/OptionHolder/ShowIGT/Button" to="Menu/scrollContainer/OptionHolder/ShowIGT/Button" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/scrollContainer/OptionHolder/ShowIGT/Button" to="Menu/scrollContainer/OptionHolder/ShowIGT/Button" method="_on_pressed"]
+[connection signal="focus_entered" from="Menu/scrollContainer/OptionHolder/ShowDebug/Button" to="Menu/scrollContainer/OptionHolder/ShowDebug/Button" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/scrollContainer/OptionHolder/ShowDebug/Button" to="Menu/scrollContainer/OptionHolder/ShowDebug/Button" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/scrollContainer/OptionHolder/ShowDebug/Button" to="Menu/scrollContainer/OptionHolder/ShowDebug/Button" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/scrollContainer/OptionHolder/ShowDebug/Button" to="Menu/scrollContainer/OptionHolder/ShowDebug/Button" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/scrollContainer/OptionHolder/ShowDebug/Button" to="Menu/scrollContainer/OptionHolder/ShowDebug/Button" method="_on_pressed"]
+[connection signal="focus_entered" from="Menu/scrollContainer/OptionHolder/exittomainmenu" to="Menu/scrollContainer/OptionHolder/exittomainmenu" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/scrollContainer/OptionHolder/exittomainmenu" to="Menu/scrollContainer/OptionHolder/exittomainmenu" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/scrollContainer/OptionHolder/exittomainmenu" to="Menu/scrollContainer/OptionHolder/exittomainmenu" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/scrollContainer/OptionHolder/exittomainmenu" to="Menu/scrollContainer/OptionHolder/exittomainmenu" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/scrollContainer/OptionHolder/exittomainmenu" to="Menu/scrollContainer/OptionHolder/exittomainmenu" method="_on_pressed"]
+[connection signal="focus_entered" from="Menu/scrollContainer/OptionHolder/newgameplus" to="Menu/scrollContainer/OptionHolder/newgameplus" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/scrollContainer/OptionHolder/newgameplus" to="Menu/scrollContainer/OptionHolder/newgameplus" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/scrollContainer/OptionHolder/newgameplus" to="Menu/scrollContainer/OptionHolder/newgameplus" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/scrollContainer/OptionHolder/newgameplus" to="Menu/scrollContainer/OptionHolder/newgameplus" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/scrollContainer/OptionHolder/newgameplus" to="Menu/scrollContainer/OptionHolder/newgameplus" method="_on_pressed"]
+[connection signal="focus_entered" from="Menu/scrollContainer/OptionHolder/clearsave" to="Menu/scrollContainer/OptionHolder/clearsave" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/scrollContainer/OptionHolder/clearsave" to="Menu/scrollContainer/OptionHolder/clearsave" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/scrollContainer/OptionHolder/clearsave" to="Menu/scrollContainer/OptionHolder/clearsave" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/scrollContainer/OptionHolder/clearsave" to="Menu/scrollContainer/OptionHolder/clearsave" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/scrollContainer/OptionHolder/clearsave" to="Menu/scrollContainer/OptionHolder/clearsave" method="_on_pressed"]
+[connection signal="focus_entered" from="Menu/scrollContainer/OptionHolder/clearachiev" to="Menu/scrollContainer/OptionHolder/clearachiev" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/scrollContainer/OptionHolder/clearachiev" to="Menu/scrollContainer/OptionHolder/clearachiev" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/scrollContainer/OptionHolder/clearachiev" to="Menu/scrollContainer/OptionHolder/clearachiev" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/scrollContainer/OptionHolder/clearachiev" to="Menu/scrollContainer/OptionHolder/clearachiev" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/scrollContainer/OptionHolder/clearachiev" to="Menu/scrollContainer/OptionHolder/clearachiev" method="_on_pressed"]
+[connection signal="focus_entered" from="Menu/exit" to="Menu/exit" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/exit" to="Menu/exit" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/exit" to="Menu/exit" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/exit" to="Menu/exit" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/exit" to="Menu/exit" method="_on_pressed"]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Rooster - Wallhit.ogg-d478786d5f73876be26b0eb4189e64a1.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/Rooster - Wallhit.ogg"
+dest_files=[ "res://.import/Rooster - Wallhit.ogg-d478786d5f73876be26b0eb4189e64a1.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

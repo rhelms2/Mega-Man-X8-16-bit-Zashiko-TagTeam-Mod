@@ -1,0 +1,2718 @@
+{ "frames": [
+   {
+    "filename": "vile 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 1.ase",
+    "frame": { "x": 90, "y": 0, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 2.ase",
+    "frame": { "x": 180, "y": 0, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 35
+   },
+   {
+    "filename": "vile 3.ase",
+    "frame": { "x": 270, "y": 0, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 35
+   },
+   {
+    "filename": "vile 4.ase",
+    "frame": { "x": 360, "y": 0, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 35
+   },
+   {
+    "filename": "vile 5.ase",
+    "frame": { "x": 450, "y": 0, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 35
+   },
+   {
+    "filename": "vile 6.ase",
+    "frame": { "x": 540, "y": 0, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 35
+   },
+   {
+    "filename": "vile 7.ase",
+    "frame": { "x": 630, "y": 0, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 8.ase",
+    "frame": { "x": 720, "y": 0, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 122
+   },
+   {
+    "filename": "vile 9.ase",
+    "frame": { "x": 810, "y": 0, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 10.ase",
+    "frame": { "x": 900, "y": 0, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 11.ase",
+    "frame": { "x": 990, "y": 0, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 12.ase",
+    "frame": { "x": 1080, "y": 0, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 13.ase",
+    "frame": { "x": 1170, "y": 0, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 444
+   },
+   {
+    "filename": "vile 14.ase",
+    "frame": { "x": 0, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 15.ase",
+    "frame": { "x": 90, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 16.ase",
+    "frame": { "x": 1080, "y": 0, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 17.ase",
+    "frame": { "x": 1170, "y": 0, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 18.ase",
+    "frame": { "x": 0, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 19.ase",
+    "frame": { "x": 90, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 20.ase",
+    "frame": { "x": 1080, "y": 0, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 21.ase",
+    "frame": { "x": 1170, "y": 0, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 22.ase",
+    "frame": { "x": 0, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 23.ase",
+    "frame": { "x": 90, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 24.ase",
+    "frame": { "x": 1080, "y": 0, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 25.ase",
+    "frame": { "x": 1170, "y": 0, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 26.ase",
+    "frame": { "x": 180, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 27.ase",
+    "frame": { "x": 270, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 28.ase",
+    "frame": { "x": 360, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 29.ase",
+    "frame": { "x": 450, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 30.ase",
+    "frame": { "x": 540, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 31.ase",
+    "frame": { "x": 360, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 32.ase",
+    "frame": { "x": 450, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 33.ase",
+    "frame": { "x": 540, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 34.ase",
+    "frame": { "x": 360, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 35.ase",
+    "frame": { "x": 450, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 36.ase",
+    "frame": { "x": 540, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 37.ase",
+    "frame": { "x": 630, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 38.ase",
+    "frame": { "x": 720, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 39.ase",
+    "frame": { "x": 810, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 40.ase",
+    "frame": { "x": 900, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 41.ase",
+    "frame": { "x": 990, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 42.ase",
+    "frame": { "x": 1080, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 43.ase",
+    "frame": { "x": 1170, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 44.ase",
+    "frame": { "x": 990, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 45.ase",
+    "frame": { "x": 1080, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 46.ase",
+    "frame": { "x": 0, "y": 240, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 47.ase",
+    "frame": { "x": 90, "y": 240, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 48.ase",
+    "frame": { "x": 180, "y": 240, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 49.ase",
+    "frame": { "x": 270, "y": 240, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 50.ase",
+    "frame": { "x": 360, "y": 240, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 51.ase",
+    "frame": { "x": 450, "y": 240, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 52.ase",
+    "frame": { "x": 540, "y": 240, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 53.ase",
+    "frame": { "x": 450, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 54.ase",
+    "frame": { "x": 540, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 55.ase",
+    "frame": { "x": 630, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 56.ase",
+    "frame": { "x": 630, "y": 240, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 57.ase",
+    "frame": { "x": 720, "y": 240, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 58.ase",
+    "frame": { "x": 810, "y": 240, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 59.ase",
+    "frame": { "x": 900, "y": 240, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 60.ase",
+    "frame": { "x": 990, "y": 240, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 61.ase",
+    "frame": { "x": 1080, "y": 240, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 62.ase",
+    "frame": { "x": 900, "y": 240, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 63.ase",
+    "frame": { "x": 990, "y": 240, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 64.ase",
+    "frame": { "x": 1170, "y": 240, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 65.ase",
+    "frame": { "x": 0, "y": 360, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 66.ase",
+    "frame": { "x": 90, "y": 360, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 67.ase",
+    "frame": { "x": 180, "y": 360, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 68.ase",
+    "frame": { "x": 360, "y": 240, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 69.ase",
+    "frame": { "x": 450, "y": 240, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 70.ase",
+    "frame": { "x": 540, "y": 240, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 71.ase",
+    "frame": { "x": 450, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 72.ase",
+    "frame": { "x": 540, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 73.ase",
+    "frame": { "x": 270, "y": 360, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 74.ase",
+    "frame": { "x": 360, "y": 360, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 75.ase",
+    "frame": { "x": 450, "y": 360, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 76.ase",
+    "frame": { "x": 540, "y": 360, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 77.ase",
+    "frame": { "x": 630, "y": 360, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 78.ase",
+    "frame": { "x": 720, "y": 360, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 79.ase",
+    "frame": { "x": 540, "y": 360, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 80.ase",
+    "frame": { "x": 630, "y": 360, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 81.ase",
+    "frame": { "x": 720, "y": 360, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 82.ase",
+    "frame": { "x": 810, "y": 360, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 83.ase",
+    "frame": { "x": 900, "y": 360, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 84.ase",
+    "frame": { "x": 990, "y": 360, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 85.ase",
+    "frame": { "x": 1080, "y": 360, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 86.ase",
+    "frame": { "x": 1170, "y": 360, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 87.ase",
+    "frame": { "x": 0, "y": 480, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 88.ase",
+    "frame": { "x": 90, "y": 480, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 89.ase",
+    "frame": { "x": 180, "y": 480, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 90.ase",
+    "frame": { "x": 360, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 91.ase",
+    "frame": { "x": 450, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 92.ase",
+    "frame": { "x": 540, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 93.ase",
+    "frame": { "x": 270, "y": 480, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 94.ase",
+    "frame": { "x": 360, "y": 480, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 95.ase",
+    "frame": { "x": 450, "y": 480, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 96.ase",
+    "frame": { "x": 540, "y": 480, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 97.ase",
+    "frame": { "x": 630, "y": 480, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 98.ase",
+    "frame": { "x": 450, "y": 480, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 99.ase",
+    "frame": { "x": 540, "y": 480, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 100.ase",
+    "frame": { "x": 630, "y": 480, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 101.ase",
+    "frame": { "x": 450, "y": 480, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 102.ase",
+    "frame": { "x": 540, "y": 480, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 103.ase",
+    "frame": { "x": 630, "y": 480, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 104.ase",
+    "frame": { "x": 720, "y": 480, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 105.ase",
+    "frame": { "x": 810, "y": 480, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 106.ase",
+    "frame": { "x": 540, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 107.ase",
+    "frame": { "x": 360, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 108.ase",
+    "frame": { "x": 450, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 109.ase",
+    "frame": { "x": 540, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 110.ase",
+    "frame": { "x": 900, "y": 480, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 111.ase",
+    "frame": { "x": 990, "y": 480, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 112.ase",
+    "frame": { "x": 1080, "y": 480, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 113.ase",
+    "frame": { "x": 1170, "y": 480, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 114.ase",
+    "frame": { "x": 0, "y": 600, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 115.ase",
+    "frame": { "x": 90, "y": 600, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 116.ase",
+    "frame": { "x": 1170, "y": 480, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 117.ase",
+    "frame": { "x": 0, "y": 600, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 118.ase",
+    "frame": { "x": 90, "y": 600, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 119.ase",
+    "frame": { "x": 1170, "y": 480, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 120.ase",
+    "frame": { "x": 180, "y": 600, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 121.ase",
+    "frame": { "x": 360, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 122.ase",
+    "frame": { "x": 450, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 123.ase",
+    "frame": { "x": 540, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 124.ase",
+    "frame": { "x": 270, "y": 600, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 125.ase",
+    "frame": { "x": 360, "y": 600, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 126.ase",
+    "frame": { "x": 450, "y": 600, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 127.ase",
+    "frame": { "x": 540, "y": 600, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 128.ase",
+    "frame": { "x": 630, "y": 600, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 129.ase",
+    "frame": { "x": 720, "y": 600, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 130.ase",
+    "frame": { "x": 810, "y": 600, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 131.ase",
+    "frame": { "x": 900, "y": 600, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 132.ase",
+    "frame": { "x": 630, "y": 600, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 133.ase",
+    "frame": { "x": 810, "y": 600, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 134.ase",
+    "frame": { "x": 810, "y": 600, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 135.ase",
+    "frame": { "x": 990, "y": 600, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 136.ase",
+    "frame": { "x": 1080, "y": 600, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 137.ase",
+    "frame": { "x": 540, "y": 240, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 138.ase",
+    "frame": { "x": 360, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 139.ase",
+    "frame": { "x": 450, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 140.ase",
+    "frame": { "x": 540, "y": 120, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 141.ase",
+    "frame": { "x": 1170, "y": 600, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 142.ase",
+    "frame": { "x": 0, "y": 720, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 143.ase",
+    "frame": { "x": 450, "y": 480, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 144.ase",
+    "frame": { "x": 540, "y": 480, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 145.ase",
+    "frame": { "x": 630, "y": 480, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 146.ase",
+    "frame": { "x": 450, "y": 480, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 147.ase",
+    "frame": { "x": 540, "y": 480, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 148.ase",
+    "frame": { "x": 630, "y": 480, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 149.ase",
+    "frame": { "x": 90, "y": 720, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 150.ase",
+    "frame": { "x": 180, "y": 720, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 151.ase",
+    "frame": { "x": 900, "y": 600, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 152.ase",
+    "frame": { "x": 630, "y": 600, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 153.ase",
+    "frame": { "x": 810, "y": 600, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 154.ase",
+    "frame": { "x": 900, "y": 600, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 155.ase",
+    "frame": { "x": 630, "y": 600, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 156.ase",
+    "frame": { "x": 810, "y": 600, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 157.ase",
+    "frame": { "x": 270, "y": 720, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 158.ase",
+    "frame": { "x": 360, "y": 720, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 159.ase",
+    "frame": { "x": 450, "y": 720, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 122
+   },
+   {
+    "filename": "vile 160.ase",
+    "frame": { "x": 540, "y": 720, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 122
+   },
+   {
+    "filename": "vile 161.ase",
+    "frame": { "x": 630, "y": 720, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 162.ase",
+    "frame": { "x": 720, "y": 720, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 163.ase",
+    "frame": { "x": 810, "y": 720, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 35
+   },
+   {
+    "filename": "vile 164.ase",
+    "frame": { "x": 900, "y": 720, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 35
+   },
+   {
+    "filename": "vile 165.ase",
+    "frame": { "x": 990, "y": 720, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 35
+   },
+   {
+    "filename": "vile 166.ase",
+    "frame": { "x": 1080, "y": 720, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 35
+   },
+   {
+    "filename": "vile 167.ase",
+    "frame": { "x": 1170, "y": 720, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 35
+   },
+   {
+    "filename": "vile 168.ase",
+    "frame": { "x": 990, "y": 720, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 35
+   },
+   {
+    "filename": "vile 169.ase",
+    "frame": { "x": 1080, "y": 720, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 35
+   },
+   {
+    "filename": "vile 170.ase",
+    "frame": { "x": 0, "y": 840, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 35
+   },
+   {
+    "filename": "vile 171.ase",
+    "frame": { "x": 990, "y": 720, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 35
+   },
+   {
+    "filename": "vile 172.ase",
+    "frame": { "x": 1080, "y": 720, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 35
+   },
+   {
+    "filename": "vile 173.ase",
+    "frame": { "x": 90, "y": 840, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 35
+   },
+   {
+    "filename": "vile 174.ase",
+    "frame": { "x": 990, "y": 720, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 35
+   },
+   {
+    "filename": "vile 175.ase",
+    "frame": { "x": 1080, "y": 720, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 35
+   },
+   {
+    "filename": "vile 176.ase",
+    "frame": { "x": 1080, "y": 720, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 166
+   },
+   {
+    "filename": "vile 177.ase",
+    "frame": { "x": 180, "y": 840, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 178.ase",
+    "frame": { "x": 270, "y": 840, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 179.ase",
+    "frame": { "x": 540, "y": 240, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 180.ase",
+    "frame": { "x": 360, "y": 840, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 181.ase",
+    "frame": { "x": 450, "y": 840, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 182.ase",
+    "frame": { "x": 540, "y": 840, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 183.ase",
+    "frame": { "x": 630, "y": 840, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 184.ase",
+    "frame": { "x": 720, "y": 840, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 185.ase",
+    "frame": { "x": 810, "y": 840, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 186.ase",
+    "frame": { "x": 900, "y": 840, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 187.ase",
+    "frame": { "x": 990, "y": 840, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 188.ase",
+    "frame": { "x": 630, "y": 600, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 189.ase",
+    "frame": { "x": 810, "y": 600, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 190.ase",
+    "frame": { "x": 630, "y": 600, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 191.ase",
+    "frame": { "x": 1080, "y": 840, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 192.ase",
+    "frame": { "x": 810, "y": 600, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 193.ase",
+    "frame": { "x": 630, "y": 600, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 194.ase",
+    "frame": { "x": 1080, "y": 840, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 195.ase",
+    "frame": { "x": 810, "y": 600, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 196.ase",
+    "frame": { "x": 1170, "y": 840, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 197.ase",
+    "frame": { "x": 0, "y": 960, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 198.ase",
+    "frame": { "x": 90, "y": 960, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 199.ase",
+    "frame": { "x": 180, "y": 960, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 200.ase",
+    "frame": { "x": 270, "y": 960, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 201.ase",
+    "frame": { "x": 360, "y": 960, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 202.ase",
+    "frame": { "x": 450, "y": 960, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 203.ase",
+    "frame": { "x": 540, "y": 960, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 204.ase",
+    "frame": { "x": 630, "y": 960, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 205.ase",
+    "frame": { "x": 720, "y": 960, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 206.ase",
+    "frame": { "x": 810, "y": 960, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 207.ase",
+    "frame": { "x": 900, "y": 960, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 208.ase",
+    "frame": { "x": 990, "y": 960, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 209.ase",
+    "frame": { "x": 630, "y": 600, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 210.ase",
+    "frame": { "x": 1080, "y": 840, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 211.ase",
+    "frame": { "x": 810, "y": 600, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 212.ase",
+    "frame": { "x": 1080, "y": 960, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 213.ase",
+    "frame": { "x": 1170, "y": 960, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 214.ase",
+    "frame": { "x": 0, "y": 1080, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 166
+   },
+   {
+    "filename": "vile 215.ase",
+    "frame": { "x": 90, "y": 1080, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 216.ase",
+    "frame": { "x": 180, "y": 1080, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 217.ase",
+    "frame": { "x": 270, "y": 1080, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 218.ase",
+    "frame": { "x": 360, "y": 1080, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 219.ase",
+    "frame": { "x": 1080, "y": 0, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 220.ase",
+    "frame": { "x": 1170, "y": 0, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 221.ase",
+    "frame": { "x": 450, "y": 1080, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 222.ase",
+    "frame": { "x": 540, "y": 1080, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 223.ase",
+    "frame": { "x": 630, "y": 1080, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 224.ase",
+    "frame": { "x": 720, "y": 1080, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 225.ase",
+    "frame": { "x": 810, "y": 1080, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 122
+   },
+   {
+    "filename": "vile 226.ase",
+    "frame": { "x": 900, "y": 1080, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 227.ase",
+    "frame": { "x": 990, "y": 1080, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 228.ase",
+    "frame": { "x": 1080, "y": 1080, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 229.ase",
+    "frame": { "x": 1170, "y": 1080, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 230.ase",
+    "frame": { "x": 0, "y": 1200, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 231.ase",
+    "frame": { "x": 90, "y": 1200, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 232.ase",
+    "frame": { "x": 180, "y": 1200, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 233.ase",
+    "frame": { "x": 180, "y": 1200, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 234.ase",
+    "frame": { "x": 180, "y": 1200, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 244
+   },
+   {
+    "filename": "vile 235.ase",
+    "frame": { "x": 270, "y": 1200, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 236.ase",
+    "frame": { "x": 360, "y": 1200, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 237.ase",
+    "frame": { "x": 180, "y": 1200, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 238.ase",
+    "frame": { "x": 450, "y": 1200, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 239.ase",
+    "frame": { "x": 540, "y": 1200, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 240.ase",
+    "frame": { "x": 180, "y": 1200, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 444
+   },
+   {
+    "filename": "vile 241.ase",
+    "frame": { "x": 630, "y": 1200, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 242.ase",
+    "frame": { "x": 720, "y": 1200, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 243.ase",
+    "frame": { "x": 810, "y": 1200, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 244.ase",
+    "frame": { "x": 90, "y": 0, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 245.ase",
+    "frame": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 246.ase",
+    "frame": { "x": 900, "y": 1200, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 247.ase",
+    "frame": { "x": 990, "y": 1200, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 248.ase",
+    "frame": { "x": 1080, "y": 1200, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 249.ase",
+    "frame": { "x": 1170, "y": 1200, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 250.ase",
+    "frame": { "x": 720, "y": 0, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 244
+   },
+   {
+    "filename": "vile 251.ase",
+    "frame": { "x": 0, "y": 1320, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 252.ase",
+    "frame": { "x": 90, "y": 1320, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 253.ase",
+    "frame": { "x": 180, "y": 1320, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 254.ase",
+    "frame": { "x": 270, "y": 1320, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 255.ase",
+    "frame": { "x": 810, "y": 0, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 256.ase",
+    "frame": { "x": 360, "y": 1320, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 257.ase",
+    "frame": { "x": 1170, "y": 0, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 258.ase",
+    "frame": { "x": 900, "y": 1200, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 259.ase",
+    "frame": { "x": 450, "y": 1320, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 260.ase",
+    "frame": { "x": 540, "y": 1320, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 261.ase",
+    "frame": { "x": 630, "y": 1320, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 262.ase",
+    "frame": { "x": 720, "y": 1320, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 244
+   },
+   {
+    "filename": "vile 263.ase",
+    "frame": { "x": 810, "y": 1320, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 264.ase",
+    "frame": { "x": 900, "y": 1320, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 265.ase",
+    "frame": { "x": 990, "y": 1320, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 266.ase",
+    "frame": { "x": 1080, "y": 1320, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 267.ase",
+    "frame": { "x": 1170, "y": 1320, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 268.ase",
+    "frame": { "x": 0, "y": 1440, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 269.ase",
+    "frame": { "x": 1080, "y": 0, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 270.ase",
+    "frame": { "x": 1170, "y": 0, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 271.ase",
+    "frame": { "x": 90, "y": 1440, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 272.ase",
+    "frame": { "x": 180, "y": 1440, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 55
+   },
+   {
+    "filename": "vile 273.ase",
+    "frame": { "x": 270, "y": 1440, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 35
+   },
+   {
+    "filename": "vile 274.ase",
+    "frame": { "x": 360, "y": 1440, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 35
+   },
+   {
+    "filename": "vile 275.ase",
+    "frame": { "x": 450, "y": 1440, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 35
+   },
+   {
+    "filename": "vile 276.ase",
+    "frame": { "x": 540, "y": 1440, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 35
+   },
+   {
+    "filename": "vile 277.ase",
+    "frame": { "x": 630, "y": 1440, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 35
+   },
+   {
+    "filename": "vile 278.ase",
+    "frame": { "x": 450, "y": 1440, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 35
+   },
+   {
+    "filename": "vile 279.ase",
+    "frame": { "x": 540, "y": 1440, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 35
+   },
+   {
+    "filename": "vile 280.ase",
+    "frame": { "x": 630, "y": 1440, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 35
+   },
+   {
+    "filename": "vile 281.ase",
+    "frame": { "x": 720, "y": 1440, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 282.ase",
+    "frame": { "x": 810, "y": 1440, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 283.ase",
+    "frame": { "x": 900, "y": 1440, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 284.ase",
+    "frame": { "x": 1080, "y": 0, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 285.ase",
+    "frame": { "x": 1170, "y": 0, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 286.ase",
+    "frame": { "x": 990, "y": 1440, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 287.ase",
+    "frame": { "x": 1080, "y": 1440, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 288.ase",
+    "frame": { "x": 1170, "y": 1440, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 289.ase",
+    "frame": { "x": 0, "y": 1560, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 444
+   },
+   {
+    "filename": "vile 290.ase",
+    "frame": { "x": 0, "y": 1560, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 291.ase",
+    "frame": { "x": 90, "y": 1560, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 66
+   },
+   {
+    "filename": "vile 292.ase",
+    "frame": { "x": 180, "y": 1560, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 42
+   },
+   {
+    "filename": "vile 293.ase",
+    "frame": { "x": 270, "y": 1560, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 82
+   },
+   {
+    "filename": "vile 294.ase",
+    "frame": { "x": 990, "y": 1440, "w": 90, "h": 120 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 90, "h": 120 },
+    "sourceSize": { "w": 90, "h": 120 },
+    "duration": 444
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3.6-x64",
+  "image": "vile.png",
+  "format": "RGBA8888",
+  "size": { "w": 1260, "h": 1680 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "beam_in", "from": 0, "to": 12, "direction": "forward", "color": "#000000ff" },
+   { "name": "idle", "from": 13, "to": 13, "direction": "forward", "color": "#000000ff" },
+   { "name": "laugh", "from": 14, "to": 25, "direction": "forward", "color": "#000000ff" },
+   { "name": "idle_to_flight", "from": 26, "to": 30, "direction": "forward", "color": "#000000ff" },
+   { "name": "flight", "from": 31, "to": 36, "direction": "forward", "repeat": "2", "color": "#000000ff" },
+   { "name": "flight_cannon_prepare", "from": 37, "to": 45, "direction": "forward", "color": "#000000ff" },
+   { "name": "flight_cannon_fire", "from": 46, "to": 49, "direction": "forward", "color": "#000000ff" },
+   { "name": "flight_cannon_end", "from": 50, "to": 54, "direction": "forward", "color": "#000000ff" },
+   { "name": "flight_cannon2_prepare", "from": 55, "to": 63, "direction": "forward", "color": "#000000ff" },
+   { "name": "flight_cannon2_fire", "from": 64, "to": 67, "direction": "forward", "color": "#000000ff" },
+   { "name": "flight_cannon2_end", "from": 68, "to": 72, "direction": "forward", "color": "#000000ff" },
+   { "name": "flight_missile_prepare", "from": 73, "to": 81, "direction": "forward", "color": "#000000ff" },
+   { "name": "flight_missile_fire", "from": 82, "to": 86, "direction": "forward", "color": "#000000ff" },
+   { "name": "flight_missile_end", "from": 87, "to": 92, "direction": "forward", "color": "#000000ff" },
+   { "name": "flight_to_backwards", "from": 93, "to": 97, "direction": "forward", "color": "#000000ff" },
+   { "name": "backwards", "from": 98, "to": 103, "direction": "forward", "repeat": "2", "color": "#000000ff" },
+   { "name": "backwards_to_flight", "from": 104, "to": 109, "direction": "forward", "color": "#000000ff" },
+   { "name": "flight_to_upward", "from": 110, "to": 113, "direction": "forward", "color": "#000000ff" },
+   { "name": "upward", "from": 114, "to": 119, "direction": "forward", "repeat": "2", "color": "#000000ff" },
+   { "name": "upward_to_flight", "from": 120, "to": 123, "direction": "forward", "color": "#000000ff" },
+   { "name": "flight_to_jump", "from": 124, "to": 133, "direction": "forward", "color": "#000000ff" },
+   { "name": "jump_to_flight", "from": 134, "to": 140, "direction": "forward", "color": "#000000ff" },
+   { "name": "jump_to_backwards", "from": 141, "to": 148, "direction": "forward", "color": "#000000ff" },
+   { "name": "backwards_to_jump", "from": 149, "to": 156, "direction": "forward", "color": "#000000ff" },
+   { "name": "shock_prepare", "from": 157, "to": 163, "direction": "forward", "color": "#000000ff" },
+   { "name": "shock", "from": 164, "to": 175, "direction": "forward", "repeat": "2", "color": "#000000ff" },
+   { "name": "shock_idle", "from": 176, "to": 176, "direction": "forward", "color": "#000000ff" },
+   { "name": "shock_to_flight", "from": 177, "to": 179, "direction": "forward", "color": "#000000ff" },
+   { "name": "jump_prepare", "from": 180, "to": 184, "direction": "forward", "color": "#000000ff" },
+   { "name": "jump_start", "from": 185, "to": 189, "direction": "forward", "color": "#000000ff" },
+   { "name": "jump", "from": 190, "to": 195, "direction": "forward", "repeat": "2", "color": "#000000ff" },
+   { "name": "jump_stop", "from": 196, "to": 200, "direction": "forward", "color": "#000000ff" },
+   { "name": "kneel_shot", "from": 201, "to": 205, "direction": "forward", "color": "#000000ff" },
+   { "name": "kneel_end", "from": 206, "to": 211, "direction": "forward", "color": "#000000ff" },
+   { "name": "jump_land", "from": 212, "to": 220, "direction": "forward", "color": "#000000ff" },
+   { "name": "defeat_fall", "from": 221, "to": 225, "direction": "forward", "color": "#000000ff" },
+   { "name": "defeat_land", "from": 226, "to": 229, "direction": "forward", "color": "#000000ff" },
+   { "name": "defeat", "from": 230, "to": 240, "direction": "forward", "repeat": "2", "color": "#000000ff" },
+   { "name": "beam_out", "from": 241, "to": 245, "direction": "forward", "color": "#000000ff" },
+   { "name": "cannon_prepare", "from": 246, "to": 250, "direction": "forward", "color": "#000000ff" },
+   { "name": "cannon_fire", "from": 251, "to": 254, "direction": "forward", "color": "#000000ff" },
+   { "name": "cannon_end", "from": 255, "to": 257, "direction": "forward", "color": "#000000ff" },
+   { "name": "missile_prepare", "from": 258, "to": 262, "direction": "forward", "color": "#000000ff" },
+   { "name": "missile_fire", "from": 263, "to": 266, "direction": "forward", "color": "#000000ff" },
+   { "name": "missile_end", "from": 267, "to": 270, "direction": "forward", "color": "#000000ff" },
+   { "name": "dash_start", "from": 271, "to": 274, "direction": "forward", "color": "#000000ff" },
+   { "name": "dash", "from": 275, "to": 280, "direction": "forward", "repeat": "2", "color": "#000000ff" },
+   { "name": "dash_end", "from": 281, "to": 285, "direction": "forward", "color": "#000000ff" },
+   { "name": "ride_down", "from": 286, "to": 289, "direction": "forward", "color": "#000000ff" },
+   { "name": "ride_up", "from": 290, "to": 294, "direction": "forward", "color": "#000000ff" }
+  ]
+ }
+}

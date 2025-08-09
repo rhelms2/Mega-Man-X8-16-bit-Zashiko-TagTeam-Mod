@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/FX - Electric Spark.ogg-3a4ca69cd4b85f00427b8fa2a6970ae5.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/FX - Electric Spark.ogg"
+dest_files=[ "res://.import/FX - Electric Spark.ogg-3a4ca69cd4b85f00427b8fa2a6970ae5.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

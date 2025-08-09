@@ -1,0 +1,20 @@
+[remap]
+
+importer="vnen.tiled_tileset_importer"
+type="TileSet"
+path="res://.import/tileset_metalvalley.tsx-2c751ece60b3f81d0e2fc41879669e19.res"
+
+[deps]
+
+source_file="res://src/Levels/MetalValley/tileset_metalvalley.tsx"
+dest_files=[ "res://.import/tileset_metalvalley.tsx-2c751ece60b3f81d0e2fc41879669e19.res" ]
+
+[params]
+
+custom_properties=true
+tile_metadata=false
+image_flags=7
+embed_internal_images=false
+save_tiled_properties=false
+apply_offset=false
+post_import_script=""

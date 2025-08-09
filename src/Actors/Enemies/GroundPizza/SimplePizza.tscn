@@ -1,0 +1,241 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://src/Actors/Enemies/GroundPizza/simple_pizza.res" type="SpriteFrames" id=1]
+[ext_resource path="res://src/Actors/Enemies/AI.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Modules/Enemy/EnemyDeath.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/Modules/Enemy/EnemyDamage.gd" type="Script" id=4]
+[ext_resource path="res://src/Effects/Explosion Particles.tscn" type="PackedScene" id=5]
+[ext_resource path="res://src/Effects/Remains Particle.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=7]
+[ext_resource path="res://src/Actors/Enemies/GroundPizza/MoveVertically.gd" type="Script" id=8]
+[ext_resource path="res://pisca_gradient.tres" type="Gradient" id=9]
+[ext_resource path="res://src/Actors/Enemies/EnemyShield.gd" type="Script" id=10]
+[ext_resource path="res://src/Actors/Enemies/GroundPizza/simpleDeflect.gd" type="Script" id=11]
+[ext_resource path="res://src/Actors/Enemies/GroundPizza/Pizza.gd" type="Script" id=12]
+[ext_resource path="res://src/Sounds/HIT.wav" type="AudioStream" id=14]
+[ext_resource path="res://src/Effects/Materials/default_material.tres" type="Material" id=15]
+[ext_resource path="res://src/Sounds/56 - MMX - Enemy Death.wav" type="AudioStream" id=16]
+[ext_resource path="res://src/Sounds/MMX - Enemy Helmet Hit.ogg" type="AudioStream" id=17]
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 33.5, 20 )
+
+[sub_resource type="RectangleShape2D" id=48]
+extents = Vector2( 1, 20 )
+
+[sub_resource type="RectangleShape2D" id=47]
+extents = Vector2( 8, 21.5 )
+
+[sub_resource type="Curve" id=10]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=13]
+curve = SubResource( 10 )
+
+[sub_resource type="ParticlesMaterial" id=16]
+resource_local_to_scene = true
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 13 )
+
+[sub_resource type="Curve" id=42]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=43]
+curve = SubResource( 42 )
+
+[sub_resource type="ParticlesMaterial" id=44]
+resource_local_to_scene = true
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 43 )
+
+[sub_resource type="GradientTexture" id=45]
+gradient = ExtResource( 9 )
+
+[sub_resource type="ParticlesMaterial" id=46]
+emission_shape = 1
+emission_sphere_radius = 18.34
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+gravity = Vector3( 0, 800, 0 )
+initial_velocity = 400.0
+initial_velocity_random = 0.69
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+color_ramp = SubResource( 45 )
+anim_offset = 1.0
+anim_offset_random = 1.0
+
+[sub_resource type="RectangleShape2D" id=49]
+extents = Vector2( 9, 11.0625 )
+
+[node name="WallPizza" type="KinematicBody2D" groups=["Enemies"]]
+z_index = 1
+collision_layer = 0
+collision_mask = 513
+script = ExtResource( 12 )
+radius = 160.0
+
+[node name="AI" type="Node2D" parent="."]
+script = ExtResource( 2 )
+on_idle = [ NodePath("../MoveVertically") ]
+on_shield_hit = [ NodePath("../Deflect") ]
+
+[node name="vision" type="Area2D" parent="AI"]
+position = Vector2( 33, 0 )
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="AI/vision"]
+visible = false
+shape = SubResource( 14 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 15 )
+rotation = 1.5708
+frames = ExtResource( 1 )
+animation = "closed"
+playing = true
+offset = Vector2( 0, -24 )
+flip_h = true
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 1, 0 )
+shape = SubResource( 48 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+scale = Vector2( 2, 2 )
+rect = Rect2( -5, -5, 10, 10 )
+
+[node name="area2D" type="Area2D" parent="."]
+visible = false
+position = Vector2( 2, -4 )
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+position = Vector2( 0, 4.5 )
+shape = SubResource( 47 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 7 )
+damage = 4.0
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 4 )
+active = false
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+stream = ExtResource( 14 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="EnemyDeath" type="Node2D" parent="."]
+script = ExtResource( 3 )
+explosion_duration = 0.0
+
+[node name="Explosion Particles" parent="EnemyDeath" instance=ExtResource( 5 )]
+process_material = SubResource( 16 )
+
+[node name="Remains" parent="EnemyDeath" instance=ExtResource( 6 )]
+process_material = SubResource( 44 )
+
+[node name="remains_particles" parent="EnemyDeath/Remains" index="0"]
+amount = 4
+process_material = SubResource( 46 )
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="EnemyDeath"]
+stream = ExtResource( 16 )
+volume_db = -4.267
+max_distance = 600.0
+attenuation = 0.951366
+bus = "SFX"
+
+[node name="MoveVertically" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 8 )
+conflicting_moves = [ "Deflect" ]
+actions = [ "Event" ]
+animation = "open"
+horizontal_velocity = 80.0
+
+[node name="up" type="RayCast2D" parent="MoveVertically"]
+position = Vector2( 3, -13 )
+enabled = true
+cast_to = Vector2( 0, -16 )
+collision_mask = 65537
+
+[node name="down" type="RayCast2D" parent="MoveVertically"]
+position = Vector2( 3, 13 )
+enabled = true
+cast_to = Vector2( 0, 16 )
+collision_mask = 65537
+
+[node name="up2" type="RayCast2D" parent="MoveVertically"]
+position = Vector2( 1, -22 )
+enabled = true
+cast_to = Vector2( -16, 0 )
+collision_mask = 65537
+
+[node name="down2" type="RayCast2D" parent="MoveVertically"]
+position = Vector2( 1, 22 )
+enabled = true
+cast_to = Vector2( -16, 0 )
+collision_mask = 65537
+
+[node name="Deflect" type="Node2D" parent="."]
+script = ExtResource( 11 )
+active = null
+debug_logs = null
+actions = [ "Event" ]
+animation = null
+horizontal_velocity = null
+jump_velocity = null
+desperation_attack = null
+wait_duration = null
+
+[node name="EnemyShield" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 10 )
+breakable = false
+
+[node name="hittable_area" type="Area2D" parent="EnemyShield"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="EnemyShield/hittable_area"]
+position = Vector2( 2, 0 )
+shape = SubResource( 49 )
+
+[node name="hitSound" type="AudioStreamPlayer2D" parent="EnemyShield"]
+stream = ExtResource( 17 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[connection signal="body_entered" from="AI/vision" to="AI" method="_on_vision_body_entered"]
+
+[editable path="EnemyDeath/Remains"]

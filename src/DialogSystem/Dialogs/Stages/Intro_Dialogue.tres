@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://src/DialogSystem/Profiles/DialogueText.gd" type="Script" id=1]
+[ext_resource path="res://src/DialogSystem/Profiles/X.tres" type="Resource" id=2]
+[ext_resource path="res://src/DialogSystem/Profiles/Alia.tres" type="Resource" id=3]
+
+[resource]
+script = ExtResource( 1 )
+dialog = [ ExtResource( 2 ), "INTRO2-1", "INTRO2-2", "INTRO2-3", ExtResource( 3 ), "INTRO2-4" ]

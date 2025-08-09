@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/bikejump.wav-d3c0ea1cd6b27a281b56eb78a4f66564.sample"
+
+[deps]
+
+source_file="res://src/Sounds/bikejump.wav"
+dest_files=[ "res://.import/bikejump.wav-d3c0ea1cd6b27a281b56eb78a4f66564.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

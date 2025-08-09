@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Rooster - Rage.ogg-6ff8c3a763b9b44a59d7693b72f927c0.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/Rooster - Rage.ogg"
+dest_files=[ "res://.import/Rooster - Rage.ogg-6ff8c3a763b9b44a59d7693b72f927c0.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

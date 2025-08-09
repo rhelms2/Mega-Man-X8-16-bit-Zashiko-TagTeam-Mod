@@ -1,0 +1,741 @@
+{ "frames": [
+   {
+    "filename": "vile_armor 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 82
+   },
+   {
+    "filename": "vile_armor 1.ase",
+    "frame": { "x": 160, "y": 0, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 60
+   },
+   {
+    "filename": "vile_armor 2.ase",
+    "frame": { "x": 320, "y": 0, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 60
+   },
+   {
+    "filename": "vile_armor 3.ase",
+    "frame": { "x": 480, "y": 0, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 60
+   },
+   {
+    "filename": "vile_armor 4.ase",
+    "frame": { "x": 640, "y": 0, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 82
+   },
+   {
+    "filename": "vile_armor 5.ase",
+    "frame": { "x": 800, "y": 0, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 444
+   },
+   {
+    "filename": "vile_armor 6.ase",
+    "frame": { "x": 960, "y": 0, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 85
+   },
+   {
+    "filename": "vile_armor 7.ase",
+    "frame": { "x": 1120, "y": 0, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "vile_armor 8.ase",
+    "frame": { "x": 1280, "y": 0, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "vile_armor 9.ase",
+    "frame": { "x": 0, "y": 128, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 60
+   },
+   {
+    "filename": "vile_armor 10.ase",
+    "frame": { "x": 160, "y": 128, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 85
+   },
+   {
+    "filename": "vile_armor 11.ase",
+    "frame": { "x": 320, "y": 128, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "vile_armor 12.ase",
+    "frame": { "x": 480, "y": 128, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "vile_armor 13.ase",
+    "frame": { "x": 640, "y": 128, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 85
+   },
+   {
+    "filename": "vile_armor 14.ase",
+    "frame": { "x": 800, "y": 128, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 85
+   },
+   {
+    "filename": "vile_armor 15.ase",
+    "frame": { "x": 960, "y": 128, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 85
+   },
+   {
+    "filename": "vile_armor 16.ase",
+    "frame": { "x": 1120, "y": 128, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 85
+   },
+   {
+    "filename": "vile_armor 17.ase",
+    "frame": { "x": 1280, "y": 128, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 85
+   },
+   {
+    "filename": "vile_armor 18.ase",
+    "frame": { "x": 0, "y": 256, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 85
+   },
+   {
+    "filename": "vile_armor 19.ase",
+    "frame": { "x": 160, "y": 256, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 85
+   },
+   {
+    "filename": "vile_armor 20.ase",
+    "frame": { "x": 320, "y": 256, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 85
+   },
+   {
+    "filename": "vile_armor 21.ase",
+    "frame": { "x": 480, "y": 256, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 85
+   },
+   {
+    "filename": "vile_armor 22.ase",
+    "frame": { "x": 640, "y": 256, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 85
+   },
+   {
+    "filename": "vile_armor 23.ase",
+    "frame": { "x": 800, "y": 256, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 85
+   },
+   {
+    "filename": "vile_armor 24.ase",
+    "frame": { "x": 960, "y": 256, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 85
+   },
+   {
+    "filename": "vile_armor 25.ase",
+    "frame": { "x": 1120, "y": 256, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 85
+   },
+   {
+    "filename": "vile_armor 26.ase",
+    "frame": { "x": 1280, "y": 256, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 85
+   },
+   {
+    "filename": "vile_armor 27.ase",
+    "frame": { "x": 0, "y": 384, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 85
+   },
+   {
+    "filename": "vile_armor 28.ase",
+    "frame": { "x": 160, "y": 384, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 85
+   },
+   {
+    "filename": "vile_armor 29.ase",
+    "frame": { "x": 320, "y": 384, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 66
+   },
+   {
+    "filename": "vile_armor 30.ase",
+    "frame": { "x": 480, "y": 384, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 66
+   },
+   {
+    "filename": "vile_armor 31.ase",
+    "frame": { "x": 640, "y": 384, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "vile_armor 32.ase",
+    "frame": { "x": 800, "y": 384, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "vile_armor 33.ase",
+    "frame": { "x": 640, "y": 384, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "vile_armor 34.ase",
+    "frame": { "x": 800, "y": 384, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "vile_armor 35.ase",
+    "frame": { "x": 960, "y": 384, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 66
+   },
+   {
+    "filename": "vile_armor 36.ase",
+    "frame": { "x": 1120, "y": 384, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 66
+   },
+   {
+    "filename": "vile_armor 37.ase",
+    "frame": { "x": 1280, "y": 384, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "vile_armor 38.ase",
+    "frame": { "x": 0, "y": 512, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "vile_armor 39.ase",
+    "frame": { "x": 1280, "y": 384, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "vile_armor 40.ase",
+    "frame": { "x": 0, "y": 512, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "vile_armor 41.ase",
+    "frame": { "x": 160, "y": 512, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 66
+   },
+   {
+    "filename": "vile_armor 42.ase",
+    "frame": { "x": 320, "y": 512, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 82
+   },
+   {
+    "filename": "vile_armor 43.ase",
+    "frame": { "x": 480, "y": 512, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 444
+   },
+   {
+    "filename": "vile_armor 44.ase",
+    "frame": { "x": 640, "y": 512, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 82
+   },
+   {
+    "filename": "vile_armor 45.ase",
+    "frame": { "x": 800, "y": 512, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 82
+   },
+   {
+    "filename": "vile_armor 46.ase",
+    "frame": { "x": 0, "y": 256, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 82
+   },
+   {
+    "filename": "vile_armor 47.ase",
+    "frame": { "x": 960, "y": 512, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "vile_armor 48.ase",
+    "frame": { "x": 1120, "y": 512, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "vile_armor 49.ase",
+    "frame": { "x": 1280, "y": 512, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "vile_armor 50.ase",
+    "frame": { "x": 0, "y": 640, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 82
+   },
+   {
+    "filename": "vile_armor 51.ase",
+    "frame": { "x": 160, "y": 640, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 82
+   },
+   {
+    "filename": "vile_armor 52.ase",
+    "frame": { "x": 960, "y": 512, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 82
+   },
+   {
+    "filename": "vile_armor 53.ase",
+    "frame": { "x": 320, "y": 640, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "vile_armor 54.ase",
+    "frame": { "x": 480, "y": 640, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "vile_armor 55.ase",
+    "frame": { "x": 640, "y": 640, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "vile_armor 56.ase",
+    "frame": { "x": 800, "y": 640, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 82
+   },
+   {
+    "filename": "vile_armor 57.ase",
+    "frame": { "x": 800, "y": 640, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 82
+   },
+   {
+    "filename": "vile_armor 58.ase",
+    "frame": { "x": 320, "y": 640, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 82
+   },
+   {
+    "filename": "vile_armor 59.ase",
+    "frame": { "x": 960, "y": 640, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "vile_armor 60.ase",
+    "frame": { "x": 1120, "y": 640, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 82
+   },
+   {
+    "filename": "vile_armor 61.ase",
+    "frame": { "x": 1280, "y": 640, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "vile_armor 62.ase",
+    "frame": { "x": 0, "y": 768, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "vile_armor 63.ase",
+    "frame": { "x": 160, "y": 768, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "vile_armor 64.ase",
+    "frame": { "x": 320, "y": 768, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 100
+   },
+   {
+    "filename": "vile_armor 65.ase",
+    "frame": { "x": 480, "y": 768, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 82
+   },
+   {
+    "filename": "vile_armor 66.ase",
+    "frame": { "x": 640, "y": 768, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "vile_armor 67.ase",
+    "frame": { "x": 800, "y": 768, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 85
+   },
+   {
+    "filename": "vile_armor 68.ase",
+    "frame": { "x": 0, "y": 256, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 85
+   },
+   {
+    "filename": "vile_armor 69.ase",
+    "frame": { "x": 960, "y": 768, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 66
+   },
+   {
+    "filename": "vile_armor 70.ase",
+    "frame": { "x": 1120, "y": 768, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 66
+   },
+   {
+    "filename": "vile_armor 71.ase",
+    "frame": { "x": 1280, "y": 768, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 66
+   },
+   {
+    "filename": "vile_armor 72.ase",
+    "frame": { "x": 0, "y": 896, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 82
+   },
+   {
+    "filename": "vile_armor 73.ase",
+    "frame": { "x": 160, "y": 896, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 82
+   },
+   {
+    "filename": "vile_armor 74.ase",
+    "frame": { "x": 320, "y": 896, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 82
+   },
+   {
+    "filename": "vile_armor 75.ase",
+    "frame": { "x": 480, "y": 896, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 82
+   },
+   {
+    "filename": "vile_armor 76.ase",
+    "frame": { "x": 640, "y": 896, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 82
+   },
+   {
+    "filename": "vile_armor 77.ase",
+    "frame": { "x": 800, "y": 896, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 82
+   },
+   {
+    "filename": "vile_armor 78.ase",
+    "frame": { "x": 960, "y": 896, "w": 160, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 128 },
+    "sourceSize": { "w": 160, "h": 128 },
+    "duration": 82
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3.6-x64",
+  "image": "devilbear.png",
+  "format": "RGBA8888",
+  "size": { "w": 1440, "h": 1024 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "deactivate", "from": 0, "to": 4, "direction": "forward", "color": "#000000ff" },
+   { "name": "deactivated", "from": 5, "to": 5, "direction": "forward", "color": "#000000ff" },
+   { "name": "activate", "from": 6, "to": 17, "direction": "forward", "color": "#000000ff" },
+   { "name": "idle", "from": 18, "to": 18, "direction": "forward", "color": "#000000ff" },
+   { "name": "walk", "from": 19, "to": 28, "direction": "forward", "color": "#000000ff" },
+   { "name": "dash", "from": 29, "to": 34, "direction": "forward", "color": "#000000ff" },
+   { "name": "dash_loop", "from": 33, "to": 34, "direction": "forward", "color": "#000000ff" },
+   { "name": "jump", "from": 35, "to": 40, "direction": "forward", "color": "#000000ff" },
+   { "name": "jump_loop", "from": 39, "to": 40, "direction": "forward", "color": "#000000ff" },
+   { "name": "fall", "from": 41, "to": 43, "direction": "forward", "color": "#000000ff" },
+   { "name": "recover", "from": 44, "to": 46, "direction": "forward", "color": "#000000ff" },
+   { "name": "punch_1", "from": 47, "to": 58, "direction": "forward", "color": "#000000ff" },
+   { "name": "punch_2", "from": 53, "to": 58, "direction": "forward", "color": "#000000ff" },
+   { "name": "punch_3", "from": 59, "to": 66, "direction": "forward", "color": "#000000ff" },
+   { "name": "punch_end", "from": 67, "to": 68, "direction": "forward", "color": "#000000ff" },
+   { "name": "shot", "from": 69, "to": 73, "direction": "forward", "color": "#000000ff" },
+   { "name": "steam", "from": 74, "to": 78, "direction": "forward", "color": "#000000ff" }
+  ]
+ }
+}

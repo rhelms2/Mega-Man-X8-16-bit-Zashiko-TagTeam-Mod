@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/Actors/Player/BossWeapons/BlastLauncher/blast_launcher.res" type="SpriteFrames" id=1]
+[ext_resource path="res://src/Actors/Bosses/BambooPandamonium/BambooMissile.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Bosses/BambooPandamonium/GrenadeExplosion.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Actors/Enemies/ProjectileDoT.gd" type="Script" id=5]
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 6, 6 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 4, 5 )
+
+[node name="BambooMissile" type="KinematicBody2D" groups=["Enemy Projectile"]]
+z_index = 8
+collision_layer = 16
+script = ExtResource( 2 )
+damage = 5.0
+blast_area = ExtResource( 3 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+modulate = Color( 1, 0.709804, 0.454902, 1 )
+frames = ExtResource( 1 )
+animation = "missile"
+playing = true
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+shape = SubResource( 7 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 5 )
+damage = 5.0
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource( 8 )

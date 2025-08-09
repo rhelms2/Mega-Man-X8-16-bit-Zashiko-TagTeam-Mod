@@ -1,0 +1,329 @@
+[gd_scene load_steps=45 format=2]
+
+[ext_resource path="res://src/Actors/Enemies/SigmaEnemy/sigma_enemy.res" type="SpriteFrames" id=1]
+[ext_resource path="res://src/Actors/Modules/Enemy/EnemyDamage.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/Enemies/SigmaEnemy/SigmaEnDefence.gd" type="Script" id=4]
+[ext_resource path="res://src/Actors/Enemies/SigmaEnemy/EnemyShot.gd" type="Script" id=5]
+[ext_resource path="res://src/Actors/Enemies/Shared/LongEnemyDeath.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Actors/Enemies/SigmaEnemy/EnemySigmaBouncer.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Effects/Materials/default_material.tres" type="Material" id=8]
+[ext_resource path="res://src/Sounds/MMX - Enemy Helmet Hit.ogg" type="AudioStream" id=9]
+[ext_resource path="res://src/Sounds/HIT.wav" type="AudioStream" id=10]
+[ext_resource path="res://src/Sounds/ThrowRocks.ogg" type="AudioStream" id=11]
+[ext_resource path="res://src/Sounds/EXPLOSION.wav" type="AudioStream" id=12]
+[ext_resource path="res://src/Sounds/RockThrow Prepare.ogg" type="AudioStream" id=13]
+[ext_resource path="res://src/Sounds/64 - MMX - Enemy Sound (01).wav" type="AudioStream" id=14]
+[ext_resource path="res://src/Actors/Modules/Enemy/Enemy.gd" type="Script" id=15]
+[ext_resource path="res://src/Effects/ShieldBreak/shieldbreak.res" type="SpriteFrames" id=16]
+[ext_resource path="res://src/Actors/Enemies/Big Tractor/AttackIdle.gd" type="Script" id=17]
+[ext_resource path="res://src/Actors/Enemies/AI.gd" type="Script" id=18]
+[ext_resource path="res://src/Actors/Enemies/EnemyStun.gd" type="Script" id=19]
+[ext_resource path="res://src/Sounds/MM - Equip.wav" type="AudioStream" id=20]
+[ext_resource path="res://src/Actors/Enemies/EnemyShield.gd" type="Script" id=21]
+[ext_resource path="res://src/Actors/Enemies/SigmaEnemy/transform.gd" type="Script" id=22]
+[ext_resource path="res://src/Effects/Textures/fake_boss_death.png" type="Texture" id=23]
+[ext_resource path="res://src/Actors/Enemies/SwordReploid/reploid_remains_palette.png" type="Texture" id=24]
+
+[sub_resource type="RectangleShape2D" id=69]
+extents = Vector2( 326, 59 )
+
+[sub_resource type="RectangleShape2D" id=66]
+extents = Vector2( 14, 29.5 )
+
+[sub_resource type="RectangleShape2D" id=67]
+extents = Vector2( 17, 28 )
+
+[sub_resource type="Curve" id=10]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=80]
+curve = SubResource( 10 )
+
+[sub_resource type="ParticlesMaterial" id=81]
+resource_local_to_scene = true
+emission_shape = 1
+emission_sphere_radius = 25.0
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 80 )
+
+[sub_resource type="Curve" id=42]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=70]
+curve = SubResource( 42 )
+
+[sub_resource type="ParticlesMaterial" id=82]
+resource_local_to_scene = true
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 70 )
+
+[sub_resource type="AtlasTexture" id=68]
+atlas = ExtResource( 23 )
+region = Rect2( 0, 0, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=78]
+atlas = ExtResource( 23 )
+region = Rect2( 80, 0, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=83]
+atlas = ExtResource( 23 )
+region = Rect2( 160, 0, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=246]
+atlas = ExtResource( 23 )
+region = Rect2( 240, 0, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=72]
+atlas = ExtResource( 23 )
+region = Rect2( 320, 0, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=73]
+atlas = ExtResource( 23 )
+region = Rect2( 0, 80, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=74]
+atlas = ExtResource( 23 )
+region = Rect2( 80, 80, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=75]
+atlas = ExtResource( 23 )
+region = Rect2( 160, 80, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=76]
+atlas = ExtResource( 23 )
+region = Rect2( 240, 80, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=77]
+atlas = ExtResource( 23 )
+region = Rect2( 320, 80, 80, 80 )
+
+[sub_resource type="SpriteFrames" id=79]
+animations = [ {
+"frames": [ SubResource( 68 ), SubResource( 78 ), SubResource( 83 ), SubResource( 246 ), SubResource( 72 ), SubResource( 73 ), SubResource( 74 ), SubResource( 75 ), SubResource( 76 ), SubResource( 77 ) ],
+"loop": false,
+"name": "default",
+"speed": 24.0
+} ]
+
+[node name="SigmaEnemy" type="KinematicBody2D" groups=["Enemies"]]
+collision_layer = 0
+collision_mask = 513
+script = ExtResource( 15 )
+max_health = 40.0
+
+[node name="AI" type="Node2D" parent="."]
+script = ExtResource( 18 )
+on_idle = [ NodePath("../Idle") ]
+on_see_player = [ NodePath("../Defence"), NodePath("../EnemyShot") ]
+on_guard_break = [ NodePath("../EnemyStun") ]
+
+[node name="vision" type="Area2D" parent="AI"]
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="AI/vision"]
+shape = SubResource( 69 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 8 )
+position = Vector2( 0, -7 )
+z_index = 1
+frames = ExtResource( 1 )
+animation = "idle"
+flip_h = true
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 2.5 )
+shape = SubResource( 66 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+scale = Vector2( 6, 4.8 )
+rect = Rect2( -5, -5, 10, 10 )
+
+[node name="EnemyShield" type="Node2D" parent="."]
+modulate = Color( 0, 1, 0.321569, 1 )
+script = ExtResource( 21 )
+active = false
+
+[node name="hittable_area" type="Area2D" parent="EnemyShield"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionPolygon2D" parent="EnemyShield/hittable_area"]
+polygon = PoolVector2Array( 24, 33, 53, 6, 53, -30, 24, -55 )
+
+[node name="hitSound" type="AudioStreamPlayer2D" parent="EnemyShield"]
+stream = ExtResource( 9 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+position = Vector2( 0, 4 )
+shape = SubResource( 67 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 3 )
+damage = 3.0
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 2 )
+max_freeze_hits = 12
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+stream = ExtResource( 10 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="EnemyStun" type="Node2D" parent="."]
+script = ExtResource( 19 )
+conflicting_moves = [ "EnemyStun" ]
+actions = [ "Event" ]
+animation = "stun"
+reactivate_shield_on_end = false
+stun_duration = 1.65
+recover_animation = ""
+
+[node name="break_vfx" type="AnimatedSprite" parent="EnemyStun"]
+modulate = Color( 1, 1, 1, 0.670588 )
+position = Vector2( 12, 0 )
+z_index = 25
+frames = ExtResource( 16 )
+frame = 9
+
+[node name="break_sound" type="AudioStreamPlayer2D" parent="EnemyStun"]
+stream = ExtResource( 12 )
+volume_db = -6.0
+pitch_scale = 0.78
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="shot_position" type="Node2D" parent="."]
+position = Vector2( 38, -11 )
+
+[node name="EnemyShot" type="Node2D" parent="."]
+script = ExtResource( 5 )
+conflicting_moves = [ "EnemyStun", "Defence", "Death" ]
+actions = [ "Event" ]
+bouncer = ExtResource( 7 )
+
+[node name="shot_sound" type="AudioStreamPlayer2D" parent="EnemyShot"]
+stream = ExtResource( 11 )
+volume_db = -2.0
+pitch_scale = 0.9
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="prepare" type="AudioStreamPlayer2D" parent="EnemyShot"]
+stream = ExtResource( 13 )
+volume_db = -4.0
+pitch_scale = 0.9
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="turn" type="AudioStreamPlayer2D" parent="EnemyShot"]
+stream = ExtResource( 14 )
+volume_db = -6.0
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="Defence" type="Node2D" parent="."]
+script = ExtResource( 4 )
+active = false
+conflicting_moves = [ "EnemyStun", "Death" ]
+actions = [ "Event" ]
+
+[node name="shot_sound" type="AudioStreamPlayer2D" parent="Defence"]
+stream = ExtResource( 11 )
+volume_db = -2.0
+pitch_scale = 0.9
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="prepare" type="AudioStreamPlayer2D" parent="Defence"]
+stream = ExtResource( 13 )
+volume_db = -4.0
+pitch_scale = 0.9
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="turn" type="AudioStreamPlayer2D" parent="Defence"]
+stream = ExtResource( 14 )
+volume_db = -6.0
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="Idle" type="Node2D" parent="."]
+script = ExtResource( 17 )
+conflicting_moves = [ "Everything" ]
+actions = [ "Event" ]
+animation = "idle"
+
+[node name="EnemyDeath" parent="." instance=ExtResource( 6 )]
+
+[node name="Explosion Particles" parent="EnemyDeath" index="0"]
+process_material = SubResource( 81 )
+
+[node name="Remains" parent="EnemyDeath" index="2"]
+process_material = SubResource( 82 )
+
+[node name="remains_particles" parent="EnemyDeath/Remains" index="0"]
+amount = 7
+texture = ExtResource( 24 )
+
+[node name="reploid" type="AnimatedSprite" parent="."]
+pause_mode = 2
+visible = false
+material = ExtResource( 8 )
+frames = SubResource( 79 )
+script = ExtResource( 22 )
+
+[node name="transform" type="AudioStreamPlayer2D" parent="reploid"]
+stream = ExtResource( 20 )
+bus = "SFX"
+
+[connection signal="death" from="." to="reploid" method="_on_death"]
+[connection signal="body_entered" from="AI/vision" to="AI" method="_on_vision_body_entered"]
+[connection signal="body_exited" from="AI/vision" to="AI" method="_on_vision_body_exited"]
+[connection signal="ability_start" from="EnemyStun" to="Defence" method="_on_EnemyStun_ability_start"]
+[connection signal="unable_to_defend" from="Defence" to="EnemyShot" method="_on_Defence_unable_to_defend"]
+[connection signal="ability_start" from="EnemyDeath" to="reploid" method="_on_EnemyDeath_ability_start"]
+
+[editable path="EnemyDeath"]
+[editable path="EnemyDeath/Explosion Particles"]
+[editable path="EnemyDeath/Remains"]

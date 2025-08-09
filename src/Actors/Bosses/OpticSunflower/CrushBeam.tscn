@@ -1,0 +1,53 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Bosses/OpticSunflower/CrushBeam.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Player/BossWeapons/OpticShield/optic_laser_mid.res" type="SpriteFrames" id=3]
+[ext_resource path="res://src/Actors/Player/BossWeapons/OpticShield/optic_laser.res" type="SpriteFrames" id=4]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=5]
+[ext_resource path="res://src/Sounds/OpticShield - Laser Hit.ogg" type="AudioStream" id=6]
+[ext_resource path="res://src/Effects/Materials/crushtarget_mat.tres" type="Material" id=7]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 28, 512 )
+
+[node name="CrushBeam" type="Node2D"]
+z_index = 5
+script = ExtResource( 2 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 7 )
+frames = ExtResource( 4 )
+animation = "start"
+offset = Vector2( 0, -32 )
+
+[node name="animatedSprite2" type="AnimatedSprite" parent="."]
+material = ExtResource( 7 )
+position = Vector2( 0, -540 )
+scale = Vector2( 1, 19.1667 )
+frames = ExtResource( 3 )
+animation = "start"
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 1 )
+active = false
+damage = 10.0
+
+[node name="area2D" type="Area2D" parent="DamageOnTouch"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="DamageOnTouch/area2D"]
+position = Vector2( 0, -512 )
+shape = SubResource( 1 )
+
+[node name="hit" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+volume_db = -9.0
+autoplay = true
+bus = "SFX"
+script = ExtResource( 5 )
+
+[connection signal="ended" from="." to="DamageOnTouch" method="deactivate"]
+[connection signal="started" from="." to="DamageOnTouch" method="activate"]

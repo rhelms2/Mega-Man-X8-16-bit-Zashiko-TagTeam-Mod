@@ -1,0 +1,7 @@
+[gd_resource type="BitmapFont" load_steps=2 format=2]
+
+[ext_resource path="res://src/Fonts/Xclassicfont.fnt" type="BitmapFont" id=1]
+
+[resource]
+height = 8.0
+fallback = ExtResource( 1 )

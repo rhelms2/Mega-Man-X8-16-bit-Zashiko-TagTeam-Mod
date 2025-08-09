@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/Actors/Player/X/IcarusHeadArea.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Player/Modules/JumpDamage.gd" type="Script" id=2]
+[ext_resource path="res://src/Effects/Textures/area_shield.tres" type="SpriteFrames" id=3]
+
+[sub_resource type="CapsuleShape2D" id=35]
+radius = 40.0
+height = 4.0
+
+[node name="JumpDamage" type="Node2D"]
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_description_": ""
+}
+active = false
+conflicting_moves = [ "Death", "Nothing" ]
+actions = [ "Event" ]
+start_event = "jump"
+force_start = true
+damage_value = 5
+
+[node name="shield_effect" type="AnimatedSprite" parent="."]
+visible = false
+scale = Vector2( 0.8, 0.8 )
+frames = ExtResource( 3 )
+animation = "New Anim"
+playing = true
+
+[node name="DamageArea" type="RigidBody2D" parent="." groups=["Player Projectile"]]
+visible = false
+collision_layer = 4
+collision_mask = 0
+mode = 3
+script = ExtResource( 1 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="DamageArea"]
+shape = SubResource( 35 )
+disabled = true

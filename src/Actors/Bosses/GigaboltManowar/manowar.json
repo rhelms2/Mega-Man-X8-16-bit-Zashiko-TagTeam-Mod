@@ -1,0 +1,1019 @@
+{ "frames": [
+   {
+    "filename": "manowar 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 32
+   },
+   {
+    "filename": "manowar 1.ase",
+    "frame": { "x": 128, "y": 0, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "manowar 2.ase",
+    "frame": { "x": 256, "y": 0, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "manowar 3.ase",
+    "frame": { "x": 384, "y": 0, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "manowar 4.ase",
+    "frame": { "x": 512, "y": 0, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "manowar 5.ase",
+    "frame": { "x": 640, "y": 0, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 6.ase",
+    "frame": { "x": 768, "y": 0, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 66
+   },
+   {
+    "filename": "manowar 7.ase",
+    "frame": { "x": 896, "y": 0, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 66
+   },
+   {
+    "filename": "manowar 8.ase",
+    "frame": { "x": 1024, "y": 0, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "manowar 9.ase",
+    "frame": { "x": 1152, "y": 0, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "manowar 10.ase",
+    "frame": { "x": 0, "y": 112, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "manowar 11.ase",
+    "frame": { "x": 128, "y": 112, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "manowar 12.ase",
+    "frame": { "x": 256, "y": 112, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "manowar 13.ase",
+    "frame": { "x": 384, "y": 112, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "manowar 14.ase",
+    "frame": { "x": 512, "y": 112, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "manowar 15.ase",
+    "frame": { "x": 640, "y": 112, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "manowar 16.ase",
+    "frame": { "x": 768, "y": 112, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 17.ase",
+    "frame": { "x": 896, "y": 112, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 18.ase",
+    "frame": { "x": 1024, "y": 112, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 19.ase",
+    "frame": { "x": 1152, "y": 112, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 20.ase",
+    "frame": { "x": 0, "y": 224, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 21.ase",
+    "frame": { "x": 128, "y": 224, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 22.ase",
+    "frame": { "x": 256, "y": 224, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 23.ase",
+    "frame": { "x": 384, "y": 224, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 24.ase",
+    "frame": { "x": 512, "y": 224, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 25.ase",
+    "frame": { "x": 640, "y": 224, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 26.ase",
+    "frame": { "x": 768, "y": 224, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 27.ase",
+    "frame": { "x": 896, "y": 224, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 28.ase",
+    "frame": { "x": 1024, "y": 224, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 29.ase",
+    "frame": { "x": 1152, "y": 224, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 30.ase",
+    "frame": { "x": 0, "y": 336, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 31.ase",
+    "frame": { "x": 128, "y": 336, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 32.ase",
+    "frame": { "x": 640, "y": 112, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 33.ase",
+    "frame": { "x": 256, "y": 336, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 34.ase",
+    "frame": { "x": 384, "y": 336, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 35.ase",
+    "frame": { "x": 512, "y": 336, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 36.ase",
+    "frame": { "x": 640, "y": 336, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 37.ase",
+    "frame": { "x": 768, "y": 336, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "manowar 38.ase",
+    "frame": { "x": 896, "y": 336, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 39.ase",
+    "frame": { "x": 1024, "y": 336, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "manowar 40.ase",
+    "frame": { "x": 1152, "y": 336, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "manowar 41.ase",
+    "frame": { "x": 0, "y": 448, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "manowar 42.ase",
+    "frame": { "x": 128, "y": 448, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "manowar 43.ase",
+    "frame": { "x": 256, "y": 448, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 122
+   },
+   {
+    "filename": "manowar 44.ase",
+    "frame": { "x": 384, "y": 448, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 45.ase",
+    "frame": { "x": 512, "y": 448, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 66
+   },
+   {
+    "filename": "manowar 46.ase",
+    "frame": { "x": 640, "y": 448, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "manowar 47.ase",
+    "frame": { "x": 768, "y": 448, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "manowar 48.ase",
+    "frame": { "x": 896, "y": 448, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 66
+   },
+   {
+    "filename": "manowar 49.ase",
+    "frame": { "x": 1024, "y": 448, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "manowar 50.ase",
+    "frame": { "x": 1152, "y": 448, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 51.ase",
+    "frame": { "x": 0, "y": 560, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 52.ase",
+    "frame": { "x": 128, "y": 560, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 53.ase",
+    "frame": { "x": 256, "y": 560, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "manowar 54.ase",
+    "frame": { "x": 384, "y": 560, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "manowar 55.ase",
+    "frame": { "x": 128, "y": 560, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "manowar 56.ase",
+    "frame": { "x": 512, "y": 560, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "manowar 57.ase",
+    "frame": { "x": 640, "y": 560, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "manowar 58.ase",
+    "frame": { "x": 768, "y": 560, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "manowar 59.ase",
+    "frame": { "x": 896, "y": 560, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "manowar 60.ase",
+    "frame": { "x": 1024, "y": 560, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "manowar 61.ase",
+    "frame": { "x": 896, "y": 560, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 62.ase",
+    "frame": { "x": 1152, "y": 560, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 32
+   },
+   {
+    "filename": "manowar 63.ase",
+    "frame": { "x": 0, "y": 672, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 32
+   },
+   {
+    "filename": "manowar 64.ase",
+    "frame": { "x": 128, "y": 672, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 32
+   },
+   {
+    "filename": "manowar 65.ase",
+    "frame": { "x": 256, "y": 672, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 32
+   },
+   {
+    "filename": "manowar 66.ase",
+    "frame": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 32
+   },
+   {
+    "filename": "manowar 67.ase",
+    "frame": { "x": 128, "y": 0, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "manowar 68.ase",
+    "frame": { "x": 384, "y": 672, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 66
+   },
+   {
+    "filename": "manowar 69.ase",
+    "frame": { "x": 512, "y": 672, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 66
+   },
+   {
+    "filename": "manowar 70.ase",
+    "frame": { "x": 640, "y": 672, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 71.ase",
+    "frame": { "x": 768, "y": 672, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 122
+   },
+   {
+    "filename": "manowar 72.ase",
+    "frame": { "x": 896, "y": 672, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 73.ase",
+    "frame": { "x": 1024, "y": 672, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 74.ase",
+    "frame": { "x": 1152, "y": 672, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 75.ase",
+    "frame": { "x": 0, "y": 784, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 66
+   },
+   {
+    "filename": "manowar 76.ase",
+    "frame": { "x": 128, "y": 784, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "manowar 77.ase",
+    "frame": { "x": 256, "y": 784, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 32
+   },
+   {
+    "filename": "manowar 78.ase",
+    "frame": { "x": 384, "y": 784, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 32
+   },
+   {
+    "filename": "manowar 79.ase",
+    "frame": { "x": 512, "y": 784, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 32
+   },
+   {
+    "filename": "manowar 80.ase",
+    "frame": { "x": 640, "y": 784, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 32
+   },
+   {
+    "filename": "manowar 81.ase",
+    "frame": { "x": 768, "y": 784, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 32
+   },
+   {
+    "filename": "manowar 82.ase",
+    "frame": { "x": 896, "y": 784, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 32
+   },
+   {
+    "filename": "manowar 83.ase",
+    "frame": { "x": 1024, "y": 784, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 32
+   },
+   {
+    "filename": "manowar 84.ase",
+    "frame": { "x": 1152, "y": 784, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 32
+   },
+   {
+    "filename": "manowar 85.ase",
+    "frame": { "x": 0, "y": 896, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 32
+   },
+   {
+    "filename": "manowar 86.ase",
+    "frame": { "x": 128, "y": 0, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "manowar 87.ase",
+    "frame": { "x": 128, "y": 896, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 66
+   },
+   {
+    "filename": "manowar 88.ase",
+    "frame": { "x": 256, "y": 896, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 66
+   },
+   {
+    "filename": "manowar 89.ase",
+    "frame": { "x": 640, "y": 672, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 90.ase",
+    "frame": { "x": 768, "y": 672, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 122
+   },
+   {
+    "filename": "manowar 91.ase",
+    "frame": { "x": 384, "y": 896, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 92.ase",
+    "frame": { "x": 512, "y": 896, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "manowar 93.ase",
+    "frame": { "x": 640, "y": 896, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 66
+   },
+   {
+    "filename": "manowar 94.ase",
+    "frame": { "x": 768, "y": 896, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 122
+   },
+   {
+    "filename": "manowar 95.ase",
+    "frame": { "x": 896, "y": 896, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 122
+   },
+   {
+    "filename": "manowar 96.ase",
+    "frame": { "x": 1024, "y": 896, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 122
+   },
+   {
+    "filename": "manowar 97.ase",
+    "frame": { "x": 896, "y": 896, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "manowar 98.ase",
+    "frame": { "x": 1152, "y": 896, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "manowar 99.ase",
+    "frame": { "x": 0, "y": 1008, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "manowar 100.ase",
+    "frame": { "x": 128, "y": 1008, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "manowar 101.ase",
+    "frame": { "x": 256, "y": 1008, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "manowar 102.ase",
+    "frame": { "x": 384, "y": 1008, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 42
+   },
+   {
+    "filename": "manowar 103.ase",
+    "frame": { "x": 512, "y": 1008, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 104.ase",
+    "frame": { "x": 640, "y": 1008, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 105.ase",
+    "frame": { "x": 768, "y": 1008, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 82
+   },
+   {
+    "filename": "manowar 106.ase",
+    "frame": { "x": 896, "y": 1008, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 122
+   },
+   {
+    "filename": "manowar 107.ase",
+    "frame": { "x": 1024, "y": 1008, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 100
+   },
+   {
+    "filename": "manowar 108.ase",
+    "frame": { "x": 1152, "y": 1008, "w": 128, "h": 112 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 128, "h": 112 },
+    "sourceSize": { "w": 128, "h": 112 },
+    "duration": 444
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3-rc6-x64",
+  "image": "manowar.png",
+  "format": "RGBA8888",
+  "size": { "w": 1280, "h": 1120 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "intro", "from": 0, "to": 5, "direction": "forward", "color": "#000000ff" },
+   { "name": "intro_end", "from": 6, "to": 7, "direction": "forward", "color": "#000000ff" },
+   { "name": "idle", "from": 8, "to": 15, "direction": "forward", "color": "#000000ff" },
+   { "name": "move_up", "from": 16, "to": 21, "direction": "forward", "color": "#000000ff" },
+   { "name": "move_down", "from": 22, "to": 29, "direction": "forward", "color": "#000000ff" },
+   { "name": "move_down_end", "from": 30, "to": 32, "direction": "forward", "color": "#000000ff" },
+   { "name": "light_prepare", "from": 33, "to": 39, "direction": "forward", "color": "#000000ff" },
+   { "name": "light", "from": 40, "to": 42, "direction": "forward", "color": "#000000ff" },
+   { "name": "light_stop", "from": 43, "to": 43, "direction": "forward", "color": "#000000ff" },
+   { "name": "light_end", "from": 44, "to": 47, "direction": "forward", "color": "#000000ff" },
+   { "name": "thunder_prepare", "from": 48, "to": 52, "direction": "forward", "color": "#000000ff" },
+   { "name": "thunder_start", "from": 53, "to": 55, "direction": "forward", "color": "#000000ff" },
+   { "name": "thunder_vfx", "from": 56, "to": 61, "direction": "forward", "color": "#000000ff" },
+   { "name": "thunder_loop", "from": 62, "to": 65, "direction": "forward", "color": "#000000ff" },
+   { "name": "thunder_end", "from": 66, "to": 71, "direction": "forward", "color": "#000000ff" },
+   { "name": "roll_prepare", "from": 72, "to": 76, "direction": "forward", "color": "#000000ff" },
+   { "name": "roll_start", "from": 77, "to": 80, "direction": "forward", "color": "#000000ff" },
+   { "name": "roll_loop", "from": 81, "to": 84, "direction": "forward", "color": "#000000ff" },
+   { "name": "roll_end", "from": 85, "to": 90, "direction": "forward", "color": "#000000ff" },
+   { "name": "storm_prepare", "from": 91, "to": 96, "direction": "forward", "color": "#000000ff" },
+   { "name": "storm_start", "from": 97, "to": 99, "direction": "forward", "color": "#000000ff" },
+   { "name": "storm_loop", "from": 100, "to": 102, "direction": "forward", "color": "#000000ff" },
+   { "name": "storm_stop", "from": 103, "to": 105, "direction": "forward", "color": "#000000ff" },
+   { "name": "storm_end", "from": 106, "to": 107, "direction": "forward", "color": "#000000ff" },
+   { "name": "death", "from": 108, "to": 108, "direction": "forward", "color": "#000000ff" }
+  ]
+ }
+}

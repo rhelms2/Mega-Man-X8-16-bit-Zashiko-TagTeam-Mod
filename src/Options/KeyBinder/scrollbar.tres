@@ -1,0 +1,13 @@
+[gd_resource type="Theme" load_steps=5 format=2]
+
+[ext_resource path="res://src/Options/KeyBinder/scrollbar_grabber.tres" type="StyleBox" id=1]
+[ext_resource path="res://src/Options/KeyBinder/scrollbar_back.tres" type="StyleBox" id=2]
+[ext_resource path="res://src/Options/KeyBinder/scrollbar_highlight.tres" type="StyleBox" id=3]
+[ext_resource path="res://src/Options/KeyBinder/scrollbar_pressed.tres" type="StyleBox" id=4]
+
+[resource]
+VScrollBar/styles/grabber = ExtResource( 1 )
+VScrollBar/styles/grabber_highlight = ExtResource( 3 )
+VScrollBar/styles/grabber_pressed = ExtResource( 4 )
+VScrollBar/styles/scroll = ExtResource( 2 )
+VScrollBar/styles/scroll_focus = ExtResource( 2 )

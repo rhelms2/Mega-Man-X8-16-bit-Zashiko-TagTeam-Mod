@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/FX - Extra Life.ogg-2694a1e4e705ea980abd288362f1ef3a.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/FX - Extra Life.ogg"
+dest_files=[ "res://.import/FX - Extra Life.ogg-2694a1e4e705ea980abd288362f1ef3a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

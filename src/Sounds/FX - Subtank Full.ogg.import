@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/FX - Subtank Full.ogg-1b41dbed05a627ecf93d72d13e9993bf.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/FX - Subtank Full.ogg"
+dest_files=[ "res://.import/FX - Subtank Full.ogg-1b41dbed05a627ecf93d72d13e9993bf.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

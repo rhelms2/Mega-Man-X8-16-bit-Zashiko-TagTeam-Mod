@@ -1,0 +1,144 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://src/Actors/Bosses/CopySigma/LandSpikeProjectile.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=2]
+[ext_resource path="res://src/Sounds/56 - MMX - Enemy Death.wav" type="AudioStream" id=3]
+[ext_resource path="res://src/Actors/Bosses/CopySigma/WallSpikeProjectile.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Actors/Enemies/ProjectileDoT.gd" type="Script" id=5]
+[ext_resource path="res://src/Effects/Fire/pinkfire2.png" type="Texture" id=6]
+[ext_resource path="res://src/Effects/Fire/pinkfire1.png" type="Texture" id=7]
+[ext_resource path="res://src/Effects/Fire/pinkfire3.png" type="Texture" id=8]
+[ext_resource path="res://src/Effects/Textures/sigma_spike.png" type="Texture" id=9]
+[ext_resource path="res://src/Effects/Materials/pinkfire_mat.tres" type="Material" id=10]
+[ext_resource path="res://src/Effects/Materials/pinkfire_particles.tres" type="Material" id=11]
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 9 )
+region = Rect2( 0, 64, 48, 64 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 9 )
+region = Rect2( 48, 64, 48, 64 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 9 )
+region = Rect2( 96, 64, 48, 64 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 9 )
+region = Rect2( 144, 64, 48, 64 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 9 )
+region = Rect2( 0, 128, 48, 64 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 9 )
+region = Rect2( 48, 128, 48, 64 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 9 )
+region = Rect2( 96, 128, 48, 64 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 9 )
+region = Rect2( 144, 128, 48, 64 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 48, 64 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 9 )
+region = Rect2( 48, 0, 48, 64 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 9 )
+region = Rect2( 96, 0, 48, 64 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 9 )
+region = Rect2( 144, 0, 48, 64 )
+
+[sub_resource type="SpriteFrames" id=20]
+animations = [ {
+"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), null ],
+"loop": false,
+"name": "explode",
+"speed": 24.0
+}, {
+"frames": [ SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ) ],
+"loop": true,
+"name": "idle",
+"speed": 28.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 20, 31 )
+
+[node name="LandSpikeProjectile" type="KinematicBody2D" groups=["Enemy Projectile"]]
+z_index = 10
+collision_layer = 16
+script = ExtResource( 1 )
+damage = 10.0
+mini_projectile = ExtResource( 4 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, 1 )
+frames = SubResource( 20 )
+animation = "idle"
+frame = 3
+playing = true
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 1 )
+shape = SubResource( 21 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+position = Vector2( -0.500003, 1.5 )
+scale = Vector2( 3.05, 3.05 )
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+
+[node name="collisionPolygon2D" type="CollisionPolygon2D" parent="area2D"]
+position = Vector2( -18, 2 )
+polygon = PoolVector2Array( 14, -17, 14, -9, 14, 31, 4, 31, 4, -9 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 5 )
+damage = 10.0
+
+[node name="vanish" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+volume_db = 2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 2 )
+
+[node name="fire1" type="Particles2D" parent="."]
+material = ExtResource( 10 )
+z_index = 1
+amount = 7
+local_coords = false
+process_material = ExtResource( 11 )
+texture = ExtResource( 7 )
+
+[node name="fire2" type="Particles2D" parent="."]
+material = ExtResource( 10 )
+z_index = 1
+amount = 5
+local_coords = false
+process_material = ExtResource( 11 )
+texture = ExtResource( 6 )
+
+[node name="fire3" type="Particles2D" parent="."]
+material = ExtResource( 10 )
+z_index = 1
+amount = 6
+local_coords = false
+process_material = ExtResource( 11 )
+texture = ExtResource( 8 )

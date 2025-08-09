@@ -1,0 +1,541 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/HUD/Debugger.gd" type="Script" id=1]
+
+[node name="DebugAndCheats" type="Control"]
+script = ExtResource( 1 )
+
+[node name="vBoxContainer" type="VBoxContainer" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -94.0
+margin_right = 141.0
+margin_bottom = 418.0
+rect_scale = Vector2( 0.4, 0.4 )
+custom_constants/separation = 0
+
+[node name="hide_menu" type="Button" parent="vBoxContainer"]
+margin_right = 235.0
+margin_bottom = 20.0
+focus_mode = 0
+toggle_mode = true
+action_mode = 0
+enabled_focus_mode = 0
+text = "Debug Options"
+
+[node name="hBoxContainer" type="HBoxContainer" parent="vBoxContainer"]
+margin_top = 20.0
+margin_right = 235.0
+margin_bottom = 376.0
+grow_horizontal = 0
+grow_vertical = 0
+custom_constants/separation = 0
+
+[node name="vBoxContainer" type="VBoxContainer" parent="vBoxContainer/hBoxContainer"]
+margin_right = 118.0
+margin_bottom = 356.0
+custom_constants/separation = 1
+
+[node name="pause" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer"]
+visible = false
+margin_right = 118.0
+margin_bottom = 20.0
+toggle_mode = true
+action_mode = 0
+text = "pause"
+
+[node name="mute_music" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer"]
+margin_right = 118.0
+margin_bottom = 20.0
+toggle_mode = true
+action_mode = 0
+text = "mute_music"
+
+[node name="inifinte_health" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer"]
+margin_top = 21.0
+margin_right = 118.0
+margin_bottom = 41.0
+action_mode = 0
+text = "infinite_health"
+
+[node name="heal" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer"]
+margin_top = 42.0
+margin_right = 118.0
+margin_bottom = 62.0
+action_mode = 0
+text = "heal"
+
+[node name="damage" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer"]
+margin_top = 63.0
+margin_right = 118.0
+margin_bottom = 83.0
+action_mode = 0
+text = "damage"
+
+[node name="kill" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer"]
+margin_top = 84.0
+margin_right = 118.0
+margin_bottom = 104.0
+action_mode = 0
+text = "death"
+
+[node name="reset_stage" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer"]
+margin_top = 105.0
+margin_right = 118.0
+margin_bottom = 125.0
+action_mode = 0
+text = "reset_stage"
+
+[node name="previous_checkpoint" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer"]
+margin_top = 126.0
+margin_right = 118.0
+margin_bottom = 146.0
+action_mode = 0
+text = "previous_checkpoint"
+clip_text = true
+
+[node name="reset_checkpoint" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer"]
+margin_top = 147.0
+margin_right = 118.0
+margin_bottom = 167.0
+action_mode = 0
+text = "reset_checkpoint"
+clip_text = true
+
+[node name="next_checkpoint" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer"]
+margin_top = 168.0
+margin_right = 118.0
+margin_bottom = 188.0
+action_mode = 0
+text = "next_checkpoint"
+
+[node name="teleport_to_boss" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer"]
+margin_top = 189.0
+margin_right = 118.0
+margin_bottom = 209.0
+action_mode = 0
+text = "teleport_to_boss"
+
+[node name="defeat_boss" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer"]
+margin_top = 210.0
+margin_right = 118.0
+margin_bottom = 230.0
+action_mode = 0
+text = "defeat_boss"
+
+[node name="30fps" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer"]
+visible = false
+margin_top = 189.0
+margin_right = 118.0
+margin_bottom = 209.0
+action_mode = 0
+text = "30FPS"
+
+[node name="60fps" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer"]
+visible = false
+margin_top = 189.0
+margin_right = 118.0
+margin_bottom = 209.0
+action_mode = 0
+text = "60FPS"
+
+[node name="120fps" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer"]
+visible = false
+margin_top = 189.0
+margin_right = 118.0
+margin_bottom = 209.0
+action_mode = 0
+text = "120FPS"
+
+[node name="144fps" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer"]
+visible = false
+margin_top = 189.0
+margin_right = 118.0
+margin_bottom = 209.0
+action_mode = 0
+text = "144FPS"
+
+[node name="fps" type="Label" parent="vBoxContainer/hBoxContainer/vBoxContainer/144fps"]
+visible = false
+margin_left = -70.0
+margin_top = 27.0
+margin_right = 3.00002
+margin_bottom = 41.0
+text = "currentfps: "
+
+[node name="fill_subtank" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer"]
+visible = false
+margin_top = 168.0
+margin_right = 118.0
+margin_bottom = 188.0
+action_mode = 0
+text = "fill_subtank"
+
+[node name="spawn_bike2" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer"]
+margin_top = 231.0
+margin_right = 118.0
+margin_bottom = 251.0
+action_mode = 0
+text = "spawn_bike"
+
+[node name="spawn_ridearm" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer"]
+margin_top = 252.0
+margin_right = 118.0
+margin_bottom = 272.0
+action_mode = 0
+text = "spawn_ridearm"
+
+[node name="spawn_gridearm" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer"]
+margin_top = 273.0
+margin_right = 118.0
+margin_bottom = 293.0
+action_mode = 0
+text = "spawn_gridearm"
+
+[node name="1xSize" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer"]
+visible = false
+margin_top = 294.0
+margin_right = 118.0
+margin_bottom = 314.0
+action_mode = 0
+text = "1x Size"
+
+[node name="2xSize" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer"]
+visible = false
+margin_top = 315.0
+margin_right = 118.0
+margin_bottom = 335.0
+action_mode = 0
+text = "2x Size"
+
+[node name="3xSize" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer"]
+visible = false
+margin_top = 336.0
+margin_right = 118.0
+margin_bottom = 356.0
+action_mode = 0
+text = "3x Size"
+
+[node name="fullscreen" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer"]
+visible = false
+margin_top = 294.0
+margin_right = 118.0
+margin_bottom = 314.0
+action_mode = 0
+text = "Fullscreen"
+
+[node name="rooster_crystal" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer"]
+visible = false
+margin_top = 252.0
+margin_right = 118.0
+margin_bottom = 272.0
+action_mode = 0
+text = "rooster_crystal"
+
+[node name="yeti_crystal" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer"]
+visible = false
+margin_top = 273.0
+margin_right = 118.0
+margin_bottom = 293.0
+action_mode = 0
+text = "yeti_crystal"
+
+[node name="panda_crystal" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer"]
+visible = false
+margin_top = 294.0
+margin_right = 118.0
+margin_bottom = 314.0
+action_mode = 0
+text = "panda_crystal"
+
+[node name="anton_crystal" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer"]
+visible = false
+margin_top = 315.0
+margin_right = 118.0
+margin_bottom = 335.0
+action_mode = 0
+text = "anton_crystal"
+
+[node name="mantis_crystal" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer"]
+visible = false
+margin_top = 252.0
+margin_right = 118.0
+margin_bottom = 272.0
+action_mode = 0
+text = "mantis_crystal"
+
+[node name="sunf_crystal" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer"]
+visible = false
+margin_top = 252.0
+margin_right = 118.0
+margin_bottom = 272.0
+action_mode = 0
+text = "sunf_crystal"
+
+[node name="trilo_crystal" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer"]
+visible = false
+margin_top = 378.0
+margin_right = 118.0
+margin_bottom = 398.0
+action_mode = 0
+text = "trilo_crystal"
+
+[node name="set_seed" type="LineEdit" parent="vBoxContainer/hBoxContainer/vBoxContainer"]
+margin_top = 294.0
+margin_right = 118.0
+margin_bottom = 318.0
+text = "set_seed"
+align = 1
+
+[node name="vBoxContainer2" type="VBoxContainer" parent="vBoxContainer/hBoxContainer"]
+margin_left = 118.0
+margin_right = 234.0
+margin_bottom = 356.0
+custom_constants/separation = 1
+
+[node name="rooster_stage" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer2"]
+visible = false
+margin_right = 117.0
+margin_bottom = 20.0
+action_mode = 0
+text = "Inferno"
+
+[node name="go_to_yeti" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer2"]
+visible = false
+margin_right = 117.0
+margin_bottom = 20.0
+action_mode = 0
+text = "Central White"
+
+[node name="pitch_black" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer2"]
+visible = false
+margin_right = 117.0
+margin_bottom = 20.0
+action_mode = 0
+text = "Pitch Black"
+
+[node name="icarus_head" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer2"]
+margin_right = 116.0
+margin_bottom = 20.0
+action_mode = 0
+text = "icarus_head"
+
+[node name="icarus_body" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer2"]
+margin_top = 21.0
+margin_right = 116.0
+margin_bottom = 41.0
+action_mode = 0
+text = "icarus_body"
+
+[node name="icarus_arms" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer2"]
+margin_top = 42.0
+margin_right = 116.0
+margin_bottom = 62.0
+action_mode = 0
+text = "icarus_arms"
+
+[node name="icarus_legs" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer2"]
+margin_top = 63.0
+margin_right = 116.0
+margin_bottom = 83.0
+action_mode = 0
+text = "icarus_legs"
+
+[node name="hermes_head" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer2"]
+margin_top = 84.0
+margin_right = 116.0
+margin_bottom = 104.0
+action_mode = 0
+text = "hermes_head"
+
+[node name="hermes_body" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer2"]
+margin_top = 105.0
+margin_right = 116.0
+margin_bottom = 125.0
+action_mode = 0
+text = "hermes_body"
+
+[node name="hermes_arms" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer2"]
+margin_top = 126.0
+margin_right = 116.0
+margin_bottom = 146.0
+action_mode = 0
+text = "hermes_arms"
+
+[node name="hermes_legs" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer2"]
+margin_top = 147.0
+margin_right = 116.0
+margin_bottom = 167.0
+action_mode = 0
+text = "hermes_legs"
+
+[node name="subtank1" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer2"]
+margin_top = 168.0
+margin_right = 116.0
+margin_bottom = 188.0
+action_mode = 0
+text = "unlock_subtank"
+
+[node name="unlock_weapons" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer2"]
+margin_top = 189.0
+margin_right = 116.0
+margin_bottom = 209.0
+action_mode = 0
+text = "unlock_weapons"
+
+[node name="unlock_hearts" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer2"]
+margin_top = 210.0
+margin_right = 116.0
+margin_bottom = 230.0
+action_mode = 0
+text = "unlock_hearts"
+
+[node name="use_subtank" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer2"]
+visible = false
+margin_top = 189.0
+margin_right = 117.0
+margin_bottom = 209.0
+action_mode = 0
+text = "use_subtank"
+
+[node name="sss_rank" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer2"]
+margin_top = 231.0
+margin_right = 116.0
+margin_bottom = 251.0
+action_mode = 0
+text = "sss_rank"
+
+[node name="stage_select" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer2"]
+margin_top = 252.0
+margin_right = 116.0
+margin_bottom = 272.0
+action_mode = 0
+text = "stage_select"
+
+[node name="intro_stage" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer2"]
+margin_top = 273.0
+margin_right = 116.0
+margin_bottom = 293.0
+action_mode = 0
+text = "intro_stage"
+
+[node name="seraph_lumine" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer2"]
+margin_top = 294.0
+margin_right = 116.0
+margin_bottom = 314.0
+action_mode = 0
+text = "seraph_lumine"
+
+[node name="remove_hearts" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer2"]
+margin_top = 315.0
+margin_right = 116.0
+margin_bottom = 335.0
+action_mode = 0
+text = "remove_hearts"
+
+[node name="remove_collects" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer2"]
+margin_top = 336.0
+margin_right = 116.0
+margin_bottom = 356.0
+action_mode = 0
+text = "remove_all"
+
+[node name="igtscreen" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer2"]
+visible = false
+margin_top = 357.0
+margin_right = 116.0
+margin_bottom = 377.0
+action_mode = 0
+text = "igtscreen"
+
+[node name="gateway_reset" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer2"]
+visible = false
+margin_top = 315.0
+margin_right = 116.0
+margin_bottom = 335.0
+action_mode = 0
+text = "gateway_reset"
+
+[node name="gateway" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer2"]
+visible = false
+margin_top = 357.0
+margin_right = 116.0
+margin_bottom = 377.0
+action_mode = 0
+text = "gateway"
+
+[node name="gateway_final" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer2"]
+visible = false
+margin_top = 357.0
+margin_right = 116.0
+margin_bottom = 377.0
+action_mode = 0
+text = "gateway_final"
+
+[node name="manow_crystal" type="Button" parent="vBoxContainer/hBoxContainer/vBoxContainer2"]
+visible = false
+margin_top = 378.0
+margin_right = 116.0
+margin_bottom = 398.0
+action_mode = 0
+text = "manow_crystal"
+
+[connection signal="pressed" from="vBoxContainer/hide_menu" to="." method="_on_hide_menu_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer/pause" to="." method="_on_pause_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer/mute_music" to="." method="_on_mute_music_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer/inifinte_health" to="." method="_on_inifinte_health_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer/heal" to="." method="_on_heal_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer/damage" to="." method="_on_damage_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer/kill" to="." method="_on_kill_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer/reset_stage" to="." method="_on_reset_stage_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer/previous_checkpoint" to="." method="_on_previous_checkpoint_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer/reset_checkpoint" to="." method="_on_reset_checkpoint_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer/next_checkpoint" to="." method="_on_next_checkpoint_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer/teleport_to_boss" to="." method="_on_teleport_to_boss_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer/defeat_boss" to="." method="_on_defeat_boss_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer/30fps" to="." method="_on_30fps_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer/60fps" to="." method="_on_60fps_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer/120fps" to="." method="_on_120fps_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer/144fps" to="." method="_on_144fps_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer/fill_subtank" to="." method="_on_fill_subtank_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer/spawn_bike2" to="." method="_on_spawn_bike_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer/spawn_ridearm" to="." method="_on_spawn_ridearm_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer/spawn_gridearm" to="." method="_on_spawn_gridearm_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer/1xSize" to="." method="_on_1xSize_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer/2xSize" to="." method="_on_2xSize_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer/3xSize" to="." method="_on_3xSize_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer/fullscreen" to="." method="_on_fullscreen_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer/rooster_crystal" to="." method="_on_rooster_crystal_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer/yeti_crystal" to="." method="_on_yeti_crystal_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer/panda_crystal" to="." method="_on_panda_crystal_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer/anton_crystal" to="." method="_on_anton_crystal_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer/mantis_crystal" to="." method="_on_mantis_crystal_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer/sunf_crystal" to="." method="_on_sunf_crystal_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer/trilo_crystal" to="." method="_on_trilo_crystal_pressed"]
+[connection signal="text_entered" from="vBoxContainer/hBoxContainer/vBoxContainer/set_seed" to="." method="_on_set_seed_text_entered"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer2/rooster_stage" to="." method="_on_rooster_stage_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer2/go_to_yeti" to="." method="_on_go_to_yeti_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer2/pitch_black" to="." method="_on_pitch_black_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer2/icarus_head" to="." method="_on_icarus_head_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer2/icarus_body" to="." method="_on_icarus_body_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer2/icarus_arms" to="." method="_on_icarus_arms_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer2/icarus_legs" to="." method="_on_icarus_legs_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer2/hermes_head" to="." method="_on_hermes_head_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer2/hermes_body" to="." method="_on_hermes_body_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer2/hermes_arms" to="." method="_on_hermes_arms_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer2/hermes_legs" to="." method="_on_hermes_legs_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer2/subtank1" to="." method="_on_subtank1_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer2/unlock_weapons" to="." method="_on_unlock_weapons_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer2/unlock_hearts" to="." method="_on_add_heart_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer2/use_subtank" to="." method="_on_use_subtank_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer2/sss_rank" to="." method="_on_sss_rank_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer2/stage_select" to="." method="_on_stage_select_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer2/intro_stage" to="." method="_on_intro_stage_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer2/seraph_lumine" to="." method="_on_seraph_lumine_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer2/remove_hearts" to="." method="_on_remove_all_hearts"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer2/remove_collects" to="." method="_on_remove_collects_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer2/igtscreen" to="." method="_on_igtscreen_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer2/gateway_reset" to="." method="_on_gateway_reset_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer2/gateway" to="." method="_on_gateway_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer2/gateway_final" to="." method="_on_gateway_final_pressed"]
+[connection signal="pressed" from="vBoxContainer/hBoxContainer/vBoxContainer2/manow_crystal" to="." method="_on_manow_crystal_pressed"]

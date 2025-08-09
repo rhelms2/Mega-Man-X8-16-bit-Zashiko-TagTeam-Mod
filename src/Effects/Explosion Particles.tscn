@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/Effects/Textures/explosion.png" type="Texture" id=1]
+[ext_resource path="res://src/Effects/Materials/ExplosionParticles.tres" type="Material" id=2]
+
+[sub_resource type="CanvasItemMaterial" id=210]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 4
+particles_anim_loop = false
+
+[node name="Explosion Particles" type="Particles2D"]
+material = SubResource( 210 )
+position = Vector2( 0, 0.5 )
+z_index = 2
+emitting = false
+amount = 15
+lifetime = 2.0
+local_coords = false
+process_material = ExtResource( 2 )
+texture = ExtResource( 1 )

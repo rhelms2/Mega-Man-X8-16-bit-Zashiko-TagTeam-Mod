@@ -1,0 +1,86 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://src/Actors/Weapons/Projectiles/Lemon.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Actors/Enemies/Sprites/missile.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://src/Actors/Enemies/EnemyMissile.gd" type="Script" id=3]
+[ext_resource path="res://src/Effects/Textures/small_smoke.png" type="Texture" id=4]
+[ext_resource path="res://src/Actors/Enemies/ProjectileDoT.gd" type="Script" id=5]
+[ext_resource path="res://src/Effects/Textures/explosion.png" type="Texture" id=6]
+[ext_resource path="res://src/Sounds/59 - MMX - Enemy Die (4).wav" type="AudioStream" id=7]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 6, 4 )
+
+[sub_resource type="CanvasItemMaterial" id=1]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 2
+particles_anim_loop = false
+
+[sub_resource type="ParticlesMaterial" id=2]
+lifetime_randomness = 0.33
+emission_shape = 2
+emission_box_extents = Vector3( 1, 1, 0 )
+flag_disable_z = true
+direction = Vector3( -1, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity_random = 0.1
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+color = Color( 0.972549, 0.972549, 0.972549, 1 )
+anim_speed = 1.0
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 4.5, 3.5 )
+
+[node name="EnemyMissile" instance=ExtResource( 1 )]
+z_index = 4
+collision_layer = 0
+collision_mask = 0
+script = ExtResource( 3 )
+damage = 4.0
+horizontal_velocity = 70.0
+fire_sound = null
+hit_sound = ExtResource( 7 )
+
+[node name="animatedSprite" parent="." index="0"]
+frames = ExtResource( 2 )
+animation = "default"
+frame = 0
+
+[node name="collisionShape2D" parent="." index="1"]
+shape = SubResource( 3 )
+
+[node name="particles2D" parent="." index="3"]
+material = SubResource( 1 )
+position = Vector2( 0, 0 )
+z_index = -1
+lifetime = 0.24
+process_material = SubResource( 2 )
+texture = ExtResource( 4 )
+
+[node name="audioStreamPlayer2D" parent="." index="4"]
+pitch_scale = 0.87
+
+[node name="Hit Particle" parent="." index="5"]
+position = Vector2( 0, 0 )
+texture = ExtResource( 6 )
+hframes = 4
+vframes = 4
+animation_speed = 24.0
+horizontal_flip_chance = 0.0
+vertical_flip_chance = 0.0
+
+[node name="area2D" type="Area2D" parent="." index="6"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D" index="0"]
+position = Vector2( 2.5, 0.5 )
+shape = SubResource( 4 )
+
+[node name="DamageOnTouch" type="Node2D" parent="." index="7"]
+script = ExtResource( 5 )
+damage = 3.0

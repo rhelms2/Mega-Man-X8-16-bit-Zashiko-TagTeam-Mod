@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - Metal Valley 1 - Loop.ogg-cae439f14d8a66e1de44ff6c968c4489.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - Metal Valley 1 - Loop.ogg"
+dest_files=[ "res://.import/OST - Metal Valley 1 - Loop.ogg-cae439f14d8a66e1de44ff6c968c4489.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

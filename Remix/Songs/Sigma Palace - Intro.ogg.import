@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Sigma Palace - Intro.ogg-de02a02e5153df19626d8c7afa28ecc0.oggstr"
+
+[deps]
+
+source_file="res://Remix/Songs/Sigma Palace - Intro.ogg"
+dest_files=[ "res://.import/Sigma Palace - Intro.ogg-de02a02e5153df19626d8c7afa28ecc0.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,20 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/Levels/SigmaPalace/sigmapalace_full.tmx" type="PackedScene" id=1]
+[ext_resource path="res://addons/PaletteSwap/PaletteSwap.gdshader" type="Shader" id=2]
+[ext_resource path="res://src/Levels/SigmaPalace/sigmapalacepalette.png" type="Texture" id=3]
+
+[sub_resource type="ShaderMaterial" id=20]
+shader = ExtResource( 2 )
+shader_param/skip_first_row = false
+shader_param/use_palette_alpha = false
+shader_param/fps = 12.0
+shader_param/palette = ExtResource( 3 )
+
+[node name="sigmapalace_map" instance=ExtResource( 1 )]
+
+[node name="Background" parent="." index="0"]
+z_index = -3
+
+[node name="Main" parent="." index="3"]
+material = SubResource( 20 )

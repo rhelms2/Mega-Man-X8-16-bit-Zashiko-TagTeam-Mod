@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Panda - Claw Appear.ogg-1a2e3aebd7a633309c6c70cd034634b9.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/Panda - Claw Appear.ogg"
+dest_files=[ "res://.import/Panda - Claw Appear.ogg-1a2e3aebd7a633309c6c70cd034634b9.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

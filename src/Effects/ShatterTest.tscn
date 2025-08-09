@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/Effects/ShatterSprite.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/test_enemy.png" type="Texture" id=2]
+
+[node name="node2D" type="Sprite"]
+texture = ExtResource( 2 )
+script = ExtResource( 1 )
+
+[node name="rigidBody2D" type="RigidBody2D" parent="."]
+
+[node name="collisionPolygon2D" type="CollisionPolygon2D" parent="rigidBody2D"]
+
+[node name="rigidBody2D2" type="RigidBody2D" parent="."]
+
+[node name="rigidBody2D3" type="RigidBody2D" parent="."]
+
+[node name="rigidBody2D4" type="RigidBody2D" parent="."]
+
+[node name="polygon2D" type="Polygon2D" parent="."]
+
+[node name="polygon2D2" type="Polygon2D" parent="."]
+
+[node name="polygon2D3" type="Polygon2D" parent="."]
+
+[node name="polygon2D4" type="Polygon2D" parent="."]

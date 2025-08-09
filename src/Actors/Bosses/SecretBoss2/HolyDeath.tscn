@@ -1,0 +1,189 @@
+[gd_scene load_steps=22 format=2]
+
+[ext_resource path="res://src/Actors/Bosses/SecretBoss2/ciclo2_1.png" type="Texture" id=1]
+[ext_resource path="res://src/Actors/Bosses/SecretBoss2/deatharea.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Bosses/SecretBoss2/HolyDeath.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=4]
+[ext_resource path="res://src/Sounds/CopySigma - Charge.wav" type="AudioStream" id=5]
+[ext_resource path="res://src/Sounds/Rooster - Explosion.ogg" type="AudioStream" id=6]
+[ext_resource path="res://src/Actors/Bosses/SecretBoss2/ciclobg_1.png" type="Texture" id=7]
+[ext_resource path="res://src/Actors/Bosses/SecretBoss2/ciclo2_2.png" type="Texture" id=8]
+[ext_resource path="res://src/Actors/Bosses/SecretBoss2/ciclobg_2.png" type="Texture" id=9]
+[ext_resource path="res://src/Actors/Bosses/SecretBoss2/ciclobg_6.png" type="Texture" id=10]
+[ext_resource path="res://src/Actors/Bosses/SecretBoss2/ciclo2_6.png" type="Texture" id=11]
+[ext_resource path="res://src/Actors/Bosses/SecretBoss2/ciclo2_4.png" type="Texture" id=12]
+[ext_resource path="res://src/Actors/Bosses/SecretBoss2/ciclobg_4.png" type="Texture" id=13]
+[ext_resource path="res://src/Actors/Bosses/SecretBoss2/ciclo2_3.png" type="Texture" id=14]
+[ext_resource path="res://src/Actors/Bosses/SecretBoss2/ciclobg_3.png" type="Texture" id=15]
+[ext_resource path="res://src/Actors/Bosses/SecretBoss2/ciclobg_5.png" type="Texture" id=16]
+[ext_resource path="res://src/Actors/Bosses/SecretBoss2/ciclo2_5.png" type="Texture" id=17]
+
+[sub_resource type="Shader" id=88]
+code = "shader_type canvas_item;
+
+uniform sampler2D textureNoise: hint_white;
+uniform float radius: hint_range(0.0, 1.0) = 0.459;
+uniform float effectControl: hint_range(0.0, 1.0) = 0.309;
+uniform float burnSpeed: hint_range(0.0, 1.0) = 0.076;
+uniform float shape: hint_range(0.0, 1.0) = 1.0;
+
+void fragment() {
+    vec2 centerDistVec = vec2(0.5) - UV;
+    
+	float distToCircleEdge = length(centerDistVec) * radius;
+	float distToSquareEdge = 0.5*(0.5 - min(min(UV.x, 1.0 - UV.x), min(UV.y, 1.0 - UV.y)));
+	float distToEdge = mix(distToCircleEdge,distToSquareEdge,shape);
+
+    float gradient = smoothstep(0.5, 0.5 - radius, distToEdge);
+
+    vec2 direction = vec2(0, 1) * burnSpeed;
+    float noiseValue = texture(textureNoise, UV + direction * TIME).r;
+
+    float opacity = step(radius, mix(gradient, noiseValue, effectControl) - distToEdge);
+
+    COLOR = texture(TEXTURE, UV) * vec4(1.0, 1.0, 1.0, opacity);
+}
+"
+
+[sub_resource type="OpenSimplexNoise" id=71]
+period = 35.6
+
+[sub_resource type="NoiseTexture" id=89]
+width = 1024
+height = 1024
+seamless = true
+noise = SubResource( 71 )
+
+[sub_resource type="ShaderMaterial" id=91]
+shader = SubResource( 88 )
+shader_param/radius = 0.238
+shader_param/effectControl = 1.0
+shader_param/burnSpeed = 0.372
+shader_param/shape = 1.0
+shader_param/textureNoise = SubResource( 89 )
+
+[node name="HolyDeath" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="kanji" type="Light2D" parent="."]
+position = Vector2( 199, 112 )
+texture = ExtResource( 17 )
+mode = 3
+range_item_cull_mask = 16
+
+[node name="death_area" type="Sprite" parent="."]
+modulate = Color( 1, 0, 0, 1 )
+light_mask = 16
+material = SubResource( 91 )
+position = Vector2( 198, 112 )
+z_index = -5
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 396, 224 )
+
+[node name="death_cover" type="Sprite" parent="."]
+modulate = Color( 1, 0, 0, 1 )
+self_modulate = Color( 1, 1, 1, 0.466667 )
+light_mask = 16
+material = SubResource( 91 )
+position = Vector2( 198, 112 )
+z_index = 30
+texture = ExtResource( 7 )
+region_rect = Rect2( 0, 0, 396, 224 )
+
+[node name="1" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 2
+monitoring = false
+script = ExtResource( 2 )
+kanji = ExtResource( 1 )
+bg = ExtResource( 7 )
+
+[node name="collisionPolygon2D" type="CollisionPolygon2D" parent="1"]
+polygon = PoolVector2Array( 0, 223, 37, 222, 98, 147, 83, 133, 23, 136, 90, 51, -5, -6 )
+
+[node name="collisionPolygon2D2" type="CollisionPolygon2D" parent="1"]
+polygon = PoolVector2Array( 91, 222, 172, 132, 207, 66, 200, 35, 213, 65, 211, 222 )
+
+[node name="collisionPolygon2D3" type="CollisionPolygon2D" parent="1"]
+polygon = PoolVector2Array( 328, 2, 325, 22, 254, 26, 266, 69, 287, 44, 331, 44, 342, 88, 253, 131, 255, 198, 315, 198, 320, 145, 360, 146, 370, 225, 399, 226, 400, -3 )
+
+[node name="collisionPolygon2D4" type="CollisionPolygon2D" parent="1"]
+polygon = PoolVector2Array( 132, 88, 143, 88, 132, 103, 124, 101 )
+
+[node name="2" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 2
+monitoring = false
+script = ExtResource( 2 )
+kanji = ExtResource( 8 )
+bg = ExtResource( 9 )
+
+[node name="collisionPolygon2D" type="CollisionPolygon2D" parent="2"]
+polygon = PoolVector2Array( 340, -6, 308, 80, 290, 92, 290, 229, 242, 228, 206, 195, 251, 191, 251, 180, 151, 185, 155, 230, 399, 229, 401, -17, -3, -11, -3, 236, 104, 233, 115, 124, 64, -7 )
+
+[node name="3" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 2
+monitoring = false
+script = ExtResource( 2 )
+kanji = ExtResource( 14 )
+bg = ExtResource( 15 )
+
+[node name="collisionPolygon2D" type="CollisionPolygon2D" parent="3"]
+polygon = PoolVector2Array( 219, 232, 175, 224, 173, 197, 122, 204, 85, 110, 54, 106, 58, 75, 121, 75, 118, 55, 83, 50, 85, 19, 160, 21, 159, -13, 221, -11, 225, 15, 308, 4, 313, 40, 273, 46, 273, 58, 349, 52, 341, 96, 315, 98, 285, 194, 226, 192, 241, 207, 286, 204, 310, 164, 349, 165, 352, 236, 404, 236, 409, -22, -25, -29, -10, 241 )
+
+[node name="4" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 2
+monitoring = false
+script = ExtResource( 2 )
+kanji = ExtResource( 12 )
+bg = ExtResource( 13 )
+
+[node name="collisionPolygon2D" type="CollisionPolygon2D" parent="4"]
+polygon = PoolVector2Array( 83, 182, -2, 189, -4, 143, 22, 142, 13, 52, 15, 4, 106, -5, 135, 26, 147, -8, 197, -1, 188, 43, 234, 70, 210, -17, 270, -11, 281, 54, 306, 46, 285, -12, 354, -4, 375, 64, 330, 150, 357, 178, 398, 147, 401, 238, 349, 239, 281, 186, 165, 233, 159, 199, 262, 142, 244, 97, 201, 107, 221, 159, 141, 172, 142, 247, 408, 244, 402, -19, -23, -21, -16, 239, 83, 241 )
+
+[node name="5" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 2
+monitoring = false
+script = ExtResource( 2 )
+kanji = ExtResource( 17 )
+bg = ExtResource( 16 )
+
+[node name="collisionPolygon2D" type="CollisionPolygon2D" parent="5"]
+polygon = PoolVector2Array( 156, 235, 97, 173, 69, 231, -1, 226, 70, 136, 19, 135, 35, 17, 116, 18, 125, -33, 180, -15, 179, 91, 140, 154, 207, 196, 176, 147, 206, 84, 189, -18, 254, -20, 254, 5, 364, -7, 363, 103, 258, 112, 261, 190, 223, 201, 285, 203, 287, 162, 342, 181, 284, 149, 275, 122, 383, 132, 389, 225, 402, 224, 402, -49, -22, -40, -5, 244 )
+
+[node name="6" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 2
+monitoring = false
+script = ExtResource( 2 )
+kanji = ExtResource( 11 )
+bg = ExtResource( 10 )
+
+[node name="collisionPolygon2D" type="CollisionPolygon2D" parent="6"]
+polygon = PoolVector2Array( 148, 115, 59, 118, 65, 74, 157, 71, 162, 39, 54, 35, 68, -14, 350, -19, 342, 21, 229, 36, 224, 65, 341, 64, 335, 104, 242, 109, 399, 226, 289, 227, 199, 142, 121, 229, 410, 230, 404, -24, -16, -23, 0, 246 )
+
+[node name="charge" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 197, 106 )
+stream = ExtResource( 5 )
+volume_db = -13.0
+pitch_scale = 0.4
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 4 )
+
+[node name="shot" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 197, 106 )
+stream = ExtResource( 6 )
+volume_db = -6.0
+pitch_scale = 1.3
+max_distance = 600.0
+bus = "SFX"

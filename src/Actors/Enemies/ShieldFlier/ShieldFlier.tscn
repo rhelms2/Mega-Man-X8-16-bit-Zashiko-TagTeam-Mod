@@ -1,0 +1,259 @@
+[gd_scene load_steps=36 format=2]
+
+[ext_resource path="res://src/Actors/Enemies/AI.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Modules/Enemy/EnemyDamage.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/Enemies/ShieldFlier/SFlierPatrol.gd" type="Script" id=4]
+[ext_resource path="res://src/Actors/Modules/Enemy/EnemyDeath.gd" type="Script" id=5]
+[ext_resource path="res://src/Actors/Modules/Enemy/Enemy.gd" type="Script" id=6]
+[ext_resource path="res://src/Sounds/HIT.wav" type="AudioStream" id=7]
+[ext_resource path="res://src/Sounds/56 - MMX - Enemy Death.wav" type="AudioStream" id=8]
+[ext_resource path="res://src/Actors/Enemies/ShieldFlier/vision.gd" type="Script" id=9]
+[ext_resource path="res://src/Actors/Enemies/EnemyShield.gd" type="Script" id=10]
+[ext_resource path="res://src/Effects/Explosion Particles.tscn" type="PackedScene" id=11]
+[ext_resource path="res://src/Effects/Remains Particle.tscn" type="PackedScene" id=12]
+[ext_resource path="res://src/Effects/enemy_shader.tres" type="Shader" id=13]
+[ext_resource path="res://src/Actors/Enemies/ShieldFlier/shieldflier.res" type="SpriteFrames" id=14]
+[ext_resource path="res://pisca_gradient.tres" type="Gradient" id=15]
+[ext_resource path="res://src/Sounds/MMX - Enemy Helmet Hit.ogg" type="AudioStream" id=16]
+[ext_resource path="res://src/Actors/Enemies/EnemyStun.gd" type="Script" id=17]
+[ext_resource path="res://src/Effects/ShieldBreak/shieldbreak.res" type="SpriteFrames" id=18]
+[ext_resource path="res://src/Sounds/EXPLOSION.wav" type="AudioStream" id=19]
+[ext_resource path="res://src/Actors/Enemies/EnemyShot.gd" type="Script" id=20]
+[ext_resource path="res://src/Actors/Enemies/ShieldFlier/EnemyProjectile.tscn" type="PackedScene" id=21]
+[ext_resource path="res://src/Sounds/LEMON_SHOT2.wav" type="AudioStream" id=22]
+
+[sub_resource type="RectangleShape2D" id=55]
+extents = Vector2( 37, 12 )
+
+[sub_resource type="ShaderMaterial" id=49]
+resource_local_to_scene = true
+shader = ExtResource( 13 )
+shader_param/Flash = 0.0
+shader_param/Should_Blink = 0.0
+shader_param/Darken = 1.0
+shader_param/Alpha = 1.0
+shader_param/Alpha_Blink = 0.0
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 12, 10 )
+
+[sub_resource type="RectangleShape2D" id=53]
+extents = Vector2( 15.75, 20.125 )
+
+[sub_resource type="RectangleShape2D" id=54]
+extents = Vector2( 12, 10 )
+
+[sub_resource type="Curve" id=10]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=56]
+curve = SubResource( 10 )
+
+[sub_resource type="ParticlesMaterial" id=50]
+resource_local_to_scene = true
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 56 )
+
+[sub_resource type="Curve" id=42]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=57]
+curve = SubResource( 42 )
+
+[sub_resource type="ParticlesMaterial" id=51]
+resource_local_to_scene = true
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 57 )
+
+[sub_resource type="GradientTexture" id=58]
+gradient = ExtResource( 15 )
+
+[sub_resource type="ParticlesMaterial" id=46]
+emission_shape = 1
+emission_sphere_radius = 18.34
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+gravity = Vector3( 0, 800, 0 )
+initial_velocity = 400.0
+initial_velocity_random = 0.69
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+color_ramp = SubResource( 58 )
+anim_offset = 1.0
+anim_offset_random = 1.0
+
+[node name="ShieldFlier" type="KinematicBody2D" groups=["Enemies"]]
+collision_layer = 0
+collision_mask = 0
+script = ExtResource( 6 )
+max_health = 5.0
+
+[node name="AI" type="Node2D" parent="."]
+script = ExtResource( 1 )
+on_idle = [ NodePath("../SFlierPatrol") ]
+on_see_player = [ NodePath("../EnemyShot") ]
+on_guard_break = [ NodePath("../EnemyStun") ]
+
+[node name="vision" type="Area2D" parent="AI"]
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+script = ExtResource( 9 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="AI/vision"]
+position = Vector2( 37, 0 )
+shape = SubResource( 55 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = SubResource( 49 )
+z_index = 1
+frames = ExtResource( 14 )
+animation = "open"
+frame = 8
+playing = true
+flip_h = true
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 15 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+scale = Vector2( 2, 2 )
+rect = Rect2( -5, -5, 10, 10 )
+
+[node name="EnemyShield" type="Node2D" parent="."]
+script = ExtResource( 10 )
+
+[node name="hittable_area" type="Area2D" parent="EnemyShield"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="EnemyShield/hittable_area"]
+position = Vector2( 8.5, 0.25 )
+shape = SubResource( 53 )
+
+[node name="hitSound" type="AudioStreamPlayer2D" parent="EnemyShield"]
+stream = ExtResource( 16 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+shape = SubResource( 54 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 2 )
+damage = 3.0
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 3 )
+max_freeze_hits = 1
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+stream = ExtResource( 7 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="EnemyDeath" type="Node2D" parent="."]
+script = ExtResource( 5 )
+debug_logs = true
+explosion_duration = 0.0
+
+[node name="Explosion Particles" parent="EnemyDeath" instance=ExtResource( 11 )]
+process_material = SubResource( 50 )
+
+[node name="Remains" parent="EnemyDeath" instance=ExtResource( 12 )]
+process_material = SubResource( 51 )
+
+[node name="remains_particles" parent="EnemyDeath/Remains" index="0"]
+amount = 4
+process_material = SubResource( 46 )
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="EnemyDeath"]
+stream = ExtResource( 8 )
+volume_db = -4.267
+max_distance = 600.0
+attenuation = 0.951366
+bus = "SFX"
+
+[node name="EnemyStun" type="Node2D" parent="."]
+script = ExtResource( 17 )
+debug_logs = true
+conflicting_moves = [ "EnemyStun" ]
+actions = [ "Event" ]
+animation = "stun"
+stun_duration = 1.65
+recover_animation = "close"
+
+[node name="break_vfx" type="AnimatedSprite" parent="EnemyStun"]
+modulate = Color( 1, 1, 1, 0.670588 )
+position = Vector2( 12, 0 )
+z_index = 25
+frames = ExtResource( 18 )
+frame = 9
+
+[node name="break_sound" type="AudioStreamPlayer2D" parent="EnemyStun"]
+stream = ExtResource( 19 )
+volume_db = -6.0
+pitch_scale = 0.78
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="shot_position" type="Node2D" parent="."]
+
+[node name="EnemyShot" type="Node2D" parent="."]
+script = ExtResource( 20 )
+conflicting_moves = [ "EnemyStun" ]
+actions = [ "Event" ]
+animation = "open"
+shot_duration = 0.5
+shot_animation = "shot"
+recover_animation = "close"
+shot_position = NodePath("../shot_position")
+projectile = ExtResource( 21 )
+
+[node name="shot_sound" type="AudioStreamPlayer2D" parent="EnemyShot"]
+stream = ExtResource( 22 )
+volume_db = -10.0
+pitch_scale = 1.47
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="SFlierPatrol" type="Node2D" parent="."]
+script = ExtResource( 4 )
+conflicting_moves = [ "EnemyShot", "EnemyStun" ]
+actions = [ "Event" ]
+animation = "idle"
+
+[connection signal="new_direction" from="." to="AI/vision" method="_on_ShieldFlier_new_direction"]
+[connection signal="body_entered" from="AI/vision" to="AI" method="_on_vision_body_entered"]
+[connection signal="body_exited" from="AI/vision" to="AI" method="_on_vision_body_exited"]
+
+[editable path="EnemyDeath/Remains"]

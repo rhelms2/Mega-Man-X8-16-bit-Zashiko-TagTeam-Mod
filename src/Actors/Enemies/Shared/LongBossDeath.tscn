@@ -1,0 +1,145 @@
+[gd_scene load_steps=30 format=2]
+
+[ext_resource path="res://src/Effects/Explosion Particles.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Effects/Remains Particle.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Effects/Smoke Particles.tscn" type="PackedScene" id=3]
+[ext_resource path="res://src/Actors/Modules/Enemy/BossDeath.gd" type="Script" id=4]
+[ext_resource path="res://src/Effects/Materials/BossSmokeParticles.tres" type="Material" id=5]
+[ext_resource path="res://src/Effects/Materials/ExpansiveMiniBossExplosionParticles.tres" type="Material" id=6]
+[ext_resource path="res://src/Effects/Textures/fake_boss_death.png" type="Texture" id=7]
+[ext_resource path="res://src/Effects/Textures/blue_screen.png" type="Texture" id=8]
+[ext_resource path="res://src/Actors/Bosses/boss_death_material.tres" type="Material" id=9]
+[ext_resource path="res://src/Effects/Textures/blue_explosion.png" type="Texture" id=10]
+[ext_resource path="res://src/Sounds/BOSS_DEATH.wav" type="AudioStream" id=11]
+[ext_resource path="res://src/Sounds/MM - Equip.wav" type="AudioStream" id=12]
+
+[sub_resource type="CanvasItemMaterial" id=8]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 4
+particles_anim_loop = false
+
+[sub_resource type="CanvasItemMaterial" id=20]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 3
+particles_anim_loop = true
+
+[sub_resource type="CanvasItemMaterial" id=66]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 4
+particles_anim_loop = false
+
+[sub_resource type="Curve" id=42]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=43]
+curve = SubResource( 42 )
+
+[sub_resource type="ParticlesMaterial" id=67]
+resource_local_to_scene = true
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 43 )
+
+[sub_resource type="AtlasTexture" id=68]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=78]
+atlas = ExtResource( 7 )
+region = Rect2( 80, 0, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=83]
+atlas = ExtResource( 7 )
+region = Rect2( 160, 0, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=71]
+atlas = ExtResource( 7 )
+region = Rect2( 240, 0, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=72]
+atlas = ExtResource( 7 )
+region = Rect2( 320, 0, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=73]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 80, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=74]
+atlas = ExtResource( 7 )
+region = Rect2( 80, 80, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=75]
+atlas = ExtResource( 7 )
+region = Rect2( 160, 80, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=76]
+atlas = ExtResource( 7 )
+region = Rect2( 240, 80, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=77]
+atlas = ExtResource( 7 )
+region = Rect2( 320, 80, 80, 80 )
+
+[sub_resource type="SpriteFrames" id=79]
+animations = [ {
+"frames": [ SubResource( 68 ), SubResource( 78 ), SubResource( 83 ), SubResource( 71 ), SubResource( 72 ), SubResource( 73 ), SubResource( 74 ), SubResource( 75 ), SubResource( 76 ), SubResource( 77 ) ],
+"loop": false,
+"name": "default",
+"speed": 24.0
+} ]
+
+[node name="BossDeath" type="Node2D"]
+pause_mode = 2
+position = Vector2( 0, -104 )
+script = ExtResource( 4 )
+death_animation = ""
+
+[node name="Explosion Particles" parent="." instance=ExtResource( 1 )]
+material = SubResource( 8 )
+z_index = 12
+amount = 42
+process_material = ExtResource( 6 )
+texture = ExtResource( 10 )
+
+[node name="Smoke Particles" parent="." instance=ExtResource( 3 )]
+material = SubResource( 20 )
+z_index = 6
+emitting = false
+amount = 25
+process_material = ExtResource( 5 )
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 11 )
+volume_db = -2.0
+max_distance = 900.0
+bus = "SFX"
+
+[node name="background_light" type="Sprite" parent="."]
+material = ExtResource( 9 )
+position = Vector2( 5.99998, 7.49999 )
+scale = Vector2( 100, 40 )
+z_index = -1
+texture = ExtResource( 8 )
+
+[node name="Remains" parent="." instance=ExtResource( 2 )]
+material = SubResource( 66 )
+process_material = SubResource( 67 )
+
+[node name="reploid" type="AnimatedSprite" parent="."]
+pause_mode = 2
+visible = false
+frames = SubResource( 79 )
+
+[node name="transform" type="AudioStreamPlayer2D" parent="reploid"]
+stream = ExtResource( 12 )
+bus = "SFX"

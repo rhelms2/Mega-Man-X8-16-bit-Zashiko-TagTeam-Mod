@@ -1,0 +1,1029 @@
+{ "frames": [
+   {
+    "filename": "cabecadecaranguejo 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 66
+   },
+   {
+    "filename": "cabecadecaranguejo 1.ase",
+    "frame": { "x": 398, "y": 0, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 66
+   },
+   {
+    "filename": "cabecadecaranguejo 2.ase",
+    "frame": { "x": 398, "y": 0, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 444
+   },
+   {
+    "filename": "cabecadecaranguejo 3.ase",
+    "frame": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 66
+   },
+   {
+    "filename": "cabecadecaranguejo 4.ase",
+    "frame": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 66
+   },
+   {
+    "filename": "cabecadecaranguejo 5.ase",
+    "frame": { "x": 796, "y": 0, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 66
+   },
+   {
+    "filename": "cabecadecaranguejo 6.ase",
+    "frame": { "x": 796, "y": 0, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 444
+   },
+   {
+    "filename": "cabecadecaranguejo 7.ase",
+    "frame": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 66
+   },
+   {
+    "filename": "cabecadecaranguejo 8.ase",
+    "frame": { "x": 1194, "y": 0, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 9.ase",
+    "frame": { "x": 1592, "y": 0, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 10.ase",
+    "frame": { "x": 1990, "y": 0, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 11.ase",
+    "frame": { "x": 2388, "y": 0, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 122
+   },
+   {
+    "filename": "cabecadecaranguejo 12.ase",
+    "frame": { "x": 0, "y": 224, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 122
+   },
+   {
+    "filename": "cabecadecaranguejo 13.ase",
+    "frame": { "x": 398, "y": 224, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 14.ase",
+    "frame": { "x": 796, "y": 224, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 122
+   },
+   {
+    "filename": "cabecadecaranguejo 15.ase",
+    "frame": { "x": 1194, "y": 0, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 16.ase",
+    "frame": { "x": 1194, "y": 0, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 17.ase",
+    "frame": { "x": 1194, "y": 0, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 18.ase",
+    "frame": { "x": 1194, "y": 224, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 42
+   },
+   {
+    "filename": "cabecadecaranguejo 19.ase",
+    "frame": { "x": 1592, "y": 224, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 20.ase",
+    "frame": { "x": 1990, "y": 224, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 21.ase",
+    "frame": { "x": 2388, "y": 224, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 122
+   },
+   {
+    "filename": "cabecadecaranguejo 22.ase",
+    "frame": { "x": 0, "y": 448, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 42
+   },
+   {
+    "filename": "cabecadecaranguejo 23.ase",
+    "frame": { "x": 398, "y": 448, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 42
+   },
+   {
+    "filename": "cabecadecaranguejo 24.ase",
+    "frame": { "x": 796, "y": 448, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 42
+   },
+   {
+    "filename": "cabecadecaranguejo 25.ase",
+    "frame": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 26.ase",
+    "frame": { "x": 1194, "y": 448, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 27.ase",
+    "frame": { "x": 1592, "y": 448, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 28.ase",
+    "frame": { "x": 1990, "y": 448, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 29.ase",
+    "frame": { "x": 2388, "y": 448, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 244
+   },
+   {
+    "filename": "cabecadecaranguejo 30.ase",
+    "frame": { "x": 2388, "y": 448, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 42
+   },
+   {
+    "filename": "cabecadecaranguejo 31.ase",
+    "frame": { "x": 2388, "y": 448, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 42
+   },
+   {
+    "filename": "cabecadecaranguejo 32.ase",
+    "frame": { "x": 2388, "y": 448, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 42
+   },
+   {
+    "filename": "cabecadecaranguejo 33.ase",
+    "frame": { "x": 2388, "y": 448, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 42
+   },
+   {
+    "filename": "cabecadecaranguejo 34.ase",
+    "frame": { "x": 2388, "y": 448, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 42
+   },
+   {
+    "filename": "cabecadecaranguejo 35.ase",
+    "frame": { "x": 2388, "y": 448, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 42
+   },
+   {
+    "filename": "cabecadecaranguejo 36.ase",
+    "frame": { "x": 2388, "y": 448, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 42
+   },
+   {
+    "filename": "cabecadecaranguejo 37.ase",
+    "frame": { "x": 2388, "y": 448, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 42
+   },
+   {
+    "filename": "cabecadecaranguejo 38.ase",
+    "frame": { "x": 2388, "y": 448, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 42
+   },
+   {
+    "filename": "cabecadecaranguejo 39.ase",
+    "frame": { "x": 2388, "y": 448, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 42
+   },
+   {
+    "filename": "cabecadecaranguejo 40.ase",
+    "frame": { "x": 2388, "y": 448, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 41.ase",
+    "frame": { "x": 0, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 42
+   },
+   {
+    "filename": "cabecadecaranguejo 42.ase",
+    "frame": { "x": 0, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 42
+   },
+   {
+    "filename": "cabecadecaranguejo 43.ase",
+    "frame": { "x": 398, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 42
+   },
+   {
+    "filename": "cabecadecaranguejo 44.ase",
+    "frame": { "x": 398, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 45.ase",
+    "frame": { "x": 0, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 42
+   },
+   {
+    "filename": "cabecadecaranguejo 46.ase",
+    "frame": { "x": 0, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 42
+   },
+   {
+    "filename": "cabecadecaranguejo 47.ase",
+    "frame": { "x": 398, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 42
+   },
+   {
+    "filename": "cabecadecaranguejo 48.ase",
+    "frame": { "x": 398, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 49.ase",
+    "frame": { "x": 1990, "y": 448, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 50.ase",
+    "frame": { "x": 1592, "y": 448, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 51.ase",
+    "frame": { "x": 1194, "y": 448, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 52.ase",
+    "frame": { "x": 796, "y": 0, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 53.ase",
+    "frame": { "x": 796, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 54.ase",
+    "frame": { "x": 1194, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 55.ase",
+    "frame": { "x": 1592, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 56.ase",
+    "frame": { "x": 1592, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 57.ase",
+    "frame": { "x": 1592, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 58.ase",
+    "frame": { "x": 1592, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 59.ase",
+    "frame": { "x": 1592, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 60.ase",
+    "frame": { "x": 796, "y": 0, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 61.ase",
+    "frame": { "x": 796, "y": 0, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 62.ase",
+    "frame": { "x": 1592, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 63.ase",
+    "frame": { "x": 1592, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 64.ase",
+    "frame": { "x": 1592, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 65.ase",
+    "frame": { "x": 1592, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 66.ase",
+    "frame": { "x": 1592, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 67.ase",
+    "frame": { "x": 1194, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 68.ase",
+    "frame": { "x": 796, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 69.ase",
+    "frame": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 70.ase",
+    "frame": { "x": 398, "y": 0, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 66
+   },
+   {
+    "filename": "cabecadecaranguejo 71.ase",
+    "frame": { "x": 1990, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 42
+   },
+   {
+    "filename": "cabecadecaranguejo 72.ase",
+    "frame": { "x": 2388, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 73.ase",
+    "frame": { "x": 2388, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 74.ase",
+    "frame": { "x": 2388, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 75.ase",
+    "frame": { "x": 0, "y": 896, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 76.ase",
+    "frame": { "x": 398, "y": 896, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 77.ase",
+    "frame": { "x": 1194, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 78.ase",
+    "frame": { "x": 1194, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 79.ase",
+    "frame": { "x": 1194, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 80.ase",
+    "frame": { "x": 1194, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 81.ase",
+    "frame": { "x": 1194, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 82.ase",
+    "frame": { "x": 796, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 83.ase",
+    "frame": { "x": 796, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 84.ase",
+    "frame": { "x": 1194, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 85.ase",
+    "frame": { "x": 1194, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 86.ase",
+    "frame": { "x": 1194, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 87.ase",
+    "frame": { "x": 1194, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 88.ase",
+    "frame": { "x": 1194, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 89.ase",
+    "frame": { "x": 398, "y": 896, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 90.ase",
+    "frame": { "x": 0, "y": 896, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 91.ase",
+    "frame": { "x": 796, "y": 896, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 92.ase",
+    "frame": { "x": 1194, "y": 896, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 93.ase",
+    "frame": { "x": 1592, "y": 896, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 244
+   },
+   {
+    "filename": "cabecadecaranguejo 94.ase",
+    "frame": { "x": 1990, "y": 896, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 95.ase",
+    "frame": { "x": 2388, "y": 896, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 96.ase",
+    "frame": { "x": 0, "y": 1120, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 97.ase",
+    "frame": { "x": 0, "y": 1120, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 98.ase",
+    "frame": { "x": 398, "y": 1120, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 42
+   },
+   {
+    "filename": "cabecadecaranguejo 99.ase",
+    "frame": { "x": 796, "y": 1120, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 66
+   },
+   {
+    "filename": "cabecadecaranguejo 100.ase",
+    "frame": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 101.ase",
+    "frame": { "x": 2388, "y": 672, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 102.ase",
+    "frame": { "x": 1194, "y": 1120, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 42
+   },
+   {
+    "filename": "cabecadecaranguejo 103.ase",
+    "frame": { "x": 1592, "y": 1120, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 104.ase",
+    "frame": { "x": 1990, "y": 1120, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 105.ase",
+    "frame": { "x": 2388, "y": 1120, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 422
+   },
+   {
+    "filename": "cabecadecaranguejo 106.ase",
+    "frame": { "x": 0, "y": 1344, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 107.ase",
+    "frame": { "x": 398, "y": 1344, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 42
+   },
+   {
+    "filename": "cabecadecaranguejo 108.ase",
+    "frame": { "x": 796, "y": 1344, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 66
+   },
+   {
+    "filename": "cabecadecaranguejo 109.ase",
+    "frame": { "x": 1194, "y": 1344, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   },
+   {
+    "filename": "cabecadecaranguejo 110.ase",
+    "frame": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 398, "h": 224 },
+    "sourceSize": { "w": 398, "h": 224 },
+    "duration": 82
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3-beta20-x64",
+  "image": "headcrab.png",
+  "format": "RGBA8888",
+  "size": { "w": 2786, "h": 1568 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "idle", "from": 0, "to": 7, "direction": "forward", "color": "#000000ff" },
+   { "name": "fall", "from": 8, "to": 8, "direction": "forward", "color": "#000000ff" },
+   { "name": "land", "from": 9, "to": 17, "direction": "forward", "color": "#000000ff" },
+   { "name": "intro", "from": 18, "to": 25, "direction": "forward", "color": "#000000ff" },
+   { "name": "missileclaw_prepare", "from": 26, "to": 40, "direction": "forward", "color": "#000000ff" },
+   { "name": "missileclaw_fire", "from": 41, "to": 44, "direction": "forward", "color": "#000000ff" },
+   { "name": "missileclaw_recover", "from": 45, "to": 52, "direction": "forward", "color": "#000000ff" },
+   { "name": "walk_foward", "from": 53, "to": 60, "direction": "forward", "color": "#000000ff" },
+   { "name": "walk_back", "from": 61, "to": 68, "direction": "forward", "color": "#000000ff" },
+   { "name": "shieldclaw_setup", "from": 69, "to": 74, "direction": "forward", "color": "#000000ff" },
+   { "name": "shieldclaw_foward", "from": 75, "to": 82, "direction": "forward", "color": "#000000ff" },
+   { "name": "shieldclaw_back", "from": 83, "to": 90, "direction": "forward", "color": "#000000ff" },
+   { "name": "shieldclaw_prepare", "from": 91, "to": 94, "direction": "forward", "color": "#000000ff" },
+   { "name": "shieldclaw", "from": 95, "to": 97, "direction": "forward", "color": "#000000ff" },
+   { "name": "shieldclaw_end", "from": 98, "to": 100, "direction": "forward", "color": "#000000ff" },
+   { "name": "shieldclaw_loop", "from": 101, "to": 101, "direction": "forward", "color": "#000000ff" },
+   { "name": "shieldclaw_break", "from": 102, "to": 110, "direction": "forward", "color": "#000000ff" }
+  ]
+ }
+}

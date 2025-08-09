@@ -1,0 +1,125 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=1]
+[ext_resource path="res://src/Levels/PitchBlack/X_Lightsource.gd" type="Script" id=2]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/PlasmaGun/PlasmaGun.gd" type="Script" id=3]
+[ext_resource path="res://src/Effects/Basic Hit.tscn" type="PackedScene" id=4]
+[ext_resource path="res://src/Levels/PitchBlack/light.png" type="Texture" id=5]
+[ext_resource path="res://src/Sounds/MEDIUM_SHOT2.wav" type="AudioStream" id=6]
+[ext_resource path="res://src/Actors/Player/BossWeapons/DarkArrow/Tracker.gd" type="Script" id=7]
+[ext_resource path="res://src/Effects/Materials/buster_icarus_particles.tres" type="Material" id=8]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/PlasmaGun/PlasmaGun.res" type="SpriteFrames" id=9]
+[ext_resource path="res://Axl_mod/Player/Projectiles/blank.png" type="Texture" id=10]
+[ext_resource path="res://Axl_mod/SFX/PlasmaGun_Fire.wav" type="AudioStream" id=11]
+[ext_resource path="res://SpriteEffect.gd" type="Script" id=12]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 32, 23 )
+
+[node name="PlasmaGun" type="KinematicBody2D" groups=["Player Projectile"]]
+z_index = 6
+collision_layer = 4
+script = ExtResource( 3 )
+damage = 2.5
+damage_to_weakness = 15.0
+fire_sound = ExtResource( 11 )
+break_guards = true
+
+[node name="light" type="Light2D" parent="."]
+position = Vector2( 18, 0 )
+scale = Vector2( 0.75, 0.75 )
+z_index = 277
+texture = ExtResource( 5 )
+energy = 0.35
+range_layer_min = -2
+range_layer_max = -1
+script = ExtResource( 2 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+z_index = 6
+frames = ExtResource( 9 )
+animation = "PlasmaGun"
+frame = 3
+offset = Vector2( 24, 0 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 24, -1 )
+shape = SubResource( 1 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( 24, -1 )
+scale = Vector2( 3.2, 2.3 )
+
+[node name="particles2D" type="Particles2D" parent="."]
+visible = false
+position = Vector2( 10, 0 )
+amount = 4
+lifetime = 0.54
+local_coords = false
+process_material = ExtResource( 8 )
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
+visible = false
+stream = ExtResource( 6 )
+volume_db = 1.378
+pitch_scale = 1.08
+bus = "SFX"
+
+[node name="Start Particle" parent="." instance=ExtResource( 4 )]
+z_index = 1
+texture = ExtResource( 10 )
+hframes = 3
+vframes = 1
+animation_speed = 40.0
+vertical_flip_chance = 0.0
+
+[node name="disabler" type="Node" parent="Start Particle"]
+script = ExtResource( 1 )
+fade_out = true
+delete_after_fade = true
+
+[node name="Hit Particle" parent="." instance=ExtResource( 4 )]
+position = Vector2( 17, 0 )
+z_index = 1
+texture = ExtResource( 10 )
+hframes = 3
+vframes = 1
+animation_speed = 30.0
+vertical_flip_chance = 0.0
+
+[node name="disabler" type="Node" parent="Hit Particle"]
+script = ExtResource( 1 )
+fade_out = true
+delete_after_fade = true
+
+[node name="deflect_particle" type="Sprite" parent="."]
+visible = false
+position = Vector2( 17, 0 )
+z_index = 1
+texture = ExtResource( 10 )
+hframes = 3
+script = ExtResource( 12 )
+animation_speed = 30.0
+one_shot = true
+
+[node name="disabler" type="Node" parent="deflect_particle"]
+script = ExtResource( 1 )
+fade_out = true
+delete_after_fade = true
+
+[node name="disabler" type="Node" parent="."]
+script = ExtResource( 1 )
+fade_out = true
+delete_after_fade = true
+
+[node name="tracker" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2097160
+script = ExtResource( 7 )
+
+[node name="collisionPolygon2D" type="CollisionPolygon2D" parent="tracker"]
+polygon = PoolVector2Array( -11, 0, -8, -9, 56, -24, 56, 1, 56, 22, -7, 8 )
+
+[connection signal="body_entered" from="tracker" to="tracker" method="_on_tracker_body_entered"]
+[connection signal="body_exited" from="tracker" to="tracker" method="_on_tracker_body_exited"]

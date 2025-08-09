@@ -1,0 +1,39 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/Levels/Gateway/line2D.gd" type="Script" id=1]
+[ext_resource path="res://src/Levels/Gateway/GuidePaticle.gd" type="Script" id=2]
+[ext_resource path="res://src/Effects/Textures/troia_particles.png" type="Texture" id=3]
+[ext_resource path="res://src/Effects/Materials/guide_particles.tres" type="Material" id=4]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 3
+particles_anim_loop = false
+
+[sub_resource type="Curve" id=2]
+_data = [ Vector2( 0, 0 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.463636 ), 0.0, 0.0, 0, 0 ]
+
+[node name="GuidePaticle" type="Node2D"]
+z_index = 50
+script = ExtResource( 2 )
+
+[node name="particles2D" type="Particles2D" parent="."]
+material = SubResource( 1 )
+position = Vector2( 0, -5 )
+amount = 4
+lifetime = 0.5
+visibility_rect = Rect2( -500, -100, 1000, 200 )
+local_coords = false
+process_material = ExtResource( 4 )
+texture = ExtResource( 3 )
+
+[node name="node" type="Node" parent="."]
+
+[node name="line2D" type="Line2D" parent="node"]
+z_index = 50
+width = 12.0
+width_curve = SubResource( 2 )
+default_color = Color( 1, 1, 1, 0.482353 )
+script = ExtResource( 1 )
+length = 40

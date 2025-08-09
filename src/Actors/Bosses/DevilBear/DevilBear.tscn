@@ -1,0 +1,439 @@
+[gd_scene load_steps=58 format=2]
+
+[ext_resource path="res://src/Actors/Panda.gd" type="Script" id=1]
+[ext_resource path="res://SpriteEffect.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=3]
+[ext_resource path="res://src/Effects/Textures/smoke.png" type="Texture" id=4]
+[ext_resource path="res://src/Actors/Bosses/DevilBear/devilbear_back.res" type="SpriteFrames" id=5]
+[ext_resource path="res://src/Actors/Bosses/DevilBear/devilbear_vile.res" type="SpriteFrames" id=6]
+[ext_resource path="res://src/Actors/Bosses/DevilBear/Intro.gd" type="Script" id=7]
+[ext_resource path="res://src/Effects/Materials/devilbear_smoke.tres" type="Material" id=8]
+[ext_resource path="res://src/Effects/Textures/wallwave.png" type="Texture" id=9]
+[ext_resource path="res://src/Actors/Bosses/BossAI.gd" type="Script" id=10]
+[ext_resource path="res://src/Actors/Modules/Enemy/BossDamage.gd" type="Script" id=11]
+[ext_resource path="res://src/Actors/Props/RideArmor/RepeatAnimation.gd" type="Script" id=12]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/Idle.gd" type="Script" id=13]
+[ext_resource path="res://src/Effects/Materials/default_material.tres" type="Material" id=14]
+[ext_resource path="res://src/Actors/Bosses/DevilBear/DashPunch.gd" type="Script" id=15]
+[ext_resource path="res://src/Actors/Bosses/DevilBear/PursuitPunch.gd" type="Script" id=16]
+[ext_resource path="res://src/Actors/Bosses/DevilBear/JumpStomp.gd" type="Script" id=17]
+[ext_resource path="res://src/Effects/Textures/blue_explosion.png" type="Texture" id=18]
+[ext_resource path="res://src/Actors/Bosses/DevilBear/RideArmorDeath.gd" type="Script" id=19]
+[ext_resource path="res://src/Sounds/HIT_BOSS.wav" type="AudioStream" id=20]
+[ext_resource path="res://src/Effects/Remains Particle.tscn" type="PackedScene" id=21]
+[ext_resource path="res://src/DialogSystem/Dialogs/Stages/Vile_final_Dialogue.tres" type="Resource" id=22]
+[ext_resource path="res://src/Actors/Bosses/boss_death_material.tres" type="Material" id=23]
+[ext_resource path="res://src/Sounds/BOSS_DEATH.wav" type="AudioStream" id=24]
+[ext_resource path="res://src/Effects/Textures/blue_screen.png" type="Texture" id=25]
+[ext_resource path="res://src/Effects/Materials/ridearmor_land.tres" type="Material" id=27]
+[ext_resource path="res://src/Effects/Materials/x_dash_smoke.tres" type="Material" id=28]
+[ext_resource path="res://src/Actors/Bosses/DevilBear/devilbear.res" type="SpriteFrames" id=29]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=30]
+[ext_resource path="res://src/Sounds/Ridearmor - Powerdown.ogg" type="AudioStream" id=31]
+[ext_resource path="res://src/Sounds/Ridearmor - Jump.ogg" type="AudioStream" id=32]
+[ext_resource path="res://src/Sounds/Ridearmor - Step.ogg" type="AudioStream" id=33]
+[ext_resource path="res://src/Sounds/Ridearmor - Punch.ogg" type="AudioStream" id=34]
+[ext_resource path="res://src/Sounds/Ridearmor - Dash.ogg" type="AudioStream" id=35]
+[ext_resource path="res://src/Sounds/Ridearmor - Startup.ogg" type="AudioStream" id=36]
+[ext_resource path="res://src/Sounds/Ridearmor - Rise.ogg" type="AudioStream" id=37]
+[ext_resource path="res://src/Effects/Textures/ridearmor_punch.png" type="Texture" id=38]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/dps_hud.gd" type="Script" id=39]
+[ext_resource path="res://src/Actors/MeleeEnemyAttack.gd" type="Script" id=40]
+[ext_resource path="res://src/Effects/Materials/devilbear_wallhit_particles.tres" type="Material" id=41]
+[ext_resource path="res://src/Actors/Bosses/DevilBear/VileStarter.gd" type="Script" id=42]
+[ext_resource path="res://src/Actors/Bosses/Vile/vile.res" type="SpriteFrames" id=43]
+[ext_resource path="res://src/Sounds/Mantis - Dash2.ogg" type="AudioStream" id=45]
+[ext_resource path="res://src/Sounds/Rooster - Explosion.ogg" type="AudioStream" id=46]
+
+[sub_resource type="RectangleShape2D" id=47]
+extents = Vector2( 22, 29 )
+
+[sub_resource type="CanvasItemMaterial" id=55]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 3
+particles_anim_loop = false
+
+[sub_resource type="RectangleShape2D" id=58]
+extents = Vector2( 14, 21.625 )
+
+[sub_resource type="CanvasItemMaterial" id=54]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 3
+particles_anim_loop = false
+
+[sub_resource type="RectangleShape2D" id=57]
+extents = Vector2( 18, 34.5 )
+
+[sub_resource type="RectangleShape2D" id=56]
+extents = Vector2( 18, 268 )
+
+[sub_resource type="RectangleShape2D" id=59]
+extents = Vector2( 14, 21.625 )
+
+[sub_resource type="RectangleShape2D" id=60]
+extents = Vector2( 9, 13.3125 )
+
+[sub_resource type="CanvasItemMaterial" id=210]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 4
+particles_anim_loop = false
+
+[sub_resource type="Curve" id=52]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=46]
+curve = SubResource( 52 )
+
+[sub_resource type="ParticlesMaterial" id=53]
+resource_local_to_scene = true
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 46 )
+
+[sub_resource type="CanvasItemMaterial" id=20]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 3
+particles_anim_loop = true
+
+[node name="DevilBear" type="KinematicBody2D" groups=["Bosses"]]
+z_index = 4
+collision_layer = 0
+script = ExtResource( 1 )
+max_health = 500.0
+
+[node name="BossAI" type="Node2D" parent="."]
+script = ExtResource( 10 )
+time_between_attacks = Vector2( 0.75, 1 )
+play_desperation_music = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 0, 16 )
+shape = SubResource( 47 )
+
+[node name="back" type="AnimatedSprite" parent="."]
+material = ExtResource( 14 )
+position = Vector2( 0, -12 )
+frames = ExtResource( 5 )
+animation = "idle"
+script = ExtResource( 12 )
+reference = NodePath("../animatedSprite")
+copy_scale_x = true
+
+[node name="vile" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 0, -12 )
+frames = ExtResource( 6 )
+animation = "idle"
+script = ExtResource( 12 )
+reference = NodePath("../animatedSprite")
+copy_scale_x = true
+
+[node name="flying_prop_vile" type="AnimatedSprite" parent="."]
+z_index = 1
+frames = ExtResource( 43 )
+animation = "flight"
+frame = 1
+playing = true
+offset = Vector2( 0, -48 )
+
+[node name="traverse" type="AudioStreamPlayer2D" parent="flying_prop_vile"]
+stream = ExtResource( 45 )
+volume_db = -8.476
+pitch_scale = 1.15
+max_distance = 1200.0
+bus = "SFX"
+script = ExtResource( 30 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 14 )
+position = Vector2( 0, -12 )
+frames = ExtResource( 29 )
+animation = "deactivated"
+
+[node name="wave" type="Sprite" parent="animatedSprite"]
+visible = false
+modulate = Color( 1, 1, 1, 0.501961 )
+position = Vector2( 33, 24 )
+scale = Vector2( 0.5, 0.5 )
+z_index = -2
+texture = ExtResource( 9 )
+
+[node name="hit" type="Particles2D" parent="animatedSprite"]
+material = SubResource( 55 )
+position = Vector2( 23, -110 )
+z_index = 5
+emitting = false
+amount = 24
+lifetime = 0.75
+one_shot = true
+explosiveness = 0.91
+local_coords = false
+process_material = ExtResource( 41 )
+texture = ExtResource( 4 )
+
+[node name="wind" type="Sprite" parent="animatedSprite"]
+visible = false
+position = Vector2( 41, 22 )
+z_index = 16
+texture = ExtResource( 38 )
+hframes = 3
+vframes = 2
+script = ExtResource( 2 )
+animation_speed = 38.0
+one_shot = true
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+position = Vector2( 1, 14.375 )
+shape = SubResource( 58 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+position = Vector2( -2.86102e-06, 8 )
+scale = Vector2( 3.7, 3.8 )
+
+[node name="Idle" type="Node2D" parent="."]
+script = ExtResource( 13 )
+conflicting_moves = [ "Anything" ]
+animation = "idle"
+should_turn = false
+
+[node name="Intro" type="Node2D" parent="."]
+script = ExtResource( 7 )
+dialogue = ExtResource( 22 )
+defeated_var = "vile_palace_defeated"
+
+[node name="shutdown" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 31 )
+volume_db = -8.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 30 )
+
+[node name="startup" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 36 )
+volume_db = -8.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 30 )
+
+[node name="jump_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 32 )
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 30 )
+
+[node name="rise" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 37 )
+volume_db = -8.302
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 30 )
+minimum_time = 0.25
+
+[node name="punch" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 34 )
+volume_db = -6.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 30 )
+minimum_time = 0.15
+
+[node name="wallpunch" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 46 )
+volume_db = -2.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 30 )
+minimum_time = 0.15
+
+[node name="step" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 33 )
+volume_db = -9.369
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 30 )
+minimum_time = 0.15
+
+[node name="dash_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 35 )
+volume_db = -6.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 30 )
+
+[node name="dash_particles" type="Particles2D" parent="."]
+material = SubResource( 54 )
+position = Vector2( 0, 43 )
+z_index = 5
+emitting = false
+amount = 11
+lifetime = 0.75
+local_coords = false
+process_material = ExtResource( 28 )
+texture = ExtResource( 4 )
+
+[node name="land" type="Particles2D" parent="."]
+material = SubResource( 55 )
+position = Vector2( 0, 43 )
+z_index = 5
+emitting = false
+amount = 6
+lifetime = 0.75
+one_shot = true
+explosiveness = 0.75
+local_coords = false
+process_material = ExtResource( 27 )
+texture = ExtResource( 4 )
+
+[node name="PursuitPunch" type="Node2D" parent="."]
+script = ExtResource( 16 )
+jump_velocity = 240.0
+
+[node name="punch" type="Node2D" parent="PursuitPunch"]
+visible = false
+script = ExtResource( 40 )
+active = false
+damage = 12.0
+active_duration = 0.1
+owner_character = NodePath("../..")
+
+[node name="area2D" type="Area2D" parent="PursuitPunch/punch"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="PursuitPunch/punch/area2D"]
+position = Vector2( 40, 10.5 )
+shape = SubResource( 57 )
+
+[node name="JumpStomp" type="Node2D" parent="."]
+script = ExtResource( 17 )
+jump_velocity = 60.0
+
+[node name="DashPunch" type="Node2D" parent="."]
+script = ExtResource( 15 )
+horizontal_velocity = 420.0
+
+[node name="wallhit" type="Node2D" parent="DashPunch"]
+script = ExtResource( 40 )
+active = false
+damage = 8.0
+active_duration = 0.1
+owner_character = NodePath("../..")
+
+[node name="area2D" type="Area2D" parent="DashPunch/wallhit"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="DashPunch/wallhit/area2D"]
+position = Vector2( 40, 0 )
+shape = SubResource( 56 )
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 11 )
+invulnerability_time = 0.1
+max_flash_time = 0.35
+weakenesses = [ "DriftDiamond", "IceGattling", "Hyouryuushou" ]
+weakness_multiplier = 1.75
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+pause_mode = 2
+stream = ExtResource( 20 )
+volume_db = -3.0
+max_distance = 600.0
+bus = "SFX"
+
+[node name="dps" type="RichTextLabel" parent="Damage"]
+visible = false
+margin_left = -18.0
+margin_top = -69.0
+margin_right = 59.0
+margin_bottom = -52.0
+text = "0.0"
+script = ExtResource( 39 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 3 )
+damage = 10.0
+
+[node name="area2D" type="Area2D" parent="DamageOnTouch"]
+z_index = 1
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="DamageOnTouch/area2D"]
+position = Vector2( 1, 14.375 )
+shape = SubResource( 59 )
+
+[node name="VileRiding" type="CollisionShape2D" parent="DamageOnTouch/area2D"]
+position = Vector2( 1, -20.6875 )
+shape = SubResource( 60 )
+
+[node name="RideArmorDeath" type="Node2D" parent="."]
+script = ExtResource( 19 )
+should_spawn_item = false
+should_emit_kill_signal = false
+explosion_duration = 0.0
+
+[node name="Explosion Particles" type="Particles2D" parent="RideArmorDeath"]
+visible = false
+material = SubResource( 210 )
+position = Vector2( 0, 0.5 )
+z_index = 12
+amount = 20
+lifetime = 2.0
+local_coords = false
+process_material = SubResource( 53 )
+texture = ExtResource( 18 )
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="RideArmorDeath"]
+stream = ExtResource( 24 )
+volume_db = -0.009
+max_distance = 900.0
+bus = "SFX"
+
+[node name="Smoke Particles" type="Particles2D" parent="RideArmorDeath"]
+material = SubResource( 20 )
+position = Vector2( -15, 27 )
+z_index = 2
+emitting = false
+lifetime = 0.75
+process_material = ExtResource( 8 )
+texture = ExtResource( 4 )
+
+[node name="background_light" type="Sprite" parent="RideArmorDeath"]
+visible = false
+material = ExtResource( 23 )
+position = Vector2( 5.99998, 7.49999 )
+scale = Vector2( 100, 40 )
+z_index = -1
+texture = ExtResource( 25 )
+
+[node name="Remains" parent="RideArmorDeath" instance=ExtResource( 21 )]
+process_material = SubResource( 53 )
+
+[node name="VileStarter" type="Node" parent="."]
+script = ExtResource( 42 )
+threshold = 100.0
+
+[connection signal="dps" from="Damage" to="Damage/dps" method="_on_Damage_dps"]
+[connection signal="took_damage" from="Damage" to="VileStarter" method="_on_took_damage"]

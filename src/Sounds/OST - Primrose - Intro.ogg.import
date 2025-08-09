@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - Primrose - Intro.ogg-b61fc1a6364362f1dcf5e6de67f4f12c.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - Primrose - Intro.ogg"
+dest_files=[ "res://.import/OST - Primrose - Intro.ogg-b61fc1a6364362f1dcf5e6de67f4f12c.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - GatewayEscape - Loop.ogg-1d7b84108f584edd60ef1670502c4956.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - GatewayEscape - Loop.ogg"
+dest_files=[ "res://.import/OST - GatewayEscape - Loop.ogg-1d7b84108f584edd60ef1670502c4956.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

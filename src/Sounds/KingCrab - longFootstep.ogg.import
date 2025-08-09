@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/KingCrab - longFootstep.ogg-af46134afccfd130b8ac8b489169eb30.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/KingCrab - longFootstep.ogg"
+dest_files=[ "res://.import/KingCrab - longFootstep.ogg-af46134afccfd130b8ac8b489169eb30.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

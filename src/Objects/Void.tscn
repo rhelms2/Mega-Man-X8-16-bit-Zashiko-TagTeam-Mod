@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/Objects/Spike.gd" type="Script" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 16, 16 )
+
+[node name="VoidDeathPlane" type="Node2D"]
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 10
+script = ExtResource( 1 )
+type = "void"
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+shape = SubResource( 1 )
+
+[connection signal="body_entered" from="area2D" to="area2D" method="_on_area2D_body_entered"]

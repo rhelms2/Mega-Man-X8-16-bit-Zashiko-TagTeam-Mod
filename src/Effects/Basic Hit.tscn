@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/Effects/Textures/lemon_hit.png" type="Texture" id=1]
+[ext_resource path="res://SpriteEffect.gd" type="Script" id=2]
+
+[node name="Hit Particle" type="Sprite"]
+visible = false
+z_index = 10
+texture = ExtResource( 1 )
+hframes = 2
+vframes = 2
+script = ExtResource( 2 )
+animation_speed = 32.0
+one_shot = true
+vertical_flip_chance = 0.5

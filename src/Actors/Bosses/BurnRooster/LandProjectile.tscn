@@ -1,0 +1,145 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://src/Actors/Bosses/BurnRooster/LandProjectile.gd" type="Script" id=1]
+[ext_resource path="res://src/Effects/Textures/explosion.png" type="Texture" id=2]
+[ext_resource path="res://SpriteEffect.gd" type="Script" id=3]
+[ext_resource path="res://src/Effects/Textures/enemy_generic_projectile2.tres" type="SpriteFrames" id=4]
+[ext_resource path="res://src/Effects/Deflect/lemon_deflect.png" type="Texture" id=5]
+[ext_resource path="res://src/Sounds/Ice Break.wav" type="AudioStream" id=6]
+[ext_resource path="res://src/Effects/Fire/fire3.png" type="Texture" id=7]
+[ext_resource path="res://src/Effects/Basic Hit.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/Actors/Enemies/ProjectileDoT.gd" type="Script" id=9]
+[ext_resource path="res://src/Effects/Fire/fire1.png" type="Texture" id=10]
+[ext_resource path="res://src/Effects/Fire/fire2.png" type="Texture" id=11]
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 6, 6 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 16, 16 )
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 4, 5 )
+
+[sub_resource type="CanvasItemMaterial" id=27]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 3
+particles_anim_loop = false
+
+[sub_resource type="Curve" id=28]
+_data = [ Vector2( 0, 0 ), 0.0, 1.4, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=26]
+curve = SubResource( 28 )
+
+[sub_resource type="ParticlesMaterial" id=29]
+emission_shape = 2
+emission_box_extents = Vector3( 3, 1, 1 )
+flag_disable_z = true
+direction = Vector3( 0.5, -1, 0 )
+spread = 16.13
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 103.77
+initial_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 155.0
+damping = 1.63
+anim_speed = 1.0
+anim_speed_curve = SubResource( 26 )
+
+[node name="LandFireProjectile" type="KinematicBody2D" groups=["Enemy Projectile"]]
+z_index = 8
+collision_layer = 16
+collision_mask = 0
+script = ExtResource( 1 )
+damage = 4.0
+time_off_screen = 0.5
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+visible = false
+frames = ExtResource( 4 )
+frame = 2
+playing = true
+flip_h = true
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
+stream = ExtResource( 6 )
+volume_db = -10.895
+pitch_scale = 0.87
+max_distance = 800.0
+bus = "SFX"
+
+[node name="Hit Particle" parent="." instance=ExtResource( 8 )]
+texture = ExtResource( 2 )
+hframes = 4
+vframes = 4
+animation_speed = 24.0
+vertical_flip_chance = 0.0
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+shape = SubResource( 7 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 9 )
+damage = 2.0
+
+[node name="HittableArea" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 4
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="HittableArea"]
+shape = SubResource( 5 )
+
+[node name="deflect_particle" type="Sprite" parent="."]
+visible = false
+position = Vector2( 12, -2 )
+z_index = 4
+z_as_relative = false
+texture = ExtResource( 5 )
+hframes = 3
+vframes = 2
+script = ExtResource( 3 )
+animation_speed = 32.0
+one_shot = true
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 8 )
+
+[node name="fire1" type="Particles2D" parent="."]
+material = SubResource( 27 )
+z_index = 1
+amount = 21
+lifetime = 0.65
+local_coords = false
+process_material = SubResource( 29 )
+texture = ExtResource( 10 )
+
+[node name="fire2" type="Particles2D" parent="."]
+material = SubResource( 27 )
+z_index = 1
+amount = 24
+lifetime = 0.65
+local_coords = false
+process_material = SubResource( 29 )
+texture = ExtResource( 11 )
+
+[node name="fire3" type="Particles2D" parent="."]
+material = SubResource( 27 )
+z_index = 1
+amount = 26
+lifetime = 0.65
+local_coords = false
+process_material = SubResource( 29 )
+texture = ExtResource( 7 )

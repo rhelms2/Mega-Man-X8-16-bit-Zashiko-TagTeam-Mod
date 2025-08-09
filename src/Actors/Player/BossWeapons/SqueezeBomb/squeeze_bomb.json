@@ -1,0 +1,386 @@
+{ "frames": [
+   {
+    "filename": "SqueezeBomb 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 32
+   },
+   {
+    "filename": "SqueezeBomb 1.ase",
+    "frame": { "x": 103, "y": 0, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 32
+   },
+   {
+    "filename": "SqueezeBomb 2.ase",
+    "frame": { "x": 206, "y": 0, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 32
+   },
+   {
+    "filename": "SqueezeBomb 3.ase",
+    "frame": { "x": 309, "y": 0, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 32
+   },
+   {
+    "filename": "SqueezeBomb 4.ase",
+    "frame": { "x": 412, "y": 0, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 32
+   },
+   {
+    "filename": "SqueezeBomb 5.ase",
+    "frame": { "x": 515, "y": 0, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 32
+   },
+   {
+    "filename": "SqueezeBomb 6.ase",
+    "frame": { "x": 618, "y": 0, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 32
+   },
+   {
+    "filename": "SqueezeBomb 7.ase",
+    "frame": { "x": 0, "y": 101, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 32
+   },
+   {
+    "filename": "SqueezeBomb 8.ase",
+    "frame": { "x": 103, "y": 101, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 32
+   },
+   {
+    "filename": "SqueezeBomb 9.ase",
+    "frame": { "x": 206, "y": 101, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 32
+   },
+   {
+    "filename": "SqueezeBomb 10.ase",
+    "frame": { "x": 309, "y": 101, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 32
+   },
+   {
+    "filename": "SqueezeBomb 11.ase",
+    "frame": { "x": 412, "y": 101, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 32
+   },
+   {
+    "filename": "SqueezeBomb 12.ase",
+    "frame": { "x": 515, "y": 101, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 32
+   },
+   {
+    "filename": "SqueezeBomb 13.ase",
+    "frame": { "x": 618, "y": 101, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 32
+   },
+   {
+    "filename": "SqueezeBomb 14.ase",
+    "frame": { "x": 0, "y": 202, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 32
+   },
+   {
+    "filename": "SqueezeBomb 15.ase",
+    "frame": { "x": 103, "y": 202, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 32
+   },
+   {
+    "filename": "SqueezeBomb 16.ase",
+    "frame": { "x": 206, "y": 202, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 42
+   },
+   {
+    "filename": "SqueezeBomb 17.ase",
+    "frame": { "x": 309, "y": 202, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 42
+   },
+   {
+    "filename": "SqueezeBomb 18.ase",
+    "frame": { "x": 412, "y": 202, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 42
+   },
+   {
+    "filename": "SqueezeBomb 19.ase",
+    "frame": { "x": 515, "y": 202, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 42
+   },
+   {
+    "filename": "SqueezeBomb 20.ase",
+    "frame": { "x": 618, "y": 202, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 32
+   },
+   {
+    "filename": "SqueezeBomb 21.ase",
+    "frame": { "x": 0, "y": 303, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 32
+   },
+   {
+    "filename": "SqueezeBomb 22.ase",
+    "frame": { "x": 103, "y": 303, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 32
+   },
+   {
+    "filename": "SqueezeBomb 23.ase",
+    "frame": { "x": 206, "y": 303, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 32
+   },
+   {
+    "filename": "SqueezeBomb 24.ase",
+    "frame": { "x": 309, "y": 303, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 32
+   },
+   {
+    "filename": "SqueezeBomb 25.ase",
+    "frame": { "x": 412, "y": 303, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 32
+   },
+   {
+    "filename": "SqueezeBomb 26.ase",
+    "frame": { "x": 515, "y": 303, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 32
+   },
+   {
+    "filename": "SqueezeBomb 27.ase",
+    "frame": { "x": 618, "y": 303, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 32
+   },
+   {
+    "filename": "SqueezeBomb 28.ase",
+    "frame": { "x": 0, "y": 404, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 32
+   },
+   {
+    "filename": "SqueezeBomb 29.ase",
+    "frame": { "x": 103, "y": 404, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 32
+   },
+   {
+    "filename": "SqueezeBomb 30.ase",
+    "frame": { "x": 206, "y": 404, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 32
+   },
+   {
+    "filename": "SqueezeBomb 31.ase",
+    "frame": { "x": 309, "y": 404, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 32
+   },
+   {
+    "filename": "SqueezeBomb 32.ase",
+    "frame": { "x": 412, "y": 404, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 32
+   },
+   {
+    "filename": "SqueezeBomb 33.ase",
+    "frame": { "x": 515, "y": 404, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 32
+   },
+   {
+    "filename": "SqueezeBomb 34.ase",
+    "frame": { "x": 618, "y": 404, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 32
+   },
+   {
+    "filename": "SqueezeBomb 35.ase",
+    "frame": { "x": 0, "y": 505, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 32
+   },
+   {
+    "filename": "SqueezeBomb 36.ase",
+    "frame": { "x": 103, "y": 505, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 32
+   },
+   {
+    "filename": "SqueezeBomb 37.ase",
+    "frame": { "x": 206, "y": 505, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 42
+   },
+   {
+    "filename": "SqueezeBomb 38.ase",
+    "frame": { "x": 309, "y": 505, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 42
+   },
+   {
+    "filename": "SqueezeBomb 39.ase",
+    "frame": { "x": 412, "y": 505, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 42
+   },
+   {
+    "filename": "SqueezeBomb 40.ase",
+    "frame": { "x": 515, "y": 505, "w": 103, "h": 101 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 103, "h": 101 },
+    "sourceSize": { "w": 103, "h": 101 },
+    "duration": 42
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3.2-x64",
+  "image": "squeeze_bomb.png",
+  "format": "RGBA8888",
+  "size": { "w": 721, "h": 606 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "idle", "from": 0, "to": 15, "direction": "forward", "color": "#000000ff" },
+   { "name": "expire", "from": 16, "to": 19, "direction": "forward", "color": "#000000ff" },
+   { "name": "idle_big", "from": 20, "to": 35, "direction": "forward", "color": "#000000ff" },
+   { "name": "expire_big", "from": 36, "to": 40, "direction": "forward", "color": "#000000ff" }
+  ]
+ }
+}

@@ -1,0 +1,1678 @@
+{ "frames": [
+   {
+    "filename": "sigma 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 100
+   },
+   {
+    "filename": "sigma 1.ase",
+    "frame": { "x": 256, "y": 0, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 120
+   },
+   {
+    "filename": "sigma 2.ase",
+    "frame": { "x": 512, "y": 0, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 120
+   },
+   {
+    "filename": "sigma 3.ase",
+    "frame": { "x": 768, "y": 0, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 4.ase",
+    "frame": { "x": 1024, "y": 0, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 5.ase",
+    "frame": { "x": 1280, "y": 0, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 6.ase",
+    "frame": { "x": 1536, "y": 0, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 252
+   },
+   {
+    "filename": "sigma 7.ase",
+    "frame": { "x": 1792, "y": 0, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 8.ase",
+    "frame": { "x": 2048, "y": 0, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 9.ase",
+    "frame": { "x": 2304, "y": 0, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 10.ase",
+    "frame": { "x": 2560, "y": 0, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 11.ase",
+    "frame": { "x": 2816, "y": 0, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 12.ase",
+    "frame": { "x": 3072, "y": 0, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 13.ase",
+    "frame": { "x": 0, "y": 128, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 14.ase",
+    "frame": { "x": 256, "y": 128, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 15.ase",
+    "frame": { "x": 512, "y": 128, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 16.ase",
+    "frame": { "x": 768, "y": 128, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 17.ase",
+    "frame": { "x": 1024, "y": 128, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 18.ase",
+    "frame": { "x": 1280, "y": 128, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 19.ase",
+    "frame": { "x": 1536, "y": 128, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 20.ase",
+    "frame": { "x": 1792, "y": 128, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 21.ase",
+    "frame": { "x": 2048, "y": 128, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 22.ase",
+    "frame": { "x": 2304, "y": 128, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 23.ase",
+    "frame": { "x": 2560, "y": 128, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 24.ase",
+    "frame": { "x": 2816, "y": 128, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 25.ase",
+    "frame": { "x": 2816, "y": 128, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 672
+   },
+   {
+    "filename": "sigma 26.ase",
+    "frame": { "x": 3072, "y": 128, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 27.ase",
+    "frame": { "x": 0, "y": 256, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 28.ase",
+    "frame": { "x": 512, "y": 0, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 29.ase",
+    "frame": { "x": 512, "y": 0, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 30.ase",
+    "frame": { "x": 256, "y": 256, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 31.ase",
+    "frame": { "x": 512, "y": 256, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 32.ase",
+    "frame": { "x": 768, "y": 256, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 33.ase",
+    "frame": { "x": 1024, "y": 256, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 34.ase",
+    "frame": { "x": 1280, "y": 256, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 35.ase",
+    "frame": { "x": 1536, "y": 256, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 36.ase",
+    "frame": { "x": 1792, "y": 256, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 37.ase",
+    "frame": { "x": 2048, "y": 256, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 38.ase",
+    "frame": { "x": 2304, "y": 256, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 39.ase",
+    "frame": { "x": 2560, "y": 256, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 40.ase",
+    "frame": { "x": 2816, "y": 256, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 41.ase",
+    "frame": { "x": 3072, "y": 256, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 42.ase",
+    "frame": { "x": 0, "y": 384, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 43.ase",
+    "frame": { "x": 256, "y": 384, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 44.ase",
+    "frame": { "x": 512, "y": 384, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 45.ase",
+    "frame": { "x": 768, "y": 384, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 46.ase",
+    "frame": { "x": 1024, "y": 384, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 47.ase",
+    "frame": { "x": 1280, "y": 384, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 48.ase",
+    "frame": { "x": 1536, "y": 384, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 49.ase",
+    "frame": { "x": 1792, "y": 384, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 50.ase",
+    "frame": { "x": 2048, "y": 384, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 51.ase",
+    "frame": { "x": 2304, "y": 384, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 52.ase",
+    "frame": { "x": 2560, "y": 384, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 53.ase",
+    "frame": { "x": 2816, "y": 384, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 54.ase",
+    "frame": { "x": 3072, "y": 384, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 55.ase",
+    "frame": { "x": 0, "y": 512, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 56.ase",
+    "frame": { "x": 256, "y": 512, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 57.ase",
+    "frame": { "x": 512, "y": 512, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 58.ase",
+    "frame": { "x": 768, "y": 512, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 59.ase",
+    "frame": { "x": 1024, "y": 512, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 60.ase",
+    "frame": { "x": 1280, "y": 512, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 61.ase",
+    "frame": { "x": 1536, "y": 512, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 62.ase",
+    "frame": { "x": 1792, "y": 512, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 63.ase",
+    "frame": { "x": 2048, "y": 512, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 64.ase",
+    "frame": { "x": 2304, "y": 512, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 65.ase",
+    "frame": { "x": 2560, "y": 512, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 66.ase",
+    "frame": { "x": 2816, "y": 512, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 67.ase",
+    "frame": { "x": 3072, "y": 512, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 68.ase",
+    "frame": { "x": 0, "y": 640, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 69.ase",
+    "frame": { "x": 256, "y": 640, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 70.ase",
+    "frame": { "x": 512, "y": 640, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 71.ase",
+    "frame": { "x": 768, "y": 640, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 72.ase",
+    "frame": { "x": 1024, "y": 640, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 73.ase",
+    "frame": { "x": 1280, "y": 640, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 74.ase",
+    "frame": { "x": 1536, "y": 640, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 75.ase",
+    "frame": { "x": 1792, "y": 640, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 76.ase",
+    "frame": { "x": 2048, "y": 640, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 77.ase",
+    "frame": { "x": 2304, "y": 640, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 252
+   },
+   {
+    "filename": "sigma 78.ase",
+    "frame": { "x": 2560, "y": 640, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 79.ase",
+    "frame": { "x": 2816, "y": 640, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 80.ase",
+    "frame": { "x": 3072, "y": 640, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 63
+   },
+   {
+    "filename": "sigma 81.ase",
+    "frame": { "x": 1536, "y": 512, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 82.ase",
+    "frame": { "x": 1792, "y": 512, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 83.ase",
+    "frame": { "x": 1792, "y": 512, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 84.ase",
+    "frame": { "x": 0, "y": 768, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 85.ase",
+    "frame": { "x": 256, "y": 768, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 86.ase",
+    "frame": { "x": 512, "y": 768, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 87.ase",
+    "frame": { "x": 768, "y": 768, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 88.ase",
+    "frame": { "x": 1024, "y": 768, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 89.ase",
+    "frame": { "x": 1280, "y": 768, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 90.ase",
+    "frame": { "x": 1536, "y": 768, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 91.ase",
+    "frame": { "x": 1792, "y": 768, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 92.ase",
+    "frame": { "x": 2048, "y": 768, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 93.ase",
+    "frame": { "x": 2304, "y": 768, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 94.ase",
+    "frame": { "x": 2560, "y": 768, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 95.ase",
+    "frame": { "x": 2816, "y": 768, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 96.ase",
+    "frame": { "x": 3072, "y": 768, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 97.ase",
+    "frame": { "x": 0, "y": 896, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 98.ase",
+    "frame": { "x": 256, "y": 896, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 99.ase",
+    "frame": { "x": 512, "y": 896, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 100.ase",
+    "frame": { "x": 768, "y": 896, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 101.ase",
+    "frame": { "x": 1024, "y": 896, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 102.ase",
+    "frame": { "x": 1280, "y": 896, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 103.ase",
+    "frame": { "x": 768, "y": 896, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 104.ase",
+    "frame": { "x": 1024, "y": 896, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 105.ase",
+    "frame": { "x": 1280, "y": 896, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 106.ase",
+    "frame": { "x": 1536, "y": 896, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 107.ase",
+    "frame": { "x": 1792, "y": 896, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 108.ase",
+    "frame": { "x": 2048, "y": 896, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 109.ase",
+    "frame": { "x": 2304, "y": 896, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 110.ase",
+    "frame": { "x": 2560, "y": 896, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 111.ase",
+    "frame": { "x": 2816, "y": 896, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 112.ase",
+    "frame": { "x": 3072, "y": 896, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 113.ase",
+    "frame": { "x": 0, "y": 1024, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 114.ase",
+    "frame": { "x": 256, "y": 1024, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 115.ase",
+    "frame": { "x": 512, "y": 1024, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 116.ase",
+    "frame": { "x": 768, "y": 1024, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 117.ase",
+    "frame": { "x": 1024, "y": 1024, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 118.ase",
+    "frame": { "x": 1280, "y": 1024, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 119.ase",
+    "frame": { "x": 1536, "y": 1024, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 63
+   },
+   {
+    "filename": "sigma 120.ase",
+    "frame": { "x": 1792, "y": 1024, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 63
+   },
+   {
+    "filename": "sigma 121.ase",
+    "frame": { "x": 2048, "y": 1024, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 122.ase",
+    "frame": { "x": 1792, "y": 512, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 123.ase",
+    "frame": { "x": 1792, "y": 512, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 124.ase",
+    "frame": { "x": 2304, "y": 1024, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 125.ase",
+    "frame": { "x": 2560, "y": 1024, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 126.ase",
+    "frame": { "x": 2816, "y": 1024, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 336
+   },
+   {
+    "filename": "sigma 127.ase",
+    "frame": { "x": 3072, "y": 1024, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 128.ase",
+    "frame": { "x": 0, "y": 1152, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 129.ase",
+    "frame": { "x": 256, "y": 1152, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 130.ase",
+    "frame": { "x": 512, "y": 1152, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 131.ase",
+    "frame": { "x": 768, "y": 1152, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 252
+   },
+   {
+    "filename": "sigma 132.ase",
+    "frame": { "x": 1024, "y": 1152, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 63
+   },
+   {
+    "filename": "sigma 133.ase",
+    "frame": { "x": 1280, "y": 1152, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 63
+   },
+   {
+    "filename": "sigma 134.ase",
+    "frame": { "x": 1536, "y": 1152, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 135.ase",
+    "frame": { "x": 1792, "y": 1152, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 136.ase",
+    "frame": { "x": 2048, "y": 1152, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 137.ase",
+    "frame": { "x": 2304, "y": 1152, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 138.ase",
+    "frame": { "x": 2560, "y": 1152, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 139.ase",
+    "frame": { "x": 2816, "y": 1152, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 140.ase",
+    "frame": { "x": 3072, "y": 1152, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 141.ase",
+    "frame": { "x": 0, "y": 1280, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 142.ase",
+    "frame": { "x": 256, "y": 1280, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 143.ase",
+    "frame": { "x": 512, "y": 1280, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 144.ase",
+    "frame": { "x": 768, "y": 1280, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 145.ase",
+    "frame": { "x": 1024, "y": 1280, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 146.ase",
+    "frame": { "x": 1280, "y": 1280, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 147.ase",
+    "frame": { "x": 1536, "y": 1280, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 148.ase",
+    "frame": { "x": 1792, "y": 1280, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 149.ase",
+    "frame": { "x": 2048, "y": 1280, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 150.ase",
+    "frame": { "x": 2304, "y": 1280, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 151.ase",
+    "frame": { "x": 2560, "y": 1280, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 152.ase",
+    "frame": { "x": 2816, "y": 1280, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 153.ase",
+    "frame": { "x": 3072, "y": 1280, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 82
+   },
+   {
+    "filename": "sigma 154.ase",
+    "frame": { "x": 0, "y": 1408, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 155.ase",
+    "frame": { "x": 256, "y": 1408, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 156.ase",
+    "frame": { "x": 512, "y": 1408, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 32
+   },
+   {
+    "filename": "sigma 157.ase",
+    "frame": { "x": 768, "y": 1408, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 158.ase",
+    "frame": { "x": 1024, "y": 1408, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 159.ase",
+    "frame": { "x": 1280, "y": 1408, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 160.ase",
+    "frame": { "x": 1536, "y": 1408, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 161.ase",
+    "frame": { "x": 1792, "y": 1408, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 162.ase",
+    "frame": { "x": 2048, "y": 1408, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 163.ase",
+    "frame": { "x": 2304, "y": 1408, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 252
+   },
+   {
+    "filename": "sigma 164.ase",
+    "frame": { "x": 2560, "y": 1408, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 165.ase",
+    "frame": { "x": 2816, "y": 1408, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 166.ase",
+    "frame": { "x": 3072, "y": 1408, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 167.ase",
+    "frame": { "x": 0, "y": 1536, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 168.ase",
+    "frame": { "x": 1792, "y": 512, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 169.ase",
+    "frame": { "x": 256, "y": 1536, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 170.ase",
+    "frame": { "x": 512, "y": 1536, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 171.ase",
+    "frame": { "x": 768, "y": 1536, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 172.ase",
+    "frame": { "x": 1024, "y": 1536, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 173.ase",
+    "frame": { "x": 1280, "y": 1536, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 174.ase",
+    "frame": { "x": 1536, "y": 1536, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 175.ase",
+    "frame": { "x": 1792, "y": 1536, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 42
+   },
+   {
+    "filename": "sigma 176.ase",
+    "frame": { "x": 2048, "y": 1536, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 63
+   },
+   {
+    "filename": "sigma 177.ase",
+    "frame": { "x": 2304, "y": 1536, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 178.ase",
+    "frame": { "x": 2560, "y": 1536, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   },
+   {
+    "filename": "sigma 179.ase",
+    "frame": { "x": 1792, "y": 512, "w": 256, "h": 128 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 256, "h": 128 },
+    "sourceSize": { "w": 256, "h": 128 },
+    "duration": 84
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3.5-x64",
+  "image": "copysigma.png",
+  "format": "RGBA8888",
+  "size": { "w": 3328, "h": 1664 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "stop", "from": 0, "to": 0, "direction": "forward", "color": "#000000ff" },
+   { "name": "talk", "from": 1, "to": 2, "direction": "forward", "color": "#000000ff" },
+   { "name": "appear", "from": 3, "to": 9, "direction": "forward", "color": "#000000ff" },
+   { "name": "appear_loop", "from": 10, "to": 17, "direction": "forward", "color": "#000000ff" },
+   { "name": "appear_end", "from": 18, "to": 28, "direction": "forward", "color": "#000000ff" },
+   { "name": "idle", "from": 29, "to": 29, "direction": "forward", "color": "#000000ff" },
+   { "name": "dash_prepare", "from": 30, "to": 35, "direction": "forward", "color": "#000000ff" },
+   { "name": "dash_prepare_loop", "from": 33, "to": 35, "direction": "forward", "color": "#000000ff" },
+   { "name": "dash_start", "from": 36, "to": 40, "direction": "forward", "color": "#000000ff" },
+   { "name": "dash_start_loop", "from": 38, "to": 40, "direction": "forward", "color": "#000000ff" },
+   { "name": "dash_slash_1", "from": 41, "to": 46, "direction": "forward", "color": "#000000ff" },
+   { "name": "dash_slash_1_loop", "from": 44, "to": 46, "direction": "forward", "color": "#000000ff" },
+   { "name": "dash_start_2", "from": 47, "to": 51, "direction": "forward", "color": "#000000ff" },
+   { "name": "dash_start_2_loop", "from": 49, "to": 51, "direction": "forward", "color": "#000000ff" },
+   { "name": "dash_slash_2", "from": 52, "to": 57, "direction": "forward", "color": "#000000ff" },
+   { "name": "dash_slash_2_loop", "from": 55, "to": 57, "direction": "forward", "color": "#000000ff" },
+   { "name": "dash_slash_2_end", "from": 58, "to": 61, "direction": "forward", "color": "#000000ff" },
+   { "name": "throw_prepare", "from": 62, "to": 68, "direction": "forward", "color": "#000000ff" },
+   { "name": "throw_prepare_loop", "from": 66, "to": 68, "direction": "forward", "color": "#000000ff" },
+   { "name": "throw_start", "from": 69, "to": 72, "direction": "forward", "color": "#000000ff" },
+   { "name": "throw", "from": 73, "to": 82, "direction": "forward", "color": "#000000ff" },
+   { "name": "low_dash_prepare", "from": 83, "to": 91, "direction": "forward", "color": "#000000ff" },
+   { "name": "low_dash_prepare_loop", "from": 89, "to": 91, "direction": "forward", "color": "#000000ff" },
+   { "name": "low_dash", "from": 92, "to": 98, "direction": "forward", "color": "#000000ff" },
+   { "name": "low_dash_loop", "from": 96, "to": 98, "direction": "forward", "color": "#000000ff" },
+   { "name": "low_dash_pause", "from": 99, "to": 102, "direction": "forward", "color": "#000000ff" },
+   { "name": "upward_start", "from": 103, "to": 107, "direction": "forward", "color": "#000000ff" },
+   { "name": "upward", "from": 108, "to": 111, "direction": "forward", "color": "#000000ff" },
+   { "name": "upward_loop", "from": 109, "to": 111, "direction": "forward", "color": "#000000ff" },
+   { "name": "upward_end", "from": 112, "to": 118, "direction": "forward", "color": "#000000ff" },
+   { "name": "land", "from": 119, "to": 123, "direction": "forward", "color": "#000000ff" },
+   { "name": "eye_start", "from": 124, "to": 127, "direction": "forward", "color": "#000000ff" },
+   { "name": "eye_loop", "from": 128, "to": 130, "direction": "forward", "color": "#000000ff" },
+   { "name": "eye_end", "from": 131, "to": 135, "direction": "forward", "color": "#000000ff" },
+   { "name": "jump_start", "from": 136, "to": 141, "direction": "forward", "color": "#000000ff" },
+   { "name": "jump_start_loop", "from": 139, "to": 141, "direction": "forward", "color": "#000000ff" },
+   { "name": "jump", "from": 142, "to": 146, "direction": "forward", "color": "#000000ff" },
+   { "name": "jump_loop", "from": 144, "to": 146, "direction": "forward", "color": "#000000ff" },
+   { "name": "wall_land", "from": 147, "to": 151, "direction": "forward", "color": "#000000ff" },
+   { "name": "wall_loop", "from": 149, "to": 151, "direction": "forward", "color": "#000000ff" },
+   { "name": "downward_prepare", "from": 152, "to": 156, "direction": "forward", "color": "#000000ff" },
+   { "name": "downward_loop", "from": 154, "to": 156, "direction": "forward", "color": "#000000ff" },
+   { "name": "downward_land", "from": 157, "to": 168, "direction": "forward", "color": "#000000ff" },
+   { "name": "death", "from": 169, "to": 169, "direction": "forward", "color": "#000000ff" },
+   { "name": "dash_slash_1_end", "from": 170, "to": 179, "direction": "forward", "color": "#000000ff" }
+  ]
+ }
+}

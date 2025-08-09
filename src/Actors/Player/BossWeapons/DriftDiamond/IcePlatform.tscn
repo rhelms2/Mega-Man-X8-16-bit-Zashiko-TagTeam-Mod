@@ -1,0 +1,131 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://src/Effects/Textures/iceplatform.png" type="Texture" id=1]
+[ext_resource path="res://src/Actors/Player/BossWeapons/DriftDiamond/IcePlatform.gd" type="Script" id=2]
+[ext_resource path="res://src/Effects/Materials/IceRemains.tres" type="Material" id=3]
+[ext_resource path="res://src/Actors/Bosses/AvalancheYeti/ice_remains.png" type="Texture" id=4]
+[ext_resource path="res://src/Sounds/Ice Break.wav" type="AudioStream" id=5]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 64, 48, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 128, 48, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 192, 48, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 96, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 1 )
+region = Rect2( 64, 96, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 1 )
+region = Rect2( 128, 96, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 1 )
+region = Rect2( 64, 0, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 1 )
+region = Rect2( 128, 0, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 1 )
+region = Rect2( 192, 0, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 48, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 1 )
+region = Rect2( 64, 48, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 1 )
+region = Rect2( 128, 48, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 1 )
+region = Rect2( 192, 48, 64, 48 )
+
+[sub_resource type="SpriteFrames" id=15]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 4 ), SubResource( 5 ), SubResource( 6 ) ],
+"loop": true,
+"name": "shatter",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ) ],
+"loop": true,
+"name": "start",
+"speed": 16.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 16, 6 )
+
+[sub_resource type="CanvasItemMaterial" id=17]
+render_priority = -1
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 2
+particles_anim_loop = false
+
+[node name="IcePlatform" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 15 )
+animation = "start"
+offset = Vector2( 0, -12 )
+
+[node name="collision" type="KinematicBody2D" parent="."]
+position = Vector2( 0, -1 )
+collision_layer = 65537
+collision_mask = 0
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="collision"]
+position = Vector2( 0, 2 )
+shape = SubResource( 16 )
+
+[node name="remains_particles" type="Particles2D" parent="."]
+material = SubResource( 17 )
+position = Vector2( 0, -8 )
+z_index = 1
+emitting = false
+amount = 3
+lifetime = 2.0
+one_shot = true
+explosiveness = 1.0
+visibility_rect = Rect2( -600, -100, 1200, 200 )
+process_material = ExtResource( 3 )
+texture = ExtResource( 4 )
+
+[node name="icebreak" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
+stream = ExtResource( 5 )
+volume_db = -12.671
+pitch_scale = 1.15
+max_distance = 800.0
+bus = "SFX"
+
+[connection signal="animation_finished" from="animatedSprite" to="." method="_on_animation_finished"]

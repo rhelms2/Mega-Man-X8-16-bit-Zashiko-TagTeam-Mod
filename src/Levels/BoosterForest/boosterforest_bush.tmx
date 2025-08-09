@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.9" tiledversion="1.9.0" orientation="orthogonal" renderorder="right-down" width="8" height="6" tilewidth="16" tileheight="16" infinite="0" nextlayerid="2" nextobjectid="1">
+ <tileset firstgid="1" source="BoosterForestTileset.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="8" height="6">
+  <data encoding="csv">
+0,62,18,17,2147483664,0,0,0,
+0,59,103,104,2147483793,2147483707,0,0,
+144,145,60,61,103,2147483793,2147483707,0,
+187,188,189,190,60,61,2147483793,2147483792,
+0,231,232,188,189,2147483836,2147483880,2147483879,
+0,0,0,231,233,2147483879,0,0
+</data>
+ </layer>
+</map>

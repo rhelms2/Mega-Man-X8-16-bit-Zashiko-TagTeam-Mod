@@ -1,0 +1,136 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://Axl_mod/Player/Projectiles/Transform/Transfomed Enemies/Enemy_Transformed.gd" type="Script" id=1]
+[ext_resource path="res://Axl_mod/Player/Projectiles/Transform/Transfomed Enemies/SimpleProjectile_Transformed.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Axl_mod/Player/Projectiles/Transform/Transfomed Enemies/TransformedEnemyDamage.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/Enemy Collision Detector.gd" type="Script" id=4]
+[ext_resource path="res://src/Sounds/LEMON_SHOT2.wav" type="AudioStream" id=5]
+[ext_resource path="res://Axl_mod/Player/Projectiles/Transform/Transfomed Enemies/Turret/TurnAndShoot_Transformed.gd" type="Script" id=6]
+[ext_resource path="res://src/Actors/Enemies/Turret/turret.res" type="SpriteFrames" id=7]
+[ext_resource path="res://src/Effects/Materials/default_material.tres" type="Material" id=8]
+[ext_resource path="res://src/Sounds/HIT.wav" type="AudioStream" id=9]
+[ext_resource path="res://Axl_mod/Player/Projectiles/Transform/Transfomed Enemies/IdleEnemy_Transformed.gd" type="Script" id=10]
+[ext_resource path="res://Axl_mod/Player/Projectiles/Transform/Transfomed Enemies/FallEnemy_Transformed.gd" type="Script" id=11]
+[ext_resource path="res://Axl_mod/Player/Projectiles/Transform/Transfomed Enemies/WallEnemy_Transformed.gd" type="Script" id=12]
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 12, 12 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 12, 10 )
+
+[node name="TurretTransformed" type="KinematicBody2D" groups=["Enemy Transformed", "Player"]]
+z_index = 5
+collision_layer = 8192
+collision_mask = 1073743617
+script = ExtResource( 1 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 8 )
+z_index = 1
+frames = ExtResource( 7 )
+animation = "turn_to_diagonal"
+frame = 8
+playing = true
+flip_h = true
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 2 )
+shape = SubResource( 15 )
+
+[node name="Enemy Collision Detector" type="KinematicBody2D" parent="." groups=["Enemy Transformed", "Player"]]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy Collision Detector"]
+modulate = Color( 1, 0.913725, 0, 1 )
+shape = SubResource( 16 )
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+stream = ExtResource( 9 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="Wall" type="Node2D" parent="."]
+script = ExtResource( 12 )
+
+[node name="Idle" type="Node2D" parent="."]
+script = ExtResource( 10 )
+conflicting_moves = [ "Anything" ]
+
+[node name="Fall" type="Node2D" parent="."]
+script = ExtResource( 11 )
+conflicting_moves = [ "Anything" ]
+animation = "idle"
+
+[node name="TurnAndShoot" type="Node2D" parent="."]
+script = ExtResource( 6 )
+actions = [ "fire" ]
+projectile = ExtResource( 2 )
+
+[node name="shot_sound" type="AudioStreamPlayer2D" parent="TurnAndShoot"]
+stream = ExtResource( 5 )
+volume_db = -12.079
+pitch_scale = 2.0
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="horizontal_spawn_point" type="Node2D" parent="TurnAndShoot"]
+position = Vector2( 15, 0 )
+
+[node name="diagonal_spawn_point" type="Node2D" parent="TurnAndShoot"]
+position = Vector2( 10, -8 )
+
+[node name="_raycasts" type="Node2D" parent="."]
+visible = false
+
+[node name="Wallcheck Right" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 8, 0 )
+enabled = true
+cast_to = Vector2( 11, 0 )
+collision_mask = 1537
+
+[node name="Wallcheck Right2" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 8, -8 )
+enabled = true
+cast_to = Vector2( 11, 0 )
+collision_mask = 1537
+
+[node name="Wallcheck Right3" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 8, 12 )
+enabled = true
+cast_to = Vector2( 12, -9.53674e-07 )
+collision_mask = 1537
+
+[node name="Wallcheck Left" type="RayCast2D" parent="_raycasts"]
+position = Vector2( -8, 0 )
+enabled = true
+cast_to = Vector2( -11, 0 )
+collision_mask = 1537
+
+[node name="Wallcheck Left2" type="RayCast2D" parent="_raycasts"]
+position = Vector2( -8, -8 )
+enabled = true
+exclude_parent = false
+cast_to = Vector2( -11, 0 )
+collision_mask = 1537
+
+[node name="Wallcheck Left3" type="RayCast2D" parent="_raycasts"]
+position = Vector2( -8, 12 )
+enabled = true
+cast_to = Vector2( -12, -9.53674e-07 )
+collision_mask = 1537
+
+[node name="Groundcheck" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 0, 15 )
+enabled = true
+cast_to = Vector2( 0, 8 )
+
+[connection signal="zero_health" from="." to="TurnAndShoot" method="_on_Turret_zero_health"]

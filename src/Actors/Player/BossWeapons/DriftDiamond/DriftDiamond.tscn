@@ -1,0 +1,83 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://src/Effects/Materials/IceRemains.tres" type="Material" id=1]
+[ext_resource path="res://src/Effects/Materials/drift_diamond_particles.tres" type="Material" id=2]
+[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/Player/BossWeapons/DriftDiamond/DriftDiamondProjectile.gd" type="Script" id=4]
+[ext_resource path="res://src/Actors/Bosses/AvalancheYeti/ice_remains.png" type="Texture" id=5]
+[ext_resource path="res://src/Effects/Textures/snow_sparkle.png" type="Texture" id=6]
+[ext_resource path="res://src/Actors/Bosses/boss_sprites/icespike.png" type="Texture" id=7]
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 7 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="SpriteFrames" id=10]
+animations = [ {
+"frames": [ SubResource( 9 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 2
+particles_anim_loop = false
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 4, 4 )
+
+[sub_resource type="CanvasItemMaterial" id=12]
+render_priority = -1
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 2
+particles_anim_loop = false
+
+[node name="DriftDiamond" type="KinematicBody2D" groups=["Player Projectile"]]
+z_index = 8
+collision_layer = 4
+script = ExtResource( 4 )
+damage = 3.0
+damage_to_weakness = 15.0
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 10 )
+playing = true
+flip_h = true
+
+[node name="particles2D" type="Particles2D" parent="."]
+material = SubResource( 1 )
+z_index = -1
+emitting = false
+amount = 9
+lifetime = 0.45
+local_coords = false
+process_material = ExtResource( 2 )
+texture = ExtResource( 6 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 11 )
+
+[node name="remains_particles" type="Particles2D" parent="."]
+material = SubResource( 12 )
+position = Vector2( 0, 0.5 )
+z_index = -1
+emitting = false
+amount = 2
+lifetime = 2.0
+one_shot = true
+explosiveness = 1.0
+visibility_rect = Rect2( -600, -100, 1200, 200 )
+process_material = ExtResource( 1 )
+texture = ExtResource( 5 )
+
+[node name="disabler" type="Node" parent="."]
+script = ExtResource( 3 )
+fade_out = true
+delete_after_fade = true
+undo_on_rotation_end = false

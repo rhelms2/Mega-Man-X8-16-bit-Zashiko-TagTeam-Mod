@@ -1,0 +1,160 @@
+[gd_scene load_steps=30 format=2]
+
+[ext_resource path="res://src/Effects/Materials/RemainsParticle.tres" type="Material" id=1]
+[ext_resource path="res://src/Effects/Materials/EnemyDeathExplosionParticles.tres" type="Material" id=2]
+[ext_resource path="res://src/Sounds/59 - MMX - Enemy Die (4).wav" type="AudioStream" id=3]
+[ext_resource path="res://src/Actors/Enemies/Shared/TurnReploidDeath.gd" type="Script" id=4]
+[ext_resource path="res://src/Effects/Textures/explosion.png" type="Texture" id=5]
+[ext_resource path="res://src/Sounds/MM - Equip.wav" type="AudioStream" id=6]
+[ext_resource path="res://src/Effects/Materials/default_material.tres" type="Material" id=7]
+[ext_resource path="res://src/Actors/Enemies/Shared/reploiddeathtransform.gd" type="Script" id=8]
+[ext_resource path="res://src/Effects/Textures/fake_boss_death.png" type="Texture" id=9]
+[ext_resource path="res://src/Effects/Remains.gd" type="Script" id=10]
+[ext_resource path="res://src/Effects/Materials/RemainsMat.tres" type="Material" id=11]
+[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=12]
+[ext_resource path="res://src/Actors/Enemies/SwordReploid/reploid_remains_palette.png" type="Texture" id=13]
+
+[sub_resource type="CanvasItemMaterial" id=71]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 4
+particles_anim_loop = false
+
+[sub_resource type="CanvasItemMaterial" id=66]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 4
+particles_anim_loop = false
+
+[sub_resource type="Curve" id=244]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=243]
+curve = SubResource( 244 )
+
+[sub_resource type="ParticlesMaterial" id=245]
+resource_local_to_scene = true
+resource_name = "remains_single"
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 243 )
+
+[sub_resource type="AtlasTexture" id=68]
+atlas = ExtResource( 9 )
+region = Rect2( 0, 0, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=78]
+atlas = ExtResource( 9 )
+region = Rect2( 80, 0, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=83]
+atlas = ExtResource( 9 )
+region = Rect2( 160, 0, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=246]
+atlas = ExtResource( 9 )
+region = Rect2( 240, 0, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=72]
+atlas = ExtResource( 9 )
+region = Rect2( 320, 0, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=73]
+atlas = ExtResource( 9 )
+region = Rect2( 0, 80, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=74]
+atlas = ExtResource( 9 )
+region = Rect2( 80, 80, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=75]
+atlas = ExtResource( 9 )
+region = Rect2( 160, 80, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=76]
+atlas = ExtResource( 9 )
+region = Rect2( 240, 80, 80, 80 )
+
+[sub_resource type="AtlasTexture" id=77]
+atlas = ExtResource( 9 )
+region = Rect2( 320, 80, 80, 80 )
+
+[sub_resource type="SpriteFrames" id=247]
+animations = [ {
+"frames": [ SubResource( 68 ), SubResource( 78 ), SubResource( 83 ), SubResource( 246 ), SubResource( 72 ), SubResource( 73 ), SubResource( 74 ), SubResource( 75 ), SubResource( 76 ), SubResource( 77 ) ],
+"loop": false,
+"name": "default",
+"speed": 24.0
+} ]
+
+[node name="BossDeath" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Explosion Particles" type="Particles2D" parent="."]
+material = SubResource( 71 )
+position = Vector2( 0, 0.5 )
+z_index = 2
+emitting = false
+amount = 15
+lifetime = 2.0
+local_coords = false
+process_material = ExtResource( 2 )
+texture = ExtResource( 5 )
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+volume_db = -8.0
+max_distance = 600.0
+attenuation = 0.951366
+bus = "SFX"
+
+[node name="Remains" type="Particles2D" parent="."]
+material = SubResource( 66 )
+position = Vector2( 0, 0.5 )
+z_index = 10
+emitting = false
+amount = 1
+lifetime = 2.0
+one_shot = true
+local_coords = false
+process_material = SubResource( 245 )
+texture = ExtResource( 5 )
+script = ExtResource( 10 )
+
+[node name="remains_particles" type="Particles2D" parent="Remains"]
+material = ExtResource( 11 )
+z_index = -1
+emitting = false
+amount = 12
+lifetime = 2.0
+one_shot = true
+explosiveness = 1.0
+visibility_rect = Rect2( -600, -100, 1200, 200 )
+process_material = ExtResource( 1 )
+texture = ExtResource( 13 )
+
+[node name="disabler" type="Node" parent="Remains"]
+script = ExtResource( 12 )
+fade_out = true
+undo_on_rotation_end = false
+
+[node name="reploid" type="AnimatedSprite" parent="."]
+pause_mode = 2
+visible = false
+material = ExtResource( 7 )
+frames = SubResource( 247 )
+script = ExtResource( 8 )
+
+[node name="transform" type="AudioStreamPlayer2D" parent="reploid"]
+stream = ExtResource( 6 )
+bus = "SFX"
+
+[connection signal="ability_start" from="." to="." method="_on_EnemyDeath_ability_start"]
+[connection signal="ability_start" from="." to="reploid" method="_on_EnemyDeath_ability_start"]

@@ -1,0 +1,66 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/Levels/BoosterForest/AxisElevator.gd" type="Script" id=1]
+[ext_resource path="res://src/Levels/BoosterForest/BoosterForestTileset.tsx" type="TileSet" id=2]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 32, 7 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 32, 6 )
+
+[node name="AxisElevator" type="Node2D"]
+position = Vector2( 8849, -624 )
+script = ExtResource( 1 )
+
+[node name="Elevator" type="RigidBody2D" parent="."]
+position = Vector2( -64, 0 )
+z_index = 4
+collision_mask = 0
+mode = 3
+gravity_scale = 0.0
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="Elevator"]
+position = Vector2( 0, -3 )
+shape = SubResource( 3 )
+
+[node name="tileMap" type="TileMap" parent="Elevator"]
+position = Vector2( -32, -9 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -65536, 366, 0, -65535, 367, 0, -65534, 536871279, 0, -65533, 536871278, 0, 0, 409, 0, 1, 410, 0, 2, 536871322, 0, 3, 536871321, 0, 65536, 536871365, 0, 65537, 453, 0, 65538, 536871365, 0, 65539, 453, 0 )
+
+[node name="floor" type="Area2D" parent="Elevator"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="Elevator/floor"]
+position = Vector2( 0, -6 )
+shape = SubResource( 2 )
+
+[node name="Elevator2" type="RigidBody2D" parent="."]
+position = Vector2( 64, 0 )
+z_index = 4
+collision_mask = 0
+mode = 3
+gravity_scale = 0.0
+
+[node name="floor" type="Area2D" parent="Elevator2"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="Elevator2/floor"]
+position = Vector2( 0, -6 )
+shape = SubResource( 2 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="Elevator2"]
+position = Vector2( 0, -3 )
+shape = SubResource( 3 )
+
+[node name="tileMap" type="TileMap" parent="Elevator2"]
+position = Vector2( -32, -9 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -65536, 366, 0, -65535, 367, 0, -65534, 536871279, 0, -65533, 536871278, 0, 0, 409, 0, 1, 410, 0, 2, 536871322, 0, 3, 536871321, 0, 65536, 536871365, 0, 65537, 453, 0, 65538, 536871365, 0, 65539, 453, 0 )

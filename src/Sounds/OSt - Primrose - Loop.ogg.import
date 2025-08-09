@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OSt - Primrose - Loop.ogg-0b835238e9b5c56868fd23442ddf05f6.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OSt - Primrose - Loop.ogg"
+dest_files=[ "res://.import/OSt - Primrose - Loop.ogg-0b835238e9b5c56868fd23442ddf05f6.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

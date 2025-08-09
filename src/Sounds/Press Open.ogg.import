@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Press Open.ogg-04e3ddd8ad349004afd884a8876bb0e4.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/Press Open.ogg"
+dest_files=[ "res://.import/Press Open.ogg-04e3ddd8ad349004afd884a8876bb0e4.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

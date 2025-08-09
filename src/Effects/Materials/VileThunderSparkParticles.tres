@@ -1,0 +1,14 @@
+[gd_resource type="ParticlesMaterial" format=2]
+
+[resource]
+lifetime_randomness = 0.51
+emission_shape = 2
+emission_box_extents = Vector3( 8, 128, 0 )
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+gravity = Vector3( 0, -200, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 250.0
+anim_speed = 1.0
+anim_offset_random = 1.0

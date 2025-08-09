@@ -1,0 +1,359 @@
+[gd_scene load_steps=50 format=2]
+
+[ext_resource path="res://src/Actors/Bosses/GiantMechaniloid/GiantMechaniloid.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Bosses/BossAI.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Enemies/EnemyShield.gd" type="Script" id=3]
+[ext_resource path="res://src/Sounds/MMX - Enemy Helmet Hit.ogg" type="AudioStream" id=4]
+[ext_resource path="res://src/Actors/Bosses/GiantMechaniloid/mechaniloid_body.res" type="SpriteFrames" id=5]
+[ext_resource path="res://src/Actors/Bosses/GiantMechaniloid/mechaniloid_head.res" type="SpriteFrames" id=6]
+[ext_resource path="res://src/Actors/Bosses/GiantMechaniloid/head.gd" type="Script" id=7]
+[ext_resource path="res://src/Actors/Bosses/GiantMechaniloid/body.gd" type="Script" id=8]
+[ext_resource path="res://src/Effects/Materials/default_material.tres" type="Material" id=9]
+[ext_resource path="res://src/Actors/Bosses/GiantMechaniloid/mechaniloid_head_L.res" type="SpriteFrames" id=10]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/Idle.gd" type="Script" id=11]
+[ext_resource path="res://src/Actors/Bosses/GenericIntro.gd" type="Script" id=12]
+[ext_resource path="res://src/Actors/Bosses/GiantMechaniloid/Swipe.gd" type="Script" id=13]
+[ext_resource path="res://src/Actors/Bosses/GiantMechaniloid/Damage.gd" type="Script" id=14]
+[ext_resource path="res://src/Sounds/HIT_BOSS.wav" type="AudioStream" id=15]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=16]
+[ext_resource path="res://src/Actors/MeleeEnemyAttack.gd" type="Script" id=17]
+[ext_resource path="res://src/Actors/Bosses/GiantMechaniloid/Smash.gd" type="Script" id=18]
+[ext_resource path="res://src/Actors/Bosses/GiantMechaniloid/Laser.gd" type="Script" id=19]
+[ext_resource path="res://src/Actors/Bosses/GiantMechaniloid/LaserEye.tscn" type="PackedScene" id=20]
+[ext_resource path="res://src/Actors/Bosses/GiantMechaniloid/DamageDetector.gd" type="Script" id=21]
+[ext_resource path="res://src/Effects/Remains.gd" type="Script" id=22]
+[ext_resource path="res://src/Effects/Textures/explosion.png" type="Texture" id=23]
+[ext_resource path="res://src/Effects/Materials/explosion.tres" type="Material" id=24]
+[ext_resource path="res://src/Actors/Bosses/GiantMechaniloid/Explosion.gd" type="Script" id=25]
+[ext_resource path="res://src/Actors/Bosses/GiantMechaniloid/Death.gd" type="Script" id=26]
+[ext_resource path="res://src/Sounds/Panda - Drill Start.ogg" type="AudioStream" id=27]
+[ext_resource path="res://src/Sounds/Yeti - Stomp.ogg" type="AudioStream" id=28]
+[ext_resource path="res://src/Sounds/Mantis - Dive.ogg" type="AudioStream" id=29]
+[ext_resource path="res://src/Sounds/59 - MMX - Enemy Die (4).wav" type="AudioStream" id=30]
+[ext_resource path="res://src/Effects/Textures/remains.png" type="Texture" id=31]
+[ext_resource path="res://src/Effects/Materials/mechaniloid_explosion_particles.tres" type="Material" id=32]
+[ext_resource path="res://src/Effects/Materials/mechaniloid_remains_particle.tres" type="Material" id=33]
+[ext_resource path="res://src/Actors/Bosses/Vile/RNGUpdate.gd" type="Script" id=34]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 73, 96.5 )
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 23.0
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 19.5, 167 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 30.25, 72.5 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 38.875, 26.6875 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 10.875, 21 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 20, 35.5 )
+
+[sub_resource type="CapsuleShape2D" id=8]
+
+[sub_resource type="CanvasItemMaterial" id=71]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 4
+particles_anim_loop = false
+
+[sub_resource type="CanvasItemMaterial" id=66]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 4
+particles_anim_loop = false
+
+[sub_resource type="Curve" id=42]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=70]
+curve = SubResource( 42 )
+
+[sub_resource type="ParticlesMaterial" id=72]
+resource_local_to_scene = true
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 70 )
+
+[sub_resource type="CanvasItemMaterial" id=12]
+render_priority = -1
+particles_animation = true
+particles_anim_h_frames = 6
+particles_anim_v_frames = 3
+particles_anim_loop = false
+
+[sub_resource type="CanvasItemMaterial" id=9]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 4
+particles_anim_loop = false
+
+[node name="GiantMechaniloid" type="KinematicBody2D"]
+collision_layer = 0
+collision_mask = 268435456
+script = ExtResource( 1 )
+max_health = 100.0
+
+[node name="BossAI" type="Node2D" parent="."]
+script = ExtResource( 2 )
+time_between_attacks = Vector2( 1, 1.5 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 0, 96.5 )
+shape = SubResource( 1 )
+
+[node name="Idle" type="Node2D" parent="."]
+script = ExtResource( 11 )
+conflicting_moves = [ "Anything" ]
+animation = "idle"
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 9 )
+z_index = 1
+frames = ExtResource( 6 )
+animation = "idle"
+frame = 7
+playing = true
+script = ExtResource( 7 )
+head_l_frames = ExtResource( 10 )
+
+[node name="body" type="AnimatedSprite" parent="animatedSprite"]
+position = Vector2( 0, 44 )
+z_index = -1
+frames = ExtResource( 5 )
+animation = "idle"
+frame = 7
+playing = true
+script = ExtResource( 8 )
+
+[node name="LaserEye" parent="animatedSprite" instance=ExtResource( 20 )]
+position = Vector2( 0, -3 )
+rotation = 0.698135
+
+[node name="swipe_prepare" type="Node2D" parent="animatedSprite"]
+script = ExtResource( 16 )
+active = false
+
+[node name="area2D" type="Area2D" parent="animatedSprite/swipe_prepare"]
+position = Vector2( -83, 114 )
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="animatedSprite/swipe_prepare/area2D"]
+rotation = 1.5708
+shape = SubResource( 5 )
+
+[node name="swipe_attack" type="Node2D" parent="animatedSprite"]
+script = ExtResource( 17 )
+active = false
+damage = 2.0
+owner_character = NodePath("../..")
+
+[node name="area2D" type="Area2D" parent="animatedSprite/swipe_attack"]
+position = Vector2( 95, 127 )
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="animatedSprite/swipe_attack/area2D"]
+rotation = 1.5708
+shape = SubResource( 6 )
+
+[node name="smash_attack" type="Node2D" parent="animatedSprite"]
+script = ExtResource( 17 )
+active = false
+damage = 2.0
+owner_character = NodePath("../..")
+
+[node name="area2D" type="Area2D" parent="animatedSprite/smash_attack"]
+position = Vector2( 95, 127 )
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="animatedSprite/smash_attack/area2D"]
+position = Vector2( -156.5, -12 )
+rotation = 1.5708
+shape = SubResource( 7 )
+
+[node name="EnemyShield" type="Node2D" parent="."]
+position = Vector2( 0, 30 )
+z_index = 2
+script = ExtResource( 3 )
+breakable = false
+
+[node name="hittable_area" type="Area2D" parent="EnemyShield"]
+modulate = Color( 1, 0, 0.890196, 1 )
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="EnemyShield/hittable_area"]
+position = Vector2( 0.125, -1.3125 )
+shape = SubResource( 2 )
+
+[node name="collisionShape2D2" type="CollisionShape2D" parent="EnemyShield/hittable_area"]
+position = Vector2( 0.125, -38 )
+shape = SubResource( 3 )
+
+[node name="hitSound" type="AudioStreamPlayer2D" parent="EnemyShield"]
+stream = ExtResource( 4 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="DamageDetector" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 262144
+script = ExtResource( 21 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="DamageDetector"]
+position = Vector2( 0, 0.5 )
+shape = SubResource( 4 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+position = Vector2( -6.5, 3.5 )
+scale = Vector2( 4.35, 4.25 )
+
+[node name="Intro" type="Node2D" parent="."]
+script = ExtResource( 12 )
+actions = [ "Event" ]
+
+[node name="Swipe" type="Node2D" parent="."]
+script = ExtResource( 13 )
+
+[node name="drill" type="AudioStreamPlayer2D" parent="Swipe"]
+pause_mode = 2
+stream = ExtResource( 27 )
+volume_db = -6.0
+max_distance = 600.0
+bus = "SFX"
+
+[node name="swipe" type="AudioStreamPlayer2D" parent="Swipe"]
+pause_mode = 2
+stream = ExtResource( 29 )
+volume_db = -6.0
+max_distance = 600.0
+bus = "SFX"
+
+[node name="Smash" type="Node2D" parent="."]
+script = ExtResource( 18 )
+
+[node name="stomp" type="AudioStreamPlayer2D" parent="Smash"]
+pause_mode = 2
+stream = ExtResource( 28 )
+volume_db = -6.0
+pitch_scale = 0.92
+max_distance = 600.0
+bus = "SFX"
+
+[node name="Laser" type="Node2D" parent="."]
+script = ExtResource( 19 )
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 0
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+shape = SubResource( 8 )
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 14 )
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+pause_mode = 2
+stream = ExtResource( 15 )
+volume_db = -3.0
+max_distance = 600.0
+bus = "SFX"
+
+[node name="EnemyDeath" type="Node2D" parent="."]
+script = ExtResource( 26 )
+
+[node name="Explosion Particles" type="Particles2D" parent="EnemyDeath"]
+material = SubResource( 71 )
+position = Vector2( 0, 33 )
+z_index = 2
+emitting = false
+amount = 32
+lifetime = 2.0
+local_coords = false
+process_material = ExtResource( 32 )
+texture = ExtResource( 23 )
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="EnemyDeath"]
+stream = ExtResource( 30 )
+volume_db = -8.0
+max_distance = 600.0
+attenuation = 0.951366
+bus = "SFX"
+
+[node name="Remains" type="Particles2D" parent="EnemyDeath"]
+material = SubResource( 66 )
+position = Vector2( 0, 44 )
+z_index = 10
+emitting = false
+amount = 1
+lifetime = 2.0
+one_shot = true
+local_coords = false
+process_material = SubResource( 72 )
+texture = ExtResource( 23 )
+script = ExtResource( 22 )
+
+[node name="remains_particles" type="Particles2D" parent="EnemyDeath/Remains"]
+material = SubResource( 12 )
+position = Vector2( 0, 11 )
+z_index = -1
+emitting = false
+amount = 32
+lifetime = 2.0
+one_shot = true
+explosiveness = 1.0
+visibility_rect = Rect2( -600, -100, 1200, 200 )
+process_material = ExtResource( 33 )
+texture = ExtResource( 31 )
+
+[node name="timer" type="Timer" parent="EnemyDeath/Remains"]
+wait_time = 2.0
+one_shot = true
+
+[node name="Explosion" type="Particles2D" parent="."]
+material = SubResource( 9 )
+position = Vector2( 0, 45 )
+z_index = 2
+emitting = false
+amount = 32
+lifetime = 2.0
+local_coords = false
+process_material = ExtResource( 24 )
+texture = ExtResource( 23 )
+script = ExtResource( 25 )
+
+[node name="RNGUpdate" type="Node" parent="."]
+script = ExtResource( 34 )
+
+[connection signal="death" from="." to="Explosion" method="_on_GiantMechaniloid_death"]
+[connection signal="body_entered" from="DamageDetector" to="DamageDetector" method="_on_DamageDetector_body_entered"]
+[connection signal="body_entered" from="DamageDetector" to="Damage" method="_on_area2D_body_entered"]
+[connection signal="ability_start" from="EnemyDeath" to="Explosion" method="_on_EnemyDeath_ability_start"]
+[connection signal="ability_start" from="EnemyDeath" to="RNGUpdate" method="_on_BossDeath_ability_start"]
+[connection signal="timeout" from="EnemyDeath/Remains/timer" to="EnemyDeath/Remains" method="_on_timer_timeout"]

@@ -1,0 +1,698 @@
+[gd_scene load_steps=69 format=2]
+
+[ext_resource path="res://src/Actors/Panda.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Bosses/boss_sprites/yeti.res" type="SpriteFrames" id=2]
+[ext_resource path="res://src/Sounds/HIT_BOSS.wav" type="AudioStream" id=3]
+[ext_resource path="res://src/Effects/Materials/default_material.tres" type="Material" id=4]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=5]
+[ext_resource path="res://src/Actors/Modules/Enemy/BossDamage.gd" type="Script" id=6]
+[ext_resource path="res://src/Effects/Materials/BossExplosion.tres" type="Material" id=7]
+[ext_resource path="res://src/Effects/Materials/BossSmokeParticlesMedium.tres" type="Material" id=8]
+[ext_resource path="res://src/Actors/Enemies/Shared/LongBossDeath.tscn" type="PackedScene" id=9]
+[ext_resource path="res://src/DialogSystem/Dialogs/Stages/Yeti_Dialogue.tres" type="Resource" id=10]
+[ext_resource path="res://src/Actors/Bosses/BossStun.gd" type="Script" id=11]
+[ext_resource path="res://src/Actors/Bosses/AvalancheYeti/YetiIntro.gd" type="Script" id=12]
+[ext_resource path="res://src/Actors/Bosses/IceDash.gd" type="Script" id=13]
+[ext_resource path="res://src/Effects/Materials/YetiLandParticle.tres" type="Material" id=14]
+[ext_resource path="res://src/Actors/Bosses/BossAI.gd" type="Script" id=15]
+[ext_resource path="res://src/Actors/Enemies/EnemyIdle.gd" type="Script" id=16]
+[ext_resource path="res://src/Actors/Bosses/IceStomp.gd" type="Script" id=17]
+[ext_resource path="res://src/Actors/Enemies/SnowWave.tscn" type="PackedScene" id=18]
+[ext_resource path="res://src/Actors/Bosses/IceJump.gd" type="Script" id=19]
+[ext_resource path="res://src/Actors/Enemies/smallSnowWave.tscn" type="PackedScene" id=20]
+[ext_resource path="res://src/Actors/Bosses/IceSpikes.gd" type="Script" id=21]
+[ext_resource path="res://src/Actors/Enemies/IceSpike.tscn" type="PackedScene" id=22]
+[ext_resource path="res://src/Actors/Bosses/IceStorm.gd" type="Script" id=23]
+[ext_resource path="res://src/Actors/Bosses/IceShooter.gd" type="Script" id=24]
+[ext_resource path="res://src/Actors/Bosses/AvalancheYeti/IceShardProjectile.tscn" type="PackedScene" id=25]
+[ext_resource path="res://src/Actors/Bosses/boss_sprites/iceshard.png" type="Texture" id=26]
+[ext_resource path="res://src/Sounds/Yeti - Uppercut.ogg" type="AudioStream" id=27]
+[ext_resource path="res://src/Effects/Textures/snowsmoke.png" type="Texture" id=28]
+[ext_resource path="res://src/Actors/Bosses/boss_sprites/icesmoke.png" type="Texture" id=29]
+[ext_resource path="res://src/Sounds/Bike - Land.wav" type="AudioStream" id=30]
+[ext_resource path="res://src/Sounds/Yeti - Dash.ogg" type="AudioStream" id=31]
+[ext_resource path="res://src/Sounds/Yeti - Quake Up.ogg" type="AudioStream" id=32]
+[ext_resource path="res://src/Sounds/Yeti - Quake Prepare.ogg" type="AudioStream" id=33]
+[ext_resource path="res://src/Sounds/Yeti - Jump.ogg" type="AudioStream" id=34]
+[ext_resource path="res://src/Sounds/Yeti - Throw.ogg" type="AudioStream" id=35]
+[ext_resource path="res://src/Sounds/Yeti - Stomp.ogg" type="AudioStream" id=36]
+[ext_resource path="res://src/Sounds/Yeti - IceStorm Crouch.ogg" type="AudioStream" id=37]
+[ext_resource path="res://src/Sounds/Yeti - IceStorm.ogg" type="AudioStream" id=38]
+[ext_resource path="res://src/Effects/Textures/small_snow.png" type="Texture" id=39]
+[ext_resource path="res://src/Sounds/Yeti - Desperation.ogg" type="AudioStream" id=40]
+[ext_resource path="res://src/AchievementSystem/BossAchievementHandler.gd" type="Script" id=41]
+[ext_resource path="res://src/AchievementSystem/Achievements/YETINODAMAGE.tres" type="Resource" id=42]
+[ext_resource path="res://src/AchievementSystem/Achievements/YETIBUSTERONLY.tres" type="Resource" id=43]
+[ext_resource path="res://src/AchievementSystem/Achievements/YETINAKED.tres" type="Resource" id=44]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 24.5, 30 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 18, 26.25 )
+
+[sub_resource type="CanvasItemMaterial" id=23]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 3
+particles_anim_loop = false
+
+[sub_resource type="Curve" id=24]
+_data = [ Vector2( 0, 0 ), 0.0, 1.0, 0, 1, Vector2( 1, 1 ), 1.0, 0.0, 1, 0 ]
+
+[sub_resource type="CurveTexture" id=55]
+curve = SubResource( 24 )
+
+[sub_resource type="ParticlesMaterial" id=34]
+emission_shape = 2
+emission_box_extents = Vector3( 48, 1, 1 )
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+spread = 6.47
+gravity = Vector3( 0, 380, 0 )
+initial_velocity = 150.0
+initial_velocity_random = 0.5
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 155.0
+damping = 1.63
+anim_speed = 1.0
+anim_speed_random = 0.59
+anim_speed_curve = SubResource( 55 )
+
+[sub_resource type="CanvasItemMaterial" id=31]
+particles_animation = true
+particles_anim_h_frames = 5
+particles_anim_v_frames = 2
+particles_anim_loop = false
+
+[sub_resource type="ParticlesMaterial" id=32]
+emission_shape = 2
+emission_box_extents = Vector3( 32, 1, 0 )
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+spread = 124.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 450.01
+initial_velocity_random = 0.5
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 600.0
+angle = 720.0
+angle_random = 1.0
+scale_random = 1.0
+color = Color( 0.972549, 0.972549, 0.972549, 1 )
+anim_speed = 3.0
+anim_speed_random = 0.4
+
+[sub_resource type="CanvasItemMaterial" id=27]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 3
+particles_anim_loop = false
+
+[sub_resource type="ParticlesMaterial" id=30]
+lifetime_randomness = 0.33
+emission_shape = 2
+emission_box_extents = Vector3( 1, 1, 0 )
+flag_disable_z = true
+direction = Vector3( -1, -1, 0 )
+spread = 0.0
+gravity = Vector3( 0, 1200, 0 )
+initial_velocity = 400.0
+initial_velocity_random = 0.1
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+color = Color( 0.972549, 0.972549, 0.972549, 1 )
+anim_speed = 1.0
+
+[sub_resource type="ParticlesMaterial" id=28]
+lifetime_randomness = 0.33
+emission_shape = 2
+emission_box_extents = Vector3( 1, 1, 0 )
+flag_disable_z = true
+direction = Vector3( -0.4, -1, 0 )
+spread = 0.0
+gravity = Vector3( 0, 1200, 0 )
+initial_velocity = 400.0
+initial_velocity_random = 0.1
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+color = Color( 0.972549, 0.972549, 0.972549, 1 )
+anim_speed = 1.0
+
+[sub_resource type="Curve" id=50]
+_data = [ Vector2( 0, 0 ), 0.0, 1.0, 0, 1, Vector2( 1, 1 ), 1.0, 0.0, 1, 0 ]
+
+[sub_resource type="CurveTexture" id=7]
+curve = SubResource( 50 )
+
+[sub_resource type="ParticlesMaterial" id=37]
+emission_shape = 2
+emission_box_extents = Vector3( 16, 1, 1 )
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+spread = 3.88
+gravity = Vector3( 0, 600, 0 )
+initial_velocity = 400.0
+initial_velocity_random = 0.68
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 155.0
+damping = 1.63
+anim_speed = 1.0
+anim_speed_random = 0.59
+anim_speed_curve = SubResource( 7 )
+
+[sub_resource type="ParticlesMaterial" id=35]
+emission_shape = 2
+emission_box_extents = Vector3( 16, 1, 1 )
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+spread = 3.88
+gravity = Vector3( 0, 380, 0 )
+initial_velocity = 200.0
+initial_velocity_random = 0.65
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 155.0
+damping = 1.63
+anim_speed = 1.0
+anim_speed_random = 0.59
+anim_speed_curve = SubResource( 7 )
+
+[sub_resource type="CanvasItemMaterial" id=38]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 2
+particles_anim_loop = false
+
+[sub_resource type="Curve" id=40]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0.00454545 ), -1.50109, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=56]
+curve = SubResource( 40 )
+
+[sub_resource type="ParticlesMaterial" id=39]
+emission_shape = 2
+emission_box_extents = Vector3( 240, 0, 1 )
+flag_disable_z = true
+direction = Vector3( 0, 1, 0 )
+spread = 22.99
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 50.0
+initial_velocity_random = 0.5
+angular_velocity = 382.37
+angular_velocity_random = 0.53
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+angle = 720.0
+angle_random = 1.0
+scale = 0.5
+scale_curve = SubResource( 56 )
+
+[sub_resource type="ParticlesMaterial" id=33]
+emission_shape = 2
+emission_box_extents = Vector3( 32, 1, 0 )
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+spread = 81.27
+gravity = Vector3( 0, 600, 0 )
+initial_velocity = 600.0
+initial_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 500.0
+angle = 720.0
+angle_random = 1.0
+scale_random = 1.0
+color = Color( 0.972549, 0.972549, 0.972549, 1 )
+anim_speed = 3.0
+anim_speed_random = 0.4
+
+[sub_resource type="ParticlesMaterial" id=22]
+emission_shape = 2
+emission_box_extents = Vector3( 16, 16, 1 )
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+spread = 22.99
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 1000.0
+initial_velocity_random = 0.5
+angular_velocity = 720.0
+angular_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+scale = 0.5
+scale_random = 1.0
+
+[sub_resource type="Curve" id=52]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=43]
+curve = SubResource( 52 )
+
+[sub_resource type="ParticlesMaterial" id=53]
+resource_local_to_scene = true
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 43 )
+
+[node name="Yeti" type="KinematicBody2D" groups=["Bosses"]]
+z_index = 4
+collision_layer = 0
+script = ExtResource( 1 )
+max_health = 160.0
+
+[node name="BossAI" type="Node2D" parent="."]
+script = ExtResource( 15 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 17 )
+shape = SubResource( 1 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 4 )
+frames = ExtResource( 2 )
+animation = "idle"
+frame = 5
+playing = true
+flip_h = true
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+position = Vector2( 0, 21.25 )
+shape = SubResource( 2 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+position = Vector2( -6.5, 3.5 )
+scale = Vector2( 4.35, 4.25 )
+
+[node name="Intro" type="Node2D" parent="."]
+script = ExtResource( 12 )
+actions = [ "Event" ]
+animation = "intro_jump"
+dialogue = ExtResource( 10 )
+
+[node name="Land" type="Particles2D" parent="Intro"]
+material = SubResource( 23 )
+position = Vector2( 0, 48 )
+z_index = 8
+z_as_relative = false
+emitting = false
+amount = 18
+lifetime = 0.75
+one_shot = true
+explosiveness = 0.93
+local_coords = false
+process_material = SubResource( 34 )
+texture = ExtResource( 28 )
+
+[node name="Snow Explosion" type="Particles2D" parent="Intro"]
+material = SubResource( 31 )
+position = Vector2( 0, 43 )
+z_index = 12
+emitting = false
+amount = 24
+lifetime = 1.5
+one_shot = true
+explosiveness = 0.95
+randomness = 1.0
+visibility_rect = Rect2( -800, -130, 1680, 220 )
+local_coords = false
+process_material = SubResource( 32 )
+texture = ExtResource( 29 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Jump" type="Particles2D" parent="Intro"]
+material = SubResource( 23 )
+position = Vector2( 0, 49 )
+z_index = 8
+z_as_relative = false
+emitting = false
+amount = 18
+lifetime = 0.75
+one_shot = true
+explosiveness = 0.93
+local_coords = false
+process_material = ExtResource( 14 )
+texture = ExtResource( 28 )
+
+[node name="jump" type="AudioStreamPlayer2D" parent="Intro"]
+stream = ExtResource( 34 )
+volume_db = 4.355
+max_distance = 600.0
+bus = "SFX"
+
+[node name="land" type="AudioStreamPlayer2D" parent="Intro"]
+stream = ExtResource( 30 )
+volume_db = 4.361
+pitch_scale = 0.44
+max_distance = 600.0
+bus = "SFX"
+
+[node name="arms" type="AudioStreamPlayer2D" parent="Intro"]
+stream = ExtResource( 34 )
+volume_db = 3.627
+pitch_scale = 1.31
+max_distance = 600.0
+bus = "SFX"
+
+[node name="Idle" type="Node2D" parent="."]
+script = ExtResource( 16 )
+conflicting_moves = [ "Anything" ]
+animation = "idle"
+
+[node name="IceDash" type="Node2D" parent="."]
+script = ExtResource( 13 )
+actions = [ "Event" ]
+animation = "icedash_prepare"
+horizontal_velocity = 400.0
+jump_velocity = 400.0
+
+[node name="Snow Jet" type="Particles2D" parent="IceDash"]
+material = SubResource( 27 )
+position = Vector2( 2, 10 )
+z_index = -1
+emitting = false
+amount = 82
+lifetime = 0.75
+visibility_rect = Rect2( -800, -130, 1680, 220 )
+local_coords = false
+process_material = SubResource( 30 )
+texture = ExtResource( 28 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Snow Jet 2" type="Particles2D" parent="IceDash"]
+material = SubResource( 27 )
+position = Vector2( 2, 10 )
+z_index = -1
+emitting = false
+amount = 82
+lifetime = 0.75
+visibility_rect = Rect2( -800, -130, 1680, 220 )
+local_coords = false
+process_material = SubResource( 28 )
+texture = ExtResource( 28 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Land" type="Particles2D" parent="IceDash"]
+material = SubResource( 23 )
+position = Vector2( 0, 48 )
+z_index = 8
+z_as_relative = false
+emitting = false
+amount = 18
+lifetime = 0.75
+one_shot = true
+explosiveness = 0.93
+local_coords = false
+process_material = SubResource( 34 )
+texture = ExtResource( 28 )
+
+[node name="Jump" type="Particles2D" parent="IceDash"]
+material = SubResource( 23 )
+position = Vector2( 0, 49 )
+z_index = 8
+z_as_relative = false
+emitting = false
+amount = 18
+lifetime = 0.75
+one_shot = true
+explosiveness = 0.93
+local_coords = false
+process_material = SubResource( 37 )
+texture = ExtResource( 28 )
+
+[node name="dash" type="AudioStreamPlayer2D" parent="IceDash"]
+stream = ExtResource( 31 )
+volume_db = -0.009
+max_distance = 600.0
+bus = "SFX"
+
+[node name="uppercut" type="AudioStreamPlayer2D" parent="IceDash"]
+stream = ExtResource( 27 )
+volume_db = -0.009
+pitch_scale = 1.29
+max_distance = 600.0
+bus = "SFX"
+
+[node name="land" type="AudioStreamPlayer2D" parent="IceDash"]
+stream = ExtResource( 30 )
+volume_db = -0.009
+pitch_scale = 0.44
+max_distance = 600.0
+bus = "SFX"
+
+[node name="IceJump" type="Node2D" parent="."]
+script = ExtResource( 19 )
+__meta__ = {
+"_editor_description_": ""
+}
+actions = [ "Event" ]
+animation = "icejump_prepare"
+horizontal_velocity = 420.0
+jump_velocity = 440.0
+small_snow_wave = ExtResource( 20 )
+quake = ExtResource( 18 )
+
+[node name="Jump" type="Particles2D" parent="IceJump"]
+material = SubResource( 23 )
+position = Vector2( 0, 57 )
+z_index = 8
+z_as_relative = false
+emitting = false
+amount = 18
+lifetime = 0.75
+one_shot = true
+explosiveness = 0.93
+local_coords = false
+process_material = SubResource( 35 )
+texture = ExtResource( 28 )
+
+[node name="Land" type="Particles2D" parent="IceJump"]
+material = SubResource( 23 )
+position = Vector2( 0, 48 )
+z_index = 8
+z_as_relative = false
+emitting = false
+amount = 18
+lifetime = 0.75
+one_shot = true
+explosiveness = 0.93
+local_coords = false
+process_material = SubResource( 34 )
+texture = ExtResource( 28 )
+
+[node name="jump" type="AudioStreamPlayer2D" parent="IceJump"]
+stream = ExtResource( 34 )
+volume_db = -0.009
+max_distance = 600.0
+bus = "SFX"
+
+[node name="land" type="AudioStreamPlayer2D" parent="IceJump"]
+stream = ExtResource( 30 )
+volume_db = -0.009
+pitch_scale = 0.44
+max_distance = 600.0
+bus = "SFX"
+
+[node name="quake_prepare" type="AudioStreamPlayer2D" parent="IceJump"]
+stream = ExtResource( 33 )
+volume_db = -0.009
+max_distance = 600.0
+bus = "SFX"
+
+[node name="quake" type="AudioStreamPlayer2D" parent="IceJump"]
+stream = ExtResource( 32 )
+volume_db = -0.009
+max_distance = 600.0
+bus = "SFX"
+
+[node name="IceStomp" type="Node2D" parent="."]
+script = ExtResource( 17 )
+__meta__ = {
+"_editor_description_": ""
+}
+actions = [ "Event" ]
+animation = "icestomp_prepare"
+horizontal_velocity = 420.0
+jump_velocity = 0.0
+snow_wave = ExtResource( 20 )
+
+[node name="stomp" type="AudioStreamPlayer2D" parent="IceStomp"]
+stream = ExtResource( 36 )
+volume_db = -0.009
+max_distance = 600.0
+bus = "SFX"
+
+[node name="Land" type="Particles2D" parent="IceStomp"]
+material = SubResource( 23 )
+position = Vector2( 0, 48 )
+z_index = 8
+z_as_relative = false
+emitting = false
+amount = 18
+lifetime = 0.75
+one_shot = true
+explosiveness = 0.93
+local_coords = false
+process_material = SubResource( 34 )
+texture = ExtResource( 28 )
+
+[node name="IceSpikes" type="Node2D" parent="."]
+script = ExtResource( 21 )
+__meta__ = {
+"_editor_description_": ""
+}
+actions = [ "Event" ]
+animation = "icespikes_prepare"
+horizontal_velocity = 420.0
+jump_velocity = 0.0
+spikes = ExtResource( 22 )
+
+[node name="arms" type="AudioStreamPlayer2D" parent="IceSpikes"]
+stream = ExtResource( 35 )
+volume_db = -0.009
+pitch_scale = 1.18
+max_distance = 600.0
+bus = "SFX"
+
+[node name="IceStorm" type="Node2D" parent="."]
+script = ExtResource( 23 )
+__meta__ = {
+"_editor_description_": ""
+}
+actions = [ "Event" ]
+animation = "prepare_desperate"
+horizontal_velocity = 420.0
+jump_velocity = 0.0
+desperation_attack = true
+
+[node name="IceShooter" type="Node2D" parent="IceStorm"]
+script = ExtResource( 24 )
+shards = ExtResource( 25 )
+interval_between_shots = 1.5
+shot_creation_height = -160
+
+[node name="actual_snow" type="Particles2D" parent="IceStorm/IceShooter"]
+material = SubResource( 38 )
+position = Vector2( -4, -239 )
+z_index = 3
+emitting = false
+amount = 120
+lifetime = 10.0
+local_coords = false
+process_material = SubResource( 39 )
+texture = ExtResource( 39 )
+
+[node name="Snow" type="Particles2D" parent="IceStorm"]
+material = SubResource( 31 )
+position = Vector2( 1, 12 )
+z_index = -1
+emitting = false
+amount = 128
+lifetime = 1.5
+randomness = 1.0
+visibility_rect = Rect2( -800, -130, 1680, 220 )
+local_coords = false
+process_material = SubResource( 33 )
+texture = ExtResource( 29 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Ice Shards" type="Particles2D" parent="IceStorm"]
+z_index = -2
+emitting = false
+amount = 22
+lifetime = 0.7
+process_material = SubResource( 22 )
+texture = ExtResource( 26 )
+
+[node name="prepare" type="AudioStreamPlayer2D" parent="IceStorm"]
+stream = ExtResource( 37 )
+volume_db = -0.009
+max_distance = 600.0
+bus = "SFX"
+
+[node name="storm" type="AudioStreamPlayer2D" parent="IceStorm"]
+stream = ExtResource( 38 )
+volume_db = -0.009
+max_distance = 600.0
+bus = "SFX"
+
+[node name="scream" type="AudioStreamPlayer2D" parent="IceStorm"]
+stream = ExtResource( 40 )
+volume_db = -0.009
+max_distance = 600.0
+bus = "SFX"
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 6 )
+invulnerability_time = 0.1
+max_flash_time = 0.35
+weakenesses = [ "ThunderDancer" ]
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+pause_mode = 2
+stream = ExtResource( 3 )
+max_distance = 600.0
+bus = "SFX"
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 5 )
+damage = 6.0
+
+[node name="BossDeath" parent="." instance=ExtResource( 9 )]
+position = Vector2( 0, 0 )
+death_animation = "death"
+collectible = "yeti_weapon"
+
+[node name="Explosion Particles" parent="BossDeath" index="0"]
+amount = 24
+process_material = ExtResource( 7 )
+
+[node name="Smoke Particles" parent="BossDeath" index="1"]
+process_material = ExtResource( 8 )
+
+[node name="Remains" parent="BossDeath" index="4"]
+process_material = SubResource( 53 )
+
+[node name="BossStun" type="Node2D" parent="."]
+script = ExtResource( 11 )
+conflicting_moves = [ "BossDeath" ]
+actions = [ "Event" ]
+animation = "death"
+horizontal_velocity = 120.0
+jump_velocity = 150.0
+
+[node name="AchievementHandler" type="Node" parent="."]
+script = ExtResource( 41 )
+_desperation = NodePath("../IceStorm")
+no_damage = ExtResource( 42 )
+buster_only = ExtResource( 43 )
+naked = ExtResource( 44 )
+
+[connection signal="ability_start" from="IceStorm" to="BossStun" method="deactivate"]
+[connection signal="ready_for_stun" from="IceStorm" to="BossStun" method="reactivate"]
+
+[editable path="BossDeath"]

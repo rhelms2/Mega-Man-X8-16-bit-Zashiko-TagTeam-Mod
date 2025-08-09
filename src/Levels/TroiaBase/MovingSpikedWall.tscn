@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/Levels/TroiaBase/spikes.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Levels/TroiaBase/MovingSpikedWall.gd" type="Script" id=2]
+[ext_resource path="res://src/Levels/TroiaBase/TroiaBaseTileset.tsx" type="TileSet" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 245.5, 10 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 48, 84 )
+
+[node name="MovingSpikedWall" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="activator" type="Area2D" parent="."]
+position = Vector2( 257, -118 )
+collision_layer = 0
+collision_mask = 2
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="activator"]
+position = Vector2( -85.5, 112 )
+rotation = -0.579952
+shape = SubResource( 1 )
+
+[node name="SpikedWall" type="Node2D" parent="."]
+
+[node name="spikes" parent="SpikedWall" instance=ExtResource( 1 )]
+position = Vector2( 0, -37 )
+rotation = 1.5708
+
+[node name="spikes2" parent="SpikedWall" instance=ExtResource( 1 )]
+position = Vector2( 0, 42 )
+rotation = 1.5708
+
+[node name="rigidBody2D" type="RigidBody2D" parent="SpikedWall"]
+collision_mask = 0
+mode = 3
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="SpikedWall/rigidBody2D"]
+position = Vector2( -45, 5 )
+shape = SubResource( 2 )
+
+[node name="tileMap" type="TileMap" parent="SpikedWall"]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -262150, 1073742191, 0, -262149, 1073742139, 0, -262148, 1610613052, 0, -262147, 1610613052, 0, -262146, 1610613052, 0, -262145, 1610613051, 0, -327680, 1610613103, 0, -196614, 1073742128, 0, -196613, 1610613041, 0, -196612, 1610613041, 0, -196611, 1610613041, 0, -196610, 1610613041, 0, -196609, 1610613041, 0, -262144, 1610613071, 0, -131078, 1073742128, 0, -131077, 1610613041, 0, -131076, 1610613041, 0, -131075, 1610613041, 0, -131074, 1610613041, 0, -131073, 1610613041, 0, -196608, 1610613071, 0, -65542, 1073742128, 0, -65541, 1610613041, 0, -65540, 1610613041, 0, -65539, 1610613041, 0, -65538, 1610613041, 0, -65537, 1610613041, 0, -131072, 1610613071, 0, -6, 1073742128, 0, -5, 1610613041, 0, -4, 1610613041, 0, -3, 1610613041, 0, -2, 1610613041, 0, -1, 1610613041, 0, -65536, 1610613071, 0, 65530, 335, 0, 65531, 1610613041, 0, 65532, 1610613041, 0, 65533, 1610613041, 0, 65534, 1610613041, 0, 65535, 1610613041, 0, 0, 1610613071, 0, 131066, 304, 0, 131067, 1610613041, 0, 131068, 1610613041, 0, 131069, 1610613041, 0, 131070, 1610613041, 0, 131071, 1610613041, 0, 65536, 1610613071, 0, 196602, 304, 0, 196603, 1610613041, 0, 196604, 1610613041, 0, 196605, 1610613041, 0, 196606, 1610613041, 0, 196607, 1610613041, 0, 131072, 1610613071, 0, 262138, 304, 0, 262139, 1610613041, 0, 262140, 1610613041, 0, 262141, 1610613041, 0, 262142, 1610613041, 0, 262143, 1610613041, 0, 196608, 1610613071, 0, 327674, 304, 0, 327675, 1610613041, 0, 327676, 1610613041, 0, 327677, 1610613041, 0, 327678, 1610613041, 0, 327679, 1610613041, 0, 262144, 1610613071, 0, 393210, 367, 0, 393211, 315, 0, 393212, 536871228, 0, 393213, 536871228, 0, 393214, 536871228, 0, 393215, 536871227, 0, 327680, 536871279, 0 )
+
+[connection signal="body_entered" from="activator" to="." method="_on_activator_body_entered"]

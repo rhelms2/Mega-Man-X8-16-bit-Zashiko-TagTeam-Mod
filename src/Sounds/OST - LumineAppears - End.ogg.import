@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - LumineAppears - End.ogg-92bd99fcefd46d752591556c661fc9ef.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - LumineAppears - End.ogg"
+dest_files=[ "res://.import/OST - LumineAppears - End.ogg-92bd99fcefd46d752591556c661fc9ef.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

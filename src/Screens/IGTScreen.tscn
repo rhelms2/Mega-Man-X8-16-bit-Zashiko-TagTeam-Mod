@@ -1,0 +1,69 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/Fonts/X8bitmapfont.fnt" type="BitmapFont" id=1]
+[ext_resource path="res://src/Fonts/bossFont.tres" type="BitmapFont" id=2]
+[ext_resource path="res://IGTScreen.gd" type="Script" id=3]
+[ext_resource path="res://src/Title/title_bg.png" type="Texture" id=4]
+
+[node name="IGTScreen" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="times" type="Label" parent="."]
+margin_left = 30.0
+margin_top = 21.0
+margin_right = 283.0
+margin_bottom = 208.0
+custom_colors/font_color = Color( 0.752941, 0.796078, 0.905882, 1 )
+custom_colors/font_color_shadow = Color( 0.270588, 0.270588, 0.270588, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "00:00:00"
+align = 2
+autowrap = true
+
+[node name="names" type="Label" parent="."]
+margin_left = 114.0
+margin_top = 21.0
+margin_right = 367.0
+margin_bottom = 210.0
+custom_colors/font_color = Color( 0.611765, 0.709804, 0.94902, 1 )
+custom_colors/font_color_shadow = Color( 0.270588, 0.270588, 0.270588, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Noah's Park:"
+autowrap = true
+
+[node name="totaltime" type="Label" parent="."]
+margin_left = 72.0
+margin_top = 204.0
+margin_right = 325.0
+margin_bottom = 224.0
+custom_colors/font_color_shadow = Color( 0.270588, 0.270588, 0.270588, 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "Total Playtime: 00:00:00"
+align = 1
+autowrap = true
+
+[node name="title" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 135.0
+margin_top = 17.0
+margin_right = 263.0
+margin_bottom = 23.0
+custom_fonts/font = ExtResource( 2 )
+text = "- Clear time -"
+align = 1
+uppercase = true
+
+[node name="bg" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 199, 112 )
+z_index = -1000
+texture = ExtResource( 4 )
+
+[node name="fade" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 0 )
+position = Vector2( 198, 112 )
+z_index = 2
+texture = ExtResource( 4 )

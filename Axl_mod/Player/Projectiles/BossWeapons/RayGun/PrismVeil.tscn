@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=1]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/RayGun/PrismVeil.gd" type="Script" id=3]
+[ext_resource path="res://src/Sounds/MEDIUM_SHOT2.wav" type="AudioStream" id=6]
+[ext_resource path="res://src/Effects/Materials/buster_icarus_particles.tres" type="Material" id=7]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/RayGun/PrismVeil.tres" type="SpriteFrames" id=13]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 3 )
+
+[node name="RayGun" type="KinematicBody2D" groups=["Player Projectile"]]
+z_index = 6
+collision_layer = 4
+collision_mask = 0
+script = ExtResource( 3 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 8, 0 )
+z_index = 32
+frames = ExtResource( 13 )
+animation = "line"
+playing = true
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 8, 0 )
+shape = SubResource( 1 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+position = Vector2( 8, 2.08616e-07 )
+scale = Vector2( 0.8, 0.3 )
+
+[node name="particles2D" type="Particles2D" parent="."]
+visible = false
+position = Vector2( 10, 0 )
+amount = 4
+lifetime = 0.54
+local_coords = false
+process_material = ExtResource( 7 )
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
+visible = false
+stream = ExtResource( 6 )
+volume_db = 1.378
+pitch_scale = 1.08
+bus = "SFX"
+
+[node name="disabler" type="Node" parent="."]
+script = ExtResource( 1 )
+fade_out = true
+delete_after_fade = true

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OpticShield - Laser Hit.ogg-85359ec8152a86b1b47fc1c3b315dcf8.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OpticShield - Laser Hit.ogg"
+dest_files=[ "res://.import/OpticShield - Laser Hit.ogg-85359ec8152a86b1b47fc1c3b315dcf8.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

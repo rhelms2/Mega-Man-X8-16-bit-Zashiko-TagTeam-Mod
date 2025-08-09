@@ -1,0 +1,276 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://src/Actors/Bosses/Lumine/RotatingLaser.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/MeleeEnemyAttack.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Bosses/Lumine/heaven_ray.tres" type="SpriteFrames" id=3]
+
+[sub_resource type="RectangleShape2D" id=25]
+extents = Vector2( 10, 0.5 )
+
+[node name="RotatingLaser" type="Node2D"]
+z_index = 3
+script = ExtResource( 1 )
+
+[node name="laser" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -154 )
+rotation = 1.5708
+scale = Vector2( 20, 1 )
+frames = ExtResource( 3 )
+animation = "ready"
+frame = 8
+speed_scale = 2.0
+playing = true
+offset = Vector2( 16, 0 )
+
+[node name="damage" type="Node2D" parent="laser"]
+script = ExtResource( 2 )
+active = false
+damage = 10.0
+active_duration = 0.032
+owner_character = NodePath("../..")
+
+[node name="area2D" type="Area2D" parent="laser/damage"]
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="laser/damage/area2D"]
+position = Vector2( 9.99496, 0 )
+shape = SubResource( 25 )
+
+[node name="laser2" type="AnimatedSprite" parent="."]
+position = Vector2( -52, -154 )
+rotation = 1.5708
+scale = Vector2( 20, 1 )
+frames = ExtResource( 3 )
+animation = "ready"
+frame = 8
+speed_scale = 2.0
+playing = true
+offset = Vector2( 16, 0 )
+
+[node name="damage" type="Node2D" parent="laser2"]
+script = ExtResource( 2 )
+active = false
+damage = 10.0
+active_duration = 0.032
+owner_character = NodePath("../..")
+
+[node name="area2D" type="Area2D" parent="laser2/damage"]
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="laser2/damage/area2D"]
+position = Vector2( 9.99496, 0 )
+shape = SubResource( 25 )
+
+[node name="laser3" type="AnimatedSprite" parent="."]
+position = Vector2( -104, -154 )
+rotation = 1.5708
+scale = Vector2( 20, 1 )
+frames = ExtResource( 3 )
+animation = "ready"
+frame = 8
+speed_scale = 2.0
+playing = true
+offset = Vector2( 16, 0 )
+
+[node name="damage" type="Node2D" parent="laser3"]
+script = ExtResource( 2 )
+active = false
+damage = 10.0
+active_duration = 0.032
+owner_character = NodePath("../..")
+
+[node name="area2D" type="Area2D" parent="laser3/damage"]
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="laser3/damage/area2D"]
+position = Vector2( 9.99496, 0 )
+shape = SubResource( 25 )
+
+[node name="laser7" type="AnimatedSprite" parent="."]
+position = Vector2( -156, -154 )
+rotation = 1.5708
+scale = Vector2( 20, 1 )
+frames = ExtResource( 3 )
+animation = "ready"
+frame = 8
+speed_scale = 2.0
+playing = true
+offset = Vector2( 16, 0 )
+
+[node name="damage" type="Node2D" parent="laser7"]
+script = ExtResource( 2 )
+active = false
+damage = 10.0
+active_duration = 0.032
+owner_character = NodePath("../..")
+
+[node name="area2D" type="Area2D" parent="laser7/damage"]
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="laser7/damage/area2D"]
+position = Vector2( 9.99496, 0 )
+shape = SubResource( 25 )
+
+[node name="laser10" type="AnimatedSprite" parent="."]
+position = Vector2( -208, -154 )
+rotation = 1.5708
+scale = Vector2( 20, 1 )
+frames = ExtResource( 3 )
+animation = "ready"
+frame = 8
+speed_scale = 2.0
+playing = true
+offset = Vector2( 16, 0 )
+
+[node name="damage" type="Node2D" parent="laser10"]
+script = ExtResource( 2 )
+active = false
+damage = 10.0
+active_duration = 0.032
+owner_character = NodePath("../..")
+
+[node name="area2D" type="Area2D" parent="laser10/damage"]
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="laser10/damage/area2D"]
+position = Vector2( 9.99496, 0 )
+shape = SubResource( 25 )
+
+[node name="laser11" type="AnimatedSprite" parent="."]
+position = Vector2( -260, -154 )
+rotation = 1.5708
+scale = Vector2( 20, 1 )
+frames = ExtResource( 3 )
+animation = "ready"
+frame = 8
+speed_scale = 2.0
+playing = true
+offset = Vector2( 16, 0 )
+
+[node name="damage" type="Node2D" parent="laser11"]
+script = ExtResource( 2 )
+active = false
+damage = 10.0
+active_duration = 0.032
+owner_character = NodePath("../..")
+
+[node name="area2D" type="Area2D" parent="laser11/damage"]
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="laser11/damage/area2D"]
+position = Vector2( 9.99496, 0 )
+shape = SubResource( 25 )
+
+[node name="laser4" type="AnimatedSprite" parent="."]
+position = Vector2( 52, -154 )
+rotation = 1.5708
+scale = Vector2( 20, 1 )
+frames = ExtResource( 3 )
+animation = "ready"
+frame = 8
+speed_scale = 2.0
+playing = true
+offset = Vector2( 16, 0 )
+
+[node name="damage" type="Node2D" parent="laser4"]
+script = ExtResource( 2 )
+active = false
+damage = 10.0
+active_duration = 0.032
+owner_character = NodePath("../..")
+
+[node name="area2D" type="Area2D" parent="laser4/damage"]
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="laser4/damage/area2D"]
+position = Vector2( 9.99496, 0 )
+shape = SubResource( 25 )
+
+[node name="laser5" type="AnimatedSprite" parent="."]
+position = Vector2( 104, -154 )
+rotation = 1.5708
+scale = Vector2( 20, 1 )
+frames = ExtResource( 3 )
+animation = "ready"
+frame = 8
+speed_scale = 2.0
+playing = true
+offset = Vector2( 16, 0 )
+
+[node name="damage" type="Node2D" parent="laser5"]
+script = ExtResource( 2 )
+active = false
+damage = 10.0
+active_duration = 0.032
+owner_character = NodePath("../..")
+
+[node name="area2D" type="Area2D" parent="laser5/damage"]
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="laser5/damage/area2D"]
+position = Vector2( 9.99496, 0 )
+shape = SubResource( 25 )
+
+[node name="laser6" type="AnimatedSprite" parent="."]
+position = Vector2( 156, -154 )
+rotation = 1.5708
+scale = Vector2( 20, 1 )
+frames = ExtResource( 3 )
+animation = "ready"
+frame = 8
+speed_scale = 2.0
+playing = true
+offset = Vector2( 16, 0 )
+
+[node name="damage" type="Node2D" parent="laser6"]
+script = ExtResource( 2 )
+active = false
+damage = 10.0
+active_duration = 0.032
+owner_character = NodePath("../..")
+
+[node name="area2D" type="Area2D" parent="laser6/damage"]
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="laser6/damage/area2D"]
+position = Vector2( 9.99496, 0 )
+shape = SubResource( 25 )
+
+[node name="laser8" type="AnimatedSprite" parent="."]
+position = Vector2( 208, -154 )
+rotation = 1.5708
+scale = Vector2( 20, 1 )
+frames = ExtResource( 3 )
+animation = "ready"
+frame = 8
+speed_scale = 2.0
+playing = true
+offset = Vector2( 16, 0 )
+
+[node name="damage" type="Node2D" parent="laser8"]
+script = ExtResource( 2 )
+active = false
+damage = 10.0
+active_duration = 0.032
+owner_character = NodePath("../..")
+
+[node name="area2D" type="Area2D" parent="laser8/damage"]
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="laser8/damage/area2D"]
+position = Vector2( 9.99496, 0 )
+shape = SubResource( 25 )
+
+[node name="laser9" type="AnimatedSprite" parent="."]
+position = Vector2( 260, -154 )
+rotation = 1.5708
+scale = Vector2( 20, 1 )
+frames = ExtResource( 3 )
+animation = "ready"
+frame = 8
+speed_scale = 2.0
+playing = true
+offset = Vector2( 16, 0 )
+
+[node name="damage" type="Node2D" parent="laser9"]
+script = ExtResource( 2 )
+active = false
+damage = 10.0
+active_duration = 0.032
+owner_character = NodePath("../..")
+
+[node name="area2D" type="Area2D" parent="laser9/damage"]
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="laser9/damage/area2D"]
+position = Vector2( 9.99496, 0 )
+shape = SubResource( 25 )

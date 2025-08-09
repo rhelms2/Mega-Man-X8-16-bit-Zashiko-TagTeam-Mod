@@ -1,0 +1,42 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://src/Actors/Enemies/SimpleProjectile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/dark_wave.png" type="Texture" id=2]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/DarkWave.gd" type="Script" id=3]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 48, 80 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 2 )
+region = Rect2( 48, 0, 48, 80 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 2 )
+region = Rect2( 96, 0, 48, 80 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
+"loop": true,
+"name": "default",
+"speed": 28.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 7, 23 )
+
+[node name="MantisWave" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+damage = 3.0
+speed = 240.0
+
+[node name="animatedSprite" parent="." index="0"]
+z_index = -5
+frames = SubResource( 6 )
+frame = 1
+
+[node name="collisionShape2D" parent="area2D" index="0"]
+position = Vector2( 1, 0 )
+shape = SubResource( 7 )

@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/Objects/Pickups/ammo.tres" type="SpriteFrames" id=1]
+[ext_resource path="res://src/Objects/Pickups/AmmoPickup.gd" type="Script" id=2]
+[ext_resource path="res://src/Sounds/12 - MMX - X Life Gain.wav" type="AudioStream" id=3]
+[ext_resource path="res://src/Levels/Primrose/rotator.gd" type="Script" id=4]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 6, 6 )
+
+[node name="AmmoPickup" type="KinematicBody2D"]
+z_index = 10
+collision_layer = 0
+collision_mask = 66049
+script = ExtResource( 2 )
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 32
+collision_mask = 2
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+shape = SubResource( 1 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+pause_mode = 1
+frames = ExtResource( 1 )
+animation = "falling"
+playing = true
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+volume_db = -10.0
+max_distance = 600.0
+bus = "SFX"
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="rotator" type="Node" parent="."]
+script = ExtResource( 4 )
+
+[connection signal="body_entered" from="area2D" to="." method="_on_area2D_body_entered"]

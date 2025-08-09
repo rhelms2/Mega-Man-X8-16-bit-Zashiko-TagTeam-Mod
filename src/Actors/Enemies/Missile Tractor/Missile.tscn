@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/Actors/Enemies/SimpleProjectile.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Actors/Enemies/Sprites/missile.tres" type="SpriteFrames" id=2]
+[ext_resource path="res://src/Effects/Textures/small_smoke.png" type="Texture" id=3]
+[ext_resource path="res://src/Effects/Materials/SmallMissileTrail.tres" type="Material" id=4]
+
+[sub_resource type="CanvasItemMaterial" id=1]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 2
+particles_anim_loop = false
+
+[node name="Missile" instance=ExtResource( 1 )]
+speed = 240.0
+
+[node name="animatedSprite" parent="." index="0"]
+frames = ExtResource( 2 )
+flip_h = false
+
+[node name="particles2D2" type="Particles2D" parent="animatedSprite" index="0"]
+material = SubResource( 1 )
+position = Vector2( -6, 0 )
+z_index = -1
+amount = 4
+lifetime = 0.24
+local_coords = false
+process_material = ExtResource( 4 )
+texture = ExtResource( 3 )
+
+[node name="area2D" parent="." index="4"]
+collision_mask = 6

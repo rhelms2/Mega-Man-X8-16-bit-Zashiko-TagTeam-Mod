@@ -1,0 +1,190 @@
+[gd_scene load_steps=32 format=2]
+
+[ext_resource path="res://src/Effects/Textures/deathshock_base.png" type="Texture" id=1]
+[ext_resource path="res://src/Effects/Textures/deathshock.png" type="Texture" id=2]
+[ext_resource path="res://src/Objects/Spike.gd" type="Script" id=3]
+[ext_resource path="res://src/Levels/Inferno/DeathShock.gd" type="Script" id=4]
+[ext_resource path="res://src/Levels/Inferno/DeathShockLamp.gd" type="Script" id=5]
+[ext_resource path="res://addons/PaletteSwap/PaletteSwap.gdshader" type="Shader" id=6]
+
+[sub_resource type="ShaderMaterial" id=25]
+shader = ExtResource( 6 )
+shader_param/skip_first_row = true
+shader_param/use_palette_alpha = false
+shader_param/fps = 6.0
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 15, 16 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 15, 0, 15, 16 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 30, 0, 15, 16 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 45, 0, 15, 16 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 1 )
+region = Rect2( 60, 0, 15, 16 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 16, 15, 16 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 1 )
+region = Rect2( 15, 16, 15, 16 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 1 )
+region = Rect2( 30, 16, 15, 16 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 1 )
+region = Rect2( 45, 16, 15, 16 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 1 )
+region = Rect2( 60, 16, 15, 16 )
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ) ],
+"loop": true,
+"name": "default",
+"speed": 35.0
+} ]
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 2 )
+region = Rect2( 16, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 2 )
+region = Rect2( 32, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 2 )
+region = Rect2( 48, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 2 )
+region = Rect2( 64, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 16, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 2 )
+region = Rect2( 16, 16, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 2 )
+region = Rect2( 32, 16, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 2 )
+region = Rect2( 48, 16, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 2 )
+region = Rect2( 64, 16, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=22]
+animations = [ {
+"frames": [ SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
+"loop": true,
+"name": "default",
+"speed": 35.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=23]
+extents = Vector2( 2, 20.5 )
+
+[sub_resource type="RectangleShape2D" id=24]
+
+[node name="DeathShock" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="start" type="AnimatedSprite" parent="."]
+material = SubResource( 25 )
+frames = SubResource( 11 )
+playing = true
+
+[node name="shock" type="AnimatedSprite" parent="."]
+material = SubResource( 25 )
+position = Vector2( 0, 12 )
+z_index = 1
+frames = SubResource( 22 )
+frame = 1
+playing = true
+
+[node name="shock2" type="AnimatedSprite" parent="."]
+material = SubResource( 25 )
+position = Vector2( 0, 28 )
+z_index = 1
+frames = SubResource( 22 )
+frame = 1
+playing = true
+
+[node name="shock3" type="AnimatedSprite" parent="."]
+material = SubResource( 25 )
+position = Vector2( 0, 44 )
+z_index = 1
+frames = SubResource( 22 )
+frame = 1
+playing = true
+
+[node name="finish" type="AnimatedSprite" parent="."]
+material = SubResource( 25 )
+position = Vector2( 0, 57 )
+frames = SubResource( 11 )
+frame = 2
+playing = true
+flip_v = true
+
+[node name="death_plane" type="Area2D" parent="."]
+position = Vector2( 0, 19 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 3 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="death_plane"]
+position = Vector2( 0, 9.5 )
+shape = SubResource( 23 )
+
+[node name="Lamp" type="KinematicBody2D" parent="."]
+visible = false
+position = Vector2( 0, -2 )
+collision_layer = 2097152
+collision_mask = 0
+script = ExtResource( 5 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="Lamp"]
+shape = SubResource( 24 )
+
+[node name="Lamp2" type="KinematicBody2D" parent="."]
+visible = false
+position = Vector2( 0, 57 )
+collision_layer = 2097152
+collision_mask = 0
+script = ExtResource( 5 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="Lamp2"]
+shape = SubResource( 24 )
+
+[connection signal="body_entered" from="death_plane" to="death_plane" method="_on_area2D_body_entered"]
+[connection signal="body_exited" from="death_plane" to="death_plane" method="_on_area2D_body_exited"]
+[connection signal="disabled" from="Lamp" to="." method="_on_Lamp_disabled"]
+[connection signal="disabled" from="Lamp2" to="." method="_on_Lamp_disabled"]

@@ -1,0 +1,20 @@
+[gd_resource type="ParticlesMaterial" load_steps=3 format=2]
+
+[ext_resource path="res://pisca_gradient.tres" type="Gradient" id=1]
+
+[sub_resource type="GradientTexture" id=16]
+gradient = ExtResource( 1 )
+
+[resource]
+emission_shape = 1
+emission_sphere_radius = 8.0
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+gravity = Vector3( 0, 800, 0 )
+initial_velocity = 400.0
+initial_velocity_random = 0.69
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+color_ramp = SubResource( 16 )
+anim_offset = 1.0
+anim_offset_random = 1.0

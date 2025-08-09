@@ -1,0 +1,56 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/Levels/PitchBlack/SearchLight.gd" type="Script" id=2]
+[ext_resource path="res://src/Levels/PitchBlack/light.png" type="Texture" id=3]
+[ext_resource path="res://src/Objects/Spotlight/spotlight.png" type="Texture" id=4]
+
+[sub_resource type="Curve2D" id=6]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 76.0001, -8, 0, 0, 0, 0, 76.0001, 66, 0, 0, 0, 0, 76.0001, -8, 0, 0, 0, 0, 76.0001, -82, 0, 0, 0, 0, 76.0001, -8 )
+}
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 30.0
+
+[node name="SearchLight" type="Node2D"]
+script = ExtResource( 2 )
+debug = true
+
+[node name="Spotlight1" type="Path2D" parent="."]
+position = Vector2( 571, 515 )
+curve = SubResource( 6 )
+
+[node name="pathFollow2D" type="PathFollow2D" parent="Spotlight1"]
+position = Vector2( 76.0001, -8 )
+rotate = false
+
+[node name="playerDetector" type="Area2D" parent="Spotlight1/pathFollow2D"]
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="Spotlight1/pathFollow2D/playerDetector"]
+shape = SubResource( 5 )
+
+[node name="spotLight" type="Light2D" parent="Spotlight1/pathFollow2D"]
+z_index = 277
+texture = ExtResource( 4 )
+range_layer_min = -512
+
+[node name="sublight" type="Light2D" parent="Spotlight1/pathFollow2D/spotLight"]
+scale = Vector2( 2, 1 )
+z_index = 277
+texture = ExtResource( 3 )
+energy = 0.5
+range_layer_min = -512
+
+[node name="visibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+visible = false
+position = Vector2( 649, 503.5 )
+scale = Vector2( 23.1, 11.95 )
+pause_particles = false
+process_parent = true
+physics_process_parent = true
+
+[connection signal="body_entered" from="Spotlight1/pathFollow2D/playerDetector" to="." method="_on_playerDetector_body_entered"]
+[connection signal="body_exited" from="Spotlight1/pathFollow2D/playerDetector" to="." method="_on_playerDetector_body_exited"]

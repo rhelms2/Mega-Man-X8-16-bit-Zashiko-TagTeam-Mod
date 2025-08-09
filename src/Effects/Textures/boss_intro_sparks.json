@@ -1,0 +1,140 @@
+{ "frames": [
+   {
+    "filename": "boss_intro_sparks 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 394, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 394, "h": 224 },
+    "sourceSize": { "w": 394, "h": 224 },
+    "duration": 28
+   },
+   {
+    "filename": "boss_intro_sparks 1.ase",
+    "frame": { "x": 394, "y": 0, "w": 394, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 394, "h": 224 },
+    "sourceSize": { "w": 394, "h": 224 },
+    "duration": 28
+   },
+   {
+    "filename": "boss_intro_sparks 2.ase",
+    "frame": { "x": 788, "y": 0, "w": 394, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 394, "h": 224 },
+    "sourceSize": { "w": 394, "h": 224 },
+    "duration": 28
+   },
+   {
+    "filename": "boss_intro_sparks 3.ase",
+    "frame": { "x": 1182, "y": 0, "w": 394, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 394, "h": 224 },
+    "sourceSize": { "w": 394, "h": 224 },
+    "duration": 28
+   },
+   {
+    "filename": "boss_intro_sparks 4.ase",
+    "frame": { "x": 0, "y": 224, "w": 394, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 394, "h": 224 },
+    "sourceSize": { "w": 394, "h": 224 },
+    "duration": 28
+   },
+   {
+    "filename": "boss_intro_sparks 5.ase",
+    "frame": { "x": 394, "y": 224, "w": 394, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 394, "h": 224 },
+    "sourceSize": { "w": 394, "h": 224 },
+    "duration": 28
+   },
+   {
+    "filename": "boss_intro_sparks 6.ase",
+    "frame": { "x": 788, "y": 224, "w": 394, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 394, "h": 224 },
+    "sourceSize": { "w": 394, "h": 224 },
+    "duration": 28
+   },
+   {
+    "filename": "boss_intro_sparks 7.ase",
+    "frame": { "x": 1182, "y": 224, "w": 394, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 394, "h": 224 },
+    "sourceSize": { "w": 394, "h": 224 },
+    "duration": 28
+   },
+   {
+    "filename": "boss_intro_sparks 8.ase",
+    "frame": { "x": 0, "y": 448, "w": 394, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 394, "h": 224 },
+    "sourceSize": { "w": 394, "h": 224 },
+    "duration": 28
+   },
+   {
+    "filename": "boss_intro_sparks 9.ase",
+    "frame": { "x": 394, "y": 448, "w": 394, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 394, "h": 224 },
+    "sourceSize": { "w": 394, "h": 224 },
+    "duration": 28
+   },
+   {
+    "filename": "boss_intro_sparks 10.ase",
+    "frame": { "x": 788, "y": 448, "w": 394, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 394, "h": 224 },
+    "sourceSize": { "w": 394, "h": 224 },
+    "duration": 28
+   },
+   {
+    "filename": "boss_intro_sparks 11.ase",
+    "frame": { "x": 1182, "y": 448, "w": 394, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 394, "h": 224 },
+    "sourceSize": { "w": 394, "h": 224 },
+    "duration": 28
+   },
+   {
+    "filename": "boss_intro_sparks 12.ase",
+    "frame": { "x": 0, "y": 672, "w": 394, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 394, "h": 224 },
+    "sourceSize": { "w": 394, "h": 224 },
+    "duration": 28
+   },
+   {
+    "filename": "boss_intro_sparks 13.ase",
+    "frame": { "x": 394, "y": 672, "w": 394, "h": 224 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 394, "h": 224 },
+    "sourceSize": { "w": 394, "h": 224 },
+    "duration": 28
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3-rc6-x64",
+  "image": "boss_intro_sparks.png",
+  "format": "RGBA8888",
+  "size": { "w": 1576, "h": 896 },
+  "scale": "1",
+  "frameTags": [
+   { "name": " tag", "from": 0, "to": 13, "direction": "forward", "color": "#000000ff" }
+  ]
+ }
+}

@@ -1,0 +1,102 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://src/Effects/Materials/GigaCrashExplosionParticles.tres" type="Material" id=1]
+[ext_resource path="res://src/Effects/Materials/BossSmokeParticles.tres" type="Material" id=2]
+[ext_resource path="res://src/Effects/Textures/boss_intro_bg.res" type="SpriteFrames" id=3]
+[ext_resource path="res://src/Effects/Textures/big_explosion.res" type="SpriteFrames" id=4]
+[ext_resource path="res://src/Actors/Player/BossWeapons/GigaCrash/GigaCrashExplosion.gd" type="Script" id=5]
+[ext_resource path="res://src/Sounds/FX - Giga Crash Shot.ogg" type="AudioStream" id=6]
+[ext_resource path="res://src/Title/title_bg.png" type="Texture" id=7]
+[ext_resource path="res://src/Effects/Textures/smoke.png" type="Texture" id=8]
+[ext_resource path="res://src/Effects/Textures/explosion.png" type="Texture" id=9]
+[ext_resource path="res://src/Levels/PitchBlack/light.png" type="Texture" id=10]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=11]
+[ext_resource path="res://src/Levels/PitchBlack/X_Lightsource.gd" type="Script" id=12]
+
+[sub_resource type="CanvasItemMaterial" id=8]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 4
+particles_anim_loop = false
+
+[sub_resource type="CanvasItemMaterial" id=20]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 3
+particles_anim_loop = true
+
+[sub_resource type="RectangleShape2D" id=21]
+extents = Vector2( 199, 112 )
+
+[node name="GigaCrashCharged" type="KinematicBody2D" groups=["Player Projectile"]]
+z_index = 8
+z_as_relative = false
+collision_layer = 4
+collision_mask = 0
+script = ExtResource( 5 )
+damage = 55.0
+damage_to_bosses = 55.0
+damage_to_weakness = 55.0
+break_guards = true
+duration = 0.85
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+visible = false
+frames = ExtResource( 4 )
+animation = "intro"
+frame = 7
+playing = true
+flip_h = true
+
+[node name="explosionParticles" type="Particles2D" parent="."]
+material = SubResource( 8 )
+z_index = 12
+amount = 80
+lifetime = 2.0
+explosiveness = 0.06
+local_coords = false
+process_material = ExtResource( 1 )
+texture = ExtResource( 9 )
+
+[node name="smoke" type="Particles2D" parent="."]
+visible = false
+material = SubResource( 20 )
+z_index = 6
+amount = 25
+lifetime = 0.75
+process_material = ExtResource( 2 )
+texture = ExtResource( 8 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+z_index = -1
+shape = SubResource( 21 )
+
+[node name="sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 11 )
+
+[node name="light" type="Light2D" parent="."]
+scale = Vector2( 1.5, 1 )
+z_index = 277
+texture = ExtResource( 10 )
+energy = 0.35
+range_layer_min = -2
+range_layer_max = -1
+script = ExtResource( 12 )
+
+[node name="black" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+z_index = -1000
+texture = ExtResource( 7 )
+
+[node name="red_bg" type="AnimatedSprite" parent="."]
+z_index = 10
+frames = ExtResource( 3 )
+animation = " tag"
+frame = 13
+playing = true

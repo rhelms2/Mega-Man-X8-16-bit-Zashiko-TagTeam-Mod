@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Sunflower - LaserLoop.ogg-bc6227e1421b48da1c5707ebdc3dac66.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/Sunflower - LaserLoop.ogg"
+dest_files=[ "res://.import/Sunflower - LaserLoop.ogg-bc6227e1421b48da1c5707ebdc3dac66.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

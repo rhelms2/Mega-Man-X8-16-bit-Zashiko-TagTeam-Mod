@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/Objects/Box/BreakBox.tscn" type="PackedScene" id=1]
+
+[node name="BreakBox" type="Node2D" groups=["Enemies"]]
+z_index = 1
+
+[node name="Box2" parent="." instance=ExtResource( 1 )]

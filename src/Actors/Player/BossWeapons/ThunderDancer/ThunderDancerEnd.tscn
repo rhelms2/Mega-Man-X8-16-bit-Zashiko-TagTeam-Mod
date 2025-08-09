@@ -1,0 +1,70 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Player/BossWeapons/ThunderDancer/thunderline.png" type="Texture" id=2]
+[ext_resource path="res://src/Actors/Player/BossWeapons/ThunderDancer/thunderhit.png" type="Texture" id=3]
+[ext_resource path="res://src/Actors/Player/BossWeapons/ThunderDancer/ThunderDancerEnd.gd" type="Script" id=4]
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 3 )
+region = Rect2( 32, 0, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 3 )
+region = Rect2( 0, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 3 )
+region = Rect2( 32, 32, 32, 32 )
+
+[sub_resource type="SpriteFrames" id=26]
+animations = [ {
+"frames": [ SubResource( 27 ), SubResource( 28 ), SubResource( 28 ), SubResource( 29 ), SubResource( 29 ), SubResource( 30 ), SubResource( 30 ), null ],
+"loop": false,
+"name": "default",
+"speed": 42.0
+} ]
+
+[sub_resource type="CircleShape2D" id=31]
+radius = 21.0238
+
+[node name="ThunderDancerEnd" type="KinematicBody2D" groups=["Player Projectile"]]
+z_index = 8
+collision_layer = 4
+collision_mask = 0
+script = ExtResource( 4 )
+damage = 2.5
+damage_to_bosses = 1.5
+damage_to_weakness = 15.0
+pop_in_time = 0.0
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+visible = false
+z_index = 2
+frames = SubResource( 26 )
+frame = 7
+playing = true
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 31 )
+
+[node name="line" type="Line2D" parent="."]
+visible = false
+points = PoolVector2Array( 0, 0, 32, 0 )
+width = 16.0
+default_color = Color( 1, 1, 1, 1 )
+texture = ExtResource( 2 )
+texture_mode = 1
+
+[node name="disabler" type="Node" parent="."]
+script = ExtResource( 1 )
+fade_out = true
+delete_after_fade = true
+undo_on_rotation_end = false

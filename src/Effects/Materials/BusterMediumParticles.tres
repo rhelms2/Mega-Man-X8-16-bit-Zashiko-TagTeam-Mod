@@ -1,0 +1,23 @@
+[gd_resource type="ParticlesMaterial" load_steps=3 format=2]
+
+[sub_resource type="Gradient" id=3]
+colors = PoolColorArray( 0, 0.995605, 0.0184731, 1, 0.941176, 0.564706, 0.376471, 0 )
+
+[sub_resource type="GradientTexture" id=4]
+gradient = SubResource( 3 )
+
+[resource]
+resource_name = "buster_medium"
+lifetime_randomness = 0.33
+emission_shape = 2
+emission_box_extents = Vector3( 5, 3, 0 )
+flag_disable_z = true
+direction = Vector3( -1, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = -200.0
+initial_velocity_random = 0.1
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+color = Color( 0.972549, 0.972549, 0.972549, 1 )
+color_ramp = SubResource( 4 )

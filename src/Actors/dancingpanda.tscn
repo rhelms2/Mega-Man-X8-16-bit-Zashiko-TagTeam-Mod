@@ -1,0 +1,201 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://src/Actors/Panda.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/panda.res" type="SpriteFrames" id=2]
+[ext_resource path="res://src/Sounds/HIT_BOSS.wav" type="AudioStream" id=3]
+[ext_resource path="res://src/Effects/Materials/default_material.tres" type="Material" id=4]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=5]
+[ext_resource path="res://src/Actors/Modules/Enemy/BossDamage.gd" type="Script" id=6]
+[ext_resource path="res://src/Effects/Explosion Particles.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Effects/Smoke Particles.tscn" type="PackedScene" id=8]
+[ext_resource path="res://src/Actors/Modules/Enemy/BossDeath.gd" type="Script" id=9]
+[ext_resource path="res://src/Sounds/BOSS_DEATH.wav" type="AudioStream" id=10]
+[ext_resource path="res://src/Effects/Textures/blue_screen.png" type="Texture" id=11]
+[ext_resource path="res://src/Effects/Textures/blue_explosion.png" type="Texture" id=12]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 24.5, 39 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 42.5, 39.5 )
+
+[sub_resource type="Curve" id=10]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=9]
+curve = SubResource( 10 )
+
+[sub_resource type="ParticlesMaterial" id=14]
+resource_local_to_scene = true
+emission_shape = 1
+emission_sphere_radius = 43.04
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 9 )
+
+[sub_resource type="VisualShaderNodeTexture" id=15]
+source = 2
+
+[sub_resource type="VisualShaderNodeVectorOp" id=16]
+
+[sub_resource type="VisualShaderNodeScalarUniform" id=17]
+uniform_name = "Color"
+
+[sub_resource type="VisualShaderNodeScalarOp" id=18]
+operator = 2
+
+[sub_resource type="VisualShaderNodeScalarUniform" id=19]
+uniform_name = "Alpha"
+
+[sub_resource type="VisualShader" id=20]
+code = "shader_type canvas_item;
+render_mode blend_add;
+
+uniform float Color;
+uniform float Alpha;
+
+
+
+void vertex() {
+// Output:0
+
+}
+
+void fragment() {
+// ScalarUniform:4
+	float n_out4p0 = Color;
+
+// Texture:2
+	vec3 n_out2p0;
+	float n_out2p1;
+	{
+		vec4 _tex_read = texture(TEXTURE , UV.xy);
+		n_out2p0 = _tex_read.rgb;
+		n_out2p1 = _tex_read.a;
+	}
+
+// VectorOp:3
+	vec3 n_out3p0 = vec3(n_out4p0) + n_out2p0;
+
+// ScalarUniform:6
+	float n_out6p0 = Alpha;
+
+// ScalarOp:5
+	float n_out5p0 = n_out2p1 * n_out6p0;
+
+// Output:0
+	COLOR.rgb = n_out3p0;
+	COLOR.a = n_out5p0;
+
+}
+
+void light() {
+// Output:0
+
+}
+"
+graph_offset = Vector2( -286, 83 )
+mode = 1
+modes/blend = 1
+flags/light_only = false
+nodes/fragment/2/node = SubResource( 15 )
+nodes/fragment/2/position = Vector2( -60, 120 )
+nodes/fragment/3/node = SubResource( 16 )
+nodes/fragment/3/position = Vector2( 180, 60 )
+nodes/fragment/4/node = SubResource( 17 )
+nodes/fragment/4/position = Vector2( -60, 20 )
+nodes/fragment/5/node = SubResource( 18 )
+nodes/fragment/5/position = Vector2( 200, 200 )
+nodes/fragment/6/node = SubResource( 19 )
+nodes/fragment/6/position = Vector2( -100, 300 )
+nodes/fragment/connections = PoolIntArray( 2, 0, 3, 1, 3, 0, 0, 0, 4, 0, 3, 0, 6, 0, 5, 1, 2, 1, 5, 0, 5, 0, 0, 1 )
+
+[sub_resource type="ShaderMaterial" id=7]
+shader = SubResource( 20 )
+shader_param/Color = 0.0
+shader_param/Alpha = 0.0
+
+[node name="panda" type="KinematicBody2D"]
+collision_layer = 0
+script = ExtResource( 1 )
+max_health = 120.0
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( -6.5, 4 )
+shape = SubResource( 1 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 4 )
+position = Vector2( 0, 0.5 )
+z_index = 1
+frames = ExtResource( 2 )
+animation = "Tag"
+frame = 25
+playing = true
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+bus = "SFX"
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+position = Vector2( -8.5, 7.5 )
+shape = SubResource( 2 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+position = Vector2( -6.5, 3.5 )
+scale = Vector2( 4.35, 4.25 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 5 )
+debug_logs = true
+damage = 6.0
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 6 )
+max_flash_time = 0.32
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+pause_mode = 2
+stream = ExtResource( 3 )
+volume_db = -7.704
+bus = "SFX"
+
+[node name="BossDeath" type="Node2D" parent="."]
+pause_mode = 2
+script = ExtResource( 9 )
+debug_logs = true
+
+[node name="Explosion Particles" parent="BossDeath" instance=ExtResource( 7 )]
+z_index = 1
+emitting = false
+amount = 20
+process_material = SubResource( 14 )
+texture = ExtResource( 12 )
+
+[node name="Smoke Particles" parent="BossDeath" instance=ExtResource( 8 )]
+z_index = 4
+emitting = false
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="BossDeath"]
+stream = ExtResource( 10 )
+volume_db = -7.062
+bus = "SFX"
+
+[node name="background_light" type="Sprite" parent="BossDeath"]
+material = SubResource( 7 )
+position = Vector2( 5.99998, 7.49999 )
+scale = Vector2( 100, 40 )
+texture = ExtResource( 11 )

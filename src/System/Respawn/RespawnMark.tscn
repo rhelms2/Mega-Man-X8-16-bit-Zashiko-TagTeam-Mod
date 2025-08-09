@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/Actors/Enemies/RespawnMark.gd" type="Script" id=1]
+
+[node name="RespawnMark" type="VisibilityNotifier2D"]
+scale = Vector2( 9, 8 )
+script = ExtResource( 1 )
+
+[connection signal="screen_entered" from="." to="." method="_on_screen_entered"]

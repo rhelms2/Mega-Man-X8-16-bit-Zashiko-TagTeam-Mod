@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/Levels/Primrose/TouchButton.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Levels/Primrose/TouchButton.tres" type="SpriteFrames" id=2]
+
+[node name="180TouchButton" instance=ExtResource( 1 )]
+frames = ExtResource( 2 )
+degrees_to_rotate = 180.0

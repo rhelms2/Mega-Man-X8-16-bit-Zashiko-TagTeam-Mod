@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://src/DialogSystem/Profiles/DialogueText.gd" type="Script" id=1]
+[ext_resource path="res://Axl_mod/DialogSystem/Profiles/Axl.tres" type="Resource" id=2]
+[ext_resource path="res://src/DialogSystem/Profiles/Antonion.tres" type="Resource" id=3]
+
+[resource]
+script = ExtResource( 1 )
+dialog = [ ExtResource( 2 ), "ANTONION1_AXL", ExtResource( 3 ), "ANTONION2_AXL", "ANTONION3_AXL", ExtResource( 2 ), "ANTONION4_AXL", ExtResource( 3 ), "ANTONION5_AXL", "ANTONION6_AXL" ]

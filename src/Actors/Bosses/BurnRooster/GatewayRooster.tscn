@@ -1,0 +1,536 @@
+[gd_scene load_steps=56 format=2]
+
+[ext_resource path="res://src/Actors/Enemies/Shared/LongBossDeath.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Actors/Bosses/BossAI.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Modules/Enemy/BossDamage.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/Bosses/CopyReploid/TransformIntro.gd" type="Script" id=4]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=5]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/Idle.gd" type="Script" id=6]
+[ext_resource path="res://src/Effects/Materials/BossExplosion.tres" type="Material" id=7]
+[ext_resource path="res://src/Effects/Materials/BossSmokeParticlesMedium.tres" type="Material" id=8]
+[ext_resource path="res://src/Effects/Materials/FireParticles.tres" type="Material" id=9]
+[ext_resource path="res://src/Actors/Panda.gd" type="Script" id=10]
+[ext_resource path="res://src/Actors/Bosses/BossStun.gd" type="Script" id=11]
+[ext_resource path="res://src/Sounds/HIT_BOSS.wav" type="AudioStream" id=12]
+[ext_resource path="res://src/Effects/Materials/FireExplosion3.tres" type="Material" id=13]
+[ext_resource path="res://src/Effects/Materials/default_material.tres" type="Material" id=14]
+[ext_resource path="res://src/Effects/Materials/FireExplosionParticleMaterial.tres" type="Material" id=15]
+[ext_resource path="res://src/Effects/Textures/fire_circle.png" type="Texture" id=16]
+[ext_resource path="res://src/Actors/Bosses/BurnRooster/rooster.res" type="SpriteFrames" id=17]
+[ext_resource path="res://src/Actors/Bosses/DarkMantis/dps_hud.gd" type="Script" id=18]
+[ext_resource path="res://src/Actors/Bosses/BurnRooster/FireCombo.gd" type="Script" id=19]
+[ext_resource path="res://src/Actors/Bosses/BurnRooster/LandProjectile.tscn" type="PackedScene" id=20]
+[ext_resource path="res://src/Sounds/Rooster - Phoenix.ogg" type="AudioStream" id=21]
+[ext_resource path="res://src/Actors/MeleeEnemyAttack.gd" type="Script" id=22]
+[ext_resource path="res://src/Actors/Bosses/BurnRooster/FireRicochet.gd" type="Script" id=23]
+[ext_resource path="res://src/Actors/Bosses/BurnRooster/PhoenixProjectile.tscn" type="PackedScene" id=24]
+[ext_resource path="res://src/Effects/Textures/smoke.png" type="Texture" id=25]
+[ext_resource path="res://src/Effects/Fire/fire3.png" type="Texture" id=26]
+[ext_resource path="res://src/Effects/Fire/fire1.png" type="Texture" id=27]
+[ext_resource path="res://src/Effects/Fire/fire2.png" type="Texture" id=28]
+[ext_resource path="res://src/Actors/Bosses/BurnRooster/FireWalls.gd" type="Script" id=29]
+[ext_resource path="res://src/Actors/Bosses/BurnRooster/RisingLava.tscn" type="PackedScene" id=30]
+[ext_resource path="res://src/Actors/Bosses/BurnRooster/FireKnee.gd" type="Script" id=31]
+[ext_resource path="res://src/Sounds/Rooster - Knee.ogg" type="AudioStream" id=32]
+[ext_resource path="res://src/Sounds/Rooster - FireCharge.ogg" type="AudioStream" id=33]
+[ext_resource path="res://src/Sounds/Rooster - FireCharge2.ogg" type="AudioStream" id=34]
+[ext_resource path="res://src/Sounds/Rooster - DashStart.ogg" type="AudioStream" id=35]
+[ext_resource path="res://src/Sounds/Rooster - Wallhit.ogg" type="AudioStream" id=36]
+[ext_resource path="res://src/Sounds/Rooster - Explosion.ogg" type="AudioStream" id=37]
+[ext_resource path="res://src/Sounds/Rooster - Lowkick.ogg" type="AudioStream" id=38]
+[ext_resource path="res://src/Sounds/Rooster - Highkick.ogg" type="AudioStream" id=39]
+[ext_resource path="res://src/Sounds/Rooster - FireUp.ogg" type="AudioStream" id=40]
+[ext_resource path="res://src/Sounds/Rooster - Land.ogg" type="AudioStream" id=41]
+[ext_resource path="res://src/Sounds/Rooster - Rage.ogg" type="AudioStream" id=42]
+[ext_resource path="res://src/Actors/Bosses/CopyReploid/transform_reploid.res" type="SpriteFrames" id=43]
+[ext_resource path="res://src/Effects/Materials/FireExplosionMaterial2.tres" type="Material" id=44]
+[ext_resource path="res://src/Effects/Materials/RoosterLand_Particle.tres" type="Material" id=45]
+
+[sub_resource type="RectangleShape2D" id=47]
+extents = Vector2( 22, 29 )
+
+[sub_resource type="RectangleShape2D" id=48]
+extents = Vector2( 14, 21.625 )
+
+[sub_resource type="CanvasItemMaterial" id=49]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 3
+particles_anim_loop = false
+
+[sub_resource type="RectangleShape2D" id=45]
+extents = Vector2( 10, 35 )
+
+[sub_resource type="CircleShape2D" id=46]
+radius = 38.8973
+
+[sub_resource type="CanvasItemMaterial" id=63]
+particles_animation = true
+particles_anim_h_frames = 3
+particles_anim_v_frames = 3
+particles_anim_loop = false
+
+[sub_resource type="RectangleShape2D" id=55]
+extents = Vector2( 4, 81.5 )
+
+[sub_resource type="Curve" id=42]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=62]
+curve = SubResource( 42 )
+
+[sub_resource type="ParticlesMaterial" id=61]
+resource_local_to_scene = true
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 62 )
+
+[node name="BurnRooster" type="KinematicBody2D" groups=["Bosses"]]
+z_index = 5
+collision_layer = 0
+script = ExtResource( 10 )
+max_health = 160.0
+
+[node name="BossAI" type="Node2D" parent="."]
+script = ExtResource( 2 )
+time_between_attacks = Vector2( 0.25, 0.65 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( 0, 16 )
+shape = SubResource( 47 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+visible = false
+material = ExtResource( 14 )
+z_index = 1
+frames = ExtResource( 17 )
+animation = "highkick"
+frame = 2
+flip_h = true
+
+[node name="copyReploid" type="AnimatedSprite" parent="."]
+material = ExtResource( 14 )
+z_index = 1
+frames = ExtResource( 43 )
+animation = "fall"
+flip_h = true
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+position = Vector2( 1, 14.375 )
+shape = SubResource( 48 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+position = Vector2( -6.5, 3.5 )
+scale = Vector2( 4.35, 4.25 )
+
+[node name="Intro" type="Node2D" parent="."]
+script = ExtResource( 4 )
+
+[node name="Idle" type="Node2D" parent="."]
+script = ExtResource( 6 )
+conflicting_moves = [ "Anything" ]
+animation = "idle"
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 3 )
+invulnerability_time = 0.1
+max_flash_time = 0.35
+weakenesses = [ "DriftDiamond" ]
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+pause_mode = 2
+stream = ExtResource( 12 )
+volume_db = -3.0
+max_distance = 600.0
+bus = "SFX"
+
+[node name="dps" type="RichTextLabel" parent="Damage"]
+visible = false
+margin_left = -18.0
+margin_top = -69.0
+margin_right = 59.0
+margin_bottom = -52.0
+text = "0.0"
+script = ExtResource( 18 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 5 )
+damage = 6.0
+
+[node name="FireCombo" type="Node2D" parent="."]
+script = ExtResource( 19 )
+actions = [ "Event" ]
+animation = "lowkick_prepare"
+horizontal_velocity = 400.0
+projectile = ExtResource( 24 )
+fast_projectile = ExtResource( 20 )
+
+[node name="fire_particles" type="Node2D" parent="FireCombo"]
+
+[node name="fire2" type="Particles2D" parent="FireCombo/fire_particles"]
+material = SubResource( 49 )
+position = Vector2( 13, -5 )
+z_index = -1
+emitting = false
+amount = 6
+lifetime = 0.35
+one_shot = true
+local_coords = false
+process_material = ExtResource( 9 )
+texture = ExtResource( 28 )
+
+[node name="fire3" type="Particles2D" parent="FireCombo/fire_particles"]
+material = SubResource( 49 )
+position = Vector2( 33, -17 )
+z_index = -1
+emitting = false
+amount = 6
+lifetime = 0.35
+one_shot = true
+local_coords = false
+process_material = ExtResource( 9 )
+texture = ExtResource( 26 )
+
+[node name="fire1" type="Particles2D" parent="FireCombo/fire_particles"]
+material = SubResource( 49 )
+position = Vector2( 55, 6 )
+z_index = -1
+emitting = false
+amount = 6
+lifetime = 0.35
+one_shot = true
+local_coords = false
+process_material = ExtResource( 9 )
+texture = ExtResource( 27 )
+
+[node name="lowkick" type="Node2D" parent="FireCombo"]
+visible = false
+script = ExtResource( 22 )
+active = false
+damage = 6.0
+owner_character = NodePath("../..")
+
+[node name="area2D" type="Area2D" parent="FireCombo/lowkick"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="FireCombo/lowkick/area2D"]
+position = Vector2( 52, 37 )
+rotation = 1.5708
+shape = SubResource( 45 )
+
+[node name="highkick" type="Node2D" parent="FireCombo"]
+script = ExtResource( 22 )
+active = false
+damage = 6.0
+active_duration = 0.5
+owner_character = NodePath("../..")
+
+[node name="area2D" type="Area2D" parent="FireCombo/highkick"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="FireCombo/highkick/area2D"]
+position = Vector2( 28, 0 )
+rotation = 0.790634
+shape = SubResource( 46 )
+
+[node name="lowkick2" type="AudioStreamPlayer2D" parent="FireCombo"]
+stream = ExtResource( 38 )
+volume_db = -2.0
+max_distance = 900.0
+bus = "SFX"
+
+[node name="highkick2" type="AudioStreamPlayer2D" parent="FireCombo"]
+stream = ExtResource( 39 )
+volume_db = -2.0
+max_distance = 900.0
+bus = "SFX"
+
+[node name="roundkick" type="AudioStreamPlayer2D" parent="FireCombo"]
+stream = ExtResource( 40 )
+volume_db = -2.0
+max_distance = 900.0
+bus = "SFX"
+
+[node name="phoenix" type="AudioStreamPlayer2D" parent="FireCombo"]
+stream = ExtResource( 21 )
+volume_db = -7.0
+max_distance = 900.0
+bus = "SFX"
+
+[node name="land" type="AudioStreamPlayer2D" parent="FireCombo"]
+stream = ExtResource( 32 )
+volume_db = -2.0
+pitch_scale = 1.1
+max_distance = 900.0
+bus = "SFX"
+
+[node name="FireRicochet" type="Node2D" parent="."]
+script = ExtResource( 23 )
+actions = [ "Event" ]
+animation = "jump_prepare"
+jump_velocity = 380.0
+land_projectile = ExtResource( 20 )
+
+[node name="land" type="Particles2D" parent="FireRicochet"]
+material = SubResource( 49 )
+position = Vector2( 0, 48 )
+z_index = 1
+emitting = false
+amount = 11
+lifetime = 0.75
+local_coords = false
+process_material = ExtResource( 45 )
+texture = ExtResource( 25 )
+
+[node name="fire1" type="Particles2D" parent="FireRicochet"]
+material = SubResource( 49 )
+position = Vector2( 1, 10 )
+z_index = 1
+emitting = false
+amount = 7
+lifetime = 0.6
+local_coords = false
+process_material = ExtResource( 9 )
+texture = ExtResource( 27 )
+
+[node name="fire2" type="Particles2D" parent="FireRicochet"]
+material = SubResource( 49 )
+position = Vector2( 1, 10 )
+z_index = 1
+emitting = false
+amount = 11
+lifetime = 0.75
+local_coords = false
+process_material = ExtResource( 9 )
+texture = ExtResource( 28 )
+
+[node name="fire3" type="Particles2D" parent="FireRicochet"]
+material = SubResource( 49 )
+position = Vector2( 1, 10 )
+z_index = 1
+emitting = false
+amount = 15
+lifetime = 0.5
+local_coords = false
+process_material = ExtResource( 9 )
+texture = ExtResource( 26 )
+
+[node name="rayCast2D" type="RayCast2D" parent="FireRicochet"]
+position = Vector2( 0, -13 )
+enabled = true
+cast_to = Vector2( 0, -16 )
+
+[node name="rayCast2D2" type="RayCast2D" parent="FireRicochet"]
+position = Vector2( 0, 37 )
+enabled = true
+cast_to = Vector2( 0, 16 )
+
+[node name="charge" type="AudioStreamPlayer2D" parent="FireRicochet"]
+stream = ExtResource( 33 )
+volume_db = -2.0
+max_distance = 900.0
+bus = "SFX"
+
+[node name="start" type="AudioStreamPlayer2D" parent="FireRicochet"]
+stream = ExtResource( 35 )
+volume_db = -2.0
+max_distance = 900.0
+bus = "SFX"
+
+[node name="wallhit" type="AudioStreamPlayer2D" parent="FireRicochet"]
+stream = ExtResource( 36 )
+volume_db = -2.0
+max_distance = 900.0
+bus = "SFX"
+
+[node name="land2" type="AudioStreamPlayer2D" parent="FireRicochet"]
+stream = ExtResource( 41 )
+volume_db = -2.0
+pitch_scale = 0.81
+max_distance = 900.0
+bus = "SFX"
+
+[node name="jump" type="AudioStreamPlayer2D" parent="FireRicochet"]
+stream = ExtResource( 32 )
+volume_db = -2.0
+pitch_scale = 1.35
+max_distance = 900.0
+bus = "SFX"
+
+[node name="FireExp" type="Particles2D" parent="FireRicochet"]
+material = SubResource( 63 )
+emitting = false
+amount = 16
+lifetime = 0.5
+one_shot = true
+explosiveness = 0.8
+randomness = 1.0
+local_coords = false
+process_material = ExtResource( 13 )
+texture = ExtResource( 28 )
+
+[node name="Explosion" type="Particles2D" parent="FireRicochet"]
+material = ExtResource( 44 )
+emitting = false
+amount = 1
+one_shot = true
+local_coords = false
+process_material = ExtResource( 15 )
+texture = ExtResource( 16 )
+
+[node name="FireKnee" type="Node2D" parent="."]
+script = ExtResource( 31 )
+actions = [ "Event" ]
+animation = "knee_prepare"
+horizontal_velocity = 600.0
+jump_velocity = 180.0
+
+[node name="fire2" type="Particles2D" parent="FireKnee"]
+material = SubResource( 49 )
+position = Vector2( 1, 10 )
+z_index = -1
+emitting = false
+amount = 6
+lifetime = 0.35
+local_coords = false
+process_material = ExtResource( 9 )
+texture = ExtResource( 28 )
+
+[node name="fire3" type="Particles2D" parent="FireKnee"]
+material = SubResource( 49 )
+position = Vector2( 1, 10 )
+z_index = -1
+emitting = false
+amount = 6
+lifetime = 0.35
+local_coords = false
+process_material = ExtResource( 9 )
+texture = ExtResource( 26 )
+
+[node name="fire1" type="Particles2D" parent="FireKnee"]
+material = SubResource( 49 )
+position = Vector2( 1, 10 )
+z_index = -1
+emitting = false
+amount = 6
+lifetime = 0.35
+local_coords = false
+process_material = ExtResource( 9 )
+texture = ExtResource( 27 )
+
+[node name="knee" type="AudioStreamPlayer2D" parent="FireKnee"]
+stream = ExtResource( 32 )
+volume_db = -2.0
+max_distance = 900.0
+bus = "SFX"
+
+[node name="charge" type="AudioStreamPlayer2D" parent="FireKnee"]
+stream = ExtResource( 34 )
+volume_db = -2.0
+max_distance = 900.0
+bus = "SFX"
+
+[node name="land" type="AudioStreamPlayer2D" parent="FireKnee"]
+stream = ExtResource( 32 )
+volume_db = -2.0
+pitch_scale = 1.5
+max_distance = 900.0
+bus = "SFX"
+
+[node name="FireWalls" type="Node2D" parent="."]
+script = ExtResource( 29 )
+actions = [ "Event" ]
+animation = "rage_prepare"
+jump_velocity = 360.0
+desperation_attack = true
+projectile = ExtResource( 20 )
+fire_wall = ExtResource( 30 )
+
+[node name="explosion" type="AudioStreamPlayer2D" parent="FireWalls"]
+stream = ExtResource( 37 )
+max_distance = 900.0
+bus = "SFX"
+
+[node name="land" type="AudioStreamPlayer2D" parent="FireWalls"]
+stream = ExtResource( 40 )
+volume_db = -3.355
+pitch_scale = 1.36
+max_distance = 900.0
+bus = "SFX"
+
+[node name="jump" type="AudioStreamPlayer2D" parent="FireWalls"]
+stream = ExtResource( 32 )
+volume_db = -3.355
+pitch_scale = 1.35
+max_distance = 900.0
+bus = "SFX"
+
+[node name="rage" type="AudioStreamPlayer2D" parent="FireWalls"]
+stream = ExtResource( 42 )
+volume_db = 2.0
+max_distance = 900.0
+bus = "SFX"
+
+[node name="spit" type="Node2D" parent="FireWalls"]
+script = ExtResource( 22 )
+active = false
+damage = 2.0
+active_duration = 0.25
+owner_character = NodePath("../..")
+
+[node name="area2D" type="Area2D" parent="FireWalls/spit"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="FireWalls/spit/area2D"]
+position = Vector2( 97, 21 )
+rotation = 1.5708
+shape = SubResource( 55 )
+
+[node name="BossDeath" parent="." instance=ExtResource( 1 )]
+position = Vector2( 0, 8 )
+death_animation = "death"
+collectible = "rooster_weapon"
+
+[node name="Explosion Particles" parent="BossDeath" index="0"]
+amount = 24
+process_material = ExtResource( 7 )
+
+[node name="Smoke Particles" parent="BossDeath" index="1"]
+process_material = ExtResource( 8 )
+
+[node name="Remains" parent="BossDeath" index="4"]
+process_material = SubResource( 61 )
+
+[node name="BossStun" type="Node2D" parent="."]
+script = ExtResource( 11 )
+conflicting_moves = [ "BossDeath" ]
+actions = [ "Event" ]
+animation = "death"
+horizontal_velocity = 120.0
+jump_velocity = 150.0
+
+[connection signal="dps" from="Damage" to="Damage/dps" method="_on_Damage_dps"]
+[connection signal="ability_start" from="FireWalls" to="BossStun" method="deactivate"]
+[connection signal="ready_for_stun" from="FireWalls" to="BossStun" method="reactivate"]
+
+[editable path="BossDeath"]

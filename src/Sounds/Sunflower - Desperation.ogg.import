@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Sunflower - Desperation.ogg-6a6756131b2e0fc870a80355c65b7ab6.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/Sunflower - Desperation.ogg"
+dest_files=[ "res://.import/Sunflower - Desperation.ogg-6a6756131b2e0fc870a80355c65b7ab6.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

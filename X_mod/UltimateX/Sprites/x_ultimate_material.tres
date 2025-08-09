@@ -1,0 +1,39 @@
+[gd_resource type="ShaderMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://X_mod/UltimateX/Sprites/x_ultimate_shader.tres" type="Shader" id=1]
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/Flash = 0.0
+shader_param/Charge = 0.0
+shader_param/Color = Color( 0, 0, 0, 1 )
+shader_param/MainColor1 = Color( 0.301961, 0.329412, 0.490196, 1 )
+shader_param/MainColor2 = Color( 0.160784, 0.203922, 0.356863, 1 )
+shader_param/MainColor3 = Color( 0.0745098, 0.133333, 0.278431, 1 )
+shader_param/MainColor4 = Color( 0.407843, 0.486275, 0.8, 1 )
+shader_param/MainColor5 = Color( 0.313726, 0.376471, 0.564706, 1 )
+shader_param/MainColor6 = Color( 0.172549, 0.223529, 0.337255, 1 )
+shader_param/R_MainColor1 = Color( 0.301961, 0.329412, 0.490196, 1 )
+shader_param/R_MainColor2 = Color( 0.160784, 0.203922, 0.356863, 1 )
+shader_param/R_MainColor3 = Color( 0.0745098, 0.133333, 0.278431, 1 )
+shader_param/R_MainColor4 = Color( 0.407843, 0.486275, 0.8, 1 )
+shader_param/R_MainColor5 = Color( 0.313726, 0.376471, 0.564706, 1 )
+shader_param/R_MainColor6 = Color( 0.172549, 0.223529, 0.337255, 1 )
+shader_param/CrystalColor1 = Color( 0.843137, 0.482353, 0.901961, 1 )
+shader_param/CrystalColor2 = Color( 0.552941, 0.168627, 0.729412, 1 )
+shader_param/CrystalColor3 = Color( 0.376471, 0, 0.552941, 1 )
+shader_param/R_CrystalColor1 = Color( 0.843137, 0.482353, 0.901961, 1 )
+shader_param/Alert = 0.0
+shader_param/R_CrystalColor2 = Color( 0.552941, 0.168627, 0.729412, 1 )
+shader_param/R_CrystalColor3 = Color( 0.376471, 0, 0.552941, 1 )
+shader_param/tolerance = 0.01
+shader_param/ArmorColor1 = Color( 0.909804, 0.878431, 0.25098, 1 )
+shader_param/ArmorColor2 = Color( 0.945098, 0.6, 0.27451, 1 )
+shader_param/ArmorColor3 = Color( 0.670588, 0.313726, 0.266667, 1 )
+shader_param/R_ArmorColor1 = Color( 0.909804, 0.878431, 0.25098, 1 )
+shader_param/R_ArmorColor2 = Color( 0.945098, 0.6, 0.27451, 1 )
+shader_param/R_ArmorColor3 = Color( 0.670588, 0.313726, 0.266667, 1 )
+shader_param/CrystalColor4 = Color( 1, 0.705882, 1, 1 )
+shader_param/R_CrystalColor4 = Color( 1, 0.705882, 1, 1 )
+shader_param/Alpha = 1.0

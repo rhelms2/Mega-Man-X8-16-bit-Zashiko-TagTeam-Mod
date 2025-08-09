@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://src/DialogSystem/Profiles/DialogueText.gd" type="Script" id=1]
+[ext_resource path="res://src/DialogSystem/Profiles/Yeti.tres" type="Resource" id=2]
+[ext_resource path="res://Zero_mod/DialogSystem/Profiles/Zero.tres" type="Resource" id=3]
+
+[resource]
+script = ExtResource( 1 )
+dialog = [ ExtResource( 2 ), "YETI1_ZERO", ExtResource( 3 ), "YETI2_ZERO", ExtResource( 2 ), "YETI3_ZERO", ExtResource( 3 ), "YETI4_ZERO", ExtResource( 2 ), "YETI5_ZERO" ]

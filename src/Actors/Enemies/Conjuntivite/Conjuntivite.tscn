@@ -1,0 +1,201 @@
+[gd_scene load_steps=25 format=2]
+
+[ext_resource path="res://src/Actors/Enemies/AI.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Modules/Enemy/Enemy.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Enemies/Conjuntivite/VerticalSin.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/Enemies/Conjuntivite/conjuntivite.res" type="SpriteFrames" id=4]
+[ext_resource path="res://src/Actors/MeleeEnemyAttack.gd" type="Script" id=5]
+[ext_resource path="res://src/Actors/Enemies/Shared/QuickEnemyDeath.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Actors/Enemies/SmallBat/bat_remains.png" type="Texture" id=7]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=8]
+[ext_resource path="res://src/Actors/Modules/Enemy/EnemyDamage.gd" type="Script" id=9]
+[ext_resource path="res://src/Effects/Materials/default_material.tres" type="Material" id=12]
+[ext_resource path="res://src/Actors/Enemies/Conjuntivite/Pursuit.gd" type="Script" id=13]
+[ext_resource path="res://src/Sounds/Conjuntivite - Grab.ogg" type="AudioStream" id=14]
+[ext_resource path="res://src/Sounds/HIT.wav" type="AudioStream" id=16]
+[ext_resource path="res://src/Sounds/Drone - Rotate.ogg" type="AudioStream" id=18]
+
+[sub_resource type="RectangleShape2D" id=47]
+extents = Vector2( 102, 86.5 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 13.5, 15.5 )
+
+[sub_resource type="RectangleShape2D" id=48]
+
+[sub_resource type="Curve" id=240]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=239]
+curve = SubResource( 240 )
+
+[sub_resource type="ParticlesMaterial" id=245]
+resource_local_to_scene = true
+resource_name = "explosion"
+emission_shape = 1
+emission_sphere_radius = 25.0
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 239 )
+
+[sub_resource type="Curve" id=244]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=243]
+curve = SubResource( 244 )
+
+[sub_resource type="ParticlesMaterial" id=246]
+resource_local_to_scene = true
+resource_name = "remains_single"
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 243 )
+
+[sub_resource type="CircleShape2D" id=49]
+radius = 32.0
+
+[node name="Conjuntivite" type="KinematicBody2D" groups=["Enemies"]]
+z_index = 5
+collision_layer = 0
+collision_mask = 0
+script = ExtResource( 2 )
+max_health = 5.0
+things_to_hide_on_death = [ NodePath("thundersparks") ]
+
+[node name="AI" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 1 )
+on_idle = [ NodePath("../Patrol") ]
+on_see_player = [ NodePath("../Pursuit") ]
+
+[node name="vision" type="Area2D" parent="AI"]
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="AI/vision"]
+position = Vector2( 0, 1.5 )
+shape = SubResource( 47 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 12 )
+frames = ExtResource( 4 )
+animation = "idle"
+frame = 3
+playing = true
+flip_h = true
+
+[node name="thundersparks" type="AnimatedSprite" parent="."]
+material = ExtResource( 12 )
+z_index = -1
+frames = ExtResource( 4 )
+animation = "electricity"
+frame = 3
+playing = true
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( -0.5, 1.5 )
+shape = SubResource( 15 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+scale = Vector2( 2, 2 )
+rect = Rect2( -5, -5, 10, 10 )
+
+[node name="area2D" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+shape = SubResource( 48 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 8 )
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 9 )
+max_freeze_hits = 6
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+stream = ExtResource( 16 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="EnemyDeath" parent="." instance=ExtResource( 6 )]
+
+[node name="Explosion Particles" parent="EnemyDeath" index="0"]
+process_material = SubResource( 245 )
+
+[node name="Remains" parent="EnemyDeath" index="1"]
+process_material = SubResource( 246 )
+
+[node name="remains_particles" parent="EnemyDeath/Remains" index="0"]
+texture = ExtResource( 7 )
+
+[node name="Pursuit" type="Node2D" parent="."]
+script = ExtResource( 13 )
+actions = [ "Event" ]
+animation = "idle"
+horizontal_velocity = 60.0
+translate_duration = 0.1
+
+[node name="GrabArea" type="Node2D" parent="Pursuit"]
+script = ExtResource( 5 )
+active = false
+damage = 0.0
+owner_character = NodePath("../..")
+dont_deal_damage = true
+
+[node name="area2D" type="Area2D" parent="Pursuit/GrabArea"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="Pursuit/GrabArea/area2D"]
+shape = SubResource( 49 )
+
+[node name="electric" type="AudioStreamPlayer2D" parent="Pursuit"]
+stream = ExtResource( 14 )
+volume_db = -5.0
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="pursuit" type="AudioStreamPlayer2D" parent="Pursuit"]
+stream = ExtResource( 18 )
+volume_db = -9.0
+pitch_scale = 0.58
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="Patrol" type="Node2D" parent="."]
+script = ExtResource( 3 )
+conflicting_moves = [ "Pursuit" ]
+actions = [ "Event" ]
+h_frequency = 0
+h_range = 0
+
+[connection signal="body_entered" from="AI/vision" to="AI" method="_on_vision_body_entered"]
+[connection signal="body_exited" from="AI/vision" to="AI" method="_on_vision_body_exited"]
+
+[editable path="EnemyDeath"]

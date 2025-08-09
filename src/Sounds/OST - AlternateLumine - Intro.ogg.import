@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - AlternateLumine - Intro.ogg-9af50d0eac65aa62beea2871d9670719.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - AlternateLumine - Intro.ogg"
+dest_files=[ "res://.import/OST - AlternateLumine - Intro.ogg-9af50d0eac65aa62beea2871d9670719.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

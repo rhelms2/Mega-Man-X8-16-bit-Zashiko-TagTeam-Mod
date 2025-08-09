@@ -1,0 +1,243 @@
+[gd_scene load_steps=41 format=2]
+
+[ext_resource path="res://src/Effects/Textures/shining_spikes.png" type="Texture" id=1]
+[ext_resource path="res://src/Effects/Materials/RemainsMat.tres" type="Material" id=2]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/Bosses/SecretBoss2/HolySpike.gd" type="Script" id=4]
+[ext_resource path="res://src/Effects/Textures/remains_holyglass.png" type="Texture" id=5]
+[ext_resource path="res://src/Effects/Materials/secret_spike_particles.tres" type="Material" id=6]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=7]
+[ext_resource path="res://src/Sounds/Ice Break.wav" type="AudioStream" id=8]
+[ext_resource path="res://src/Sounds/SecretBoss2 - Spike.wav" type="AudioStream" id=9]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 114, 17, 38 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 1 )
+region = Rect2( 17, 114, 17, 38 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 1 )
+region = Rect2( 34, 114, 17, 38 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 1 )
+region = Rect2( 51, 114, 17, 38 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = ExtResource( 1 )
+region = Rect2( 68, 38, 17, 38 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 1 )
+region = Rect2( 85, 38, 17, 38 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = ExtResource( 1 )
+region = Rect2( 102, 38, 17, 38 )
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 1 )
+region = Rect2( 119, 38, 17, 38 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 76, 17, 38 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 1 )
+region = Rect2( 17, 76, 17, 38 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 1 )
+region = Rect2( 34, 76, 17, 38 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 1 )
+region = Rect2( 51, 76, 17, 38 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 1 )
+region = Rect2( 68, 76, 17, 38 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 1 )
+region = Rect2( 85, 76, 17, 38 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 1 )
+region = Rect2( 102, 76, 17, 38 )
+
+[sub_resource type="AtlasTexture" id=16]
+atlas = ExtResource( 1 )
+region = Rect2( 119, 76, 17, 38 )
+
+[sub_resource type="AtlasTexture" id=17]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 17, 38 )
+
+[sub_resource type="AtlasTexture" id=18]
+atlas = ExtResource( 1 )
+region = Rect2( 17, 0, 17, 38 )
+
+[sub_resource type="AtlasTexture" id=19]
+atlas = ExtResource( 1 )
+region = Rect2( 34, 0, 17, 38 )
+
+[sub_resource type="AtlasTexture" id=20]
+atlas = ExtResource( 1 )
+region = Rect2( 51, 0, 17, 38 )
+
+[sub_resource type="AtlasTexture" id=21]
+atlas = ExtResource( 1 )
+region = Rect2( 68, 0, 17, 38 )
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 1 )
+region = Rect2( 85, 0, 17, 38 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 1 )
+region = Rect2( 102, 0, 17, 38 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 1 )
+region = Rect2( 119, 0, 17, 38 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 38, 17, 38 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 1 )
+region = Rect2( 17, 38, 17, 38 )
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 1 )
+region = Rect2( 34, 38, 17, 38 )
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 1 )
+region = Rect2( 51, 38, 17, 38 )
+
+[sub_resource type="SpriteFrames" id=29]
+animations = [ {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"loop": false,
+"name": "expire",
+"speed": 24.0
+}, {
+"frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ) ],
+"loop": true,
+"name": "idle",
+"speed": 30.0
+}, {
+"frames": [ SubResource( 17 ), SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ), SubResource( 22 ), SubResource( 23 ), SubResource( 24 ) ],
+"loop": true,
+"name": "prepare",
+"speed": 24.0
+}, {
+"frames": [ SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ) ],
+"loop": false,
+"name": "start",
+"speed": 24.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=30]
+extents = Vector2( 6, 6 )
+
+[sub_resource type="RectangleShape2D" id=31]
+
+[node name="HolySpike" type="Node2D"]
+z_index = 6
+script = ExtResource( 4 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -18 )
+frames = SubResource( 29 )
+animation = "idle"
+frame = 9
+playing = true
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+visible = false
+position = Vector2( 0, -9 )
+script = ExtResource( 3 )
+active = false
+damage = 16.0
+
+[node name="area2D" type="Area2D" parent="DamageOnTouch"]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="DamageOnTouch/area2D"]
+position = Vector2( 0, 4 )
+shape = SubResource( 30 )
+
+[node name="remains_particles" type="Particles2D" parent="."]
+modulate = Color( 1, 0.913725, 0, 1 )
+material = ExtResource( 2 )
+z_index = 2
+emitting = false
+amount = 2
+lifetime = 2.0
+one_shot = true
+explosiveness = 1.0
+visibility_rect = Rect2( -394.584, -119.96, 807.912, 1377.38 )
+process_material = ExtResource( 6 )
+texture = ExtResource( 5 )
+
+[node name="area2D" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 4
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+position = Vector2( 0, -7 )
+shape = SubResource( 31 )
+
+[node name="vertical_rayr" type="RayCast2D" parent="."]
+visible = false
+position = Vector2( 17, -17 )
+enabled = true
+cast_to = Vector2( 0, 25 )
+
+[node name="horizontal_rayr" type="RayCast2D" parent="."]
+visible = false
+position = Vector2( -9, -17 )
+enabled = true
+cast_to = Vector2( 30, 0 )
+
+[node name="vertical_rayl" type="RayCast2D" parent="."]
+visible = false
+position = Vector2( -17, -17 )
+enabled = true
+cast_to = Vector2( 0, 25 )
+
+[node name="horizontal_rayl" type="RayCast2D" parent="."]
+visible = false
+position = Vector2( 9, -17 )
+enabled = true
+cast_to = Vector2( -30, 0 )
+
+[node name="shatter" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
+stream = ExtResource( 8 )
+volume_db = -20.0
+pitch_scale = 1.2
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 7 )
+
+[node name="start_sfx" type="AudioStreamPlayer2D" parent="."]
+pause_mode = 2
+stream = ExtResource( 9 )
+volume_db = -6.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 7 )
+
+[connection signal="body_entered" from="area2D" to="." method="_on_area2D_body_entered"]

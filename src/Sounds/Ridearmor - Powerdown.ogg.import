@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Ridearmor - Powerdown.ogg-e489a01b85ab2226a99a51e13dfd5725.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/Ridearmor - Powerdown.ogg"
+dest_files=[ "res://.import/Ridearmor - Powerdown.ogg-e489a01b85ab2226a99a51e13dfd5725.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

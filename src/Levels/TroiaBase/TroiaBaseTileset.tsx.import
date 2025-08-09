@@ -1,0 +1,20 @@
+[remap]
+
+importer="vnen.tiled_tileset_importer"
+type="TileSet"
+path="res://.import/TroiaBaseTileset.tsx-97fe7091582c641c0414f15e2d74a5c0.res"
+
+[deps]
+
+source_file="res://src/Levels/TroiaBase/TroiaBaseTileset.tsx"
+dest_files=[ "res://.import/TroiaBaseTileset.tsx-97fe7091582c641c0414f15e2d74a5c0.res" ]
+
+[params]
+
+custom_properties=true
+tile_metadata=false
+image_flags=7
+embed_internal_images=false
+save_tiled_properties=false
+apply_offset=false
+post_import_script=""

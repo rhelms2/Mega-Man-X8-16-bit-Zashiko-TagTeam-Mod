@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://SpriteEffect.gd" type="Script" id=1]
+[ext_resource path="res://src/Effects/Textures/windspark.png" type="Texture" id=2]
+[ext_resource path="res://src/Effects/Textures/circle.png" type="Texture" id=3]
+[ext_resource path="res://src/Actors/Bosses/SatanSigma/charge_circle.gd" type="Script" id=4]
+
+[node name="node2D" type="Node2D"]
+
+[node name="windspark" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.505882 )
+position = Vector2( 172, 112 )
+z_index = 45
+texture = ExtResource( 2 )
+hframes = 2
+vframes = 5
+script = ExtResource( 1 )
+animation_speed = 20.0
+one_shot = true
+
+[node name="charge_circle" type="Sprite" parent="."]
+position = Vector2( 206, 115 )
+scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+script = ExtResource( 4 )

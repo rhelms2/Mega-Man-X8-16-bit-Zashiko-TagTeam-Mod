@@ -1,0 +1,658 @@
+{ "frames": [
+   {
+    "filename": "ride_armor_pilots 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 82
+   },
+   {
+    "filename": "ride_armor_pilots 1.ase",
+    "frame": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 60
+   },
+   {
+    "filename": "ride_armor_pilots 2.ase",
+    "frame": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 60
+   },
+   {
+    "filename": "ride_armor_pilots 3.ase",
+    "frame": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 60
+   },
+   {
+    "filename": "ride_armor_pilots 4.ase",
+    "frame": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 82
+   },
+   {
+    "filename": "ride_armor_pilots 5.ase",
+    "frame": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 444
+   },
+   {
+    "filename": "ride_armor_pilots 6.ase",
+    "frame": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 444
+   },
+   {
+    "filename": "ride_armor_pilots 7.ase",
+    "frame": { "x": 160, "y": 0, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "ride_armor_pilots 8.ase",
+    "frame": { "x": 320, "y": 0, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 84
+   },
+   {
+    "filename": "ride_armor_pilots 9.ase",
+    "frame": { "x": 480, "y": 0, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 84
+   },
+   {
+    "filename": "ride_armor_pilots 10.ase",
+    "frame": { "x": 640, "y": 0, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 60
+   },
+   {
+    "filename": "ride_armor_pilots 11.ase",
+    "frame": { "x": 800, "y": 0, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "ride_armor_pilots 12.ase",
+    "frame": { "x": 960, "y": 0, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "ride_armor_pilots 13.ase",
+    "frame": { "x": 960, "y": 0, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "ride_armor_pilots 14.ase",
+    "frame": { "x": 0, "y": 80, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "ride_armor_pilots 15.ase",
+    "frame": { "x": 160, "y": 80, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "ride_armor_pilots 16.ase",
+    "frame": { "x": 160, "y": 80, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "ride_armor_pilots 17.ase",
+    "frame": { "x": 160, "y": 80, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "ride_armor_pilots 18.ase",
+    "frame": { "x": 160, "y": 80, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "ride_armor_pilots 19.ase",
+    "frame": { "x": 160, "y": 80, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "ride_armor_pilots 20.ase",
+    "frame": { "x": 320, "y": 80, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "ride_armor_pilots 21.ase",
+    "frame": { "x": 480, "y": 80, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "ride_armor_pilots 22.ase",
+    "frame": { "x": 640, "y": 80, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "ride_armor_pilots 23.ase",
+    "frame": { "x": 800, "y": 80, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "ride_armor_pilots 24.ase",
+    "frame": { "x": 800, "y": 80, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "ride_armor_pilots 25.ase",
+    "frame": { "x": 960, "y": 80, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "ride_armor_pilots 26.ase",
+    "frame": { "x": 480, "y": 80, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "ride_armor_pilots 27.ase",
+    "frame": { "x": 0, "y": 160, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "ride_armor_pilots 28.ase",
+    "frame": { "x": 160, "y": 160, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "ride_armor_pilots 29.ase",
+    "frame": { "x": 160, "y": 160, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "ride_armor_pilots 30.ase",
+    "frame": { "x": 320, "y": 160, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 66
+   },
+   {
+    "filename": "ride_armor_pilots 31.ase",
+    "frame": { "x": 480, "y": 160, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 66
+   },
+   {
+    "filename": "ride_armor_pilots 32.ase",
+    "frame": { "x": 640, "y": 160, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "ride_armor_pilots 33.ase",
+    "frame": { "x": 640, "y": 160, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "ride_armor_pilots 34.ase",
+    "frame": { "x": 640, "y": 160, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "ride_armor_pilots 35.ase",
+    "frame": { "x": 640, "y": 160, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "ride_armor_pilots 36.ase",
+    "frame": { "x": 800, "y": 160, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 66
+   },
+   {
+    "filename": "ride_armor_pilots 37.ase",
+    "frame": { "x": 960, "y": 160, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 66
+   },
+   {
+    "filename": "ride_armor_pilots 38.ase",
+    "frame": { "x": 0, "y": 240, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "ride_armor_pilots 39.ase",
+    "frame": { "x": 0, "y": 240, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "ride_armor_pilots 40.ase",
+    "frame": { "x": 0, "y": 240, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "ride_armor_pilots 41.ase",
+    "frame": { "x": 0, "y": 240, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "ride_armor_pilots 42.ase",
+    "frame": { "x": 160, "y": 240, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 66
+   },
+   {
+    "filename": "ride_armor_pilots 43.ase",
+    "frame": { "x": 320, "y": 240, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 82
+   },
+   {
+    "filename": "ride_armor_pilots 44.ase",
+    "frame": { "x": 480, "y": 240, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 444
+   },
+   {
+    "filename": "ride_armor_pilots 45.ase",
+    "frame": { "x": 640, "y": 240, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 82
+   },
+   {
+    "filename": "ride_armor_pilots 46.ase",
+    "frame": { "x": 800, "y": 240, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 82
+   },
+   {
+    "filename": "ride_armor_pilots 47.ase",
+    "frame": { "x": 160, "y": 80, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 82
+   },
+   {
+    "filename": "ride_armor_pilots 48.ase",
+    "frame": { "x": 960, "y": 240, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "ride_armor_pilots 49.ase",
+    "frame": { "x": 0, "y": 320, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "ride_armor_pilots 50.ase",
+    "frame": { "x": 160, "y": 320, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "ride_armor_pilots 51.ase",
+    "frame": { "x": 160, "y": 320, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 100
+   },
+   {
+    "filename": "ride_armor_pilots 52.ase",
+    "frame": { "x": 320, "y": 320, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 82
+   },
+   {
+    "filename": "ride_armor_pilots 53.ase",
+    "frame": { "x": 480, "y": 320, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 82
+   },
+   {
+    "filename": "ride_armor_pilots 54.ase",
+    "frame": { "x": 640, "y": 320, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "ride_armor_pilots 55.ase",
+    "frame": { "x": 800, "y": 320, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "ride_armor_pilots 56.ase",
+    "frame": { "x": 960, "y": 320, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "ride_armor_pilots 57.ase",
+    "frame": { "x": 960, "y": 320, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 100
+   },
+   {
+    "filename": "ride_armor_pilots 58.ase",
+    "frame": { "x": 960, "y": 320, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 82
+   },
+   {
+    "filename": "ride_armor_pilots 59.ase",
+    "frame": { "x": 160, "y": 80, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 82
+   },
+   {
+    "filename": "ride_armor_pilots 60.ase",
+    "frame": { "x": 800, "y": 320, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "ride_armor_pilots 61.ase",
+    "frame": { "x": 160, "y": 80, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 82
+   },
+   {
+    "filename": "ride_armor_pilots 62.ase",
+    "frame": { "x": 0, "y": 400, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "ride_armor_pilots 63.ase",
+    "frame": { "x": 160, "y": 400, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "ride_armor_pilots 64.ase",
+    "frame": { "x": 320, "y": 400, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "ride_armor_pilots 65.ase",
+    "frame": { "x": 320, "y": 400, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 100
+   },
+   {
+    "filename": "ride_armor_pilots 66.ase",
+    "frame": { "x": 320, "y": 400, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 82
+   },
+   {
+    "filename": "ride_armor_pilots 67.ase",
+    "frame": { "x": 320, "y": 400, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 42
+   },
+   {
+    "filename": "ride_armor_pilots 68.ase",
+    "frame": { "x": 960, "y": 320, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   },
+   {
+    "filename": "ride_armor_pilots 69.ase",
+    "frame": { "x": 160, "y": 80, "w": 160, "h": 80 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 160, "h": 80 },
+    "sourceSize": { "w": 160, "h": 80 },
+    "duration": 85
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3-rc4-x64",
+  "image": "ra_chest.png",
+  "format": "RGBA8888",
+  "size": { "w": 1120, "h": 480 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "deactivate", "from": 0, "to": 5, "direction": "forward", "color": "#000000ff" },
+   { "name": "deactivated", "from": 6, "to": 6, "direction": "forward", "color": "#000000ff" },
+   { "name": "activate", "from": 7, "to": 18, "direction": "forward", "color": "#000000ff" },
+   { "name": "idle", "from": 19, "to": 19, "direction": "forward", "color": "#000000ff" },
+   { "name": "walk", "from": 20, "to": 29, "direction": "forward", "color": "#000000ff" },
+   { "name": "dash", "from": 30, "to": 35, "direction": "forward", "color": "#000000ff" },
+   { "name": "dash_loop", "from": 34, "to": 35, "direction": "forward", "color": "#000000ff" },
+   { "name": "jump", "from": 36, "to": 41, "direction": "forward", "color": "#000000ff" },
+   { "name": "jump_loop", "from": 40, "to": 41, "direction": "forward", "color": "#000000ff" },
+   { "name": "fall", "from": 42, "to": 44, "direction": "forward", "color": "#000000ff" },
+   { "name": "recover", "from": 45, "to": 47, "direction": "forward", "color": "#000000ff" },
+   { "name": "punch_1", "from": 48, "to": 59, "direction": "forward", "color": "#000000ff" },
+   { "name": "punch_2", "from": 54, "to": 59, "direction": "forward", "color": "#000000ff" },
+   { "name": "punch_3", "from": 60, "to": 67, "direction": "forward", "color": "#000000ff" },
+   { "name": "punch_end", "from": 68, "to": 69, "direction": "forward", "color": "#000000ff" }
+  ]
+ }
+}

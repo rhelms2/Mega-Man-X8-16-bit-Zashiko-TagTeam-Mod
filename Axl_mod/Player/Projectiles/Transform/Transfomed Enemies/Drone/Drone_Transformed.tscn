@@ -1,0 +1,187 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://Axl_mod/Player/Projectiles/Transform/Transfomed Enemies/TransformedEnemyDamage.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Enemy Collision Detector.gd" type="Script" id=2]
+[ext_resource path="res://Axl_mod/Player/Projectiles/Transform/Transfomed Enemies/SimpleProjectile_Transformed.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Axl_mod/Player/Projectiles/Transform/Transfomed Enemies/Drone/Drone_Transformed.gd" type="Script" id=4]
+[ext_resource path="res://src/Actors/Enemies/Drone/drone_shader.tres" type="Material" id=5]
+[ext_resource path="res://Axl_mod/Player/Projectiles/Transform/Transfomed Enemies/Drone/RotateAndShoot_Transformed.gd" type="Script" id=6]
+[ext_resource path="res://src/Actors/Player/BossWeapons/DarkArrow/Tracker.gd" type="Script" id=7]
+[ext_resource path="res://src/Sounds/Drone - Rotate.ogg" type="AudioStream" id=9]
+[ext_resource path="res://src/Sounds/HIT.wav" type="AudioStream" id=10]
+[ext_resource path="res://src/Sounds/LEMON_SHOT2.wav" type="AudioStream" id=11]
+[ext_resource path="res://src/Actors/Enemies/Drone/drone_base.res" type="SpriteFrames" id=16]
+[ext_resource path="res://src/Actors/InheritorAnimatedSprite.gd" type="Script" id=23]
+[ext_resource path="res://src/Actors/Enemies/Drone/drone_cannon.res" type="SpriteFrames" id=24]
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 12, 10 )
+
+[sub_resource type="RectangleShape2D" id=16]
+extents = Vector2( 12, 10 )
+
+[sub_resource type="CircleShape2D" id=17]
+radius = 209.0
+
+[node name="DroneTransformed" type="KinematicBody2D" groups=["Enemy Transformed", "Player"]]
+z_index = 7
+collision_layer = 8192
+collision_mask = 1073743617
+script = ExtResource( 4 )
+direction_copy = false
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 5 )
+z_index = 3
+frames = ExtResource( 16 )
+animation = "idle"
+frame = 2
+playing = true
+flip_h = true
+
+[node name="animatedSprite" type="AnimatedSprite" parent="animatedSprite"]
+pause_mode = 2
+material = ExtResource( 5 )
+z_index = -1
+frames = ExtResource( 24 )
+animation = "idle"
+playing = true
+flip_h = true
+script = ExtResource( 23 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 15 )
+
+[node name="Enemy Collision Detector" type="KinematicBody2D" parent="." groups=["Enemy Transformed", "Player"]]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy Collision Detector"]
+modulate = Color( 1, 0.913725, 0, 1 )
+position = Vector2( -4.76837e-07, 0 )
+shape = SubResource( 16 )
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 1 )
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+stream = ExtResource( 10 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="shot_position" type="Node2D" parent="."]
+
+[node name="RotateAndShoot" type="Node2D" parent="."]
+script = ExtResource( 6 )
+actions = [ "Event" ]
+projectile = ExtResource( 3 )
+
+[node name="shot_sound" type="AudioStreamPlayer2D" parent="RotateAndShoot"]
+stream = ExtResource( 11 )
+volume_db = -14.483
+pitch_scale = 1.47
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="rotate" type="AudioStreamPlayer2D" parent="RotateAndShoot"]
+stream = ExtResource( 9 )
+volume_db = -19.304
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="tracker" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 8
+script = ExtResource( 7 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="tracker"]
+shape = SubResource( 17 )
+
+[node name="_raycasts" type="Node2D" parent="."]
+visible = false
+
+[node name="Wallcheck Right" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 2, -15 )
+enabled = true
+cast_to = Vector2( 6, 0 )
+collision_mask = 1537
+
+[node name="Wallcheck Right2" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 2, 0 )
+enabled = true
+cast_to = Vector2( 6, 0 )
+collision_mask = 1537
+
+[node name="Wallcheck Right3" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 2, 14.95 )
+enabled = true
+cast_to = Vector2( 6, 0 )
+collision_mask = 1537
+
+[node name="Wallcheck Left" type="RayCast2D" parent="_raycasts"]
+position = Vector2( -2, -15 )
+enabled = true
+cast_to = Vector2( -6, 0 )
+collision_mask = 1537
+
+[node name="Wallcheck Left2" type="RayCast2D" parent="_raycasts"]
+position = Vector2( -2, 0 )
+enabled = true
+exclude_parent = false
+cast_to = Vector2( -6, 0 )
+collision_mask = 1537
+
+[node name="Wallcheck Left3" type="RayCast2D" parent="_raycasts"]
+position = Vector2( -2, 14.95 )
+enabled = true
+cast_to = Vector2( -6, 0 )
+collision_mask = 1537
+
+[node name="WallJumpCast Right" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 2, -14 )
+enabled = true
+cast_to = Vector2( 13, 0 )
+collision_mask = 1537
+
+[node name="WallJumpCast Right2" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 2, 0 )
+enabled = true
+cast_to = Vector2( 13, 0 )
+collision_mask = 1537
+
+[node name="WallJumpCast Right3" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 2, 15 )
+enabled = true
+cast_to = Vector2( 13, 0 )
+collision_mask = 1537
+
+[node name="WallJumpCast Left" type="RayCast2D" parent="_raycasts"]
+position = Vector2( -2, -14 )
+enabled = true
+cast_to = Vector2( -13, 0 )
+collision_mask = 1537
+
+[node name="WallJumpCast Left2" type="RayCast2D" parent="_raycasts"]
+position = Vector2( -2, 0 )
+enabled = true
+cast_to = Vector2( -13, 0 )
+collision_mask = 1537
+
+[node name="WallJumpCast Left3" type="RayCast2D" parent="_raycasts"]
+position = Vector2( -2, 15 )
+enabled = true
+cast_to = Vector2( -13, 0 )
+collision_mask = 1537
+
+[node name="Groundcheck" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 0, 15 )
+enabled = true
+cast_to = Vector2( 0, 8 )
+
+[connection signal="body_entered" from="tracker" to="tracker" method="_on_tracker_body_entered"]
+[connection signal="body_exited" from="tracker" to="tracker" method="_on_tracker_body_exited"]

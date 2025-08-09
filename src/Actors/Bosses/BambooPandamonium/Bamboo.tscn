@@ -1,0 +1,213 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Bosses/BambooPandamonium/Bamboo.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Bosses/BambooPandamonium/bamboo.res" type="SpriteFrames" id=3]
+[ext_resource path="res://src/Actors/Bosses/BambooPandamonium/DamageReceiver.gd" type="Script" id=4]
+[ext_resource path="res://src/Actors/Bosses/BambooPandamonium/blinker.gd" type="Script" id=5]
+[ext_resource path="res://src/Actors/Bosses/BambooPandamonium/Health.gd" type="Script" id=6]
+[ext_resource path="res://src/Effects/Textures/explosion.png" type="Texture" id=7]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=8]
+[ext_resource path="res://src/Actors/Bosses/BambooPandamonium/BambooDeath.gd" type="Script" id=9]
+[ext_resource path="res://src/Effects/Materials/RemainsParticle.tres" type="Material" id=10]
+[ext_resource path="res://src/Sounds/HIT.wav" type="AudioStream" id=11]
+[ext_resource path="res://src/Effects/Textures/remains_green.png" type="Texture" id=12]
+[ext_resource path="res://src/Effects/Materials/explosion_pillar.tres" type="Material" id=13]
+[ext_resource path="res://src/Sounds/56 - MMX - Enemy Death.wav" type="AudioStream" id=14]
+[ext_resource path="res://src/Actors/Bosses/BambooPandamonium/BossDetector.gd" type="Script" id=15]
+[ext_resource path="res://src/Sounds/Panda - Bamboo Rise.ogg" type="AudioStream" id=16]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 14, 128 )
+
+[sub_resource type="RectangleShape2D" id=2]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 5, 125 )
+
+[sub_resource type="RectangleShape2D" id=14]
+extents = Vector2( 6, 128 )
+
+[sub_resource type="CanvasItemMaterial" id=13]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 4
+particles_anim_loop = false
+
+[sub_resource type="CanvasItemMaterial" id=12]
+render_priority = -1
+particles_animation = true
+particles_anim_h_frames = 6
+particles_anim_v_frames = 3
+particles_anim_loop = false
+
+[node name="Bamboo" type="Node2D"]
+z_index = 6
+script = ExtResource( 2 )
+
+[node name="rigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2( 0, -29 )
+z_index = 5
+collision_layer = 1024
+collision_mask = 0
+mode = 1
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="rigidBody2D"]
+position = Vector2( 0, -96 )
+shape = SubResource( 1 )
+disabled = true
+
+[node name="start" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -29 )
+frames = ExtResource( 3 )
+animation = "intro"
+frame = 5
+playing = true
+
+[node name="body1" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 0, -64 )
+frames = ExtResource( 3 )
+animation = "end"
+
+[node name="body2" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 0, -128 )
+frames = ExtResource( 3 )
+animation = "end"
+
+[node name="body3" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 0, -192 )
+frames = ExtResource( 3 )
+animation = "end"
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+position = Vector2( 0, -26 )
+script = ExtResource( 1 )
+damage = 4.0
+
+[node name="area2D" type="Area2D" parent="DamageOnTouch"]
+position = Vector2( 0, 16 )
+collision_layer = 0
+collision_mask = 2
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="DamageOnTouch/area2D"]
+shape = SubResource( 2 )
+
+[node name="DamageOnTouch2" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 1 )
+active = false
+damage = 4.0
+
+[node name="area2D" type="Area2D" parent="DamageOnTouch2"]
+position = Vector2( 0, 16 )
+collision_layer = 0
+collision_mask = 2
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="DamageOnTouch2/area2D"]
+position = Vector2( 0, -115 )
+shape = SubResource( 3 )
+
+[node name="DamageReceiver" type="Area2D" parent="."]
+position = Vector2( 0, -29 )
+collision_layer = 0
+collision_mask = 4
+script = ExtResource( 4 )
+health_path = NodePath("../Health")
+active = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="DamageReceiver"]
+position = Vector2( 0, -96 )
+shape = SubResource( 14 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="BossDetector" type="Area2D" parent="."]
+position = Vector2( 0, -29 )
+collision_layer = 0
+collision_mask = 8
+script = ExtResource( 15 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="BossDetector"]
+position = Vector2( 0, -96 )
+shape = SubResource( 1 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Blinker" type="Node" parent="."]
+script = ExtResource( 5 )
+
+[node name="Health" type="Node" parent="."]
+script = ExtResource( 6 )
+current_health = 6
+
+[node name="BambooDeath" type="Node2D" parent="."]
+position = Vector2( 0, -29 )
+script = ExtResource( 9 )
+
+[node name="explosion" type="Particles2D" parent="BambooDeath"]
+material = SubResource( 13 )
+position = Vector2( 0, -65 )
+z_index = 2
+emitting = false
+lifetime = 2.0
+one_shot = true
+explosiveness = 0.9
+local_coords = false
+process_material = ExtResource( 13 )
+texture = ExtResource( 7 )
+
+[node name="remains" type="Particles2D" parent="BambooDeath"]
+material = SubResource( 12 )
+position = Vector2( 0, -57 )
+z_index = -1
+emitting = false
+amount = 12
+lifetime = 2.0
+one_shot = true
+explosiveness = 1.0
+visibility_rect = Rect2( -600, -100, 1200, 200 )
+process_material = ExtResource( 10 )
+texture = ExtResource( 12 )
+
+[node name="hit" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 0, -29 )
+stream = ExtResource( 11 )
+volume_db = -6.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 8 )
+
+[node name="appear" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 0, -29 )
+stream = ExtResource( 16 )
+volume_db = -15.0
+autoplay = true
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 8 )
+
+[node name="death" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 0, -29 )
+stream = ExtResource( 14 )
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 8 )
+
+[connection signal="expire" from="." to="Health" method="set_health_to_zero"]
+[connection signal="solidified" from="." to="DamageReceiver" method="activate"]
+[connection signal="body_entered" from="DamageReceiver" to="DamageReceiver" method="_on_area2D_body_entered"]
+[connection signal="body_exited" from="DamageReceiver" to="DamageReceiver" method="_on_area2D_body_exited"]
+[connection signal="received_damage" from="DamageReceiver" to="Health" method="_on_DamageReceiver_received_damage"]
+[connection signal="body_entered" from="BossDetector" to="BossDetector" method="_on_area2D_body_entered"]
+[connection signal="boss_detected" from="BossDetector" to="." method="expire"]
+[connection signal="reduced_health" from="Health" to="Blinker" method="blink"]
+[connection signal="reduced_health" from="Health" to="hit" method="play_rp"]
+[connection signal="zero_health" from="Health" to="." method="_on_Health_zero_health"]
+[connection signal="zero_health" from="Health" to="DamageReceiver" method="deactivate"]
+[connection signal="zero_health" from="Health" to="BambooDeath" method="_on_Health_zero_health"]
+[connection signal="zero_health" from="Health" to="death" method="play_rp"]

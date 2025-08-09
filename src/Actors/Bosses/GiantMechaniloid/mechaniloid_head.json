@@ -1,0 +1,712 @@
+{ "frames": [
+   {
+    "filename": "head_mechaniloid_front 0.ase",
+    "frame": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 1.ase",
+    "frame": { "x": 72, "y": 0, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 2.ase",
+    "frame": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 168
+   },
+   {
+    "filename": "head_mechaniloid_front 3.ase",
+    "frame": { "x": 144, "y": 0, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 168
+   },
+   {
+    "filename": "head_mechaniloid_front 4.ase",
+    "frame": { "x": 216, "y": 0, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 5.ase",
+    "frame": { "x": 216, "y": 0, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 6.ase",
+    "frame": { "x": 216, "y": 0, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 7.ase",
+    "frame": { "x": 144, "y": 0, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 168
+   },
+   {
+    "filename": "head_mechaniloid_front 8.ase",
+    "frame": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 168
+   },
+   {
+    "filename": "head_mechaniloid_front 9.ase",
+    "frame": { "x": 72, "y": 0, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 10.ase",
+    "frame": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 11.ase",
+    "frame": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 12.ase",
+    "frame": { "x": 288, "y": 0, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 13.ase",
+    "frame": { "x": 360, "y": 0, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 14.ase",
+    "frame": { "x": 432, "y": 0, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 42
+   },
+   {
+    "filename": "head_mechaniloid_front 15.ase",
+    "frame": { "x": 0, "y": 94, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 42
+   },
+   {
+    "filename": "head_mechaniloid_front 16.ase",
+    "frame": { "x": 72, "y": 94, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 42
+   },
+   {
+    "filename": "head_mechaniloid_front 17.ase",
+    "frame": { "x": 144, "y": 94, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 42
+   },
+   {
+    "filename": "head_mechaniloid_front 18.ase",
+    "frame": { "x": 432, "y": 0, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 42
+   },
+   {
+    "filename": "head_mechaniloid_front 19.ase",
+    "frame": { "x": 0, "y": 94, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 42
+   },
+   {
+    "filename": "head_mechaniloid_front 20.ase",
+    "frame": { "x": 432, "y": 0, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 42
+   },
+   {
+    "filename": "head_mechaniloid_front 21.ase",
+    "frame": { "x": 216, "y": 94, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 42
+   },
+   {
+    "filename": "head_mechaniloid_front 22.ase",
+    "frame": { "x": 288, "y": 94, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 42
+   },
+   {
+    "filename": "head_mechaniloid_front 23.ase",
+    "frame": { "x": 360, "y": 94, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 42
+   },
+   {
+    "filename": "head_mechaniloid_front 24.ase",
+    "frame": { "x": 432, "y": 94, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 42
+   },
+   {
+    "filename": "head_mechaniloid_front 25.ase",
+    "frame": { "x": 0, "y": 188, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 42
+   },
+   {
+    "filename": "head_mechaniloid_front 26.ase",
+    "frame": { "x": 72, "y": 188, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 42
+   },
+   {
+    "filename": "head_mechaniloid_front 27.ase",
+    "frame": { "x": 144, "y": 188, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 42
+   },
+   {
+    "filename": "head_mechaniloid_front 28.ase",
+    "frame": { "x": 216, "y": 188, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 42
+   },
+   {
+    "filename": "head_mechaniloid_front 29.ase",
+    "frame": { "x": 144, "y": 188, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 42
+   },
+   {
+    "filename": "head_mechaniloid_front 30.ase",
+    "frame": { "x": 216, "y": 188, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 42
+   },
+   {
+    "filename": "head_mechaniloid_front 31.ase",
+    "frame": { "x": 216, "y": 188, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 42
+   },
+   {
+    "filename": "head_mechaniloid_front 32.ase",
+    "frame": { "x": 288, "y": 188, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 33.ase",
+    "frame": { "x": 360, "y": 188, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 34.ase",
+    "frame": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 35.ase",
+    "frame": { "x": 432, "y": 188, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 36.ase",
+    "frame": { "x": 0, "y": 282, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 37.ase",
+    "frame": { "x": 72, "y": 282, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 38.ase",
+    "frame": { "x": 144, "y": 282, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 39.ase",
+    "frame": { "x": 216, "y": 282, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 40.ase",
+    "frame": { "x": 216, "y": 282, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 24
+   },
+   {
+    "filename": "head_mechaniloid_front 41.ase",
+    "frame": { "x": 216, "y": 282, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 24
+   },
+   {
+    "filename": "head_mechaniloid_front 42.ase",
+    "frame": { "x": 216, "y": 282, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 24
+   },
+   {
+    "filename": "head_mechaniloid_front 43.ase",
+    "frame": { "x": 216, "y": 282, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 24
+   },
+   {
+    "filename": "head_mechaniloid_front 44.ase",
+    "frame": { "x": 216, "y": 282, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 24
+   },
+   {
+    "filename": "head_mechaniloid_front 45.ase",
+    "frame": { "x": 216, "y": 282, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 24
+   },
+   {
+    "filename": "head_mechaniloid_front 46.ase",
+    "frame": { "x": 288, "y": 282, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 42
+   },
+   {
+    "filename": "head_mechaniloid_front 47.ase",
+    "frame": { "x": 288, "y": 282, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 42
+   },
+   {
+    "filename": "head_mechaniloid_front 48.ase",
+    "frame": { "x": 360, "y": 282, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 42
+   },
+   {
+    "filename": "head_mechaniloid_front 49.ase",
+    "frame": { "x": 360, "y": 282, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 42
+   },
+   {
+    "filename": "head_mechaniloid_front 50.ase",
+    "frame": { "x": 432, "y": 282, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 42
+   },
+   {
+    "filename": "head_mechaniloid_front 51.ase",
+    "frame": { "x": 432, "y": 282, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 42
+   },
+   {
+    "filename": "head_mechaniloid_front 52.ase",
+    "frame": { "x": 0, "y": 376, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 42
+   },
+   {
+    "filename": "head_mechaniloid_front 53.ase",
+    "frame": { "x": 0, "y": 376, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 54.ase",
+    "frame": { "x": 72, "y": 376, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 55.ase",
+    "frame": { "x": 144, "y": 376, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 56.ase",
+    "frame": { "x": 144, "y": 376, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 57.ase",
+    "frame": { "x": 216, "y": 376, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 58.ase",
+    "frame": { "x": 288, "y": 376, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 59.ase",
+    "frame": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 60.ase",
+    "frame": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 61.ase",
+    "frame": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 62.ase",
+    "frame": { "x": 360, "y": 376, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 63.ase",
+    "frame": { "x": 432, "y": 376, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 64.ase",
+    "frame": { "x": 0, "y": 470, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 42
+   },
+   {
+    "filename": "head_mechaniloid_front 65.ase",
+    "frame": { "x": 72, "y": 470, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 66.ase",
+    "frame": { "x": 144, "y": 470, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 67.ase",
+    "frame": { "x": 144, "y": 470, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 68.ase",
+    "frame": { "x": 216, "y": 470, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 42
+   },
+   {
+    "filename": "head_mechaniloid_front 69.ase",
+    "frame": { "x": 288, "y": 470, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 42
+   },
+   {
+    "filename": "head_mechaniloid_front 70.ase",
+    "frame": { "x": 288, "y": 470, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 42
+   },
+   {
+    "filename": "head_mechaniloid_front 71.ase",
+    "frame": { "x": 360, "y": 470, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 72.ase",
+    "frame": { "x": 432, "y": 470, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 73.ase",
+    "frame": { "x": 0, "y": 564, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 74.ase",
+    "frame": { "x": 288, "y": 0, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   },
+   {
+    "filename": "head_mechaniloid_front 75.ase",
+    "frame": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": { "x": 0, "y": 0, "w": 72, "h": 94 },
+    "sourceSize": { "w": 72, "h": 94 },
+    "duration": 84
+   }
+ ],
+ "meta": {
+  "app": "https://www.aseprite.org/",
+  "version": "1.3-rc6-x64",
+  "image": "mechaniloid_head.png",
+  "format": "RGBA8888",
+  "size": { "w": 504, "h": 658 },
+  "scale": "1",
+  "frameTags": [
+   { "name": "idle", "from": 0, "to": 10, "direction": "forward", "color": "#000000ff" },
+   { "name": "laser_prepare", "from": 11, "to": 14, "direction": "forward", "color": "#000000ff" },
+   { "name": "laser_prepare_loop", "from": 15, "to": 18, "direction": "forward", "color": "#000000ff" },
+   { "name": "laser", "from": 19, "to": 28, "direction": "forward", "color": "#000000ff" },
+   { "name": "laser_end_loop", "from": 29, "to": 30, "direction": "forward", "color": "#000000ff" },
+   { "name": "laser_end", "from": 31, "to": 34, "direction": "forward", "color": "#000000ff" },
+   { "name": "swipe_prepare", "from": 35, "to": 39, "direction": "forward", "color": "#000000ff" },
+   { "name": "swipe_prepare_loop", "from": 40, "to": 45, "direction": "forward", "color": "#000000ff" },
+   { "name": "swipe_start", "from": 46, "to": 51, "direction": "forward", "color": "#000000ff" },
+   { "name": "swipe", "from": 52, "to": 55, "direction": "forward", "color": "#000000ff" },
+   { "name": "swipe_end", "from": 56, "to": 60, "direction": "forward", "color": "#000000ff" },
+   { "name": "smash_prepare", "from": 61, "to": 66, "direction": "forward", "color": "#000000ff" },
+   { "name": "smash_start", "from": 67, "to": 69, "direction": "forward", "color": "#000000ff" },
+   { "name": "smash", "from": 70, "to": 72, "direction": "forward", "color": "#000000ff" },
+   { "name": "smash_end", "from": 73, "to": 75, "direction": "forward", "color": "#000000ff" }
+  ]
+ }
+}

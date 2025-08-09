@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Panda - Bamboo Rise.ogg-d5b0a46850ceaa00fb31745ff7d44af6.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/Panda - Bamboo Rise.ogg"
+dest_files=[ "res://.import/Panda - Bamboo Rise.ogg-d5b0a46850ceaa00fb31745ff7d44af6.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

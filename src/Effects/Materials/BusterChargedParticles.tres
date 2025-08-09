@@ -1,0 +1,25 @@
+[gd_resource type="ParticlesMaterial" load_steps=3 format=2]
+
+[sub_resource type="Gradient" id=8]
+offsets = PoolRealArray( 0.469828, 1 )
+colors = PoolColorArray( 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=9]
+gradient = SubResource( 8 )
+
+[resource]
+resource_name = "buster_charged2"
+lifetime_randomness = 0.33
+emission_shape = 2
+emission_box_extents = Vector3( 5, 15, 0 )
+flag_disable_z = true
+direction = Vector3( -1, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity_random = 0.1
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 250.0
+scale_random = 1.0
+color_ramp = SubResource( 9 )
+anim_speed = 1.0

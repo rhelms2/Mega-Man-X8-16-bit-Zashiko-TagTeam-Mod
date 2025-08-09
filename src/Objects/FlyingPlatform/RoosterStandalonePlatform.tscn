@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://src/Objects/FlyingPlatform/fly_platform.res" type="SpriteFrames" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 40, 11 )
+
+[node name="StaticFlyingPlatform" type="KinematicBody2D"]
+collision_mask = 0
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 3 )
+z_index = 2
+shape = SubResource( 1 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+z_index = 32
+z_as_relative = false
+frames = ExtResource( 1 )
+animation = "flying"
+frame = 2
+playing = true

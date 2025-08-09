@@ -1,0 +1,428 @@
+[gd_scene load_steps=53 format=2]
+
+[ext_resource path="res://src/Actors/Enemies/AI.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Modules/Enemy/Enemy.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Modules/Enemy/EnemyDamage.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=4]
+[ext_resource path="res://src/Actors/NewStateMachine/audioplayer.gd" type="Script" id=5]
+[ext_resource path="res://src/Actors/Enemies/Big Tractor/AttackIdle.gd" type="Script" id=6]
+[ext_resource path="res://src/Effects/Textures/ridearmor_punch.png" type="Texture" id=7]
+[ext_resource path="res://src/Actors/Props/RideArmor/RepeatAnimation.gd" type="Script" id=8]
+[ext_resource path="res://src/Sounds/HIT.wav" type="AudioStream" id=9]
+[ext_resource path="res://src/Effects/Textures/explosion.png" type="Texture" id=10]
+[ext_resource path="res://SpriteEffect.gd" type="Script" id=11]
+[ext_resource path="res://src/Actors/Props/RideArmor/armor.gd" type="Script" id=12]
+[ext_resource path="res://src/Effects/Materials/mat_ridearmor.tres" type="Material" id=13]
+[ext_resource path="res://src/Actors/Props/RideArmor/ridearmord_neararm.res" type="SpriteFrames" id=14]
+[ext_resource path="res://src/Actors/Props/RideArmor/ridearmord_back.res" type="SpriteFrames" id=15]
+[ext_resource path="res://src/Actors/Props/RideArmor/ridearmord_legs.res" type="SpriteFrames" id=16]
+[ext_resource path="res://src/Actors/Props/RideArmor/ridearmord_chest.res" type="SpriteFrames" id=17]
+[ext_resource path="res://src/Actors/Props/RideArmor/ride_armor.res" type="SpriteFrames" id=18]
+[ext_resource path="res://src/Actors/Props/RideArmor/pilot_sprites/ra_chest.res" type="SpriteFrames" id=19]
+[ext_resource path="res://src/Effects/Remains.gd" type="Script" id=20]
+[ext_resource path="res://src/Actors/Props/RideArmor/ridearmord_fararm.res" type="SpriteFrames" id=21]
+[ext_resource path="res://src/Actors/Props/RideArmor/pilot_sprites/ra_arms.res" type="SpriteFrames" id=22]
+[ext_resource path="res://src/Actors/Props/RideArmor/pilot_sprites/ra_head.res" type="SpriteFrames" id=23]
+[ext_resource path="res://src/Actors/Props/RideArmor/ride_armor_cannon.res" type="SpriteFrames" id=24]
+[ext_resource path="res://src/Actors/Props/RideArmor/pilot_sprites/ra_reploid.res" type="SpriteFrames" id=25]
+[ext_resource path="res://src/Actors/MeleeEnemyAttack.gd" type="Script" id=26]
+[ext_resource path="res://src/Actors/Enemies/RidearmorReploid/Pursuit.gd" type="Script" id=27]
+[ext_resource path="res://src/Actors/Enemies/RidearmorReploid/Punch.gd" type="Script" id=28]
+[ext_resource path="res://src/Actors/Enemies/RidearmorReploid/Walk.gd" type="Script" id=29]
+[ext_resource path="res://src/Actors/Enemies/RidearmorReploid/Jump.gd" type="Script" id=30]
+[ext_resource path="res://src/Sounds/Ridearmor - Punch.ogg" type="AudioStream" id=31]
+[ext_resource path="res://src/Effects/Materials/RemainsParticle.tres" type="Material" id=32]
+[ext_resource path="res://src/Actors/Modules/Enemy/EnemyDeath.gd" type="Script" id=33]
+[ext_resource path="res://src/Sounds/56 - MMX - Enemy Death.wav" type="AudioStream" id=34]
+[ext_resource path="res://src/Actors/Enemies/SwordReploid/reploid_remains_palette.png" type="Texture" id=35]
+[ext_resource path="res://src/Actors/Props/RideArmor/RideArmorNoCannon.tscn" type="PackedScene" id=36]
+[ext_resource path="res://src/Actors/Enemies/RidearmorReploid/SpawnOnDeath.gd" type="Script" id=37]
+[ext_resource path="res://src/Sounds/Ridearmor - Step.ogg" type="AudioStream" id=38]
+[ext_resource path="res://src/Sounds/Ridearmor - Jump.ogg" type="AudioStream" id=39]
+
+[sub_resource type="RectangleShape2D" id=246]
+extents = Vector2( 217, 42.5 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 14, 27.5 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 25, 27.5 )
+
+[sub_resource type="CanvasItemMaterial" id=8]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 4
+particles_anim_loop = false
+
+[sub_resource type="Curve" id=238]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=239]
+curve = SubResource( 238 )
+
+[sub_resource type="ParticlesMaterial" id=244]
+resource_local_to_scene = true
+emission_shape = 1
+emission_sphere_radius = 25.0
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 239 )
+
+[sub_resource type="CanvasItemMaterial" id=66]
+particles_animation = true
+particles_anim_h_frames = 4
+particles_anim_v_frames = 4
+particles_anim_loop = false
+
+[sub_resource type="Curve" id=242]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=243]
+curve = SubResource( 242 )
+
+[sub_resource type="ParticlesMaterial" id=245]
+resource_local_to_scene = true
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 243 )
+
+[sub_resource type="CanvasItemMaterial" id=12]
+render_priority = -1
+particles_animation = true
+particles_anim_h_frames = 6
+particles_anim_v_frames = 3
+particles_anim_loop = false
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 20, 20.5 )
+
+[node name="RidearmorReploid" type="KinematicBody2D" groups=["Enemies"]]
+z_index = 3
+collision_layer = 0
+collision_mask = 66049
+script = ExtResource( 2 )
+max_health = 20.0
+
+[node name="AI" type="Node2D" parent="."]
+script = ExtResource( 1 )
+on_idle = [ NodePath("../Idle") ]
+on_see_player = [ NodePath("../Pursuit") ]
+
+[node name="vision" type="Area2D" parent="AI"]
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="AI/vision"]
+position = Vector2( 0, 1.5 )
+shape = SubResource( 246 )
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 15.5 )
+z_index = 9
+shape = SubResource( 2 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+scale = Vector2( 2, 2 )
+rect = Rect2( -5, -5, 10, 10 )
+
+[node name="area2D" type="Area2D" parent="."]
+z_index = 8
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+position = Vector2( 0, 15.5 )
+shape = SubResource( 5 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+visible = false
+script = ExtResource( 4 )
+damage = 6.0
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 3 )
+minimum_damage = 2.0
+max_freeze_hits = 6
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+stream = ExtResource( 9 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="EnemyDeath" type="Node2D" parent="."]
+position = Vector2( 0, -15 )
+script = ExtResource( 33 )
+should_spawn_item = false
+explosion_duration = 0.0
+
+[node name="Explosion Particles" type="Particles2D" parent="EnemyDeath"]
+material = SubResource( 8 )
+position = Vector2( 0, 0.5 )
+z_index = 2
+emitting = false
+amount = 15
+lifetime = 2.0
+local_coords = false
+process_material = SubResource( 244 )
+texture = ExtResource( 10 )
+
+[node name="Remains" type="Particles2D" parent="EnemyDeath"]
+material = SubResource( 66 )
+position = Vector2( 0, 0.5 )
+z_index = 10
+emitting = false
+amount = 1
+lifetime = 2.0
+one_shot = true
+local_coords = false
+process_material = SubResource( 245 )
+texture = ExtResource( 10 )
+script = ExtResource( 20 )
+
+[node name="remains_particles" type="Particles2D" parent="EnemyDeath/Remains"]
+material = SubResource( 12 )
+z_index = -1
+emitting = false
+amount = 4
+lifetime = 2.0
+one_shot = true
+explosiveness = 1.0
+visibility_rect = Rect2( -600, -100, 1200, 200 )
+process_material = ExtResource( 32 )
+texture = ExtResource( 35 )
+
+[node name="timer" type="Timer" parent="EnemyDeath/Remains"]
+wait_time = 2.0
+one_shot = true
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="EnemyDeath"]
+stream = ExtResource( 34 )
+volume_db = -4.267
+max_distance = 600.0
+attenuation = 0.951366
+bus = "SFX"
+
+[node name="Pursuit" type="Node2D" parent="."]
+script = ExtResource( 27 )
+actions = [ "Event" ]
+jump_velocity = 280.0
+nearby_distance = Vector2( 64, 32 )
+
+[node name="Walk" type="Node2D" parent="Pursuit"]
+script = ExtResource( 29 )
+hard_conflicts = [ NodePath("../Punch") ]
+soft_conflicts = [ NodePath("../Jump") ]
+
+[node name="Punch" type="Node2D" parent="Pursuit"]
+script = ExtResource( 28 )
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="Jump" type="Node2D" parent="Pursuit"]
+script = ExtResource( 30 )
+__meta__ = {
+"_editor_description_": ""
+}
+hard_conflicts = [ NodePath("../Punch") ]
+
+[node name="PunchHitbox" type="Node2D" parent="Pursuit"]
+script = ExtResource( 26 )
+active = false
+damage = 6.0
+owner_character = NodePath("../..")
+
+[node name="area2D" type="Area2D" parent="Pursuit/PunchHitbox"]
+position = Vector2( 0, 5 )
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="Pursuit/PunchHitbox/area2D"]
+position = Vector2( 42, 2.5 )
+shape = SubResource( 4 )
+
+[node name="wind" type="Sprite" parent="Pursuit/PunchHitbox/area2D/collisionShape2D"]
+visible = false
+position = Vector2( -2, 2.5 )
+z_index = 16
+texture = ExtResource( 7 )
+hframes = 3
+vframes = 2
+script = ExtResource( 11 )
+animation_speed = 38.0
+one_shot = true
+
+[node name="wallcheck" type="RayCast2D" parent="Pursuit/PunchHitbox/area2D/collisionShape2D"]
+position = Vector2( -42, 18.5 )
+z_index = 11
+enabled = true
+cast_to = Vector2( 16, 0 )
+collision_mask = 65537
+
+[node name="punch" type="AudioStreamPlayer2D" parent="Pursuit"]
+stream = ExtResource( 31 )
+volume_db = -6.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 5 )
+minimum_time = 0.15
+
+[node name="step" type="AudioStreamPlayer2D" parent="Pursuit"]
+stream = ExtResource( 38 )
+volume_db = -6.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 5 )
+
+[node name="jump" type="AudioStreamPlayer2D" parent="Pursuit"]
+stream = ExtResource( 39 )
+volume_db = -6.0
+max_distance = 600.0
+bus = "SFX"
+script = ExtResource( 5 )
+minimum_time = 0.15
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 13 )
+position = Vector2( 0, 25 )
+z_index = 5
+frames = ExtResource( 18 )
+animation = "idle"
+
+[node name="near_arm" type="AnimatedSprite" parent="animatedSprite"]
+material = ExtResource( 13 )
+z_index = 2
+frames = ExtResource( 14 )
+animation = "idle"
+offset = Vector2( 0, -15 )
+script = ExtResource( 8 )
+reference = NodePath("..")
+
+[node name="torso" type="AnimatedSprite" parent="animatedSprite"]
+material = ExtResource( 13 )
+z_index = 1
+frames = ExtResource( 17 )
+animation = "idle"
+offset = Vector2( 0, -15 )
+script = ExtResource( 8 )
+reference = NodePath("..")
+
+[node name="head_armor" type="AnimatedSprite" parent="animatedSprite/torso"]
+visible = false
+frames = ExtResource( 23 )
+animation = "idle"
+offset = Vector2( 0, -15 )
+script = ExtResource( 12 )
+reference = NodePath("../..")
+
+[node name="body_armor" type="AnimatedSprite" parent="animatedSprite/torso"]
+visible = false
+frames = ExtResource( 19 )
+animation = "idle"
+offset = Vector2( 0, -15 )
+script = ExtResource( 12 )
+reference = NodePath("../..")
+
+[node name="arms_armor" type="AnimatedSprite" parent="animatedSprite/torso"]
+visible = false
+frames = ExtResource( 22 )
+animation = "idle"
+offset = Vector2( 0, -15 )
+script = ExtResource( 12 )
+reference = NodePath("../..")
+
+[node name="pilot" type="AnimatedSprite" parent="animatedSprite/torso"]
+material = ExtResource( 13 )
+z_index = -1
+frames = ExtResource( 25 )
+animation = "idle"
+offset = Vector2( 0, -15 )
+script = ExtResource( 8 )
+__meta__ = {
+"_editor_description_": ""
+}
+reference = NodePath("..")
+
+[node name="legs" type="AnimatedSprite" parent="animatedSprite"]
+material = ExtResource( 13 )
+frames = ExtResource( 16 )
+animation = "idle"
+offset = Vector2( 0, -15 )
+script = ExtResource( 8 )
+reference = NodePath("..")
+
+[node name="back" type="AnimatedSprite" parent="animatedSprite"]
+material = ExtResource( 13 )
+z_index = -2
+frames = ExtResource( 15 )
+animation = "idle"
+offset = Vector2( 0, -15 )
+script = ExtResource( 8 )
+reference = NodePath("..")
+
+[node name="cannon" type="AnimatedSprite" parent="animatedSprite"]
+visible = false
+material = ExtResource( 13 )
+z_index = -3
+frames = ExtResource( 24 )
+animation = "idle"
+offset = Vector2( 0, -15 )
+script = ExtResource( 8 )
+reference = NodePath("..")
+
+[node name="far_arm" type="AnimatedSprite" parent="animatedSprite"]
+material = ExtResource( 13 )
+z_index = -4
+frames = ExtResource( 21 )
+animation = "idle"
+offset = Vector2( 0, -15 )
+script = ExtResource( 8 )
+reference = NodePath("..")
+
+[node name="Idle" type="Node2D" parent="."]
+script = ExtResource( 6 )
+conflicting_moves = [ "Intro", "Pursuit", "Anything" ]
+actions = [ "Event" ]
+animation = "idle"
+
+[node name="SpawnOnDeath" type="Node" parent="."]
+script = ExtResource( 37 )
+spawn = ExtResource( 36 )
+
+[connection signal="body_entered" from="AI/vision" to="AI" method="_on_vision_body_entered"]
+[connection signal="body_exited" from="AI/vision" to="AI" method="_on_vision_body_exited"]
+[connection signal="timeout" from="EnemyDeath/Remains/timer" to="EnemyDeath/Remains" method="_on_timer_timeout"]
+[connection signal="grounded" from="Pursuit" to="Pursuit/Walk" method="_on_signal"]
+[connection signal="player_nearby" from="Pursuit" to="Pursuit/Punch" method="_on_signal"]
+[connection signal="walled" from="Pursuit" to="Pursuit/Jump" method="_on_signal"]
+[connection signal="started" from="Pursuit/Walk" to="Pursuit/PunchHitbox" method="handle_direction"]
+[connection signal="step" from="Pursuit/Walk" to="Pursuit/step" method="play_rp"]
+[connection signal="cooldown_finished" from="Pursuit/Punch" to="Pursuit/Walk" method="able_to_walk_again"]
+[connection signal="initialized" from="Pursuit/Punch" to="Pursuit/punch" method="play_rp"]
+[connection signal="started" from="Pursuit/Punch" to="Pursuit/Walk" method="_on_Punch_started"]
+[connection signal="started" from="Pursuit/Punch" to="Pursuit/PunchHitbox" method="activate"]
+[connection signal="started" from="Pursuit/Punch" to="Pursuit/PunchHitbox" method="handle_direction"]
+[connection signal="started" from="Pursuit/Punch" to="Pursuit/PunchHitbox/area2D/collisionShape2D/wind" method="emit"]
+[connection signal="cooldown_finished" from="Pursuit/Jump" to="Pursuit/Walk" method="able_to_walk_again"]
+[connection signal="ended" from="Pursuit/Jump" to="Pursuit/step" method="play_rp"]
+[connection signal="started" from="Pursuit/Jump" to="Pursuit/jump" method="play_rp"]

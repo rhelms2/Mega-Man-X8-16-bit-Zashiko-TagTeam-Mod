@@ -1,0 +1,133 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://src/Actors/Modules/Enemy/EnemyDamage.gd" type="Script" id=1]
+[ext_resource path="res://src/Effects/enemy_shader.tres" type="Shader" id=2]
+[ext_resource path="res://src/Actors/Modules/Enemy/Enemy.gd" type="Script" id=3]
+[ext_resource path="res://src/Sounds/60 - MMX - Enemy Missile Fire.wav" type="AudioStream" id=4]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=5]
+[ext_resource path="res://src/Actors/Enemies/Missile Tractor/Missile.tscn" type="PackedScene" id=6]
+[ext_resource path="res://src/Actors/Enemies/Shared/LongEnemyDeath.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Actors/Enemies/AI.gd" type="Script" id=8]
+[ext_resource path="res://src/Actors/Enemies/Big Tractor/AttackIdle.gd" type="Script" id=9]
+[ext_resource path="res://src/Actors/Enemies/Missile Tractor/TripleMissileShot.gd" type="Script" id=10]
+[ext_resource path="res://src/Sounds/MISSILE_MOUNT.wav" type="AudioStream" id=11]
+[ext_resource path="res://src/Sounds/HIT.wav" type="AudioStream" id=12]
+[ext_resource path="res://src/Sounds/64 - MMX - Enemy Sound (01).wav" type="AudioStream" id=13]
+[ext_resource path="res://src/Actors/Enemies/Sprites/green_cannon.res" type="SpriteFrames" id=14]
+
+[sub_resource type="RectangleShape2D" id=67]
+extents = Vector2( 181.5, 30 )
+
+[sub_resource type="ShaderMaterial" id=63]
+resource_local_to_scene = true
+shader = ExtResource( 2 )
+shader_param/Flash = 0.0
+shader_param/Should_Blink = 0.0
+shader_param/Darken = 1.0
+shader_param/Alpha = 1.0
+shader_param/Alpha_Blink = 0.0
+
+[sub_resource type="RectangleShape2D" id=68]
+extents = Vector2( 18, 26.5 )
+
+[sub_resource type="RectangleShape2D" id=66]
+extents = Vector2( 23, 26.5 )
+
+[node name="MissileTractor" type="KinematicBody2D" groups=["Enemies"]]
+collision_layer = 0
+collision_mask = 513
+script = ExtResource( 3 )
+max_health = 15.0
+
+[node name="AI" type="Node2D" parent="."]
+script = ExtResource( 8 )
+on_idle = [ NodePath("../Idle") ]
+on_see_player = [ NodePath("../TripleMissileShot") ]
+
+[node name="vision" type="Area2D" parent="AI"]
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="AI/vision"]
+position = Vector2( -0.5, 0 )
+shape = SubResource( 67 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = SubResource( 63 )
+position = Vector2( 2, 0 )
+z_index = 1
+frames = ExtResource( 14 )
+animation = "idle"
+frame = 12
+playing = true
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 3.5 )
+shape = SubResource( 68 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+scale = Vector2( 6, 4.8 )
+rect = Rect2( -5, -5, 10, 10 )
+
+[node name="area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+position = Vector2( 0, 3.5 )
+shape = SubResource( 66 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 5 )
+damage = 3.0
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 1 )
+minimum_damage = 2.0
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+stream = ExtResource( 12 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="Idle" type="Node2D" parent="."]
+script = ExtResource( 9 )
+conflicting_moves = [ "Everything" ]
+actions = [ "Event" ]
+animation = "idle"
+
+[node name="EnemyDeath" parent="." instance=ExtResource( 7 )]
+
+[node name="TripleMissileShot" type="Node2D" parent="."]
+script = ExtResource( 10 )
+active = false
+actions = [ "Event" ]
+projectiles = [ ExtResource( 6 ), ExtResource( 6 ), ExtResource( 6 ) ]
+
+[node name="turn" type="AudioStreamPlayer2D" parent="TripleMissileShot"]
+stream = ExtResource( 13 )
+volume_db = -12.0
+max_distance = 1200.0
+bus = "SFX"
+
+[node name="prepare" type="AudioStreamPlayer2D" parent="TripleMissileShot"]
+stream = ExtResource( 11 )
+volume_db = -4.0
+pitch_scale = 0.9
+max_distance = 1200.0
+bus = "SFX"
+
+[node name="shot_sound" type="AudioStreamPlayer2D" parent="TripleMissileShot"]
+stream = ExtResource( 4 )
+volume_db = -6.0
+pitch_scale = 0.9
+max_distance = 1200.0
+bus = "SFX"
+
+[connection signal="body_entered" from="AI/vision" to="AI" method="_on_vision_body_entered"]
+[connection signal="body_exited" from="AI/vision" to="AI" method="_on_vision_body_exited"]
+[connection signal="ability_start" from="EnemyDeath" to="EnemyDeath" method="_on_EnemyDeath_ability_start"]

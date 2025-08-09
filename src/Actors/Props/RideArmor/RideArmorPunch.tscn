@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://src/Actors/Bosses/boss_sprites/iceshard.png" type="Texture" id=1]
+[ext_resource path="res://src/Actors/Props/RideArmor/RideArmorPunch.gd" type="Script" id=2]
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 1 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="SpriteFrames" id=14]
+animations = [ {
+"frames": [ SubResource( 13 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=15]
+radius = 43.0
+height = 0.0
+
+[node name="RideArmorPunch" type="KinematicBody2D" groups=["Player Projectile"]]
+z_index = 8
+collision_layer = 4
+collision_mask = 0
+script = ExtResource( 2 )
+damage = 10.0
+damage_to_weakness = 20.0
+break_guards = true
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+visible = false
+modulate = Color( 0.101961, 1, 0, 1 )
+frames = SubResource( 14 )
+playing = true
+flip_h = true
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource( 15 )

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/OST - Inferno - LavaIntro.ogg-a840bdcc0c035b670af99178219f5ff0.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/OST - Inferno - LavaIntro.ogg"
+dest_files=[ "res://.import/OST - Inferno - LavaIntro.ogg-a840bdcc0c035b670af99178219f5ff0.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Sunflower - Gun.ogg-20b6442614360c9ad87d416fcb5a817a.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/Sunflower - Gun.ogg"
+dest_files=[ "res://.import/Sunflower - Gun.ogg-20b6442614360c9ad87d416fcb5a817a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

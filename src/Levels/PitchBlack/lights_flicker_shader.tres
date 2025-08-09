@@ -1,0 +1,11 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=2]
+
+[ext_resource path="res://addons/PaletteSwap/PaletteSwap.gdshader" type="Shader" id=1]
+[ext_resource path="res://src/Levels/PitchBlack/palette_swap.png" type="Texture" id=2]
+
+[resource]
+shader = ExtResource( 1 )
+shader_param/skip_first_row = false
+shader_param/use_palette_alpha = false
+shader_param/fps = 6.0
+shader_param/palette = ExtResource( 2 )

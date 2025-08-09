@@ -1,0 +1,183 @@
+[gd_scene load_steps=26 format=2]
+
+[ext_resource path="res://src/Actors/Modules/Enemy/Enemy.gd" type="Script" id=1]
+[ext_resource path="res://src/Actors/Modules/Enemy/EnemyDamage.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Modules/Enemy/DamageOnTouch.gd" type="Script" id=3]
+[ext_resource path="res://src/Actors/Enemies/AI.gd" type="Script" id=4]
+[ext_resource path="res://src/Actors/Enemies/Small Bee/BeePatrol.gd" type="Script" id=5]
+[ext_resource path="res://src/Actors/Enemies/SmallBat/BatJump.gd" type="Script" id=6]
+[ext_resource path="res://src/Actors/Enemies/Shared/QuickEnemyDeath.tscn" type="PackedScene" id=7]
+[ext_resource path="res://src/Actors/Enemies/SmallBat/bat_remains.png" type="Texture" id=8]
+[ext_resource path="res://src/Effects/Materials/mat_batsmoke.tres" type="Material" id=9]
+[ext_resource path="res://src/Actors/rotation_particle_disabler.gd" type="Script" id=10]
+[ext_resource path="res://src/Effects/Materials/default_material.tres" type="Material" id=11]
+[ext_resource path="res://src/Sounds/HIT.wav" type="AudioStream" id=13]
+[ext_resource path="res://src/Effects/Materials/BatSmoke.tres" type="Material" id=14]
+[ext_resource path="res://src/Actors/Enemies/SmallBat/sbat.res" type="SpriteFrames" id=15]
+[ext_resource path="res://src/Actors/Enemies/SmallBat/BatPursuit.gd" type="Script" id=16]
+[ext_resource path="res://src/Effects/Textures/small_smoke.png" type="Texture" id=17]
+
+[sub_resource type="RectangleShape2D" id=47]
+extents = Vector2( 102, 86.5 )
+
+[sub_resource type="RectangleShape2D" id=15]
+extents = Vector2( 13.5, 15.5 )
+
+[sub_resource type="RectangleShape2D" id=48]
+
+[sub_resource type="Curve" id=238]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=246]
+curve = SubResource( 238 )
+
+[sub_resource type="ParticlesMaterial" id=244]
+resource_local_to_scene = true
+resource_name = "explosion"
+emission_shape = 1
+emission_sphere_radius = 25.0
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 246 )
+
+[sub_resource type="Curve" id=242]
+max_value = 3.0
+_data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=243]
+curve = SubResource( 242 )
+
+[sub_resource type="ParticlesMaterial" id=245]
+resource_local_to_scene = true
+resource_name = "remains_single"
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 1.0
+anim_speed_curve = SubResource( 243 )
+
+[node name="SmallBat" type="KinematicBody2D" groups=["Enemies"]]
+z_index = 11
+collision_layer = 0
+collision_mask = 0
+script = ExtResource( 1 )
+max_health = 1.0
+things_to_hide_on_death = [ NodePath("particles2D") ]
+
+[node name="AI" type="Node2D" parent="."]
+script = ExtResource( 4 )
+on_idle = [ NodePath("../BatPatrol") ]
+on_see_player = [ NodePath("../BatPursuit") ]
+on_touch_player = [ NodePath("../BatJump") ]
+
+[node name="vision" type="Area2D" parent="AI"]
+visible = false
+collision_layer = 0
+collision_mask = 2
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="AI/vision"]
+position = Vector2( 0, 1.5 )
+shape = SubResource( 47 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 11 )
+frames = ExtResource( 15 )
+animation = "idle"
+frame = 10
+playing = true
+flip_h = true
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2( -0.5, 1.5 )
+shape = SubResource( 15 )
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
+visible = false
+scale = Vector2( 2, 2 )
+rect = Rect2( -5, -5, 10, 10 )
+
+[node name="area2D" type="Area2D" parent="."]
+visible = false
+collision_layer = 0
+collision_mask = 6
+input_pickable = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+shape = SubResource( 48 )
+
+[node name="DamageOnTouch" type="Node2D" parent="."]
+script = ExtResource( 3 )
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 2 )
+max_freeze_hits = 1
+
+[node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Damage"]
+stream = ExtResource( 13 )
+volume_db = -6.832
+max_distance = 1200.0
+attenuation = 1e-05
+bus = "SFX"
+
+[node name="BatJump" type="Node2D" parent="."]
+script = ExtResource( 6 )
+actions = [ "Event" ]
+animation = "jump"
+
+[node name="BatPursuit" type="Node2D" parent="."]
+script = ExtResource( 16 )
+conflicting_moves = [ "BatJump" ]
+actions = [ "Event" ]
+animation = "idle"
+
+[node name="BatPatrol" type="Node2D" parent="."]
+script = ExtResource( 5 )
+conflicting_moves = [ "BatPursuit" ]
+actions = [ "Event" ]
+area = 16
+travel_time = 1.0
+rest_duration = 0.1
+ability_who_updates_patrol_area = NodePath("../BatJump")
+
+[node name="particles2D" type="Particles2D" parent="."]
+material = ExtResource( 9 )
+position = Vector2( 0, -7 )
+z_index = -1
+amount = 3
+lifetime = 0.75
+local_coords = false
+process_material = ExtResource( 14 )
+texture = ExtResource( 17 )
+
+[node name="particle_disabler" type="Node" parent="particles2D"]
+script = ExtResource( 10 )
+
+[node name="EnemyDeath" parent="." instance=ExtResource( 7 )]
+
+[node name="Explosion Particles" parent="EnemyDeath" index="0"]
+process_material = SubResource( 244 )
+
+[node name="Remains" parent="EnemyDeath" index="1"]
+process_material = SubResource( 245 )
+
+[node name="remains_particles" parent="EnemyDeath/Remains" index="0"]
+texture = ExtResource( 8 )
+
+[connection signal="body_entered" from="AI/vision" to="AI" method="_on_vision_body_entered"]
+[connection signal="body_exited" from="AI/vision" to="AI" method="_on_vision_body_exited"]
+[connection signal="ability_end" from="BatPursuit" to="BatPatrol" method="update_patrol_position"]
+
+[editable path="EnemyDeath"]

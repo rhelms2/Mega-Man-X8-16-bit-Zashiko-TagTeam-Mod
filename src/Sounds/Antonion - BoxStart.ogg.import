@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Antonion - BoxStart.ogg-55913ac25888c90205a3387879908177.oggstr"
+
+[deps]
+
+source_file="res://src/Sounds/Antonion - BoxStart.ogg"
+dest_files=[ "res://.import/Antonion - BoxStart.ogg-55913ac25888c90205a3387879908177.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

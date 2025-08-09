@@ -1,0 +1,122 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://src/Levels/Gateway/Freeway.gd" type="Script" id=1]
+[ext_resource path="res://src/Levels/Gateway/DoorClose.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Props/RideArmor/ActiveArea2D.gd" type="Script" id=4]
+[ext_resource path="res://src/Actors/NewStateMachine/debugger.gd" type="Script" id=5]
+[ext_resource path="res://src/Levels/Gateway/GatewayBossDoor.gd" type="Script" id=6]
+[ext_resource path="res://src/Objects/Door/PassThrough.gd" type="Script" id=7]
+[ext_resource path="res://src/Objects/Door/door.res" type="SpriteFrames" id=8]
+[ext_resource path="res://src/Sounds/Door - Close.wav" type="AudioStream" id=10]
+[ext_resource path="res://src/Sounds/Door - Open.wav" type="AudioStream" id=11]
+[ext_resource path="res://src/Objects/Door/Open.gd" type="Script" id=13]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 8, 29 )
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 8, 9.5 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 8, 69.78 )
+
+[node name="Door" type="StaticBody2D"]
+position = Vector2( 1377, -169 )
+z_index = -1
+collision_mask = 0
+script = ExtResource( 6 )
+able_to_open = false
+able_to_explode = false
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+pause_mode = 2
+frames = ExtResource( 8 )
+animation = "closed"
+
+[node name="Open" type="Node2D" parent="."]
+pause_mode = 2
+script = ExtResource( 13 )
+hard_conflicts = [ NodePath("../Close"), NodePath("../Freeway") ]
+
+[node name="player_detector" type="Area2D" parent="Open"]
+position = Vector2( 0, 11 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 4 )
+group = "Player"
+exceptions = [ "Props" ]
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="Open/player_detector"]
+position = Vector2( -11, -12.5 )
+shape = SubResource( 1 )
+
+[node name="open" type="AudioStreamPlayer2D" parent="Open"]
+pause_mode = 2
+stream = ExtResource( 11 )
+volume_db = -9.226
+bus = "SFX"
+
+[node name="PassThrough" type="Node2D" parent="."]
+pause_mode = 2
+script = ExtResource( 7 )
+
+[node name="Close" type="Node2D" parent="."]
+pause_mode = 2
+script = ExtResource( 2 )
+
+[node name="close" type="AudioStreamPlayer2D" parent="Close"]
+stream = ExtResource( 10 )
+volume_db = -5.226
+bus = "SFX"
+
+[node name="Freeway" type="Node2D" parent="."]
+pause_mode = 2
+script = ExtResource( 1 )
+
+[node name="open" type="AudioStreamPlayer2D" parent="Freeway"]
+pause_mode = 2
+stream = ExtResource( 11 )
+volume_db = -9.226
+bus = "SFX"
+
+[node name="player_detector" type="Area2D" parent="Freeway"]
+position = Vector2( -34, 11 )
+collision_layer = 0
+collision_mask = 2
+script = ExtResource( 4 )
+group = "Player"
+exceptions = [ "Props" ]
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="Freeway/player_detector"]
+position = Vector2( -23.2721, -19.5561 )
+rotation = 0.820305
+shape = SubResource( 3 )
+
+[node name="StateMachineVisual" type="Label" parent="."]
+pause_mode = 2
+visible = false
+margin_left = -24.0
+margin_top = -68.0
+margin_right = 16.0
+margin_bottom = -54.0
+text = "hello"
+script = ExtResource( 5 )
+
+[connection signal="start" from="Open" to="." method="_on_Open_start"]
+[connection signal="stop" from="Open" to="PassThrough" method="_on_signal"]
+[connection signal="body_entered" from="Open/player_detector" to="Open/player_detector" method="_on_area2D_body_entered"]
+[connection signal="body_exited" from="Open/player_detector" to="Open/player_detector" method="_on_area2D_body_exited"]
+[connection signal="group_body_present" from="Open/player_detector" to="Open" method="_on_signal"]
+[connection signal="start" from="PassThrough" to="." method="_on_PassThrough_start"]
+[connection signal="stop" from="PassThrough" to="Close" method="_on_signal"]
+[connection signal="start" from="Close" to="." method="_on_Close_start"]
+[connection signal="stop" from="Close" to="." method="_on_Close_stop"]
+[connection signal="start" from="Freeway" to="." method="_on_Freeway_start"]
+[connection signal="stop" from="Freeway" to="." method="_on_Freeway_stop"]
+[connection signal="waiting" from="Freeway" to="." method="_on_Freeway_wait"]
+[connection signal="body_entered" from="Freeway/player_detector" to="Freeway/player_detector" method="_on_area2D_body_entered"]
+[connection signal="body_exited" from="Freeway/player_detector" to="Freeway/player_detector" method="_on_area2D_body_exited"]
+[connection signal="group_body_present" from="Freeway/player_detector" to="Freeway" method="_on_player_present"]

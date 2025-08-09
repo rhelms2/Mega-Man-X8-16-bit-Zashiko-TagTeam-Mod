@@ -1,0 +1,35 @@
+[gd_resource type="ParticlesMaterial" load_steps=5 format=2]
+
+[sub_resource type="Curve" id=100]
+min_value = -360.0
+max_value = 360.0
+_data = [ Vector2( 0, 0 ), 0.0, 1008.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=101]
+curve = SubResource( 100 )
+
+[sub_resource type="Gradient" id=99]
+offsets = PoolRealArray( 0, 0.222222, 0.400862, 1 )
+colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0 )
+
+[sub_resource type="GradientTexture" id=98]
+gradient = SubResource( 99 )
+
+[resource]
+resource_name = "bf_leaves"
+emission_shape = 2
+emission_box_extents = Vector3( 720, 82, 1 )
+flag_disable_z = true
+direction = Vector3( -0.5, 1, 0 )
+spread = 25.0
+gravity = Vector3( 0, -2, 0 )
+initial_velocity = 70.0
+initial_velocity_random = 0.5
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+angle = 720.0
+angle_random = 0.54
+angle_curve = SubResource( 101 )
+color_ramp = SubResource( 98 )
+anim_speed = 8.0
+anim_speed_random = 0.2
