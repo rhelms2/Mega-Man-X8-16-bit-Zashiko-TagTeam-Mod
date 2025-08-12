@@ -88,6 +88,7 @@ func _physics_process(delta: float) -> void :
 			IGT.stage_timer += actual_delta
 	else:
 		global_position = GameManager.player.global_position
+		direction = GameManager.player.direction
 
 func cutscene_activate() -> void :
 	if not is_executing("Ride"):
@@ -120,7 +121,8 @@ func should_instantly_die() -> bool:
 	return not is_executing("Ride")
 
 func ride(ride: Node) -> void :
-	emit_signal("ride", ride)
+	if is_current_player:
+		emit_signal("ride", ride)
 
 func eject(ride: Node) -> void :
 	emit_signal("eject", ride)

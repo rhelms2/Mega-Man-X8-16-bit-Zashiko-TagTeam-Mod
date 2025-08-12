@@ -51,6 +51,9 @@ func is_body_transformed(body) -> bool:
 
 func _on_body_enter(body) -> void :
 	if should_execute() and is_rideable(body) and not is_body_transformed(body):
+		var character = body.get_character()
+		if character == GameManager.inactive_player:
+			return
 		rider = body.get_character()
 		recent_rider = body.get_character()
 		_on_signal()

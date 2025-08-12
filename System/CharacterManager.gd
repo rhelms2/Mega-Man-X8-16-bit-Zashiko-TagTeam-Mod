@@ -49,8 +49,14 @@ var enkoujin_active: bool = true
 var current_player_character: String = "X"
 
 var valid_players: Array = ["X", "Zero", "Axl"]
+
+var equipped_hearts: Dictionary = {"X": 0, "Zero": 0, "Axl": 0}
+
+# Strings here instead of literal objects
 export var current_team: Array = []
 var max_team_size: int = 2
+
+
 
 
 func add_player_to_team(new_player: String) -> void:

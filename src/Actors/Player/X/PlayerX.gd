@@ -296,8 +296,10 @@ func is_subtank(collectible: String) -> bool:
 	return "tank" in collectible
 
 func equip_heart():
-	GameManager.player.max_health += 2
-	GameManager.player.recover_health(2)
+	if self.name in CharacterManager.current_team:
+		var i = GameManager.team.find(self)
+		GameManager.team[i].max_health += 2
+		GameManager.team[i].recover_health(2)
 
 func recover_health(value: float):
 	if current_health < max_health:

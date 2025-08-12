@@ -13,10 +13,11 @@ var configurable = {
 	"fire": "SHOT_ACT", 
 	"alt_fire": "SHOT2_ACT", 
 	"jump": "JUMP_ACT", 
-	"dash": "DASH_ACT", 
+	"dash": "DASH_ACT",
+	"char_switch": "Change Player",  
 	"select_special": "ARMORABILITY_ACT", 
 	"weapon_select_left": "PREV_ACT", 
-	"weapon_select_right": "NEXT_ACT", 
+	"weapon_select_right": "NEXT_ACT",
 	"reset_weapon": "WPNRESET_ACT", 
 	
 	"analog_left": "WPNLEFT_ACT", 

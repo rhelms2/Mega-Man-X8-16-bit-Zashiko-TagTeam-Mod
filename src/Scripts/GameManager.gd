@@ -5,6 +5,8 @@ var version: String = "1.0.0.4"
 var current_demo: String = ""
 
 var player: Character
+var inactive_player: Character
+var team: Array = []
 var camera: Camera2D
 var state: String = "Normal"
 var bikes: Array = []
@@ -321,11 +323,12 @@ func set_player(object: Character) -> void :
 	player.deactivate()
 
 func add_collectibles_to_player() -> void :
-	if player:
-		for collectible in collectibles:
-			if not has_equip_exception(collectible):
-				player.equip_parts(collectible)
-		player.finished_equipping()
+	for team_member in team:
+		if team_member:
+			for collectible in collectibles:
+				if not has_equip_exception(collectible):
+					team_member.equip_parts(collectible)
+			team_member.finished_equipping()
 
 func has_equip_exception(collectible: String) -> bool:
 	if is_armor(collectible):

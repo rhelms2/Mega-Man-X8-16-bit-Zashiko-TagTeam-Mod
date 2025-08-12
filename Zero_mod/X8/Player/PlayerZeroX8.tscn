@@ -386,7 +386,7 @@ script = ExtResource( 48 )
 visible = false
 frames = ExtResource( 93 )
 animation = "raikousen_fan"
-frame = 1
+frame = 18
 playing = true
 
 [node name="B-Fan" type="AnimatedSprite" parent="."]
@@ -426,7 +426,7 @@ position = Vector2( 0, -6 )
 z_index = 5
 frames = ExtResource( 127 )
 animation = "youdantotsu"
-frame = 12
+frame = 6
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

@@ -49,6 +49,7 @@ func on_character_switch() -> void :
 	#print("Spawner: on_character_switch recieved signal")
 	if team_members.size() > 1:
 		player_instance.is_current_player = false
+		GameManager.inactive_player = player_instance
 		#print("signaling warp out animation")
 		player_instance.emit_signal("character_switch_out")
 
@@ -71,7 +72,7 @@ func on_character_switch() -> void :
 			
 	# For testing purposes, before UI on stage select is working
 func test_set_team():
-	for i in range(2):
+	for i in range(1, -1, -1):
 		CharacterManager.add_player_to_team(CharacterManager.valid_players[i])
 	CharacterManager.set_player_character(CharacterManager.current_team[0])
 ####
@@ -100,6 +101,8 @@ func _ready() -> void :
 		#tm_instance.hide()
 		add_child(tm_instance)
 		team_members.append(tm_instance)
+		GameManager.inactive_player = tm_instance
+	GameManager.team = team_members
 		
 
 
