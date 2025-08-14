@@ -51,6 +51,8 @@ signal character_switch_out
 signal character_switch_in
 var is_current_player: bool = false
 
+var equipped_hearts: int = 0
+
 func check_for_char_switch_input() -> void :
 	if get_action_just_pressed("char_switch"):
 		if is_current_player:
@@ -71,6 +73,9 @@ func connect_cutscene_events() -> void :
 
 func _process(_delta: float) -> void :
 	update_facing_direction()
+	if not is_current_player:
+		global_position = GameManager.player.global_position
+		direction = GameManager.player.direction
 
 func _physics_process(delta: float) -> void :
 	if is_current_player:
@@ -86,9 +91,6 @@ func _physics_process(delta: float) -> void :
 		if has_control() and IGT.should_run:
 			IGT.in_game_timer += actual_delta
 			IGT.stage_timer += actual_delta
-	else:
-		global_position = GameManager.player.global_position
-		direction = GameManager.player.direction
 
 func cutscene_activate() -> void :
 	if not is_executing("Ride"):

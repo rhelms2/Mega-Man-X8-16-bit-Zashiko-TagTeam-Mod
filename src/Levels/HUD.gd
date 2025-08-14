@@ -127,7 +127,7 @@ func tween_switch_active_hp_bar() -> void:
 		char_switch_hp_tween = create_tween()
 		char_switch_hp_tween.set_parallel()
 		char_switch_hp_tween.tween_property(inactive_hp_bar,"rect_position:x",8,0.2)
-		char_switch_hp_tween.tween_property(active_hp_bar,"rect_position:x",12,0.2)
+		char_switch_hp_tween.tween_property(active_hp_bar,"rect_position:x",13,0.2)
 		char_switch_hp_tween.tween_property(active_hp_bar,"modulate:r",Color.gray.r,0.2)
 		char_switch_hp_tween.tween_property(active_hp_bar,"modulate:g",Color.gray.g,0.2)
 		char_switch_hp_tween.tween_property(active_hp_bar,"modulate:b",Color.gray.b,0.2)

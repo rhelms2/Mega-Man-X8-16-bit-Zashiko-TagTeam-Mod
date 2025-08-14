@@ -129,6 +129,7 @@ func on_level_start():
 	bikes.clear()
 	change_state("Normal")
 	call_deferred("add_collectibles_to_player")
+	call_deferred("add_collectibles_to_inactive_player")
 	call_deferred("emit_stage_start_signal")
 	call_deferred("save_stage_start_msec")
 	call_deferred("position_player_on_checkpoint")
@@ -323,20 +324,28 @@ func set_player(object: Character) -> void :
 	player.deactivate()
 
 func add_collectibles_to_player() -> void :
-	for team_member in team:
-		if team_member:
-			for collectible in collectibles:
-				if not has_equip_exception(collectible):
-					team_member.equip_parts(collectible)
-			team_member.finished_equipping()
+	if player:	
+		for collectible in collectibles:
+			if not has_equip_exception(collectible, player):
+				player.equip_parts(collectible)
+		player.finished_equipping()
 
-func has_equip_exception(collectible: String) -> bool:
+func add_collectibles_to_inactive_player() -> void :
+	if inactive_player:	
+		for collectible in collectibles:
+			if not has_equip_exception(collectible, inactive_player):
+				inactive_player.equip_parts(collectible)
+		inactive_player.finished_equipping()
+
+func has_equip_exception(collectible: String, p: Character) -> bool:
 	if is_armor(collectible):
 		for exception in equip_exceptions:
 			if exception in collectible:
 				return true
 				
 	elif is_heart(collectible):
+		if p.equipped_hearts >= CharacterManager.equipped_hearts[p.name]:
+			return true
 		if not equip_hearts:
 			return true
 			

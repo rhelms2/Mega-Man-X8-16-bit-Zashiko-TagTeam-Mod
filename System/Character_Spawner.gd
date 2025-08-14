@@ -48,8 +48,10 @@ var tm_index: int = 0
 func on_character_switch() -> void :
 	#print("Spawner: on_character_switch recieved signal")
 	if team_members.size() > 1:
+		# GameManager.pause("CharacterSwitch")
 		player_instance.is_current_player = false
 		GameManager.inactive_player = player_instance
+		
 		#print("signaling warp out animation")
 		player_instance.emit_signal("character_switch_out")
 
@@ -81,6 +83,7 @@ func _ready() -> void :
 	teleport_to_boss = CharacterManager.teleport_to_boss
 	
 	if self.name == "NoahsPark":
+		test_set_team()
 		var node: Node = Node.new()
 		node.set_name("StartCutscene")
 		node.set_script(_start_cutscene_script)
@@ -88,7 +91,7 @@ func _ready() -> void :
 		add_child(node)
 
 	Event.listen("character_switch", self, "on_character_switch")
-	test_set_team()
+	CharacterManager.set_player_character(CharacterManager.current_team[0])
 	player = CharacterManager.get_player_character_object(CharacterManager.current_player_character)
 	player_instance = player.instance()
 	player_instance.is_current_player = true

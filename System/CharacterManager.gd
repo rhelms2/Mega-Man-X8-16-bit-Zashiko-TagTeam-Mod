@@ -50,14 +50,15 @@ var current_player_character: String = "X"
 
 var valid_players: Array = ["X", "Zero", "Axl"]
 
-var equipped_hearts: Dictionary = {"X": 0, "Zero": 0, "Axl": 0}
+var equipped_hearts: Dictionary = {"X": 1, "Zero": 2, "Axl": 3}
 
 # Strings here instead of literal objects
 export var current_team: Array = []
 var max_team_size: int = 2
 
 
-
+func set_player_equipped_hearts(name: String, num_to_equip: int) -> void:
+	equipped_hearts[name] = num_to_equip
 
 func add_player_to_team(new_player: String) -> void:
 	if new_player in valid_players and current_team.size() < max_team_size:
@@ -145,6 +146,7 @@ func _save() -> void :
 	var save_data = {
 		"player_count": player_count, 
 		"current_player_character": current_player_character, 
+		"current_team": current_team,
 		"credits_seen": credits_seen, 
 		
 		"new_game": new_game, 
@@ -178,7 +180,8 @@ func _load() -> void :
 		
 		if typeof(save_data) == TYPE_DICTIONARY:
 			player_count = int(save_data.get("player_count", 1))
-			current_player_character = save_data.get("player_character", "X")
+			current_player_character = save_data.get("current_player_character", "X")
+			current_team = save_data.get("current_team", ["X", "Zero"])
 			credits_seen = bool(save_data.get("credits_seen", false))
 			
 			new_game = bool(save_data.get("new_game", true))

@@ -18500,6 +18500,7 @@ position = Vector2( 11840, -566 )
 max_variation = 108.0
 
 [node name="LifeUp" parent="Objects" index="25" instance=ExtResource( 31 )]
+pause_mode = 0
 position = Vector2( 13379, -762 )
 collectible_name = "life_up_panda"
 

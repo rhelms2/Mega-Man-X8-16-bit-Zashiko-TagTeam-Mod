@@ -65,6 +65,7 @@ func team_mem2_pressed() -> void :
 		else:
 			unequip.play()
 	else:
+		CharacterManager.remove_player_from_team(team_member_2.sprite.get_animation()) 
 		team_member_2.sprite.play(character_name.text)
 		CharacterManager.add_player_to_team(character_name.text)
 		equip.play()
