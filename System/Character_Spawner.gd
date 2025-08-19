@@ -48,7 +48,9 @@ var tm_index: int = 0
 func on_character_switch() -> void :
 	#print("Spawner: on_character_switch recieved signal")
 	if team_members.size() > 1:
-		# GameManager.pause("CharacterSwitch")
+		GameManager.pause("CharacterSwitch")
+		GameManager.player.pause_mode = PAUSE_MODE_PROCESS
+
 		player_instance.is_current_player = false
 		GameManager.inactive_player = player_instance
 		
@@ -59,18 +61,16 @@ func on_character_switch() -> void :
 
 		player_instance = team_members[tm_index]
 		CharacterManager.set_player_character(player_instance.name)
-		Event.emit_signal("refresh_hud")
 		if player_instance != null:
 			player_instance.is_current_player = true
 			GameManager.set_player(player_instance)
+			GameManager.player.pause_mode = PAUSE_MODE_PROCESS
 			player_instance.activate()
 			player_instance.active = true
 			player_instance.show()
 			#print("Signaling warp in animation")
 			player_instance.emit_signal("character_switch_in")
-		else:
-			#print("something went very wrong")
-			pass
+			Event.emit_signal("refresh_hud")
 			
 	# For testing purposes, before UI on stage select is working
 func test_set_team():

@@ -44,6 +44,7 @@ func on_animation_finished():
 		#print("executing true in characterwarpin animation node")
 		if character.get_animation() == "beam_in":
 			#Event.emit_signal("x_appear")
+			Event.emit_signal("character_switch_end")
 			EndAbility()
 
 func _Interrupt():

@@ -267,4 +267,5 @@ signal leaderboard_zero
 signal leaderboard_axl
 
 signal character_switch
+signal character_switch_end
 signal refresh_hud

@@ -58,7 +58,20 @@ func check_for_char_switch_input() -> void :
 		if is_current_player:
 			#print("input registered for character switch")
 			Event.emit_signal("character_switch")
-			
+
+func max_out_air_abilities() -> void :
+	var airjump = get_node("AirJump")
+	var airdash = get_node("AirDash")
+	var hover = get_node("Hover")
+	
+	if airjump != null:
+		airjump.current_air_jumps = 0
+	if airdash != null:
+		airdash.airdash_count = 0
+	if hover != null:
+		hover.current_air_jumps = 0
+
+	set_horizontal_speed(0)
 ####
 
 

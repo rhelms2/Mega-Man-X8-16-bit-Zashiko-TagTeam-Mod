@@ -528,6 +528,7 @@ stage_info = ExtResource( 45 )
 position = Vector2( 8, 8 )
 frames = SubResource( 58 )
 animation = "blink"
+frame = 1
 playing = true
 
 [node name="Keycfg" type="TextureButton" parent="StageSelectUI/Menu"]
@@ -677,12 +678,13 @@ color = Color( 0, 0, 0, 1 )
 position = Vector2( 199, -139 )
 z_index = -50
 frames = SubResource( 38 )
-frame = 14
+frame = 8
 playing = true
 
 [node name="pointer" type="AnimatedSprite" parent="map"]
 position = Vector2( 0, 322 )
 frames = SubResource( 16 )
+frame = 7
 playing = true
 script = ExtResource( 16 )
 button_sprites = NodePath("../../button_sprites")
@@ -738,42 +740,39 @@ script = ExtResource( 41 )
 
 [node name="TroiaBase" parent="button_sprites" instance=ExtResource( 22 )]
 frames = ExtResource( 33 )
-frame = 2
 
 [node name="Primrose" parent="button_sprites" instance=ExtResource( 22 )]
 position = Vector2( 151, 38 )
 frames = ExtResource( 36 )
-frame = 1
+frame = 2
 
 [node name="SigmaPalace" parent="button_sprites" instance=ExtResource( 22 )]
 position = Vector2( 199, 38 )
 frames = ExtResource( 35 )
-frame = 1
+frame = 2
 
 [node name="PitchBlack" parent="button_sprites" instance=ExtResource( 22 )]
 position = Vector2( 247, 38 )
 frames = ExtResource( 15 )
-frame = 2
 
 [node name="Dynasty" parent="button_sprites" instance=ExtResource( 22 )]
 position = Vector2( 295, 38 )
 frames = ExtResource( 37 )
-frame = 1
+frame = 2
 
 [node name="BoosterForest" parent="button_sprites" instance=ExtResource( 22 )]
 position = Vector2( 103, 186 )
 frames = ExtResource( 38 )
-frame = 1
+frame = 2
 
 [node name="MetalValley" parent="button_sprites" instance=ExtResource( 22 )]
 position = Vector2( 151, 186 )
 frames = ExtResource( 39 )
-frame = 2
 
 [node name="CentralWhite" parent="button_sprites" instance=ExtResource( 22 )]
 position = Vector2( 247, 186 )
 frames = SubResource( 54 )
-frame = 1
+frame = 2
 
 [node name="ArmorSetup" parent="button_sprites" instance=ExtResource( 22 )]
 position = Vector2( 199, 186 )
@@ -784,12 +783,12 @@ script = ExtResource( 43 )
 
 [node name="Inferno" parent="button_sprites" instance=ExtResource( 22 )]
 position = Vector2( 295, 186 )
-frame = 0
+frame = 1
 
 [node name="JacobElevator" parent="button_sprites" instance=ExtResource( 22 )]
 position = Vector2( 55, 112 )
 frames = ExtResource( 19 )
-frame = 0
+frame = 1
 
 [node name="cursor" parent="button_sprites/JacobElevator" index="0"]
 animation = "long"
@@ -798,7 +797,7 @@ frame = 4
 [node name="Gateway" parent="button_sprites" instance=ExtResource( 22 )]
 position = Vector2( 343, 112 )
 frames = ExtResource( 34 )
-frame = 0
+frame = 1
 
 [node name="cursor" parent="button_sprites/Gateway" index="0"]
 animation = "long"

@@ -57,6 +57,17 @@ export var current_team: Array = []
 var max_team_size: int = 2
 
 
+func on_character_switch_end():
+	if not GameManager.player.is_on_floor():
+		# Reset horizontal velocity and remove dash/jump/hover abilities from the switching character
+		GameManager.player.dashfall = false
+		GameManager.player.max_out_air_abilities()
+
+	GameManager.player.pause_mode = PAUSE_MODE_INHERIT
+	GameManager.inactive_player.pause_mode = PAUSE_MODE_INHERIT
+	GameManager.unpause("CharacterSwitch")
+
+
 func set_player_equipped_hearts(name: String, num_to_equip: int) -> void:
 	equipped_hearts[name] = num_to_equip
 
@@ -242,6 +253,7 @@ func _ready() -> void :
 
 	set_process(true)
 	pause_mode = PAUSE_MODE_PROCESS
+	Event.listen("character_switch_end", self, "on_character_switch_end")
 
 func _process(_delta: float) -> void :
 	if started_fresh_game:
