@@ -78,19 +78,13 @@ func fire (weapon):
 func change_current_weapon_left():
 	Log("Changing weapon left")
 	var index = weapons.find(current_weapon)
-	if index -1 < 0:
-		set_current_weapon(weapons[weapons.size() - 1])
-	else:
-		set_current_weapon(weapons[index - 1])
+	set_current_weapon(weapons[(index + weapons.size() - 1) % weapons.size()])
 	Log("New weapon: " + current_weapon.name)
 
 func change_current_weapon_right():
 	Log("Changing weapon right")
 	var index = weapons.find(current_weapon)
-	if index +1 > weapons.size() - 1:
-		set_current_weapon(weapons[0])
-	else:
-		set_current_weapon(weapons[index + 1])
+	set_current_weapon(weapons[(index + 1) % weapons.size()])
 	Log("New weapon: " + current_weapon.name)
 
 func set_current_weapon(weapon):

@@ -66,18 +66,13 @@ func current_weapon_is_saber() -> bool:
 
 func change_current_weapon_left() -> void :
 	var index = weapons.find(current_weapon)
-	if index - 1 < 0:
-		set_current_weapon(weapons[weapons.size() - 1])
-	else:
-		set_current_weapon(weapons[index - 1])
+	set_current_weapon(weapons[(index + weapons.size() - 1) % weapons.size()])
 
 func change_current_weapon_right() -> void :
 	update_list_of_weapons()
 	var index = weapons.find(current_weapon)
-	if index + 1 > weapons.size() - 1:
-		set_current_weapon(weapons[0])
-	else:
-		set_current_weapon(weapons[index + 1])
+	set_current_weapon(weapons[(index + 1) % weapons.size()])
+
 
 func set_current_weapon(weapon) -> void :
 	current_weapon = weapon
