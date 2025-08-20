@@ -1,8 +1,10 @@
 extends Area2D
+class_name FlamableBarrierProjectileDetector
+
 export  var active: = true
 
-const projectiles = ["FireDash", "FlameBurner", "Enkoujin"]
-export  var projectile_name: = "FireDash"
+export var projectiles = ["FireDash", "FlameBurner", "Enkoujin"]
+
 signal projectile_detected
 
 func _on_area2D_body_entered(body: Node) -> void :

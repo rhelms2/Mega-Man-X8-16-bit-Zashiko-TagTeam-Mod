@@ -1,4 +1,5 @@
 extends Character
+class_name PlayerZeroX8
 
 export  var skip_intro: bool = false
 
