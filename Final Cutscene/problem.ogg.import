@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/problem.ogg-e52a8d153a988947f56d9b342493d664.oggstr"
+
+[deps]
+
+source_file="res://Final Cutscene/problem.ogg"
+dest_files=[ "res://.import/problem.ogg-e52a8d153a988947f56d9b342493d664.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
