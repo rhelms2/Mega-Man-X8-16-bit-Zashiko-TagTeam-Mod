@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=309 format=2]
+[gd_resource type="SpriteFrames" load_steps=316 format=2]
 
 [ext_resource path="res://Zero_mod/Sprites/Beam_Out.png" type="Texture" id=1]
 [ext_resource path="res://Zero_mod/Sprites/Hit_B.png" type="Texture" id=2]
@@ -28,6 +28,8 @@
 [ext_resource path="res://Zero_mod/Sprites/Saber/Saber_Wall.png" type="Texture" id=26]
 [ext_resource path="res://Zero_mod/Sprites/BossAbilities/Tenshouha.png" type="Texture" id=27]
 [ext_resource path="res://Zero_mod/Sprites/Victory.png" type="Texture" id=28]
+[ext_resource path="res://Zero_mod/Sprites/blink.png" type="Texture" id=29]
+[ext_resource path="res://Zero_mod/Sprites/talk.png" type="Texture" id=30]
 
 [sub_resource type="AtlasTexture" id=263]
 atlas = ExtResource( 12 )
@@ -100,6 +102,18 @@ region = Rect2( 384, 0, 128, 128 )
 [sub_resource type="AtlasTexture" id=381]
 atlas = ExtResource( 1 )
 region = Rect2( 512, 0, 128, 128 )
+
+[sub_resource type="AtlasTexture" id=523]
+atlas = ExtResource( 29 )
+region = Rect2( 0, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=524]
+atlas = ExtResource( 29 )
+region = Rect2( 64, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=525]
+atlas = ExtResource( 29 )
+region = Rect2( 128, 0, 64, 64 )
 
 [sub_resource type="AtlasTexture" id=483]
 atlas = ExtResource( 5 )
@@ -877,6 +891,14 @@ region = Rect2( 192, 560, 64, 56 )
 atlas = ExtResource( 5 )
 region = Rect2( 128, 560, 64, 56 )
 
+[sub_resource type="AtlasTexture" id=526]
+atlas = ExtResource( 30 )
+region = Rect2( 64, 0, 64, 64 )
+
+[sub_resource type="AtlasTexture" id=527]
+atlas = ExtResource( 30 )
+region = Rect2( 0, 0, 64, 64 )
+
 [sub_resource type="AtlasTexture" id=400]
 atlas = ExtResource( 27 )
 region = Rect2( 0, 0, 128, 128 )
@@ -1171,6 +1193,11 @@ animations = [ {
 "name": "beam_out",
 "speed": 23.0
 }, {
+"frames": [ SubResource( 523 ), SubResource( 523 ), SubResource( 523 ), SubResource( 523 ), SubResource( 523 ), SubResource( 523 ), SubResource( 523 ), SubResource( 523 ), SubResource( 523 ), SubResource( 523 ), SubResource( 523 ), SubResource( 523 ), SubResource( 524 ), SubResource( 525 ), SubResource( 524 ), SubResource( 523 ), SubResource( 523 ), SubResource( 523 ), SubResource( 523 ) ],
+"loop": true,
+"name": "blink",
+"speed": 15.0
+}, {
 "frames": [ SubResource( 483 ), SubResource( 483 ), SubResource( 483 ) ],
 "loop": false,
 "name": "boost",
@@ -1321,7 +1348,7 @@ animations = [ {
 "name": "stop_end",
 "speed": 23.0
 }, {
-"frames": [ SubResource( 229 ), SubResource( 229 ) ],
+"frames": [ SubResource( 526 ), SubResource( 527 ) ],
 "loop": true,
 "name": "talk",
 "speed": 10.0
