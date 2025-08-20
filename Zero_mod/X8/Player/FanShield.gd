@@ -35,7 +35,7 @@ func deactivate() -> void :
 	shieldSprite.hide()
 
 func _physics_process(_delta: float) -> void :
-	if active:
+	if active or (character.saber_node.current_weapon.name == "B-Fan" and character.animatedSprite.animation == "idle"):
 		hitbox_radius = 32
 		hitbox_upleft_corner = Vector2( - hitbox_radius, - hitbox_radius)
 		hitbox_downright_corner = Vector2(hitbox_radius, hitbox_radius)
