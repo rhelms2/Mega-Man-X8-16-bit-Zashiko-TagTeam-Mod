@@ -1000,7 +1000,7 @@ texture_normal = ExtResource( 53 )
 script = ExtResource( 55 )
 menu_path = NodePath("../../../../../../..")
 legible_name = "AXLWHITEHEAD_NAME"
-description = "AXLWHITEHEAD_DESC"
+description = "AXLWHITEHEAD_DISC"
 
 [node name="sprite" type="Sprite" parent="Menu/textureRect/Axl/Options Group/ArmorParts/HeadParts/white_head"]
 modulate = Color( 1, 1, 1, 0.588235 )
@@ -1040,7 +1040,7 @@ texture_normal = ExtResource( 84 )
 script = ExtResource( 55 )
 menu_path = NodePath("../../../../../../..")
 legible_name = "AXLWHITEBODY_NAME"
-description = "AXLWHITEBODY_DESC"
+description = "AXLWHITEBODY_DISC"
 
 [node name="sprite" type="Sprite" parent="Menu/textureRect/Axl/Options Group/ArmorParts/BodyParts/white_body"]
 modulate = Color( 1, 1, 1, 0.588235 )
@@ -1080,7 +1080,7 @@ texture_normal = ExtResource( 79 )
 script = ExtResource( 55 )
 menu_path = NodePath("../../../../../../..")
 legible_name = "AXLWHITEARM_NAME"
-description = "AXLWHITEARM_DESC"
+description = "AXLWHITEARM_DISC"
 
 [node name="sprite" type="Sprite" parent="Menu/textureRect/Axl/Options Group/ArmorParts/ArmParts/white_arms"]
 modulate = Color( 1, 1, 1, 0.588235 )
@@ -1120,7 +1120,7 @@ texture_normal = ExtResource( 54 )
 script = ExtResource( 55 )
 menu_path = NodePath("../../../../../../..")
 legible_name = "AXLWHITELEG_NAME"
-description = "AXLWHITELEG_DESC"
+description = "AXLWHITELEG_DISC"
 
 [node name="sprite" type="Sprite" parent="Menu/textureRect/Axl/Options Group/ArmorParts/LegParts/white_legs"]
 modulate = Color( 1, 1, 1, 0.588235 )
