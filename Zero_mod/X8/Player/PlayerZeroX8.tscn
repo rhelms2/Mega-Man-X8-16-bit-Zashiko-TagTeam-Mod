@@ -301,6 +301,7 @@ position = Vector2( 0, -6 )
 z_index = 5
 frames = ExtResource( 23 )
 animation = "idle"
+frame = 1
 playing = true
 
 [node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="animatedSprite"]
@@ -383,6 +384,7 @@ texture = ExtResource( 33 )
 
 [node name="Talk" type="Node" parent="animatedSprite"]
 script = ExtResource( 107 )
+character = "Zero"
 _animatedSprite = NodePath("..")
 
 [node name="afterImages" type="Node" parent="animatedSprite"]
@@ -392,7 +394,7 @@ script = ExtResource( 48 )
 visible = false
 frames = ExtResource( 93 )
 animation = "raikousen_fan"
-frame = 8
+frame = 12
 playing = true
 
 [node name="B-Fan" type="AnimatedSprite" parent="."]
@@ -401,9 +403,14 @@ material = ExtResource( 43 )
 position = Vector2( 0, -6 )
 z_index = 5
 frames = ExtResource( 140 )
-animation = "youdantotsu"
-frame = 15
+animation = "idle"
+frame = 11
 playing = true
+
+[node name="Talk" type="Node" parent="B-Fan"]
+script = ExtResource( 107 )
+character = "Zero"
+_animatedSprite = NodePath("..")
 
 [node name="T-Breaker" type="AnimatedSprite" parent="."]
 visible = false
@@ -411,9 +418,14 @@ material = ExtResource( 43 )
 position = Vector2( 0, -6 )
 z_index = 5
 frames = ExtResource( 131 )
-animation = "youdantotsu"
-frame = 15
+animation = "idle"
+frame = 1
 playing = true
+
+[node name="Talk" type="Node" parent="T-Breaker"]
+script = ExtResource( 107 )
+character = "Zero"
+_animatedSprite = NodePath("..")
 
 [node name="K-Knuckle" type="AnimatedSprite" parent="."]
 visible = false
@@ -421,9 +433,14 @@ material = ExtResource( 43 )
 position = Vector2( 0, -6 )
 z_index = 5
 frames = ExtResource( 143 )
-animation = "youdantotsu"
-frame = 12
+animation = "idle"
+frame = 13
 playing = true
+
+[node name="Talk" type="Node" parent="K-Knuckle"]
+script = ExtResource( 107 )
+character = "Zero"
+_animatedSprite = NodePath("..")
 
 [node name="D-Glaive" type="AnimatedSprite" parent="."]
 visible = false
@@ -431,9 +448,14 @@ material = ExtResource( 43 )
 position = Vector2( 0, -6 )
 z_index = 5
 frames = ExtResource( 127 )
-animation = "youdantotsu"
-frame = 9
+animation = "idle"
+frame = 1
 playing = true
+
+[node name="Talk" type="Node" parent="D-Glaive"]
+script = ExtResource( 107 )
+character = "Zero"
+_animatedSprite = NodePath("..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = ExtResource( 26 )
