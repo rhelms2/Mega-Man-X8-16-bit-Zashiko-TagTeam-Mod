@@ -55,8 +55,7 @@ var equipped_hearts: int = 0
 
 func check_for_char_switch_input() -> void :
 	if get_action_just_pressed("char_switch"):
-		if is_current_player:
-			#print("input registered for character switch")
+		if is_current_player and CharacterManager.current_team.size() > 1:
 			Event.emit_signal("character_switch")
 
 func max_out_air_abilities() -> void :
@@ -119,6 +118,7 @@ func spike_touch() -> void :
 		if CharacterManager.game_mode <= - 1 or not should_die_to_spikes:
 			emit_signal("damage", 1, self)
 			return
+		CharacterManager.both_alive = false
 		emit_signal("zero_health")
 
 func lava_touch() -> void :
@@ -127,9 +127,11 @@ func lava_touch() -> void :
 			if not is_invulnerable():
 				emit_signal("damage", 1, self)
 			return
+		CharacterManager.both_alive = false
 		emit_signal("zero_health")
 
 func void_touch() -> void :
+	CharacterManager.both_alive = false
 	emit_signal("zero_health")
 
 func should_instantly_die() -> bool:

@@ -356,7 +356,7 @@ material = ExtResource( 18 )
 position = Vector2( 0, -4 )
 z_index = 10
 frames = ExtResource( 23 )
-frame = 1
+frame = 2
 playing = true
 
 [node name="Accelerate" type="Node2D" parent="."]

@@ -22,19 +22,20 @@ signal lightning
 
 func _ready() -> void :
 	Event.listen("player_set", self, "call_deferred_got_armor")
+	#Event.listen("character_switch", self, "handle_player_not_x")
 	timer = 0.0
 	timer2 = 0.0
 	charge_state = 0
 	finished = false
-	if CharacterManager.current_player_character != "X":
-		call_deferred("handle_player_not_x")
+	#call_deferred("handle_player_not_x")
 
 func handle_player_not_x() -> void :
-	finished = true
-	call_deferred("disable_glass_collider")
-	sprite.play("finished")
-	if debug_logs:
-		print_debug("Player is not X")
+	if CharacterManager.current_player_character != "X":
+		finished = true
+		call_deferred("disable_glass_collider")
+		sprite.play("finished")
+		if debug_logs:
+			print_debug("Player is not X")
 
 func call_deferred_got_armor() -> void :
 	call_deferred("handle_already_got_armor")
@@ -56,7 +57,7 @@ func check_start(body: Node) -> void :
 			return
 		if body.is_in_group("Player"):
 			player = body.get_parent()
-			if can_interact() and sprite.animation == "idle":
+			if can_interact() and sprite.animation == "idle" and player == GameManager.player:
 				sprite.play("open")
 				$open.play()
 				Event.emit_signal("capsule_open")
@@ -68,7 +69,7 @@ func disable_glass_collider() -> void :
 	glass.disabled = true
 
 func can_interact() -> bool:
-	return not GameManager.player.is_executing("Ride") and not GameManager.player.is_executing("WeaponStasis") and player.is_current_player
+	return not GameManager.player.is_executing("Ride") and not GameManager.player.is_executing("WeaponStasis")
 
 func _on_area2D2_body_entered(_body: Node) -> void :
 	if not finished:

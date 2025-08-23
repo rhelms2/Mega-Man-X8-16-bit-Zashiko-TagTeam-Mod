@@ -52,6 +52,9 @@ var valid_players: Array = ["X", "Zero", "Axl"]
 
 var equipped_hearts: Dictionary = {"X": 1, "Zero": 2, "Axl": 3}
 
+var both_alive = true
+var alive_team: Array = []
+
 # Strings here instead of literal objects
 export var current_team: Array = []
 var max_team_size: int = 2

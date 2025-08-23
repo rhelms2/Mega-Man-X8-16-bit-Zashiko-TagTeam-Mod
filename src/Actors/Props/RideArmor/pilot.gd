@@ -24,5 +24,6 @@ func set_player_sprite_sheet():
 	self.frames = CharacterManager.update_texture_with_new_size(_texture, reference_frames)
 
 func _ready() -> void :
+	Event.connect("character_switch", self, "set_player_sprite_sheet")
 	set_player_sprite_sheet()
 	material = GameManager.player.animatedSprite.material

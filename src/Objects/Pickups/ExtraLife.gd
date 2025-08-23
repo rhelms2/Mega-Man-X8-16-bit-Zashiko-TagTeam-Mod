@@ -47,7 +47,8 @@ func check_life_ups(lives) -> void :
 
 func _ready() -> void :
 	Event.connect("has_life_ups", self, "check_life_ups")
-	set_player_sprite()
+	Event.connect("character_switch", self, "set_player_sprite")
+	call_deferred("set_player_sprite")
 	var current_lives = GlobalVariables.get("player_lives")
 	if CharacterManager.game_mode == 2:
 		if current_lives >= 5:

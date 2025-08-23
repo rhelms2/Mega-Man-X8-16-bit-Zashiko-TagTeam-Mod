@@ -127,6 +127,11 @@ func on_level_start():
 	last_player_position = Vector2.ZERO
 	player = null
 	bikes.clear()
+	
+	# TeamMod stuff
+	if CharacterManager.current_team.size() > 1:
+		CharacterManager.both_alive = true
+	
 	change_state("Normal")
 	call_deferred("add_collectibles_to_player")
 	call_deferred("add_collectibles_to_inactive_player")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=149 format=2]
+[gd_scene load_steps=157 format=2]
 
 [ext_resource path="res://src/Actors/Player/x_sprites/x.res" type="SpriteFrames" id=1]
 [ext_resource path="res://Zero_mod/X8/Player/PlayerZeroX8.gd" type="Script" id=2]
@@ -76,6 +76,8 @@
 [ext_resource path="res://TagTeam_Mod/CharacterSwitchWarpOut.gd" type="Script" id=74]
 [ext_resource path="res://src/Actors/Player/WeaponStasis.gd" type="Script" id=75]
 [ext_resource path="res://Zero_mod/X8/Player/BossAbilities/Enkoujin.gd" type="Script" id=76]
+[ext_resource path="res://src/Actors/Player/BossWeapons/BlastLauncher/Blast Launcher.tres" type="Resource" id=77]
+[ext_resource path="res://src/Actors/Player/BossWeapons/ThunderDancer/Thunder Dancer.tres" type="Resource" id=78]
 [ext_resource path="res://Zero_mod/X8/Player/BossAbilities/Raikousen.gd" type="Script" id=79]
 [ext_resource path="res://src/Effects/Materials/x_dash_smoke.tres" type="Material" id=80]
 [ext_resource path="res://src/Effects/Materials/x_walljump_particle.tres" type="Material" id=81]
@@ -85,6 +87,9 @@
 [ext_resource path="res://src/Effects/Materials/x_charged_particle.tres" type="Material" id=85]
 [ext_resource path="res://src/Effects/Materials/x_dash_invinc_particles.tres" type="Material" id=86]
 [ext_resource path="res://src/Actors/Player/X/CrushCheck.gd" type="Script" id=87]
+[ext_resource path="res://src/Actors/Player/BossWeapons/OpticShield/Optic Shield.tres" type="Resource" id=88]
+[ext_resource path="res://src/Actors/Player/BossWeapons/SqueezeBomb/Squeeze Bomb.tres" type="Resource" id=89]
+[ext_resource path="res://src/Actors/Player/BossWeapons/DarkArrow/Dark Arrow.tres" type="Resource" id=90]
 [ext_resource path="res://Zero_mod/X8/Player/BossAbilities/Enkoujin_Skill.gd" type="Script" id=91]
 [ext_resource path="res://Zero_mod/X8/Player/BossAbilities/Raikousen_Skill.gd" type="Script" id=92]
 [ext_resource path="res://Zero_mod/X8/Sprites/BossAbilities/ability_effects.tres" type="SpriteFrames" id=93]
@@ -93,6 +98,7 @@
 [ext_resource path="res://src/Sounds/Mantis - Dash.ogg" type="AudioStream" id=96]
 [ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=97]
 [ext_resource path="res://src/Actors/rotation_particle_disabler.gd" type="Script" id=98]
+[ext_resource path="res://src/Actors/Player/BossWeapons/CrystalBouncer/Crystal Bouncer.tres" type="Resource" id=99]
 [ext_resource path="res://src/Effects/Materials/mat_chargeparticle.tres" type="Material" id=100]
 [ext_resource path="res://Zero_mod/SFX/raikousen.ogg" type="AudioStream" id=101]
 [ext_resource path="res://Zero_mod/SFX/rasetsusen.ogg" type="AudioStream" id=102]
@@ -137,6 +143,8 @@
 [ext_resource path="res://Zero_mod/SFX/dairettsui.ogg" type="AudioStream" id=141]
 [ext_resource path="res://Zero_mod/X8/Player/FanShield.gd" type="Script" id=142]
 [ext_resource path="res://Zero_mod/X8/Sprites/kknuckle/zerox8knuckle.tres" type="SpriteFrames" id=143]
+[ext_resource path="res://src/Actors/Player/BossWeapons/DriftDiamond/Drift Diamond.tres" type="Resource" id=144]
+[ext_resource path="res://src/Actors/Player/BossWeapons/FireDash/Fire Dash.tres" type="Resource" id=145]
 
 [sub_resource type="RectangleShape2D" id=32]
 extents = Vector2( 6.995, 7 )
@@ -386,7 +394,7 @@ script = ExtResource( 48 )
 visible = false
 frames = ExtResource( 93 )
 animation = "raikousen_fan"
-frame = 3
+frame = 10
 playing = true
 
 [node name="B-Fan" type="AnimatedSprite" parent="."]
@@ -426,7 +434,7 @@ position = Vector2( 0, -6 )
 z_index = 5
 frames = ExtResource( 127 )
 animation = "youdantotsu"
-frame = 24
+frame = 36
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -680,30 +688,38 @@ weapon = ExtResource( 121 )
 
 [node name="Tenshouha" type="Node" parent="Shot"]
 script = ExtResource( 53 )
+weapon = ExtResource( 88 )
 
 [node name="Juuhazan" type="Node" parent="Shot"]
 script = ExtResource( 73 )
+weapon = ExtResource( 89 )
 
 [node name="Rasetsusen" type="Node" parent="Shot"]
 script = ExtResource( 50 )
+weapon = ExtResource( 90 )
 
 [node name="Raikousen" type="Node" parent="Shot"]
 script = ExtResource( 79 )
+weapon = ExtResource( 78 )
 
 [node name="Youdantotsu" type="Node" parent="Shot"]
 script = ExtResource( 66 )
+weapon = ExtResource( 77 )
 
 [node name="Rekkyoudan" type="Node" parent="Shot"]
 script = ExtResource( 49 )
+weapon = ExtResource( 99 )
 
 [node name="Hyouryuushou" type="Node" parent="Shot"]
 script = ExtResource( 12 )
 __meta__ = {
 "_editor_description_": ""
 }
+weapon = ExtResource( 144 )
 
 [node name="Enkoujin" type="Node" parent="Shot"]
 script = ExtResource( 76 )
+weapon = ExtResource( 145 )
 
 [node name="audioStreamPlayer" type="AudioStreamPlayer" parent="Shot"]
 pause_mode = 2
@@ -733,7 +749,6 @@ position = Vector2( 0, -6 )
 z_index = 5
 frames = ExtResource( 93 )
 animation = "fan_shield"
-frame = 1
 playing = true
 
 [node name="KnuckleCombo" type="Node2D" parent="."]

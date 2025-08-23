@@ -48,6 +48,8 @@ var tm_index: int = 0
 func on_character_switch() -> void :
 	#print("Spawner: on_character_switch recieved signal")
 	if team_members.size() > 1:
+		Event.emit_signal("weapon_select_buster")
+		
 		GameManager.pause("CharacterSwitch")
 		GameManager.player.pause_mode = PAUSE_MODE_PROCESS
 
@@ -98,13 +100,21 @@ func _ready() -> void :
 	add_child(player_instance)
 	player_instance.position = $CharacterPosition.position
 	team_members.append(player_instance)
-	for i in range(1, CharacterManager.current_team.size()):
-		var tm_instance = CharacterManager.get_player_character_object(CharacterManager.current_team[i]).instance()
-		tm_instance.position = player_instance.position
-		#tm_instance.hide()
-		add_child(tm_instance)
-		team_members.append(tm_instance)
-		GameManager.inactive_player = tm_instance
+
+	if CharacterManager.current_team.size() > 1:
+
+		for i in range(1, CharacterManager.current_team.size()):
+			var tm_instance = CharacterManager.get_player_character_object(CharacterManager.current_team[i]).instance()
+			tm_instance.position = player_instance.position
+			tm_instance.deactivate()
+			tm_instance.hide()
+			add_child(tm_instance)
+			team_members.append(tm_instance)
+			GameManager.inactive_player = tm_instance
+
+	else:
+		CharacterManager.both_alive = false
+
 	GameManager.team = team_members
 		
 

@@ -1,0 +1,27 @@
+8/22
+
+Progress:
+
+- Extra life pickup icon switches with active character
+- Correct ride armor sprites set (see bug below related to this)
+- No stage reset until both players die 
+- playing 1 player mode doesn't cause game crash
+- fixed zeros weapons
+- fixed weird armor capsule bug
+- fixed portals in Primrose stage
+
+Bugs noticed:
+
+- Pause menu glitched out
+- X's armor sprites staying visible even on character switch on ride armor
+- Zero maintaining dash speed in air between switching in/out
+- 1st Heart tank collection freezes the game 
+- Stage rotate in primrose breaks for secondary character
+- Ride chaser spawns on character at start of stage (why?) 
+
+Features to implement:
+
+- Heart tank selection in armor select
+- Weapon bar staying in the same place, not fading unless in ride vehicle
+- Disable hotswap for inactive characters
+- Shared giga attack bar

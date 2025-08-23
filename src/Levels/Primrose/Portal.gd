@@ -20,6 +20,9 @@ func _on_area2D_body_entered(_body: Node) -> void :
 	if active:
 		if check_for_upgrades and GameManager.player.using_upgrades and CharacterManager.game_mode >= 0:
 			return
+		elif _body.get_parent().is_in_group("Player"):
+			if _body.get_parent() == GameManager.inactive_player:
+				return
 		emit_signal("teleport_start")
 		teleport()
 

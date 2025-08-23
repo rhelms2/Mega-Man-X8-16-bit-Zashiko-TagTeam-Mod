@@ -13,6 +13,9 @@ var fading_in: bool = false
 export var team_member_index: int = 0
 
 func set_player_hud():
+	if team_member_index > 0 and CharacterManager.current_team.size() == 1:
+		hide()
+		return
 	match CharacterManager.current_team[team_member_index]:
 		"Player":
 			texture = x_bar_texture
