@@ -1530,13 +1530,13 @@ shape = SubResource( 105 )
 [node name="StartPortal" parent="Objects" index="26" instance=ExtResource( 76 )]
 position = Vector2( -21, 209 )
 destination = NodePath("position2D")
-camera_limit = NodePath("../../Limits/12")
+camera_limit = NodePath("../../Limits/4")
 
 [node name="animatedSprite" parent="Objects/StartPortal" index="0"]
 visible = true
 
 [node name="position2D" type="Position2D" parent="Objects/StartPortal" index="4"]
-position = Vector2( 2905, 474 )
+position = Vector2( 4026, -801 )
 
 [node name="57" type="Area2D" parent="Limits" index="0"]
 position = Vector2( -874, 560 )
