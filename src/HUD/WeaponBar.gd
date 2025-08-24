@@ -2,6 +2,8 @@ extends NinePatchRect
 
 onready var weapon_icon: TextureRect = $"../WeaponIcon"
 onready var ammo_bar: TextureProgress = $textureProgress
+onready var x_bar = get_parent()
+onready var char_name = CharacterManager.current_team[x_bar.team_member_index]
 
 var weapon
 
@@ -10,7 +12,7 @@ signal hidden
 
 
 func display(current_weapon) -> void :
-	if is_exception(current_weapon):
+	if is_exception(current_weapon) or not char_name == GameManager.player.name:
 		weapon = null
 		hide()
 		return

@@ -11,13 +11,21 @@ func _ready() -> void :
 	_on_hotswap_opened()
 	get_parent().connect("weapon_selected", self, "on_select")
 	get_parent().connect("unselected_all", self, "unselect")
+	Event.listen("refresh_hud", self, "_on_hotswap_opened")
 
 func _on_hotswap_opened() -> void :
 	modulate.a = 0.5
 	if weapon.collectible in GameManager.collectibles:
-		make_selectable()
+		if get_parent().character == GameManager.player:
+			make_selectable()
+		else:
+			remove_icon()
 	else:
 		deactivate()
+		
+func remove_icon() -> void :
+	selectable = false
+	texture = null
 
 func deactivate() -> void :
 	pass

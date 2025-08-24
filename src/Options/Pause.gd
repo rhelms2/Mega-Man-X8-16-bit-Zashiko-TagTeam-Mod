@@ -29,7 +29,7 @@ signal unlock_buttons
 
 func _ready() -> void :
 	Event.listen("refresh_hud", self, "character_menu_visibility")
-	character_menu_visibility()
+	call_deferred("character_menu_visibility")
 	if not is_debugging():
 		pause.visible = false
 		bg.visible = false

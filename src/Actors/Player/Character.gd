@@ -55,13 +55,13 @@ var equipped_hearts: int = 0
 
 func check_for_char_switch_input() -> void :
 	if get_action_just_pressed("char_switch"):
-		if is_current_player and CharacterManager.current_team.size() > 1:
+		if is_current_player and CharacterManager.current_team.size() > 1 and CharacterManager.both_alive:
 			Event.emit_signal("character_switch")
 
 func max_out_air_abilities() -> void :
-	var airjump = get_node("AirJump")
-	var airdash = get_node("AirDash")
-	var hover = get_node("Hover")
+	var airjump = get_node_or_null("AirJump")
+	var airdash = get_node_or_null("AirDash")
+	var hover = get_node_or_null("Hover")
 	
 	if airjump != null:
 		airjump.current_air_jumps = 0

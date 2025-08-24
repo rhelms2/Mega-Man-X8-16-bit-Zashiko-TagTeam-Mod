@@ -25,6 +25,7 @@ signal start
 signal end
 signal lock_buttons
 signal unlock_buttons
+signal character_changed
 
 func _input(event: InputEvent) -> void :
 	if active and not locked:
@@ -75,6 +76,7 @@ func change_character(direction: int) -> void :
 	CharacterManager.player_count = player_count
 	pick.play()
 	set_visible_elements()
+	emit_signal("character_changed")
 
 func hide_all_characters(texture_rect: TextureRect) -> void :
 	texture_rect.get_node("X").hide()

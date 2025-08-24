@@ -5,6 +5,8 @@ export  var weapon_resource: Resource
 onready var weapon_name: Label = get_node("weapon_name")
 onready var ammo: TextureProgress = get_node("ammo/current")
 
+var character_name = "X"
+
 var weapon
 
 
@@ -25,13 +27,16 @@ func get_bar_value() -> float:
 
 func set_player_weapon() -> void :
 	if weapon_resource and GameManager.player:
-		for _weapon in GameManager.player.get_node("Shot").get_children():
+		var i = CharacterManager.current_team.find(character_name)
+		for _weapon in GameManager.team[i].get_node("Shot").get_children():
 			if _weapon is BossWeapon or _weapon.name == "GigaCrash" or _weapon.name == "XDrive" or _weapon.name == "NovaStrike":
 				if _weapon.weapon.collectible == weapon_resource.collectible:
 					weapon = _weapon
 
 func _on_focus_entered() -> void :
 	._on_focus_entered()
+	if CharacterManager.current_player_character != "X":
+		return
 	if GameManager.is_player_in_scene():
 		GameManager.player.get_node("Shot").set_current_weapon(weapon)
 	get_parent().set_weapon(self)

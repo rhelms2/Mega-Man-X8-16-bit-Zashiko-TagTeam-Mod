@@ -63,7 +63,7 @@ func set_current_weapon(weapon):
 	current_weapon = weapon
 	update_character_sprites()
 	
-	if current_weapon != null:
+	if current_weapon != null and character.is_current_player:
 		current_weapon.shoot_timer = 0
 		current_weapon.sprite_timer = 0
 		

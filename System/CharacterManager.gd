@@ -50,7 +50,7 @@ var current_player_character: String = "X"
 
 var valid_players: Array = ["X", "Zero", "Axl"]
 
-var equipped_hearts: Dictionary = {"X": 1, "Zero": 2, "Axl": 3}
+var equipped_hearts: Dictionary = {"X": 0, "Zero": 0, "Axl": 0}
 
 var both_alive = true
 var alive_team: Array = []
@@ -71,8 +71,31 @@ func on_character_switch_end():
 	GameManager.unpause("CharacterSwitch")
 
 
+func get_heart_count() -> int:
+	var count = 0
+	for item in GameManager.collectibles:
+		if "life_up" in item:
+			count += 1
+	return count
+
 func set_player_equipped_hearts(name: String, num_to_equip: int) -> void:
-	equipped_hearts[name] = num_to_equip
+	var max_hearts = get_heart_count()
+	var new_equipped_heart_count = 0
+
+	if num_to_equip < 0:
+		num_to_equip = 0
+	elif num_to_equip > max_hearts:
+		num_to_equip = max_hearts
+
+	for key in equipped_hearts.keys():
+		if key == name:
+			new_equipped_heart_count += num_to_equip
+		else:
+			new_equipped_heart_count += equipped_hearts[key]
+
+	if new_equipped_heart_count <= max_hearts:
+		equipped_hearts[name] = num_to_equip
+
 
 func add_player_to_team(new_player: String) -> void:
 	if new_player in valid_players and current_team.size() < max_team_size:
@@ -161,6 +184,7 @@ func _save() -> void :
 		"player_count": player_count, 
 		"current_player_character": current_player_character, 
 		"current_team": current_team,
+		"equipped_hearts": equipped_hearts,
 		"credits_seen": credits_seen, 
 		
 		"new_game": new_game, 
@@ -196,6 +220,7 @@ func _load() -> void :
 			player_count = int(save_data.get("player_count", 1))
 			current_player_character = save_data.get("current_player_character", "X")
 			current_team = save_data.get("current_team", ["X", "Zero"])
+			equipped_hearts = save_data.get("equipped_hearts", {"X": 0, "Zero": 0, "Axl": 0})
 			credits_seen = bool(save_data.get("credits_seen", false))
 			
 			new_game = bool(save_data.get("new_game", true))

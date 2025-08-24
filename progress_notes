@@ -1,27 +1,36 @@
-8/22
-
 Progress:
 
+8/22
+
 - Extra life pickup icon switches with active character
-- Correct ride armor sprites set (see bug below related to this)
+- Correct ride armor sprites set 
 - No stage reset until both players die 
 - playing 1 player mode doesn't cause game crash
 - fixed zeros weapons
 - fixed weird armor capsule bug
 - fixed portals in Primrose stage
+- fixed weapon display and right/left switching
 
-Bugs noticed:
+8/23
 
-- Pause menu glitched out
-- X's armor sprites staying visible even on character switch on ride armor
-- Zero maintaining dash speed in air between switching in/out
+- Hotswap working and tested
+- Pause menu focus being set correctly and able to switch weapons accurately for all characters
+- Heart tank selection per character in armor select
+
+Bugs to fix:
+
+- Invisible walls in trilobyte stage
+	- Similar graphical bug: water not showing correctly on Noah's park
+- Pause menu: health bar appears unfilled for characters with lower max health
+- On returning to stage select with zero, add_collectibles_to_inactive_player causes softlock because of previously freed instance
+- Weapon equip scene causes a few crashes
+- Freeze during fade out on death on dark mantis for some reason
 - 1st Heart tank collection freezes the game 
-- Stage rotate in primrose breaks for secondary character
+- Stage rotate in primrose breaks completely
 - Ride chaser spawns on character at start of stage (why?) 
+- Zero maintaining dash speed in air between switching in/out
 
 Features to implement:
 
-- Heart tank selection in armor select
-- Weapon bar staying in the same place, not fading unless in ride vehicle
-- Disable hotswap for inactive characters
+- Make subtanks only fill active character's health
 - Shared giga attack bar

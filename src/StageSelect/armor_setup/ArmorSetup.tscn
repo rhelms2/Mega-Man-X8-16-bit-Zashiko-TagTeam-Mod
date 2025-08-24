@@ -1638,15 +1638,70 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -13.0
-margin_top = 7.5
-margin_right = 15.0
-margin_bottom = 21.5
+margin_left = 5.0
+margin_top = 6.5
+margin_right = 17.0
+margin_bottom = 20.5
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
 custom_fonts/font = ExtResource( 34 )
-text = "0/0"
+text = "0"
+align = 1
+uppercase = true
+
+[node name="equipped" type="Label" parent="Menu/subtank_holder/subtank_enabler"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -9.0
+margin_top = 6.5
+margin_right = 7.0
+margin_bottom = 20.5
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 34 )
+text = "0/"
+align = 1
+uppercase = true
+
+[node name="up_arrow" type="Label" parent="Menu/subtank_holder/subtank_enabler"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = 12.5
+margin_right = -16.0
+margin_bottom = 26.5
+rect_rotation = -90.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 34 )
+text = ">"
+align = 1
+uppercase = true
+
+[node name="down_arrow" type="Label" parent="Menu/subtank_holder/subtank_enabler"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -10.0
+margin_top = 12.5
+margin_right = -1.0
+margin_bottom = 26.5
+rect_rotation = 90.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 34 )
+text = ">"
 align = 1
 uppercase = true
 
@@ -1676,15 +1731,70 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -15.0
+margin_left = 3.0
 margin_top = 3.5
-margin_right = 13.0
+margin_right = 16.0
 margin_bottom = 17.5
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
 custom_fonts/font = ExtResource( 34 )
-text = "0/0"
+text = "8"
+align = 1
+uppercase = true
+
+[node name="equipped" type="Label" parent="Menu/heart_holder/heart_enabler"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -11.0
+margin_top = 3.5
+margin_right = 5.0
+margin_bottom = 17.5
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 34 )
+text = "0/"
+align = 1
+uppercase = true
+
+[node name="up_arrow" type="Label" parent="Menu/heart_holder/heart_enabler"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -25.0
+margin_top = 12.5
+margin_right = -16.0
+margin_bottom = 26.5
+rect_rotation = -90.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 34 )
+text = ">"
+align = 1
+uppercase = true
+
+[node name="down_arrow" type="Label" parent="Menu/heart_holder/heart_enabler"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -10.0
+margin_top = 12.5
+margin_right = -1.0
+margin_bottom = 26.5
+rect_rotation = 90.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 34 )
+text = ">"
 align = 1
 uppercase = true
 
@@ -1943,6 +2053,7 @@ align = 1
 uppercase = true
 
 [node name="Fader" type="ColorRect" parent="."]
+visible = false
 margin_right = 398.0
 margin_bottom = 224.0
 mouse_filter = 2

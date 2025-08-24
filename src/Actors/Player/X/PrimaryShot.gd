@@ -98,7 +98,8 @@ func set_current_weapon(weapon):
 	current_weapon = weapon
 	update_character_palette()
 	Log("Changed Weapon to " + current_weapon.name)
-	Event.emit_signal("changed_weapon", current_weapon)
+	if character.is_current_player:
+		Event.emit_signal("changed_weapon", current_weapon)
 	next_shot_ready = false
 
 func direct_weapon_select(weapon_resource):

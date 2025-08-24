@@ -20,6 +20,7 @@ onready var zero_beta: Texture = preload("res://Zero_mod/HUD/Zero_base.png")
 onready var black_zero_beta_icon: Texture = preload("res://Zero_mod/HUD/Pause/beta_black_zero_collectible.png")
 onready var zero_beta_material: = preload("res://Zero_mod/Sprites/Zero_Material_Shader.tres")
 
+var character_name = "Zero"
 var weapon
 
 
@@ -64,13 +65,16 @@ func set_pause_icon(_weapon) -> void :
 
 func set_player_weapon() -> void :
 	if weapon_resource and GameManager.player:
-		for _weapon in GameManager.player.get_node("Shot").get_children():
+		var i = CharacterManager.current_team.find(character_name)
+		for _weapon in GameManager.team[i].get_node("Shot").get_children():
 			if _weapon is ZeroSpecialWeapon:
 				if _weapon.weapon.collectible == weapon_resource.collectible:
 					weapon = _weapon
 
 func _on_focus_entered() -> void :
 	._on_focus_entered()
+	if CharacterManager.current_player_character != "Zero":
+		return
 	if CharacterManager.betazero_activated:
 		return
 	if GameManager.is_player_in_scene():

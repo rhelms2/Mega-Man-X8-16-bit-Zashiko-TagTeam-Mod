@@ -83,7 +83,7 @@ func set_current_weapon(weapon) -> void :
 	current_weapon = weapon
 	if not current_weapon:
 		set_saber_as_weapon()
-	if current_weapon != null:
+	if current_weapon != null and character.is_current_player:
 		update_character_sprites()
 		Event.emit_signal("changed_weapon", current_weapon)
 

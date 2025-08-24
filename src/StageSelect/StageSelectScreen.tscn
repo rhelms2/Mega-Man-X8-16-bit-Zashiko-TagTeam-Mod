@@ -678,13 +678,13 @@ color = Color( 0, 0, 0, 1 )
 position = Vector2( 199, -139 )
 z_index = -50
 frames = SubResource( 38 )
-frame = 6
+frame = 14
 playing = true
 
 [node name="pointer" type="AnimatedSprite" parent="map"]
 position = Vector2( 0, 322 )
 frames = SubResource( 16 )
-frame = 5
+frame = 2
 playing = true
 script = ExtResource( 16 )
 button_sprites = NodePath("../../button_sprites")
@@ -790,7 +790,7 @@ frame = 2
 
 [node name="cursor" parent="button_sprites/JacobElevator" index="0"]
 animation = "long"
-frame = 2
+frame = 0
 
 [node name="Gateway" parent="button_sprites" instance=ExtResource( 22 )]
 position = Vector2( 343, 112 )
@@ -799,7 +799,7 @@ frame = 2
 
 [node name="cursor" parent="button_sprites/Gateway" index="0"]
 animation = "long"
-frame = 2
+frame = 0
 
 [node name="on_stage_select" type="Node" parent="."]
 script = ExtResource( 51 )

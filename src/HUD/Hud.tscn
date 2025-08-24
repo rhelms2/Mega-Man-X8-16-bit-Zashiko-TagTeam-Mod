@@ -151,6 +151,51 @@ value = 16.0
 texture_progress = ExtResource( 7 )
 fill_mode = 3
 
+[node name="WeaponIcon" type="TextureRect" parent="X Bar2"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 22.0
+margin_top = -14.0
+margin_right = 38.0
+margin_bottom = 2.0
+rect_clip_content = true
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = SubResource( 2 )
+
+[node name="WeaponBar" type="NinePatchRect" parent="X Bar2"]
+material = SubResource( 1 )
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 20.0
+margin_top = -76.0
+margin_right = 34.0
+texture = ExtResource( 16 )
+patch_margin_top = 4
+patch_margin_bottom = 17
+script = ExtResource( 18 )
+
+[node name="textureProgress" type="TextureProgress" parent="X Bar2/WeaponBar"]
+material = SubResource( 3 )
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = -80.0
+margin_right = 10.0
+margin_bottom = -17.0
+max_value = 32.0
+value = 28.0
+texture_progress = ExtResource( 7 )
+fill_mode = 3
+
+[node name="SpecialBar" parent="X Bar2" instance=ExtResource( 6 )]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = -10.0
+margin_top = -53.0
+margin_right = 0.0
+margin_bottom = 1.0
+
 [node name="X Bar" type="NinePatchRect" parent="."]
 material = SubResource( 1 )
 margin_left = 8.0
@@ -357,5 +402,7 @@ margin_right = 397.0
 
 [node name="IGTHUD" parent="." instance=ExtResource( 23 )]
 
+[connection signal="displayed" from="X Bar2/WeaponBar" to="X Bar/SpecialBar" method="_on_WeaponBar_displayed"]
+[connection signal="hidden" from="X Bar2/WeaponBar" to="X Bar/SpecialBar" method="_on_WeaponBar_hidden"]
 [connection signal="displayed" from="X Bar/WeaponBar" to="X Bar/SpecialBar" method="_on_WeaponBar_displayed"]
 [connection signal="hidden" from="X Bar/WeaponBar" to="X Bar/SpecialBar" method="_on_WeaponBar_hidden"]

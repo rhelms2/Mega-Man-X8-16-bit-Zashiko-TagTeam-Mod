@@ -9,6 +9,8 @@ onready var equip: AudioStreamPlayer = $"../../../equip"
 onready var unequip: AudioStreamPlayer = $"../../../unequip"
 onready var subtank_holder = get_parent()
 
+onready var equipped_text: Label = $equipped
+
 
 func setup() -> void :
 	if get_subtank_count() == 0:
@@ -44,11 +46,12 @@ func decrease_value() -> void :
 	display()
 
 func display() -> void :
+	value.text = str(get_subtank_count())
 	if not GameManager.equip_subtanks:
-		value.text = " "
+		equipped_text.text = str(0) + "/"
 		self_modulate.a = 0.7
 	else:
-		value.text = "x" + str(get_subtank_count())
+		equipped_text.text = str(get_subtank_count()) + "/"
 		self_modulate.a = 1
 
 func get_subtank_count() -> int:
