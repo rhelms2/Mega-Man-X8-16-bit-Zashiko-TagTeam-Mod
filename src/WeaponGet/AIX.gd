@@ -3,6 +3,10 @@ extends X
 var less_buggy_pressed_dir: int = 0
 
 
+func _ready():
+	is_current_player = true
+
+
 func has_just_pressed_left() -> bool:
 	return get_action_just_pressed("left_emulated")
 

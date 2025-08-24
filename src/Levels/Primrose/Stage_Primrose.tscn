@@ -1134,7 +1134,6 @@ z_index = 4
 [node name="TouchButton3" parent="Scenery/Room7" instance=ExtResource( 19 )]
 position = Vector2( -277, 85 )
 z_index = 4
-degrees_to_rotate = null
 
 [node name="Collision" type="TileMap" parent="Scenery/Room7"]
 visible = false

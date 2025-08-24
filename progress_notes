@@ -16,21 +16,27 @@ Progress:
 - Hotswap working and tested
 - Pause menu focus being set correctly and able to switch weapons accurately for all characters
 - Heart tank selection per character in armor select
+- Fixed ridechaser spawning on character glitch
+- Fixed stage rotate glitch for primrose and double boss spawn
+- Removed icarus boots high jump
 
 Bugs to fix:
 
-- Invisible walls in trilobyte stage
-	- Similar graphical bug: water not showing correctly on Noah's park
-- Pause menu: health bar appears unfilled for characters with lower max health
-- On returning to stage select with zero, add_collectibles_to_inactive_player causes softlock because of previously freed instance
-- Weapon equip scene causes a few crashes
-- Freeze during fade out on death on dark mantis for some reason
-- 1st Heart tank collection freezes the game 
-- Stage rotate in primrose breaks completely
-- Ride chaser spawns on character at start of stage (why?) 
+- Graphical: 
+	- Invisible walls in trilobyte stage
+	- water not showing correctly on Noah's park
+- Pause menu: 
+	- health bar appears unfilled for characters with lower max health
+- Stage clear glitches:
+	- On returning to stage select with zero, add_collectibles_to_inactive_player causes softlock because of previously freed instance
+	- Weapon equip scene causes a few crashes, both with X and Axl 
+- Sometimes Heart tank collection freezes the game?
+- Freeze during fade out on death on dark mantis
 - Zero maintaining dash speed in air between switching in/out
 
 Features to implement:
 
-- Make subtanks only fill active character's health
+- Make subtanks only fill active character's health (look at "Subtank.gd")
 - Shared giga attack bar
+- Fix cutscenes to load which character dynamically instead of just at start of stage
+- Make Axl automatically hover when shooting in air

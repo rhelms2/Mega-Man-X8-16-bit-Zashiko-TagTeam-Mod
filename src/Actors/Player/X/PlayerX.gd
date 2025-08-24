@@ -129,7 +129,7 @@ func equip_hermes_head_parts():
 
 func equip_hermes_body_parts():
 	var dmg = get_node("Damage")
-	dmg.damage_reduction = 33
+	dmg.damage_reduction = 25
 	dmg.prevent_knockbacks = false
 	dmg.conflicting_moves = ["Death", "WallSlide", "Ride"]
 	get_node("LifeSteal").activate()
@@ -191,7 +191,7 @@ func equip_icarus_head_parts():
 
 func equip_icarus_body_parts():
 	var dmg = get_node("Damage")
-	dmg.damage_reduction = 50
+	dmg.damage_reduction = 40
 	dmg.prevent_knockbacks = true
 	dmg.conflicting_moves = ["Death", "Nothing"]
 	get_node("LifeSteal").deactivate()
@@ -223,15 +223,15 @@ func equip_icarus_legs_parts():
 	airdash.invulnerability_duration = 0
 	airjump.set_max_air_jumps(1)
 	
-	get_node("Jump").max_jump_time = 0.75
-	get_node("Jump").jump_velocity = 420
-	get_node("DashJump").max_jump_time = 0.75
-	get_node("DashJump").jump_velocity = 420
-	get_node("WallJump").max_jump_time = 0.75
-	get_node("WallJump").jump_velocity = 420
-	get_node("DashWallJump").max_jump_time = 0.75
-	get_node("DashWallJump").jump_velocity = 420
-	airjump.jump_velocity = 140
+	get_node("Jump").max_jump_time = 0.625
+	get_node("Jump").jump_velocity = 320
+	get_node("DashJump").max_jump_time = 0.625
+	get_node("DashJump").jump_velocity = 320
+	get_node("WallJump").max_jump_time = 0.625
+	get_node("WallJump").jump_velocity = 320
+	get_node("DashWallJump").max_jump_time = 0.625
+	get_node("DashWallJump").jump_velocity = 320
+	airjump.jump_velocity = 190
 	
 	get_node("Walk").horizontal_velocity = 90
 	get_node("Jump").horizontal_velocity = 90
@@ -296,9 +296,12 @@ func is_subtank(collectible: String) -> bool:
 	return "tank" in collectible
 
 func equip_heart():
-	GameManager.player.max_health += 2
-	GameManager.player.recover_health(2)
-	equipped_hearts += 1
+	var i = GameManager.team.find(self)
+	if i == -1:
+		return
+	GameManager.team[i].max_health += 1
+	GameManager.team[i].recover_health(1)
+	num_equipped_hearts += 1
 
 func recover_health(value: float):
 	if current_health < max_health:

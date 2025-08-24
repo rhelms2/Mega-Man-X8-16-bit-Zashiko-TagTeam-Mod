@@ -4,7 +4,7 @@ onready var boss_spawner: Node2D = $"../BossSpawner"
 
 
 func _on_area2D_body_entered(_body: Node) -> void :
-	if active:
+	if active and _body.character == GameManager.player:
 		before_teleport()
 
 func before_teleport() -> void :

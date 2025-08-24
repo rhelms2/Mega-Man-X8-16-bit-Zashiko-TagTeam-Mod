@@ -349,7 +349,7 @@ func has_equip_exception(collectible: String, p: Character) -> bool:
 				return true
 				
 	elif is_heart(collectible):
-		if p.equipped_hearts >= CharacterManager.equipped_hearts[p.name]:
+		if p.num_equipped_hearts >= CharacterManager.equipped_hearts[p.name]:
 			return true
 		if not equip_hearts:
 			return true

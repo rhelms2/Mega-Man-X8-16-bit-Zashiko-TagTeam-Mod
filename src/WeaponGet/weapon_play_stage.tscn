@@ -1,4 +1,4 @@
-[gd_scene load_steps=78 format=2]
+[gd_scene load_steps=79 format=2]
 
 [ext_resource path="res://src/Levels/StageSegmentManager.gd" type="Script" id=1]
 [ext_resource path="res://src/Levels/music_player.gd" type="Script" id=2]
@@ -24,6 +24,7 @@
 [ext_resource path="res://src/Objects/Spikes/DestructibleSpike.tscn" type="PackedScene" id=22]
 [ext_resource path="res://src/WeaponGet/TestLevelModifier.gd" type="Script" id=23]
 [ext_resource path="res://src/Actors/Enemies/Drone/Drone.tscn" type="PackedScene" id=24]
+[ext_resource path="res://src/HUD/BarFader.gd" type="Script" id=25]
 [ext_resource path="res://src/IA/PlayerIA.gd" type="Script" id=54]
 [ext_resource path="res://src/Effects/enemy_shader.tres" type="Shader" id=89]
 [ext_resource path="res://src/Effects/ShieldBreak/shieldbreak.res" type="SpriteFrames" id=121]
@@ -249,6 +250,7 @@ margin_bottom = 108.0
 texture = ExtResource( 132 )
 patch_margin_top = 4
 patch_margin_bottom = 17
+script = ExtResource( 25 )
 
 [node name="textureProgress2" type="TextureProgress" parent="Hud/X Bar"]
 modulate = Color( 0.737255, 0.0941176, 0.0941176, 1 )
@@ -448,7 +450,7 @@ skip_intro = true
 
 [node name="animatedSprite" parent="X" index="3"]
 material = SubResource( 68 )
-frame = 41
+frame = 30
 
 [node name="Damage" parent="X" index="16"]
 active = false
@@ -546,6 +548,7 @@ position = Vector2( 0, -16 )
 z_index = 1
 frames = ExtResource( 152 )
 animation = "idle"
+frame = 9
 playing = true
 flip_h = true
 

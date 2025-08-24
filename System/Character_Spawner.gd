@@ -116,7 +116,7 @@ func _ready() -> void :
 		CharacterManager.both_alive = false
 
 	GameManager.team = team_members
-		
+
 
 
 	if "NoahsPark" in self.name:
@@ -230,18 +230,20 @@ func _ready() -> void :
 			
 			spawn_ride_armor(Vector2(6393, 2396))
 		spawn_ride_armor_at_start()
-		var node = Light2D.new()
-		node.set_name("light")
-		node.texture = load("res://src/Levels/PitchBlack/light.png")
-		node.energy = 0.35
-		node.mode = Light2D.MODE_ADD
-		node.range_layer_min = - 2
-		node.range_layer_max = - 1
-		node.position = Vector2(0, 0)
-		node.scale = Vector2(1.5, 1)
-		node.z_index = 277
-		node.set_script(_lightsource_script)
-		player_instance.add_child(node)
+		
+		for p in team_members:
+			var node = Light2D.new()
+			node.set_name("light")
+			node.texture = load("res://src/Levels/PitchBlack/light.png")
+			node.energy = 0.35
+			node.mode = Light2D.MODE_ADD
+			node.range_layer_min = - 2
+			node.range_layer_max = - 1
+			node.position = Vector2(0, 0)
+			node.scale = Vector2(1.5, 1)
+			node.z_index = 277
+			node.set_script(_lightsource_script)
+			p.add_child(node)
 		
 		if CharacterManager.game_mode < 0:
 			var deathshocks = [
@@ -261,16 +263,16 @@ func _ready() -> void :
 		spawn_ride_armor_at_start()
 		
 		
-		
-		var node = Node.new()
-		node.set_name("rotator")
-		node.set_script(_rotator_script)
-		player_instance.add_child(node)
-		
-		node = Node.new()
-		node.set_name("InvulnerabilityOnTeleport")
-		node.set_script(_InvulnerabilityOnTeleport_script)
-		player_instance.add_child(node)
+		for p in team_members:
+			var node = Node.new()
+			node.set_name("rotator")
+			node.set_script(_rotator_script)
+			p.add_child(node)
+			
+			node = Node.new()
+			node.set_name("InvulnerabilityOnTeleport")
+			node.set_script(_InvulnerabilityOnTeleport_script)
+			p.add_child(node)
 
 
 	if self.name == "TroiaBase":
@@ -281,16 +283,18 @@ func _ready() -> void :
 			
 		spawn_ride_armor_at_start()
 		
-		var combo_label = Label.new()
-		combo_label.set_name("combo_label")
-		combo_label.margin_left = 9
-		combo_label.margin_top = - 88
-		combo_label.margin_right = 49
-		combo_label.margin_bottom = - 74
-		combo_label.rect_position = Vector2(9, - 88)
-		combo_label.rect_size = Vector2(40, 24)
-		combo_label.visible = false
-		player_instance.add_child(combo_label)
+		for p in team_members:
+		
+			var combo_label = Label.new()
+			combo_label.set_name("combo_label")
+			combo_label.margin_left = 9
+			combo_label.margin_top = - 88
+			combo_label.margin_right = 49
+			combo_label.margin_bottom = - 74
+			combo_label.rect_position = Vector2(9, - 88)
+			combo_label.rect_size = Vector2(40, 24)
+			combo_label.visible = false
+			p.add_child(combo_label)
 		
 		
 		var visual_ranking_instance = _visual_ranking_object.instance()
@@ -390,25 +394,26 @@ func _ready() -> void :
 
 	if self.name == "Gateway":
 		spawn_ride_armor_at_start()
-		var node = Light2D.new()
-		node.set_name("light")
-		node.texture = load("res://src/Levels/PitchBlack/light.png")
-		node.energy = 0.35
-		node.mode = Light2D.MODE_ADD
-		node.range_z_min = - 1024
-		node.range_z_max = 1024
-		node.range_layer_min = - 2
-		node.range_layer_max = - 1
-		node.position = Vector2(0, 0)
-		node.scale = Vector2(1.5, 1)
-		node.z_index = 277
-		node.set_script(_lightsource_script)
-		player_instance.add_child(node)
-		
-		node = Node.new()
-		node.set_name("InvulnerabilityOnTeleport")
-		node.set_script(_InvulnerabilityOnTeleport_script)
-		player_instance.add_child(node)
+		for p in team_members:
+			var node = Light2D.new()
+			node.set_name("light")
+			node.texture = load("res://src/Levels/PitchBlack/light.png")
+			node.energy = 0.35
+			node.mode = Light2D.MODE_ADD
+			node.range_z_min = - 1024
+			node.range_z_max = 1024
+			node.range_layer_min = - 2
+			node.range_layer_max = - 1
+			node.position = Vector2(0, 0)
+			node.scale = Vector2(1.5, 1)
+			node.z_index = 277
+			node.set_script(_lightsource_script)
+			p.add_child(node)
+			
+			node = Node.new()
+			node.set_name("InvulnerabilityOnTeleport")
+			node.set_script(_InvulnerabilityOnTeleport_script)
+			p.add_child(node)
 
 
 	if self.name == "SigmaPalace":

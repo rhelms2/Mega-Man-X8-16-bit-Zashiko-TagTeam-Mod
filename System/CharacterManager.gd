@@ -61,6 +61,7 @@ var max_team_size: int = 2
 
 
 func on_character_switch_end():
+	current_team.invert()
 	if not GameManager.player.is_on_floor():
 		# Reset horizontal velocity and remove dash/jump/hover abilities from the switching character
 		GameManager.player.dashfall = false
