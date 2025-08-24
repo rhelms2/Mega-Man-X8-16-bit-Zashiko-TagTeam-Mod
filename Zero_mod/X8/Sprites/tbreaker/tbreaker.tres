@@ -1,6 +1,6 @@
 [gd_resource type="SpriteFrames" load_steps=311 format=2]
 
-[ext_resource path="res://Zero_mod/X8/Sprites/idle.png" type="Texture" id=1]
+[ext_resource path="res://Zero_mod/X8/Sprites/tbreaker/talk.png" type="Texture" id=1]
 [ext_resource path="res://Zero_mod/Sprites/zero_ride_chaser.png" type="Texture" id=2]
 [ext_resource path="res://Zero_mod/X8/Sprites/Saber/saber_3.png" type="Texture" id=3]
 [ext_resource path="res://Zero_mod/X8/Sprites/Intro.png" type="Texture" id=4]
@@ -809,13 +809,13 @@ region = Rect2( 192, 560, 64, 56 )
 atlas = ExtResource( 2 )
 region = Rect2( 128, 560, 64, 56 )
 
-[sub_resource type="AtlasTexture" id=351]
+[sub_resource type="AtlasTexture" id=741]
 atlas = ExtResource( 1 )
-region = Rect2( 256, 0, 128, 128 )
+region = Rect2( 0, 0, 192, 192 )
 
-[sub_resource type="AtlasTexture" id=352]
+[sub_resource type="AtlasTexture" id=742]
 atlas = ExtResource( 1 )
-region = Rect2( 256, 0, 128, 128 )
+region = Rect2( 192, 0, 192, 192 )
 
 [sub_resource type="AtlasTexture" id=673]
 atlas = ExtResource( 13 )
@@ -1329,7 +1329,7 @@ animations = [ {
 "name": "stop_end",
 "speed": 23.0
 }, {
-"frames": [ SubResource( 351 ), SubResource( 352 ) ],
+"frames": [ SubResource( 741 ), SubResource( 742 ) ],
 "loop": true,
 "name": "talk",
 "speed": 10.0
