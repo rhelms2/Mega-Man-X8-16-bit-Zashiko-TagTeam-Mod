@@ -6,7 +6,7 @@ onready var main: CanvasLayer = $"../../.."
 onready var exit: TextureButton = $"../../exit"
 
 var configurable = {
-	"move_left": tr("LEFT_ACT"), 
+	"move_left": "LEFT_ACT", 
 	"move_right": "RIGHT_ACT", 
 	"move_up": "UP_ACT", 
 	"move_down": "DOWN_ACT", 

@@ -4,15 +4,22 @@ onready var action_name: Label = $actionname
 onready var key: = $key
 onready var joypad: = $joypad
 var action
+var _readname
 
 func setup(_action, readname, menu) -> void :
 	key.connect_lock_signals(menu)
 	joypad.connect_lock_signals(menu)
 	action = _action
+	_readname = readname
 	action_name.text = tr(readname)
 	var _s = key.connect("updated_event", self, "get_inputs_and_set_names")
 	_s = joypad.connect("updated_event", self, "get_inputs_and_set_names")
+	Event.connect("translation_updated",self,"update_action_name")
 	get_inputs_and_set_names(action)
+
+func update_action_name():
+	action_name.text = tr(_readname)
+
 
 func get_inputs_and_set_names(_action = action) -> void :
 	var inputs = InputMap.get_action_list(_action)
