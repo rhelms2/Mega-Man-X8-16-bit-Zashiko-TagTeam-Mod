@@ -12,7 +12,7 @@
 [ext_resource path="res://System/Screens/Loading/icons/hermes_head.png" type="Texture" id=11]
 [ext_resource path="res://System/Screens/Loading/icons/icarus_head.png" type="Texture" id=12]
 [ext_resource path="res://System/Screens/Loading/difficulty_text.gd" type="Script" id=13]
-[ext_resource path="res://src/Fonts/Xclassicfont.fnt" type="BitmapFont" id=14]
+[ext_resource path="res://src/Fonts/xclassicfontfinal.fnt" type="BitmapFont" id=14]
 
 [node name="slot1" type="TextureButton"]
 modulate = Color( 0.490196, 0.490196, 0.490196, 1 )

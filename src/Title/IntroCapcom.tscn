@@ -4,7 +4,7 @@
 [ext_resource path="res://src/Title/title_bg.png" type="Texture" id=2]
 [ext_resource path="res://src/Title/IntroCapcom.gd" type="Script" id=3]
 [ext_resource path="res://src/Title/capcom_logo.res" type="SpriteFrames" id=4]
-[ext_resource path="res://src/Fonts/X8bitmapfont.fnt" type="BitmapFont" id=5]
+[ext_resource path="res://src/Fonts/x8bitmapfontfinal.fnt" type="BitmapFont" id=5]
 [ext_resource path="res://src/Title/IntroAnim.tscn" type="PackedScene" id=6]
 [ext_resource path="res://src/Sounds/OST - MainTheme.ogg" type="AudioStream" id=7]
 [ext_resource path="res://src/Options/MainMenu.tscn" type="PackedScene" id=8]

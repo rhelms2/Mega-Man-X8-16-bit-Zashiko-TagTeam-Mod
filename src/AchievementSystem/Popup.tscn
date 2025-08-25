@@ -6,7 +6,7 @@
 [ext_resource path="res://src/AchievementSystem/icon_bg.png" type="Texture" id=4]
 [ext_resource path="res://src/AchievementSystem/Icons/achievicon_default.png" type="Texture" id=5]
 [ext_resource path="res://src/System/save_icon.png" type="Texture" id=6]
-[ext_resource path="res://src/Fonts/OpenSans-SemiBold.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://src/Fonts/NotoSansJP-SemiBold.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://src/AchievementSystem/save_icon.gd" type="Script" id=8]
 
 [sub_resource type="DynamicFont" id=1]
@@ -67,7 +67,7 @@ anchor_right = 0.1
 margin_left = 39.0
 margin_top = 15.0
 margin_right = 223.1
-margin_bottom = 58.0
+margin_bottom = 63.0
 rect_scale = Vector2( 0.4, 0.4 )
 mouse_filter = 0
 size_flags_vertical = 1

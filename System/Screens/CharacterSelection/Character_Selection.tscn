@@ -5,7 +5,7 @@
 [ext_resource path="res://src/Options/pause_bg.png" type="Texture" id=3]
 [ext_resource path="res://src/Sounds/OST - Capsule.ogg" type="AudioStream" id=4]
 [ext_resource path="res://src/Sounds/OST - AngryBoss - Loop.ogg" type="AudioStream" id=5]
-[ext_resource path="res://src/Fonts/Xclassicfont.fnt" type="BitmapFont" id=6]
+[ext_resource path="res://src/Fonts/xclassicfontfinal.fnt" type="BitmapFont" id=6]
 [ext_resource path="res://src/Levels/music_player.gd" type="Script" id=7]
 [ext_resource path="res://System/SFX/choose_x8.ogg" type="AudioStream" id=8]
 [ext_resource path="res://Axl_mod/Player/Axl_Material_Shader.tres" type="Material" id=9]

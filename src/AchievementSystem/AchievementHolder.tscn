@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://src/Fonts/OpenSans-SemiBold.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://src/Fonts/NotoSansJP-SemiBold.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://src/Effects/Materials/AchieveIcon_mat.tres" type="Material" id=2]
 [ext_resource path="res://src/AchievementSystem/Icons/achievicon_default.png" type="Texture" id=4]
 [ext_resource path="res://src/AchievementSystem/icon_bg.png" type="Texture" id=5]
@@ -81,6 +81,7 @@ size_flags_vertical = 1
 custom_colors/font_color_shadow = Color( 0, 0, 0, 0.415686 )
 custom_constants/shadow_offset_x = 2
 custom_constants/shadow_offset_y = 2
+custom_fonts/font = SubResource( 1 )
 text = "Defeated any Maverick Boss with only your Buster, without upgrades and w"
 autowrap = true
 max_lines_visible = 3

@@ -1170,7 +1170,7 @@ pause_mode = 2
 position = Vector2( 13737, -2152 )
 z_index = 2
 frames = SubResource( 187 )
-frame = 3
+frame = 1
 playing = true
 script = ExtResource( 82 )
 

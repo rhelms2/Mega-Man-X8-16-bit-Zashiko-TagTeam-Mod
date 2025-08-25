@@ -6,7 +6,7 @@
 [ext_resource path="res://src/Sounds/MM - Equip.wav" type="AudioStream" id=4]
 [ext_resource path="res://src/Title/title_bg.png" type="Texture" id=5]
 [ext_resource path="res://System/SFX/move_cursor.ogg" type="AudioStream" id=6]
-[ext_resource path="res://src/Fonts/Xclassicfont.fnt" type="BitmapFont" id=7]
+[ext_resource path="res://src/Fonts/xclassicfontfinal.fnt" type="BitmapFont" id=7]
 [ext_resource path="res://src/Sounds/CHARGED_SHOT.wav" type="AudioStream" id=8]
 [ext_resource path="res://System/Screens/Loading/Loading.gd" type="Script" id=9]
 [ext_resource path="res://System/Screens/Loading/SlotButton.tscn" type="PackedScene" id=10]

@@ -14,10 +14,10 @@ func decrease_value() -> void :
 
 func set_songremix(value: bool) -> void :
 	Configurations.set("SongRemix", value)
-	
+	Event.emit_signal("music_changed")
+	display()
 
 func get_songremix():
-	Configurations.set("SongRemix", false)
 	if Configurations.exists("SongRemix"):
 		return Configurations.get("SongRemix")
 	return false
