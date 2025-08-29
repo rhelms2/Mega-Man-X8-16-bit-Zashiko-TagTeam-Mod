@@ -77,10 +77,10 @@ func on_equip():
 	if character.is_full_armor() == "ultimate":
 		active = true
 		current_ammo = max_ammo
-		Event.emit_signal("special_activated", self)
+		Event.emit_signal("special_activated", self, character)
 	else:
 		active = false
-		Event.emit_signal("special_deactivated", self)
+		Event.emit_signal("special_deactivated", self, character)
 		if parent.current_weapon == self:
 			parent.set_buster_as_weapon()
 	parent.update_list_of_weapons()

@@ -25,7 +25,7 @@ func display(current_weapon) -> void :
 	ammo_bar.material.set_shader_param("palette", palette)
 	ammo_bar.value = get_bar_value()
 	show()
-	emit_signal("displayed", current_weapon)
+	emit_signal("displayed", current_weapon, char_name)
 
 func is_exception(current_weapon) -> bool:
 	if "Buster" in current_weapon.name:

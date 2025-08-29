@@ -50,13 +50,17 @@ signal jump
 signal character_switch_out
 signal character_switch_in
 var is_current_player: bool = false
+var is_executing_special: bool = false
 
 var num_equipped_hearts
 
 func check_for_char_switch_input() -> void :
 	if get_action_just_pressed("char_switch"):
-		if is_current_player and CharacterManager.current_team.size() > 1 and CharacterManager.both_alive:
+		if can_switch():
 			Event.emit_signal("character_switch")
+
+func can_switch() -> bool :
+	return is_current_player and CharacterManager.current_team.size() > 1 and CharacterManager.both_alive and not is_executing_special
 
 func max_out_air_abilities() -> void :
 	var airjump = get_node_or_null("AirJump")

@@ -74,18 +74,12 @@ func on_character_switch() -> void :
 			player_instance.emit_signal("character_switch_in")
 			Event.emit_signal("refresh_hud")
 			
-	# For testing purposes, before UI on stage select is working
-func test_set_team():
-	for i in range(1, -1, -1):
-		CharacterManager.add_player_to_team(CharacterManager.valid_players[i])
-	CharacterManager.set_player_character(CharacterManager.current_team[0])
 ####
 
 func _ready() -> void :
 	teleport_to_boss = CharacterManager.teleport_to_boss
 	
 	if self.name == "NoahsPark":
-		test_set_team()
 		var node: Node = Node.new()
 		node.set_name("StartCutscene")
 		node.set_script(_start_cutscene_script)

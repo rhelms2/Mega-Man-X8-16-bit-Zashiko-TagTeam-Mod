@@ -24,6 +24,13 @@ Progress:
 
 - subtank only fills active player's health and only active player can fill it by collecting pickups (Needs more testing/balancing)
 
+8/29
+
+- Special bar now mostly appears correctly: exception when x is icarus and axl is in team
+- Can't switch characters during special move
+- Ammo for all special moves reset when one is used, making chaining impossible
+- Fixed bug where red health was showing on the wrong health bar
+
 
 Bugs to fix:
 
@@ -41,6 +48,5 @@ Bugs to fix:
 
 Features to implement:
 
-- Shared giga attack bar
 - Fix cutscenes to load which character dynamically instead of just at start of stage
 - Make Axl automatically hover when shooting in air

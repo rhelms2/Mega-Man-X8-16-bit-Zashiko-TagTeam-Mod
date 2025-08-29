@@ -36,6 +36,10 @@ func _ready() -> void :
 	Event.listen("capsule_entered", self, "remove_buff")
 	Event.listen("hit_enemy", self, "recharge")
 	Event.listen("enemy_kill", self, "recharge")
+	Event.listen("special_end", self, "reset_ammo_to_zero")
+	
+func reset_ammo_to_zero() -> void:
+	current_ammo = 0
 	
 func recharge(_d = null):
 	if active and not buffed and current_ammo < max_ammo:
@@ -53,7 +57,7 @@ func on_equip():
 	if character.is_full_armor() == "hermes":
 		active = true
 		current_ammo = max_ammo
-		Event.emit_signal("special_activated", self)
+		Event.emit_signal("special_activated", self, character)
 		
 	else:
 		active = false
@@ -78,6 +82,7 @@ func fire(_charge_level: = 0) -> void :
 	Event.emit_signal("shot", self)
 	parent.set_buster_as_weapon()
 	Event.emit_signal("weapon_select_buster")
+	character.is_executing_special = true
 
 func apply_buff() -> void :
 	if not buffed:
@@ -97,6 +102,9 @@ func remove_buff() -> void :
 	if is_instance_valid(particles_2d):
 		particles_2d.emitting = false
 	emit_signal("deactivated")
+	if character.is_executing_special:
+		character.is_executing_special = false
+		Event.emit_signal("special_end")
 
 func _physics_process(delta: float) -> void :
 	timer += delta

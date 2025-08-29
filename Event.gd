@@ -198,8 +198,8 @@ signal weapon_get(weapon, current_armor)
 signal xdrive
 
 signal gigacrash
-signal special_activated(special_ability)
-signal special_deactivated(special_ability)
+signal special_activated(special_ability, character)
+signal special_deactivated(special_ability, character)
 
 signal teleport_rooster
 signal teleport_manowar
@@ -269,3 +269,4 @@ signal leaderboard_axl
 signal character_switch
 signal character_switch_end
 signal refresh_hud
+signal special_end

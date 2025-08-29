@@ -56,7 +56,7 @@ var both_alive = true
 var alive_team: Array = []
 
 # Strings here instead of literal objects
-export var current_team: Array = []
+var current_team: Array = ["X"]
 var max_team_size: int = 2
 
 
@@ -220,7 +220,7 @@ func _load() -> void :
 		if typeof(save_data) == TYPE_DICTIONARY:
 			player_count = int(save_data.get("player_count", 1))
 			current_player_character = save_data.get("current_player_character", "X")
-			current_team = save_data.get("current_team", ["X", "Zero"])
+			current_team = save_data.get("current_team", ["X"])
 			equipped_hearts = save_data.get("equipped_hearts", {"X": 0, "Zero": 0, "Axl": 0})
 			credits_seen = bool(save_data.get("credits_seen", false))
 			

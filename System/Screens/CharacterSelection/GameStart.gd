@@ -6,6 +6,9 @@ var char_name: String = ""
 
 
 func set_player() -> void :
+	for player in CharacterManager.valid_players:
+		CharacterManager.remove_player_from_team(player)
+	CharacterManager.add_player_to_team(char_name)
 	CharacterManager.set_player_character(char_name)
 	IGT.reset_rta()
 	IGT.should_run_rta = true
