@@ -46,6 +46,7 @@ func process_increase_health(delta: float) -> void :
 		amount_to_increase = - 1
 	if amount_to_increase < 0:
 		if not $audioStreamPlayer2D.playing:
+			GameManager.unpause(name)
 			queue_free()
 
 func increase_health() -> void :

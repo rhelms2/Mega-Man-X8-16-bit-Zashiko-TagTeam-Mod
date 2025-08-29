@@ -336,7 +336,7 @@ func add_collectibles_to_player() -> void :
 		player.finished_equipping()
 
 func add_collectibles_to_inactive_player() -> void :
-	if inactive_player:	
+	if is_instance_valid(inactive_player):	
 		for collectible in collectibles:
 			if not has_equip_exception(collectible, inactive_player):
 				inactive_player.equip_parts(collectible)

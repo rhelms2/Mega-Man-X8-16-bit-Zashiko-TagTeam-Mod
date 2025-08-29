@@ -216,12 +216,12 @@ func hide_boss_hp():
 
 func stop_blink_player_bar():
 	playerbar_blinking = false
-	player_bar[active_hp_bar].material.set_shader_param("Flash",0)
+	player_bar[active_index].material.set_shader_param("Flash",0)
 	blink_timer = 0
 
 func blink_player_bar():
 	playerbar_blinking = true
-	player_bar[active_hp_bar].material.set_shader_param("Flash",1)
+	player_bar[active_index].material.set_shader_param("Flash",1)
 
 func fade():
 	if fade_out_to_white:
