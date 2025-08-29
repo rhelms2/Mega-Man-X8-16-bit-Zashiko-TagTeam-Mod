@@ -163,6 +163,11 @@ func unhide() -> void :
 	else:
 		visible = false
 
+func is_team_member_current_player() -> bool:
+	if is_instance_valid(GameManager.player):
+		return GameManager.player == GameManager.team[get_parent().team_member_index]
+	return false
+
 func get_current_set() -> String:
 	if is_instance_valid(GameManager.player):
 		return GameManager.player.is_full_armor()

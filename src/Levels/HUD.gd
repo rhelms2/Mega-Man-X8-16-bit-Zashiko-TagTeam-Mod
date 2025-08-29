@@ -14,6 +14,7 @@ onready var player_hp: Array = [$"X Bar/textureProgress", $"X Bar2/textureProgre
 onready var player_healable: = [$"X Bar/textureProgress2", $"X Bar2/textureProgress2"]
 onready var active_hp_bar = $"X Bar"
 onready var inactive_hp_bar = $"X Bar2"
+onready var active_index = 0
 
 onready var ride_bar: NinePatchRect = $"Ride Bar"
 onready var ride_hp: TextureProgress = $"Ride Bar/textureProgress"
@@ -140,6 +141,8 @@ func tween_switch_active_hp_bar() -> void:
 		active_hp_bar = inactive_hp_bar
 		inactive_hp_bar = temp
 
+		active_index = player_bar.find(active_hp_bar)
+
 func setup_boss_health(_boss):
 	boss = _boss
 	boss.get_node("Damage").connect("took_damage",boss_bar,"blink")
@@ -213,12 +216,12 @@ func hide_boss_hp():
 
 func stop_blink_player_bar():
 	playerbar_blinking = false
-	player_bar[0].material.set_shader_param("Flash",0)
+	player_bar[active_hp_bar].material.set_shader_param("Flash",0)
 	blink_timer = 0
 
 func blink_player_bar():
 	playerbar_blinking = true
-	player_bar[0].material.set_shader_param("Flash",1)
+	player_bar[active_hp_bar].material.set_shader_param("Flash",1)
 
 func fade():
 	if fade_out_to_white:
@@ -230,10 +233,18 @@ func on_healable_amount(param):
 	call_deferred("show_healable_amount",param)
 
 func show_healable_amount(healable_amount):
-	player_healable[0].value = GameManager.player.current_health + healable_amount
+	if GameManager.player:
+		for i in range(GameManager.team.size()):
+			if is_instance_valid(GameManager.team[i]):
+				if GameManager.team[i].name == "X" or GameManager.team[i].name == "UltimateX":
+					player_healable[i].value = GameManager.team[i].current_health + healable_amount
 
 func hide_healable_amount() -> void:
-	player_healable[0].value = 0
+	if GameManager.player:
+		for i in range(GameManager.team.size()):
+			if is_instance_valid(GameManager.team[i]):
+				if GameManager.team[i].name == "X" or GameManager.team[i].name == "UltimateX":
+					player_healable[i].value = 0
 
 func show_boss_health_and_weapon(delta) -> String:
 	var text := ""
