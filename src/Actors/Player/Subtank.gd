@@ -8,7 +8,7 @@ var current_health: = 0
 var timer: = 0.0
 var last_time_increased: = 0.0
 var healing: = false
-onready var player: KinematicBody2D = $"../.."
+#onready var player: KinematicBody2D = $"../.."
 onready var sound: AudioStreamPlayer = $heal
 onready var charge: AudioStreamPlayer = $charge
 onready var full: AudioStreamPlayer = $full
@@ -48,7 +48,7 @@ func add_health(amount, has_played_sound) -> int:
 	return exceding_amount
 
 func use() -> void :
-	if current_health > 0 and player.current_health < player.max_health:
+	if current_health > 0 and GameManager.player.current_health < GameManager.player.max_health:
 		Log("Starting heal, current: " + str(current_health))
 		healing = true
 		if current_health >= capacity:
@@ -57,7 +57,7 @@ func use() -> void :
 func _physics_process(delta: float) -> void :
 	if healing:
 		timer += delta
-		if player.current_health < player.max_health and current_health > 0:
+		if GameManager.player.current_health < GameManager.player.max_health and current_health > 0:
 			do_heal()
 		else:
 			current_health = 0
@@ -71,7 +71,7 @@ func _physics_process(delta: float) -> void :
 
 func do_heal():
 	if timer > last_time_increased + 0.06:
-		player.recover_health(1)
+		GameManager.player.recover_health(1)
 		last_time_increased = timer
 		current_health -= 1
 		sound.play()

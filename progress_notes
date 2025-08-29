@@ -20,9 +20,14 @@ Progress:
 - Fixed stage rotate glitch for primrose and double boss spawn
 - Removed icarus boots high jump
 
+8/28
+
+- subtank only fills active player's health and only active player can fill it by collecting pickups (Needs more testing/balancing)
+
+
 Bugs to fix:
 
-- Graphical: 
+- Graphical (might be Linux specific!):
 	- Invisible walls in trilobyte stage
 	- water not showing correctly on Noah's park
 - Pause menu: 
@@ -36,7 +41,6 @@ Bugs to fix:
 
 Features to implement:
 
-- Make subtanks only fill active character's health (look at "Subtank.gd")
 - Shared giga attack bar
 - Fix cutscenes to load which character dynamically instead of just at start of stage
 - Make Axl automatically hover when shooting in air

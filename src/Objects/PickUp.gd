@@ -79,7 +79,7 @@ func do_heal():
 func _on_area2D_body_entered(body: Node) -> void :
 	if not executing:
 		if body.is_in_group("Player"):
-			if body.is_in_group("Props") and not GameManager.player.ride:
+			if body.is_in_group("Props") and not GameManager.player.ride or not body.character.is_current_player:
 				return
 			set_pause_mode(Node.PAUSE_MODE_PROCESS)
 			$audioStreamPlayer2D.set_pause_mode(Node.PAUSE_MODE_PROCESS)
