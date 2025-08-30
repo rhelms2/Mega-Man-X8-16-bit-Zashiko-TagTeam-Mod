@@ -450,7 +450,7 @@ skip_intro = true
 
 [node name="animatedSprite" parent="X" index="3"]
 material = SubResource( 68 )
-frame = 30
+frame = 81
 
 [node name="Damage" parent="X" index="16"]
 active = false
