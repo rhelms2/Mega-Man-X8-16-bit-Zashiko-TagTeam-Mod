@@ -51,8 +51,8 @@ func set_visible_elements() -> void :
 		hide_special_holders()
 		show_special_holders()
 		update_character_menu()
-		$Menu.get_node("CharacterName").text = CharacterManager.current_player_character
-		if CharacterManager.current_player_character == "Zero" and CharacterManager.betazero_activated:
+		$Menu.get_node("CharacterName").text = CharacterManager.player_character
+		if CharacterManager.player_character == "Zero" and CharacterManager.betazero_activated:
 			$Menu.get_node("CharacterName").text = "Zero (BETA)"
 
 func switch_to_zero() -> void :
@@ -99,7 +99,7 @@ func hide_special_holders() -> void :
 func update_character_menu() -> void :
 	var _textureRect: TextureRect = $Menu.get_node("textureRect")
 	hide_all_characters(_textureRect)
-	match CharacterManager.current_player_character:
+	match CharacterManager.player_character:
 		"Player":
 			hide_special_holders()
 		"X":

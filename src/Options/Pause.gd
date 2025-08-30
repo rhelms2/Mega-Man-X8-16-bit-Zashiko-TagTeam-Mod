@@ -75,7 +75,7 @@ func character_menu_visibility() -> void :
 	_zero_abilities.hide()
 	_zero_armor.hide()
 	
-	match CharacterManager.current_player_character:
+	match CharacterManager.player_character:
 		"Player":
 			pass
 		"X":

@@ -73,7 +73,7 @@ func set_player_weapon() -> void :
 
 func _on_focus_entered() -> void :
 	._on_focus_entered()
-	if CharacterManager.current_player_character != "Zero":
+	if CharacterManager.player_character != "Zero":
 		return
 	if CharacterManager.betazero_activated:
 		return

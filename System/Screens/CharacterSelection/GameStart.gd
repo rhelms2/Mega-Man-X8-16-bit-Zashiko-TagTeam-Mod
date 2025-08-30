@@ -16,7 +16,7 @@ func set_player() -> void :
 func on_press() -> void :
 	CharacterManager.started_fresh_game = true
 	set_player()
-	if CharacterManager.current_player_character == "Zero":
+	if CharacterManager.player_character == "Zero":
 		CharacterManager.only_zero = true
 	get_node(pick_sound).play()
 	Event.emit_signal("fadeout_startmenu")

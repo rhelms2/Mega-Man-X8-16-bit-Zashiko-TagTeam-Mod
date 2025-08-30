@@ -14,7 +14,7 @@ onready var axl_life_material: Material = preload("res://Axl_mod/Player/Axl_Mate
 
 
 func set_player_sprite() -> void :
-	match CharacterManager.current_player_character:
+	match CharacterManager.player_character:
 		"Player":
 			_animatedSprite.frames = x_life
 		"X":

@@ -264,11 +264,11 @@ func go_to_stage_select() -> void :
 	IGT.set_timer_running(true)
 
 func go_to_weapon_get() -> void :
-	if CharacterManager.current_player_character == "X":
+	if CharacterManager.player_character == "X":
 		var _dv = get_tree().change_scene("res://src/WeaponGet/WeaponGetScene.tscn")
-	elif CharacterManager.current_player_character == "Axl":
+	elif CharacterManager.player_character == "Axl":
 		var _dv = get_tree().change_scene("res://Axl_mod/WeaponGet/WeaponGetScene.tscn")
-	elif CharacterManager.current_player_character == "Zero":
+	elif CharacterManager.player_character == "Zero":
 		var _dv = get_tree().change_scene("res://src/StageSelect/StageSelectScreen.tscn")
 	call_deferred("force_unpause")
 	call_deferred("on_level_start")

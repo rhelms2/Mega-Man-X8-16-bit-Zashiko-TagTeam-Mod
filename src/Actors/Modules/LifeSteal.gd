@@ -32,7 +32,7 @@ func setup_deferred():
 func deactivate(_d = null) -> void:
 	.deactivate()
 	healable_amount = 0
-	Event.emit_signal("disabled_lifesteal")
+	Event.emit_signal("disabled_lifesteal", character)
 
 func setup_parameter(param = null):
 	if param != null:
@@ -90,14 +90,14 @@ func clamp_healable_amount_to_missing_health() -> void:
 func adjust_healable_amount (adjust : int):
 	healable_amount += adjust
 	
-	Event.emit_signal("healable_amount", healable_amount)
+	Event.emit_signal("healable_amount", healable_amount, character)
 	
 func remove_healable_amount (adjust : int):
 	if executing:
 		healable_amount -= adjust
 # warning-ignore:narrowing_conversion
 		healable_amount = clamp(healable_amount,0,16)
-		Event.emit_signal("healable_amount", healable_amount)
+		Event.emit_signal("healable_amount", healable_amount, character)
 		Log("Healed through other means. Removed: " + str(adjust))
 		Log("Healable Amount: " + str(healable_amount))
 

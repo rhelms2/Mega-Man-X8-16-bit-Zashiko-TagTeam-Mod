@@ -66,9 +66,9 @@ func _on_area2D_body_entered(body: Node) -> void :
 			executing = true
 			visible = false
 			GameManager.add_collectible_to_savedata(collectible_name)
-			body.character.num_equipped_hearts += 1
-			var character_name = body.character.name
-			CharacterManager.set_player_equipped_hearts(character_name, CharacterManager.equipped_hearts[character_name] + 1)
+			GameManager.player.num_equipped_hearts += 1
+			var name = GameManager.player.name
+			CharacterManager.set_player_equipped_hearts(name, CharacterManager.equipped_hearts[name] + 1)
 			achievement_check()
 
 func achievement_check() -> void :

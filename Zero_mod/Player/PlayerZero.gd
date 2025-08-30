@@ -13,6 +13,7 @@ var raycast_down: RayCast2D
 var colliding: = true
 var using_upgrades: = false
 var grabbed: = false
+var ride_eject_delay: float = 0.0
 onready var lowjumpcast: Label = $lowjumpcast
 
 onready var saber_node = get_node("Shot")
@@ -153,8 +154,9 @@ func _ready() -> void :
 	listen("land", self, "on_land")
 	equip_zero_parts()
 	save_original_colors()
-	GameManager.set_player(self)
-	Event.call_deferred("emit_signal", "player_set")
+	if is_current_player:
+		GameManager.set_player(self)
+		Event.call_deferred("emit_signal", "player_set")
 	animatedSprite.offset.y = - 2
 	change_ride_chaser_sprites()
 

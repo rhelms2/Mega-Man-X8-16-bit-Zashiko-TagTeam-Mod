@@ -59,7 +59,7 @@ func handle_already_got() -> void :
 		queue_free()
 	
 	if character_name != "":
-		if CharacterManager.current_player_character != character_name:
+		if CharacterManager.player_character != character_name:
 			queue_free()
 
 func _physics_process(delta: float) -> void :
@@ -100,7 +100,7 @@ func unlock_weapon(player) -> void :
 
 func lock_weapon() -> void :
 	GameManager.remove_collectible_from_savedata(collectible_name)
-	if CharacterManager.current_player_character == "Zero":
+	if CharacterManager.player_character == "Zero":
 		if is_instance_valid(GameManager.player):
 			var zero = GameManager.player
 			var shot_node = zero.get_node("Shot")

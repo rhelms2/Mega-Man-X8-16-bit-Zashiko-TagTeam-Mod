@@ -86,7 +86,7 @@ func _Update(delta: float) -> void :
 		
 	elif attack_stage == 10 and has_finished_last_animation() or attack_stage == 10 and animatedSprite.animation == "idle":
 		CharacterManager.set_saber_green(animatedSprite)
-		if CharacterManager.current_player_character == "Zero" and not CharacterManager.black_zero_armor:
+		if CharacterManager.player_character == "Zero" and not CharacterManager.black_zero_armor:
 			CharacterManager.set_fake_zero_colors(animatedSprite)
 		
 		EndAbility()

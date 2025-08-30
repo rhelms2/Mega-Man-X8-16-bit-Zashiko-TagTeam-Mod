@@ -1,4 +1,4 @@
-[gd_scene load_steps=120 format=2]
+[gd_scene load_steps=122 format=2]
 
 [ext_resource path="res://src/Actors/Player/x_sprites/x.res" type="SpriteFrames" id=1]
 [ext_resource path="res://X_mod/UltimateX/Player/UltimateX.gd" type="Script" id=2]
@@ -93,7 +93,9 @@
 [ext_resource path="res://src/Actors/Player/BossWeapons/OpticShield/OpticShieldWeapon.gd" type="Script" id=91]
 [ext_resource path="res://src/Sounds/Rooster - DashStart.ogg" type="AudioStream" id=92]
 [ext_resource path="res://src/Actors/Player/BossWeapons/GigaCrash/CrashIllusion.tscn" type="PackedScene" id=93]
+[ext_resource path="res://TagTeam_Mod/CharacterSwitchWarpOut.gd" type="Script" id=94]
 [ext_resource path="res://src/Effects/ShieldBreak/shieldbreak.res" type="SpriteFrames" id=95]
+[ext_resource path="res://TagTeam_Mod/CharacterSwitchWarpIn.gd" type="Script" id=96]
 [ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=97]
 [ext_resource path="res://src/Actors/rotation_particle_disabler.gd" type="Script" id=98]
 [ext_resource path="res://src/Actors/Player/BossWeapons/SqueezeBomb/Squeeze Bomb.tres" type="Resource" id=99]
@@ -1024,6 +1026,33 @@ margin_top = 2.0
 margin_right = -13.0
 margin_bottom = 16.0
 text = "x"
+
+[node name="CharSwitchWarpOut" type="Node2D" parent="."]
+script = ExtResource( 94 )
+actions = [ "Event" ]
+start_event = "character_switch_out"
+force_start = true
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer2D" parent="CharSwitchWarpOut"]
+stream = ExtResource( 67 )
+volume_db = -6.555
+pitch_scale = 1.19
+max_distance = 600.0
+bus = "SFX"
+
+[node name="CharSwitchWarpIn" type="Node2D" parent="."]
+script = ExtResource( 96 )
+actions = [ "Event" ]
+animation = "beam"
+start_event = "character_switch_in"
+force_start = true
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer2D" parent="CharSwitchWarpIn"]
+stream = ExtResource( 67 )
+volume_db = -6.555
+pitch_scale = 1.19
+max_distance = 600.0
+bus = "SFX"
 
 [connection signal="at_max_hp" from="." to="Damage" method="set_death_protection"]
 [connection signal="zero_health" from="." to="animatedSprite/afterImages" method="deactivate"]

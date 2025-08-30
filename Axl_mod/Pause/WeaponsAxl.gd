@@ -16,7 +16,7 @@ func on_unlock_buttons() -> void :
 	call_deferred("give_focus_to_first_weapon")
 
 func give_focus_to_first_weapon() -> void :
-	if choosen_weapon and CharacterManager.current_player_character == "Axl":
+	if choosen_weapon and CharacterManager.player_character == "Axl":
 		choosen_weapon.silent = true
 		choosen_weapon.grab_focus()
 
@@ -37,7 +37,7 @@ func _ready() -> void :
 	_s = pause.connect("unlock_buttons", self, "on_unlock_buttons")
 
 func show_weapons() -> void :
-	if CharacterManager.current_player_character != "Axl":
+	if CharacterManager.player_character != "Axl":
 		return
 	for weapon in weapons:
 		if weapon.name in GameManager.collectibles:

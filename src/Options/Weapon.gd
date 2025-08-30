@@ -35,7 +35,7 @@ func set_player_weapon() -> void :
 
 func _on_focus_entered() -> void :
 	._on_focus_entered()
-	if CharacterManager.current_player_character != "X":
+	if CharacterManager.player_character != "X":
 		return
 	if GameManager.is_player_in_scene():
 		GameManager.player.get_node("Shot").set_current_weapon(weapon)

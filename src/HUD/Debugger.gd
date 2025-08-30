@@ -16,7 +16,7 @@ signal cheat_pressed(visibility)
 
 
 func _set_character_node() -> void :
-	var char_node = CharacterManager.current_player_character
+	var char_node = CharacterManager.player_character
 	character = get_tree().current_scene.get_node(char_node)
 
 func _ready() -> void:

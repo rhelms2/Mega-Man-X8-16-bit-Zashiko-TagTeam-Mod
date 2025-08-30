@@ -67,7 +67,7 @@ func set_player_weapon() -> void :
 
 func _on_focus_entered() -> void :
 	._on_focus_entered()
-	if CharacterManager.current_player_character != "Axl":
+	if CharacterManager.player_character != "Axl":
 		return
 	if GameManager.is_player_in_scene():
 		var _shot_node = GameManager.player.get_node("Shot")

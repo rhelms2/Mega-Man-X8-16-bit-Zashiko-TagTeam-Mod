@@ -229,22 +229,16 @@ func fade():
 	else:
 		black_screen.color = Color(0,0,0,black_screen_alpha)
 
-func on_healable_amount(param):
-	call_deferred("show_healable_amount",param)
+func on_healable_amount(param1, param2):
+	call_deferred("show_healable_amount",param1, param2)
 
-func show_healable_amount(healable_amount):
-	if GameManager.player:
-		for i in range(GameManager.team.size()):
-			if is_instance_valid(GameManager.team[i]):
-				if GameManager.team[i].name == "X" or GameManager.team[i].name == "UltimateX":
-					player_healable[i].value = GameManager.team[i].current_health + healable_amount
+func show_healable_amount(healable_amount, character):
+	var i = GameManager.team.find(character)
+	player_healable[i].value = GameManager.team[i].current_health + healable_amount
 
-func hide_healable_amount() -> void:
-	if GameManager.player:
-		for i in range(GameManager.team.size()):
-			if is_instance_valid(GameManager.team[i]):
-				if GameManager.team[i].name == "X" or GameManager.team[i].name == "UltimateX":
-					player_healable[i].value = 0
+func hide_healable_amount(character) -> void:
+	var i = GameManager.team.find(character)
+	player_healable[i].value = 0
 
 func show_boss_health_and_weapon(delta) -> String:
 	var text := ""
@@ -257,7 +251,7 @@ func show_boss_health_and_weapon(delta) -> String:
 				player_hp[i].modulate = Color.white
 			player_hp[i].value = clamp(health,0,GameManager.team[i].max_health)
 			if health <= 0:
-				hide_healable_amount()
+				hide_healable_amount(GameManager.team[i])
 				
 	if is_instance_valid(GameManager.player) and is_instance_valid(GameManager.player.ride):
 		var health = GameManager.player.ride.current_health

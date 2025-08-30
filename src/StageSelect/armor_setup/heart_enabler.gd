@@ -15,6 +15,7 @@ onready var up_arrow: Label = $up_arrow
 onready var down_arrow: Label = $down_arrow 
 
 onready var character_name = $"../../CharacterName"
+var character = ""
 
 enum state_enum {locked, unlocked}
 var state = state_enum.unlocked
@@ -39,14 +40,14 @@ func change_state():
 func _input(event: InputEvent) -> void :
 	if state != state_enum.locked:
 		return
-	
+		
 	if event.is_action_pressed("ui_up") and not event.is_echo():
 		pick.play()
-		CharacterManager.set_player_equipped_hearts(character_name.text, num_equipped+1)
+		CharacterManager.set_player_equipped_hearts(character, num_equipped+1)
 		refresh_equipped_hearts()
 	elif event.is_action_pressed("ui_down") and not event.is_echo():
 		pick.play()
-		CharacterManager.set_player_equipped_hearts(character_name.text, num_equipped-1)
+		CharacterManager.set_player_equipped_hearts(character, num_equipped-1)
 		refresh_equipped_hearts()
 	elif event.is_action_pressed("ui_accept"):
 		equip.play()
@@ -55,9 +56,15 @@ func _input(event: InputEvent) -> void :
 		grab_focus()
 
 func refresh_equipped_hearts() -> void:
-	num_equipped = CharacterManager.equipped_hearts[character_name.text]
+	refresh_character_name()
+	num_equipped = CharacterManager.equipped_hearts[character]
 	equipped_hearts.text = str(num_equipped) + "/"
 	
+func refresh_character_name() -> void:
+	if character_name.text == "Zero (BETA)":
+		character = "Zero"
+	else:
+		character = character_name.text
 
 func setup() -> void :
 	menu.connect("character_changed", self, "refresh_equipped_hearts")

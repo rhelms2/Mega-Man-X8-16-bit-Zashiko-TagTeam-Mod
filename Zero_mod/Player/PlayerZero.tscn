@@ -1,4 +1,4 @@
-[gd_scene load_steps=138 format=2]
+[gd_scene load_steps=140 format=2]
 
 [ext_resource path="res://src/Actors/Player/x_sprites/x.res" type="SpriteFrames" id=1]
 [ext_resource path="res://Zero_mod/Player/PlayerZero.gd" type="Script" id=2]
@@ -126,6 +126,8 @@
 [ext_resource path="res://Zero_mod/Player/Weapons/Z-Saber.tres" type="Resource" id=124]
 [ext_resource path="res://src/Effects/Textures/snow_sparkle.png" type="Texture" id=125]
 [ext_resource path="res://Zero_mod/Player/Saber/SaberZero.gd" type="Script" id=126]
+[ext_resource path="res://TagTeam_Mod/CharacterSwitchWarpOut.gd" type="Script" id=127]
+[ext_resource path="res://TagTeam_Mod/CharacterSwitchWarpIn.gd" type="Script" id=128]
 
 [sub_resource type="RectangleShape2D" id=32]
 extents = Vector2( 6.995, 7 )
@@ -374,7 +376,7 @@ script = ExtResource( 48 )
 [node name="animatedSprite" type="AnimatedSprite" parent="animatedSprite"]
 visible = false
 frames = ExtResource( 93 )
-frame = 16
+frame = 9
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -1141,6 +1143,33 @@ margin_top = 2.0
 margin_right = -13.0
 margin_bottom = 16.0
 text = "x"
+
+[node name="CharSwitchWarpOut" type="Node2D" parent="."]
+script = ExtResource( 127 )
+actions = [ "Event" ]
+start_event = "character_switch_out"
+force_start = true
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer2D" parent="CharSwitchWarpOut"]
+stream = ExtResource( 67 )
+volume_db = -6.555
+pitch_scale = 1.19
+max_distance = 600.0
+bus = "SFX"
+
+[node name="CharSwitchWarpIn" type="Node2D" parent="."]
+script = ExtResource( 128 )
+actions = [ "Event" ]
+animation = "beam"
+start_event = "character_switch_in"
+force_start = true
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer2D" parent="CharSwitchWarpIn"]
+stream = ExtResource( 67 )
+volume_db = -6.555
+pitch_scale = 1.19
+max_distance = 600.0
+bus = "SFX"
 
 [connection signal="at_max_hp" from="." to="Damage" method="set_death_protection"]
 [connection signal="zero_health" from="." to="animatedSprite/afterImages" method="deactivate"]

@@ -24,7 +24,7 @@ func _process(_delta):
 	set_correct_player_icon()
 
 func set_correct_player_icon():
-	match CharacterManager.current_player_character:
+	match CharacterManager.player_character:
 		"Player":
 			play(get_correct_animation("X"))
 		"X":

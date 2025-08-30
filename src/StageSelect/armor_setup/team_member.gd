@@ -8,6 +8,10 @@ func setup() -> void :
 func _on_focus_entered() -> void :
 	._on_focus_entered()
 
+func _on_focus_exited() -> void :
+	._on_focus_exited()
+	dim()
+
 func on_press() -> void :
 	pass
 

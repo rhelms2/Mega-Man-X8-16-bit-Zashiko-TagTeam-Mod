@@ -2053,7 +2053,6 @@ align = 1
 uppercase = true
 
 [node name="Fader" type="ColorRect" parent="."]
-visible = false
 margin_right = 398.0
 margin_bottom = 224.0
 mouse_filter = 2

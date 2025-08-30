@@ -120,11 +120,11 @@ func _ready() -> void :
 	Event.listen("collected", self, "equip_parts")
 	Event.listen("collected", self, "collect")
 	listen("land", self, "on_land")
-	
 	save_original_colors()
 	armor_sprites = get_armor_sprites()
-	GameManager.set_player(self)
-	Event.call_deferred("emit_signal", "player_set")
+	if is_current_player:
+		GameManager.set_player(self)
+		Event.call_deferred("emit_signal", "player_set")
 
 func get_armor_sprites() -> Array:
 	var sprites = []
@@ -187,15 +187,15 @@ func equip_ultima_legs_parts():
 	airdash.get_node("particles2D").texture = load("res://src/Effects/Textures/follow_shot_ultimate.png")
 	
 	airjump.set_max_air_jumps(1)
-	get_node("Jump").max_jump_time = 0.75
-	get_node("Jump").jump_velocity = 420
-	get_node("DashJump").max_jump_time = 0.75
-	get_node("DashJump").jump_velocity = 420
-	get_node("WallJump").max_jump_time = 0.75
-	get_node("WallJump").jump_velocity = 420
-	get_node("DashWallJump").max_jump_time = 0.75
-	get_node("DashWallJump").jump_velocity = 420
-	airjump.jump_velocity = 240
+	get_node("Jump").max_jump_time = 0.625
+	get_node("Jump").jump_velocity = 320
+	get_node("DashJump").max_jump_time = 0.625
+	get_node("DashJump").jump_velocity = 320
+	get_node("WallJump").max_jump_time = 0.625
+	get_node("WallJump").jump_velocity = 320
+	get_node("DashWallJump").max_jump_time = 0.625
+	get_node("DashWallJump").jump_velocity = 320
+	airjump.jump_velocity = 190
 	
 	get_node("Walk").horizontal_velocity = 120
 	get_node("Jump").horizontal_velocity = 120

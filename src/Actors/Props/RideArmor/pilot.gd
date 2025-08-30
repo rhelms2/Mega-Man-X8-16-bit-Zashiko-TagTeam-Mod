@@ -9,7 +9,7 @@ onready var axl_ride: Texture = preload("res://Axl_mod/Ride/ride_axl.png")
 
 func set_player_sprite_sheet():
 	var _texture = x_ride
-	match CharacterManager.current_player_character:
+	match CharacterManager.player_character:
 		"Player":
 			_texture = x_ride
 		"X":

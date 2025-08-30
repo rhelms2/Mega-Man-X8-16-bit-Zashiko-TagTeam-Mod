@@ -30,7 +30,7 @@ func _ready() -> void :
 	#call_deferred("handle_player_not_x")
 
 func handle_player_not_x() -> void :
-	if CharacterManager.current_player_character != "X":
+	if CharacterManager.player_character != "X":
 		finished = true
 		call_deferred("disable_glass_collider")
 		sprite.play("finished")

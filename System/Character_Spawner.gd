@@ -88,7 +88,7 @@ func _ready() -> void :
 
 	Event.listen("character_switch", self, "on_character_switch")
 	CharacterManager.set_player_character(CharacterManager.current_team[0])
-	player = CharacterManager.get_player_character_object(CharacterManager.current_player_character)
+	player = CharacterManager.get_player_character_object(CharacterManager.player_character)
 	player_instance = player.instance()
 	player_instance.is_current_player = true
 	add_child(player_instance)

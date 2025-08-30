@@ -34,29 +34,38 @@ Progress:
 8/30
 
 - Fixed fire dash weapon get screen combo
+- Ultimate X and Beta Zero now working
+- Fixed recoverable health graphical bug
+- Fixed reparenter game crash bug
+- Fixed freeze on heart tank collect in pandamonium stage
 
 Bugs to fix:
+
+- Getting hit as secondary character doesn't affect score in sunflower stage
 
 - Graphical (might be Linux specific!):
 	- Invisible walls in trilobyte stage
 	- water not showing correctly on Noah's park
 	- Falling ice in Central White is invisible
+
 - Pause menu: 
 	- health bar appears unfilled for characters with lower max health
-- Heart tank in Pandamoniums stage freezes the game when collected: issue with being in ride armor as well
-- beta zero crashes the game
-- ultimate armor x freezes game if not picked as the first in the party; if picked first game is very fun and joyous
+
 - when ontop of moving blocks, switching characters will move you slightly
+
 - secondary character will start flashing after entering a teleporter for a short amount of time
+
 - if a character dies after switching, dead character will be playable and invincible, switching is disabled
-- Invalid get index 'global_position' (on base: 'Nil') reparenter.gd line 43: if no 2nd character upon entering a teleporter it crashes the game
-- When taking damage as black zero or white axl recoverable health will be on x's healthbar
+
 - Freeze during fade out on death on dark mantis
+
 - Zero maintaining dash speed in air between switching in/out
+
 - Awakened Zero boss fight super weak to Axl's giga attack
 
 Features to implement:
 
 - Make zero weapons show up with 2 party members (one being zero)
 - Fix cutscenes to load which character dynamically instead of just at start of stage
-- Make Axl automatically hover when shooting in air
+- Adjust starting max health?
+- Make Axl automatically hover when shooting in air (?)
