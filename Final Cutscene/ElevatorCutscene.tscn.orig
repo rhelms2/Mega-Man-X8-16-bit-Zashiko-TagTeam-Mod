@@ -1,0 +1,184 @@
+<<<<<<< HEAD
+[gd_scene load_steps=27 format=2]
+=======
+[gd_scene load_steps=29 format=2]
+>>>>>>> source_private/main
+
+[ext_resource path="res://src/Sounds/16 - MMX - X Upgrade Complete.wav" type="AudioStream" id=1]
+[ext_resource path="res://src/Effects/Materials/Player_Material_Shader.tres" type="Material" id=2]
+[ext_resource path="res://src/Levels/SigmaPalace/ElevatorPlatform.gd" type="Script" id=3]
+[ext_resource path="res://src/Levels/JakobElevator/ending_loop.png" type="Texture" id=4]
+<<<<<<< HEAD
+[ext_resource path="res://Final Cutscene/problem.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Final Cutscene/Fate to Fight.ogg" type="AudioStream" id=6]
+=======
+[ext_resource path="res://Final Cutscene/Problem_intro.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Final Cutscene/Problem_loop.ogg" type="AudioStream" id=6]
+>>>>>>> source_private/main
+[ext_resource path="res://src/Effects/Materials/jakob_palette_material.tres" type="Material" id=7]
+[ext_resource path="res://src/Levels/JakobElevator/elevator.png" type="Texture" id=8]
+[ext_resource path="res://src/Actors/Player/x_sprites/x.res" type="SpriteFrames" id=9]
+[ext_resource path="res://src/Levels/SigmaPalace/ElevatorWalls.gd" type="Script" id=10]
+<<<<<<< HEAD
+=======
+[ext_resource path="res://Final Cutscene/Fate_to_Fight_loop.ogg" type="AudioStream" id=11]
+>>>>>>> source_private/main
+[ext_resource path="res://Final Cutscene/ElevatorCutscene.gd" type="Script" id=12]
+[ext_resource path="res://src/DialogSystem/DialogBox.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Final Cutscene/Final_Elevator.tres" type="Resource" id=14]
+[ext_resource path="res://src/Levels/music_player.gd" type="Script" id=15]
+<<<<<<< HEAD
+=======
+[ext_resource path="res://Final Cutscene/Fate_to_Fight_intro.ogg" type="AudioStream" id=16]
+>>>>>>> source_private/main
+[ext_resource path="res://src/Sounds/OST - Capsule.ogg" type="AudioStream" id=17]
+[ext_resource path="res://src/Sounds/OST - TrueSigma - Loop.ogg" type="AudioStream" id=18]
+[ext_resource path="res://src/Sounds/OST - Vile - Loop.ogg" type="AudioStream" id=19]
+[ext_resource path="res://src/Sounds/OST - Vile - Intro.ogg" type="AudioStream" id=20]
+[ext_resource path="res://src/Sounds/OST - AngryBoss - Intro.ogg" type="AudioStream" id=21]
+[ext_resource path="res://src/Sounds/OST - AngryBoss - Loop.ogg" type="AudioStream" id=22]
+[ext_resource path="res://src/Levels/PitchBlack/light.png" type="Texture" id=23]
+[ext_resource path="res://src/Sounds/Bike - RunLoop.wav" type="AudioStream" id=24]
+[ext_resource path="res://Final Cutscene/Final_Elevator2.tres" type="Resource" id=26]
+[ext_resource path="res://src/Effects/Textures/simple_gradient4.png" type="Texture" id=28]
+[ext_resource path="res://Axl_mod/Player/Sprites/axl.tres" type="SpriteFrames" id=32]
+[ext_resource path="res://Zero_mod/Sprites/zero.tres" type="SpriteFrames" id=33]
+
+[node name="Elevator_Cutscene" type="Node2D"]
+script = ExtResource( 12 )
+<<<<<<< HEAD
+song_loop = ExtResource( 5 )
+song2_loop = ExtResource( 6 )
+=======
+song_intro = ExtResource( 5 )
+song_loop = ExtResource( 6 )
+song2_intro = ExtResource( 16 )
+song2_loop = ExtResource( 11 )
+>>>>>>> source_private/main
+text_second_dialog = ExtResource( 26 )
+
+[node name="DialogBox" parent="." instance=ExtResource( 13 )]
+margin_left = 108.0
+margin_top = 35.0
+margin_right = 299.0
+margin_bottom = 102.0
+text = ""
+dialog_tree = ExtResource( 14 )
+resume_character_inputs = false
+
+[node name="Visuals" type="Node2D" parent="."]
+position = Vector2( 0, 20 )
+
+[node name="ElevatorPlatform" type="Sprite" parent="Visuals"]
+position = Vector2( 199, 197 )
+texture = ExtResource( 8 )
+script = ExtResource( 3 )
+
+[node name="axl_first_pos" type="Position2D" parent="Visuals/ElevatorPlatform"]
+position = Vector2( -12, -13 )
+
+[node name="Axl" type="AnimatedSprite" parent="Visuals/ElevatorPlatform"]
+position = Vector2( 39, -30 )
+z_index = 1
+frames = ExtResource( 32 )
+animation = "final"
+playing = true
+
+[node name="X" type="AnimatedSprite" parent="Visuals/ElevatorPlatform"]
+material = ExtResource( 2 )
+position = Vector2( 19, -30 )
+z_index = 1
+frames = ExtResource( 9 )
+animation = "crouch"
+<<<<<<< HEAD
+frame = 10
+=======
+frame = 1
+>>>>>>> source_private/main
+playing = true
+
+[node name="Zero" type="AnimatedSprite" parent="Visuals/ElevatorPlatform"]
+position = Vector2( -53, -31 )
+z_index = 1
+frames = ExtResource( 33 )
+<<<<<<< HEAD
+animation = "blink"
+frame = 5
+=======
+animation = "idle"
+>>>>>>> source_private/main
+playing = true
+flip_h = true
+
+[node name="loop" type="AudioStreamPlayer2D" parent="Visuals/ElevatorPlatform"]
+stream = ExtResource( 24 )
+volume_db = -80.0
+pitch_scale = 0.51
+autoplay = true
+max_distance = 600.0
+bus = "SFX"
+
+[node name="ElevatorWalls" type="Sprite" parent="Visuals"]
+material = ExtResource( 7 )
+position = Vector2( 199, 112 )
+z_index = -2
+texture = ExtResource( 4 )
+flip_h = true
+region_enabled = true
+region_rect = Rect2( 0, 0, 464, 288 )
+script = ExtResource( 10 )
+speed = 120
+
+[node name="BG" type="Sprite" parent="Visuals"]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 396, 317 )
+scale = Vector2( 25, 25 )
+z_index = -3
+texture = ExtResource( 23 )
+
+[node name="bottom_cover" type="Sprite" parent="."]
+visible = false
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 394, 215 )
+scale = Vector2( 14, 0.5 )
+z_index = 60
+texture = ExtResource( 28 )
+
+[node name="top_cover" type="Sprite" parent="."]
+visible = false
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 394, 10 )
+scale = Vector2( 14, 0.5 )
+z_index = 60
+texture = ExtResource( 28 )
+flip_v = true
+
+[node name="screencover" type="Sprite" parent="."]
+visible = false
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 197, 120 )
+scale = Vector2( 100, 100 )
+z_index = 1000
+texture = ExtResource( 23 )
+
+[node name="Music_Player" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+bus = "Music"
+script = ExtResource( 15 )
+debug_logs = true
+boss_intro = ExtResource( 18 )
+boss_song = ExtResource( 18 )
+angry_boss_intro = ExtResource( 21 )
+angry_boss_song = ExtResource( 22 )
+capsule_song = ExtResource( 17 )
+miniboss_intro = ExtResource( 20 )
+miniboss_song = ExtResource( 19 )
+play_angry_boss_theme = false
+
+[node name="victory" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 1 )
+volume_db = -8.0
+max_distance = 600.0
+bus = "SFX"
+
+[connection signal="dialog_concluded" from="DialogBox" to="." method="_on_dialog_concluded"]

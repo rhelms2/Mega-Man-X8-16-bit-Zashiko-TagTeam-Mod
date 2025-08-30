@@ -6,6 +6,7 @@ onready var cover_screen: ColorRect = $"../../CoverScreen"
 onready var weapons: = get_children()
 onready var pause: CanvasLayer = $"../.."
 
+
 func set_weapon(choice: Control) -> void :
 	var last_weapon = choosen_weapon
 	choosen_weapon = choice
@@ -16,7 +17,7 @@ func on_unlock_buttons() -> void :
 	call_deferred("give_focus_to_first_weapon")
 
 func give_focus_to_first_weapon() -> void :
-	if choosen_weapon:
+	if choosen_weapon and CharacterManager.current_player_character == "X":
 		choosen_weapon.silent = true
 		choosen_weapon.grab_focus()
 
@@ -38,7 +39,7 @@ func _ready() -> void :
 	_s = pause.connect("unlock_buttons", self, "on_unlock_buttons")
 
 func show_weapons() -> void :
-	if CharacterManager.player_character != "X":
+	if CharacterManager.current_player_character != "X":
 		return
 	for weapon in weapons:
 		if weapon.name in GameManager.collectibles:

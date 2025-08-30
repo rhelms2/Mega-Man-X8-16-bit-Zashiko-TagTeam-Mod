@@ -11,10 +11,12 @@ func ready() -> void :
 
 func _on_area2D_body_entered(_body: Node) -> void :
 	if active:
-		press.play()
-		Event.emit_signal("rotate_stage_in_degrees", degrees_to_rotate, get_parent())
-		deactivate()
-		Tools.timer(time_to_reactivate, "reactivate", self)
+		if _body.is_in_group("Player"):
+			if _body.character == GameManager.player:
+				press.play()
+				Event.emit_signal("rotate_stage_in_degrees", degrees_to_rotate, get_parent())
+				deactivate()
+				Tools.timer(time_to_reactivate, "reactivate", self)
 
 func deactivate() -> void :
 	active = false

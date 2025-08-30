@@ -1,0 +1,927 @@
+[gd_scene load_steps=120 format=2]
+
+[ext_resource path="res://src/Options/KeyConfig.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Options/Options.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/Options/AutonomousMenuButton.gd" type="Script" id=3]
+[ext_resource path="res://src/StageSelect/music.gd" type="Script" id=4]
+[ext_resource path="res://src/StageSelect/StageSelectUI.gd" type="Script" id=5]
+[ext_resource path="res://src/StageSelect/stage_infos/Inferno.tres" type="Resource" id=6]
+[ext_resource path="res://src/StageSelect/StageButton.gd" type="Script" id=7]
+[ext_resource path="res://src/Sounds/OST - StageSelect2 - Intro.ogg" type="AudioStream" id=8]
+[ext_resource path="res://src/Sounds/16 - MMX - X Upgrade Complete.wav" type="AudioStream" id=9]
+[ext_resource path="res://src/StageSelect/stage_infos/PitchBlack.tres" type="Resource" id=10]
+[ext_resource path="res://System/SFX/stage_select.ogg" type="AudioStream" id=11]
+[ext_resource path="res://src/Options/selectable_options.png" type="Texture" id=12]
+[ext_resource path="res://src/Options/selectable_keyconfig.png" type="Texture" id=13]
+[ext_resource path="res://src/Sounds/OST - StageSelect2 - Loop.ogg" type="AudioStream" id=14]
+[ext_resource path="res://src/StageSelect/selectables/selectable_mantis.res" type="SpriteFrames" id=15]
+[ext_resource path="res://src/StageSelect/pointer.gd" type="Script" id=16]
+[ext_resource path="res://src/StageSelect/menu_3.png" type="Texture" id=17]
+[ext_resource path="res://src/StageSelect/ss_bg.png" type="Texture" id=18]
+[ext_resource path="res://src/StageSelect/selectables/selectable_jacob.res" type="SpriteFrames" id=19]
+[ext_resource path="res://src/StageSelect/ss_map_animated.png" type="Texture" id=20]
+[ext_resource path="res://src/StageSelect/ss_cursor.png" type="Texture" id=21]
+[ext_resource path="res://src/StageSelect/selectables/selectable.tscn" type="PackedScene" id=22]
+[ext_resource path="res://src/StageSelect/stage_infos/JakobElevator.tres" type="Resource" id=23]
+[ext_resource path="res://src/StageSelect/stage_infos/TroiaBase.tres" type="Resource" id=24]
+[ext_resource path="res://src/StageSelect/move_bottom.gd" type="Script" id=25]
+[ext_resource path="res://src/StageSelect/stage_infos/Gateway.tres" type="Resource" id=26]
+[ext_resource path="res://src/StageSelect/stage_infos/Primrose.tres" type="Resource" id=27]
+[ext_resource path="res://src/StageSelect/stage_infos/MetalValley.tres" type="Resource" id=28]
+[ext_resource path="res://src/StageSelect/stage_infos/SigmaPalace.tres" type="Resource" id=29]
+[ext_resource path="res://src/StageSelect/stage_infos/CentralWhite.tres" type="Resource" id=30]
+[ext_resource path="res://src/StageSelect/stage_infos/BoosterForest.tres" type="Resource" id=31]
+[ext_resource path="res://src/StageSelect/stage_infos/Dynasty.tres" type="Resource" id=32]
+[ext_resource path="res://src/StageSelect/selectables/selectable_sunflower.res" type="SpriteFrames" id=33]
+[ext_resource path="res://src/StageSelect/selectables/selectable_gateway.res" type="SpriteFrames" id=34]
+[ext_resource path="res://src/StageSelect/selectables/selectable_sigma.res" type="SpriteFrames" id=35]
+[ext_resource path="res://src/StageSelect/selectables/selectable_antonion.res" type="SpriteFrames" id=36]
+[ext_resource path="res://src/StageSelect/selectables/selectable_manowar.res" type="SpriteFrames" id=37]
+[ext_resource path="res://src/StageSelect/selectables/selectable_panda.res" type="SpriteFrames" id=38]
+[ext_resource path="res://src/StageSelect/selectables/selectable_trilobyte.res" type="SpriteFrames" id=39]
+[ext_resource path="res://Axl_mod/StageSelect/selectable_noahspark.png" type="Texture" id=40]
+[ext_resource path="res://src/StageSelect/frame.gd" type="Script" id=41]
+[ext_resource path="res://src/StageSelect/armor_setup/ArmorSetup.tscn" type="PackedScene" id=42]
+[ext_resource path="res://src/StageSelect/ArmorSetupButton.gd" type="Script" id=43]
+[ext_resource path="res://src/StageSelect/Icon.tres" type="SpriteFrames" id=44]
+[ext_resource path="res://Axl_mod/StageSelect/NoahsPark2.tres" type="Resource" id=45]
+[ext_resource path="res://src/StageSelect/ss_previewborder.png" type="Texture" id=46]
+<<<<<<< HEAD
+[ext_resource path="res://src/Fonts/x8bitmapfontfinal.fnt" type="BitmapFont" id=47]
+=======
+[ext_resource path="res://src/Fonts/X8bitmapfont.fnt" type="BitmapFont" id=47]
+>>>>>>> source_private/main
+[ext_resource path="res://src/Effects/Materials/TextColorSwap.tres" type="Material" id=48]
+[ext_resource path="res://src/StageSelect/StageDescription.gd" type="Script" id=49]
+[ext_resource path="res://src/DialogSystem/font_colors/Neutral.png" type="Texture" id=50]
+[ext_resource path="res://src/StageSelect/PitchBlackEnergizerTurnOff.gd" type="Script" id=51]
+[ext_resource path="res://src/Objects/Pickups/Subtanks/subtank_Inferno.tres" type="Resource" id=52]
+[ext_resource path="res://src/Objects/Pickups/Subtanks/subtank_CentralWhite.tres" type="Resource" id=53]
+[ext_resource path="res://src/Objects/Pickups/Subtanks/subtank_MetalValley.tres" type="Resource" id=54]
+[ext_resource path="res://src/Objects/Pickups/Subtanks/subtank_TroiaBase.tres" type="Resource" id=55]
+[ext_resource path="res://src/StageSelect/preview/stage_1.png" type="Texture" id=56]
+[ext_resource path="res://src/StageSelect/PreviewBox.gd" type="Script" id=57]
+[ext_resource path="res://src/AchievementSystem/AchievementsScreen.tscn" type="PackedScene" id=58]
+[ext_resource path="res://src/Options/selectable_achiev.png" type="Texture" id=59]
+[ext_resource path="res://Axl_mod/StageSelect/StageButtonSmall.gd" type="Script" id=60]
+[ext_resource path="res://Axl_mod/StageSelect/selectable_crab_dim.png" type="Texture" id=61]
+[ext_resource path="res://System/IGT/StageSelect/StageSelect_Timer.tscn" type="PackedScene" id=62]
+<<<<<<< HEAD
+[ext_resource path="res://src/Fonts/xclassicfontfinal.fnt" type="BitmapFont" id=63]
+=======
+[ext_resource path="res://src/Fonts/Xclassicfont.fnt" type="BitmapFont" id=63]
+>>>>>>> source_private/main
+[ext_resource path="res://System/SFX/window_open.ogg" type="AudioStream" id=64]
+[ext_resource path="res://System/SFX/open_option.ogg" type="AudioStream" id=65]
+[ext_resource path="res://src/Levels/IGTimer.tscn" type="PackedScene" id=66]
+
+[sub_resource type="AtlasTexture" id=59]
+atlas = ExtResource( 61 )
+region = Rect2( 0, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=60]
+atlas = ExtResource( 61 )
+region = Rect2( 16, 0, 16, 16 )
+
+[sub_resource type="AtlasTexture" id=61]
+atlas = ExtResource( 61 )
+region = Rect2( 32, 0, 16, 16 )
+
+[sub_resource type="SpriteFrames" id=58]
+animations = [ {
+"frames": [ SubResource( 59 ), SubResource( 60 ), SubResource( 59 ), SubResource( 61 ) ],
+"loop": true,
+"name": "blink",
+"speed": 31.0
+}, {
+"frames": [ SubResource( 59 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+} ]
+
+[sub_resource type="ShortCut" id=1]
+
+[sub_resource type="AtlasTexture" id=22]
+atlas = ExtResource( 20 )
+region = Rect2( 0, 0, 232, 594 )
+
+[sub_resource type="AtlasTexture" id=23]
+atlas = ExtResource( 20 )
+region = Rect2( 232, 0, 232, 594 )
+
+[sub_resource type="AtlasTexture" id=24]
+atlas = ExtResource( 20 )
+region = Rect2( 464, 0, 232, 594 )
+
+[sub_resource type="AtlasTexture" id=25]
+atlas = ExtResource( 20 )
+region = Rect2( 696, 0, 232, 594 )
+
+[sub_resource type="AtlasTexture" id=26]
+atlas = ExtResource( 20 )
+region = Rect2( 0, 594, 232, 594 )
+
+[sub_resource type="AtlasTexture" id=27]
+atlas = ExtResource( 20 )
+region = Rect2( 232, 594, 232, 594 )
+
+[sub_resource type="AtlasTexture" id=28]
+atlas = ExtResource( 20 )
+region = Rect2( 464, 594, 232, 594 )
+
+[sub_resource type="AtlasTexture" id=29]
+atlas = ExtResource( 20 )
+region = Rect2( 696, 594, 232, 594 )
+
+[sub_resource type="AtlasTexture" id=30]
+atlas = ExtResource( 20 )
+region = Rect2( 0, 1188, 232, 594 )
+
+[sub_resource type="AtlasTexture" id=31]
+atlas = ExtResource( 20 )
+region = Rect2( 232, 1188, 232, 594 )
+
+[sub_resource type="AtlasTexture" id=32]
+atlas = ExtResource( 20 )
+region = Rect2( 464, 1188, 232, 594 )
+
+[sub_resource type="AtlasTexture" id=33]
+atlas = ExtResource( 20 )
+region = Rect2( 696, 1188, 232, 594 )
+
+[sub_resource type="AtlasTexture" id=34]
+atlas = ExtResource( 20 )
+region = Rect2( 0, 1782, 232, 594 )
+
+[sub_resource type="AtlasTexture" id=35]
+atlas = ExtResource( 20 )
+region = Rect2( 232, 1782, 232, 594 )
+
+[sub_resource type="AtlasTexture" id=36]
+atlas = ExtResource( 20 )
+region = Rect2( 464, 1782, 232, 594 )
+
+[sub_resource type="AtlasTexture" id=37]
+atlas = ExtResource( 20 )
+region = Rect2( 696, 1782, 232, 594 )
+
+[sub_resource type="SpriteFrames" id=38]
+animations = [ {
+"frames": [ SubResource( 22 ), SubResource( 23 ), SubResource( 24 ), SubResource( 25 ), SubResource( 26 ), SubResource( 27 ), SubResource( 28 ), SubResource( 29 ), SubResource( 30 ), SubResource( 31 ), SubResource( 32 ), SubResource( 33 ), SubResource( 34 ), SubResource( 35 ), SubResource( 36 ), SubResource( 37 ) ],
+"loop": true,
+"name": "default",
+"speed": 16.0
+} ]
+
+[sub_resource type="AtlasTexture" id=8]
+atlas = ExtResource( 21 )
+region = Rect2( 0, 0, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=9]
+atlas = ExtResource( 21 )
+region = Rect2( 8, 0, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=10]
+atlas = ExtResource( 21 )
+region = Rect2( 16, 0, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=11]
+atlas = ExtResource( 21 )
+region = Rect2( 24, 0, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=12]
+atlas = ExtResource( 21 )
+region = Rect2( 0, 8, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=13]
+atlas = ExtResource( 21 )
+region = Rect2( 8, 8, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=14]
+atlas = ExtResource( 21 )
+region = Rect2( 16, 8, 8, 8 )
+
+[sub_resource type="AtlasTexture" id=15]
+atlas = ExtResource( 21 )
+region = Rect2( 24, 8, 8, 8 )
+
+[sub_resource type="SpriteFrames" id=16]
+animations = [ {
+"frames": [ SubResource( 8 ), SubResource( 9 ), SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ) ],
+"loop": true,
+"name": "default",
+"speed": 24.0
+} ]
+
+[sub_resource type="AtlasTexture" id=39]
+atlas = ExtResource( 46 )
+region = Rect2( 0, 0, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 46 )
+region = Rect2( 64, 0, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 46 )
+region = Rect2( 128, 0, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 46 )
+region = Rect2( 0, 48, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 46 )
+region = Rect2( 64, 48, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=44]
+atlas = ExtResource( 46 )
+region = Rect2( 128, 48, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=45]
+atlas = ExtResource( 46 )
+region = Rect2( 0, 96, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=46]
+atlas = ExtResource( 46 )
+region = Rect2( 64, 96, 64, 48 )
+
+[sub_resource type="AtlasTexture" id=47]
+atlas = ExtResource( 46 )
+region = Rect2( 128, 96, 64, 48 )
+
+[sub_resource type="SpriteFrames" id=48]
+animations = [ {
+"frames": [ SubResource( 39 ), SubResource( 40 ), SubResource( 41 ), SubResource( 42 ), SubResource( 43 ), SubResource( 44 ), SubResource( 45 ), SubResource( 46 ), SubResource( 47 ) ],
+"loop": false,
+"name": "increase",
+"speed": 14.0
+} ]
+
+[sub_resource type="StreamTexture" id=49]
+load_path = "res://.import/selectable_yeti.png-82861baf08448a180f5ca7440c356b71.stex"
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = SubResource( 49 )
+region = Rect2( 0, 40, 40, 40 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = SubResource( 49 )
+region = Rect2( 40, 40, 40, 40 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = SubResource( 49 )
+region = Rect2( 0, 40, 40, 40 )
+
+[sub_resource type="AtlasTexture" id=5]
+atlas = SubResource( 49 )
+region = Rect2( 80, 40, 40, 40 )
+
+[sub_resource type="AtlasTexture" id=6]
+atlas = SubResource( 49 )
+region = Rect2( 0, 40, 40, 40 )
+
+[sub_resource type="AtlasTexture" id=7]
+atlas = SubResource( 49 )
+region = Rect2( 0, 0, 40, 40 )
+
+[sub_resource type="AtlasTexture" id=50]
+atlas = SubResource( 49 )
+region = Rect2( 40, 0, 40, 40 )
+
+[sub_resource type="AtlasTexture" id=51]
+atlas = SubResource( 49 )
+region = Rect2( 0, 0, 40, 40 )
+
+[sub_resource type="AtlasTexture" id=52]
+atlas = SubResource( 49 )
+region = Rect2( 80, 0, 40, 40 )
+
+[sub_resource type="AtlasTexture" id=53]
+atlas = SubResource( 49 )
+region = Rect2( 0, 0, 40, 40 )
+
+[sub_resource type="SpriteFrames" id=54]
+animations = [ {
+"frames": [ SubResource( 2 ), SubResource( 3 ), SubResource( 4 ), SubResource( 5 ) ],
+"loop": true,
+"name": "defeated_idle",
+"speed": 31.0
+}, {
+"frames": [ SubResource( 6 ) ],
+"loop": false,
+"name": "defeated_selected",
+"speed": 31.0
+}, {
+"frames": [ SubResource( 7 ), SubResource( 50 ), SubResource( 51 ), SubResource( 52 ) ],
+"loop": true,
+"name": "idle",
+"speed": 31.0
+}, {
+"frames": [ SubResource( 53 ) ],
+"loop": false,
+"name": "selected",
+"speed": 31.0
+} ]
+
+[node name="StageSelectScreen" type="Node2D"]
+
+[node name="music" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
+volume_db = -4.0
+bus = "Music"
+script = ExtResource( 4 )
+intro = ExtResource( 8 )
+
+[node name="StageSelectUI" type="CanvasLayer" parent="."]
+pause_mode = 2
+layer = 2
+script = ExtResource( 5 )
+initial_focus = NodePath("Menu/ArmorSetup")
+
+[node name="game_mode" type="Label" parent="StageSelectUI"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -197.0
+margin_top = -115.0
+margin_right = 197.0
+margin_bottom = 113.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = ExtResource( 63 )
+align = 1
+valign = 2
+
+[node name="Menu" type="Control" parent="StageSelectUI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TroiaBase" type="TextureButton" parent="StageSelectUI/Menu"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 83.0
+margin_top = 17.0
+margin_right = 124.0
+margin_bottom = 58.0
+rect_min_size = Vector2( 8, 8 )
+action_mode = 0
+script = ExtResource( 7 )
+menu_path = NodePath("../..")
+stage_info = ExtResource( 24 )
+
+[node name="Primrose" type="TextureButton" parent="StageSelectUI/Menu"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 131.0
+margin_top = 17.0
+margin_right = 172.0
+margin_bottom = 58.0
+rect_min_size = Vector2( 8, 8 )
+action_mode = 0
+script = ExtResource( 7 )
+menu_path = NodePath("../..")
+stage_info = ExtResource( 27 )
+
+[node name="PitchBlack" type="TextureButton" parent="StageSelectUI/Menu"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 227.0
+margin_top = 17.0
+margin_right = 268.0
+margin_bottom = 58.0
+rect_min_size = Vector2( 8, 8 )
+action_mode = 0
+script = ExtResource( 7 )
+menu_path = NodePath("../..")
+stage_info = ExtResource( 10 )
+
+[node name="Dynasty" type="TextureButton" parent="StageSelectUI/Menu"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 276.0
+margin_top = 17.0
+margin_right = 317.0
+margin_bottom = 58.0
+rect_min_size = Vector2( 8, 8 )
+action_mode = 0
+script = ExtResource( 7 )
+menu_path = NodePath("../..")
+stage_info = ExtResource( 32 )
+
+[node name="BoosterForest" type="TextureButton" parent="StageSelectUI/Menu"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 83.0
+margin_top = 166.0
+margin_right = 124.0
+margin_bottom = 207.0
+rect_min_size = Vector2( 8, 8 )
+focus_neighbour_left = NodePath("../NoahsPark")
+action_mode = 0
+script = ExtResource( 7 )
+menu_path = NodePath("../..")
+stage_info = ExtResource( 31 )
+
+[node name="MetalValley" type="TextureButton" parent="StageSelectUI/Menu"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 131.0
+margin_top = 166.0
+margin_right = 172.0
+margin_bottom = 207.0
+rect_min_size = Vector2( 8, 8 )
+action_mode = 0
+script = ExtResource( 7 )
+menu_path = NodePath("../..")
+stage_info = ExtResource( 28 )
+
+[node name="CentralWhite" type="TextureButton" parent="StageSelectUI/Menu"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 226.0
+margin_top = 166.0
+margin_right = 267.0
+margin_bottom = 207.0
+rect_min_size = Vector2( 8, 8 )
+action_mode = 0
+script = ExtResource( 7 )
+menu_path = NodePath("../..")
+stage_info = ExtResource( 30 )
+
+[node name="Inferno" type="TextureButton" parent="StageSelectUI/Menu"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 276.0
+margin_top = 166.0
+margin_right = 317.0
+margin_bottom = 207.0
+rect_min_size = Vector2( 8, 8 )
+focus_neighbour_right = NodePath("../Keycfg")
+action_mode = 0
+script = ExtResource( 7 )
+menu_path = NodePath("../..")
+stage_info = ExtResource( 6 )
+
+[node name="SigmaPalace" type="TextureButton" parent="StageSelectUI/Menu"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 179.0
+margin_top = 17.0
+margin_right = 220.0
+margin_bottom = 58.0
+rect_min_size = Vector2( 8, 8 )
+action_mode = 0
+script = ExtResource( 7 )
+menu_path = NodePath("../..")
+stage_info = ExtResource( 29 )
+frame = 3
+intensity = 3
+
+[node name="JacobElevator" type="TextureButton" parent="StageSelectUI/Menu"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 35.0
+margin_top = 44.0
+margin_right = 76.0
+margin_bottom = 181.0
+rect_min_size = Vector2( 8, 8 )
+focus_neighbour_left = NodePath("../Gateway")
+focus_neighbour_top = NodePath("../TroiaBase")
+focus_neighbour_right = NodePath("../BoosterForest")
+focus_neighbour_bottom = NodePath("../NoahsPark")
+action_mode = 0
+script = ExtResource( 7 )
+menu_path = NodePath("../..")
+stage_info = ExtResource( 23 )
+frame = 1
+intensity = 1
+
+[node name="Gateway" type="TextureButton" parent="StageSelectUI/Menu"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 323.0
+margin_top = 44.0
+margin_right = 364.0
+margin_bottom = 181.0
+rect_min_size = Vector2( 8, 8 )
+focus_neighbour_top = NodePath("../Dynasty")
+focus_neighbour_right = NodePath("../JacobElevator")
+focus_neighbour_bottom = NodePath("../Options")
+action_mode = 0
+script = ExtResource( 7 )
+menu_path = NodePath("../..")
+stage_info = ExtResource( 26 )
+frame = 2
+intensity = 2
+
+[node name="NoahsPark" type="TextureButton" parent="StageSelectUI/Menu"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -144.0
+margin_top = 192.0
+margin_right = -124.0
+margin_bottom = 210.0
+rect_min_size = Vector2( 18, 18 )
+focus_neighbour_top = NodePath("../JacobElevator")
+focus_neighbour_right = NodePath("../BoosterForest")
+action_mode = 0
+texture_normal = ExtResource( 40 )
+script = ExtResource( 60 )
+menu_path = NodePath("../..")
+stage_info = ExtResource( 45 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="StageSelectUI/Menu/NoahsPark"]
+position = Vector2( 8, 8 )
+frames = SubResource( 58 )
+animation = "blink"
+frame = 3
+playing = true
+
+[node name="Keycfg" type="TextureButton" parent="StageSelectUI/Menu"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 128.0
+margin_top = 192.0
+margin_right = 146.0
+margin_bottom = 210.0
+rect_min_size = Vector2( 18, 18 )
+action_mode = 0
+shortcut = SubResource( 1 )
+texture_normal = ExtResource( 13 )
+script = ExtResource( 3 )
+menu_path = NodePath("../..")
+pick_sound = NodePath("../../open_options")
+
+[node name="KeyConfig" parent="StageSelectUI/Menu/Keycfg" instance=ExtResource( 1 )]
+layer = 5
+visible = false
+
+[node name="Options" type="TextureButton" parent="StageSelectUI/Menu"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 146.0
+margin_top = 192.0
+margin_right = 164.0
+margin_bottom = 210.0
+rect_min_size = Vector2( 18, 18 )
+action_mode = 0
+shortcut = SubResource( 1 )
+texture_normal = ExtResource( 12 )
+script = ExtResource( 3 )
+menu_path = NodePath("../..")
+pick_sound = NodePath("../../open_options")
+
+[node name="OptionsMenu" parent="StageSelectUI/Menu/Options" instance=ExtResource( 2 )]
+layer = 5
+visible = false
+
+[node name="Achievements" type="TextureButton" parent="StageSelectUI/Menu"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 164.0
+margin_top = 192.0
+margin_right = 182.0
+margin_bottom = 210.0
+rect_min_size = Vector2( 18, 18 )
+action_mode = 0
+shortcut = SubResource( 1 )
+texture_normal = ExtResource( 59 )
+script = ExtResource( 3 )
+menu_path = NodePath("../..")
+pick_sound = NodePath("../../open_options")
+
+[node name="AchievementsScreen" parent="StageSelectUI/Menu/Achievements" instance=ExtResource( 58 )]
+layer = 127
+visible = false
+
+[node name="ArmorSetup" type="TextureButton" parent="StageSelectUI/Menu"]
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -20.0
+margin_top = 166.0
+margin_right = 20.0
+margin_bottom = 206.0
+rect_min_size = Vector2( 18, 18 )
+action_mode = 0
+shortcut = SubResource( 1 )
+script = ExtResource( 3 )
+menu_path = NodePath("../..")
+pick_sound = NodePath("../../open_window")
+
+[node name="ArmorSetup" parent="StageSelectUI/Menu/ArmorSetup" instance=ExtResource( 42 )]
+visible = false
+
+[node name="Shadow" type="Label" parent="StageSelectUI/Menu"]
+modulate = Color( 0, 0, 0, 0.745098 )
+anchor_right = 0.1
+margin_left = 87.0
+margin_top = 67.0
+margin_right = 276.2
+margin_bottom = 142.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 47 )
+text = "Stage:
+    stage_name
+Boss: 
+    boss_name"
+autowrap = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="StageDescription" type="Label" parent="StageSelectUI/Menu"]
+material = ExtResource( 48 )
+anchor_right = 0.1
+margin_left = 86.0
+margin_top = 66.0
+margin_right = 275.2
+margin_bottom = 141.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 47 )
+text = "Stage:
+    stage_name
+Boss: 
+    boss_name"
+autowrap = true
+script = ExtResource( 49 )
+__meta__ = {
+"_editor_description_": ""
+}
+text_palette = ExtResource( 50 )
+
+[node name="choice" type="AudioStreamPlayer" parent="StageSelectUI"]
+stream = ExtResource( 11 )
+volume_db = -4.0
+bus = "SFX"
+
+[node name="pick" type="AudioStreamPlayer" parent="StageSelectUI"]
+stream = ExtResource( 9 )
+volume_db = -12.849
+bus = "SFX"
+
+[node name="open_window" type="AudioStreamPlayer" parent="StageSelectUI"]
+stream = ExtResource( 64 )
+volume_db = -4.0
+bus = "SFX"
+
+[node name="open_options" type="AudioStreamPlayer" parent="StageSelectUI"]
+stream = ExtResource( 65 )
+volume_db = -4.0
+bus = "SFX"
+
+[node name="Fader" type="ColorRect" parent="StageSelectUI"]
+visible = false
+margin_right = 398.0
+margin_bottom = 224.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 1 )
+
+[node name="map" type="AnimatedSprite" parent="."]
+position = Vector2( 199, -139 )
+z_index = -50
+frames = SubResource( 38 )
+<<<<<<< HEAD
+frame = 6
+=======
+frame = 8
+>>>>>>> source_private/main
+playing = true
+
+[node name="pointer" type="AnimatedSprite" parent="map"]
+position = Vector2( 0, 322 )
+frames = SubResource( 16 )
+<<<<<<< HEAD
+frame = 2
+=======
+frame = 4
+>>>>>>> source_private/main
+playing = true
+script = ExtResource( 16 )
+button_sprites = NodePath("../../button_sprites")
+
+[node name="move_bottom" type="Node2D" parent="map"]
+script = ExtResource( 25 )
+soft_conflicts = [ NodePath("../move_jacob"), NodePath("../move_gateway"), NodePath("../move_palace") ]
+
+[node name="move_jacob" type="Node2D" parent="map"]
+script = ExtResource( 25 )
+soft_conflicts = [ NodePath("../move_bottom"), NodePath("../move_gateway"), NodePath("../move_palace") ]
+final_position_y = -65.0
+destination_condition = 208.0
+
+[node name="move_gateway" type="Node2D" parent="map"]
+script = ExtResource( 25 )
+soft_conflicts = [ NodePath("../move_bottom"), NodePath("../move_jacob"), NodePath("../move_palace") ]
+final_position_y = 247.0
+destination_condition = -131.0
+
+[node name="move_palace" type="Node2D" parent="map"]
+script = ExtResource( 25 )
+soft_conflicts = [ NodePath("../move_bottom"), NodePath("../move_jacob"), NodePath("../move_gateway") ]
+final_position_y = 352.0
+destination_condition = -258.0
+
+[node name="bg" type="Sprite" parent="."]
+position = Vector2( 199, 112 )
+z_index = -10
+texture = ExtResource( 18 )
+
+[node name="PreviewBox" type="AnimatedSprite" parent="."]
+position = Vector2( 280, 93 )
+frames = SubResource( 48 )
+animation = "increase"
+frame = 8
+playing = true
+script = ExtResource( 57 )
+buttons = NodePath("../StageSelectUI/Menu")
+map = NodePath("../map")
+
+[node name="level_preview" type="Sprite" parent="PreviewBox"]
+position = Vector2( 0, -3 )
+texture = ExtResource( 56 )
+
+[node name="frame" type="Sprite" parent="."]
+position = Vector2( 199, 112 )
+z_index = 10
+texture = ExtResource( 17 )
+script = ExtResource( 41 )
+
+[node name="button_sprites" type="Node2D" parent="."]
+
+[node name="TroiaBase" parent="button_sprites" instance=ExtResource( 22 )]
+frames = ExtResource( 33 )
+frame = 1
+
+[node name="Primrose" parent="button_sprites" instance=ExtResource( 22 )]
+position = Vector2( 151, 38 )
+frames = ExtResource( 36 )
+frame = 0
+
+[node name="SigmaPalace" parent="button_sprites" instance=ExtResource( 22 )]
+position = Vector2( 199, 38 )
+frames = ExtResource( 35 )
+frame = 0
+
+[node name="PitchBlack" parent="button_sprites" instance=ExtResource( 22 )]
+position = Vector2( 247, 38 )
+frames = ExtResource( 15 )
+frame = 1
+
+[node name="Dynasty" parent="button_sprites" instance=ExtResource( 22 )]
+position = Vector2( 295, 38 )
+frames = ExtResource( 37 )
+frame = 0
+
+[node name="BoosterForest" parent="button_sprites" instance=ExtResource( 22 )]
+position = Vector2( 103, 186 )
+frames = ExtResource( 38 )
+frame = 0
+
+[node name="MetalValley" parent="button_sprites" instance=ExtResource( 22 )]
+position = Vector2( 151, 186 )
+frames = ExtResource( 39 )
+frame = 1
+
+[node name="CentralWhite" parent="button_sprites" instance=ExtResource( 22 )]
+position = Vector2( 247, 186 )
+frames = SubResource( 54 )
+frame = 0
+
+[node name="ArmorSetup" parent="button_sprites" instance=ExtResource( 22 )]
+position = Vector2( 199, 186 )
+frames = ExtResource( 44 )
+animation = "X"
+frame = 0
+script = ExtResource( 43 )
+
+[node name="Inferno" parent="button_sprites" instance=ExtResource( 22 )]
+position = Vector2( 295, 186 )
+
+[node name="JacobElevator" parent="button_sprites" instance=ExtResource( 22 )]
+position = Vector2( 55, 112 )
+frames = ExtResource( 19 )
+
+[node name="cursor" parent="button_sprites/JacobElevator" index="0"]
+animation = "long"
+<<<<<<< HEAD
+frame = 2
+=======
+>>>>>>> source_private/main
+
+[node name="Gateway" parent="button_sprites" instance=ExtResource( 22 )]
+position = Vector2( 343, 112 )
+frames = ExtResource( 34 )
+
+[node name="cursor" parent="button_sprites/Gateway" index="0"]
+animation = "long"
+<<<<<<< HEAD
+frame = 2
+=======
+>>>>>>> source_private/main
+
+[node name="on_stage_select" type="Node" parent="."]
+script = ExtResource( 51 )
+subtanks = [ ExtResource( 53 ), ExtResource( 52 ), ExtResource( 54 ), ExtResource( 55 ) ]
+
+[node name="TimerBG" parent="." instance=ExtResource( 62 )]
+visible = false
+margin_left = 333.0
+margin_right = 398.0
+
+[node name="IGTimer" parent="." instance=ExtResource( 66 )]
+section = "Misc."
+
+[connection signal="finished" from="music" to="music" method="_on_music_finished"]
+[connection signal="focus_entered" from="StageSelectUI/Menu/TroiaBase" to="StageSelectUI/Menu/TroiaBase" method="_on_focus_entered"]
+[connection signal="focus_exited" from="StageSelectUI/Menu/TroiaBase" to="StageSelectUI/Menu/TroiaBase" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="StageSelectUI/Menu/TroiaBase" to="StageSelectUI/Menu/TroiaBase" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="StageSelectUI/Menu/TroiaBase" to="StageSelectUI/Menu/TroiaBase" method="_on_mouse_exited"]
+[connection signal="pressed" from="StageSelectUI/Menu/TroiaBase" to="StageSelectUI/Menu/TroiaBase" method="_on_pressed"]
+[connection signal="focus_entered" from="StageSelectUI/Menu/Primrose" to="StageSelectUI/Menu/Primrose" method="_on_focus_entered"]
+[connection signal="focus_exited" from="StageSelectUI/Menu/Primrose" to="StageSelectUI/Menu/Primrose" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="StageSelectUI/Menu/Primrose" to="StageSelectUI/Menu/Primrose" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="StageSelectUI/Menu/Primrose" to="StageSelectUI/Menu/Primrose" method="_on_mouse_exited"]
+[connection signal="pressed" from="StageSelectUI/Menu/Primrose" to="StageSelectUI/Menu/Primrose" method="_on_pressed"]
+[connection signal="focus_entered" from="StageSelectUI/Menu/PitchBlack" to="StageSelectUI/Menu/PitchBlack" method="_on_focus_entered"]
+[connection signal="focus_exited" from="StageSelectUI/Menu/PitchBlack" to="StageSelectUI/Menu/PitchBlack" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="StageSelectUI/Menu/PitchBlack" to="StageSelectUI/Menu/PitchBlack" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="StageSelectUI/Menu/PitchBlack" to="StageSelectUI/Menu/PitchBlack" method="_on_mouse_exited"]
+[connection signal="pressed" from="StageSelectUI/Menu/PitchBlack" to="StageSelectUI/Menu/PitchBlack" method="_on_pressed"]
+[connection signal="focus_entered" from="StageSelectUI/Menu/Dynasty" to="StageSelectUI/Menu/Dynasty" method="_on_focus_entered"]
+[connection signal="focus_exited" from="StageSelectUI/Menu/Dynasty" to="StageSelectUI/Menu/Dynasty" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="StageSelectUI/Menu/Dynasty" to="StageSelectUI/Menu/Dynasty" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="StageSelectUI/Menu/Dynasty" to="StageSelectUI/Menu/Dynasty" method="_on_mouse_exited"]
+[connection signal="pressed" from="StageSelectUI/Menu/Dynasty" to="StageSelectUI/Menu/Dynasty" method="_on_pressed"]
+[connection signal="focus_entered" from="StageSelectUI/Menu/BoosterForest" to="StageSelectUI/Menu/BoosterForest" method="_on_focus_entered"]
+[connection signal="focus_exited" from="StageSelectUI/Menu/BoosterForest" to="StageSelectUI/Menu/BoosterForest" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="StageSelectUI/Menu/BoosterForest" to="StageSelectUI/Menu/BoosterForest" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="StageSelectUI/Menu/BoosterForest" to="StageSelectUI/Menu/BoosterForest" method="_on_mouse_exited"]
+[connection signal="pressed" from="StageSelectUI/Menu/BoosterForest" to="StageSelectUI/Menu/BoosterForest" method="_on_pressed"]
+[connection signal="focus_entered" from="StageSelectUI/Menu/MetalValley" to="StageSelectUI/Menu/MetalValley" method="_on_focus_entered"]
+[connection signal="focus_exited" from="StageSelectUI/Menu/MetalValley" to="StageSelectUI/Menu/MetalValley" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="StageSelectUI/Menu/MetalValley" to="StageSelectUI/Menu/MetalValley" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="StageSelectUI/Menu/MetalValley" to="StageSelectUI/Menu/MetalValley" method="_on_mouse_exited"]
+[connection signal="pressed" from="StageSelectUI/Menu/MetalValley" to="StageSelectUI/Menu/MetalValley" method="_on_pressed"]
+[connection signal="focus_entered" from="StageSelectUI/Menu/CentralWhite" to="StageSelectUI/Menu/CentralWhite" method="_on_focus_entered"]
+[connection signal="focus_exited" from="StageSelectUI/Menu/CentralWhite" to="StageSelectUI/Menu/CentralWhite" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="StageSelectUI/Menu/CentralWhite" to="StageSelectUI/Menu/CentralWhite" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="StageSelectUI/Menu/CentralWhite" to="StageSelectUI/Menu/CentralWhite" method="_on_mouse_exited"]
+[connection signal="pressed" from="StageSelectUI/Menu/CentralWhite" to="StageSelectUI/Menu/CentralWhite" method="_on_pressed"]
+[connection signal="focus_entered" from="StageSelectUI/Menu/Inferno" to="StageSelectUI/Menu/Inferno" method="_on_focus_entered"]
+[connection signal="focus_exited" from="StageSelectUI/Menu/Inferno" to="StageSelectUI/Menu/Inferno" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="StageSelectUI/Menu/Inferno" to="StageSelectUI/Menu/Inferno" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="StageSelectUI/Menu/Inferno" to="StageSelectUI/Menu/Inferno" method="_on_mouse_exited"]
+[connection signal="pressed" from="StageSelectUI/Menu/Inferno" to="StageSelectUI/Menu/Inferno" method="_on_pressed"]
+[connection signal="focus_entered" from="StageSelectUI/Menu/SigmaPalace" to="StageSelectUI/Menu/SigmaPalace" method="_on_focus_entered"]
+[connection signal="focus_exited" from="StageSelectUI/Menu/SigmaPalace" to="StageSelectUI/Menu/SigmaPalace" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="StageSelectUI/Menu/SigmaPalace" to="StageSelectUI/Menu/SigmaPalace" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="StageSelectUI/Menu/SigmaPalace" to="StageSelectUI/Menu/SigmaPalace" method="_on_mouse_exited"]
+[connection signal="pressed" from="StageSelectUI/Menu/SigmaPalace" to="StageSelectUI/Menu/SigmaPalace" method="_on_pressed"]
+[connection signal="focus_entered" from="StageSelectUI/Menu/JacobElevator" to="StageSelectUI/Menu/JacobElevator" method="_on_focus_entered"]
+[connection signal="focus_exited" from="StageSelectUI/Menu/JacobElevator" to="StageSelectUI/Menu/JacobElevator" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="StageSelectUI/Menu/JacobElevator" to="StageSelectUI/Menu/JacobElevator" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="StageSelectUI/Menu/JacobElevator" to="StageSelectUI/Menu/JacobElevator" method="_on_mouse_exited"]
+[connection signal="pressed" from="StageSelectUI/Menu/JacobElevator" to="StageSelectUI/Menu/JacobElevator" method="_on_pressed"]
+[connection signal="focus_entered" from="StageSelectUI/Menu/Gateway" to="StageSelectUI/Menu/Gateway" method="_on_focus_entered"]
+[connection signal="focus_exited" from="StageSelectUI/Menu/Gateway" to="StageSelectUI/Menu/Gateway" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="StageSelectUI/Menu/Gateway" to="StageSelectUI/Menu/Gateway" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="StageSelectUI/Menu/Gateway" to="StageSelectUI/Menu/Gateway" method="_on_mouse_exited"]
+[connection signal="pressed" from="StageSelectUI/Menu/Gateway" to="StageSelectUI/Menu/Gateway" method="_on_pressed"]
+[connection signal="focus_entered" from="StageSelectUI/Menu/NoahsPark" to="StageSelectUI/Menu/NoahsPark" method="_on_focus_entered"]
+[connection signal="focus_exited" from="StageSelectUI/Menu/NoahsPark" to="StageSelectUI/Menu/NoahsPark" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="StageSelectUI/Menu/NoahsPark" to="StageSelectUI/Menu/NoahsPark" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="StageSelectUI/Menu/NoahsPark" to="StageSelectUI/Menu/NoahsPark" method="_on_mouse_exited"]
+[connection signal="pressed" from="StageSelectUI/Menu/NoahsPark" to="StageSelectUI/Menu/NoahsPark" method="_on_pressed"]
+[connection signal="focus_entered" from="StageSelectUI/Menu/Keycfg" to="StageSelectUI/Menu/Keycfg" method="_on_focus_entered"]
+[connection signal="focus_exited" from="StageSelectUI/Menu/Keycfg" to="StageSelectUI/Menu/Keycfg" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="StageSelectUI/Menu/Keycfg" to="StageSelectUI/Menu/Keycfg" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="StageSelectUI/Menu/Keycfg" to="StageSelectUI/Menu/Keycfg" method="_on_mouse_exited"]
+[connection signal="pressed" from="StageSelectUI/Menu/Keycfg" to="StageSelectUI/Menu/Keycfg" method="_on_pressed"]
+[connection signal="focus_entered" from="StageSelectUI/Menu/Options" to="StageSelectUI/Menu/Options" method="_on_focus_entered"]
+[connection signal="focus_exited" from="StageSelectUI/Menu/Options" to="StageSelectUI/Menu/Options" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="StageSelectUI/Menu/Options" to="StageSelectUI/Menu/Options" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="StageSelectUI/Menu/Options" to="StageSelectUI/Menu/Options" method="_on_mouse_exited"]
+[connection signal="pressed" from="StageSelectUI/Menu/Options" to="StageSelectUI/Menu/Options" method="_on_pressed"]
+[connection signal="focus_entered" from="StageSelectUI/Menu/Achievements" to="StageSelectUI/Menu/Achievements" method="_on_focus_entered"]
+[connection signal="focus_exited" from="StageSelectUI/Menu/Achievements" to="StageSelectUI/Menu/Achievements" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="StageSelectUI/Menu/Achievements" to="StageSelectUI/Menu/Achievements" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="StageSelectUI/Menu/Achievements" to="StageSelectUI/Menu/Achievements" method="_on_mouse_exited"]
+[connection signal="pressed" from="StageSelectUI/Menu/Achievements" to="StageSelectUI/Menu/Achievements" method="_on_pressed"]
+[connection signal="focus_entered" from="StageSelectUI/Menu/ArmorSetup" to="StageSelectUI/Menu/ArmorSetup" method="_on_focus_entered"]
+[connection signal="focus_exited" from="StageSelectUI/Menu/ArmorSetup" to="StageSelectUI/Menu/ArmorSetup" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="StageSelectUI/Menu/ArmorSetup" to="StageSelectUI/Menu/ArmorSetup" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="StageSelectUI/Menu/ArmorSetup" to="StageSelectUI/Menu/ArmorSetup" method="_on_mouse_exited"]
+[connection signal="pressed" from="StageSelectUI/Menu/ArmorSetup" to="StageSelectUI/Menu/ArmorSetup" method="_on_pressed"]
+[connection signal="reposition_map" from="map/pointer" to="map/move_bottom" method="_on_reposition_map"]
+[connection signal="reposition_map" from="map/pointer" to="map/move_jacob" method="_on_reposition_map"]
+[connection signal="reposition_map" from="map/pointer" to="map/move_gateway" method="_on_reposition_map"]
+[connection signal="reposition_map" from="map/pointer" to="map/move_palace" method="_on_reposition_map"]
+
+[editable path="button_sprites/JacobElevator"]
+[editable path="button_sprites/Gateway"]

@@ -44,21 +44,21 @@ func on_talk(character_name: String):
 		if character_name == "Zero":
 			zero.play("talk")
 		else:
-			zero.play("blink")
+			zero.play("idle")
 
 func start_music():
-	#song_loop.loop = false
-	musicplayer.play_song(song_loop, false)
+	song_loop.loop = true
+	musicplayer.play_song(song_loop, song_intro)
 
 func start_dialog():
 	dialog_box.startup()
 
 func start_second_dialog():
-	#song2_loop.loop = false
+	song2_loop.loop = true
 	musicplayer.fast_fade_out = false
 	musicplayer.volume_db = 0
 	musicplayer.playing = true
-	musicplayer.play_song(song2_loop, false)
+	musicplayer.play_song(song2_loop, song2_intro)
 	second_dialog = true
 	dialog_box.dialog_tree = text_second_dialog
 	dialog_box.startup()
@@ -76,11 +76,9 @@ func _on_dialog_concluded() -> void :
 		Tools.timer_array(self, 1.0, "move_to_position", params)
 		musicplayer.fast_fade_out = true
 	else:
-		#go_to_credits_position()
-		cutscene_stage += 1
+		go_to_credits_position()
 		fade_out_covers()
 		tween.attribute("volume_db", - 80, 3.0, musicplayer)
-		finished_movement(null,null)
 
 func move_to_position(data: Dictionary):
 	var sprite = data["sprite"]
@@ -108,15 +106,7 @@ func finished_movement(sprite, animation):
 		1:
 			start_second_dialog()
 		2:
-			cutscene_stage += 1
-			var params = {
-			"sprite": visuals, 
-			"animation": null, 
-			"x": 0, 
-			"y": 0, 
-			"duration": 1
-			}
-			Tools.timer_array(self, 1.0, "move_to_position", params)
+			turn_everyone_around()
 		3:
 			Tools.timer(0.2, "go_to_credits", self)
 
@@ -124,7 +114,7 @@ func zero_talking():
 	cutscene_stage += 1
 	var params = {
 		"sprite": zero, 
-		"animation": "blink", 
+		"animation": "recover", 
 		"x": zero.position.x, 
 		"y": zero.position.y, 
 		"duration": 0.5

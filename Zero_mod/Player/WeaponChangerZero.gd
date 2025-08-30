@@ -7,7 +7,7 @@ onready var character: Character = get_parent()
 
 
 func _process(_delta: float) -> void :
-	if active:
+	if active and character.is_current_player:
 		var _animation = get_parent().get_animation()
 		if _animation in character.saber_animations:
 			return

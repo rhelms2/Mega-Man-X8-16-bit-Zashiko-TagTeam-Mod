@@ -1,7 +1,7 @@
-[gd_resource type="SpriteFrames" load_steps=311 format=2]
+[gd_resource type="SpriteFrames" load_steps=301 format=2]
 
 [ext_resource path="res://Zero_mod/X8/Sprites/Intro.png" type="Texture" id=1]
-[ext_resource path="res://Zero_mod/Sprites/zero_ride_chaser.png" type="Texture" id=2]
+[ext_resource path="res://Zero_mod/X8/Sprites/zero_ride_chaser.png" type="Texture" id=2]
 [ext_resource path="res://Zero_mod/X8/Sprites/Victory.png" type="Texture" id=3]
 [ext_resource path="res://Zero_mod/X8/Sprites/Saber/saber_3.png" type="Texture" id=4]
 [ext_resource path="res://Zero_mod/X8/Sprites/unfinished/Intro.png" type="Texture" id=5]
@@ -29,7 +29,6 @@
 [ext_resource path="res://Zero_mod/X8/Sprites/kknuckle/attack/knuckle_2_air.png" type="Texture" id=27]
 [ext_resource path="res://Zero_mod/X8/Sprites/kknuckle/attack/knuckle_1_air.png" type="Texture" id=28]
 [ext_resource path="res://Zero_mod/X8/Sprites/kknuckle/walk_start.png" type="Texture" id=29]
-[ext_resource path="res://Zero_mod/X8/Sprites/kknuckle/talk.png" type="Texture" id=30]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 5 )
@@ -411,37 +410,9 @@ region = Rect2( 1280, 0, 160, 160 )
 atlas = ExtResource( 11 )
 region = Rect2( 1440, 0, 160, 160 )
 
-[sub_resource type="AtlasTexture" id=659]
-atlas = ExtResource( 14 )
-region = Rect2( 0, 0, 128, 128 )
-
-[sub_resource type="AtlasTexture" id=660]
-atlas = ExtResource( 14 )
-region = Rect2( 128, 0, 128, 128 )
-
-[sub_resource type="AtlasTexture" id=661]
+[sub_resource type="AtlasTexture" id=489]
 atlas = ExtResource( 14 )
 region = Rect2( 256, 0, 128, 128 )
-
-[sub_resource type="AtlasTexture" id=662]
-atlas = ExtResource( 14 )
-region = Rect2( 384, 0, 128, 128 )
-
-[sub_resource type="AtlasTexture" id=663]
-atlas = ExtResource( 14 )
-region = Rect2( 512, 0, 128, 128 )
-
-[sub_resource type="AtlasTexture" id=664]
-atlas = ExtResource( 14 )
-region = Rect2( 256, 0, 128, 128 )
-
-[sub_resource type="AtlasTexture" id=665]
-atlas = ExtResource( 14 )
-region = Rect2( 128, 0, 128, 128 )
-
-[sub_resource type="AtlasTexture" id=666]
-atlas = ExtResource( 14 )
-region = Rect2( 0, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=490]
 atlas = ExtResource( 9 )
@@ -551,17 +522,17 @@ region = Rect2( 768, 0, 128, 128 )
 atlas = ExtResource( 17 )
 region = Rect2( 896, 0, 128, 128 )
 
-[sub_resource type="AtlasTexture" id=494]
+[sub_resource type="AtlasTexture" id=492]
 atlas = ExtResource( 14 )
-region = Rect2( 256, 0, 128, 128 )
+region = Rect2( 0, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=493]
 atlas = ExtResource( 14 )
 region = Rect2( 128, 0, 128, 128 )
 
-[sub_resource type="AtlasTexture" id=492]
+[sub_resource type="AtlasTexture" id=494]
 atlas = ExtResource( 14 )
-region = Rect2( 0, 0, 128, 128 )
+region = Rect2( 256, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=239]
 atlas = ExtResource( 2 )
@@ -806,14 +777,6 @@ region = Rect2( 192, 560, 64, 56 )
 [sub_resource type="AtlasTexture" id=350]
 atlas = ExtResource( 2 )
 region = Rect2( 128, 560, 64, 56 )
-
-[sub_resource type="AtlasTexture" id=667]
-atlas = ExtResource( 30 )
-region = Rect2( 0, 0, 128, 128 )
-
-[sub_resource type="AtlasTexture" id=668]
-atlas = ExtResource( 30 )
-region = Rect2( 128, 0, 128, 128 )
 
 [sub_resource type="AtlasTexture" id=521]
 atlas = ExtResource( 26 )
@@ -1238,10 +1201,10 @@ animations = [ {
 "name": "hyouryuushou_air",
 "speed": 45.0
 }, {
-"frames": [ SubResource( 659 ), SubResource( 659 ), SubResource( 659 ), SubResource( 659 ), SubResource( 659 ), SubResource( 659 ), SubResource( 659 ), SubResource( 659 ), SubResource( 659 ), SubResource( 659 ), SubResource( 660 ), SubResource( 660 ), SubResource( 660 ), SubResource( 661 ), SubResource( 661 ), SubResource( 661 ), SubResource( 662 ), SubResource( 663 ), SubResource( 662 ), SubResource( 664 ), SubResource( 664 ), SubResource( 664 ), SubResource( 665 ), SubResource( 665 ), SubResource( 665 ), SubResource( 666 ), SubResource( 666 ), SubResource( 666 ), SubResource( 666 ), SubResource( 666 ), SubResource( 666 ), SubResource( 666 ), SubResource( 666 ), SubResource( 666 ) ],
+"frames": [ SubResource( 489 ) ],
 "loop": true,
 "name": "idle",
-"speed": 12.0
+"speed": 3.0
 }, {
 "frames": [ SubResource( 490 ), SubResource( 490 ), SubResource( 491 ), SubResource( 491 ), SubResource( 490 ), SubResource( 490 ), SubResource( 491 ), SubResource( 491 ), SubResource( 490 ), SubResource( 490 ), SubResource( 491 ), SubResource( 491 ), SubResource( 490 ), SubResource( 490 ), SubResource( 491 ), SubResource( 491 ), SubResource( 490 ) ],
 "loop": false,
@@ -1263,7 +1226,7 @@ animations = [ {
 "name": "rasetsusen",
 "speed": 60.0
 }, {
-"frames": [ SubResource( 494 ), SubResource( 493 ), SubResource( 493 ), SubResource( 492 ) ],
+"frames": [ SubResource( 492 ), SubResource( 493 ), SubResource( 493 ), SubResource( 494 ) ],
 "loop": false,
 "name": "recover",
 "speed": 23.0
@@ -1323,7 +1286,7 @@ animations = [ {
 "name": "stop_end",
 "speed": 23.0
 }, {
-"frames": [ SubResource( 667 ), SubResource( 668 ) ],
+"frames": [ SubResource( 489 ), SubResource( 489 ) ],
 "loop": true,
 "name": "talk",
 "speed": 10.0

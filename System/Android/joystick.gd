@@ -1,6 +1,6 @@
 extends Area2D
 
-onready var _player = get_parent().get_node(CharacterManager.player_character)
+onready var _player = get_parent().get_node(CharacterManager.current_player_character)
 
 onready var background = $background
 onready var outline = $outline

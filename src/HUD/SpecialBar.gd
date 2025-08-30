@@ -22,8 +22,11 @@ func _ready() -> void :
 	Event.connect("collected", self, "hide_or_show")
 	Event.connect("special_activated", self, "activate")
 	Event.connect("special_deactivated", self, "deactivate")
+	Event.connect("refresh_hud", self, "check")
 
-func activate(weapon) -> void :
+func activate(weapon, character) -> void :
+	if not character == get_team_member():
+		return
 	if weapon.name == "XDrive":
 		visible = true
 		set_process(true)
@@ -52,7 +55,9 @@ func activate(weapon) -> void :
 		hermes_fill.visible = false
 		ultimate_fill.visible = false
 
-func deactivate(_weapon) -> void :
+func deactivate(_weapon, _character) -> void :
+	if not _character == get_team_member():
+		return
 	visible = false
 	set_process(false)
 	hermes_fill.visible = false
@@ -162,24 +167,38 @@ func unhide() -> void :
 		u_blink.visible = false
 	else:
 		visible = false
+		
+func get_team_member():
+	var tm_index = get_parent().team_member_index
+	if tm_index > 0 and GameManager.team.size() > 1:
+		if is_instance_valid(GameManager.team[tm_index]):
+			return GameManager.team[tm_index]
+	else:
+		return GameManager.player
+
+func is_team_member_current_player() -> bool:
+	if is_instance_valid(GameManager.player):
+		return GameManager.player == GameManager.team[get_parent().team_member_index]
+	return false
 
 func get_current_set() -> String:
 	if is_instance_valid(GameManager.player):
 		return GameManager.player.is_full_armor()
 	return "none"
 
-func _on_WeaponBar_displayed(weapon) -> void :
-	if weapon.name == "XDrive" or weapon.name == "GigaCrash" or weapon.name == "NovaStrike":
-		hide()
-	else:
-		unhide()
+func _on_WeaponBar_displayed(weapon, char_name) -> void :
+	if char_name == get_team_member().name:
+		if weapon.name == "XDrive" or weapon.name == "GigaCrash" or weapon.name == "NovaStrike":
+			hide()
+		else:
+			unhide()
 
 func hide_or_show(_d) -> void :
 	call_deferred("check")
 
 func check() -> void :
 	yield(get_tree(), "idle_frame")
-	if get_current_set() == "hermes" or get_current_set() == "icarus" or get_current_set() == "ultimate" or get_current_set() == "axl":
+	if is_team_member_current_player() and get_current_set() == "hermes" or get_current_set() == "icarus" or get_current_set() == "ultimate" or get_current_set() == "axl":
 		call_deferred("unhide")
 	else:
 		call_deferred("hide")

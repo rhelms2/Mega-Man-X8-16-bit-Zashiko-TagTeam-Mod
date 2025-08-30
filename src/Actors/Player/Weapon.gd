@@ -17,7 +17,7 @@ export  var MainColor5: Color
 export  var MainColor6: Color
 
 onready var arm_cannon = get_parent()
-onready var character: Character = get_parent().get_parent()
+onready var character = get_parent().get_parent()
 
 var shots_currently_alive: int = 0
 var charged_shots_currently_alive: int = 0

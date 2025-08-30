@@ -79,7 +79,7 @@ func _on_area2D_body_entered(body: Node) -> void :
 				achievement_check()
 
 func lock_black_zero_armor() -> void :
-	if CharacterManager.player_character == "Zero":
+	if CharacterManager.current_player_character == "Zero":
 		if is_instance_valid(GameManager.player):
 			var zero = GameManager.player
 			GameManager.remove_collectible_from_savedata(collectible_name)

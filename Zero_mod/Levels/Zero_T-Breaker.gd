@@ -15,7 +15,7 @@ func _ready() -> void :
 			blocking_wall.set_deferred("disabled", false)
 			
 	if character_name != "":
-		if CharacterManager.player_character != character_name:
+		if CharacterManager.current_player_character != character_name:
 			blocking_wall.set_deferred("disabled", false)
 
 func block_wall() -> void :

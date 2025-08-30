@@ -66,19 +66,24 @@ func current_weapon_is_saber() -> bool:
 
 func change_current_weapon_left() -> void :
 	var index = weapons.find(current_weapon)
-	set_current_weapon(weapons[(index + weapons.size() - 1) % weapons.size()])
+	if index - 1 < 0:
+		set_current_weapon(weapons[weapons.size() - 1])
+	else:
+		set_current_weapon(weapons[index - 1])
 
 func change_current_weapon_right() -> void :
 	update_list_of_weapons()
 	var index = weapons.find(current_weapon)
-	set_current_weapon(weapons[(index + 1) % weapons.size()])
-
+	if index + 1 > weapons.size() - 1:
+		set_current_weapon(weapons[0])
+	else:
+		set_current_weapon(weapons[index + 1])
 
 func set_current_weapon(weapon) -> void :
 	current_weapon = weapon
 	if not current_weapon:
 		set_saber_as_weapon()
-	if current_weapon != null:
+	if current_weapon != null and character.is_current_player:
 		update_character_sprites()
 		Event.emit_signal("changed_weapon", current_weapon)
 

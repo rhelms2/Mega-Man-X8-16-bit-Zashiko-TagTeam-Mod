@@ -1,0 +1,2412 @@
+<<<<<<< HEAD
+[gd_scene load_steps=230 format=2]
+=======
+[gd_scene load_steps=232 format=2]
+>>>>>>> source_private/main
+
+[ext_resource path="res://src/Actors/Player/x_sprites/x.res" type="SpriteFrames" id=1]
+[ext_resource path="res://Axl_mod/Player/Scripts/PlayerAxl.gd" type="Script" id=2]
+[ext_resource path="res://src/Sounds/JUMP.wav" type="AudioStream" id=3]
+[ext_resource path="res://Axl_mod/Player/Scripts/JumpAxl.gd" type="Script" id=4]
+[ext_resource path="res://Axl_mod/Player/Scripts/DashAxl.gd" type="Script" id=5]
+[ext_resource path="res://src/Sounds/DASH.wav" type="AudioStream" id=6]
+[ext_resource path="res://Axl_mod/Player/Scripts/AirDashAxl.gd" type="Script" id=7]
+[ext_resource path="res://Axl_mod/Player/Scripts/WeaponChangerAxl.gd" type="Script" id=8]
+[ext_resource path="res://Axl_mod/Player/Scripts/WalljumpAxl.gd" type="Script" id=9]
+[ext_resource path="res://Axl_mod/Player/Scripts/IntroAxl.gd" type="Script" id=10]
+[ext_resource path="res://Axl_mod/Player/Scripts/WallSlideAxl.gd" type="Script" id=11]
+[ext_resource path="res://Axl_mod/Player/Sprites/ray_gun/ray_gun.tres" type="SpriteFrames" id=12]
+[ext_resource path="res://src/Sounds/SLIDE.wav" type="AudioStream" id=13]
+[ext_resource path="res://src/Actors/Player/Modules/Idle.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/Actors/Player/Damage.gd" type="Script" id=15]
+[ext_resource path="res://src/Sounds/DAMAGE.wav" type="AudioStream" id=16]
+[ext_resource path="res://Axl_mod/Player/Scripts/DashJumpAxl.gd" type="Script" id=17]
+[ext_resource path="res://src/Actors/Player/Modules/Fall.tscn" type="PackedScene" id=18]
+[ext_resource path="res://Axl_mod/Player/Scripts/FallAxl.gd" type="Script" id=19]
+[ext_resource path="res://Axl_mod/Player/Scripts/DashWallJumpAxl.gd" type="Script" id=20]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BulletAxl.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Axl_mod/Player/Scripts/PrimaryShotAxl.gd" type="Script" id=22]
+[ext_resource path="res://src/Sounds/17 - MMX - X Fade In.wav" type="AudioStream" id=23]
+[ext_resource path="res://Axl_mod/Player/Scripts/AltFireAxl.gd" type="Script" id=24]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/BlastLauncher/BlastLauncher.tres" type="Resource" id=25]
+[ext_resource path="res://src/Actors/Player/x_collision_box.tres" type="Shape2D" id=26]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/BoundBlaster/BoundBlaster.tres" type="Resource" id=27]
+[ext_resource path="res://src/Actors/Enemy Collision Detector.gd" type="Script" id=28]
+[ext_resource path="res://src/Effects/Textures/old_lemon_hit.png" type="Texture" id=29]
+[ext_resource path="res://src/Effects/Textures/smoke.png" type="Texture" id=30]
+[ext_resource path="res://src/Effects/Textures/dash.png" type="Texture" id=31]
+[ext_resource path="res://src/Effects/Textures/charge_1.png" type="Texture" id=32]
+[ext_resource path="res://src/Effects/Textures/charge_2.png" type="Texture" id=33]
+[ext_resource path="res://src/Effects/Textures/airdash.png" type="Texture" id=34]
+[ext_resource path="res://SpriteEffect.gd" type="Script" id=35]
+[ext_resource path="res://src/Actors/Player/Modules/Forced.gd" type="Script" id=36]
+[ext_resource path="res://Axl_mod/Player/Scripts/ShotDirection.gd" type="Script" id=37]
+[ext_resource path="res://src/Actors/Player/PlayerDeath.gd" type="Script" id=38]
+[ext_resource path="res://src/Sounds/11 - MMX - X Die.wav" type="AudioStream" id=39]
+[ext_resource path="res://src/Effects/Player Death.tscn" type="PackedScene" id=40]
+[ext_resource path="res://src/Effects/Textures/blue_screen.png" type="Texture" id=41]
+[ext_resource path="res://Axl_mod/Ride/RideAxl.gd" type="Script" id=42]
+[ext_resource path="res://src/Actors/Weapons/Icarus Buster.tscn" type="PackedScene" id=43]
+[ext_resource path="res://src/Actors/Player/Subtank.tscn" type="PackedScene" id=44]
+[ext_resource path="res://Axl_mod/Player/Scripts/HoverAxl.gd" type="Script" id=45]
+[ext_resource path="res://Axl_mod/Player/Scripts/offset_manager.gd" type="Script" id=46]
+[ext_resource path="res://Axl_mod/Player/Axl_Material_Shader.tres" type="Material" id=47]
+[ext_resource path="res://Axl_mod/Player/Scripts/WalkAxl.gd" type="Script" id=48]
+[ext_resource path="res://Axl_mod/Player/Normal Pistol.tscn" type="PackedScene" id=49]
+[ext_resource path="res://Axl_mod/Player/Scripts/SubtankManagerAxl.gd" type="Script" id=50]
+[ext_resource path="res://Axl_mod/Player/Effects/hover_effect.tres" type="SpriteFrames" id=51]
+[ext_resource path="res://src/Effects/Materials/mat_x_death.tres" type="Material" id=52]
+[ext_resource path="res://Axl_mod/SFX/Hover.wav" type="AudioStream" id=53]
+[ext_resource path="res://Axl_mod/Player/Scripts/PistolAlternate.gd" type="Script" id=54]
+[ext_resource path="res://src/Actors/Player/Modules/JumpDamage.tscn" type="PackedScene" id=55]
+[ext_resource path="res://Axl_mod/Player/Sprites/flame_burner/flame_burner.tres" type="SpriteFrames" id=56]
+[ext_resource path="res://Axl_mod/Player/Projectiles/Copy Bullet.tscn" type="PackedScene" id=57]
+[ext_resource path="res://src/Sounds/MM - Equip.wav" type="AudioStream" id=58]
+[ext_resource path="res://src/Actors/Player/Modules/LifeSteal.tscn" type="PackedScene" id=59]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/FlameBurner/FlameBurner.tres" type="Resource" id=60]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/BoundBlaster/BoundBlaster.tscn" type="PackedScene" id=61]
+[ext_resource path="res://src/Objects/Pickups/Subtanks/subtank_CentralWhite.tres" type="Resource" id=62]
+[ext_resource path="res://src/Effects/Materials/duringimage_mat.tres" type="Material" id=63]
+[ext_resource path="res://src/Effects/Textures/follow_shot.png" type="Texture" id=64]
+[ext_resource path="res://src/Objects/Pickups/Subtanks/subtank_MetalValley.tres" type="Resource" id=65]
+[ext_resource path="res://Axl_mod/Player/Scripts/FinishAxl.gd" type="Script" id=66]
+[ext_resource path="res://src/Sounds/18 - MMX - X Fade Out.wav" type="AudioStream" id=67]
+[ext_resource path="res://src/Sounds/16 - MMX - X Upgrade Complete.wav" type="AudioStream" id=68]
+[ext_resource path="res://src/Objects/Pickups/Subtanks/subtank_Inferno.tres" type="Resource" id=69]
+[ext_resource path="res://src/Objects/Pickups/Subtanks/subtank_TroiaBase.tres" type="Resource" id=70]
+[ext_resource path="res://Axl_mod/Player/Sprites/spiral_magnum/spiral_magnum.tres" type="SpriteFrames" id=71]
+[ext_resource path="res://src/Sounds/Yeti - Throw.ogg" type="AudioStream" id=72]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/PlasmaGun/PlasmaGun.tres" type="Resource" id=73]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/RayGun/RayGun.tscn" type="PackedScene" id=74]
+[ext_resource path="res://src/Actors/Player/WeaponStasis.gd" type="Script" id=75]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/PlasmaGun/PlasmaGun.tscn" type="PackedScene" id=76]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/IceGattling/IceGattling.tres" type="Resource" id=77]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/IceGattling/IceGattling.tscn" type="PackedScene" id=78]
+[ext_resource path="res://Axl_mod/Player/Sprites/spiral_magnum/spiral_magnum_B.tres" type="SpriteFrames" id=79]
+[ext_resource path="res://src/Effects/Materials/x_dash_smoke.tres" type="Material" id=80]
+[ext_resource path="res://src/Effects/Materials/x_walljump_particle.tres" type="Material" id=81]
+[ext_resource path="res://src/Effects/Materials/x_supercharged_particle.tres" type="Material" id=82]
+[ext_resource path="res://src/Effects/Materials/x_wallslide_smoke.tres" type="Material" id=83]
+[ext_resource path="res://src/Effects/Materials/x_charging_particle.tres" type="Material" id=84]
+[ext_resource path="res://src/Effects/Materials/x_charged_particle.tres" type="Material" id=85]
+[ext_resource path="res://src/Effects/Materials/x_dash_invinc_particles.tres" type="Material" id=86]
+[ext_resource path="res://src/Actors/Player/X/CrushCheck.gd" type="Script" id=87]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/BlastLauncher/BlastLauncher.tscn" type="PackedScene" id=88]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/FlameBurner/FlameBurner.tscn" type="PackedScene" id=89]
+[ext_resource path="res://Axl_mod/Player/Sprites/blast_launcher/blast_launcher_B.tres" type="SpriteFrames" id=90]
+[ext_resource path="res://Axl_mod/Player/Scripts/DodgeAxl.gd" type="Script" id=91]
+[ext_resource path="res://Axl_mod/Player/Sprites/axl_pistol.tres" type="SpriteFrames" id=92]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/BlackArrow/BlackArrow.tres" type="Resource" id=93]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/BlackArrow/BlackArrow.tscn" type="PackedScene" id=94]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/GigaCrash/GigaCrashWeapon.gd" type="Script" id=95]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/GigaCrash/CrashIllusion.tscn" type="PackedScene" id=96]
+[ext_resource path="res://src/Levels/Primrose/rotation_disabler.gd" type="Script" id=97]
+[ext_resource path="res://src/Actors/rotation_particle_disabler.gd" type="Script" id=98]
+[ext_resource path="res://Axl_mod/Player/Sprites/black_arrow/black_arrow.tres" type="SpriteFrames" id=99]
+[ext_resource path="res://src/Effects/Materials/mat_chargeparticle.tres" type="Material" id=100]
+[ext_resource path="res://src/Effects/ShieldBreak/shieldbreak.res" type="SpriteFrames" id=101]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/GigaCrash/GigaCrash.tres" type="Resource" id=102]
+[ext_resource path="res://Axl_mod/Player/Scripts/WeaponBossAxl.gd" type="Script" id=103]
+[ext_resource path="res://src/Effects/Materials/wallkick_sprite.tres" type="Material" id=104]
+[ext_resource path="res://src/Sounds/FX - Subtank Charge.ogg" type="AudioStream" id=105]
+[ext_resource path="res://Axl_mod/HUD/HotSwapAxl.tscn" type="PackedScene" id=106]
+[ext_resource path="res://src/Actors/Player/Talk.gd" type="Script" id=107]
+[ext_resource path="res://src/Effects/Textures/hit_vfx.png" type="Texture" id=108]
+[ext_resource path="res://Axl_mod/Player/afterImages.gd" type="Script" id=109]
+[ext_resource path="res://src/Effects/Materials/mat_smokeparticle.tres" type="Material" id=110]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/RayGun/RayGun.tres" type="Resource" id=111]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/SpiralMagnum/SpiralMagnum.tres" type="Resource" id=112]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/SpiralMagnum/SpiralMagnum.tscn" type="PackedScene" id=113]
+[ext_resource path="res://Axl_mod/Player/Sprites/ice_gattling/ice_gattling_1.tres" type="SpriteFrames" id=114]
+[ext_resource path="res://Axl_mod/Player/Sprites/ice_gattling/ice_gattling_2.tres" type="SpriteFrames" id=115]
+[ext_resource path="res://Axl_mod/Player/Sprites/bound_blaster/bound_blaster.tres" type="SpriteFrames" id=116]
+[ext_resource path="res://Axl_mod/Player/Sprites/bound_blaster/bound_blaster_B.tres" type="SpriteFrames" id=117]
+[ext_resource path="res://Axl_mod/Player/Sprites/plasma_gun/plasma_gun.tres" type="SpriteFrames" id=118]
+[ext_resource path="res://Axl_mod/Player/Sprites/blast_launcher/blast_launcher_A.tres" type="SpriteFrames" id=119]
+[ext_resource path="res://Axl_mod/Player/Sprites/axl.tres" type="SpriteFrames" id=120]
+[ext_resource path="res://Axl_mod/Player/Scripts/SpecialFireAxl.gd" type="Script" id=121]
+[ext_resource path="res://Axl_mod/Player/Projectiles/Transform/Transform.gd" type="Script" id=122]
+[ext_resource path="res://Axl_mod/Player/Projectiles/Transform/Transform.tres" type="Resource" id=123]
+[ext_resource path="res://Axl_mod/Player/Projectiles/Transform/TransformIllusion.tscn" type="PackedScene" id=124]
+[ext_resource path="res://Axl_mod/testdialog.gd" type="Script" id=125]
+[ext_resource path="res://Zero_mod/DialogSystem/Dialogs/Stages/Secret3_Def_Dialogue.tres" type="Resource" id=126]
+[ext_resource path="res://Axl_mod/SFX/dodge.wav" type="AudioStream" id=127]
+[ext_resource path="res://Axl_mod/Player/Weapon_Special.gd" type="Script" id=128]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossSpecials/SpecialIllusion.tscn" type="PackedScene" id=129]
+[ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/BlackArrow/ShadowBoomer.tscn" type="PackedScene" id=130]
+<<<<<<< HEAD
+=======
+[ext_resource path="res://TagTeam_Mod/CharacterSwitchWarpOut.gd" type="Script" id=131]
+[ext_resource path="res://TagTeam_Mod/CharacterSwitchWarpIn.gd" type="Script" id=132]
+>>>>>>> source_private/main
+
+[sub_resource type="RectangleShape2D" id=32]
+extents = Vector2( 6.995, 7 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 7, 8 )
+
+[sub_resource type="AtlasTexture" id=43]
+atlas = ExtResource( 108 )
+region = Rect2( 64, 56, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=39]
+atlas = ExtResource( 108 )
+region = Rect2( 0, 0, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=40]
+atlas = ExtResource( 108 )
+region = Rect2( 64, 0, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=41]
+atlas = ExtResource( 108 )
+region = Rect2( 128, 0, 64, 56 )
+
+[sub_resource type="AtlasTexture" id=42]
+atlas = ExtResource( 108 )
+region = Rect2( 0, 56, 64, 56 )
+
+[sub_resource type="SpriteFrames" id=44]
+animations = [ {
+"frames": [ null, SubResource( 43 ), null, SubResource( 43 ), null, SubResource( 43 ), null ],
+"loop": false,
+"name": "back",
+"speed": 31.0
+}, {
+"frames": [ SubResource( 39 ), null, SubResource( 40 ), null, SubResource( 41 ), null, SubResource( 42 ), null, SubResource( 39 ), null, SubResource( 40 ), null, SubResource( 41 ), null, SubResource( 42 ), null ],
+"loop": false,
+"name": "sparks",
+"speed": 32.0
+} ]
+
+[sub_resource type="CanvasItemMaterial" id=31]
+particles_animation = true
+particles_anim_h_frames = 2
+particles_anim_v_frames = 2
+particles_anim_loop = false
+
+[sub_resource type="VisualShaderNodeScalarOp" id=105]
+default_input_values = [ 0, 0.0, 1, 2.0 ]
+operator = 3
+
+[sub_resource type="VisualShaderNodeColorUniform" id=107]
+uniform_name = "HairColor1"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=108]
+uniform_name = "HairColor2"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=109]
+uniform_name = "HairColor3"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=110]
+uniform_name = "YellowColor1"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=111]
+uniform_name = "YellowColor2"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=112]
+uniform_name = "RedColor1"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=113]
+uniform_name = "RedColor2"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=114]
+uniform_name = "R_HairColor1"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=115]
+uniform_name = "R_HairColor2"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=116]
+uniform_name = "R_HairColor3"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=117]
+uniform_name = "R_YellowColor1"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=118]
+uniform_name = "R_YellowColor2"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=119]
+uniform_name = "R_RedColor1"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=120]
+uniform_name = "R_RedColor2"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=121]
+uniform_name = "FlameColor1"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=122]
+uniform_name = "FlameColor2"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=123]
+uniform_name = "FlameColor3"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=124]
+uniform_name = "R_FlameColor1"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=125]
+uniform_name = "R_FlameColor2"
+
+[sub_resource type="VisualShaderNodeScalarFunc" id=37]
+function = 12
+
+[sub_resource type="VisualShaderNodeColorUniform" id=126]
+uniform_name = "R_FlameColor3"
+
+[sub_resource type="VisualShaderNodeScalarOp" id=127]
+operator = 2
+
+[sub_resource type="VisualShaderNodeScalarFunc" id=128]
+function = 29
+
+[sub_resource type="VisualShaderNodeScalarOp" id=129]
+default_input_values = [ 0, 0.0, 1, 0.3 ]
+operator = 1
+
+[sub_resource type="VisualShaderNodeScalarUniform" id=130]
+uniform_name = "Charge"
+
+[sub_resource type="VisualShaderNodeTexture" id=1]
+source = 2
+
+[sub_resource type="VisualShaderNodeIf" id=46]
+default_input_values = [ 0, 0.0, 1, 0.3, 2, 1e-05, 3, Vector3( 0, 0, 0 ), 4, Vector3( 1, 1, 1 ), 5, Vector3( 0, 0, 0 ) ]
+
+[sub_resource type="VisualShaderNodeScalarConstant" id=47]
+
+[sub_resource type="VisualShaderNodeScalarConstant" id=49]
+constant = 1.0
+
+[sub_resource type="VisualShaderNodeIf" id=51]
+default_input_values = [ 0, 0.0, 1, 0.5, 2, 1e-05, 3, Vector3( 0, 0, 0 ), 4, Vector3( 0, 0, 0 ), 5, Vector3( 0, 0, 0 ) ]
+
+[sub_resource type="VisualShaderNodeColorOp" id=52]
+operator = 2
+
+[sub_resource type="VisualShaderNodeColorUniform" id=53]
+uniform_name = "Color"
+
+[sub_resource type="VisualShaderNodeColorOp" id=54]
+operator = 3
+
+[sub_resource type="VisualShaderNodeScalarUniform" id=55]
+uniform_name = "Alpha"
+
+[sub_resource type="VisualShaderNodeScalarOp" id=56]
+operator = 2
+
+[sub_resource type="VisualShaderNodeScalarFunc" id=57]
+function = 1
+
+[sub_resource type="VisualShaderNodeScalarFunc" id=60]
+function = 29
+
+[sub_resource type="VisualShaderNodeInput" id=61]
+input_name = "time"
+
+[sub_resource type="VisualShaderNodeScalarOp" id=62]
+default_input_values = [ 0, 0.0, 1, 120.0 ]
+operator = 2
+
+[sub_resource type="VisualShaderNodeIf" id=63]
+default_input_values = [ 0, 0.0, 1, 1.0, 2, 1e-05, 3, Vector3( 0, 0, 0 ), 4, Vector3( 0, 0, 0 ), 5, Vector3( 0, 0, 0 ) ]
+
+[sub_resource type="VisualShaderNodeScalarOp" id=64]
+operator = 7
+
+[sub_resource type="VisualShaderNodeScalarConstant" id=65]
+constant = 0.5
+
+[sub_resource type="VisualShaderNodeExpression" id=67]
+size = Vector2( 1033.06, 1882.97 )
+expression = "vec3 current_color = texture(TEXTURE, UV).rgb;
+
+if (replace (current_color, crystal_color_1, crystal_replace_1, final_color, tolerance)){}
+else if (replace (current_color, crystal_color_2, crystal_replace_2, final_color, tolerance)){}
+else if (replace (current_color, crystal_color_3, crystal_replace_3, final_color, tolerance)){}
+
+else if (replace (current_color, main_color_1, replace_color_1, final_color, tolerance)){}
+else if (replace (current_color, main_color_2, replace_color_2, final_color, tolerance)){}
+else if (replace (current_color, main_color_3, replace_color_3, final_color, tolerance)){}
+else if (replace (current_color, main_color_4, replace_color_4, final_color, tolerance)){}
+else if (replace (current_color, main_color_5, replace_color_5, final_color, tolerance)){}
+else if (replace (current_color, main_color_6, replace_color_6, final_color, tolerance)){}
+
+else if (replace (current_color, hair_color_1, replace_hair_color_1, final_color, tolerance)){}
+else if (replace (current_color, hair_color_2, replace_hair_color_2, final_color, tolerance)){}
+else if (replace (current_color, hair_color_3, replace_hair_color_3, final_color, tolerance)){}
+
+else if (replace (current_color, yellow_color_1, replace_yellow_color_1, final_color, tolerance)){}
+else if (replace (current_color, yellow_color_2, replace_yellow_color_2, final_color, tolerance)){}
+
+else if (replace (current_color, red_color_1, replace_red_color_1, final_color, tolerance)){}
+else if (replace (current_color, red_color_2, replace_red_color_2, final_color, tolerance)){}
+
+else if (replace (current_color, flame_color_1, replace_flame_color_1, final_color, tolerance)){}
+else if (replace (current_color, flame_color_2, replace_flame_color_2, final_color, tolerance)){}
+else if (replace (current_color, flame_color_3, replace_flame_color_3, final_color, tolerance)){}
+
+else {final_color = current_color}"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=68]
+uniform_name = "MainColor1"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=69]
+uniform_name = "MainColor2"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=70]
+uniform_name = "MainColor3"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=71]
+uniform_name = "MainColor4"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=72]
+uniform_name = "MainColor5"
+
+[sub_resource type="VisualShaderNodeInput" id=131]
+input_name = "time"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=73]
+uniform_name = "MainColor6"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=74]
+uniform_name = "R_MainColor1"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=75]
+uniform_name = "R_MainColor2"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=76]
+uniform_name = "R_MainColor3"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=77]
+uniform_name = "R_MainColor4"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=78]
+uniform_name = "R_MainColor5"
+
+[sub_resource type="VisualShaderNodeScalarFunc" id=33]
+function = 1
+
+[sub_resource type="VisualShaderNodeColorUniform" id=79]
+uniform_name = "R_MainColor6"
+
+[sub_resource type="VisualShaderNodeGlobalExpression" id=80]
+size = Vector2( 1036.64, 317.838 )
+expression = "bool replace (vec3 color, vec3 main_color, vec3 replace_color, out vec3 output, float tol) 
+{	vec3 diff3 = color - main_color;
+	float m = max(max(abs(diff3.r), abs(diff3.g)), abs(diff3.b));
+	
+	if ((step(m, tol) == 1.0)){ 
+		color = mix(color, replace_color, step(m, tol));
+		output = color;
+		return true;
+	}
+	return false;
+}"
+
+[sub_resource type="VisualShaderNodeScalarUniform" id=81]
+uniform_name = "tolerance"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=82]
+uniform_name = "CrystalColor3"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=83]
+uniform_name = "R_CrystalColor1"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=84]
+uniform_name = "R_CrystalColor2"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=85]
+uniform_name = "R_CrystalColor3"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=86]
+uniform_name = "CrystalColor1"
+
+[sub_resource type="VisualShaderNodeColorUniform" id=87]
+uniform_name = "CrystalColor2"
+
+[sub_resource type="VisualShaderNodeInput" id=88]
+input_name = "time"
+
+[sub_resource type="VisualShaderNodeScalarFunc" id=89]
+function = 1
+
+[sub_resource type="VisualShaderNodeScalarOp" id=90]
+default_input_values = [ 0, 0.0, 1, 8.5 ]
+operator = 2
+
+[sub_resource type="VisualShaderNodeScalarUniform" id=92]
+uniform_name = "Alert"
+
+[sub_resource type="VisualShaderNodeScalarOp" id=93]
+operator = 2
+
+[sub_resource type="VisualShaderNodeVectorOp" id=94]
+operator = 2
+
+[sub_resource type="VisualShaderNodeVectorOp" id=95]
+operator = 2
+
+[sub_resource type="VisualShaderNodeVectorOp" id=96]
+operator = 2
+
+[sub_resource type="VisualShaderNodeScalarOp" id=35]
+default_input_values = [ 0, 0.0, 1, 42.0 ]
+operator = 2
+
+[sub_resource type="VisualShaderNodeScalarOp" id=97]
+default_input_values = [ 0, 0.0, 1, 1.5 ]
+operator = 2
+
+[sub_resource type="VisualShaderNodeIf" id=98]
+
+[sub_resource type="VisualShaderNodeScalarConstant" id=99]
+constant = 1.0
+
+[sub_resource type="VisualShaderNodeScalarOp" id=100]
+default_input_values = [ 0, 0.0, 1, 1.4 ]
+
+[sub_resource type="VisualShaderNodeScalarUniform" id=101]
+uniform_name = "Flash"
+
+[sub_resource type="VisualShaderNodeIf" id=102]
+default_input_values = [ 0, 0.0, 1, 0.5, 2, 1e-05, 3, Vector3( 0, 0, 0 ), 4, Vector3( 0, 0, 0 ), 5, Vector3( 0, 0, 0 ) ]
+
+[sub_resource type="VisualShaderNodeIf" id=103]
+default_input_values = [ 0, 0.0, 1, 0.5, 2, 1e-05, 3, Vector3( 0, 0, 0 ), 4, Vector3( 1, 1, 1 ), 5, Vector3( 0, 0, 0 ) ]
+
+[sub_resource type="VisualShaderNodeTexture" id=104]
+source = 2
+
+[sub_resource type="VisualShaderNodeScalarOp" id=106]
+default_input_values = [ 0, 0.0, 1, 1.0 ]
+
+[sub_resource type="VisualShaderNodeInput" id=20]
+input_name = "color"
+
+[sub_resource type="VisualShaderNodeInput" id=26]
+input_name = "uv"
+
+[sub_resource type="VisualShaderNodeInput" id=27]
+input_name = "vertex"
+
+[sub_resource type="VisualShaderNodeInput" id=28]
+input_name = "alpha"
+
+[sub_resource type="VisualShader" id=132]
+code = "shader_type canvas_item;
+uniform float Flash;
+uniform float Charge;
+uniform vec4 Color : hint_color;
+uniform vec4 MainColor1 : hint_color;
+uniform vec4 MainColor2 : hint_color;
+uniform vec4 MainColor3 : hint_color;
+uniform vec4 MainColor4 : hint_color;
+uniform vec4 MainColor5 : hint_color;
+uniform vec4 MainColor6 : hint_color;
+uniform vec4 R_MainColor1 : hint_color;
+uniform vec4 R_MainColor2 : hint_color;
+uniform vec4 R_MainColor3 : hint_color;
+uniform vec4 R_MainColor4 : hint_color;
+uniform vec4 R_MainColor5 : hint_color;
+uniform vec4 R_MainColor6 : hint_color;
+uniform vec4 CrystalColor1 : hint_color;
+uniform vec4 CrystalColor2 : hint_color;
+uniform vec4 CrystalColor3 : hint_color;
+uniform vec4 R_CrystalColor1 : hint_color;
+uniform float Alert;
+uniform vec4 R_CrystalColor2 : hint_color;
+uniform vec4 R_CrystalColor3 : hint_color;
+uniform float tolerance;
+uniform vec4 HairColor1 : hint_color;
+uniform vec4 HairColor2 : hint_color;
+uniform vec4 HairColor3 : hint_color;
+uniform vec4 YellowColor1 : hint_color;
+uniform vec4 YellowColor2 : hint_color;
+uniform vec4 RedColor1 : hint_color;
+uniform vec4 RedColor2 : hint_color;
+uniform vec4 R_HairColor1 : hint_color;
+uniform vec4 R_HairColor2 : hint_color;
+uniform vec4 R_HairColor3 : hint_color;
+uniform vec4 R_YellowColor1 : hint_color;
+uniform vec4 R_YellowColor2 : hint_color;
+uniform vec4 R_RedColor1 : hint_color;
+uniform vec4 R_RedColor2 : hint_color;
+uniform vec4 FlameColor1 : hint_color;
+uniform vec4 FlameColor2 : hint_color;
+uniform vec4 FlameColor3 : hint_color;
+uniform vec4 R_FlameColor1 : hint_color;
+uniform vec4 R_FlameColor2 : hint_color;
+uniform vec4 R_FlameColor3 : hint_color;
+uniform float Alpha;
+
+
+// GlobalExpression:0
+	bool replace (vec3 color, vec3 main_color, vec3 replace_color, out vec3 output, float tol) 
+	{	vec3 diff3 = color - main_color;
+		float m = max(max(abs(diff3.r), abs(diff3.g)), abs(diff3.b));
+		
+		if ((step(m, tol) == 1.0)){ 
+			color = mix(color, replace_color, step(m, tol));
+			output = color;
+			return true;
+		}
+		return false;
+	}
+
+void vertex() {
+// Output:0
+
+}
+
+void fragment() {
+// ScalarUniform:95
+	float n_out95p0 = Flash;
+
+// Input:6
+	float n_out6p0 = TIME;
+
+// ScalarOp:9
+	float n_in9p1 = 42.00000;
+	float n_out9p0 = n_out6p0 * n_in9p1;
+
+// ScalarFunc:7
+	float n_out7p0 = cos(n_out9p0);
+
+// ScalarFunc:12
+	float n_out12p0 = abs(n_out7p0);
+
+// ScalarOp:16
+	float n_in16p1 = 0.30000;
+	float n_out16p0 = n_out12p0 - n_in16p1;
+
+// ScalarFunc:15
+	float n_out15p0 = roundEven(n_out16p0);
+
+// ScalarUniform:17
+	float n_out17p0 = Charge;
+
+// ScalarOp:14
+	float n_out14p0 = n_out15p0 * n_out17p0;
+
+// ColorUniform:39
+	vec3 n_out39p0 = Color.rgb;
+	float n_out39p1 = Color.a;
+
+// ColorUniform:55
+	vec3 n_out55p0 = MainColor1.rgb;
+	float n_out55p1 = MainColor1.a;
+
+// ColorUniform:56
+	vec3 n_out56p0 = MainColor2.rgb;
+	float n_out56p1 = MainColor2.a;
+
+// ColorUniform:57
+	vec3 n_out57p0 = MainColor3.rgb;
+	float n_out57p1 = MainColor3.a;
+
+// ColorUniform:58
+	vec3 n_out58p0 = MainColor4.rgb;
+	float n_out58p1 = MainColor4.a;
+
+// ColorUniform:59
+	vec3 n_out59p0 = MainColor5.rgb;
+	float n_out59p1 = MainColor5.a;
+
+// ColorUniform:60
+	vec3 n_out60p0 = MainColor6.rgb;
+	float n_out60p1 = MainColor6.a;
+
+// ColorUniform:65
+	vec3 n_out65p0 = R_MainColor1.rgb;
+	float n_out65p1 = R_MainColor1.a;
+
+// ColorUniform:66
+	vec3 n_out66p0 = R_MainColor2.rgb;
+	float n_out66p1 = R_MainColor2.a;
+
+// ColorUniform:67
+	vec3 n_out67p0 = R_MainColor3.rgb;
+	float n_out67p1 = R_MainColor3.a;
+
+// ColorUniform:68
+	vec3 n_out68p0 = R_MainColor4.rgb;
+	float n_out68p1 = R_MainColor4.a;
+
+// ColorUniform:69
+	vec3 n_out69p0 = R_MainColor5.rgb;
+	float n_out69p1 = R_MainColor5.a;
+
+// ColorUniform:70
+	vec3 n_out70p0 = R_MainColor6.rgb;
+	float n_out70p1 = R_MainColor6.a;
+
+// ColorUniform:77
+	vec3 n_out77p0 = CrystalColor1.rgb;
+	float n_out77p1 = CrystalColor1.a;
+
+// ColorUniform:78
+	vec3 n_out78p0 = CrystalColor2.rgb;
+	float n_out78p1 = CrystalColor2.a;
+
+// ColorUniform:73
+	vec3 n_out73p0 = CrystalColor3.rgb;
+	float n_out73p1 = CrystalColor3.a;
+
+// ColorUniform:74
+	vec3 n_out74p0 = R_CrystalColor1.rgb;
+	float n_out74p1 = R_CrystalColor1.a;
+
+// ScalarUniform:85
+	float n_out85p0 = Alert;
+
+// Scalar:92
+	float n_out92p0 = 1.000000;
+
+// Input:79
+	float n_out79p0 = TIME;
+
+// ScalarOp:81
+	float n_in81p1 = 8.50000;
+	float n_out81p0 = n_out79p0 * n_in81p1;
+
+// ScalarFunc:80
+	float n_out80p0 = cos(n_out81p0);
+
+// ScalarOp:93
+	float n_in93p1 = 1.40000;
+	float n_out93p0 = n_out80p0 + n_in93p1;
+
+// ScalarOp:90
+	float n_in90p1 = 1.50000;
+	float n_out90p0 = n_out85p0 * n_in90p1;
+
+// ScalarOp:86
+	float n_out86p0 = n_out93p0 * n_out90p0;
+
+// If:91
+	float n_in91p1 = 0.00000;
+	float n_in91p2 = 0.00001;
+	vec3 n_out91p0;
+	if(abs(n_out85p0 - n_in91p1) < n_in91p2)
+	{
+		n_out91p0 = vec3(n_out92p0);
+	}
+	else if(n_out85p0 < n_in91p1)
+	{
+		n_out91p0 = vec3(n_out92p0);
+	}
+	else
+	{
+		n_out91p0 = vec3(n_out86p0);
+	}
+
+// VectorOp:87
+	vec3 n_out87p0 = n_out74p0 * n_out91p0;
+
+// ColorUniform:75
+	vec3 n_out75p0 = R_CrystalColor2.rgb;
+	float n_out75p1 = R_CrystalColor2.a;
+
+// VectorOp:88
+	vec3 n_out88p0 = n_out75p0 * n_out91p0;
+
+// ColorUniform:76
+	vec3 n_out76p0 = R_CrystalColor3.rgb;
+	float n_out76p1 = R_CrystalColor3.a;
+
+// VectorOp:89
+	vec3 n_out89p0 = n_out76p0 * n_out91p0;
+
+// ScalarUniform:72
+	float n_out72p0 = tolerance;
+
+// ColorUniform:101
+	vec3 n_out101p0 = HairColor1.rgb;
+	float n_out101p1 = HairColor1.a;
+
+// ColorUniform:102
+	vec3 n_out102p0 = HairColor2.rgb;
+	float n_out102p1 = HairColor2.a;
+
+// ColorUniform:103
+	vec3 n_out103p0 = HairColor3.rgb;
+	float n_out103p1 = HairColor3.a;
+
+// ColorUniform:104
+	vec3 n_out104p0 = YellowColor1.rgb;
+	float n_out104p1 = YellowColor1.a;
+
+// ColorUniform:105
+	vec3 n_out105p0 = YellowColor2.rgb;
+	float n_out105p1 = YellowColor2.a;
+
+// ColorUniform:106
+	vec3 n_out106p0 = RedColor1.rgb;
+	float n_out106p1 = RedColor1.a;
+
+// ColorUniform:107
+	vec3 n_out107p0 = RedColor2.rgb;
+	float n_out107p1 = RedColor2.a;
+
+// ColorUniform:108
+	vec3 n_out108p0 = R_HairColor1.rgb;
+	float n_out108p1 = R_HairColor1.a;
+
+// ColorUniform:109
+	vec3 n_out109p0 = R_HairColor2.rgb;
+	float n_out109p1 = R_HairColor2.a;
+
+// ColorUniform:110
+	vec3 n_out110p0 = R_HairColor3.rgb;
+	float n_out110p1 = R_HairColor3.a;
+
+// ColorUniform:111
+	vec3 n_out111p0 = R_YellowColor1.rgb;
+	float n_out111p1 = R_YellowColor1.a;
+
+// ColorUniform:112
+	vec3 n_out112p0 = R_YellowColor2.rgb;
+	float n_out112p1 = R_YellowColor2.a;
+
+// ColorUniform:113
+	vec3 n_out113p0 = R_RedColor1.rgb;
+	float n_out113p1 = R_RedColor1.a;
+
+// ColorUniform:114
+	vec3 n_out114p0 = R_RedColor2.rgb;
+	float n_out114p1 = R_RedColor2.a;
+
+// ColorUniform:115
+	vec3 n_out115p0 = FlameColor1.rgb;
+	float n_out115p1 = FlameColor1.a;
+
+// ColorUniform:116
+	vec3 n_out116p0 = FlameColor2.rgb;
+	float n_out116p1 = FlameColor2.a;
+
+// ColorUniform:117
+	vec3 n_out117p0 = FlameColor3.rgb;
+	float n_out117p1 = FlameColor3.a;
+
+// ColorUniform:118
+	vec3 n_out118p0 = R_FlameColor1.rgb;
+	float n_out118p1 = R_FlameColor1.a;
+
+// ColorUniform:119
+	vec3 n_out119p0 = R_FlameColor2.rgb;
+	float n_out119p1 = R_FlameColor2.a;
+
+// ColorUniform:120
+	vec3 n_out120p0 = R_FlameColor3.rgb;
+	float n_out120p1 = R_FlameColor3.a;
+
+// Expression:54
+	vec3 n_out54p0;
+	vec3 n_out54p1;
+	n_out54p0 = vec3(0.0, 0.0, 0.0);
+	n_out54p1 = vec3(0.0, 0.0, 0.0);
+	{
+		vec3 current_color = texture(TEXTURE, UV).rgb;
+		
+		if (replace (current_color, n_out77p0, n_out87p0, n_out54p0, n_out72p0)){}
+		else if (replace (current_color, n_out78p0, n_out88p0, n_out54p0, n_out72p0)){}
+		else if (replace (current_color, n_out73p0, n_out89p0, n_out54p0, n_out72p0)){}
+		
+		else if (replace (current_color, n_out55p0, n_out65p0, n_out54p0, n_out72p0)){}
+		else if (replace (current_color, n_out56p0, n_out66p0, n_out54p0, n_out72p0)){}
+		else if (replace (current_color, n_out57p0, n_out67p0, n_out54p0, n_out72p0)){}
+		else if (replace (current_color, n_out58p0, n_out68p0, n_out54p0, n_out72p0)){}
+		else if (replace (current_color, n_out59p0, n_out69p0, n_out54p0, n_out72p0)){}
+		else if (replace (current_color, n_out60p0, n_out70p0, n_out54p0, n_out72p0)){}
+		
+		else if (replace (current_color, n_out101p0, n_out108p0, n_out54p0, n_out72p0)){}
+		else if (replace (current_color, n_out102p0, n_out109p0, n_out54p0, n_out72p0)){}
+		else if (replace (current_color, n_out103p0, n_out110p0, n_out54p0, n_out72p0)){}
+		
+		else if (replace (current_color, n_out104p0, n_out111p0, n_out54p0, n_out72p0)){}
+		else if (replace (current_color, n_out105p0, n_out112p0, n_out54p0, n_out72p0)){}
+		
+		else if (replace (current_color, n_out106p0, n_out113p0, n_out54p0, n_out72p0)){}
+		else if (replace (current_color, n_out107p0, n_out114p0, n_out54p0, n_out72p0)){}
+		
+		else if (replace (current_color, n_out115p0, n_out118p0, n_out54p0, n_out72p0)){}
+		else if (replace (current_color, n_out116p0, n_out119p0, n_out54p0, n_out72p0)){}
+		else if (replace (current_color, n_out117p0, n_out120p0, n_out54p0, n_out72p0)){}
+		
+		else {n_out54p0 = current_color}
+	}
+
+// Scalar:34
+	float n_out34p0 = 1.000000;
+
+// Scalar:30
+	float n_out30p0 = 0.000000;
+
+// If:23
+	float n_in23p1 = 0.30000;
+	float n_in23p2 = 0.00001;
+	vec3 n_out23p0;
+	if(abs(dot(n_out54p0, vec3(0.333333, 0.333333, 0.333333)) - n_in23p1) < n_in23p2)
+	{
+		n_out23p0 = vec3(n_out34p0);
+	}
+	else if(dot(n_out54p0, vec3(0.333333, 0.333333, 0.333333)) < n_in23p1)
+	{
+		n_out23p0 = vec3(n_out34p0);
+	}
+	else
+	{
+		n_out23p0 = vec3(n_out30p0);
+	}
+
+// ColorOp:38
+	vec3 n_out38p0 = min(n_out39p0, n_out23p0);
+
+// ColorOp:40
+	vec3 n_out40p0 = max(n_out38p0, n_out54p0);
+
+// If:37
+	float n_in37p1 = 0.50000;
+	float n_in37p2 = 0.00001;
+	vec3 n_in37p3 = vec3(0.00000, 0.00000, 0.00000);
+	vec3 n_out37p0;
+	if(abs(n_out14p0 - n_in37p1) < n_in37p2)
+	{
+		n_out37p0 = n_in37p3;
+	}
+	else if(n_out14p0 < n_in37p1)
+	{
+		n_out37p0 = n_out54p0;
+	}
+	else
+	{
+		n_out37p0 = n_out40p0;
+	}
+
+// If:96
+	float n_in96p1 = 0.50000;
+	float n_in96p2 = 0.00001;
+	vec3 n_in96p3 = vec3(0.00000, 0.00000, 0.00000);
+	vec3 n_out96p0;
+	if(abs(n_out95p0 - n_in96p1) < n_in96p2)
+	{
+		n_out96p0 = n_in96p3;
+	}
+	else if(n_out95p0 < n_in96p1)
+	{
+		n_out96p0 = n_out37p0;
+	}
+	else
+	{
+		n_out96p0 = vec3(n_out95p0);
+	}
+
+// Texture:98
+	vec3 n_out98p0;
+	float n_out98p1;
+	{
+		vec4 _tex_read = texture(TEXTURE , UV.xy);
+		n_out98p0 = _tex_read.rgb;
+		n_out98p1 = _tex_read.a;
+	}
+
+// ScalarUniform:41
+	float n_out41p0 = Alpha;
+
+// Texture:2
+	vec3 n_out2p0;
+	float n_out2p1;
+	{
+		vec4 _tex_read = texture(TEXTURE , UV.xy);
+		n_out2p0 = _tex_read.rgb;
+		n_out2p1 = _tex_read.a;
+	}
+
+// Input:47
+	float n_out47p0 = TIME;
+
+// ScalarOp:48
+	float n_in48p1 = 120.00000;
+	float n_out48p0 = n_out47p0 * n_in48p1;
+
+// ScalarFunc:43
+	float n_out43p0 = cos(n_out48p0);
+
+// ScalarOp:99
+	float n_in99p1 = 1.00000;
+	float n_out99p0 = n_out43p0 + n_in99p1;
+
+// ScalarOp:100
+	float n_in100p1 = 2.00000;
+	float n_out100p0 = n_out99p0 / n_in100p1;
+
+// ScalarFunc:46
+	float n_out46p0 = roundEven(n_out100p0);
+
+// ScalarOp:42
+	float n_out42p0 = n_out2p1 * n_out46p0;
+
+// If:50
+	float n_in50p1 = 1.00000;
+	float n_in50p2 = 0.00001;
+	vec3 n_out50p0;
+	if(abs(n_out41p0 - n_in50p1) < n_in50p2)
+	{
+		n_out50p0 = vec3(n_out2p1);
+	}
+	else if(n_out41p0 < n_in50p1)
+	{
+		n_out50p0 = vec3(n_out42p0);
+	}
+	else
+	{
+		n_out50p0 = vec3(n_out2p1);
+	}
+
+// If:97
+	float n_in97p1 = 0.50000;
+	float n_in97p2 = 0.00001;
+	vec3 n_in97p3 = vec3(0.00000, 0.00000, 0.00000);
+	vec3 n_out97p0;
+	if(abs(n_out95p0 - n_in97p1) < n_in97p2)
+	{
+		n_out97p0 = n_in97p3;
+	}
+	else if(n_out95p0 < n_in97p1)
+	{
+		n_out97p0 = n_out50p0;
+	}
+	else
+	{
+		n_out97p0 = vec3(n_out98p1);
+	}
+
+// Output:0
+	COLOR.rgb = n_out96p0;
+	COLOR.a = dot(n_out97p0, vec3(0.333333, 0.333333, 0.333333));
+
+}
+
+void light() {
+// Output:0
+
+}
+"
+graph_offset = Vector2( -920.282, 58.6021 )
+mode = 1
+flags/light_only = false
+nodes/vertex/2/node = SubResource( 20 )
+nodes/vertex/2/position = Vector2( 0, 200 )
+nodes/vertex/3/node = SubResource( 26 )
+nodes/vertex/3/position = Vector2( 140, 180 )
+nodes/vertex/4/node = SubResource( 27 )
+nodes/vertex/4/position = Vector2( 220, 120 )
+nodes/vertex/5/node = SubResource( 28 )
+nodes/vertex/5/position = Vector2( 120, 300 )
+nodes/fragment/0/position = Vector2( 1780, 740 )
+nodes/fragment/2/node = SubResource( 1 )
+nodes/fragment/2/position = Vector2( 660, 1380 )
+nodes/fragment/6/node = SubResource( 131 )
+nodes/fragment/6/position = Vector2( -500, 300 )
+nodes/fragment/7/node = SubResource( 33 )
+nodes/fragment/7/position = Vector2( -180, 300 )
+nodes/fragment/9/node = SubResource( 35 )
+nodes/fragment/9/position = Vector2( -340, 300 )
+nodes/fragment/12/node = SubResource( 37 )
+nodes/fragment/12/position = Vector2( 0, 300 )
+nodes/fragment/14/node = SubResource( 127 )
+nodes/fragment/14/position = Vector2( 700, 300 )
+nodes/fragment/15/node = SubResource( 128 )
+nodes/fragment/15/position = Vector2( 360, 300 )
+nodes/fragment/16/node = SubResource( 129 )
+nodes/fragment/16/position = Vector2( 180, 300 )
+nodes/fragment/17/node = SubResource( 130 )
+nodes/fragment/17/position = Vector2( 360, 380 )
+nodes/fragment/23/node = SubResource( 46 )
+nodes/fragment/23/position = Vector2( -20, 580 )
+nodes/fragment/30/node = SubResource( 47 )
+nodes/fragment/30/position = Vector2( -220, 660 )
+nodes/fragment/34/node = SubResource( 49 )
+nodes/fragment/34/position = Vector2( -220, 580 )
+nodes/fragment/37/node = SubResource( 51 )
+nodes/fragment/37/position = Vector2( 1060, 900 )
+nodes/fragment/38/node = SubResource( 52 )
+nodes/fragment/38/position = Vector2( 200, 540 )
+nodes/fragment/39/node = SubResource( 53 )
+nodes/fragment/39/position = Vector2( -120, 440 )
+nodes/fragment/40/node = SubResource( 54 )
+nodes/fragment/40/position = Vector2( 400, 580 )
+nodes/fragment/41/node = SubResource( 55 )
+nodes/fragment/41/position = Vector2( 660, 1260 )
+nodes/fragment/42/node = SubResource( 56 )
+nodes/fragment/42/position = Vector2( 880, 1480 )
+nodes/fragment/43/node = SubResource( 57 )
+nodes/fragment/43/position = Vector2( 180, 1520 )
+nodes/fragment/46/node = SubResource( 60 )
+nodes/fragment/46/position = Vector2( 680, 1520 )
+nodes/fragment/47/node = SubResource( 61 )
+nodes/fragment/47/position = Vector2( -140, 1520 )
+nodes/fragment/48/node = SubResource( 62 )
+nodes/fragment/48/position = Vector2( 20, 1520 )
+nodes/fragment/50/node = SubResource( 63 )
+nodes/fragment/50/position = Vector2( 1060, 1260 )
+nodes/fragment/51/node = SubResource( 64 )
+nodes/fragment/51/position = Vector2( 1080, 1480 )
+nodes/fragment/52/node = SubResource( 65 )
+nodes/fragment/52/position = Vector2( 860, 1600 )
+nodes/fragment/54/node = SubResource( 67 )
+nodes/fragment/54/position = Vector2( -1400, 380 )
+nodes/fragment/54/size = Vector2( 1033.06, 1882.97 )
+nodes/fragment/54/input_ports = "0,1,main_color_1;1,1,main_color_2;2,1,main_color_3;3,1,main_color_4;4,1,main_color_5;5,1,main_color_6;6,1,replace_color_1;7,1,replace_color_2;8,1,replace_color_3;9,1,replace_color_4;10,1,replace_color_5;11,1,replace_color_6;12,1,crystal_color_1;13,1,crystal_color_2;14,1,crystal_color_3;15,1,crystal_replace_1;16,1,crystal_replace_2;17,1,crystal_replace_3;18,0,tolerance;19,1,hair_color_1;20,1,hair_color_2;21,1,hair_color_3;22,1,yellow_color_1;23,1,yellow_color_2;24,1,red_color_1;25,1,red_color_2;26,1,replace_hair_color_1;27,1,replace_hair_color_2;28,1,replace_hair_color_3;29,1,replace_yellow_color_1;30,1,replace_yellow_color_2;31,1,replace_red_color_1;32,1,replace_red_color_2;33,1,flame_color_1;34,1,flame_color_2;35,1,flame_color_3;36,1,replace_flame_color_1;37,1,replace_flame_color_2;38,1,replace_flame_color_3;"
+nodes/fragment/54/output_ports = "0,1,final_color;1,1,crystal_colors;"
+nodes/fragment/54/expression = "vec3 current_color = texture(TEXTURE, UV).rgb;
+
+if (replace (current_color, crystal_color_1, crystal_replace_1, final_color, tolerance)){}
+else if (replace (current_color, crystal_color_2, crystal_replace_2, final_color, tolerance)){}
+else if (replace (current_color, crystal_color_3, crystal_replace_3, final_color, tolerance)){}
+
+else if (replace (current_color, main_color_1, replace_color_1, final_color, tolerance)){}
+else if (replace (current_color, main_color_2, replace_color_2, final_color, tolerance)){}
+else if (replace (current_color, main_color_3, replace_color_3, final_color, tolerance)){}
+else if (replace (current_color, main_color_4, replace_color_4, final_color, tolerance)){}
+else if (replace (current_color, main_color_5, replace_color_5, final_color, tolerance)){}
+else if (replace (current_color, main_color_6, replace_color_6, final_color, tolerance)){}
+
+else if (replace (current_color, hair_color_1, replace_hair_color_1, final_color, tolerance)){}
+else if (replace (current_color, hair_color_2, replace_hair_color_2, final_color, tolerance)){}
+else if (replace (current_color, hair_color_3, replace_hair_color_3, final_color, tolerance)){}
+
+else if (replace (current_color, yellow_color_1, replace_yellow_color_1, final_color, tolerance)){}
+else if (replace (current_color, yellow_color_2, replace_yellow_color_2, final_color, tolerance)){}
+
+else if (replace (current_color, red_color_1, replace_red_color_1, final_color, tolerance)){}
+else if (replace (current_color, red_color_2, replace_red_color_2, final_color, tolerance)){}
+
+else if (replace (current_color, flame_color_1, replace_flame_color_1, final_color, tolerance)){}
+else if (replace (current_color, flame_color_2, replace_flame_color_2, final_color, tolerance)){}
+else if (replace (current_color, flame_color_3, replace_flame_color_3, final_color, tolerance)){}
+
+else {final_color = current_color}"
+nodes/fragment/55/node = SubResource( 68 )
+nodes/fragment/55/position = Vector2( -1920, 220 )
+nodes/fragment/56/node = SubResource( 69 )
+nodes/fragment/56/position = Vector2( -1920, 320 )
+nodes/fragment/57/node = SubResource( 70 )
+nodes/fragment/57/position = Vector2( -1920, 420 )
+nodes/fragment/58/node = SubResource( 71 )
+nodes/fragment/58/position = Vector2( -1920, 520 )
+nodes/fragment/59/node = SubResource( 72 )
+nodes/fragment/59/position = Vector2( -1920, 620 )
+nodes/fragment/60/node = SubResource( 73 )
+nodes/fragment/60/position = Vector2( -1920, 720 )
+nodes/fragment/65/node = SubResource( 74 )
+nodes/fragment/65/position = Vector2( -1920, 860 )
+nodes/fragment/66/node = SubResource( 75 )
+nodes/fragment/66/position = Vector2( -1920, 960 )
+nodes/fragment/67/node = SubResource( 76 )
+nodes/fragment/67/position = Vector2( -1920, 1060 )
+nodes/fragment/68/node = SubResource( 77 )
+nodes/fragment/68/position = Vector2( -1920, 1160 )
+nodes/fragment/69/node = SubResource( 78 )
+nodes/fragment/69/position = Vector2( -1920, 1260 )
+nodes/fragment/70/node = SubResource( 79 )
+nodes/fragment/70/position = Vector2( -1920, 1360 )
+nodes/fragment/71/node = SubResource( 80 )
+nodes/fragment/71/position = Vector2( -1260, 2260 )
+nodes/fragment/71/size = Vector2( 1036.64, 317.838 )
+nodes/fragment/71/input_ports = ""
+nodes/fragment/71/output_ports = ""
+nodes/fragment/71/expression = "bool replace (vec3 color, vec3 main_color, vec3 replace_color, out vec3 output, float tol) 
+{	vec3 diff3 = color - main_color;
+	float m = max(max(abs(diff3.r), abs(diff3.g)), abs(diff3.b));
+	
+	if ((step(m, tol) == 1.0)){ 
+		color = mix(color, replace_color, step(m, tol));
+		output = color;
+		return true;
+	}
+	return false;
+}"
+nodes/fragment/72/node = SubResource( 81 )
+nodes/fragment/72/position = Vector2( -1740, 2240 )
+nodes/fragment/73/node = SubResource( 82 )
+nodes/fragment/73/position = Vector2( -1920, 1700 )
+nodes/fragment/74/node = SubResource( 83 )
+nodes/fragment/74/position = Vector2( -2040, 1840 )
+nodes/fragment/75/node = SubResource( 84 )
+nodes/fragment/75/position = Vector2( -2040, 1960 )
+nodes/fragment/76/node = SubResource( 85 )
+nodes/fragment/76/position = Vector2( -2040, 2080 )
+nodes/fragment/77/node = SubResource( 86 )
+nodes/fragment/77/position = Vector2( -1920, 1500 )
+nodes/fragment/78/node = SubResource( 87 )
+nodes/fragment/78/position = Vector2( -1920, 1600 )
+nodes/fragment/79/node = SubResource( 88 )
+nodes/fragment/79/position = Vector2( -2960, 2380 )
+nodes/fragment/80/node = SubResource( 89 )
+nodes/fragment/80/position = Vector2( -2640, 2380 )
+nodes/fragment/81/node = SubResource( 90 )
+nodes/fragment/81/position = Vector2( -2800, 2360 )
+nodes/fragment/85/node = SubResource( 92 )
+nodes/fragment/85/position = Vector2( -2720, 2180 )
+nodes/fragment/86/node = SubResource( 93 )
+nodes/fragment/86/position = Vector2( -2140, 2300 )
+nodes/fragment/87/node = SubResource( 94 )
+nodes/fragment/87/position = Vector2( -1660, 1860 )
+nodes/fragment/88/node = SubResource( 95 )
+nodes/fragment/88/position = Vector2( -1660, 1980 )
+nodes/fragment/89/node = SubResource( 96 )
+nodes/fragment/89/position = Vector2( -1660, 2100 )
+nodes/fragment/90/node = SubResource( 97 )
+nodes/fragment/90/position = Vector2( -2380, 2260 )
+nodes/fragment/91/node = SubResource( 98 )
+nodes/fragment/91/position = Vector2( -1940, 2220 )
+nodes/fragment/92/node = SubResource( 99 )
+nodes/fragment/92/position = Vector2( -2160, 2420 )
+nodes/fragment/93/node = SubResource( 100 )
+nodes/fragment/93/position = Vector2( -2380, 2380 )
+nodes/fragment/95/node = SubResource( 101 )
+nodes/fragment/95/position = Vector2( 1060, 740 )
+nodes/fragment/96/node = SubResource( 102 )
+nodes/fragment/96/position = Vector2( 1500, 740 )
+nodes/fragment/97/node = SubResource( 103 )
+nodes/fragment/97/position = Vector2( 1480, 1040 )
+nodes/fragment/98/node = SubResource( 104 )
+nodes/fragment/98/position = Vector2( 1060, 1100 )
+nodes/fragment/99/node = SubResource( 106 )
+nodes/fragment/99/position = Vector2( 360, 1520 )
+nodes/fragment/100/node = SubResource( 105 )
+nodes/fragment/100/position = Vector2( 520, 1520 )
+nodes/fragment/101/node = SubResource( 107 )
+nodes/fragment/101/position = Vector2( -2400, 200 )
+nodes/fragment/102/node = SubResource( 108 )
+nodes/fragment/102/position = Vector2( -2400, 300 )
+nodes/fragment/103/node = SubResource( 109 )
+nodes/fragment/103/position = Vector2( -2400, 400 )
+nodes/fragment/104/node = SubResource( 110 )
+nodes/fragment/104/position = Vector2( -2400, 500 )
+nodes/fragment/105/node = SubResource( 111 )
+nodes/fragment/105/position = Vector2( -2400, 600 )
+nodes/fragment/106/node = SubResource( 112 )
+nodes/fragment/106/position = Vector2( -2400, 700 )
+nodes/fragment/107/node = SubResource( 113 )
+nodes/fragment/107/position = Vector2( -2400, 800 )
+nodes/fragment/108/node = SubResource( 114 )
+nodes/fragment/108/position = Vector2( -2400, 940 )
+nodes/fragment/109/node = SubResource( 115 )
+nodes/fragment/109/position = Vector2( -2400, 1040 )
+nodes/fragment/110/node = SubResource( 116 )
+nodes/fragment/110/position = Vector2( -2400, 1140 )
+nodes/fragment/111/node = SubResource( 117 )
+nodes/fragment/111/position = Vector2( -2400, 1240 )
+nodes/fragment/112/node = SubResource( 118 )
+nodes/fragment/112/position = Vector2( -2400, 1340 )
+nodes/fragment/113/node = SubResource( 119 )
+nodes/fragment/113/position = Vector2( -2400, 1440 )
+nodes/fragment/114/node = SubResource( 120 )
+nodes/fragment/114/position = Vector2( -2400, 1540 )
+nodes/fragment/115/node = SubResource( 121 )
+nodes/fragment/115/position = Vector2( -1460, 100 )
+nodes/fragment/116/node = SubResource( 122 )
+nodes/fragment/116/position = Vector2( -1200, 100 )
+nodes/fragment/117/node = SubResource( 123 )
+nodes/fragment/117/position = Vector2( -940, 100 )
+nodes/fragment/118/node = SubResource( 124 )
+nodes/fragment/118/position = Vector2( -1460, 220 )
+nodes/fragment/119/node = SubResource( 125 )
+nodes/fragment/119/position = Vector2( -1200, 220 )
+nodes/fragment/120/node = SubResource( 126 )
+nodes/fragment/120/position = Vector2( -940, 220 )
+nodes/fragment/connections = PoolIntArray( 6, 0, 9, 0, 7, 0, 12, 0, 12, 0, 16, 0, 16, 0, 15, 0, 9, 0, 7, 0, 15, 0, 14, 0, 23, 0, 38, 1, 17, 0, 14, 1, 34, 0, 23, 3, 34, 0, 23, 5, 30, 0, 23, 4, 38, 0, 40, 0, 2, 1, 42, 0, 14, 0, 37, 0, 47, 0, 48, 0, 48, 0, 43, 0, 46, 0, 42, 1, 41, 0, 50, 0, 42, 0, 51, 0, 52, 0, 51, 1, 2, 1, 50, 4, 2, 1, 50, 3, 42, 0, 50, 5, 55, 0, 54, 0, 56, 0, 54, 1, 57, 0, 54, 2, 58, 0, 54, 3, 59, 0, 54, 4, 60, 0, 54, 5, 65, 0, 54, 6, 66, 0, 54, 7, 67, 0, 54, 8, 68, 0, 54, 9, 69, 0, 54, 10, 70, 0, 54, 11, 54, 0, 23, 0, 54, 0, 40, 1, 39, 0, 38, 0, 72, 0, 54, 18, 77, 0, 54, 12, 78, 0, 54, 13, 73, 0, 54, 14, 79, 0, 81, 0, 81, 0, 80, 0, 74, 0, 87, 0, 75, 0, 88, 0, 76, 0, 89, 0, 87, 0, 54, 15, 88, 0, 54, 16, 89, 0, 54, 17, 40, 0, 37, 4, 85, 0, 90, 0, 90, 0, 86, 1, 85, 0, 91, 0, 92, 0, 91, 3, 92, 0, 91, 5, 86, 0, 91, 4, 91, 0, 89, 1, 91, 0, 88, 1, 91, 0, 87, 1, 54, 0, 37, 5, 80, 0, 93, 0, 93, 0, 86, 0, 95, 0, 96, 0, 95, 0, 96, 4, 37, 0, 96, 5, 96, 0, 0, 0, 95, 0, 97, 0, 50, 0, 97, 5, 97, 0, 0, 1, 98, 1, 97, 4, 43, 0, 99, 0, 99, 0, 100, 0, 100, 0, 46, 0, 101, 0, 54, 19, 102, 0, 54, 20, 103, 0, 54, 21, 104, 0, 54, 22, 105, 0, 54, 23, 106, 0, 54, 24, 107, 0, 54, 25, 108, 0, 54, 26, 109, 0, 54, 27, 110, 0, 54, 28, 111, 0, 54, 29, 112, 0, 54, 30, 113, 0, 54, 31, 114, 0, 54, 32, 115, 0, 54, 33, 116, 0, 54, 34, 117, 0, 54, 35, 118, 0, 54, 36, 119, 0, 54, 37, 120, 0, 54, 38, 6, 0, 9, 0, 7, 0, 12, 0, 12, 0, 16, 0, 16, 0, 15, 0, 9, 0, 7, 0, 15, 0, 14, 0, 23, 0, 38, 1, 17, 0, 14, 1, 34, 0, 23, 3, 34, 0, 23, 5, 30, 0, 23, 4, 38, 0, 40, 0, 2, 1, 42, 0, 14, 0, 37, 0, 47, 0, 48, 0, 48, 0, 43, 0, 46, 0, 42, 1, 41, 0, 50, 0, 42, 0, 51, 0, 52, 0, 51, 1, 2, 1, 50, 4, 2, 1, 50, 3, 42, 0, 50, 5, 55, 0, 54, 0, 56, 0, 54, 1, 57, 0, 54, 2, 58, 0, 54, 3, 59, 0, 54, 4, 60, 0, 54, 5, 65, 0, 54, 6, 66, 0, 54, 7, 67, 0, 54, 8, 68, 0, 54, 9, 69, 0, 54, 10, 70, 0, 54, 11, 54, 0, 23, 0, 54, 0, 40, 1, 39, 0, 38, 0, 72, 0, 54, 18, 77, 0, 54, 12, 78, 0, 54, 13, 73, 0, 54, 14, 79, 0, 81, 0, 81, 0, 80, 0, 74, 0, 87, 0, 75, 0, 88, 0, 76, 0, 89, 0, 87, 0, 54, 15, 88, 0, 54, 16, 89, 0, 54, 17, 40, 0, 37, 4, 85, 0, 90, 0, 90, 0, 86, 1, 85, 0, 91, 0, 92, 0, 91, 3, 92, 0, 91, 5, 86, 0, 91, 4, 91, 0, 89, 1, 91, 0, 88, 1, 91, 0, 87, 1, 54, 0, 37, 5, 80, 0, 93, 0, 93, 0, 86, 0, 95, 0, 96, 0, 95, 0, 96, 4, 37, 0, 96, 5, 96, 0, 0, 0, 95, 0, 97, 0, 50, 0, 97, 5, 97, 0, 0, 1, 98, 1, 97, 4, 43, 0, 99, 0, 99, 0, 100, 0, 100, 0, 46, 0, 101, 0, 54, 19, 102, 0, 54, 20, 103, 0, 54, 21, 104, 0, 54, 22, 105, 0, 54, 23, 106, 0, 54, 24, 107, 0, 54, 25, 108, 0, 54, 26, 109, 0, 54, 27, 110, 0, 54, 28, 111, 0, 54, 29, 112, 0, 54, 30, 113, 0, 54, 31, 114, 0, 54, 32, 115, 0, 54, 33, 116, 0, 54, 34, 117, 0, 54, 35, 118, 0, 54, 36, 119, 0, 54, 37, 120, 0, 54, 38 )
+
+[sub_resource type="ShaderMaterial" id=133]
+resource_local_to_scene = true
+shader = SubResource( 132 )
+shader_param/Flash = 0.0
+shader_param/Charge = 0.0
+shader_param/Color = Color( 0, 0, 0, 0 )
+shader_param/MainColor1 = Color( 0.317647, 0.407843, 0.54902, 1 )
+shader_param/MainColor2 = Color( 0.25098, 0.286275, 0.392157, 1 )
+shader_param/MainColor3 = Color( 0.176471, 0.2, 0.266667, 1 )
+shader_param/MainColor4 = Color( 0.690196, 0.690196, 0.690196, 1 )
+shader_param/MainColor5 = Color( 0.501961, 0.470588, 0.501961, 1 )
+shader_param/MainColor6 = Color( 0.376471, 0.34902, 0.376471, 1 )
+shader_param/R_MainColor1 = Color( 0.317647, 0.407843, 0.54902, 1 )
+shader_param/R_MainColor2 = Color( 0.25098, 0.286275, 0.392157, 1 )
+shader_param/R_MainColor3 = Color( 0.176471, 0.2, 0.266667, 1 )
+shader_param/R_MainColor4 = Color( 0.690196, 0.690196, 0.690196, 1 )
+shader_param/R_MainColor5 = Color( 0.501961, 0.470588, 0.501961, 1 )
+shader_param/R_MainColor6 = Color( 0.376471, 0.34902, 0.376471, 1 )
+shader_param/CrystalColor1 = Color( 0.972549, 0.972549, 0.972549, 1 )
+shader_param/CrystalColor2 = Color( 0.309804, 0.556863, 0.933333, 1 )
+shader_param/CrystalColor3 = Color( 0.0705882, 0.345098, 0.760784, 1 )
+shader_param/R_CrystalColor1 = Color( 0.972549, 0.972549, 0.972549, 1 )
+shader_param/Alert = 0.0
+shader_param/R_CrystalColor2 = Color( 0.309804, 0.556863, 0.933333, 1 )
+shader_param/R_CrystalColor3 = Color( 0.0705882, 0.345098, 0.760784, 1 )
+shader_param/tolerance = 0.05
+shader_param/HairColor1 = Color( 1, 0.388235, 0.0941176, 1 )
+shader_param/HairColor2 = Color( 0.807843, 0.223529, 0.0627451, 1 )
+shader_param/HairColor3 = Color( 0.54902, 0.160784, 0, 1 )
+shader_param/YellowColor1 = Color( 0.972549, 0.847059, 0.12549, 1 )
+shader_param/YellowColor2 = Color( 0.796078, 0.537255, 0.145098, 1 )
+shader_param/RedColor1 = Color( 0.858824, 0.231373, 0.239216, 1 )
+shader_param/RedColor2 = Color( 0.54902, 0.101961, 0.121569, 1 )
+shader_param/R_HairColor1 = Color( 1, 0.388235, 0.0941176, 1 )
+shader_param/R_HairColor2 = Color( 0.807843, 0.223529, 0.0627451, 1 )
+shader_param/R_HairColor3 = Color( 0.54902, 0.160784, 0, 1 )
+shader_param/R_YellowColor1 = Color( 0.972549, 0.847059, 0.12549, 1 )
+shader_param/R_YellowColor2 = Color( 0.796078, 0.537255, 0.145098, 1 )
+shader_param/R_RedColor1 = Color( 0.858824, 0.231373, 0.239216, 1 )
+shader_param/R_RedColor2 = Color( 0.54902, 0.101961, 0.121569, 1 )
+shader_param/FlameColor1 = Color( 0.937255, 0.4, 0.286275, 1 )
+shader_param/FlameColor2 = Color( 0.780392, 0.172549, 0.137255, 1 )
+shader_param/FlameColor3 = Color( 0.623529, 0.133333, 0.109804, 1 )
+shader_param/R_FlameColor1 = Color( 0.937255, 0.4, 0.286275, 1 )
+shader_param/R_FlameColor2 = Color( 0.780392, 0.172549, 0.137255, 1 )
+shader_param/R_FlameColor3 = Color( 0.623529, 0.133333, 0.109804, 1 )
+shader_param/Alpha = 1.0
+
+[node name="Axl" type="KinematicBody2D" groups=["Player"]]
+z_index = 2
+z_as_relative = false
+collision_layer = 8192
+collision_mask = 1073743617
+script = ExtResource( 2 )
+max_health = 16.0
+
+[node name="Armor" type="Node2D" parent="."]
+pause_mode = 2
+
+[node name="offset manager" type="Node2D" parent="."]
+script = ExtResource( 46 )
+
+[node name="CrushCheck" type="Node2D" parent="."]
+script = ExtResource( 87 )
+ride_ability = NodePath("../Ride")
+
+[node name="death_up" type="RayCast2D" parent="CrushCheck"]
+modulate = Color( 0.172549, 1, 0, 1 )
+z_index = 11
+z_as_relative = false
+enabled = true
+cast_to = Vector2( 0, 15 )
+collision_mask = 257
+
+[node name="death_down" type="RayCast2D" parent="CrushCheck"]
+modulate = Color( 0.172549, 1, 0, 1 )
+z_index = 11
+z_as_relative = false
+enabled = true
+cast_to = Vector2( 0, -15 )
+collision_mask = 257
+
+[node name="death_right" type="RayCast2D" parent="CrushCheck"]
+modulate = Color( 0.172549, 1, 0, 1 )
+position = Vector2( 0, -8 )
+z_index = 11
+z_as_relative = false
+enabled = true
+cast_to = Vector2( 7, 0 )
+collision_mask = 257
+
+[node name="death_left" type="RayCast2D" parent="CrushCheck"]
+modulate = Color( 0.172549, 1, 0, 1 )
+position = Vector2( 0, -8 )
+z_index = 11
+z_as_relative = false
+enabled = true
+cast_to = Vector2( -7, 0 )
+collision_mask = 257
+
+[node name="death_right2" type="RayCast2D" parent="CrushCheck"]
+modulate = Color( 0.172549, 1, 0, 1 )
+position = Vector2( 0, 8 )
+z_index = 11
+z_as_relative = false
+enabled = true
+cast_to = Vector2( 7, 0 )
+collision_mask = 257
+
+[node name="death_left2" type="RayCast2D" parent="CrushCheck"]
+modulate = Color( 0.172549, 1, 0, 1 )
+position = Vector2( 0, 8 )
+z_index = 11
+z_as_relative = false
+enabled = true
+cast_to = Vector2( -7, 0 )
+collision_mask = 257
+
+[node name="Subtanks" type="Node" parent="."]
+pause_mode = 2
+script = ExtResource( 50 )
+
+[node name="Subtank 1" parent="Subtanks" instance=ExtResource( 44 )]
+subtank = ExtResource( 62 )
+
+[node name="Subtank 2" parent="Subtanks" instance=ExtResource( 44 )]
+subtank = ExtResource( 69 )
+
+[node name="Subtank 3" parent="Subtanks" instance=ExtResource( 44 )]
+subtank = ExtResource( 65 )
+
+[node name="Subtank 4" parent="Subtanks" instance=ExtResource( 44 )]
+subtank = ExtResource( 70 )
+
+[node name="animatedSprite2" type="AnimatedSprite" parent="."]
+visible = false
+position = Vector2( 0, -4 )
+frames = ExtResource( 114 )
+__meta__ = {
+"_aseprite_wizard_config_": {
+"layer": "",
+"o_ex_p": "",
+"o_folder": "",
+"o_name": "",
+"only_visible": false,
+"op_exp": true,
+"slice": "",
+"source": ""
+}
+}
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+material = ExtResource( 47 )
+position = Vector2( 0, -4 )
+z_index = 5
+frames = ExtResource( 120 )
+animation = "victory"
+frame = 20
+playing = true
+
+[node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="animatedSprite"]
+visible = false
+position = Vector2( 0, 3.99 )
+scale = Vector2( 0.6, 1.6 )
+
+[node name="HoverEffect" type="AnimatedSprite" parent="animatedSprite"]
+visible = false
+frames = ExtResource( 51 )
+animation = "hover"
+frame = 3
+
+[node name="Dash Smoke Particles" type="Particles2D" parent="animatedSprite"]
+material = ExtResource( 110 )
+position = Vector2( -10, 17.99 )
+z_index = 1
+emitting = false
+amount = 11
+lifetime = 0.75
+local_coords = false
+process_material = ExtResource( 80 )
+texture = ExtResource( 30 )
+
+[node name="particle_disabler" type="Node" parent="animatedSprite/Dash Smoke Particles"]
+script = ExtResource( 98 )
+
+[node name="WallSlide Particles" type="Particles2D" parent="animatedSprite"]
+material = ExtResource( 110 )
+position = Vector2( -14, 10.99 )
+z_index = 1
+emitting = false
+amount = 6
+lifetime = 0.55
+local_coords = false
+process_material = ExtResource( 83 )
+texture = ExtResource( 30 )
+
+[node name="particle_disabler" type="Node" parent="animatedSprite/WallSlide Particles"]
+script = ExtResource( 98 )
+
+[node name="WallJump Particle" type="Particles2D" parent="animatedSprite"]
+material = ExtResource( 104 )
+position = Vector2( 14, 17 )
+z_index = 1
+emitting = false
+amount = 1
+lifetime = 0.03
+one_shot = true
+local_coords = false
+process_material = ExtResource( 81 )
+texture = ExtResource( 29 )
+
+[node name="ChargingParticle" type="Particles2D" parent="animatedSprite"]
+pause_mode = 2
+visible = false
+material = ExtResource( 100 )
+position = Vector2( 0, 3.99 )
+z_index = 4
+amount = 1
+lifetime = 0.3
+process_material = ExtResource( 84 )
+texture = ExtResource( 32 )
+
+[node name="ChargedParticle" type="Particles2D" parent="animatedSprite"]
+pause_mode = 2
+visible = false
+material = ExtResource( 100 )
+position = Vector2( 0, 3.99 )
+z_index = 4
+amount = 1
+lifetime = 0.3
+process_material = ExtResource( 85 )
+texture = ExtResource( 33 )
+
+[node name="SuperChargeParticle" type="Particles2D" parent="animatedSprite"]
+pause_mode = 2
+visible = false
+material = ExtResource( 100 )
+position = Vector2( 0, 3.99 )
+z_index = 4
+amount = 1
+lifetime = 0.3
+process_material = ExtResource( 82 )
+texture = ExtResource( 33 )
+
+[node name="Talk" type="Node" parent="animatedSprite"]
+script = ExtResource( 107 )
+_animatedSprite = NodePath("..")
+
+[node name="afterImages" type="Node" parent="animatedSprite"]
+script = ExtResource( 109 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = ExtResource( 26 )
+
+[node name="Enemy Collision Detector" type="KinematicBody2D" parent="." groups=["Player"]]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource( 28 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Enemy Collision Detector"]
+modulate = Color( 1, 0.913725, 0, 1 )
+position = Vector2( 0, -8 )
+shape = SubResource( 32 )
+
+[node name="DashShape" type="CollisionShape2D" parent="Enemy Collision Detector"]
+modulate = Color( 0.756863, 0, 1, 1 )
+position = Vector2( 0, 7 )
+shape = SubResource( 4 )
+
+[node name="_raycasts" type="Node2D" parent="."]
+visible = false
+
+[node name="Wallcheck Right" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 2, -15 )
+enabled = true
+cast_to = Vector2( 6, 0 )
+collision_mask = 1537
+
+[node name="Wallcheck Right2" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 2, 0 )
+enabled = true
+cast_to = Vector2( 6, 0 )
+collision_mask = 1537
+
+[node name="Wallcheck Right3" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 2, 14.95 )
+enabled = true
+cast_to = Vector2( 6, 0 )
+collision_mask = 1537
+
+[node name="Wallcheck Left" type="RayCast2D" parent="_raycasts"]
+position = Vector2( -2, -15 )
+enabled = true
+cast_to = Vector2( -6, 0 )
+collision_mask = 1537
+
+[node name="Wallcheck Left2" type="RayCast2D" parent="_raycasts"]
+position = Vector2( -2, 0 )
+enabled = true
+exclude_parent = false
+cast_to = Vector2( -6, 0 )
+collision_mask = 1537
+
+[node name="Wallcheck Left3" type="RayCast2D" parent="_raycasts"]
+position = Vector2( -2, 14.95 )
+enabled = true
+cast_to = Vector2( -6, 0 )
+collision_mask = 1537
+
+[node name="WallJumpCast Right" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 2, -14 )
+enabled = true
+cast_to = Vector2( 13, 0 )
+collision_mask = 1537
+
+[node name="WallJumpCast Right2" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 2, 0 )
+enabled = true
+cast_to = Vector2( 13, 0 )
+collision_mask = 1537
+
+[node name="WallJumpCast Right3" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 2, 15 )
+enabled = true
+cast_to = Vector2( 13, 0 )
+collision_mask = 1537
+
+[node name="WallJumpCast Left" type="RayCast2D" parent="_raycasts"]
+position = Vector2( -2, -14 )
+enabled = true
+cast_to = Vector2( -13, 0 )
+collision_mask = 1537
+
+[node name="WallJumpCast Left2" type="RayCast2D" parent="_raycasts"]
+position = Vector2( -2, 0 )
+enabled = true
+cast_to = Vector2( -13, 0 )
+collision_mask = 1537
+
+[node name="WallJumpCast Left3" type="RayCast2D" parent="_raycasts"]
+position = Vector2( -2, 15 )
+enabled = true
+cast_to = Vector2( -13, 0 )
+collision_mask = 1537
+
+[node name="Groundcheck" type="RayCast2D" parent="_raycasts"]
+position = Vector2( 0, 15 )
+enabled = true
+cast_to = Vector2( 0, 8 )
+
+[node name="_crush_raycasts" type="Node2D" parent="."]
+visible = false
+
+[node name="Shot Position" type="Node2D" parent="."]
+position = Vector2( 27, -7 )
+
+[node name="WeaponChanger" type="Node2D" parent="."]
+script = ExtResource( 8 )
+active = true
+
+[node name="HotSwap" parent="WeaponChanger" instance=ExtResource( 106 )]
+
+[node name="Intro" type="Node2D" parent="."]
+pause_mode = 2
+script = ExtResource( 10 )
+__meta__ = {
+"_editor_description_": ""
+}
+conflicting_moves = [ "Finish" ]
+actions = [ "Event" ]
+animation = "beam"
+sound = ExtResource( 23 )
+start_event = "intro_x"
+global_event = true
+force_start = true
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer2D" parent="Intro"]
+volume_db = -14.0
+max_distance = 600.0
+bus = "SFX"
+
+[node name="audioStreamPlayer2" type="AudioStreamPlayer2D" parent="Intro"]
+stream = ExtResource( 58 )
+volume_db = -9.0
+pitch_scale = 1.19
+max_distance = 600.0
+bus = "SFX"
+
+[node name="Death" type="Node2D" parent="."]
+pause_mode = 2
+script = ExtResource( 38 )
+actions = [ "Event" ]
+animation = "damage"
+sound = ExtResource( 39 )
+
+[node name="X Death Particles" parent="Death" instance=ExtResource( 40 )]
+z_index = 15
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer2D" parent="Death"]
+volume_db = -10.0
+bus = "SFX"
+
+[node name="background_light" type="Sprite" parent="Death"]
+visible = false
+material = ExtResource( 52 )
+position = Vector2( 5.99998, 7.49999 )
+scale = Vector2( 100, 40 )
+z_index = 100
+z_as_relative = false
+texture = ExtResource( 41 )
+
+[node name="Forced" type="Node2D" parent="."]
+script = ExtResource( 36 )
+conflicting_moves = [ "Damage", "Death", "Forced", "Ride" ]
+actions = [ "Event" ]
+start_event = "force_movement"
+force_start = true
+
+[node name="WeaponStasis" type="Node2D" parent="."]
+script = ExtResource( 75 )
+conflicting_moves = [ "Damage", "Death", "Forced", "Ride" ]
+actions = [ "Event" ]
+start_event = "weapon_stasis"
+
+[node name="Ride" type="Node2D" parent="."]
+script = ExtResource( 42 )
+actions = [ "Event" ]
+
+[node name="LifeSteal" parent="." instance=ExtResource( 59 )]
+debug_logs = false
+first_decay = 1.5
+lifesteal_decay = 0.65
+minimum_time_between_heals = 0.33
+
+[node name="Damage" type="Node2D" parent="."]
+script = ExtResource( 15 )
+conflicting_moves = [ "Death", "Ride" ]
+actions = [ "Event" ]
+animation = "damage"
+sound = ExtResource( 16 )
+horizontal_velocity = 45.0
+jump_velocity = 190.0
+invulnerability_time = 1.75
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="Damage"]
+pause_mode = 2
+bus = "SFX"
+
+[node name="sparks" type="AnimatedSprite" parent="Damage"]
+position = Vector2( 0, -8 )
+z_index = 5
+frames = SubResource( 44 )
+animation = "sparks"
+frame = 15
+playing = true
+
+[node name="back" type="AnimatedSprite" parent="Damage"]
+visible = false
+position = Vector2( 0, -8 )
+frames = SubResource( 44 )
+animation = "back"
+frame = 6
+playing = true
+
+[node name="Shot" type="Node2D" parent="."]
+script = ExtResource( 22 )
+__meta__ = {
+"_editor_description_": ""
+}
+conflicting_moves = [ "Death", "WeaponStasis", "Damage", "Ride", "Nothing", "Dash", "AirDash", "Dodge", "Special", "AltFire" ]
+actions = [ "fire" ]
+default_arm_point_duration = 0.1
+
+[node name="Pistol" parent="Shot" instance=ExtResource( 49 )]
+shots = [ ExtResource( 21 ) ]
+max_charged_shots_alive = 16
+max_ammo = 0.0
+shoot_delay = 0.1
+sprite_delay = 4.0
+bullet_speed = 450.0
+projectile_damage_to_weakness = 3.0
+_sprites_weapon = ExtResource( 120 )
+_sprites_weapon_B = ExtResource( 92 )
+
+[node name="RayGun" parent="Shot" instance=ExtResource( 49 )]
+script = ExtResource( 103 )
+active = false
+shots = [ ExtResource( 74 ) ]
+shoot_delay = 0.05
+bullet_speed = 250.0
+projectile_damage = 0.5
+projectile_damage_to_bosses = 1.5
+projectile_damage_to_weakness = 15.0
+weapon = ExtResource( 111 )
+_sprites_weapon = ExtResource( 12 )
+_sprites_weapon_B = ExtResource( 12 )
+
+[node name="SpiralMagnum" parent="Shot" instance=ExtResource( 49 )]
+script = ExtResource( 103 )
+active = false
+shots = [ ExtResource( 113 ) ]
+max_shots_alive = 1
+max_charged_shots_alive = 1
+shoot_delay = 0.3
+bullet_speed = 350.0
+projectile_damage = 7.5
+projectile_damage_to_bosses = 8.0
+projectile_damage_to_weakness = 15.0
+weapon = ExtResource( 112 )
+_sprites_weapon = ExtResource( 71 )
+_sprites_weapon_B = ExtResource( 79 )
+
+[node name="BlackArrow" parent="Shot" instance=ExtResource( 49 )]
+script = ExtResource( 103 )
+active = false
+shots = [ ExtResource( 94 ) ]
+shoot_delay = 0.25
+bullet_speed = 350.0
+projectile_damage = 2.0
+projectile_damage_to_bosses = 1.5
+projectile_damage_to_weakness = 12.5
+weapon = ExtResource( 93 )
+_sprites_weapon = ExtResource( 99 )
+_sprites_weapon_B = ExtResource( 99 )
+
+[node name="PlasmaGun" parent="Shot" instance=ExtResource( 49 )]
+script = ExtResource( 103 )
+active = false
+shots = [ ExtResource( 76 ) ]
+shoot_delay = 0.32
+bullet_speed = 50.0
+projectile_damage = 2.5
+projectile_damage_to_weakness = 15.0
+weapon = ExtResource( 73 )
+_sprites_weapon = ExtResource( 118 )
+_sprites_weapon_B = ExtResource( 118 )
+
+[node name="BlastLauncher" parent="Shot" instance=ExtResource( 49 )]
+script = ExtResource( 103 )
+active = false
+shots = [ ExtResource( 88 ) ]
+max_shots_alive = 3
+max_charged_shots_alive = 3
+shoot_delay = 0.4
+sprite_delay = 7.5
+projectile_damage = 4.0
+projectile_damage_to_bosses = 2.5
+projectile_damage_to_weakness = 15.0
+weapon = ExtResource( 25 )
+_sprites_weapon = ExtResource( 119 )
+_sprites_weapon_B = ExtResource( 90 )
+
+[node name="BoundBlaster" parent="Shot" instance=ExtResource( 49 )]
+script = ExtResource( 103 )
+active = false
+shots = [ ExtResource( 61 ) ]
+max_shots_alive = 8
+max_charged_shots_alive = 8
+shoot_delay = 0.2
+bullet_speed = 420.0
+projectile_damage = 2.0
+projectile_damage_to_weakness = 15.0
+weapon = ExtResource( 27 )
+_sprites_weapon = ExtResource( 116 )
+_sprites_weapon_B = ExtResource( 117 )
+
+[node name="IceGattling" parent="Shot" instance=ExtResource( 49 )]
+script = ExtResource( 103 )
+active = false
+shots = [ ExtResource( 78 ) ]
+shoot_delay = 0.05
+bullet_speed = 400.0
+projectile_damage = 0.25
+projectile_damage_to_weakness = 15.0
+weapon = ExtResource( 77 )
+_sprites_weapon = ExtResource( 114 )
+_sprites_weapon_B = ExtResource( 115 )
+
+[node name="FlameBurner" parent="Shot" instance=ExtResource( 49 )]
+script = ExtResource( 103 )
+active = false
+shots = [ ExtResource( 89 ) ]
+shoot_delay = 0.05
+bullet_speed = 200.0
+projectile_damage = 1.5
+projectile_damage_to_weakness = 15.0
+weapon = ExtResource( 60 )
+_sprites_weapon = ExtResource( 56 )
+_sprites_weapon_B = ExtResource( 56 )
+
+[node name="Transform" type="Node2D" parent="Shot"]
+script = ExtResource( 122 )
+active = false
+shots = [ ExtResource( 124 ) ]
+weapon = ExtResource( 123 )
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="Shot"]
+pause_mode = 2
+volume_db = -10.0
+bus = "SFX"
+
+[node name="charge" type="AudioStreamPlayer" parent="Shot"]
+stream = ExtResource( 105 )
+volume_db = -8.0
+pitch_scale = 0.94
+bus = "SFX"
+
+[node name="AltFire" type="Node2D" parent="."]
+script = ExtResource( 24 )
+__meta__ = {
+"_editor_description_": ""
+}
+conflicting_moves = [ "Death", "WeaponStasis", "Damage", "Ride", "Nothing", "Dash", "AirDash", "Dodge", "Special", "Shot" ]
+actions = [ "alt_fire" ]
+normal_sprites = ExtResource( 120 )
+arm_pointing_sprites = ExtResource( 92 )
+default_arm_point_duration = 0.1
+
+[node name="Alternate Pistol" parent="AltFire" instance=ExtResource( 43 )]
+script = ExtResource( 54 )
+active = false
+chargeable_without_ammo = false
+shots = [ ExtResource( 57 ) ]
+max_shots_alive = 1
+max_charged_shots_alive = 1
+max_ammo = 0.0
+shoot_delay = 0.3
+sprite_delay = 5.0
+bullet_speed = 300.0
+projectile_damage = 1.0
+projectile_damage_to_bosses = 1.0
+projectile_damage_to_weakness = 1.0
+weapon = null
+_sprites_weapon = ExtResource( 120 )
+_sprites_weapon_B = ExtResource( 92 )
+
+[node name="Alternate RayGun" parent="AltFire" instance=ExtResource( 49 )]
+script = ExtResource( 103 )
+active = false
+shots = [ ExtResource( 74 ) ]
+max_shots_alive = 1
+shoot_delay = 0.05
+bullet_speed = 250.0
+weapon = ExtResource( 111 )
+_sprites_weapon = ExtResource( 12 )
+_sprites_weapon_B = ExtResource( 12 )
+
+[node name="Alternate SpiralMagnum" parent="AltFire" instance=ExtResource( 49 )]
+script = ExtResource( 103 )
+active = false
+shots = [ ExtResource( 113 ) ]
+max_shots_alive = 1
+max_charged_shots_alive = 1
+shoot_delay = 0.3
+bullet_speed = 350.0
+projectile_damage = 7.5
+projectile_damage_to_bosses = 8.0
+projectile_damage_to_weakness = 15.0
+weapon = ExtResource( 112 )
+_sprites_weapon = ExtResource( 71 )
+_sprites_weapon_B = ExtResource( 79 )
+
+[node name="Alternate BlackArrow" parent="AltFire" instance=ExtResource( 49 )]
+script = ExtResource( 103 )
+active = false
+shots = [ ExtResource( 130 ) ]
+max_shots_alive = 5
+ammo_per_shot = 1.0
+shoot_delay = 0.25
+bullet_speed = 350.0
+projectile_damage = 4.0
+projectile_damage_to_bosses = 3.0
+projectile_damage_to_weakness = 15.0
+weapon = ExtResource( 93 )
+_sprites_weapon = ExtResource( 99 )
+_sprites_weapon_B = ExtResource( 99 )
+
+[node name="Alternate PlasmaGun" parent="AltFire" instance=ExtResource( 49 )]
+script = ExtResource( 103 )
+active = false
+shots = [ ExtResource( 76 ) ]
+shoot_delay = 0.32
+bullet_speed = 50.0
+weapon = ExtResource( 73 )
+_sprites_weapon = ExtResource( 118 )
+_sprites_weapon_B = ExtResource( 118 )
+
+[node name="Alternate BlastLauncher" parent="AltFire" instance=ExtResource( 49 )]
+script = ExtResource( 103 )
+active = false
+shots = [ ExtResource( 88 ) ]
+max_shots_alive = 9
+max_charged_shots_alive = 9
+ammo_per_shot = 2.0
+shoot_delay = 0.5
+bullet_speed = 400.0
+weapon = ExtResource( 25 )
+_sprites_weapon = ExtResource( 119 )
+_sprites_weapon_B = ExtResource( 90 )
+
+[node name="Alternate BoundBlaster" parent="AltFire" instance=ExtResource( 49 )]
+script = ExtResource( 103 )
+active = false
+shots = [ ExtResource( 61 ) ]
+max_shots_alive = 3
+max_charged_shots_alive = 3
+shoot_delay = 0.2
+bullet_speed = 420.0
+weapon = ExtResource( 27 )
+_sprites_weapon = ExtResource( 116 )
+_sprites_weapon_B = ExtResource( 117 )
+
+[node name="Alternate IceGattling" parent="AltFire" instance=ExtResource( 49 )]
+script = ExtResource( 103 )
+active = false
+shots = [ ExtResource( 78 ) ]
+shoot_delay = 0.05
+sprite_delay = 2.0
+bullet_speed = 400.0
+weapon = ExtResource( 77 )
+_sprites_weapon = ExtResource( 114 )
+_sprites_weapon_B = ExtResource( 115 )
+
+[node name="Alternate FlameBurner" parent="AltFire" instance=ExtResource( 49 )]
+script = ExtResource( 103 )
+active = false
+shots = [ ExtResource( 89 ) ]
+shoot_delay = 0.05
+bullet_speed = 200.0
+weapon = ExtResource( 60 )
+_sprites_weapon = ExtResource( 56 )
+_sprites_weapon_B = ExtResource( 56 )
+
+[node name="Special" type="Node2D" parent="."]
+script = ExtResource( 121 )
+__meta__ = {
+"_editor_description_": ""
+}
+conflicting_moves = [ "Death", "WeaponStasis", "Damage", "Ride", "Dash", "AirDash", "Dodge", "Shot", "AltFire" ]
+actions = [ "select_special" ]
+
+[node name="RayGun Special" type="Node2D" parent="Special"]
+script = ExtResource( 128 )
+shots = [ ExtResource( 129 ) ]
+max_ammo = 64.0
+ammo_per_shot = 64.0
+shoot_delay = 0.05
+boss_animation = "sunflower"
+
+[node name="IceGattling Special" type="Node2D" parent="Special"]
+script = ExtResource( 128 )
+shots = [ ExtResource( 129 ) ]
+max_ammo = 64.0
+ammo_per_shot = 64.0
+shoot_delay = 0.05
+boss_animation = "yeti"
+animation_time = 2.5
+
+[node name="BoundBlaster Special" type="Node2D" parent="Special"]
+script = ExtResource( 128 )
+shots = [ ExtResource( 129 ) ]
+max_ammo = 44.0
+ammo_per_shot = 44.0
+shoot_delay = 0.05
+boss_animation = "trilobyte"
+animation_time = 0.5
+
+[node name="BlastLauncher Special" type="Node2D" parent="Special"]
+script = ExtResource( 128 )
+shots = [ ExtResource( 129 ) ]
+max_ammo = 40.0
+ammo_per_shot = 40.0
+shoot_delay = 0.05
+boss_animation = "panda"
+animation_time = 1.0
+
+[node name="PlasmaGun Special" type="Node2D" parent="Special"]
+script = ExtResource( 128 )
+shots = [ ExtResource( 129 ) ]
+max_ammo = 36.0
+ammo_per_shot = 36.0
+shoot_delay = 0.05
+boss_animation = "manowar"
+animation_time = 1.0
+
+[node name="SpiralMagnum Special" type="Node2D" parent="Special"]
+script = ExtResource( 128 )
+shots = [ ExtResource( 129 ) ]
+ammo_per_shot = 32.0
+shoot_delay = 0.05
+boss_animation = "antonion"
+animation_time = 1.0
+
+[node name="BlackArrow Special" type="Node2D" parent="Special"]
+script = ExtResource( 128 )
+shots = [ ExtResource( 129 ) ]
+max_ammo = 56.0
+ammo_per_shot = 56.0
+shoot_delay = 0.05
+boss_animation = "mantis"
+animation_time = 1.0
+
+[node name="FlameBurner Special" type="Node2D" parent="Special"]
+script = ExtResource( 128 )
+shots = [ ExtResource( 129 ) ]
+ammo_per_shot = 32.0
+shoot_delay = 0.05
+boss_animation = "rooster"
+animation_time = 1.0
+
+[node name="GigaCrash" type="Node2D" parent="Special"]
+script = ExtResource( 95 )
+__meta__ = {
+"_editor_description_": ""
+}
+shots = [ ExtResource( 96 ) ]
+max_shots_alive = 1
+max_charged_shots_alive = 1
+max_ammo = 64.0
+ammo_per_shot = 64.0
+sprite_delay = 100.0
+bullet_speed = 0.0
+recharge_rate = 2.0
+weapon = ExtResource( 102 )
+
+[node name="break_vfx" type="AnimatedSprite" parent="Special/GigaCrash"]
+position = Vector2( -1, 3 )
+z_index = 25
+frames = ExtResource( 101 )
+frame = 9
+playing = true
+
+[node name="DashWallJump" type="Node2D" parent="."]
+script = ExtResource( 20 )
+conflicting_moves = [ "DashWallJump", "WallJump", "AirDash", "Dodge" ]
+actions = [ "jump" ]
+animation = "walljump"
+sound = ExtResource( 3 )
+horizontal_velocity = 210.0
+leeway_time = 0.0
+minimum_upwards_time = 0.235
+start_delay = 0.116
+move_away_duration = 0.134
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="DashWallJump"]
+pause_mode = 2
+stream = ExtResource( 72 )
+bus = "SFX"
+
+[node name="WallJump" type="Node2D" parent="."]
+script = ExtResource( 9 )
+conflicting_moves = [ "WallJump", "DashWallJump", "AirDash", "Dodge" ]
+actions = [ "jump" ]
+animation = "walljump"
+sound = ExtResource( 3 )
+shot_pos_adjust = Vector2( 4, 0 )
+leeway_time = 0.0
+minimum_upwards_time = 0.235
+start_delay = 0.116
+move_away_duration = 0.15
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="WallJump"]
+pause_mode = 2
+bus = "SFX"
+
+[node name="AirDash" type="Node2D" parent="."]
+script = ExtResource( 7 )
+conflicting_moves = [ "DashWallJump", "WallJump", "WallSlide", "DashJump", "AirDash", "AirJump", "Dodge" ]
+actions = [ "dash" ]
+animation = "dash"
+sound = ExtResource( 6 )
+horizontal_velocity = 210.0
+dash_duration = 0.475
+leeway = 0.0
+shot_pos_adjust = Vector2( 14, 4 )
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="AirDash"]
+pause_mode = 2
+volume_db = -0.676
+bus = "SFX"
+
+[node name="dash_particle" type="Sprite" parent="AirDash"]
+visible = false
+position = Vector2( -16, 4 )
+z_index = 45
+texture = ExtResource( 34 )
+hframes = 3
+vframes = 2
+script = ExtResource( 35 )
+animation_speed = 32.0
+one_shot = true
+
+[node name="disabler" type="Node" parent="AirDash/dash_particle"]
+script = ExtResource( 97 )
+make_invisible = true
+undo_on_rotation_end = false
+
+[node name="duringImage" type="AnimatedSprite" parent="AirDash"]
+visible = false
+modulate = Color( 0, 0.65098, 0.776471, 0.552941 )
+material = ExtResource( 63 )
+position = Vector2( 0, -4 )
+z_index = 4
+frames = ExtResource( 1 )
+animation = "dash"
+frame = 15
+playing = true
+
+[node name="particles2D" type="Particles2D" parent="AirDash"]
+pause_mode = 1
+material = SubResource( 31 )
+position = Vector2( 0, -1 )
+z_index = 4
+emitting = false
+amount = 5
+lifetime = 0.35
+local_coords = false
+process_material = ExtResource( 86 )
+texture = ExtResource( 64 )
+
+[node name="disabler" type="Node" parent="AirDash/particles2D"]
+script = ExtResource( 97 )
+fade_out = true
+
+[node name="label" type="Label" parent="AirDash"]
+visible = false
+margin_left = -8.0
+margin_top = -32.0
+margin_right = 32.0
+margin_bottom = -18.0
+text = "3w"
+
+[node name="WallSlide" type="Node2D" parent="."]
+script = ExtResource( 11 )
+conflicting_moves = [ "WallJump", "DashWallJump", "Walk", "dodge" ]
+actions = [ "move_right", "move_left" ]
+animation = "slide"
+sound = ExtResource( 13 )
+horizontal_velocity = 0.0
+jump_velocity = 90.0
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="WallSlide"]
+pause_mode = 2
+bus = "SFX"
+
+[node name="DashJump" type="Node2D" parent="."]
+script = ExtResource( 17 )
+conflicting_moves = [ "WallSlide", "WallJump", "DashWallJump", "AirJump", "AirDash", "Dodge" ]
+actions = [ "jump" ]
+animation = "jump"
+sound = ExtResource( 3 )
+horizontal_velocity = 210.0
+shot_pos_adjust = Vector2( 4, 0 )
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="DashJump"]
+pause_mode = 2
+bus = "SFX"
+
+[node name="Jump" type="Node2D" parent="."]
+script = ExtResource( 4 )
+conflicting_moves = [ "DashJump", "WallSlide", "AirDash", "WallJump", "DashWallJump", "AirJump", "Dodge", "Shot", "AltFire" ]
+actions = [ "jump" ]
+animation = "jump"
+sound = ExtResource( 3 )
+shot_pos_adjust = Vector2( 4, 0 )
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="Jump"]
+pause_mode = 2
+bus = "SFX"
+
+[node name="Hover" type="Node2D" parent="."]
+script = ExtResource( 45 )
+__meta__ = {
+"_editor_description_": ""
+}
+conflicting_moves = [ "WallSlide", "AirDash", "Dodge" ]
+actions = [ "jump" ]
+animation = "hover"
+shot_pos_adjust = Vector2( 4, 0 )
+max_jump_time = 2.0
+leeway_time = 0.0
+fullspeed_proportion = 0.3
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="Hover"]
+pause_mode = 2
+stream = ExtResource( 53 )
+volume_db = -4.172
+bus = "SFX"
+
+[node name="Dash" type="Node2D" parent="."]
+script = ExtResource( 5 )
+conflicting_moves = [ "Jump", "DashJump", "WallJump", "WallSlide", "AirDash", "Dodge" ]
+actions = [ "dash" ]
+animation = "dash"
+sound = ExtResource( 6 )
+horizontal_velocity = 210.0
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="Dash"]
+pause_mode = 2
+volume_db = -0.676
+bus = "SFX"
+
+[node name="dash_particle" type="Sprite" parent="Dash"]
+visible = false
+position = Vector2( -22, 0 )
+z_index = 45
+texture = ExtResource( 31 )
+hframes = 3
+vframes = 2
+script = ExtResource( 35 )
+animation_speed = 24.0
+one_shot = true
+
+[node name="disabler" type="Node" parent="Dash/dash_particle"]
+script = ExtResource( 97 )
+make_invisible = true
+undo_on_rotation_end = false
+
+[node name="duringImage" type="AnimatedSprite" parent="Dash"]
+visible = false
+modulate = Color( 0, 0.65098, 0.776471, 0.552941 )
+material = ExtResource( 63 )
+position = Vector2( 0, -4 )
+z_index = 4
+frames = ExtResource( 1 )
+animation = "dash"
+frame = 15
+playing = true
+
+[node name="particles2D" type="Particles2D" parent="Dash"]
+material = SubResource( 31 )
+position = Vector2( 0, -1 )
+z_index = 4
+emitting = false
+amount = 5
+lifetime = 0.35
+local_coords = false
+process_material = ExtResource( 86 )
+texture = ExtResource( 64 )
+
+[node name="disabler" type="Node" parent="Dash/particles2D"]
+script = ExtResource( 97 )
+fade_out = true
+
+[node name="Dodge" type="Node2D" parent="."]
+script = ExtResource( 91 )
+conflicting_moves = [ "DashWallJump", "AirDash", "WallSlide", "DashJump", "Jump", "AirJump", "Fall", "Idle" ]
+actions = [ "move_down", "dash" ]
+animation = "dodge"
+sound = ExtResource( 127 )
+horizontal_velocity = 210.0
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="Dodge"]
+pause_mode = 2
+volume_db = -6.0
+bus = "SFX"
+
+[node name="dash_particle" type="Sprite" parent="Dodge"]
+visible = false
+position = Vector2( -22, 0 )
+z_index = 45
+texture = ExtResource( 31 )
+hframes = 3
+vframes = 2
+script = ExtResource( 35 )
+animation_speed = 24.0
+one_shot = true
+
+[node name="disabler" type="Node" parent="Dodge/dash_particle"]
+script = ExtResource( 97 )
+make_invisible = true
+undo_on_rotation_end = false
+
+[node name="duringImage" type="AnimatedSprite" parent="Dodge"]
+visible = false
+material = SubResource( 133 )
+position = Vector2( 0, -4 )
+z_index = 4
+frames = ExtResource( 120 )
+animation = "dodge"
+frame = 7
+playing = true
+
+[node name="particles2D" type="Particles2D" parent="Dodge"]
+pause_mode = 1
+material = SubResource( 31 )
+position = Vector2( 0, -1 )
+z_index = 4
+emitting = false
+amount = 5
+lifetime = 0.35
+local_coords = false
+process_material = ExtResource( 86 )
+texture = ExtResource( 64 )
+
+[node name="disabler" type="Node" parent="Dodge/particles2D"]
+script = ExtResource( 97 )
+fade_out = true
+
+[node name="Walk" type="Node2D" parent="."]
+script = ExtResource( 48 )
+conflicting_moves = [ "Dash", "Jump", "WallJump", "DashJump", "Fall", "Dodge" ]
+actions = [ "move_right", "move_left" ]
+animation = "walk"
+
+[node name="Fall" parent="." instance=ExtResource( 18 )]
+script = ExtResource( 19 )
+
+[node name="Idle" parent="." instance=ExtResource( 14 )]
+
+[node name="JumpDamage" parent="." instance=ExtResource( 55 )]
+
+[node name="Finish" type="Node2D" parent="."]
+pause_mode = 2
+script = ExtResource( 66 )
+__meta__ = {
+"_editor_description_": ""
+}
+actions = [ "Event" ]
+animation = "idle"
+start_event = "stage_clear"
+global_event = true
+force_start = true
+beam_speed = 640.0
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer2D" parent="Finish"]
+stream = ExtResource( 68 )
+volume_db = -8.0
+max_distance = 600.0
+bus = "SFX"
+
+[node name="audioStreamPlayer2" type="AudioStreamPlayer2D" parent="Finish"]
+stream = ExtResource( 67 )
+volume_db = -6.555
+pitch_scale = 1.19
+max_distance = 600.0
+bus = "SFX"
+
+[node name="ShotDirection" type="Node2D" parent="."]
+script = ExtResource( 37 )
+
+[node name="label" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+
+[node name="lowjumpcast" type="Label" parent="."]
+visible = false
+margin_left = -53.0
+margin_top = 2.0
+margin_right = -13.0
+margin_bottom = 16.0
+text = "x"
+
+[node name="node" type="Node" parent="."]
+script = ExtResource( 125 )
+dialog_tree = ExtResource( 126 )
+
+<<<<<<< HEAD
+=======
+[node name="CharSwitchWarpOut" type="Node2D" parent="."]
+pause_mode = 2
+script = ExtResource( 131 )
+actions = [ "Event" ]
+start_event = "character_switch_out"
+force_start = true
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer2D" parent="CharSwitchWarpOut"]
+stream = ExtResource( 67 )
+volume_db = -6.555
+pitch_scale = 1.19
+max_distance = 600.0
+bus = "SFX"
+
+[node name="CharSwitchWarpIn" type="Node2D" parent="."]
+script = ExtResource( 132 )
+actions = [ "Event" ]
+animation = "beam"
+start_event = "character_switch_in"
+force_start = true
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer2D" parent="CharSwitchWarpIn"]
+stream = ExtResource( 67 )
+volume_db = -6.555
+pitch_scale = 1.19
+max_distance = 600.0
+bus = "SFX"
+
+>>>>>>> source_private/main
+[connection signal="at_max_hp" from="." to="Damage" method="set_death_protection"]
+[connection signal="zero_health" from="." to="animatedSprite/afterImages" method="deactivate"]
+[connection signal="max_subtank_used" from="Subtanks" to="Damage" method="set_death_protection"]

@@ -19,7 +19,7 @@
 [ext_resource path="res://src/WeaponGet/WpnGetImage.gd" type="Script" id=17]
 [ext_resource path="res://src/Sounds/OST - Weapon Get.ogg" type="AudioStream" id=18]
 [ext_resource path="res://src/Effects/Materials/TextColorSwap.tres" type="Material" id=19]
-[ext_resource path="res://src/Fonts/x8bitmapfontfinal.fnt" type="BitmapFont" id=20]
+[ext_resource path="res://src/Fonts/X8bitmapfont.fnt" type="BitmapFont" id=20]
 [ext_resource path="res://src/DialogSystem/font_colors/Neutral.png" type="Texture" id=21]
 [ext_resource path="res://src/WeaponGet/sprites/wpnget_bar.png" type="Texture" id=22]
 [ext_resource path="res://src/WeaponGet/ArmorPart.gd" type="Script" id=23]

@@ -46,7 +46,7 @@
 [ext_resource path="res://src/StageSelect/Icon.tres" type="SpriteFrames" id=44]
 [ext_resource path="res://Axl_mod/StageSelect/NoahsPark2.tres" type="Resource" id=45]
 [ext_resource path="res://src/StageSelect/ss_previewborder.png" type="Texture" id=46]
-[ext_resource path="res://src/Fonts/x8bitmapfontfinal.fnt" type="BitmapFont" id=47]
+[ext_resource path="res://src/Fonts/X8bitmapfont.fnt" type="BitmapFont" id=47]
 [ext_resource path="res://src/Effects/Materials/TextColorSwap.tres" type="Material" id=48]
 [ext_resource path="res://src/StageSelect/StageDescription.gd" type="Script" id=49]
 [ext_resource path="res://src/DialogSystem/font_colors/Neutral.png" type="Texture" id=50]
@@ -62,7 +62,7 @@
 [ext_resource path="res://Axl_mod/StageSelect/StageButtonSmall.gd" type="Script" id=60]
 [ext_resource path="res://Axl_mod/StageSelect/selectable_crab_dim.png" type="Texture" id=61]
 [ext_resource path="res://System/IGT/StageSelect/StageSelect_Timer.tscn" type="PackedScene" id=62]
-[ext_resource path="res://src/Fonts/xclassicfontfinal.fnt" type="BitmapFont" id=63]
+[ext_resource path="res://src/Fonts/Xclassicfont.fnt" type="BitmapFont" id=63]
 [ext_resource path="res://System/SFX/window_open.ogg" type="AudioStream" id=64]
 [ext_resource path="res://System/SFX/open_option.ogg" type="AudioStream" id=65]
 [ext_resource path="res://src/Levels/IGTimer.tscn" type="PackedScene" id=66]
@@ -678,13 +678,13 @@ color = Color( 0, 0, 0, 1 )
 position = Vector2( 199, -139 )
 z_index = -50
 frames = SubResource( 38 )
-frame = 6
+frame = 8
 playing = true
 
 [node name="pointer" type="AnimatedSprite" parent="map"]
 position = Vector2( 0, 322 )
 frames = SubResource( 16 )
-frame = 2
+frame = 4
 playing = true
 script = ExtResource( 16 )
 button_sprites = NodePath("../../button_sprites")
@@ -793,7 +793,6 @@ frames = ExtResource( 19 )
 
 [node name="cursor" parent="button_sprites/JacobElevator" index="0"]
 animation = "long"
-frame = 2
 
 [node name="Gateway" parent="button_sprites" instance=ExtResource( 22 )]
 position = Vector2( 343, 112 )
@@ -801,7 +800,6 @@ frames = ExtResource( 34 )
 
 [node name="cursor" parent="button_sprites/Gateway" index="0"]
 animation = "long"
-frame = 2
 
 [node name="on_stage_select" type="Node" parent="."]
 script = ExtResource( 51 )

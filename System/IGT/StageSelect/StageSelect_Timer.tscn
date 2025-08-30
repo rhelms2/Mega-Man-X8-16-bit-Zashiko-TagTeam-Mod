@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://src/Fonts/x8bitmapfontfinal.fnt" type="BitmapFont" id=1]
+[ext_resource path="res://src/Fonts/X8bitmapfont.fnt" type="BitmapFont" id=1]
 [ext_resource path="res://System/IGT/StageSelect/IGT_Display.gd" type="Script" id=2]
 [ext_resource path="res://System/IGT/StageSelect/IGT_Background.gd" type="Script" id=3]
 [ext_resource path="res://src/Fonts/X8bitmapfont_0.png" type="Texture" id=4]

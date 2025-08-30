@@ -1,5 +1,4 @@
 extends Node2D
-class_name FlamableBarrier
 
 onready var collision: CollisionShape2D = $staticBody2D / collisionShape2D
 onready var explosion: Particles2D = $"Explosion Particles"

@@ -41,7 +41,7 @@ signal disabled
 
 
 func set_values_for_axl() -> void :
-	if CharacterManager.player_character == "Axl":
+	if CharacterManager.current_player_character == "Axl":
 		s_time_limit = 40
 		s_ranking = 100.0
 		a_ranking = 70.0
@@ -61,11 +61,11 @@ func set_correct_paths() -> void :
 	
 	visual = get_player_combo_label_section()
 	visual_ranking = get_node_or_null("../../StateCamera/VisualRanking")
-	if CharacterManager.player_character == "Axl":
+	if CharacterManager.current_player_character == "Axl":
 		call_deferred("set_values_for_axl")
 
 func get_player_combo_section():
-	match CharacterManager.player_character:
+	match CharacterManager.current_player_character:
 		"X":
 			return get_node_or_null("../../X")
 		"Axl":
@@ -76,7 +76,7 @@ func get_player_combo_section():
 			return get_node_or_null("../../X")
 	
 func get_player_combo_label_section():
-	match CharacterManager.player_character:
+	match CharacterManager.current_player_character:
 		"X":
 			return get_node_or_null("../../X/combo_label")
 		"Axl":

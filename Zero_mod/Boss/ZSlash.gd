@@ -6,7 +6,7 @@ var activated: bool = false
 func _ready() -> void :
 	CharacterManager.set_zero_normal_colors(animated_sprite)
 	CharacterManager.set_saber_green(animated_sprite)
-	if CharacterManager.player_character == "Zero" and not CharacterManager.black_zero_armor:
+	if CharacterManager.current_player_character == "Zero" and not CharacterManager.black_zero_armor:
 		CharacterManager.set_black_zero_colors(animated_sprite)
 		CharacterManager.set_saber_purple(animated_sprite)
 	animated_sprite.frame = 0

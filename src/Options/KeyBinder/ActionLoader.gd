@@ -6,17 +6,18 @@ onready var main: CanvasLayer = $"../../.."
 onready var exit: TextureButton = $"../../exit"
 
 var configurable = {
-	"move_left": "LEFT_ACT", 
+	"move_left": tr("LEFT_ACT"), 
 	"move_right": "RIGHT_ACT", 
 	"move_up": "UP_ACT", 
 	"move_down": "DOWN_ACT", 
 	"fire": "SHOT_ACT", 
 	"alt_fire": "SHOT2_ACT", 
 	"jump": "JUMP_ACT", 
-	"dash": "DASH_ACT", 
+	"dash": "DASH_ACT",
+	"char_switch": "Change Player",  
 	"select_special": "ARMORABILITY_ACT", 
 	"weapon_select_left": "PREV_ACT", 
-	"weapon_select_right": "NEXT_ACT", 
+	"weapon_select_right": "NEXT_ACT",
 	"reset_weapon": "WPNRESET_ACT", 
 	
 	"analog_left": "WPNLEFT_ACT", 

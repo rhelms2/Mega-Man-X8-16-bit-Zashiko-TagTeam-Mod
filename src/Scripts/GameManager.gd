@@ -5,6 +5,8 @@ var version: String = "1.0.0.4"
 var current_demo: String = ""
 
 var player: Character
+var inactive_player: Character
+var team: Array = []
 var camera: Camera2D
 var state: String = "Normal"
 var bikes: Array = []
@@ -125,8 +127,14 @@ func on_level_start():
 	last_player_position = Vector2.ZERO
 	player = null
 	bikes.clear()
+	
+	# TeamMod stuff
+	if CharacterManager.current_team.size() > 1:
+		CharacterManager.both_alive = true
+	
 	change_state("Normal")
 	call_deferred("add_collectibles_to_player")
+	call_deferred("add_collectibles_to_inactive_player")
 	call_deferred("emit_stage_start_signal")
 	call_deferred("save_stage_start_msec")
 	call_deferred("position_player_on_checkpoint")
@@ -256,11 +264,11 @@ func go_to_stage_select() -> void :
 	IGT.set_timer_running(true)
 
 func go_to_weapon_get() -> void :
-	if CharacterManager.player_character == "X":
+	if CharacterManager.current_player_character == "X":
 		var _dv = get_tree().change_scene("res://src/WeaponGet/WeaponGetScene.tscn")
-	elif CharacterManager.player_character == "Axl":
+	elif CharacterManager.current_player_character == "Axl":
 		var _dv = get_tree().change_scene("res://Axl_mod/WeaponGet/WeaponGetScene.tscn")
-	elif CharacterManager.player_character == "Zero":
+	elif CharacterManager.current_player_character == "Zero":
 		var _dv = get_tree().change_scene("res://src/StageSelect/StageSelectScreen.tscn")
 	call_deferred("force_unpause")
 	call_deferred("on_level_start")
@@ -321,19 +329,28 @@ func set_player(object: Character) -> void :
 	player.deactivate()
 
 func add_collectibles_to_player() -> void :
-	if player:
+	if player:	
 		for collectible in collectibles:
-			if not has_equip_exception(collectible):
+			if not has_equip_exception(collectible, player):
 				player.equip_parts(collectible)
 		player.finished_equipping()
 
-func has_equip_exception(collectible: String) -> bool:
+func add_collectibles_to_inactive_player() -> void :
+	if is_instance_valid(inactive_player):	
+		for collectible in collectibles:
+			if not has_equip_exception(collectible, inactive_player):
+				inactive_player.equip_parts(collectible)
+		inactive_player.finished_equipping()
+
+func has_equip_exception(collectible: String, p: Character) -> bool:
 	if is_armor(collectible):
 		for exception in equip_exceptions:
 			if exception in collectible:
 				return true
 				
 	elif is_heart(collectible):
+		if p.num_equipped_hearts >= CharacterManager.equipped_hearts[p.name]:
+			return true
 		if not equip_hearts:
 			return true
 			

@@ -21,9 +21,10 @@ func _ready() -> void :
 			rotator_list.append(rotator)
 
 func _on_body_entered(body: Node) -> void :
-	if active and not done and body.name == CharacterManager.player_character:
+	if active and not done and body.name in CharacterManager.current_player_character:
 		done = true
 		Tools.timer_p(0.02, "reparent", self, body)
+		Tools.timer_p(0.02, "reparent", self, GameManager.inactive_player)
 		Tools.timer(0.03, "activate_boxes", self)
 		Tools.timer(0.03, "activate_rotators", self)
 		Tools.timer(0.03, "activate_enemies", self)

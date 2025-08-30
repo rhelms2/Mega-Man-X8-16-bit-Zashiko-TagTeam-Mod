@@ -7,7 +7,7 @@ onready var health_item: PackedScene = preload("res://src/Objects/Heal.tscn")
 
 var timer: float = 0.0
 var last_time_increased: float = 0.0
-var amount_to_increase: int = 2
+var amount_to_increase: int = 1
 var executing: bool = false
 
 
@@ -46,6 +46,7 @@ func process_increase_health(delta: float) -> void :
 		amount_to_increase = - 1
 	if amount_to_increase < 0:
 		if not $audioStreamPlayer2D.playing:
+			GameManager.unpause(name)
 			queue_free()
 
 func increase_health() -> void :
@@ -65,6 +66,9 @@ func _on_area2D_body_entered(body: Node) -> void :
 			executing = true
 			visible = false
 			GameManager.add_collectible_to_savedata(collectible_name)
+			body.character.num_equipped_hearts += 1
+			var character_name = body.character.name
+			CharacterManager.set_player_equipped_hearts(character_name, CharacterManager.equipped_hearts[character_name] + 1)
 			achievement_check()
 
 func achievement_check() -> void :

@@ -15,6 +15,7 @@ onready var boundb_texture: Texture = preload("res://Axl_mod/HUD/Pause/Axl_bound
 onready var icegat_texture: Texture = preload("res://Axl_mod/HUD/Pause/Axl_icegattling.png")
 onready var flameb_texture: Texture = preload("res://Axl_mod/HUD/Pause/Axl_flameburner.png")
 
+var character_name = "Axl"
 var weapon
 
 
@@ -58,13 +59,16 @@ func set_pause_icon(_weapon) -> void :
 
 func set_player_weapon() -> void :
 	if weapon_resource and GameManager.player:
-		for _weapon in GameManager.player.get_node("Shot").get_children():
+		var i = CharacterManager.current_team.find(character_name)
+		for _weapon in GameManager.team[i].get_node("Shot").get_children():
 			if _weapon is WeaponBossAxl or _weapon.name == "GigaCrash" or _weapon.name == "XDrive":
 				if _weapon.weapon.collectible == weapon_resource.collectible:
 					weapon = _weapon
 
 func _on_focus_entered() -> void :
 	._on_focus_entered()
+	if CharacterManager.current_player_character != "Axl":
+		return
 	if GameManager.is_player_in_scene():
 		var _shot_node = GameManager.player.get_node("Shot")
 		if _shot_node != null:

@@ -1,0 +1,388 @@
+<<<<<<< HEAD
+[gd_scene load_steps=24 format=2]
+=======
+[gd_scene load_steps=23 format=2]
+>>>>>>> source_private/main
+
+[ext_resource path="res://src/AchievementSystem/AchievementHolder.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Options/KeyBinder/KeyConfig.gd" type="Script" id=2]
+[ext_resource path="res://src/Options/CoverScreen.gd" type="Script" id=3]
+[ext_resource path="res://src/Options/KeymapExit.gd" type="Script" id=4]
+[ext_resource path="res://src/AchievementSystem/Icons/achievicon_default.png" type="Texture" id=5]
+[ext_resource path="res://src/Options/pause_bg.png" type="Texture" id=6]
+[ext_resource path="res://src/Sounds/FX - Menu Switch.ogg" type="AudioStream" id=7]
+[ext_resource path="res://src/Effects/Materials/TextColorSwap.tres" type="Material" id=8]
+[ext_resource path="res://src/Effects/Materials/AchieveIcon_mat.tres" type="Material" id=9]
+[ext_resource path="res://src/AchievementSystem/icon_bg.png" type="Texture" id=10]
+[ext_resource path="res://src/Fonts/X8Bossfont.fnt" type="BitmapFont" id=11]
+<<<<<<< HEAD
+[ext_resource path="res://src/Fonts/x8bitmapfontfinal.fnt" type="BitmapFont" id=12]
+[ext_resource path="res://src/Fonts/NotoSansJP-SemiBold.ttf" type="DynamicFontData" id=13]
+=======
+[ext_resource path="res://src/Fonts/X8bitmapfont.fnt" type="BitmapFont" id=12]
+[ext_resource path="res://src/Fonts/OpenSans-SemiBold.ttf" type="DynamicFontData" id=13]
+>>>>>>> source_private/main
+[ext_resource path="res://src/AchievementSystem/Screen/Lead.gd" type="Script" id=14]
+[ext_resource path="res://src/AchievementSystem/Screen/ActionHolder.gd" type="Script" id=15]
+[ext_resource path="res://src/AchievementSystem/Screen/scrollContainer.gd" type="Script" id=16]
+[ext_resource path="res://src/Sounds/MM - Equip.wav" type="AudioStream" id=17]
+[ext_resource path="res://System/SFX/window_open.ogg" type="AudioStream" id=18]
+[ext_resource path="res://src/Sounds/FX - Cancel.ogg" type="AudioStream" id=19]
+
+[sub_resource type="DynamicFont" id=1]
+size = 12
+use_filter = true
+font_data = ExtResource( 13 )
+
+<<<<<<< HEAD
+[sub_resource type="DynamicFont" id=4]
+size = 14
+use_filter = true
+font_data = ExtResource( 13 )
+
+=======
+>>>>>>> source_private/main
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0, 0.647059, 1, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 2
+expand_margin_top = 1.0
+expand_margin_bottom = 1.0
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.0745098, 0.0784314, 0.0862745, 1 )
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="AchievementsScreen" type="CanvasLayer"]
+pause_mode = 2
+layer = 2
+script = ExtResource( 2 )
+menu_path = NodePath("Menu")
+initial_focus = NodePath("Menu/exit")
+exit_action = "ui_cancel"
+exit_action_2 = "pause"
+
+[node name="Menu" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="bg" type="TextureRect" parent="Menu"]
+modulate = Color( 0.101961, 0.101961, 0.101961, 1 )
+margin_right = 398.0
+margin_bottom = 224.0
+texture = ExtResource( 6 )
+
+[node name="Title" type="Control" parent="Menu"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = 135.0
+margin_top = 6.0
+margin_right = 203.0
+margin_bottom = 22.0
+rect_min_size = Vector2( 0, 16 )
+
+[node name="detail" type="Label" parent="Menu/Title"]
+modulate = Color( 0.2, 0.247059, 0.415686, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -63.0
+margin_top = -8.0
+margin_right = 81.0
+margin_bottom = 8.0
+custom_colors/font_color_shadow = Color( 0.372549, 0.372549, 0.372549, 1 )
+custom_fonts/font = ExtResource( 11 )
+text = "-                          -"
+align = 1
+uppercase = true
+
+[node name="text" type="Label" parent="Menu/Title"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -78.0
+margin_top = -1.0
+margin_right = 96.0
+margin_bottom = 16.0
+grow_horizontal = 2
+custom_colors/font_color_shadow = Color( 0.372549, 0.372549, 0.372549, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "ACHIEV_SCREEN_TITLE"
+align = 1
+uppercase = true
+
+[node name="scrollContainer" type="ScrollContainer" parent="Menu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = 44.0
+margin_top = 31.0
+margin_right = 300.0
+margin_bottom = 175.0
+follow_focus = true
+scroll_horizontal_enabled = false
+script = ExtResource( 16 )
+
+[node name="ActionHolder" type="VBoxContainer" parent="Menu/scrollContainer"]
+margin_right = 256.0
+margin_bottom = 80.0
+custom_constants/separation = -2
+script = ExtResource( 15 )
+
+[node name="AchievementHolder" parent="Menu/scrollContainer/ActionHolder" instance=ExtResource( 1 )]
+
+[node name="AchievementHolder2" type="Control" parent="Menu/scrollContainer/ActionHolder"]
+margin_top = 39.0
+margin_right = 256.0
+margin_bottom = 80.0
+rect_min_size = Vector2( 256, 41 )
+
+[node name="bg" type="Button" parent="Menu/scrollContainer/ActionHolder/AchievementHolder2"]
+modulate = Color( 0.811765, 0.85098, 1, 0.972549 )
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 254.0
+margin_bottom = 39.0
+focus_mode = 0
+disabled = true
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+
+[node name="portrait_side" type="Label" parent="Menu/scrollContainer/ActionHolder/AchievementHolder2"]
+visible = false
+material = ExtResource( 8 )
+margin_left = 41.0
+margin_top = 9.0
+margin_right = 221.2
+margin_bottom = 36.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 12 )
+text = "Achievement Title"
+autowrap = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="portrait_side2" type="Label" parent="Menu/scrollContainer/ActionHolder/AchievementHolder2"]
+visible = false
+material = ExtResource( 8 )
+margin_left = 41.0
+margin_top = 20.0
+margin_right = 289.0
+margin_bottom = 47.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 12 )
+text = "Description of how to unlock it."
+autowrap = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="icon_bg" type="TextureRect" parent="Menu/scrollContainer/ActionHolder/AchievementHolder2"]
+margin_left = 7.0
+margin_top = 5.0
+margin_right = 37.0
+margin_bottom = 35.0
+texture = ExtResource( 10 )
+
+[node name="icon" type="TextureRect" parent="Menu/scrollContainer/ActionHolder/AchievementHolder2"]
+material = ExtResource( 9 )
+margin_left = 10.0
+margin_top = 8.0
+margin_right = 34.0
+margin_bottom = 32.0
+rect_clip_content = true
+texture = ExtResource( 5 )
+expand = true
+stretch_mode = 3
+
+[node name="unlocked_text" type="Label" parent="Menu/scrollContainer/ActionHolder/AchievementHolder2"]
+anchor_right = 0.1
+margin_left = 40.0
+margin_top = 11.0
+margin_right = 216.1
+margin_bottom = 42.0
+rect_scale = Vector2( 0.4, 0.4 )
+mouse_filter = 0
+size_flags_vertical = 1
+custom_colors/font_color_shadow = Color( 0, 0, 0, 0.415686 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 2
+text = "Achievement Title."
+autowrap = true
+max_lines_visible = 3
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="achievement" type="Label" parent="Menu/scrollContainer/ActionHolder/AchievementHolder2"]
+modulate = Color( 0.886275, 0.886275, 0.886275, 1 )
+anchor_right = 0.1
+margin_left = 40.0
+margin_top = 20.0
+margin_right = 415.2
+margin_bottom = 53.0
+rect_scale = Vector2( 0.4, 0.4 )
+mouse_filter = 0
+size_flags_vertical = 1
+custom_colors/font_color_shadow = Color( 0, 0, 0, 0.415686 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 2
+text = "Achievement Description of how to unlock it."
+autowrap = true
+max_lines_visible = 3
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="exit" type="TextureButton" parent="Menu"]
+modulate = Color( 0.321569, 0.313726, 0.345098, 1 )
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = 157.0
+margin_top = 165.0
+margin_right = 221.0
+margin_bottom = 175.0
+action_mode = 0
+script = ExtResource( 4 )
+idle_color = Color( 0.321569, 0.313726, 0.345098, 1 )
+focus_color = Color( 0.968627, 0.968627, 0.968627, 1 )
+menu_path = NodePath("../..")
+
+[node name="text" type="Label" parent="Menu/exit"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -49.0
+margin_top = -14.0
+margin_right = 53.0
+rect_scale = Vector2( 0.75, 0.75 )
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = SubResource( 1 )
+text = "EXIT_BUTTON"
+align = 1
+
+[node name="Lead" type="Control" parent="Menu"]
+margin_left = 64.0
+margin_top = 23.0
+margin_right = 334.0
+margin_bottom = 52.0
+script = ExtResource( 14 )
+
+[node name="bg" type="Button" parent="Menu/Lead"]
+modulate = Color( 0.811765, 0.85098, 1, 0.972549 )
+margin_left = 2.0
+margin_top = 2.0
+margin_right = 267.0
+margin_bottom = 26.0
+focus_mode = 0
+disabled = true
+shortcut_in_tooltip = false
+enabled_focus_mode = 0
+
+[node name="unlocked" type="Label" parent="Menu/Lead"]
+anchor_right = 0.1
+margin_left = 8.0
+<<<<<<< HEAD
+margin_top = 7.0
+=======
+margin_top = 8.0
+>>>>>>> source_private/main
+margin_right = 532.4
+margin_bottom = 39.0
+rect_scale = Vector2( 0.4, 0.4 )
+mouse_filter = 0
+size_flags_vertical = 1
+custom_colors/font_color_shadow = Color( 0, 0, 0, 0.415686 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 2
+<<<<<<< HEAD
+custom_fonts/font = SubResource( 4 )
+=======
+>>>>>>> source_private/main
+text = "0/49 Achievements Unlocked"
+autowrap = true
+max_lines_visible = 3
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="percentage" type="Label" parent="Menu/Lead"]
+anchor_right = 0.1
+margin_left = 81.0
+margin_top = 8.0
+margin_right = 503.7
+margin_bottom = 39.0
+rect_scale = Vector2( 0.4, 0.4 )
+mouse_filter = 0
+size_flags_vertical = 1
+custom_colors/font_color_shadow = Color( 0, 0, 0, 0.415686 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 2
+text = "(0%)"
+align = 2
+autowrap = true
+max_lines_visible = 3
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="progressBar" type="ProgressBar" parent="Menu/Lead"]
+margin_left = 7.0
+margin_top = 17.0
+margin_right = 517.0
+margin_bottom = 27.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_styles/fg = SubResource( 2 )
+custom_styles/bg = SubResource( 3 )
+value = 25.0
+percent_visible = false
+
+[node name="choice" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+volume_db = -4.0
+bus = "SFX"
+
+[node name="Fader" type="ColorRect" parent="."]
+margin_right = 398.0
+margin_bottom = 224.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 0 )
+script = ExtResource( 3 )
+menu = NodePath("../Menu")
+
+[node name="pick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 18 )
+volume_db = -10.0
+bus = "SFX"
+
+[node name="equip" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 17 )
+volume_db = -4.0
+bus = "SFX"
+
+[node name="cancel" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 19 )
+volume_db = -4.0
+bus = "SFX"
+
+[connection signal="initialize" from="." to="Menu/scrollContainer/ActionHolder" method="_on_initialize"]
+[connection signal="initialize" from="." to="Menu/Lead" method="_on_initialize"]
+[connection signal="focus_entered" from="Menu/exit" to="Menu/exit" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/exit" to="Menu/exit" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/exit" to="Menu/exit" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/exit" to="Menu/exit" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/exit" to="Menu/exit" method="_on_pressed"]

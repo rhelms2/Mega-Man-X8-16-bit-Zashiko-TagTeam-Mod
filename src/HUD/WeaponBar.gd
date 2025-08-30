@@ -2,6 +2,8 @@ extends NinePatchRect
 
 onready var weapon_icon: TextureRect = $"../WeaponIcon"
 onready var ammo_bar: TextureProgress = $textureProgress
+onready var x_bar = get_parent()
+var char_name = "null"
 
 var weapon
 
@@ -9,8 +11,10 @@ signal displayed(weapon)
 signal hidden
 
 
+
+
 func display(current_weapon) -> void :
-	if is_exception(current_weapon):
+	if is_exception(current_weapon) or not char_name == GameManager.player.name:
 		weapon = null
 		hide()
 		return
@@ -21,7 +25,7 @@ func display(current_weapon) -> void :
 	ammo_bar.material.set_shader_param("palette", palette)
 	ammo_bar.value = get_bar_value()
 	show()
-	emit_signal("displayed", current_weapon)
+	emit_signal("displayed", current_weapon, char_name)
 
 func is_exception(current_weapon) -> bool:
 	if "Buster" in current_weapon.name:
@@ -44,6 +48,10 @@ func get_bar_value() -> float:
 func _ready() -> void :
 	Event.listen("changed_weapon", self, "display")
 	hide()
+	if x_bar.team_member_index > 0 and CharacterManager.current_team.size() > 1:
+		char_name = CharacterManager.current_team[x_bar.team_member_index]
+	else:
+		char_name = CharacterManager.current_team[0]
 
 func hide() -> void :
 	weapon_icon.visible = false

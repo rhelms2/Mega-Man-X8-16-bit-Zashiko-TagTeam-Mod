@@ -47,10 +47,6 @@ onready var visual_skip: Control = $canvasLayer / VisualSkip
 var executing: = false
 
 func _ready() -> void :
-	dialog_1 = CharacterManager._set_correct_dialogues("INTRO_1", dialog_1)
-	dialog_2 = CharacterManager._set_correct_dialogues("INTRO_2", dialog_2)
-	dialog_3 = CharacterManager._set_correct_dialogues("INTRO_3", dialog_3)
-	dialog_4 = CharacterManager._set_correct_dialogues("INTRO_4", dialog_4)
 	Event.connect("noahspark_cutscene_start", self, "start")
 	Event.connect("dialog_concluded", self, "on_dialog_end")
 	Event.connect("kingcrab_crash", self, "explode_craft")
@@ -64,6 +60,10 @@ func _ready() -> void :
 	
 
 func start():
+	dialog_1 = CharacterManager._set_correct_dialogues("INTRO_1", dialog_1)
+	dialog_2 = CharacterManager._set_correct_dialogues("INTRO_2", dialog_2)
+	dialog_3 = CharacterManager._set_correct_dialogues("INTRO_3", dialog_3)
+	dialog_4 = CharacterManager._set_correct_dialogues("INTRO_4", dialog_4)
 	dialogbox = GameManager.dialog_box
 	if GameManager.was_dialogue_seen(dialog_4):
 		Event.emit_signal("noahspark_cutscene_end")

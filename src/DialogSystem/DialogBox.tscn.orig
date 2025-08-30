@@ -1,0 +1,91 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://src/Sounds/Text Letter.ogg" type="AudioStream" id=1]
+[ext_resource path="res://src/Effects/Materials/TextColorSwap.tres" type="Material" id=2]
+[ext_resource path="res://src/DialogSystem/portraits/light_dialogue.res" type="SpriteFrames" id=3]
+[ext_resource path="res://src/DialogSystem/portraits/x_dialogue.res" type="SpriteFrames" id=4]
+[ext_resource path="res://src/DialogSystem/next_dialogue.res" type="SpriteFrames" id=5]
+<<<<<<< HEAD
+[ext_resource path="res://src/Fonts/x8bitmapfontfinal.fnt" type="BitmapFont" id=6]
+=======
+[ext_resource path="res://src/Fonts/X8bitmapfont.fnt" type="BitmapFont" id=6]
+>>>>>>> source_private/main
+[ext_resource path="res://Zero_mod/DialogSystem/portraits/zero_dialogue.res" type="SpriteFrames" id=7]
+[ext_resource path="res://src/DialogSystem/AnimatedText.gd" type="Script" id=8]
+
+[sub_resource type="GradientTexture2D" id=45]
+
+[node name="DialogBox" type="Label"]
+material = ExtResource( 2 )
+anchor_right = 0.1
+margin_left = 9.0
+margin_top = 2.0
+margin_right = 160.2
+margin_bottom = 69.0
+mouse_filter = 0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 6 )
+text = "test test test test test test test test test test test test"
+autowrap = true
+max_lines_visible = 3
+script = ExtResource( 8 )
+__meta__ = {
+"_editor_description_": ""
+}
+debug_messages = false
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = -10.884
+bus = "SFX"
+
+[node name="BG" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0.862745 )
+position = Vector2( 95, 40 )
+scale = Vector2( 3.25, 1.3125 )
+z_index = -1
+texture = SubResource( 45 )
+
+[node name="Portrait1" type="AnimatedSprite" parent="."]
+position = Vector2( 16, 59 )
+z_index = 44
+frames = ExtResource( 4 )
+animation = "idle"
+frame = 95
+playing = true
+
+[node name="Portrait2" type="AnimatedSprite" parent="."]
+position = Vector2( 175, 59 )
+z_index = 44
+frames = ExtResource( 3 )
+animation = "idle"
+frame = 18
+playing = true
+
+[node name="next_dialogue" type="AnimatedSprite" parent="."]
+position = Vector2( 95, 74 )
+z_index = 44
+frames = ExtResource( 5 )
+animation = "Tag"
+frame = 7
+playing = true
+
+[node name="portrait_side" type="Label" parent="."]
+material = ExtResource( 2 )
+anchor_right = 0.1
+margin_left = 36.0
+margin_top = 42.0
+margin_right = 176.4
+margin_bottom = 69.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 6 )
+text = "bbbbbbb asdasd ffff e31414 fasfaf.w"
+autowrap = true
+__meta__ = {
+"_editor_description_": ""
+}
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+visible = false
+frames = ExtResource( 7 )
+animation = "talk"

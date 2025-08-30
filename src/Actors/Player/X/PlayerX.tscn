@@ -1,4 +1,4 @@
-[gd_scene load_steps=136 format=2]
+[gd_scene load_steps=137 format=2]
 
 [ext_resource path="res://src/Effects/Materials/mat_x_death.tres" type="Material" id=1]
 [ext_resource path="res://src/Sounds/FX - Subtank Charge.ogg" type="AudioStream" id=2]
@@ -39,7 +39,7 @@
 [ext_resource path="res://src/Effects/Materials/mat_x_armor.tres" type="Material" id=37]
 [ext_resource path="res://src/Sounds/MMX - Charge.wav" type="AudioStream" id=38]
 [ext_resource path="res://src/Effects/Textures/elec_particles.png" type="Texture" id=39]
-[ext_resource path="res://src/Effects/Textures/hit_vfx.png" type="Texture" id=40]
+[ext_resource path="res://TagTeam_Mod/CharacterSwitchWarpOut.gd" type="Script" id=40]
 [ext_resource path="res://src/Actors/Bosses/SatanSigma/flash.gd" type="Script" id=41]
 [ext_resource path="res://src/Actors/Player/X/PlayerX.gd" type="Script" id=42]
 [ext_resource path="res://src/Actors/Player/X/ArmorPart.gd" type="Script" id=43]
@@ -122,6 +122,7 @@
 [ext_resource path="res://X_mod/UltimateX/Sprites/x_ultimate.tres" type="SpriteFrames" id=120]
 [ext_resource path="res://X_mod/UltimateX/Sprites/x_ultimate_arm.tres" type="SpriteFrames" id=121]
 [ext_resource path="res://src/Actors/Player/charge_shader.tres" type="Shader" id=122]
+[ext_resource path="res://TagTeam_Mod/CharacterSwitchWarpIn.gd" type="Script" id=123]
 
 [sub_resource type="ShaderMaterial" id=46]
 resource_local_to_scene = true
@@ -158,23 +159,18 @@ extents = Vector2( 6.995, 7 )
 extents = Vector2( 7, 8 )
 
 [sub_resource type="AtlasTexture" id=43]
-atlas = ExtResource( 40 )
 region = Rect2( 64, 56, 64, 56 )
 
 [sub_resource type="AtlasTexture" id=39]
-atlas = ExtResource( 40 )
 region = Rect2( 0, 0, 64, 56 )
 
 [sub_resource type="AtlasTexture" id=40]
-atlas = ExtResource( 40 )
 region = Rect2( 64, 0, 64, 56 )
 
 [sub_resource type="AtlasTexture" id=41]
-atlas = ExtResource( 40 )
 region = Rect2( 128, 0, 64, 56 )
 
 [sub_resource type="AtlasTexture" id=42]
-atlas = ExtResource( 40 )
 region = Rect2( 0, 56, 64, 56 )
 
 [sub_resource type="SpriteFrames" id=44]
@@ -310,7 +306,7 @@ position = Vector2( 0, -4 )
 z_index = 5
 frames = ExtResource( 88 )
 animation = "idle"
-frame = 75
+frame = 42
 playing = true
 
 [node name="head_armor" type="AnimatedSprite" parent="animatedSprite"]
@@ -1156,6 +1152,33 @@ margin_top = 2.0
 margin_right = -13.0
 margin_bottom = 16.0
 text = "x"
+
+[node name="CharSwitchWarpOut" type="Node2D" parent="."]
+script = ExtResource( 40 )
+actions = [ "Event" ]
+start_event = "character_switch_out"
+force_start = true
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer2D" parent="CharSwitchWarpOut"]
+stream = ExtResource( 7 )
+volume_db = -6.555
+pitch_scale = 1.19
+max_distance = 600.0
+bus = "SFX"
+
+[node name="CharSwitchWarpIn" type="Node2D" parent="."]
+script = ExtResource( 123 )
+actions = [ "Event" ]
+animation = "beam"
+start_event = "character_switch_in"
+force_start = true
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer2D" parent="CharSwitchWarpIn"]
+stream = ExtResource( 7 )
+volume_db = -6.555
+pitch_scale = 1.19
+max_distance = 600.0
+bus = "SFX"
 
 [connection signal="at_max_hp" from="." to="Damage" method="set_death_protection"]
 [connection signal="zero_health" from="." to="animatedSprite/afterImages" method="deactivate"]

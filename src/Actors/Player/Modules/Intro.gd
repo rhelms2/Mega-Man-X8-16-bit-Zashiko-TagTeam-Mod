@@ -53,9 +53,10 @@ func on_animation_finished():
 			EndAbility()
 
 func _Interrupt():
-	if enable_movement:
-		character.activate()
-		Event.emit_signal("gameplay_start")
+	if character.is_current_player:
+		if enable_movement:
+			character.activate()
+			Event.emit_signal("gameplay_start")
 
 func _EndCondition() -> bool:
 	return false

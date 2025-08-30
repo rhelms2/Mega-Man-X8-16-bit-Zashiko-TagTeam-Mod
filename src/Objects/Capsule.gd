@@ -22,19 +22,20 @@ signal lightning
 
 func _ready() -> void :
 	Event.listen("player_set", self, "call_deferred_got_armor")
+	#Event.listen("character_switch", self, "handle_player_not_x")
 	timer = 0.0
 	timer2 = 0.0
 	charge_state = 0
 	finished = false
-	if CharacterManager.player_character != "X":
-		call_deferred("handle_player_not_x")
+	#call_deferred("handle_player_not_x")
 
 func handle_player_not_x() -> void :
-	finished = true
-	call_deferred("disable_glass_collider")
-	sprite.play("finished")
-	if debug_logs:
-		print_debug("Player is not X")
+	if CharacterManager.current_player_character != "X":
+		finished = true
+		call_deferred("disable_glass_collider")
+		sprite.play("finished")
+		if debug_logs:
+			print_debug("Player is not X")
 
 func call_deferred_got_armor() -> void :
 	call_deferred("handle_already_got_armor")
@@ -56,7 +57,7 @@ func check_start(body: Node) -> void :
 			return
 		if body.is_in_group("Player"):
 			player = body.get_parent()
-			if can_interact() and sprite.animation == "idle":
+			if can_interact() and sprite.animation == "idle" and player == GameManager.player:
 				sprite.play("open")
 				$open.play()
 				Event.emit_signal("capsule_open")
@@ -68,17 +69,17 @@ func disable_glass_collider() -> void :
 	glass.disabled = true
 
 func can_interact() -> bool:
-	return not player.is_executing("Ride") and not player.is_executing("WeaponStasis")
+	return not GameManager.player.is_executing("Ride") and not GameManager.player.is_executing("WeaponStasis")
 
 func _on_area2D2_body_entered(_body: Node) -> void :
 	if not finished:
 		if can_interact():
 			Event.emit_signal("capsule_entered")
-			player.force_movement()
-			player.play_animation_once("recover")
-			player.deactivate()
-			player.global_position.x = global_position.x
-			player.global_position.y = global_position.y - 31
+			GameManager.player.force_movement()
+			GameManager.player.play_animation_once("recover")
+			GameManager.player.deactivate()
+			GameManager.player.global_position.x = global_position.x
+			GameManager.player.global_position.y = global_position.y - 31
 			sprite.play("slow_charge")
 			color = Color(0, 0, 1, 0)
 			enable_charge_shader()
@@ -90,7 +91,7 @@ func _process(delta: float) -> void :
 	if not finished:
 		if charge_state >= 1:
 			timer += delta
-			player.animatedSprite.material.set_shader_param("Color", color)
+			GameManager.player.animatedSprite.material.set_shader_param("Color", color)
 		
 		if charge_state >= 1 and charge_state < 3:
 			particles.speed_scale += delta * 2
@@ -132,17 +133,17 @@ func _process(delta: float) -> void :
 				timer2 = 0
 			
 		elif charge_state == 5:
-			player.play_animation_once("armor_blink")
+			GameManager.player.play_animation_once("armor_blink")
 			if timer > 1.2:
-				player.play_animation_once("victory")
+				GameManager.player.play_animation_once("victory")
 				$victory.play()
 				charge_state += 1
 				timer = 0
 		
 		elif charge_state == 6:
 			if timer > 1:
-				player.stop_forced_movement()
-				player.reactivate_charge()
+				GameManager.player.stop_forced_movement()
+				GameManager.player.reactivate_charge()
 				finished = true
 
 func _on_animatedSprite_animation_finished() -> void :
@@ -153,10 +154,10 @@ func _on_animatedSprite_animation_finished() -> void :
 		timer = 0
 
 func enable_charge_shader() -> void :
-	player.animatedSprite.material.set_shader_param("Charge", 1)
+	GameManager.player.animatedSprite.material.set_shader_param("Charge", 1)
 
 func disable_charge_shader() -> void :
-	player.animatedSprite.material.set_shader_param("Charge", 0)
+	GameManager.player.animatedSprite.material.set_shader_param("Charge", 0)
 
 func achievement_check() -> void :
 	if "hermes" in armor_part:

@@ -5,7 +5,7 @@ export  var active: = false
 onready var character = get_parent()
 
 func _process(_delta: float) -> void :
-	if active:
+	if active and character.is_current_player:
 		if Input.is_action_just_pressed("weapon_select_left"):
 			Event.emit_signal("weapon_select_left")
 		elif Input.is_action_just_pressed("weapon_select_right"):

@@ -46,9 +46,41 @@ signal stop_forced_movement(forcer)
 signal melee_hit(enemy)
 signal jump
 
+# TeamMod stuff
+signal character_switch_out
+signal character_switch_in
+var is_current_player: bool = false
+var is_executing_special: bool = false
+
+var num_equipped_hearts
+
+func check_for_char_switch_input() -> void :
+	if get_action_just_pressed("char_switch"):
+		if can_switch():
+			Event.emit_signal("character_switch")
+
+func can_switch() -> bool :
+	return is_current_player and CharacterManager.current_team.size() > 1 and CharacterManager.both_alive and not is_executing_special
+
+func max_out_air_abilities() -> void :
+	var airjump = get_node_or_null("AirJump")
+	var airdash = get_node_or_null("AirDash")
+	var hover = get_node_or_null("Hover")
+	
+	if airjump != null:
+		airjump.current_air_jumps = 0
+	if airdash != null:
+		airdash.airdash_count = 0
+	if hover != null:
+		hover.current_air_jumps = 0
+
+	set_horizontal_speed(0)
+####
+
 
 func _ready() -> void :
 	connect_cutscene_events()
+	num_equipped_hearts = 0
 
 func connect_cutscene_events() -> void :
 	Event.listen("end_cutscene_start", self, "deactivate")
@@ -58,19 +90,24 @@ func connect_cutscene_events() -> void :
 
 func _process(_delta: float) -> void :
 	update_facing_direction()
+	if not is_current_player:
+		global_position = GameManager.player.global_position
+		direction = GameManager.player.direction
 
 func _physics_process(delta: float) -> void :
-	var actual_delta = delta
-	if time_stop_active:
-		actual_delta = GameManager.true_delta
-	check_if_should_set_alpha_to_1()
-	check_for_headbump()
-	check_for_land(actual_delta)
-	check_for_low_health()
-	check_for_dash()
-	if has_control() and IGT.should_run:
-		IGT.in_game_timer += actual_delta
-		IGT.stage_timer += actual_delta
+	if is_current_player:
+		var actual_delta = delta
+		if time_stop_active:
+			actual_delta = GameManager.true_delta
+		check_if_should_set_alpha_to_1()
+		check_for_headbump()
+		check_for_land(actual_delta)
+		check_for_low_health()
+		check_for_dash()
+		check_for_char_switch_input()
+		if has_control() and IGT.should_run:
+			IGT.in_game_timer += actual_delta
+			IGT.stage_timer += actual_delta
 
 func cutscene_activate() -> void :
 	if not is_executing("Ride"):
@@ -86,6 +123,7 @@ func spike_touch() -> void :
 		if CharacterManager.game_mode <= - 1 or not should_die_to_spikes:
 			emit_signal("damage", 1, self)
 			return
+		CharacterManager.both_alive = false
 		emit_signal("zero_health")
 
 func lava_touch() -> void :
@@ -94,16 +132,19 @@ func lava_touch() -> void :
 			if not is_invulnerable():
 				emit_signal("damage", 1, self)
 			return
+		CharacterManager.both_alive = false
 		emit_signal("zero_health")
 
 func void_touch() -> void :
+	CharacterManager.both_alive = false
 	emit_signal("zero_health")
 
 func should_instantly_die() -> bool:
 	return not is_executing("Ride")
 
 func ride(ride: Node) -> void :
-	emit_signal("ride", ride)
+	if is_current_player:
+		emit_signal("ride", ride)
 
 func eject(ride: Node) -> void :
 	emit_signal("eject", ride)
@@ -115,8 +156,17 @@ func stop_forced_movement(forcer = null) -> void :
 	emit_signal("stop_forced_movement", forcer)
 
 func activate() -> void :
-	start_listening_to_inputs()
-	Log("Active")
+	if is_current_player:
+		start_listening_to_inputs()
+		Log("Active")
+	else:
+		deactivate()
+
+func hide() -> void :
+	visible = false
+
+func show() -> void :
+	visible = true
 
 func deactivate() -> void :
 	stop_listening_to_inputs()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=230 format=2]
+[gd_scene load_steps=232 format=2]
 
 [ext_resource path="res://src/Actors/Player/x_sprites/x.res" type="SpriteFrames" id=1]
 [ext_resource path="res://Axl_mod/Player/Scripts/PlayerAxl.gd" type="Script" id=2]
@@ -130,6 +130,8 @@
 [ext_resource path="res://Axl_mod/Player/Weapon_Special.gd" type="Script" id=128]
 [ext_resource path="res://Axl_mod/Player/Projectiles/BossSpecials/SpecialIllusion.tscn" type="PackedScene" id=129]
 [ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/BlackArrow/ShadowBoomer.tscn" type="PackedScene" id=130]
+[ext_resource path="res://TagTeam_Mod/CharacterSwitchWarpOut.gd" type="Script" id=131]
+[ext_resource path="res://TagTeam_Mod/CharacterSwitchWarpIn.gd" type="Script" id=132]
 
 [sub_resource type="RectangleShape2D" id=32]
 extents = Vector2( 6.995, 7 )
@@ -2366,6 +2368,34 @@ text = "x"
 [node name="node" type="Node" parent="."]
 script = ExtResource( 125 )
 dialog_tree = ExtResource( 126 )
+
+[node name="CharSwitchWarpOut" type="Node2D" parent="."]
+pause_mode = 2
+script = ExtResource( 131 )
+actions = [ "Event" ]
+start_event = "character_switch_out"
+force_start = true
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer2D" parent="CharSwitchWarpOut"]
+stream = ExtResource( 67 )
+volume_db = -6.555
+pitch_scale = 1.19
+max_distance = 600.0
+bus = "SFX"
+
+[node name="CharSwitchWarpIn" type="Node2D" parent="."]
+script = ExtResource( 132 )
+actions = [ "Event" ]
+animation = "beam"
+start_event = "character_switch_in"
+force_start = true
+
+[node name="audioStreamPlayer" type="AudioStreamPlayer2D" parent="CharSwitchWarpIn"]
+stream = ExtResource( 67 )
+volume_db = -6.555
+pitch_scale = 1.19
+max_distance = 600.0
+bus = "SFX"
 
 [connection signal="at_max_hp" from="." to="Damage" method="set_death_protection"]
 [connection signal="zero_health" from="." to="animatedSprite/afterImages" method="deactivate"]

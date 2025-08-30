@@ -30,6 +30,10 @@ func _ready() -> void :
 	character.listen("zero_health", self, "on_zero_health")
 	Event.listen("hit_enemy", self, "recharge")
 	Event.listen("enemy_kill", self, "recharge")
+	Event.listen("special_end", self, "reset_ammo_to_zero")
+	
+func reset_ammo_to_zero() -> void:
+	current_ammo = 0
 
 func recharge(_d = null):
 	if active and current_ammo < max_ammo:
@@ -41,10 +45,10 @@ func on_equip():
 	if character.is_full_armor() == "icarus":
 		active = true
 		current_ammo = max_ammo
-		Event.emit_signal("special_activated", self)
+		Event.emit_signal("special_activated", self, character)
 	else:
 		active = false
-		Event.emit_signal("special_deactivated", self)
+		Event.emit_signal("special_deactivated", self, character)
 	parent.update_list_of_weapons()
 	set_physics_process(active)
 
@@ -60,6 +64,7 @@ func fire(_charge_level: = 0) -> void :
 	parent.set_buster_as_weapon()
 	Event.emit_signal("weapon_select_buster")
 	is_executing_special = true
+	character.is_executing_special = true
 
 func connect_shot_event(_shot):
 	_shot.connect("projectile_end", self, "on_shot_end")
@@ -78,6 +83,8 @@ func on_shot_end(_shot):
 	weapon_stasis.EndAbility()
 	animatedsprite.modulate = Color.white
 	is_executing_special = false
+	character.is_executing_special = false
+	Event.emit_signal("special_end")
 
 func _physics_process(delta: float) -> void :
 	timer += delta

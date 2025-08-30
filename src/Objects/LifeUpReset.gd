@@ -1,0 +1,70 @@
+extends Node2D
+class_name LifeUpReset
+
+onready var health_item: PackedScene = preload("res://src/Objects/Heal.tscn")
+
+var timer: float = 0.0
+var last_time_increased: float = 0.0
+var amount_to_increase: int = 2
+var executing: bool = false
+
+
+func replace_with_health_item() -> void :
+	var parent = get_parent()
+	if parent:
+		var new_item = health_item.instance()
+		new_item.global_position = global_position - Vector2(0, - 8)
+		new_item.expirable = false
+		parent.add_child(new_item)
+		queue_free()
+
+func _ready() -> void :
+	if CharacterManager.game_mode >= 3:
+		call_deferred("replace_with_health_item")
+	
+func _physics_process(delta: float) -> void :
+	process_increase_health(delta)
+
+func process_increase_health(delta: float) -> void :
+	if timer > 0:
+		timer += delta
+		if timer > 1.5:
+			increase_health()
+	if amount_to_increase == 0:
+		timer = 0
+		GameManager.unpause(name)
+		amount_to_increase = - 1
+	if amount_to_increase < 0:
+		if not $audioStreamPlayer2D.playing:
+			queue_free()
+
+func increase_health() -> void :
+	if timer > last_time_increased + 0.06 and amount_to_increase > 0:
+		GameManager.player.max_health += 1
+		GameManager.player.recover_health(1)
+		last_time_increased = timer
+		amount_to_increase -= 1
+		$audioStreamPlayer2D.play()
+
+func _on_area2D_body_entered(body: Node) -> void :
+	if not executing:
+		if body.is_in_group("Player"):
+			GameManager.pause(name)
+			timer = 0.01
+			$audioStreamPlayer2D2.play()
+			executing = true
+			visible = false
+			GameManager.collectibles = []
+			for key in CharacterManager.equipped_hearts.keys():
+				CharacterManager.equipped_hearts[key] = 0
+			achievement_check()
+
+func achievement_check() -> void :
+	var hearts = 0
+	for collectible in GameManager.collectibles:
+		if "life_up" in collectible:
+			hearts += 1
+	if hearts == 8:
+		Achievements.unlock("COLLECTALLHEARTS")
+	else:
+		Savefile.save(Savefile.save_slot)

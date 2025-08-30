@@ -9,6 +9,7 @@ onready var tweeny: = TweenController.new(self, false)
 var idle_time: = 0.0
 onready var choice: AudioStreamPlayer2D = $choice
 
+
 export  var active: = true
 
 signal weapon_selected(weapon)

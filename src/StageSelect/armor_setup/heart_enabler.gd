@@ -7,10 +7,61 @@ onready var name_display: Label = $"../../Description/name"
 onready var disc_display: Label = $"../../Description/disc"
 onready var equip: AudioStreamPlayer = $"../../../equip"
 onready var unequip: AudioStreamPlayer = $"../../../unequip"
+onready var pick: AudioStreamPlayer = $"../../../pick"
 onready var heart_holder = get_parent()
 
+onready var equipped_hearts: Label = $equipped
+onready var up_arrow: Label = $up_arrow 
+onready var down_arrow: Label = $down_arrow 
+
+onready var character_name = $"../../CharacterName"
+
+enum state_enum {locked, unlocked}
+var state = state_enum.unlocked
+
+var num_equipped
+
+var exiting_lock : bool = false
+
+
+func change_state():
+	if state == state_enum.unlocked:
+		state = state_enum.locked
+		menu.lock_buttons()
+		up_arrow.visible = true
+		down_arrow.visible = true
+	else:
+		state = state_enum.unlocked
+		menu.unlock_buttons()
+		up_arrow.visible = false
+		down_arrow.visible = false
+
+func _input(event: InputEvent) -> void :
+	if state != state_enum.locked:
+		return
+	
+	if event.is_action_pressed("ui_up") and not event.is_echo():
+		pick.play()
+		CharacterManager.set_player_equipped_hearts(character_name.text, num_equipped+1)
+		refresh_equipped_hearts()
+	elif event.is_action_pressed("ui_down") and not event.is_echo():
+		pick.play()
+		CharacterManager.set_player_equipped_hearts(character_name.text, num_equipped-1)
+		refresh_equipped_hearts()
+	elif event.is_action_pressed("ui_accept"):
+		equip.play()
+		change_state()
+		exiting_lock = true
+		grab_focus()
+
+func refresh_equipped_hearts() -> void:
+	num_equipped = CharacterManager.equipped_hearts[character_name.text]
+	equipped_hearts.text = str(num_equipped) + "/"
+	
 
 func setup() -> void :
+	menu.connect("character_changed", self, "refresh_equipped_hearts")
+	refresh_equipped_hearts()
 	if get_heart_count() == 0:
 		visible = false
 		heart_holder.visible = false
@@ -23,24 +74,35 @@ func _on_focus_entered() -> void :
 	display_info()
 
 func on_press() -> void :
-	increase_value()
-	if GameManager.equip_hearts:
+	if !exiting_lock:
+		change_state()
 		equip.play()
 		strong_flash()
+		display()
 	else:
-		unequip.play()
-		flash()
-	material.set_shader_param("grayscale", not GameManager.equip_hearts)
+		exiting_lock = false
+
+
+#func on_press() -> void :
+#	change_state()
+#	increase_value()
+#	if GameManager.equip_hearts:
+#		equip.play()
+#		strong_flash()
+#	else:
+#		unequip.play()
+#		flash()
+#	material.set_shader_param("grayscale", not GameManager.equip_hearts)
 
 func process_inputs() -> void :
 	pass
 		
 func increase_value() -> void :
-	GameManager.equip_hearts = not GameManager.equip_hearts
+	#GameManager.equip_hearts = not GameManager.equip_hearts
 	display()
 
 func decrease_value() -> void :
-	GameManager.equip_hearts = not GameManager.equip_hearts
+	#GameManager.equip_hearts = not GameManager.equip_hearts
 	display()
 
 func display() -> void :
@@ -48,7 +110,7 @@ func display() -> void :
 		value.text = " "
 		self_modulate.a = 0.7
 	else:
-		value.text = "x" + str(get_heart_count())
+		value.text = str(get_heart_count())
 		self_modulate.a = 1
 
 func get_heart_count() -> int:

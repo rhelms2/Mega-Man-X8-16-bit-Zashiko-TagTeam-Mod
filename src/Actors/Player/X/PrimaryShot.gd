@@ -79,20 +79,27 @@ func fire(weapon):
 func change_current_weapon_left():
 	Log("Changing weapon left")
 	var index = weapons.find(current_weapon)
-	set_current_weapon(weapons[(index + weapons.size() - 1) % weapons.size()])
+	if index - 1 < 0:
+		set_current_weapon(weapons[weapons.size() - 1])
+	else:
+		set_current_weapon(weapons[index - 1])
 	Log("New weapon: " + current_weapon.name)
 
 func change_current_weapon_right():
 	Log("Changing weapon right")
 	var index = weapons.find(current_weapon)
-	set_current_weapon(weapons[(index + 1) % weapons.size()])
+	if index + 1 > weapons.size() - 1:
+		set_current_weapon(weapons[0])
+	else:
+		set_current_weapon(weapons[index + 1])
 	Log("New weapon: " + current_weapon.name)
 
 func set_current_weapon(weapon):
 	current_weapon = weapon
 	update_character_palette()
 	Log("Changed Weapon to " + current_weapon.name)
-	Event.emit_signal("changed_weapon", current_weapon)
+	if character.is_current_player:
+		Event.emit_signal("changed_weapon", current_weapon)
 	next_shot_ready = false
 
 func direct_weapon_select(weapon_resource):

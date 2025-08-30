@@ -1,0 +1,52 @@
+Progress:
+
+8/22
+
+- Extra life pickup icon switches with active character
+- Correct ride armor sprites set 
+- No stage reset until both players die 
+- playing 1 player mode doesn't cause game crash
+- fixed zeros weapons
+- fixed weird armor capsule bug
+- fixed portals in Primrose stage
+- fixed weapon display and right/left switching
+
+8/23
+
+- Hotswap working and tested
+- Pause menu focus being set correctly and able to switch weapons accurately for all characters
+- Heart tank selection per character in armor select
+- Fixed ridechaser spawning on character glitch
+- Fixed stage rotate glitch for primrose and double boss spawn
+- Removed icarus boots high jump
+
+8/28
+
+- subtank only fills active player's health and only active player can fill it by collecting pickups (Needs more testing/balancing)
+
+8/29
+
+- Special bar now mostly appears correctly: exception when x is icarus and axl is in team
+- Can't switch characters during special move
+- Ammo for all special moves reset when one is used, making chaining impossible
+- Fixed bug where red health was showing on the wrong health bar
+
+
+Bugs to fix:
+
+- Graphical (might be Linux specific!):
+	- Invisible walls in trilobyte stage
+	- water not showing correctly on Noah's park
+- Pause menu: 
+	- health bar appears unfilled for characters with lower max health
+- Stage clear glitches:
+	- On returning to stage select with zero, add_collectibles_to_inactive_player causes softlock because of previously freed instance
+	- Weapon equip scene causes a few crashes, both with X and Axl 
+- Sometimes Heart tank collection freezes the game?
+- Freeze during fade out on death on dark mantis
+- Zero maintaining dash speed in air between switching in/out
+
+Features to implement:
+
+- Fix cutscenes to load which character dynamically instead of just at start of stage
+- Make Axl automatically hover when shooting in air

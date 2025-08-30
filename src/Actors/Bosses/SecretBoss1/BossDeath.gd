@@ -7,7 +7,7 @@ signal screen_flash
 onready var battle_song: AudioStreamPlayer = $"../Intro/BattleSong"
 
 func unlock_axl_white():
-	if CharacterManager.player_character == "Axl":
+	if CharacterManager.current_player_character == "Axl":
 		if is_instance_valid(GameManager.player):
 			var axl = GameManager.player
 			CharacterManager.white_axl_armor = true

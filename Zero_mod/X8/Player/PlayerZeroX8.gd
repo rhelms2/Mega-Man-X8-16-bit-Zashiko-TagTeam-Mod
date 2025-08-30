@@ -1,5 +1,4 @@
 extends Character
-class_name PlayerZeroX8
 
 export  var skip_intro: bool = false
 
@@ -229,8 +228,9 @@ func _ready() -> void :
 	Event.listen("collected", self, "collect")
 	listen("land", self, "on_land")
 	equip_zero_parts()
-	GameManager.set_player(self)
-	Event.call_deferred("emit_signal", "player_set")
+	if is_current_player:
+		GameManager.set_player(self)
+		Event.call_deferred("emit_signal", "player_set")
 	animatedSprite.offset.y = - 2
 	change_ride_chaser_sprites()
 	if not "z_saber_zero" in GameManager.collectibles:
@@ -518,8 +518,12 @@ func is_subtank(collectible: String) -> bool:
 	return "tank" in collectible
 
 func equip_heart() -> void :
-	GameManager.player.max_health += 2
-	GameManager.player.recover_health(2)
+	var i = GameManager.team.find(self)
+	if i == -1:
+		return
+	GameManager.team[i].max_health += 1
+	GameManager.team[i].recover_health(1)
+	num_equipped_hearts += 1
 
 func recover_health(value: float) -> void :
 	if current_health < max_health:

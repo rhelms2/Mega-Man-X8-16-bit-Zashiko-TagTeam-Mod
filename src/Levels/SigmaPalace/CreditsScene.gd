@@ -18,7 +18,7 @@ onready var _axl_sprite: AnimatedSprite = $Visuals / ElevatorPlatform / Axl
 onready var _zero_sprite: AnimatedSprite = $Visuals / ElevatorPlatform / Zero
 onready var finalrta = $FinalTime / RTADisplay / Time
 onready var finaltime = $FinalTime / IGTDisplay / Time
-onready var bitmap_font: BitmapFont = preload("res://src/Fonts/x8bitmapfontfinal.fnt")
+onready var bitmap_font: BitmapFont = preload("res://src/Fonts/X8bitmapfont.fnt")
 
 var scroll_speed: float = 1.0
 var base_duration: float = 158.0

@@ -28,7 +28,8 @@ signal unlock_buttons
 
 
 func _ready() -> void :
-	character_menu_visibility()
+	Event.listen("refresh_hud", self, "character_menu_visibility")
+	call_deferred("character_menu_visibility")
 	if not is_debugging():
 		pause.visible = false
 		bg.visible = false
@@ -74,7 +75,7 @@ func character_menu_visibility() -> void :
 	_zero_abilities.hide()
 	_zero_armor.hide()
 	
-	match CharacterManager.player_character:
+	match CharacterManager.current_player_character:
 		"Player":
 			pass
 		"X":

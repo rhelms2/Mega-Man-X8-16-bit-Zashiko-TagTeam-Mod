@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://src/Fonts/X8bitmapfont_0.png" type="Texture" id=1]
-[ext_resource path="res://src/Fonts/x8bitmapfontfinal.fnt" type="BitmapFont" id=2]
+[ext_resource path="res://src/Fonts/X8bitmapfont.fnt" type="BitmapFont" id=2]
 [ext_resource path="res://System/IGT/HUD/IGT_Display.gd" type="Script" id=3]
 
 [sub_resource type="BitmapFont" id=4]

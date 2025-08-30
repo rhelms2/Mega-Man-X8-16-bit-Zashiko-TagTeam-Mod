@@ -9,11 +9,11 @@ func _ready() -> void:
 	set_process(false)
 
 func move_in() -> void:
-	hud.tween_focus_on_bar(self,hud.player_bar,13,Color.gray)
+	hud.tween_focus_on_bar(self,hud.active_hp_bar,13,Color.gray)
 	set_process(true)
 
 func move_out() -> void:
-	hud.tween_focus_on_bar(hud.player_bar,self,-14,Color.white)
+	hud.tween_focus_on_bar(hud.active_hp_bar,self,-14,Color.white)
 	set_process(false)
 
 func _process(_delta: float) -> void:

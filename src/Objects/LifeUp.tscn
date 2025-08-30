@@ -23,7 +23,6 @@ shape = SubResource( 1 )
 [node name="animatedSprite" type="AnimatedSprite" parent="."]
 pause_mode = 1
 frames = ExtResource( 2 )
-frame = 4
 playing = true
 
 [node name="audioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

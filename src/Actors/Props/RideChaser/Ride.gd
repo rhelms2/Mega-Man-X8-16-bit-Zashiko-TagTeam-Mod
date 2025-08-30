@@ -31,10 +31,11 @@ func is_able_to_ride(_body) -> bool:
 			return false
 		elif _body.is_in_group("Player") and GameManager.player.ride == null:
 			var collider = _body.get_character()
-			if collider.listening_to_inputs and rider == null and collider != character and collider != recent_rider:
-				var non_states := ["Ride","Forced","Finish","Intro"]
-				if not collider.is_executing_either(non_states):
-					return true
+			if collider == GameManager.player:
+				if collider.listening_to_inputs and rider == null and collider != character and collider != recent_rider:
+					var non_states := ["Ride","Forced","Finish","Intro"]
+					if not collider.is_executing_either(non_states):
+						return true
 	return false
 
 func _on_area2D_body_exited(_body: Node) -> void:

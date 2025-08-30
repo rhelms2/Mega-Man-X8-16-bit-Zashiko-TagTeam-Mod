@@ -4,12 +4,12 @@ export  var dialogue: Resource
 var started: = false
 
 func _ready() -> void :
-	dialogue = CharacterManager._set_correct_dialogues(name, dialogue)
 	if not started:
 		Event.listen("gameplay_start", self, "start")
 		
 
 func start():
+	dialogue = CharacterManager._set_correct_dialogues(name, dialogue)
 	if not GameManager.was_dialogue_seen(dialogue):
 		if GameManager.player:
 			GameManager.player.deactivate()

@@ -27,6 +27,10 @@ func _ready() -> void :
 	character.listen("zero_health", self, "on_zero_health")
 	Event.listen("hit_enemy", self, "recharge")
 	Event.listen("enemy_kill", self, "recharge")
+	Event.listen("special_end", self, "reset_ammo_to_zero")
+	
+func reset_ammo_to_zero() -> void:
+	current_ammo = 0
 
 func recharge(_d = null) -> void :
 	if current_ammo < max_ammo:
@@ -41,7 +45,7 @@ func recharge(_d = null) -> void :
 func on_equip() -> void :
 	active = true
 	current_ammo = max_ammo
-	Event.emit_signal("special_activated", self)
+	Event.emit_signal("special_activated", self, character)
 	parent.update_list_of_weapons()
 	set_physics_process(active)
 
@@ -61,6 +65,7 @@ func fire(_charge_level: = 0) -> void :
 	animatedsprite.modulate = Color(1, 1, 1, 0.01)
 	character.add_invulnerability("GigaCrash")
 	parent.is_executing_special = true
+	character.is_executing_special = true
 
 func add_projectile_to_scene(charge_level: int):
 	var shot_direction_node = character.get_node("ShotDirection")
@@ -99,6 +104,8 @@ func on_shot_end(_shot) -> void :
 	weapon_stasis.EndAbility()
 	animatedsprite.modulate = Color.white
 	parent.is_executing_special = false
+	character.is_executing_special = false
+	Event.emit_signal("special_end")
 
 func _physics_process(delta: float) -> void :
 	timer += delta

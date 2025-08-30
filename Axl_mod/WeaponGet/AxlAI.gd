@@ -3,6 +3,9 @@ extends Axl
 var current_weapon
 var less_buggy_pressed_dir: int = 0
 
+func _ready():
+	is_current_player = true
+
 
 func _process(delta: float) -> void :
 	if Input.is_action_pressed("fire_emulated") or Input.is_action_pressed("alt_fire"):

@@ -174,10 +174,15 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/Actors/Enemies/Small Bee/BeePatrol.gd"
 }, {
-"base": "Character",
+"base": "BikeCharacter",
 "class": "Bike",
 "language": "GDScript",
 "path": "res://src/Actors/Props/RideChaser/Bike.gd"
+}, {
+"base": "AbilityUser",
+"class": "BikeCharacter",
+"language": "GDScript",
+"path": "res://src/Actors/Props/RideChaser/BikeCharacter.gd"
 }, {
 "base": "Damage",
 "class": "BikeDamage",
@@ -328,6 +333,16 @@ _global_script_classes=[ {
 "class": "CharacterAbility",
 "language": "GDScript",
 "path": "res://src/Actors/Props/RideArmor/Deactivated.gd"
+}, {
+"base": "EventAbility",
+"class": "CharacterSwitchWarpIn",
+"language": "GDScript",
+"path": "res://TagTeam_Mod/CharacterSwitchWarpIn.gd"
+}, {
+"base": "EventAbility",
+"class": "CharacterSwitchWarpOut",
+"language": "GDScript",
+"path": "res://TagTeam_Mod/CharacterSwitchWarpOut.gd"
 }, {
 "base": "Ability",
 "class": "Charge",
@@ -644,16 +659,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/Actors/Player/BossWeapons/FireDash/FireDashProjectile.gd"
 }, {
-"base": "Node2D",
-"class": "FlamableBarrier",
-"language": "GDScript",
-"path": "res://src/Levels/MetalValley/FlamableBarrier.gd"
-}, {
-"base": "Area2D",
-"class": "FlamableBarrierProjectileDetector",
-"language": "GDScript",
-"path": "res://src/Levels/MetalValley/PlayerProjectileDetector.gd"
-}, {
 "base": "AttackAbility",
 "class": "GenericIntro",
 "language": "GDScript",
@@ -849,6 +854,11 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://src/Objects/LifeUp.gd"
 }, {
+"base": "Node2D",
+"class": "LifeUpReset",
+"language": "GDScript",
+"path": "res://src/Objects/LifeUpReset.gd"
+}, {
 "base": "Control",
 "class": "LightGroup",
 "language": "GDScript",
@@ -988,11 +998,6 @@ _global_script_classes=[ {
 "class": "PizzaJuggleAndMove",
 "language": "GDScript",
 "path": "res://src/Actors/Enemies/GroundPizza/JuggleAndMove.gd"
-}, {
-"base": "Character",
-"class": "PlayerZeroX8",
-"language": "GDScript",
-"path": "res://Zero_mod/X8/Player/PlayerZeroX8.gd"
 }, {
 "base": "Node2D",
 "class": "Press",
@@ -1644,6 +1649,7 @@ _global_script_class_icons={
 "BeeAttack": "",
 "BeePatrol": "",
 "Bike": "",
+"BikeCharacter": "",
 "BikeDamage": "",
 "BikeDash": "",
 "BikeDeath": "",
@@ -1674,6 +1680,8 @@ _global_script_class_icons={
 "CameraMode": "",
 "Character": "",
 "CharacterAbility": "",
+"CharacterSwitchWarpIn": "",
+"CharacterSwitchWarpOut": "",
 "Charge": "",
 "ChargedBuster": "",
 "CheckpointSettings": "",
@@ -1737,8 +1745,6 @@ _global_script_class_icons={
 "FinishAxl": "",
 "FinishZero": "",
 "FireDash": "",
-"FlamableBarrier": "",
-"FlamableBarrierProjectileDetector": "",
 "GenericIntro": "",
 "GenericProjectile": "",
 "GrabAttack": "",
@@ -1778,6 +1784,7 @@ _global_script_class_icons={
 "LaserBuster": "",
 "Lemon": "",
 "LifeUp": "",
+"LifeUpReset": "",
 "LightGroup": "",
 "Locale": "",
 "MediumBuster": "",
@@ -1806,7 +1813,6 @@ _global_script_class_icons={
 "PizzaAbility": "",
 "PizzaDeflect": "",
 "PizzaJuggleAndMove": "",
-"PlayerZeroX8": "",
 "Press": "",
 "PrimaryShot": "",
 "PrimaryShotAxl": "",
@@ -1934,7 +1940,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Mega Man X8 Demake (Zashiko Mod Free)"
+config/name="Mega Man X8 Demake (Zashiko + TagTeam Mod)"
 run/main_scene="res://src/Title/DisclaimerScreen.tscn"
 boot_splash/show_image=false
 boot_splash/image="res://src/Screens/bootsplash.png"
@@ -2260,6 +2266,12 @@ shoryuuken={
 "deadzone": 0.5,
 "events": [  ]
 }
+char_switch={
+"deadzone": 0.5,
+"events": [ Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":6,"pressure":0.0,"pressed":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
 
 [input_devices]
 
@@ -2322,7 +2334,6 @@ common/enable_object_picking=false
 quality/driver/fallback_to_gles2=true
 2d/snapping/use_gpu_pixel_snap=true
 threads/thread_model=2
-vram_compression/import_etc=true
 quality/filters/anisotropic_filter_level=2
 misc/occlusion_culling/max_active_spheres=4
 misc/occlusion_culling/max_active_polygons=4

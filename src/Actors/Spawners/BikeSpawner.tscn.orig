@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/Actors/Spawners/Spawner.tscn" type="PackedScene" id=1]
+[ext_resource path="res://src/Actors/Props/RideChaser/BikeSpawner.gd" type="Script" id=2]
+[ext_resource path="res://src/Actors/Props/RideChaser/RideChaser.tscn" type="PackedScene" id=3]
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> source_private/main
+[node name="BikeSpawner" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+object_to_spawn = ExtResource( 3 )
+wait_time_before_respawn = 0.0
+
+[node name="visibilityNotifier2D" parent="." index="0"]
+modulate = Color( 0, 0.486275, 1, 1 )
+rect = Rect2( -30, -20, 60, 40 )

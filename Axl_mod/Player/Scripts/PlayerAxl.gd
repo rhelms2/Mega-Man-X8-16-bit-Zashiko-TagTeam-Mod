@@ -127,8 +127,9 @@ func _ready() -> void :
 	listen("land", self, "on_land")
 	equip_axl_parts()
 	save_original_colors()
-	GameManager.set_player(self)
-	Event.call_deferred("emit_signal", "player_set")
+	if is_current_player:
+		GameManager.set_player(self)
+		Event.call_deferred("emit_signal", "player_set")
 
 func get_armor_sprites() -> Array:
 	var sprites = []
@@ -330,8 +331,12 @@ func is_subtank(collectible: String) -> bool:
 	return "tank" in collectible
 
 func equip_heart() -> void :
-	GameManager.player.max_health += 2
-	GameManager.player.recover_health(2)
+	var i = GameManager.team.find(self)
+	if i == -1:
+		return
+	GameManager.team[i].max_health += 1
+	GameManager.team[i].recover_health(1)
+	num_equipped_hearts += 1
 
 func recover_health(value: float) -> void :
 	if current_health < max_health:

@@ -4,7 +4,6 @@
 [ext_resource path="res://src/Actors/Props/RideChaser/BikeSpawner.gd" type="Script" id=2]
 [ext_resource path="res://src/Actors/Props/RideChaser/RideChaser.tscn" type="PackedScene" id=3]
 
-
 [node name="BikeSpawner" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 object_to_spawn = ExtResource( 3 )

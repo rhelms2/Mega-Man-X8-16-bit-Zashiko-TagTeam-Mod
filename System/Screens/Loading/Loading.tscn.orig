@@ -1,0 +1,181 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://src/Options/CoverScreen.gd" type="Script" id=1]
+[ext_resource path="res://src/Options/KeymapExit.gd" type="Script" id=2]
+[ext_resource path="res://src/Options/pause_bg.png" type="Texture" id=3]
+[ext_resource path="res://src/Sounds/MM - Equip.wav" type="AudioStream" id=4]
+[ext_resource path="res://src/Title/title_bg.png" type="Texture" id=5]
+[ext_resource path="res://System/SFX/move_cursor.ogg" type="AudioStream" id=6]
+<<<<<<< HEAD
+[ext_resource path="res://src/Fonts/xclassicfontfinal.fnt" type="BitmapFont" id=7]
+=======
+[ext_resource path="res://src/Fonts/Xclassicfont.fnt" type="BitmapFont" id=7]
+>>>>>>> source_private/main
+[ext_resource path="res://src/Sounds/CHARGED_SHOT.wav" type="AudioStream" id=8]
+[ext_resource path="res://System/Screens/Loading/Loading.gd" type="Script" id=9]
+[ext_resource path="res://System/Screens/Loading/SlotButton.tscn" type="PackedScene" id=10]
+[ext_resource path="res://src/Fonts/X8Bossfont.fnt" type="BitmapFont" id=11]
+[ext_resource path="res://System/Screens/Loading/Loading_Screen.png" type="Texture" id=12]
+[ext_resource path="res://System/SFX/choose_x8.ogg" type="AudioStream" id=15]
+[ext_resource path="res://src/Sounds/FX - Cancel.ogg" type="AudioStream" id=16]
+[ext_resource path="res://System/Screens/Loading/Loading.theme" type="Theme" id=17]
+
+[node name="LOADING" type="CanvasLayer"]
+script = ExtResource( 9 )
+SlotButtonScene = ExtResource( 10 )
+menu_path = NodePath("Menu")
+initial_focus = NodePath("Menu/exit")
+exit_action = "ui_cancel"
+start_emit_event = "update_options"
+
+[node name="Menu" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="bg" type="TextureRect" parent="Menu"]
+margin_right = 398.0
+margin_bottom = 224.0
+texture = ExtResource( 3 )
+
+[node name="loading_screen" type="TextureRect" parent="Menu/bg"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -142.0
+margin_top = -84.0
+margin_right = 142.0
+margin_bottom = 132.0
+texture = ExtResource( 12 )
+
+[node name="loading_bg" type="Sprite" parent="Menu/bg"]
+visible = false
+modulate = Color( 0, 0, 0, 0.392157 )
+position = Vector2( 199, 122.5 )
+scale = Vector2( 0.668342, 0.763393 )
+texture = ExtResource( 5 )
+
+[node name="Title" type="Control" parent="Menu"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -30.0
+margin_top = 5.0
+margin_right = 30.0
+margin_bottom = 21.0
+rect_min_size = Vector2( 0, 16 )
+
+[node name="detail" type="Label" parent="Menu/Title"]
+modulate = Color( 0.2, 0.247059, 0.415686, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -44.5
+margin_top = -7.0
+margin_right = 44.5
+margin_bottom = 9.0
+custom_colors/font_color_shadow = Color( 0.372549, 0.372549, 0.372549, 1 )
+custom_fonts/font = ExtResource( 11 )
+text = "-               -"
+align = 1
+uppercase = true
+
+[node name="text" type="Label" parent="Menu/Title"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -61.0
+margin_top = -7.0
+margin_right = 60.0
+margin_bottom = 9.0
+custom_colors/font_color_shadow = Color( 0.372549, 0.372549, 0.372549, 1 )
+custom_fonts/font = ExtResource( 11 )
+text = "LOAD_GAME"
+align = 1
+uppercase = true
+
+[node name="scrollContainer" type="ScrollContainer" parent="Menu"]
+margin_left = 66.0
+margin_top = 42.0
+margin_right = 332.0
+margin_bottom = 201.0
+theme = ExtResource( 17 )
+follow_focus = true
+scroll_horizontal_enabled = false
+
+[node name="OptionHolder" type="VBoxContainer" parent="Menu/scrollContainer"]
+grow_horizontal = 2
+custom_constants/separation = 3
+
+[node name="exit" type="TextureButton" parent="Menu"]
+self_modulate = Color( 1, 1, 1, 0 )
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -42.0
+margin_top = -24.0
+margin_right = 42.0
+margin_bottom = -14.0
+action_mode = 0
+script = ExtResource( 2 )
+menu_path = NodePath("../..")
+
+[node name="text" type="Label" parent="Menu/exit"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -133.0
+margin_top = -9.0
+margin_right = 133.0
+margin_bottom = 5.0
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 7 )
+text = "EXIT_BUTTON"
+align = 1
+uppercase = true
+
+[node name="Fader" type="ColorRect" parent="."]
+margin_right = 398.0
+margin_bottom = 224.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 0 )
+script = ExtResource( 1 )
+menu = NodePath("../Menu")
+
+[node name="choice" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -4.0
+bus = "SFX"
+
+[node name="equip" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+volume_db = -4.0
+bus = "SFX"
+
+[node name="load" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 15 )
+volume_db = -4.0
+bus = "SFX"
+
+[node name="cancel" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 16 )
+volume_db = -4.0
+bus = "SFX"
+
+[node name="pick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = -10.0
+pitch_scale = 0.43
+bus = "SFX"
+
+[connection signal="focus_entered" from="Menu/exit" to="Menu/exit" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/exit" to="Menu/exit" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/exit" to="Menu/exit" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/exit" to="Menu/exit" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/exit" to="Menu/exit" method="_on_pressed"]

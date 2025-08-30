@@ -439,12 +439,13 @@ bus = "SFX"
 [node name="shine" type="AnimatedSprite" parent="Scenery/water/watersplash" index="4"]
 position = Vector2( -43, -2 )
 frames = SubResource( 70 )
+frame = 5
 playing = true
 
 [node name="shine2" type="AnimatedSprite" parent="Scenery/water/watersplash" index="5"]
 position = Vector2( -20, -3 )
 frames = SubResource( 70 )
-frame = 1
+frame = 5
 speed_scale = 0.85
 playing = true
 flip_h = true
@@ -452,13 +453,13 @@ flip_h = true
 [node name="shine3" type="AnimatedSprite" parent="Scenery/water/watersplash" index="6"]
 position = Vector2( 18, -2 )
 frames = SubResource( 70 )
-frame = 5
+frame = 4
 playing = true
 
 [node name="shine4" type="AnimatedSprite" parent="Scenery/water/watersplash" index="7"]
 position = Vector2( 51, -3 )
 frames = SubResource( 70 )
-frame = 5
+frame = 4
 playing = true
 
 [node name="long" type="AnimatedSprite" parent="Scenery/water/watersplash" index="8"]
@@ -466,7 +467,6 @@ modulate = Color( 1, 1, 1, 0.305882 )
 position = Vector2( -5, -4 )
 scale = Vector2( 2, 1 )
 frames = SubResource( 70 )
-frame = 3
 speed_scale = 1.2
 playing = true
 flip_h = true
@@ -476,7 +476,7 @@ modulate = Color( 1, 1, 1, 0.305882 )
 position = Vector2( 45, -1 )
 scale = Vector2( 2, 1 )
 frames = SubResource( 70 )
-frame = 5
+frame = 4
 playing = true
 
 [node name="long3" type="AnimatedSprite" parent="Scenery/water/watersplash" index="10"]
@@ -484,7 +484,7 @@ modulate = Color( 1, 1, 1, 0.305882 )
 position = Vector2( -51, 0 )
 scale = Vector2( 2, 1 )
 frames = SubResource( 70 )
-frame = 5
+frame = 1
 speed_scale = 0.75
 playing = true
 

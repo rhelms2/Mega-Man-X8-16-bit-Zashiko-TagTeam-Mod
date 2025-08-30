@@ -30,7 +30,7 @@ func unblock_wall() -> void :
 
 
 
-	if check_for_x_armors() and CharacterManager.player_character == "X" or GameManager.is_collectible_in_savedata(collectible):
+	if check_for_x_armors() and CharacterManager.current_player_character == "X" or GameManager.is_collectible_in_savedata(collectible):
 		
 		blocking_wall.disabled = true
 		if platform_enabled:

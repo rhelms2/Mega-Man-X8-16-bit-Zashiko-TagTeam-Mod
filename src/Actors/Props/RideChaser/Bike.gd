@@ -1,4 +1,4 @@
-extends Character
+extends BikeCharacter
 class_name Bike
 
 var actual_speed : float
@@ -70,9 +70,9 @@ func emit_land_particles(duration := 0.16):
 func stop_land_particles():
 	land_particles.emitting = false
 	
-#func _process(_delta: float) -> void:
-#	if Configurations.get("ShowDebug"):
-#		$label.text = str(get_ground_normal().x) + " " + str(snap_vector)
+func _process(_delta: float) -> void:
+	if Configurations.get("ShowDebug"):
+		$label.text = str(get_ground_normal().x) + " " + str(snap_vector)
 
 func process_final_velocity() -> Vector2:
 	handle_slope_snap()

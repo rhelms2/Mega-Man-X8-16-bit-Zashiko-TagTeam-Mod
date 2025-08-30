@@ -5,7 +5,7 @@
 [ext_resource path="res://src/DialogSystem/portraits/light_dialogue.res" type="SpriteFrames" id=3]
 [ext_resource path="res://src/DialogSystem/portraits/x_dialogue.res" type="SpriteFrames" id=4]
 [ext_resource path="res://src/DialogSystem/next_dialogue.res" type="SpriteFrames" id=5]
-[ext_resource path="res://src/Fonts/x8bitmapfontfinal.fnt" type="BitmapFont" id=6]
+[ext_resource path="res://src/Fonts/X8bitmapfont.fnt" type="BitmapFont" id=6]
 [ext_resource path="res://Zero_mod/DialogSystem/portraits/zero_dialogue.res" type="SpriteFrames" id=7]
 [ext_resource path="res://src/DialogSystem/AnimatedText.gd" type="Script" id=8]
 

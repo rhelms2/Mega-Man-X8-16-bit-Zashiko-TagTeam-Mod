@@ -43,8 +43,119 @@ var rekkyoudan_active: bool = true
 var hyouryuushou_active: bool = true
 var enkoujin_active: bool = true
 
-var player_character: String = "X"
-var player
+
+# Character/team management stuff
+
+var current_player_character: String = "X"
+
+var valid_players: Array = ["X", "Zero", "Axl"]
+
+var equipped_hearts: Dictionary = {"X": 0, "Zero": 0, "Axl": 0}
+
+var both_alive = true
+var alive_team: Array = []
+
+# Strings here instead of literal objects
+var current_team: Array = ["X"]
+var max_team_size: int = 2
+
+
+func on_character_switch_end():
+	current_team.invert()
+	if not GameManager.player.is_on_floor():
+		# Reset horizontal velocity and remove dash/jump/hover abilities from the switching character
+		GameManager.player.dashfall = false
+		GameManager.player.max_out_air_abilities()
+
+	GameManager.player.pause_mode = PAUSE_MODE_INHERIT
+	GameManager.inactive_player.pause_mode = PAUSE_MODE_INHERIT
+	GameManager.unpause("CharacterSwitch")
+
+
+func get_heart_count() -> int:
+	var count = 0
+	for item in GameManager.collectibles:
+		if "life_up" in item:
+			count += 1
+	return count
+
+func set_player_equipped_hearts(name: String, num_to_equip: int) -> void:
+	var max_hearts = get_heart_count()
+	var new_equipped_heart_count = 0
+
+	if num_to_equip < 0:
+		num_to_equip = 0
+	elif num_to_equip > max_hearts:
+		num_to_equip = max_hearts
+
+	for key in equipped_hearts.keys():
+		if key == name:
+			new_equipped_heart_count += num_to_equip
+		else:
+			new_equipped_heart_count += equipped_hearts[key]
+
+	if new_equipped_heart_count <= max_hearts:
+		equipped_hearts[name] = num_to_equip
+
+
+func add_player_to_team(new_player: String) -> void:
+	if new_player in valid_players and current_team.size() < max_team_size:
+		current_team.append(new_player)
+
+func remove_player_from_team(player_to_remove: String) -> void:
+	current_team.erase(player_to_remove)
+
+
+func set_player_character(character) -> void :
+	match character:
+		"Player":
+			player_count = 0
+		"X":
+			player_count = 1
+		"Axl":
+			player_count = 2
+		"Zero":
+			player_count = 3
+		_:
+			player_count = 0
+	current_player_character = character;
+
+func assign_name_to_player_counter(count) -> void :
+	var _player_ins = _PLAYER.instance()
+	if count == 0:
+		_player_ins = _PLAYER.instance()
+	elif count == 1:
+		_player_ins = _X.instance()
+		if ultimate_x_armor:
+			_player_ins = _X_Ultimate.instance()
+	elif count == 2:
+		_player_ins = _Axl.instance()
+	elif count == 3:
+		_player_ins = _Zero.instance()
+	current_player_character = _player_ins.name
+	_player_ins.queue_free()
+
+func get_player_character_object(character_str) -> PackedScene:
+	match character_str:
+		"Player":
+			return _PLAYER
+		"X":
+			if ultimate_x_armor:
+				return _X_Ultimate
+			return _X
+		"Axl":
+			return _Axl
+		"Zero":
+			if betazero_activated:
+				return _Zero_Beta
+			return _Zero
+		_:
+			return _PLAYER
+
+func get_player_character_string() -> String:
+	return current_player_character
+
+#######
 
 var elevator_walls_y: float = 0.0
 var credits_seen: bool = false
@@ -72,7 +183,9 @@ const char_data: String = "user://char_data"
 func _save() -> void :
 	var save_data = {
 		"player_count": player_count, 
-		"player_character": player_character, 
+		"current_player_character": current_player_character, 
+		"current_team": current_team,
+		"equipped_hearts": equipped_hearts,
 		"credits_seen": credits_seen, 
 		
 		"new_game": new_game, 
@@ -106,7 +219,9 @@ func _load() -> void :
 		
 		if typeof(save_data) == TYPE_DICTIONARY:
 			player_count = int(save_data.get("player_count", 1))
-			player_character = save_data.get("player_character", "X")
+			current_player_character = save_data.get("current_player_character", "X")
+			current_team = save_data.get("current_team", ["X"])
+			equipped_hearts = save_data.get("equipped_hearts", {"X": 0, "Zero": 0, "Axl": 0})
 			credits_seen = bool(save_data.get("credits_seen", false))
 			
 			new_game = bool(save_data.get("new_game", true))
@@ -167,11 +282,12 @@ func _ready() -> void :
 
 	set_process(true)
 	pause_mode = PAUSE_MODE_PROCESS
+	Event.listen("character_switch_end", self, "on_character_switch_end")
 
 func _process(_delta: float) -> void :
 	if started_fresh_game:
 		if game_mode >= 3:
-			if player_character != "Zero":
+			if current_player_character != "Zero":
 				only_zero = false
 
 
@@ -287,56 +403,6 @@ func clear_hearttanks() -> void :
 	GameManager.remove_collectible_from_savedata("life_up_antonion")
 	GameManager.remove_collectible_from_savedata("life_up_mantis")
 
-
-
-func set_player_character(character) -> void :
-	match character:
-		"Player":
-			player_count = 0
-		"X":
-			player_count = 1
-		"Axl":
-			player_count = 2
-		"Zero":
-			player_count = 3
-		_:
-			player_count = 0
-	player_character = character;
-
-func assign_name_to_player_counter(count) -> void :
-	var _player_ins = _PLAYER.instance()
-	if count == 0:
-		_player_ins = _PLAYER.instance()
-	elif count == 1:
-		_player_ins = _X.instance()
-		if ultimate_x_armor:
-			_player_ins = _X_Ultimate.instance()
-	elif count == 2:
-		_player_ins = _Axl.instance()
-	elif count == 3:
-		_player_ins = _Zero.instance()
-	player_character = _player_ins.name
-	_player_ins.queue_free()
-
-func get_player_character_object() -> PackedScene:
-	match player_character:
-		"Player":
-			return _PLAYER
-		"X":
-			if ultimate_x_armor:
-				return _X_Ultimate
-			return _X
-		"Axl":
-			return _Axl
-		"Zero":
-			if betazero_activated:
-				return _Zero_Beta
-			return _Zero
-		_:
-			return _PLAYER
-
-func get_player_character_string() -> String:
-	return player_character
 
 func unlocked_boss_weapon() -> bool:
 	if is_instance_valid(GameManager.player):
@@ -1143,132 +1209,132 @@ func process_res_file_include(input_res_path: String, new_texture_path: String, 
 func _set_correct_dialogues(dialog_starter, dialogue) -> Resource:
 	var _dialog = dialogue
 	if dialog_starter == "StartCutscene":
-		if player_character == "Zero":
+		if current_player_character == "Zero":
 			_dialog = load("res://Zero_mod/DialogSystem/Dialogs/Stages/Intro_Dialogue.tres")
-		if player_character == "Axl":
+		if current_player_character == "Axl":
 			_dialog = load("res://Axl_mod/DialogSystem/Dialogs/Stages/Intro_Dialogue.tres")
 			
 	if dialog_starter == "INTRO_1":
-		if player_character == "Zero":
+		if current_player_character == "Zero":
 			_dialog = load("res://Zero_mod/DialogSystem/Dialogs/Stages/Intro_Dialogue_2.tres")
-		if player_character == "Axl":
+		if current_player_character == "Axl":
 			_dialog = load("res://Axl_mod/DialogSystem/Dialogs/Stages/Intro_Dialogue_2.tres")
 	if dialog_starter == "INTRO_2":
-		if player_character == "Zero":
+		if current_player_character == "Zero":
 			_dialog = load("res://Zero_mod/DialogSystem/Dialogs/Stages/Intro_Dialogue_3.tres")
-		if player_character == "Axl":
+		if current_player_character == "Axl":
 			_dialog = load("res://Axl_mod/DialogSystem/Dialogs/Stages/Intro_Dialogue_3.tres")
 	if dialog_starter == "INTRO_3":
-		if player_character == "Zero":
+		if current_player_character == "Zero":
 			_dialog = load("res://Zero_mod/DialogSystem/Dialogs/Stages/Intro_Dialogue_4.tres")
-		if player_character == "Axl":
+		if current_player_character == "Axl":
 			_dialog = load("res://Axl_mod/DialogSystem/Dialogs/Stages/Intro_Dialogue_4.tres")
 	if dialog_starter == "INTRO_4":
-		if player_character == "Zero":
+		if current_player_character == "Zero":
 			_dialog = load("res://Zero_mod/DialogSystem/Dialogs/Stages/Intro_Dialogue_5.tres")
-		if player_character == "Axl":
+		if current_player_character == "Axl":
 			_dialog = load("res://Axl_mod/DialogSystem/Dialogs/Stages/Intro_Dialogue_5.tres")
 
 	if dialog_starter == "Antonion":
-		if player_character == "Zero":
+		if current_player_character == "Zero":
 			_dialog = load("res://Zero_mod/DialogSystem/Dialogs/Stages/Antonion_Dialogue.tres")
-		if player_character == "Axl":
+		if current_player_character == "Axl":
 			_dialog = load("res://Axl_mod/DialogSystem/Dialogs/Stages/Antonion_Dialogue.tres")
 	if dialog_starter == "Manowar":
-		if player_character == "Zero":
+		if current_player_character == "Zero":
 			_dialog = load("res://Zero_mod/DialogSystem/Dialogs/Stages/Manowar_Dialogue.tres")
-		if player_character == "Axl":
+		if current_player_character == "Axl":
 			_dialog = load("res://Axl_mod/DialogSystem/Dialogs/Stages/Manowar_Dialogue.tres")
 	if dialog_starter == "Mantis":
-		if player_character == "Zero":
+		if current_player_character == "Zero":
 			_dialog = load("res://Zero_mod/DialogSystem/Dialogs/Stages/Mantis_Dialogue.tres")
-		if player_character == "Axl":
+		if current_player_character == "Axl":
 			_dialog = load("res://Axl_mod/DialogSystem/Dialogs/Stages/Mantis_Dialogue.tres")
 	if dialog_starter == "Panda":
-		if player_character == "Zero":
+		if current_player_character == "Zero":
 			_dialog = load("res://Zero_mod/DialogSystem/Dialogs/Stages/Panda_Dialogue.tres")
-		if player_character == "Axl":
+		if current_player_character == "Axl":
 			_dialog = load("res://Axl_mod/DialogSystem/Dialogs/Stages/Panda_Dialogue.tres")
 	if dialog_starter == "Rooster":
-		if player_character == "Zero":
+		if current_player_character == "Zero":
 			_dialog = load("res://Zero_mod/DialogSystem/Dialogs/Stages/Rooster_Dialogue.tres")
-		if player_character == "Axl":
+		if current_player_character == "Axl":
 			_dialog = load("res://Axl_mod/DialogSystem/Dialogs/Stages/Rooster_Dialogue.tres")
 	if dialog_starter == "Sunflower":
-		if player_character == "Zero":
+		if current_player_character == "Zero":
 			_dialog = load("res://Zero_mod/DialogSystem/Dialogs/Stages/Sunflower_Dialogue.tres")
-		if player_character == "Axl":
+		if current_player_character == "Axl":
 			_dialog = load("res://Axl_mod/DialogSystem/Dialogs/Stages/Sunflower_Dialogue.tres")
 	if dialog_starter == "Trilobyte":
-		if player_character == "Zero":
+		if current_player_character == "Zero":
 			_dialog = load("res://Zero_mod/DialogSystem/Dialogs/Stages/Trilobyte_Dialogue.tres")
-		if player_character == "Axl":
+		if current_player_character == "Axl":
 			_dialog = load("res://Axl_mod/DialogSystem/Dialogs/Stages/Trilobyte_Dialogue.tres")
 	if dialog_starter == "Yeti":
-		if player_character == "Zero":
+		if current_player_character == "Zero":
 			_dialog = load("res://Zero_mod/DialogSystem/Dialogs/Stages/Yeti_Dialogue.tres")
-		if player_character == "Axl":
+		if current_player_character == "Axl":
 			_dialog = load("res://Axl_mod/DialogSystem/Dialogs/Stages/Yeti_Dialogue.tres")
 	
 	if dialog_starter == "Vile Booster Forest":
-		if player_character == "Zero":
+		if current_player_character == "Zero":
 			_dialog = load("res://Zero_mod/DialogSystem/Dialogs/Stages/Vile_miniboss_Dialogue.tres")
-		if player_character == "Axl":
+		if current_player_character == "Axl":
 			_dialog = load("res://Axl_mod/DialogSystem/Dialogs/Stages/Vile_miniboss_Dialogue.tres")
 	if dialog_starter == "Vile Primrose":
-		if player_character == "Zero":
+		if current_player_character == "Zero":
 			_dialog = load("res://Zero_mod/DialogSystem/Dialogs/Stages/Vile_antonion_Dialogue.tres")
-		if player_character == "Axl":
+		if current_player_character == "Axl":
 			_dialog = load("res://Axl_mod/DialogSystem/Dialogs/Stages/Vile_antonion_Dialogue.tres")
 	if dialog_starter == "Vile":
-		if player_character == "Zero":
+		if current_player_character == "Zero":
 			_dialog = load("res://Zero_mod/DialogSystem/Dialogs/Stages/Vile_jakob_Dialogue.tres")
-		if player_character == "Axl":
+		if current_player_character == "Axl":
 			_dialog = load("res://Axl_mod/DialogSystem/Dialogs/Stages/Vile_jakob_Dialogue.tres")
 	if dialog_starter == "Vile Final":
-		if player_character == "Zero":
+		if current_player_character == "Zero":
 			_dialog = load("res://Zero_mod/DialogSystem/Dialogs/Stages/Vile_final_Dialogue.tres")
-		if player_character == "Axl":
+		if current_player_character == "Axl":
 			_dialog = load("res://Axl_mod/DialogSystem/Dialogs/Stages/Vile_final_Dialogue.tres")
 	
 	if dialog_starter == "CopySigma":
-		if player_character == "Zero":
+		if current_player_character == "Zero":
 			_dialog = load("res://Zero_mod/DialogSystem/Dialogs/Stages/CopySigma_Dialogue.tres")
-		if player_character == "Axl":
+		if current_player_character == "Axl":
 			_dialog = load("res://Axl_mod/DialogSystem/Dialogs/Stages/CopySigma_Dialogue.tres")
 			
 	if dialog_starter == "Sigma":
-		if player_character == "Zero":
+		if current_player_character == "Zero":
 			_dialog = load("res://Zero_mod/DialogSystem/Dialogs/Stages/Sigma_Dialogue.tres")
-		if player_character == "Axl":
+		if current_player_character == "Axl":
 			_dialog = load("res://Axl_mod/DialogSystem/Dialogs/Stages/Sigma_Dialogue.tres")
 			
 	if dialog_starter == "Lumine":
-		if player_character == "Zero":
+		if current_player_character == "Zero":
 			_dialog = load("res://Zero_mod/DialogSystem/Dialogs/Stages/Lumine_Dialogue.tres")
-		if player_character == "Axl":
+		if current_player_character == "Axl":
 			_dialog = load("res://Axl_mod/DialogSystem/Dialogs/Stages/Lumine_Dialogue.tres")
 			
 			
 	if dialog_starter == "Secret1":
-		if player_character == "Zero":
+		if current_player_character == "Zero":
 			_dialog = load("res://Zero_mod/DialogSystem/Dialogs/Stages/Secret3_Dialogue.tres")
-		if player_character == "Axl":
+		if current_player_character == "Axl":
 			_dialog = load("res://Axl_mod/DialogSystem/Dialogs/Stages/Secret3_Dialogue.tres")
 	if dialog_starter == "Secret1Defeated":
-		if player_character == "Zero":
+		if current_player_character == "Zero":
 			_dialog = load("res://Zero_mod/DialogSystem/Dialogs/Stages/Secret3_Def_Dialogue.tres")
-		if player_character == "Axl":
+		if current_player_character == "Axl":
 			_dialog = load("res://Axl_mod/DialogSystem/Dialogs/Stages/Secret3_Def_Dialogue.tres")
 			
 	if dialog_starter == "Secret2":
-		if player_character == "Zero":
+		if current_player_character == "Zero":
 			_dialog = load("res://Zero_mod/DialogSystem/Dialogs/Stages/Secret2_Dialogue.tres")
-		if player_character == "Axl":
+		if current_player_character == "Axl":
 			_dialog = load("res://Axl_mod/DialogSystem/Dialogs/Stages/Secret2_Dialogue.tres")
 	if dialog_starter == "Secret2Defeated":
-		if player_character == "Zero":
+		if current_player_character == "Zero":
 			_dialog = load("res://Zero_mod/DialogSystem/Dialogs/Stages/Secret2_Def_Dialogue.tres")
-		if player_character == "Axl":
+		if current_player_character == "Axl":
 			_dialog = load("res://Axl_mod/DialogSystem/Dialogs/Stages/Secret2_Def_Dialogue.tres")
 	return _dialog

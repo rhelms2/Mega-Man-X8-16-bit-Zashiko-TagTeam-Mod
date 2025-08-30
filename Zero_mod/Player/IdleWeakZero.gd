@@ -15,8 +15,8 @@ func _on_animatedSprite_animation_finished() -> void :
 			character.set_animation("recover")
 		
 		if character.saber_node.current_weapon.name == "B-Fan":
-			fanshield.activate()
 			character.play_animation("idle")
+			fanshield.activate()
 
 func is_playing_recover() -> bool:
 	return character.get_animation() == "recover"

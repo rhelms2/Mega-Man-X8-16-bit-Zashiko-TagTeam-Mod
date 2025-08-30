@@ -1,6 +1,6 @@
 [gd_scene load_steps=36 format=2]
 
-[ext_resource path="res://src/Fonts/xclassicfontfinal.fnt" type="BitmapFont" id=1]
+[ext_resource path="res://src/Fonts/Xclassicfont.fnt" type="BitmapFont" id=1]
 [ext_resource path="res://src/Fonts/X8Bossfont.fnt" type="BitmapFont" id=2]
 [ext_resource path="res://src/Options/Language.gd" type="Script" id=3]
 [ext_resource path="res://src/Options/Highlighter.gd" type="Script" id=4]
@@ -73,7 +73,7 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -44.5
-margin_top = -4.0
+margin_top = -7.0
 margin_right = 44.5
 margin_bottom = 9.0
 custom_colors/font_color_shadow = Color( 0.372549, 0.372549, 0.372549, 1 )
@@ -89,7 +89,7 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -61.0
-margin_top = -4.0
+margin_top = -7.0
 margin_right = 60.0
 margin_bottom = 9.0
 custom_colors/font_color_shadow = Color( 0.372549, 0.372549, 0.372549, 1 )
@@ -100,17 +100,15 @@ uppercase = true
 
 [node name="scrollContainer" type="ScrollContainer" parent="Menu"]
 margin_left = 96.0
-margin_top = 28.0
+margin_top = 31.0
 margin_right = 346.0
-margin_bottom = 198.0
+margin_bottom = 194.0
 theme = ExtResource( 18 )
 follow_focus = true
-scroll_vertical = 60
 
 [node name="OptionHolder" type="VBoxContainer" parent="Menu/scrollContainer"]
-margin_top = -60.0
 margin_right = 200.0
-margin_bottom = 170.0
+margin_bottom = 219.0
 grow_horizontal = 2
 custom_constants/separation = 3
 
@@ -129,7 +127,7 @@ focus_color = Color( 0.984314, 1, 0.686275, 1 )
 modulate = Color( 0.407843, 0.792157, 1, 1 )
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_top = -6.0
+margin_top = -9.0
 margin_right = 92.0
 margin_bottom = 5.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
@@ -161,7 +159,7 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 margin_left = -135.0
-margin_top = -4.0
+margin_top = -7.0
 margin_bottom = 7.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
 custom_constants/shadow_offset_x = 1
@@ -188,7 +186,7 @@ focus_color = Color( 0.984314, 1, 0.686275, 1 )
 modulate = Color( 0.407843, 0.792157, 1, 1 )
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_top = -6.0
+margin_top = -9.0
 margin_right = 92.0
 margin_bottom = 5.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
@@ -219,7 +217,7 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 margin_left = -135.0
-margin_top = -4.0
+margin_top = -7.0
 margin_bottom = 7.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
 custom_constants/shadow_offset_x = 1
@@ -231,6 +229,7 @@ valign = 1
 uppercase = true
 
 [node name="RemixMusic" type="Control" parent="Menu/scrollContainer/OptionHolder"]
+visible = false
 margin_top = 22.0
 margin_right = 200.0
 margin_bottom = 30.0
@@ -246,7 +245,7 @@ focus_color = Color( 0.984314, 1, 0.686275, 1 )
 modulate = Color( 0.407843, 0.792157, 1, 1 )
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_top = -6.0
+margin_top = -9.0
 margin_right = 92.0
 margin_bottom = 5.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
@@ -277,7 +276,7 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 margin_left = -135.0
-margin_top = -4.0
+margin_top = -7.0
 margin_bottom = 7.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
 custom_constants/shadow_offset_x = 1
@@ -289,9 +288,9 @@ valign = 1
 uppercase = true
 
 [node name="Dash Command" type="Control" parent="Menu/scrollContainer/OptionHolder"]
-margin_top = 33.0
+margin_top = 22.0
 margin_right = 200.0
-margin_bottom = 41.0
+margin_bottom = 30.0
 rect_min_size = Vector2( 200, 8 )
 size_flags_horizontal = 0
 script = ExtResource( 4 )
@@ -304,7 +303,7 @@ focus_color = Color( 0.984314, 1, 0.686275, 1 )
 modulate = Color( 0.407843, 0.792157, 1, 1 )
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_top = -6.0
+margin_top = -9.0
 margin_right = 92.0
 margin_bottom = 5.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
@@ -335,7 +334,7 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 margin_left = -135.0
-margin_top = -4.0
+margin_top = -7.0
 margin_bottom = 7.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
 custom_constants/shadow_offset_x = 1
@@ -347,9 +346,9 @@ valign = 1
 uppercase = true
 
 [node name="Skip Dialogs" type="Control" parent="Menu/scrollContainer/OptionHolder"]
-margin_top = 44.0
+margin_top = 33.0
 margin_right = 200.0
-margin_bottom = 52.0
+margin_bottom = 41.0
 rect_min_size = Vector2( 200, 8 )
 size_flags_horizontal = 0
 script = ExtResource( 4 )
@@ -362,7 +361,7 @@ focus_color = Color( 0.984314, 1, 0.686275, 1 )
 modulate = Color( 0.407843, 0.792157, 1, 1 )
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_top = -6.0
+margin_top = -9.0
 margin_right = 92.0
 margin_bottom = 5.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
@@ -393,7 +392,7 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 margin_left = -135.0
-margin_top = -4.0
+margin_top = -7.0
 margin_bottom = 7.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
 custom_constants/shadow_offset_x = 1
@@ -405,9 +404,9 @@ valign = 1
 uppercase = true
 
 [node name="Charge Fadeout" type="Control" parent="Menu/scrollContainer/OptionHolder"]
-margin_top = 55.0
+margin_top = 44.0
 margin_right = 200.0
-margin_bottom = 63.0
+margin_bottom = 52.0
 rect_min_size = Vector2( 200, 8 )
 size_flags_horizontal = 0
 script = ExtResource( 4 )
@@ -420,7 +419,7 @@ focus_color = Color( 0.984314, 1, 0.686275, 1 )
 modulate = Color( 0.407843, 0.792157, 1, 1 )
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_top = -6.0
+margin_top = -9.0
 margin_right = 92.0
 margin_bottom = 5.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
@@ -451,7 +450,7 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 margin_left = -135.0
-margin_top = -4.0
+margin_top = -7.0
 margin_bottom = 7.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
 custom_constants/shadow_offset_x = 1
@@ -463,9 +462,9 @@ valign = 1
 uppercase = true
 
 [node name="Show Achiev" type="Control" parent="Menu/scrollContainer/OptionHolder"]
-margin_top = 66.0
+margin_top = 55.0
 margin_right = 200.0
-margin_bottom = 74.0
+margin_bottom = 63.0
 rect_min_size = Vector2( 200, 8 )
 size_flags_horizontal = 0
 script = ExtResource( 4 )
@@ -478,7 +477,7 @@ focus_color = Color( 0.984314, 1, 0.686275, 1 )
 modulate = Color( 0.407843, 0.792157, 1, 1 )
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_top = -6.0
+margin_top = -9.0
 margin_right = 92.0
 margin_bottom = 5.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
@@ -509,7 +508,7 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 margin_left = -135.0
-margin_top = -4.0
+margin_top = -7.0
 margin_bottom = 7.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
 custom_constants/shadow_offset_x = 1
@@ -521,9 +520,9 @@ valign = 1
 uppercase = true
 
 [node name="Music Volume" type="Control" parent="Menu/scrollContainer/OptionHolder"]
-margin_top = 77.0
+margin_top = 66.0
 margin_right = 200.0
-margin_bottom = 85.0
+margin_bottom = 74.0
 rect_min_size = Vector2( 200, 8 )
 size_flags_horizontal = 0
 script = ExtResource( 4 )
@@ -536,7 +535,7 @@ focus_color = Color( 0.984314, 1, 0.686275, 1 )
 modulate = Color( 0.407843, 0.792157, 1, 1 )
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_top = -6.0
+margin_top = -9.0
 margin_right = 92.0
 margin_bottom = 5.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
@@ -567,7 +566,7 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 margin_left = -135.0
-margin_top = -4.0
+margin_top = -7.0
 margin_bottom = 7.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
 custom_constants/shadow_offset_x = 1
@@ -579,9 +578,9 @@ valign = 1
 uppercase = true
 
 [node name="Sound Volume" type="Control" parent="Menu/scrollContainer/OptionHolder"]
-margin_top = 88.0
+margin_top = 77.0
 margin_right = 200.0
-margin_bottom = 96.0
+margin_bottom = 85.0
 rect_min_size = Vector2( 200, 8 )
 size_flags_horizontal = 0
 script = ExtResource( 4 )
@@ -594,7 +593,7 @@ focus_color = Color( 0.984314, 1, 0.686275, 1 )
 modulate = Color( 0.407843, 0.792157, 1, 1 )
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_top = -6.0
+margin_top = -9.0
 margin_right = 92.0
 margin_bottom = 5.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
@@ -626,7 +625,7 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 margin_left = -135.0
-margin_top = -4.0
+margin_top = -7.0
 margin_bottom = 7.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
 custom_constants/shadow_offset_x = 1
@@ -638,9 +637,9 @@ valign = 1
 uppercase = true
 
 [node name="Vsync" type="Control" parent="Menu/scrollContainer/OptionHolder"]
-margin_top = 99.0
+margin_top = 88.0
 margin_right = 200.0
-margin_bottom = 107.0
+margin_bottom = 96.0
 rect_min_size = Vector2( 200, 8 )
 size_flags_horizontal = 0
 script = ExtResource( 4 )
@@ -653,7 +652,7 @@ focus_color = Color( 0.984314, 1, 0.686275, 1 )
 modulate = Color( 0.407843, 0.792157, 1, 1 )
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_top = -6.0
+margin_top = -9.0
 margin_right = 92.0
 margin_bottom = 5.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
@@ -684,7 +683,7 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 margin_left = -135.0
-margin_top = -4.0
+margin_top = -7.0
 margin_bottom = 7.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
 custom_constants/shadow_offset_x = 1
@@ -696,9 +695,9 @@ valign = 1
 uppercase = true
 
 [node name="FPS" type="Control" parent="Menu/scrollContainer/OptionHolder"]
-margin_top = 110.0
+margin_top = 99.0
 margin_right = 200.0
-margin_bottom = 118.0
+margin_bottom = 107.0
 rect_min_size = Vector2( 200, 8 )
 size_flags_horizontal = 0
 script = ExtResource( 4 )
@@ -711,7 +710,7 @@ focus_color = Color( 0.984314, 1, 0.686275, 1 )
 modulate = Color( 0.407843, 0.792157, 1, 1 )
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_top = -6.0
+margin_top = -9.0
 margin_right = 92.0
 margin_bottom = 5.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
@@ -742,7 +741,7 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 margin_left = -135.0
-margin_top = -4.0
+margin_top = -7.0
 margin_bottom = 7.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
 custom_constants/shadow_offset_x = 1
@@ -754,9 +753,9 @@ valign = 1
 uppercase = true
 
 [node name="FPS Physics" type="Control" parent="Menu/scrollContainer/OptionHolder"]
-margin_top = 121.0
+margin_top = 110.0
 margin_right = 200.0
-margin_bottom = 129.0
+margin_bottom = 118.0
 rect_min_size = Vector2( 200, 8 )
 size_flags_horizontal = 0
 script = ExtResource( 4 )
@@ -769,7 +768,7 @@ focus_color = Color( 0.984314, 1, 0.686275, 1 )
 modulate = Color( 0.407843, 0.792157, 1, 1 )
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_top = -6.0
+margin_top = -9.0
 margin_right = 92.0
 margin_bottom = 5.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
@@ -800,7 +799,7 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 margin_left = -135.0
-margin_top = -4.0
+margin_top = -7.0
 margin_bottom = 7.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
 custom_constants/shadow_offset_x = 1
@@ -812,9 +811,9 @@ valign = 1
 uppercase = true
 
 [node name="Window Size" type="Control" parent="Menu/scrollContainer/OptionHolder"]
-margin_top = 132.0
+margin_top = 121.0
 margin_right = 200.0
-margin_bottom = 140.0
+margin_bottom = 129.0
 rect_min_size = Vector2( 200, 8 )
 size_flags_horizontal = 0
 script = ExtResource( 4 )
@@ -827,7 +826,7 @@ focus_color = Color( 0.984314, 1, 0.686275, 1 )
 modulate = Color( 0.407843, 0.792157, 1, 1 )
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_top = -6.0
+margin_top = -9.0
 margin_right = 92.0
 margin_bottom = 5.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
@@ -858,7 +857,7 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 margin_left = -135.0
-margin_top = -4.0
+margin_top = -7.0
 margin_bottom = 7.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
 custom_constants/shadow_offset_x = 1
@@ -870,9 +869,9 @@ valign = 1
 uppercase = true
 
 [node name="Fullscreen" type="Control" parent="Menu/scrollContainer/OptionHolder"]
-margin_top = 143.0
+margin_top = 132.0
 margin_right = 200.0
-margin_bottom = 151.0
+margin_bottom = 140.0
 rect_min_size = Vector2( 200, 8 )
 size_flags_horizontal = 0
 script = ExtResource( 4 )
@@ -885,7 +884,7 @@ focus_color = Color( 0.984314, 1, 0.686275, 1 )
 modulate = Color( 0.407843, 0.792157, 1, 1 )
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_top = -6.0
+margin_top = -9.0
 margin_right = 92.0
 margin_bottom = 5.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
@@ -916,7 +915,7 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 margin_left = -135.0
-margin_top = -4.0
+margin_top = -7.0
 margin_bottom = 7.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
 custom_constants/shadow_offset_x = 1
@@ -928,9 +927,9 @@ valign = 1
 uppercase = true
 
 [node name="Stretch Mode" type="Control" parent="Menu/scrollContainer/OptionHolder"]
-margin_top = 154.0
+margin_top = 143.0
 margin_right = 200.0
-margin_bottom = 162.0
+margin_bottom = 151.0
 rect_min_size = Vector2( 200, 8 )
 size_flags_horizontal = 0
 script = ExtResource( 4 )
@@ -943,7 +942,7 @@ focus_color = Color( 0.984314, 1, 0.686275, 1 )
 modulate = Color( 0.407843, 0.792157, 1, 1 )
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_top = -6.0
+margin_top = -9.0
 margin_right = 92.0
 margin_bottom = 5.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
@@ -974,7 +973,7 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 margin_left = -135.0
-margin_top = -4.0
+margin_top = -7.0
 margin_bottom = 7.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
 custom_constants/shadow_offset_x = 1
@@ -986,9 +985,9 @@ valign = 1
 uppercase = true
 
 [node name="CRT" type="Control" parent="Menu/scrollContainer/OptionHolder"]
-margin_top = 165.0
+margin_top = 154.0
 margin_right = 200.0
-margin_bottom = 173.0
+margin_bottom = 162.0
 rect_min_size = Vector2( 200, 8 )
 size_flags_horizontal = 0
 script = ExtResource( 4 )
@@ -1001,7 +1000,7 @@ focus_color = Color( 0.984314, 1, 0.686275, 1 )
 modulate = Color( 0.407843, 0.792157, 1, 1 )
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_top = -6.0
+margin_top = -9.0
 margin_right = 92.0
 margin_bottom = 5.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
@@ -1032,7 +1031,7 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 margin_left = -135.0
-margin_top = -4.0
+margin_top = -7.0
 margin_bottom = 7.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
 custom_constants/shadow_offset_x = 1
@@ -1044,9 +1043,9 @@ valign = 1
 uppercase = true
 
 [node name="SkipGateway" type="Control" parent="Menu/scrollContainer/OptionHolder"]
-margin_top = 176.0
+margin_top = 165.0
 margin_right = 200.0
-margin_bottom = 184.0
+margin_bottom = 173.0
 rect_min_size = Vector2( 200, 8 )
 size_flags_horizontal = 0
 script = ExtResource( 4 )
@@ -1059,7 +1058,7 @@ focus_color = Color( 0.984314, 1, 0.686275, 1 )
 modulate = Color( 0.407843, 0.792157, 1, 1 )
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_top = -6.0
+margin_top = -9.0
 margin_right = 92.0
 margin_bottom = 5.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
@@ -1090,7 +1089,7 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 margin_left = -135.0
-margin_top = -4.0
+margin_top = -7.0
 margin_bottom = 7.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
 custom_constants/shadow_offset_x = 1
@@ -1102,9 +1101,9 @@ valign = 1
 uppercase = true
 
 [node name="ShowIGT" type="Control" parent="Menu/scrollContainer/OptionHolder"]
-margin_top = 187.0
+margin_top = 176.0
 margin_right = 200.0
-margin_bottom = 195.0
+margin_bottom = 184.0
 rect_min_size = Vector2( 200, 8 )
 size_flags_horizontal = 0
 script = ExtResource( 4 )
@@ -1117,7 +1116,7 @@ focus_color = Color( 0.984314, 1, 0.686275, 1 )
 modulate = Color( 0.407843, 0.792157, 1, 1 )
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_top = -6.0
+margin_top = -9.0
 margin_right = 92.0
 margin_bottom = 5.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
@@ -1148,7 +1147,7 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 margin_left = -135.0
-margin_top = -4.0
+margin_top = -7.0
 margin_bottom = 7.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
 custom_constants/shadow_offset_x = 1
@@ -1161,9 +1160,9 @@ uppercase = true
 
 [node name="ShowDebug" type="Control" parent="Menu/scrollContainer/OptionHolder"]
 visible = false
-margin_top = 198.0
+margin_top = 165.0
 margin_right = 200.0
-margin_bottom = 206.0
+margin_bottom = 173.0
 rect_min_size = Vector2( 200, 8 )
 size_flags_horizontal = 0
 script = ExtResource( 4 )
@@ -1176,7 +1175,7 @@ focus_color = Color( 0.984314, 1, 0.686275, 1 )
 modulate = Color( 0.407843, 0.792157, 1, 1 )
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_top = -6.0
+margin_top = -9.0
 margin_right = 92.0
 margin_bottom = 5.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
@@ -1207,7 +1206,7 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 margin_left = -135.0
-margin_top = -4.0
+margin_top = -7.0
 margin_bottom = 7.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
 custom_constants/shadow_offset_x = 1
@@ -1221,9 +1220,9 @@ uppercase = true
 [node name="exittomainmenu" type="TextureButton" parent="Menu/scrollContainer/OptionHolder"]
 modulate = Color( 0.407843, 0.792157, 1, 1 )
 self_modulate = Color( 1, 1, 1, 0 )
-margin_top = 198.0
+margin_top = 187.0
 margin_right = 200.0
-margin_bottom = 206.0
+margin_bottom = 195.0
 rect_min_size = Vector2( 200, 8 )
 action_mode = 0
 script = ExtResource( 33 )
@@ -1235,7 +1234,7 @@ default_label = "EXIT_MAINMENU"
 [node name="text" type="Label" parent="Menu/scrollContainer/OptionHolder/exittomainmenu"]
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_top = -4.0
+margin_top = -7.0
 margin_right = 189.0
 margin_bottom = 7.0
 rect_min_size = Vector2( 200, 0 )
@@ -1251,9 +1250,9 @@ uppercase = true
 visible = false
 modulate = Color( 0.0745098, 0.466667, 0.0745098, 1 )
 self_modulate = Color( 1, 1, 1, 0 )
-margin_top = 220.0
+margin_top = 187.0
 margin_right = 200.0
-margin_bottom = 228.0
+margin_bottom = 195.0
 rect_min_size = Vector2( 200, 8 )
 action_mode = 0
 script = ExtResource( 31 )
@@ -1265,7 +1264,7 @@ confirmation = "CLEARSAVE_CONFIRM"
 [node name="text" type="Label" parent="Menu/scrollContainer/OptionHolder/newgameplus"]
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_top = -4.0
+margin_top = -7.0
 margin_right = 200.0
 margin_bottom = 7.0
 rect_min_size = Vector2( 200, 0 )
@@ -1280,9 +1279,9 @@ uppercase = true
 [node name="clearsave" type="TextureButton" parent="Menu/scrollContainer/OptionHolder"]
 modulate = Color( 0.466667, 0.0745098, 0.0745098, 1 )
 self_modulate = Color( 1, 1, 1, 0 )
-margin_top = 209.0
+margin_top = 198.0
 margin_right = 200.0
-margin_bottom = 217.0
+margin_bottom = 206.0
 rect_min_size = Vector2( 0, 8 )
 action_mode = 0
 script = ExtResource( 16 )
@@ -1293,7 +1292,7 @@ menu_path = NodePath("../../../..")
 [node name="text" type="Label" parent="Menu/scrollContainer/OptionHolder/clearsave"]
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_top = -5.0
+margin_top = -7.0
 margin_right = 189.0
 margin_bottom = 7.0
 rect_min_size = Vector2( 200, 0 )
@@ -1308,9 +1307,9 @@ uppercase = true
 [node name="clearachiev" type="TextureButton" parent="Menu/scrollContainer/OptionHolder"]
 modulate = Color( 0.466667, 0.0745098, 0.0745098, 1 )
 self_modulate = Color( 1, 1, 1, 0 )
-margin_top = 220.0
+margin_top = 209.0
 margin_right = 200.0
-margin_bottom = 230.0
+margin_bottom = 219.0
 rect_min_size = Vector2( 0, 10 )
 action_mode = 0
 script = ExtResource( 23 )
@@ -1360,7 +1359,7 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 margin_left = -30.5
-margin_top = -4.0
+margin_top = -7.0
 margin_right = 30.5
 margin_bottom = 7.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
@@ -1405,15 +1404,9 @@ bus = "SFX"
 [connection signal="mouse_entered" from="Menu/scrollContainer/OptionHolder/Language/Button" to="Menu/scrollContainer/OptionHolder/Language/Button" method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="Menu/scrollContainer/OptionHolder/Language/Button" to="Menu/scrollContainer/OptionHolder/Language/Button" method="_on_mouse_exited"]
 [connection signal="pressed" from="Menu/scrollContainer/OptionHolder/Language/Button" to="Menu/scrollContainer/OptionHolder/Language/Button" method="_on_pressed"]
-[connection signal="translation_updated" from="Menu/scrollContainer/OptionHolder/Language/Button" to="Menu/scrollContainer/OptionHolder/BossThemeRemix/Button" method="display"]
-[connection signal="translation_updated" from="Menu/scrollContainer/OptionHolder/Language/Button" to="Menu/scrollContainer/OptionHolder/RemixMusic/Button" method="display"]
 [connection signal="translation_updated" from="Menu/scrollContainer/OptionHolder/Language/Button" to="Menu/scrollContainer/OptionHolder/Dash Command/Button" method="display_dash"]
-[connection signal="translation_updated" from="Menu/scrollContainer/OptionHolder/Language/Button" to="Menu/scrollContainer/OptionHolder/Charge Fadeout/Button" method="display_charge"]
-[connection signal="translation_updated" from="Menu/scrollContainer/OptionHolder/Language/Button" to="Menu/scrollContainer/OptionHolder/Show Achiev/Button" method="display_show_achievements"]
+[connection signal="translation_updated" from="Menu/scrollContainer/OptionHolder/Language/Button" to="Menu/scrollContainer/OptionHolder/Charge Fadeout/Button" method="display"]
 [connection signal="translation_updated" from="Menu/scrollContainer/OptionHolder/Language/Button" to="Menu/scrollContainer/OptionHolder/Fullscreen/Button" method="display"]
-[connection signal="translation_updated" from="Menu/scrollContainer/OptionHolder/Language/Button" to="Menu/scrollContainer/OptionHolder/Stretch Mode/Button" method="display_stretch_mode"]
-[connection signal="translation_updated" from="Menu/scrollContainer/OptionHolder/Language/Button" to="Menu/scrollContainer/OptionHolder/SkipGateway/Button" method="display"]
-[connection signal="translation_updated" from="Menu/scrollContainer/OptionHolder/Language/Button" to="Menu/scrollContainer/OptionHolder/ShowIGT/Button" method="display_igt"]
 [connection signal="translation_updated" from="Menu/scrollContainer/OptionHolder/Language/Button" to="Menu/scrollContainer/OptionHolder/ShowDebug/Button" method="display"]
 [connection signal="focus_entered" from="Menu/scrollContainer/OptionHolder/BossThemeRemix/Button" to="Menu/scrollContainer/OptionHolder/BossThemeRemix/Button" method="_on_focus_entered"]
 [connection signal="focus_exited" from="Menu/scrollContainer/OptionHolder/BossThemeRemix/Button" to="Menu/scrollContainer/OptionHolder/BossThemeRemix/Button" method="_on_focus_exited"]

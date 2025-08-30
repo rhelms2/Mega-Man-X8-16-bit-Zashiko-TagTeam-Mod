@@ -6,6 +6,9 @@ var char_name: String = ""
 
 
 func set_player() -> void :
+	for player in CharacterManager.valid_players:
+		CharacterManager.remove_player_from_team(player)
+	CharacterManager.add_player_to_team(char_name)
 	CharacterManager.set_player_character(char_name)
 	IGT.reset_rta()
 	IGT.should_run_rta = true
@@ -13,7 +16,7 @@ func set_player() -> void :
 func on_press() -> void :
 	CharacterManager.started_fresh_game = true
 	set_player()
-	if CharacterManager.player_character == "Zero":
+	if CharacterManager.current_player_character == "Zero":
 		CharacterManager.only_zero = true
 	get_node(pick_sound).play()
 	Event.emit_signal("fadeout_startmenu")

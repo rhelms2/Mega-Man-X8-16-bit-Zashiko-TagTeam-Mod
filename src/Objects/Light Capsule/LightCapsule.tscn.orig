@@ -1,0 +1,159 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://src/Objects/Capsule.gd" type="Script" id=1]
+[ext_resource path="res://src/Objects/Light Capsule/capsule.res" type="SpriteFrames" id=2]
+[ext_resource path="res://src/Sounds/55 - MMX - Electric Bolt.wav" type="AudioStream" id=3]
+[ext_resource path="res://src/Sounds/22 - MMX - Capsule Open.wav" type="AudioStream" id=4]
+[ext_resource path="res://src/Sounds/15 - MMX - X Powerup Infuse.wav" type="AudioStream" id=5]
+[ext_resource path="res://src/Sounds/16 - MMX - X Upgrade Complete.wav" type="AudioStream" id=6]
+[ext_resource path="res://src/Effects/Textures/capsule_beam.png" type="Texture" id=7]
+[ext_resource path="res://src/DialogSystem/Dialogs/Capsules/DefaultCapsuleDialogue.tres" type="Resource" id=8]
+[ext_resource path="res://src/Objects/Light Capsule/light.res" type="SpriteFrames" id=9]
+[ext_resource path="res://src/Objects/Light Capsule/drLight.gd" type="Script" id=10]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 24, 8 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 24, 12.5 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 16, 23 )
+
+[sub_resource type="RectangleShape2D" id=7]
+extents = Vector2( 24, 43.5 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 51, 42 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 2, 22 )
+
+[sub_resource type="ParticlesMaterial" id=5]
+emission_shape = 2
+emission_box_extents = Vector3( 16, 1, 1 )
+flag_disable_z = true
+direction = Vector3( 0, 1, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 100.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+
+[node name="Capsule" type="Node2D"]
+z_index = 10
+script = ExtResource( 1 )
+dialogue = ExtResource( 8 )
+
+[node name="drLight" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -36 )
+z_index = 4096
+z_as_relative = false
+frames = ExtResource( 9 )
+animation = "vanish"
+frame = 32
+script = ExtResource( 10 )
+
+[node name="animatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 0, -146 )
+frames = ExtResource( 2 )
+animation = "idle"
+<<<<<<< HEAD
+frame = 13
+=======
+frame = 1
+>>>>>>> source_private/main
+playing = true
+
+[node name="staticBody2D" type="StaticBody2D" parent="."]
+visible = false
+position = Vector2( 0, -146 )
+collision_mask = 0
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="staticBody2D"]
+position = Vector2( 0, 138 )
+shape = SubResource( 1 )
+
+[node name="staticBody2D2" type="StaticBody2D" parent="."]
+visible = false
+position = Vector2( 0, -146 )
+collision_mask = 0
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="staticBody2D2"]
+position = Vector2( 0, 71.5 )
+shape = SubResource( 2 )
+
+[node name="glass" type="StaticBody2D" parent="."]
+visible = false
+position = Vector2( 0, -121 )
+collision_mask = 0
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="glass"]
+position = Vector2( 0, 82 )
+shape = SubResource( 6 )
+
+[node name="rideblocker" type="StaticBody2D" parent="."]
+visible = false
+position = Vector2( 0, -121 )
+collision_layer = 536870912
+collision_mask = 0
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="rideblocker"]
+position = Vector2( 0, 77.5 )
+shape = SubResource( 7 )
+
+[node name="area2D" type="Area2D" parent="."]
+visible = false
+position = Vector2( 0, -146 )
+collision_layer = 0
+collision_mask = 2
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D"]
+position = Vector2( 0, 104 )
+shape = SubResource( 4 )
+
+[node name="area2D2" type="Area2D" parent="."]
+position = Vector2( 0, -146 )
+collision_layer = 0
+collision_mask = 2
+
+[node name="collisionShape2D" type="CollisionShape2D" parent="area2D2"]
+position = Vector2( 0, 107 )
+shape = SubResource( 3 )
+
+[node name="open" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
+volume_db = -8.0
+max_distance = 600.0
+bus = "SFX"
+
+[node name="charge" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 5 )
+volume_db = -8.0
+max_distance = 600.0
+bus = "SFX"
+
+[node name="thunder" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+volume_db = -8.0
+max_distance = 600.0
+bus = "SFX"
+
+[node name="victory" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
+volume_db = -8.0
+max_distance = 600.0
+bus = "SFX"
+
+[node name="particles2D" type="Particles2D" parent="."]
+position = Vector2( 0, -61 )
+z_index = -1
+emitting = false
+amount = 3
+lifetime = 0.5
+process_material = SubResource( 5 )
+texture = ExtResource( 7 )
+
+[connection signal="animation_finished" from="animatedSprite" to="." method="_on_animatedSprite_animation_finished"]
+[connection signal="body_entered" from="area2D" to="." method="_on_area2D_body_entered"]
+[connection signal="body_entered" from="area2D2" to="." method="_on_area2D2_body_entered"]

@@ -9,11 +9,12 @@ onready var chronometer: RichTextLabel = $Chronometer
 onready var boss_bar = $"Boss Bar"
 onready var boss_hp: TextureProgress = $"Boss Bar/textureProgress"
 
-
-onready var player_bar = $"X Bar"
-onready var player_hp: TextureProgress = $"X Bar/textureProgress"
-onready var player_healable: TextureProgress = $"X Bar/textureProgress2"
-
+onready var player_bar: Array = [$"X Bar", $"X Bar2"]
+onready var player_hp: Array = [$"X Bar/textureProgress", $"X Bar2/textureProgress"]
+onready var player_healable: = [$"X Bar/textureProgress2", $"X Bar2/textureProgress2"]
+onready var active_hp_bar = $"X Bar"
+onready var inactive_hp_bar = $"X Bar2"
+onready var active_index = 0
 
 onready var ride_bar: NinePatchRect = $"Ride Bar"
 onready var ride_hp: TextureProgress = $"Ride Bar/textureProgress"
@@ -41,6 +42,7 @@ var chronotimer := 0.0
 var last_message
 
 var ride_hp_tween : SceneTreeTween
+var char_switch_hp_tween : SceneTreeTween
 
 func show_rng():
 	rec_info.text = "BossRNG: " + str(BossRNG.seed_rng)
@@ -63,6 +65,7 @@ func _ready() -> void:
 	Event.listen("final_fade_out",self,"start_final_fade_out")
 	Event.listen("new_camera_focus",self,"change_camera_focus")
 	Event.connect("beat_seraph_lumine",self,"stop_chronometer")
+	Event.connect("character_switch", self, "tween_switch_active_hp_bar")
 	#Event.listen("player_death",self,"stop_chronometer")
 	#Event.listen("enemy_kill",self,"try_stop_chronometer")
 	BossRNG.connect("updated_rng",self,"show_rng")
@@ -98,9 +101,9 @@ func try_stop_chronometer(_boss) -> void:
 func change_camera_focus(new_focus):
 	debugging_character = new_focus
 	if new_focus == GameManager.player:
-		tween_focus_on_bar(player_bar,ride_bar,-14,Color.white)
+		tween_focus_on_bar(active_hp_bar,ride_bar,-14,Color.white)
 	else:
-		tween_focus_on_bar(ride_bar,player_bar,13,Color.gray)
+		tween_focus_on_bar(ride_bar,active_hp_bar,13,Color.gray)
 		pass
 
 func tween_focus_on_bar(focus_bar,other_bar,x_pos,color) -> void: #TODO: move to Bars ControlNode
@@ -110,9 +113,35 @@ func tween_focus_on_bar(focus_bar,other_bar,x_pos,color) -> void: #TODO: move to
 		ride_hp_tween.set_parallel() # warning-ignore:return_value_discarded
 		ride_hp_tween.tween_property(focus_bar,"rect_position:x",8,0.2) # warning-ignore:return_value_discarded
 		ride_hp_tween.tween_property(other_bar,"rect_position:x",x_pos,0.2) # warning-ignore:return_value_discarded
-		ride_hp_tween.tween_property(player_bar,"modulate:r",color.r,0.2) # warning-ignore:return_value_discarded
-		ride_hp_tween.tween_property(player_bar,"modulate:g",color.g,0.2) # warning-ignore:return_value_discarded
-		ride_hp_tween.tween_property(player_bar,"modulate:b",color.b,0.2) # warning-ignore:return_value_discarded
+		ride_hp_tween.tween_property(active_hp_bar,"modulate:r",color.r,0.2) # warning-ignore:return_value_discarded
+		ride_hp_tween.tween_property(active_hp_bar,"modulate:g",color.g,0.2) # warning-ignore:return_value_discarded
+		ride_hp_tween.tween_property(active_hp_bar,"modulate:b",color.b,0.2)
+		
+func tween_switch_active_hp_bar() -> void:
+		#print("tween_switch_active_hp_bar recieved signal")
+		if char_switch_hp_tween:
+			char_switch_hp_tween.kill()
+			
+		var index = get_children().find(inactive_hp_bar)
+		move_child(inactive_hp_bar, index + 1)
+		
+		char_switch_hp_tween = create_tween()
+		char_switch_hp_tween.set_parallel()
+		char_switch_hp_tween.tween_property(inactive_hp_bar,"rect_position:x",8,0.2)
+		char_switch_hp_tween.tween_property(active_hp_bar,"rect_position:x",13,0.2)
+		char_switch_hp_tween.tween_property(active_hp_bar,"modulate:r",Color.gray.r,0.2)
+		char_switch_hp_tween.tween_property(active_hp_bar,"modulate:g",Color.gray.g,0.2)
+		char_switch_hp_tween.tween_property(active_hp_bar,"modulate:b",Color.gray.b,0.2)
+		
+		char_switch_hp_tween.tween_property(inactive_hp_bar,"modulate:r",Color.white.r,0.2)
+		char_switch_hp_tween.tween_property(inactive_hp_bar,"modulate:g",Color.white.g,0.2)
+		char_switch_hp_tween.tween_property(inactive_hp_bar,"modulate:b",Color.white.b,0.2)
+		
+		var temp = active_hp_bar
+		active_hp_bar = inactive_hp_bar
+		inactive_hp_bar = temp
+
+		active_index = player_bar.find(active_hp_bar)
 
 func setup_boss_health(_boss):
 	boss = _boss
@@ -164,13 +193,14 @@ func _process(delta: float) -> void:
 	show_debug_text()
 
 func process_player_bar_size():
-	if is_instance_valid(GameManager.player):
-		var health_rect_pos = 56 - (GameManager.player.max_health - 16) * 2
-		var health_rect_size = 52 + (GameManager.player.max_health - 16) * 2
-		if player_bar.rect_position.y != health_rect_pos:
-			blink_player_bar()
-			player_bar.rect_position.y = health_rect_pos
-			player_bar.rect_size.y = health_rect_size
+	for i in range(GameManager.team.size()):
+		if is_instance_valid(GameManager.team[i]):
+			var health_rect_pos = 56 - (GameManager.team[i].max_health - 16) * 2
+			var health_rect_size = 52 + (GameManager.team[i].max_health - 16) * 2
+			if player_bar[i].rect_position.y != health_rect_pos:
+				blink_player_bar()
+				player_bar[i].rect_position.y = health_rect_pos
+				player_bar[i].rect_size.y = health_rect_size
 		
 func process_blink(delta):
 	if playerbar_blinking:
@@ -186,12 +216,12 @@ func hide_boss_hp():
 
 func stop_blink_player_bar():
 	playerbar_blinking = false
-	player_bar.material.set_shader_param("Flash",0)
+	player_bar[active_index].material.set_shader_param("Flash",0)
 	blink_timer = 0
 
 func blink_player_bar():
 	playerbar_blinking = true
-	player_bar.material.set_shader_param("Flash",1)
+	player_bar[active_index].material.set_shader_param("Flash",1)
 
 func fade():
 	if fade_out_to_white:
@@ -203,22 +233,32 @@ func on_healable_amount(param):
 	call_deferred("show_healable_amount",param)
 
 func show_healable_amount(healable_amount):
-	player_healable.value = GameManager.player.current_health + healable_amount
+	if GameManager.player:
+		for i in range(GameManager.team.size()):
+			if is_instance_valid(GameManager.team[i]):
+				if GameManager.team[i].name == "X" or GameManager.team[i].name == "UltimateX":
+					player_healable[i].value = GameManager.team[i].current_health + healable_amount
 
 func hide_healable_amount() -> void:
-	player_healable.value = 0
+	if GameManager.player:
+		for i in range(GameManager.team.size()):
+			if is_instance_valid(GameManager.team[i]):
+				if GameManager.team[i].name == "X" or GameManager.team[i].name == "UltimateX":
+					player_healable[i].value = 0
 
 func show_boss_health_and_weapon(delta) -> String:
 	var text := ""
-	if is_instance_valid(GameManager.player):
-		var health = GameManager.player.current_health
-		if health > GameManager.player.max_health:
-			player_hp.modulate = Color.deepskyblue
-		else:
-			player_hp.modulate = Color.white
-		player_hp.value = clamp(health,0,GameManager.player.max_health)
-		if health <= 0:
-			hide_healable_amount()
+	for i in range(GameManager.team.size()):
+		if is_instance_valid(GameManager.team[i]):
+			var health = GameManager.team[i].current_health
+			if health > GameManager.team[i].max_health:
+				player_hp[i].modulate = Color.deepskyblue
+			else:
+				player_hp[i].modulate = Color.white
+			player_hp[i].value = clamp(health,0,GameManager.team[i].max_health)
+			if health <= 0:
+				hide_healable_amount()
+				
 	if is_instance_valid(GameManager.player) and is_instance_valid(GameManager.player.ride):
 		var health = GameManager.player.ride.current_health
 		ride_hp.value = ceil(health/2)

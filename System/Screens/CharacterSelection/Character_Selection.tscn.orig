@@ -1,0 +1,466 @@
+[gd_scene load_steps=42 format=2]
+
+[ext_resource path="res://src/Options/CoverScreen.gd" type="Script" id=1]
+[ext_resource path="res://System/SFX/option_b_select.ogg" type="AudioStream" id=2]
+[ext_resource path="res://src/Options/pause_bg.png" type="Texture" id=3]
+[ext_resource path="res://src/Sounds/OST - Capsule.ogg" type="AudioStream" id=4]
+[ext_resource path="res://src/Sounds/OST - AngryBoss - Loop.ogg" type="AudioStream" id=5]
+<<<<<<< HEAD
+[ext_resource path="res://src/Fonts/xclassicfontfinal.fnt" type="BitmapFont" id=6]
+=======
+[ext_resource path="res://src/Fonts/Xclassicfont.fnt" type="BitmapFont" id=6]
+>>>>>>> source_private/main
+[ext_resource path="res://src/Levels/music_player.gd" type="Script" id=7]
+[ext_resource path="res://System/SFX/choose_x8.ogg" type="AudioStream" id=8]
+[ext_resource path="res://Axl_mod/Player/Axl_Material_Shader.tres" type="Material" id=9]
+[ext_resource path="res://Zero_mod/X8/Sprites/ZeroX8_Material_Shader.tres" type="Material" id=10]
+[ext_resource path="res://src/Sounds/OST - AngryBoss - Intro.ogg" type="AudioStream" id=11]
+[ext_resource path="res://System/Screens/CharacterSelection/char_container.gd" type="Script" id=12]
+[ext_resource path="res://System/Screens/CharacterSelection/Character_Selection.gd" type="Script" id=13]
+[ext_resource path="res://System/Screens/CharacterSelection/player_switch_button.gd" type="Script" id=14]
+[ext_resource path="res://System/Screens/CharacterSelection/GameStart.gd" type="Script" id=15]
+[ext_resource path="res://System/Screens/CharacterSelection/wireframe_bg.gd" type="Script" id=16]
+[ext_resource path="res://System/Screens/CharacterSelection/char_selection_face.png" type="Texture" id=17]
+[ext_resource path="res://System/Screens/CharacterSelection/char_selection_arrow.png" type="Texture" id=18]
+[ext_resource path="res://System/Screens/CharacterSelection/char_selection_menu.png" type="Texture" id=19]
+[ext_resource path="res://System/Screens/CharacterSelection/char_selection_sprite_display.png" type="Texture" id=20]
+[ext_resource path="res://System/Screens/CharacterSelection/char_selection_bg.png" type="Texture" id=21]
+[ext_resource path="res://System/Screens/CharacterSelection/char_selection_sprite_hide.png" type="Texture" id=22]
+[ext_resource path="res://src/Sounds/OST - TrueSigma - Loop.ogg" type="AudioStream" id=23]
+[ext_resource path="res://System/Screens/CharacterSelection/face_Zero.png" type="Texture" id=24]
+[ext_resource path="res://System/Screens/CharacterSelection/char_selection_loop.ogg" type="AudioStream" id=25]
+[ext_resource path="res://System/Screens/CharacterSelection/Wireframe_X.png" type="Texture" id=26]
+[ext_resource path="res://src/Sounds/OST - Vile - Loop.ogg" type="AudioStream" id=27]
+[ext_resource path="res://src/Sounds/OST - Vile - Intro.ogg" type="AudioStream" id=28]
+[ext_resource path="res://System/Screens/CharacterSelection/char_selection_intro.ogg" type="AudioStream" id=29]
+[ext_resource path="res://System/Screens/CharacterSelection/face_Axl.png" type="Texture" id=30]
+[ext_resource path="res://System/Screens/CharacterSelection/face_X.png" type="Texture" id=31]
+[ext_resource path="res://System/Screens/CharacterSelection/Axl.png" type="Texture" id=32]
+[ext_resource path="res://System/Screens/CharacterSelection/Zero.png" type="Texture" id=33]
+[ext_resource path="res://System/Screens/CharacterSelection/X.png" type="Texture" id=34]
+[ext_resource path="res://System/Screens/CharacterSelection/Wireframe_Axl.png" type="Texture" id=35]
+[ext_resource path="res://System/Screens/CharacterSelection/Wireframe_Zero.png" type="Texture" id=36]
+[ext_resource path="res://src/Fonts/menuFont.tres" type="BitmapFont" id=37]
+[ext_resource path="res://System/SFX/player_select.ogg" type="AudioStream" id=38]
+[ext_resource path="res://System/SFX/window_close.ogg" type="AudioStream" id=39]
+[ext_resource path="res://src/Title/title_bg.png" type="Texture" id=40]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[node name="Character_Selection" type="CanvasLayer"]
+pause_mode = 2
+layer = 2
+script = ExtResource( 13 )
+song_intro = ExtResource( 29 )
+song_loop = ExtResource( 25 )
+menu_path = NodePath("Menu")
+initial_focus = NodePath("Menu/Menu_Frame/GameStart")
+exit_action = "ui_cancel"
+
+[node name="Music_Player" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
+bus = "Music"
+script = ExtResource( 7 )
+boss_intro = ExtResource( 23 )
+boss_song = ExtResource( 23 )
+angry_boss_intro = ExtResource( 11 )
+angry_boss_song = ExtResource( 5 )
+capsule_song = ExtResource( 4 )
+miniboss_intro = ExtResource( 28 )
+miniboss_song = ExtResource( 27 )
+play_angry_boss_theme = false
+
+[node name="pick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+volume_db = -4.0
+bus = "SFX"
+
+[node name="choice" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+volume_db = -4.0
+bus = "SFX"
+
+[node name="equip" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 38 )
+volume_db = -4.0
+bus = "SFX"
+
+[node name="cancel" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 39 )
+volume_db = -4.0
+bus = "SFX"
+
+[node name="black_screen" type="Sprite" parent="."]
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 199, 112 )
+z_index = -1
+texture = ExtResource( 40 )
+
+[node name="Menu" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="bg" type="TextureRect" parent="Menu"]
+margin_right = 398.0
+margin_bottom = 224.0
+texture = ExtResource( 3 )
+
+[node name="wireframe_bg" type="TextureRect" parent="Menu"]
+margin_left = 127.0
+margin_top = 7.0
+margin_right = 362.0
+margin_bottom = 218.0
+texture = ExtResource( 21 )
+script = ExtResource( 16 )
+speed = 45
+
+[node name="characters" type="Control" parent="Menu"]
+margin_left = 208.0
+margin_right = 386.0
+margin_bottom = 58.0
+
+[node name="char_display_bg" type="TextureRect" parent="Menu/characters"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -29.0
+margin_top = -19.0
+margin_right = 80.0
+margin_bottom = 30.0
+texture = ExtResource( 20 )
+stretch_mode = 1
+
+[node name="panel" type="Panel" parent="Menu/characters"]
+margin_left = 55.0
+margin_top = 10.0
+margin_right = 175.0
+margin_bottom = 58.0
+rect_min_size = Vector2( 120, 48 )
+rect_clip_content = true
+custom_styles/panel = SubResource( 1 )
+
+[node name="char_container" type="HBoxContainer" parent="Menu/characters/panel"]
+margin_left = -2.0
+margin_right = 118.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 120, 48 )
+rect_clip_content = true
+custom_constants/separation = 0
+script = ExtResource( 12 )
+
+[node name="Axl" type="TextureRect" parent="Menu/characters/panel/char_container"]
+material = ExtResource( 9 )
+margin_right = 40.0
+margin_bottom = 48.0
+texture = ExtResource( 32 )
+
+[node name="X" type="TextureRect" parent="Menu/characters/panel/char_container"]
+pause_mode = 2
+margin_left = 40.0
+margin_right = 80.0
+margin_bottom = 48.0
+texture = ExtResource( 34 )
+
+[node name="Zero" type="TextureRect" parent="Menu/characters/panel/char_container"]
+material = ExtResource( 10 )
+margin_left = 80.0
+margin_right = 120.0
+margin_bottom = 48.0
+texture = ExtResource( 33 )
+
+[node name="char_hider" type="TextureRect" parent="Menu/characters"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -29.0
+margin_top = -19.0
+margin_right = 80.0
+margin_bottom = 30.0
+texture = ExtResource( 22 )
+stretch_mode = 1
+
+[node name="Wireframes" type="Control" parent="Menu/characters"]
+margin_left = -69.0
+margin_top = 10.0
+margin_right = 51.0
+margin_bottom = 214.0
+
+[node name="wireframe_X" type="TextureRect" parent="Menu/characters/Wireframes"]
+visible = false
+margin_left = 4.0
+margin_top = 11.0
+margin_right = 116.0
+margin_bottom = 192.0
+texture = ExtResource( 26 )
+
+[node name="wireframe_Zero" type="TextureRect" parent="Menu/characters/Wireframes"]
+visible = false
+margin_left = 4.0
+margin_top = 7.0
+margin_right = 116.0
+margin_bottom = 192.0
+texture = ExtResource( 36 )
+
+[node name="wireframe_Axl" type="TextureRect" parent="Menu/characters/Wireframes"]
+visible = false
+margin_left = 4.0
+margin_top = 7.0
+margin_right = 116.0
+margin_bottom = 192.0
+texture = ExtResource( 35 )
+
+[node name="Menu_Frame" type="TextureRect" parent="Menu"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -8.0
+margin_top = -19.0
+margin_right = 366.0
+margin_bottom = 203.0
+texture = ExtResource( 19 )
+
+[node name="Left" type="Control" parent="Menu/Menu_Frame"]
+margin_right = 127.0
+margin_bottom = 222.0
+
+[node name="char_face_frame" type="TextureRect" parent="Menu/Menu_Frame/Left"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -50.5
+margin_top = -94.0
+margin_right = 50.5
+margin_bottom = -62.0
+texture = ExtResource( 17 )
+
+[node name="face_X" type="TextureRect" parent="Menu/Menu_Frame/Left/char_face_frame"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -47.5
+margin_top = -13.0
+margin_right = 47.5
+margin_bottom = 19.0
+texture = ExtResource( 31 )
+
+[node name="face_Zero" type="TextureRect" parent="Menu/Menu_Frame/Left/char_face_frame"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -47.5
+margin_top = -13.0
+margin_right = 47.5
+margin_bottom = 19.0
+texture = ExtResource( 24 )
+
+[node name="face_Axl" type="TextureRect" parent="Menu/Menu_Frame/Left/char_face_frame"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -47.5
+margin_top = -13.0
+margin_right = 47.5
+margin_bottom = 19.0
+texture = ExtResource( 30 )
+
+[node name="Description_Left" type="RichTextLabel" parent="Menu/Menu_Frame/Left"]
+margin_left = 11.0
+margin_top = 66.0
+margin_right = 116.0
+margin_bottom = 213.0
+rect_min_size = Vector2( 105, 137 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_constants/line_separation = -1
+custom_fonts/normal_font = ExtResource( 37 )
+bbcode_enabled = true
+bbcode_text = "
+[color=#47a1fc]Head:[/color]
+DNA Copy system for X Buster.
+
+[color=#47a1fc]Arm:[/color]
+X-Buster MK17, fires chargeable solar energy.
+
+[color=#47a1fc]Body:[/color]
+Titanium X Alloy, highly damage-resistant.
+
+[color=#47a1fc]Legs:[/color]
+Air Dash system for aerial travel."
+text = "
+Head:
+DNA Copy system for X Buster.
+
+Arm:
+X-Buster MK17, fires chargeable solar energy.
+
+Body:
+Titanium X Alloy, highly damage-resistant.
+
+Legs:
+Air Dash system for aerial travel."
+
+[node name="Right" type="Control" parent="Menu/Menu_Frame"]
+margin_left = 247.0
+margin_right = 374.0
+margin_bottom = 222.0
+
+[node name="Name_Right" type="Label" parent="Menu/Menu_Frame/Right"]
+margin_left = 9.0
+margin_top = 64.0
+margin_right = 118.0
+margin_bottom = 78.0
+custom_colors/font_color = Color( 0.278431, 0.631373, 0.988235, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 6 )
+text = "NAME"
+align = 1
+uppercase = true
+
+[node name="Description_Right" type="RichTextLabel" parent="Menu/Menu_Frame/Right"]
+margin_left = 11.0
+margin_top = 76.0
+margin_right = 116.0
+margin_bottom = 213.0
+rect_min_size = Vector2( 105, 137 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_constants/line_separation = 0
+custom_fonts/normal_font = ExtResource( 37 )
+bbcode_enabled = true
+bbcode_text = "
+
+Leads the Hunters in X’s absence, with ties to the Sigma Virus.
+
+This powerful Hunter is a skilled close-combat fighter.
+
+A good choice for experienced players."
+text = "
+
+Leads the Hunters in X’s absence, with ties to the Sigma Virus.
+
+This powerful Hunter is a skilled close-combat fighter.
+
+A good choice for experienced players."
+
+[node name="GameStart" type="TextureButton" parent="Menu/Menu_Frame"]
+modulate = Color( 0.407843, 0.792157, 1, 1 )
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 127.0
+margin_top = 198.0
+margin_right = 247.0
+margin_bottom = 214.0
+rect_min_size = Vector2( 10, 16 )
+action_mode = 0
+script = ExtResource( 15 )
+idle_color = Color( 0.407843, 0.792157, 1, 1 )
+focus_color = Color( 0.984314, 1, 0.686275, 1 )
+menu_path = NodePath("../../..")
+pick_sound = NodePath("../../../pick")
+
+[node name="text" type="Label" parent="Menu/Menu_Frame/GameStart"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = -127.0
+margin_top = -7.0
+margin_right = 247.0
+margin_bottom = 7.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 6 )
+text = "GAME_START_X"
+align = 1
+uppercase = true
+
+[node name="next_player" type="TextureRect" parent="Menu/Menu_Frame"]
+margin_left = 353.0
+margin_top = 31.0
+margin_right = 359.0
+margin_bottom = 38.0
+texture = ExtResource( 18 )
+
+[node name="prev_player" type="TextureRect" parent="Menu/Menu_Frame"]
+margin_left = 262.0
+margin_top = 31.0
+margin_right = 268.0
+margin_bottom = 38.0
+texture = ExtResource( 18 )
+flip_h = true
+
+[node name="next_player" type="TextureButton" parent="Menu"]
+visible = false
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+margin_left = 359.0
+margin_top = 26.0
+margin_right = 377.0
+margin_bottom = 44.0
+rect_min_size = Vector2( 18, 18 )
+focus_mode = 1
+action_mode = 0
+enabled_focus_mode = 1
+texture_normal = ExtResource( 18 )
+expand = true
+stretch_mode = 3
+script = ExtResource( 14 )
+menu_path = NodePath("../..")
+
+[node name="prev_player" type="TextureButton" parent="Menu"]
+visible = false
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
+margin_left = 268.0
+margin_top = 26.0
+margin_right = 286.0
+margin_bottom = 44.0
+rect_min_size = Vector2( 18, 18 )
+focus_mode = 1
+action_mode = 0
+enabled_focus_mode = 1
+texture_normal = ExtResource( 18 )
+expand = true
+stretch_mode = 3
+flip_h = true
+script = ExtResource( 14 )
+menu_path = NodePath("../..")
+direction = "left"
+
+[node name="Fader" type="ColorRect" parent="."]
+pause_mode = 2
+visible = false
+margin_right = 398.0
+margin_bottom = 224.0
+mouse_filter = 2
+color = Color( 0, 0, 0, 1 )
+script = ExtResource( 1 )
+menu = NodePath("../Menu")
+background = NodePath("../Menu/bg")
+
+[connection signal="focus_entered" from="Menu/Menu_Frame/GameStart" to="Menu/Menu_Frame/GameStart" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/Menu_Frame/GameStart" to="Menu/Menu_Frame/GameStart" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/Menu_Frame/GameStart" to="Menu/Menu_Frame/GameStart" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/Menu_Frame/GameStart" to="Menu/Menu_Frame/GameStart" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/Menu_Frame/GameStart" to="Menu/Menu_Frame/GameStart" method="_on_pressed"]
+[connection signal="focus_entered" from="Menu/next_player" to="Menu/next_player" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/next_player" to="Menu/next_player" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/next_player" to="Menu/next_player" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/next_player" to="Menu/next_player" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/next_player" to="Menu/next_player" method="_on_pressed"]
+[connection signal="focus_entered" from="Menu/prev_player" to="Menu/prev_player" method="_on_focus_entered"]
+[connection signal="focus_exited" from="Menu/prev_player" to="Menu/prev_player" method="_on_focus_exited"]
+[connection signal="mouse_entered" from="Menu/prev_player" to="Menu/prev_player" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Menu/prev_player" to="Menu/prev_player" method="_on_mouse_exited"]
+[connection signal="pressed" from="Menu/prev_player" to="Menu/prev_player" method="_on_pressed"]
