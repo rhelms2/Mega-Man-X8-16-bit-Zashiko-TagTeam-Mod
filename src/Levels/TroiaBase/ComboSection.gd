@@ -101,7 +101,9 @@ func _on_level_initialized() -> void :
 			enemy.listen("zero_health", self, "killed_enemy")
 			enemies_left_to_kill += 1
 			enemies.append(enemy)
-	player.listen("received_damage", self, "damaged_player")
+	GameManager.player.listen("received_damage", self, "damaged_player")
+	if is_instance_valid(GameManager.inactive_player):
+		GameManager.inactive_player.listen("received_damage", self, "damaged_player")
 	Event.listen("reached_checkpoint", self, "on_checkpoint")
 	Event.listen("moved_player_to_checkpoint", self, "on_checkpoint")
 	

@@ -41,8 +41,8 @@ signal charged_shot_release(charged_time)
 signal shot_layer_enabled
 signal shot_layer_disabled
 
-signal healable_amount(amount)
-signal disabled_lifesteal
+signal healable_amount(amount, character)
+signal disabled_lifesteal(character)
 
 signal hit_enemy  
 signal charge_hit_enemy  

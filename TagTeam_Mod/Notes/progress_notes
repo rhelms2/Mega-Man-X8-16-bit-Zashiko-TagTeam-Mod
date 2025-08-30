@@ -38,10 +38,15 @@ Progress:
 - Fixed recoverable health graphical bug
 - Fixed reparenter game crash bug
 - Fixed freeze on heart tank collect in pandamonium stage
+- Troia base: getting hit as secondary player now lowers ranking during combo section
+- Added switch cooldown time
+- Added invulnerability duration after character dies and new character is switched in
 
 Bugs to fix:
 
-- Getting hit as secondary character doesn't affect score in sunflower stage
+- Falling into void has odd behavior
+
+- Combo section: double penalty for inactive character taking damage?
 
 - Graphical (might be Linux specific!):
 	- Invisible walls in trilobyte stage

@@ -11,13 +11,10 @@ var collectible: = "_undefined"
 
 
 func _ready() -> void :
-	dialogue = CharacterManager._set_correct_dialogues(get_parent().name, dialogue)
 	setup_collectible_name()
 	if not skip_intro:
 		if not manual_start:
 			connect_start_events()
-		if dialogue:
-			call_deferred("connect_dialogue")
 	else:
 		call_deferred("prepare_for_intro")
 		call_deferred("execute_intro")
@@ -70,6 +67,9 @@ func _EndCondition() -> bool:
 	return false
 
 func start_dialog_or_go_to_attack_stage(skip_dialog_stage: = 0) -> void :
+	dialogue = CharacterManager._set_correct_dialogues(get_parent().name, dialogue)
+	if dialogue:
+		connect_dialogue()
 	if not seen_dialog():
 		GameManager.start_dialog(dialogue)
 		next_attack_stage()

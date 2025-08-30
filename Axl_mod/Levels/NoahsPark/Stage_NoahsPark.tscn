@@ -1,4 +1,4 @@
-[gd_scene load_steps=96 format=2]
+[gd_scene load_steps=97 format=2]
 
 [ext_resource path="res://src/Levels/base_stage.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Levels/NoahsPark/tiled_noahspark.tmx" type="PackedScene" id=2]
@@ -63,6 +63,15 @@
 [ext_resource path="res://src/Objects/Box/BreakableBox.tscn" type="PackedScene" id=62]
 [ext_resource path="res://src/Objects/Door/NewDoor.tscn" type="PackedScene" id=63]
 [ext_resource path="res://src/Objects/Door/boss_door.res" type="SpriteFrames" id=64]
+
+[sub_resource type="ShaderMaterial" id=88]
+resource_local_to_scene = true
+shader = ExtResource( 8 )
+shader_param/Flash = 0.0
+shader_param/Should_Blink = 1.0
+shader_param/Darken = 1.0
+shader_param/Alpha = 1.0
+shader_param/Alpha_Blink = 0.0
 
 [sub_resource type="ShaderMaterial" id=32]
 resource_local_to_scene = true
@@ -190,16 +199,22 @@ extents = Vector2( 198, 112 )
 [node name="NoahsPark_Revisit" instance=ExtResource( 1 )]
 script = ExtResource( 57 )
 
-[node name="X Bar" parent="Hud" index="8"]
+[node name="X Bar2" parent="Hud" index="8"]
+material = SubResource( 88 )
+
+[node name="WeaponBar" parent="Hud/X Bar2" index="3"]
+material = SubResource( 88 )
+
+[node name="X Bar" parent="Hud" index="9"]
 material = SubResource( 32 )
 
 [node name="WeaponBar" parent="Hud/X Bar" index="3"]
 material = SubResource( 74 )
 
-[node name="audioStreamPlayer" parent="Hud" index="12"]
+[node name="audioStreamPlayer" parent="Hud" index="13"]
 volume_db = -6.577
 
-[node name="DialogBox" parent="Hud" index="15"]
+[node name="DialogBox" parent="Hud" index="16"]
 emit_capsule_signal = false
 
 [node name="Music Player" parent="." index="1"]
@@ -439,13 +454,12 @@ bus = "SFX"
 [node name="shine" type="AnimatedSprite" parent="Scenery/water/watersplash" index="4"]
 position = Vector2( -43, -2 )
 frames = SubResource( 70 )
-frame = 5
 playing = true
 
 [node name="shine2" type="AnimatedSprite" parent="Scenery/water/watersplash" index="5"]
 position = Vector2( -20, -3 )
 frames = SubResource( 70 )
-frame = 5
+frame = 2
 speed_scale = 0.85
 playing = true
 flip_h = true
@@ -453,13 +467,13 @@ flip_h = true
 [node name="shine3" type="AnimatedSprite" parent="Scenery/water/watersplash" index="6"]
 position = Vector2( 18, -2 )
 frames = SubResource( 70 )
-frame = 4
+frame = 5
 playing = true
 
 [node name="shine4" type="AnimatedSprite" parent="Scenery/water/watersplash" index="7"]
 position = Vector2( 51, -3 )
 frames = SubResource( 70 )
-frame = 4
+frame = 5
 playing = true
 
 [node name="long" type="AnimatedSprite" parent="Scenery/water/watersplash" index="8"]
@@ -467,6 +481,7 @@ modulate = Color( 1, 1, 1, 0.305882 )
 position = Vector2( -5, -4 )
 scale = Vector2( 2, 1 )
 frames = SubResource( 70 )
+frame = 2
 speed_scale = 1.2
 playing = true
 flip_h = true
@@ -476,7 +491,7 @@ modulate = Color( 1, 1, 1, 0.305882 )
 position = Vector2( 45, -1 )
 scale = Vector2( 2, 1 )
 frames = SubResource( 70 )
-frame = 4
+frame = 5
 playing = true
 
 [node name="long3" type="AnimatedSprite" parent="Scenery/water/watersplash" index="10"]
@@ -484,7 +499,7 @@ modulate = Color( 1, 1, 1, 0.305882 )
 position = Vector2( -51, 0 )
 scale = Vector2( 2, 1 )
 frames = SubResource( 70 )
-frame = 1
+frame = 3
 speed_scale = 0.75
 playing = true
 

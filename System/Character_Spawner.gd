@@ -46,7 +46,6 @@ var tm_index: int = 0
 	# Called when Event signal "character_switch" is emitted
 	# Changes the current player to the next team member
 func on_character_switch() -> void :
-	#print("Spawner: on_character_switch recieved signal")
 	if team_members.size() > 1:
 		Event.emit_signal("weapon_select_buster")
 		
@@ -56,7 +55,6 @@ func on_character_switch() -> void :
 		player_instance.is_current_player = false
 		GameManager.inactive_player = player_instance
 		
-		#print("signaling warp out animation")
 		player_instance.emit_signal("character_switch_out")
 
 		tm_index = (tm_index + 1) % CharacterManager.max_team_size
@@ -70,7 +68,6 @@ func on_character_switch() -> void :
 			player_instance.activate()
 			player_instance.active = true
 			player_instance.show()
-			#print("Signaling warp in animation")
 			player_instance.emit_signal("character_switch_in")
 			Event.emit_signal("refresh_hud")
 			

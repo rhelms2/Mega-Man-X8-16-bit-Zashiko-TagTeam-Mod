@@ -51,6 +51,8 @@ var player_character: String = "X"
 var valid_players: Array = ["X", "Zero", "Axl"]
 
 var equipped_hearts: Dictionary = {"X": 0, "Zero": 0, "Axl": 0}
+var heart_tank_buff_val: int = 1
+var starting_max_health: int = 12
 
 var both_alive = true
 var alive_team: Array = []
@@ -59,6 +61,10 @@ var alive_team: Array = []
 var current_team: Array = ["X"]
 var max_team_size: int = 2
 
+var switch_cooldown_duration: float = 0.3
+var switch_timer: float = 0
+var switch_invulnerability_duration: float = 0.15
+var switch_invulnerability_timer: float = 0
 
 func on_character_switch_end():
 	current_team.invert()
@@ -70,7 +76,17 @@ func on_character_switch_end():
 	GameManager.player.pause_mode = PAUSE_MODE_INHERIT
 	GameManager.inactive_player.pause_mode = PAUSE_MODE_INHERIT
 	GameManager.unpause("CharacterSwitch")
+	switch_timer = switch_cooldown_duration
+	if not both_alive:
+		GameManager.player.add_invulnerability("character_switch")
+		switch_invulnerability_timer = switch_invulnerability_duration
 
+var finished_switching = 0
+func try_character_switch_end():
+	finished_switching += 1
+	if finished_switching == 2:
+		finished_switching = 0
+		Event.emit_signal("character_switch_end")
 
 func get_heart_count() -> int:
 	var count = 0
@@ -289,8 +305,13 @@ func _process(_delta: float) -> void :
 		if game_mode >= 3:
 			if player_character != "Zero":
 				only_zero = false
-
-
+	if switch_timer > 0:
+		switch_timer -= _delta
+	if switch_invulnerability_timer > 0:
+		switch_invulnerability_timer -= _delta
+		if switch_invulnerability_timer <= 0:
+			GameManager.player.remove_invulnerability("character_switch")
+	
 
 var beaten_hard: bool = false
 var beaten_insanity: bool = false

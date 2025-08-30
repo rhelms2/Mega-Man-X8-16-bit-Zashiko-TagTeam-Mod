@@ -181,15 +181,18 @@ func _process(delta: float) -> void :
 func spike_touch():
 	if should_instantly_die() and not is_invulnerable():
 		Log("Death by Spikes")
+		CharacterManager.both_alive = false
 		emit_signal("zero_health")
 
 func lava_touch():
 	if should_instantly_die():
 		Log("Death by Lava")
+		CharacterManager.both_alive = false
 		emit_signal("zero_health")
 
 func void_touch():
 	Log("Death by falling")
+	CharacterManager.both_alive = false
 	emit_signal("zero_health")
 
 

@@ -2,7 +2,7 @@ extends EventAbility
 class_name CharacterSwitchWarpIn
 
 
-export  var beam_speed: = 460.0
+export  var beam_speed: = 420.0
 export  var enable_movement: = true
 var descending: = false
 onready var animatedSprite = get_parent().get_node("animatedSprite")
@@ -11,46 +11,37 @@ onready var beam_sound = get_node("audioStreamPlayer")
 
 func _ready() -> void :
 	animatedSprite.connect("animation_finished", self, "on_animation_finished")
+	Event.listen("character_switch_end", self, "on_character_switch_end")
 
+func on_character_switch_end() -> void:
+	EndAbility()
+	
 func _Setup():
-	#print("Setting up characterwarpin animation node")
 	character.deactivate()
 	descending = true
 	animatedSprite.position.y = position.y - 160
 	beam_sound.play()
 
 func _Update(_delta):
-	#print("updating warpin animation node")
 	if descending:
 		if animatedSprite.global_position.y < character.global_position.y - 8:
 			animatedSprite.global_position.y += beam_speed * _delta
-			#print("beam pos: " + str(animatedSprite.global_position.y))
 		elif animatedSprite.global_position.y >= character.global_position.y:
 			play_animation_once("beam_in")
 			descending = false
 		else:
 			animatedSprite.position.y = - 4
-			#if not at_correct_height():
-			#	character.move_y(beam_speed * _delta)
-			#else:
 			play_animation_once("beam_in")
 			descending = false
-	else:
-		#print("descending false")
-		pass
 
 func on_animation_finished():
 	if executing:
-		#print("executing true in characterwarpin animation node")
 		if character.get_animation() == "beam_in":
-			#Event.emit_signal("x_appear")
-			Event.emit_signal("character_switch_end")
-			EndAbility()
+			CharacterManager.try_character_switch_end()
 
 func _Interrupt():
 	if enable_movement:
 		character.activate()
-		#Event.emit_signal("gameplay_start")
 
 func _EndCondition() -> bool:
 	return false
