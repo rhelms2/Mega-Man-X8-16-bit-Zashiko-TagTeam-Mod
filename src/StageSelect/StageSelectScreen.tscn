@@ -790,7 +790,6 @@ frame = 2
 
 [node name="cursor" parent="button_sprites/JacobElevator" index="0"]
 animation = "long"
-frame = 0
 
 [node name="Gateway" parent="button_sprites" instance=ExtResource( 22 )]
 position = Vector2( 343, 112 )
@@ -799,7 +798,6 @@ frame = 2
 
 [node name="cursor" parent="button_sprites/Gateway" index="0"]
 animation = "long"
-frame = 0
 
 [node name="on_stage_select" type="Node" parent="."]
 script = ExtResource( 51 )

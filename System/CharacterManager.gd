@@ -63,7 +63,7 @@ var max_team_size: int = 2
 
 var switch_cooldown_duration: float = 0.3
 var switch_timer: float = 0
-var switch_invulnerability_duration: float = 0.15
+var switch_invulnerability_duration: float = 0.3
 var switch_invulnerability_timer: float = 0
 
 func on_character_switch_end():

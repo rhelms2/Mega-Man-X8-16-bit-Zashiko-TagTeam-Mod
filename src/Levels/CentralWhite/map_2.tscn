@@ -5,8 +5,6 @@
 [node name="_centralwhite_2" instance=ExtResource( 1 )]
 
 [node name="Very Far Background" parent="." index="0"]
-cell_y_sort = false
-compatibility_mode = true
 cell_clip_uv = false
 collision_layer = 0
 collision_mask = 0
@@ -14,8 +12,6 @@ navigation_layers = 0
 occluder_light_mask = 0
 
 [node name="Far Background" parent="." index="1"]
-cell_y_sort = false
-compatibility_mode = true
 cell_clip_uv = false
 collision_layer = 0
 collision_mask = 0
@@ -23,8 +19,6 @@ navigation_layers = 0
 occluder_light_mask = 0
 
 [node name="BackSnow" parent="." index="2"]
-cell_y_sort = false
-compatibility_mode = true
 cell_clip_uv = false
 collision_layer = 0
 collision_mask = 0
@@ -32,8 +26,6 @@ navigation_layers = 0
 occluder_light_mask = 0
 
 [node name="Background" parent="." index="3"]
-cell_y_sort = false
-compatibility_mode = true
 cell_clip_uv = false
 collision_layer = 0
 collision_mask = 0
@@ -42,8 +34,6 @@ occluder_light_mask = 0
 
 [node name="Main" parent="." index="4"]
 z_index = 10
-cell_y_sort = false
-compatibility_mode = true
 cell_clip_uv = false
 collision_layer = 0
 collision_mask = 0
@@ -52,8 +42,6 @@ occluder_light_mask = 0
 
 [node name="ShadowsNDetails" parent="." index="5"]
 z_index = 10
-cell_y_sort = false
-compatibility_mode = true
 cell_clip_uv = false
 collision_layer = 0
 collision_mask = 0
@@ -63,8 +51,6 @@ occluder_light_mask = 0
 [node name="Foreground" parent="." index="6"]
 z_index = 10
 z_as_relative = false
-cell_y_sort = false
-compatibility_mode = true
 cell_clip_uv = false
 collision_layer = 0
 collision_mask = 0

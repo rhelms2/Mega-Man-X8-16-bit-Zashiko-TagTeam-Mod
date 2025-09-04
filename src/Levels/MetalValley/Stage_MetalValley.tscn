@@ -1,4 +1,4 @@
-[gd_scene load_steps=125 format=2]
+[gd_scene load_steps=129 format=2]
 
 [ext_resource path="res://src/Actors/Enemies/BigMechaniloid/EnemyMechaniloid.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Objects/Pickups/SubTank.tscn" type="PackedScene" id=2]
@@ -17,7 +17,7 @@
 [ext_resource path="res://src/Actors/Bosses/GiantMechaniloid/BossDamager.gd" type="Script" id=15]
 [ext_resource path="res://src/Levels/MetalValley/rising_platform.gd" type="Script" id=16]
 [ext_resource path="res://addons/vnen.tiled_importer/tiled.png" type="Texture" id=17]
-[ext_resource path="res://src/Levels/MetalValley/tileset_metalvalley.tsx" type="TileSet" id=18]
+[ext_resource path="res://src/Levels/MetalValley/metalvalley_tileset.png" type="Texture" id=18]
 [ext_resource path="res://src/Objects/Spike.gd" type="Script" id=19]
 [ext_resource path="res://src/Objects/Door/boss_door.res" type="SpriteFrames" id=20]
 [ext_resource path="res://src/Actors/Bosses/EarthrockTrilobyte/Trilobyte.tscn" type="PackedScene" id=21]
@@ -199,6 +199,288 @@ particles_anim_h_frames = 6
 particles_anim_v_frames = 3
 particles_anim_loop = false
 
+[sub_resource type="TileSet" id=116]
+0/name = "metalvalley_tileset.png 0"
+0/texture = ExtResource( 18 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 160, 352, 16, 16 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "metalvalley_tileset.png 1"
+1/texture = ExtResource( 18 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 176, 352, 16, 16 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "metalvalley_tileset.png 2"
+2/texture = ExtResource( 18 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 192, 352, 16, 16 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "metalvalley_tileset.png 3"
+3/texture = ExtResource( 18 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 160, 368, 16, 16 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "metalvalley_tileset.png 4"
+4/texture = ExtResource( 18 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 176, 368, 16, 16 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "metalvalley_tileset.png 5"
+5/texture = ExtResource( 18 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 192, 368, 16, 16 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "metalvalley_tileset.png 6"
+6/texture = ExtResource( 18 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 160, 384, 16, 16 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "metalvalley_tileset.png 7"
+7/texture = ExtResource( 18 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 176, 384, 16, 16 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "metalvalley_tileset.png 8"
+8/texture = ExtResource( 18 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 192, 384, 16, 16 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "metalvalley_tileset.png 9"
+9/texture = ExtResource( 18 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 160, 400, 16, 16 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "metalvalley_tileset.png 10"
+10/texture = ExtResource( 18 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 176, 400, 16, 16 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "metalvalley_tileset.png 11"
+11/texture = ExtResource( 18 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 192, 400, 16, 16 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+12/name = "metalvalley_tileset.png 12"
+12/texture = ExtResource( 18 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 160, 416, 16, 16 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape_one_way = false
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
+12/z_index = 0
+13/name = "metalvalley_tileset.png 13"
+13/texture = ExtResource( 18 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 176, 416, 16, 16 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape_one_way = false
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
+13/z_index = 0
+14/name = "metalvalley_tileset.png 14"
+14/texture = ExtResource( 18 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 192, 416, 16, 16 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape_one_way = false
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
+14/z_index = 0
+15/name = "metalvalley_tileset.png 15"
+15/texture = ExtResource( 18 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 384, 272, 16, 16 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shape_offset = Vector2( 0, 0 )
+15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+15/shape_one_way = false
+15/shape_one_way_margin = 0.0
+15/shapes = [  ]
+15/z_index = 0
+16/name = "metalvalley_tileset.png 16"
+16/texture = ExtResource( 18 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 384, 288, 16, 16 )
+16/tile_mode = 0
+16/occluder_offset = Vector2( 0, 0 )
+16/navigation_offset = Vector2( 0, 0 )
+16/shape_offset = Vector2( 0, 0 )
+16/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+16/shape_one_way = false
+16/shape_one_way_margin = 0.0
+16/shapes = [  ]
+16/z_index = 0
+17/name = "metalvalley_tileset.png 17"
+17/texture = ExtResource( 18 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 384, 304, 16, 16 )
+17/tile_mode = 0
+17/occluder_offset = Vector2( 0, 0 )
+17/navigation_offset = Vector2( 0, 0 )
+17/shape_offset = Vector2( 0, 0 )
+17/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+17/shape_one_way = false
+17/shape_one_way_margin = 0.0
+17/shapes = [  ]
+17/z_index = 0
+18/name = "metalvalley_tileset.png 18"
+18/texture = ExtResource( 18 )
+18/tex_offset = Vector2( 0, 0 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( 384, 320, 16, 16 )
+18/tile_mode = 0
+18/occluder_offset = Vector2( 0, 0 )
+18/navigation_offset = Vector2( 0, 0 )
+18/shape_offset = Vector2( 0, 0 )
+18/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+18/shape_one_way = false
+18/shape_one_way_margin = 0.0
+18/shapes = [  ]
+18/z_index = 0
+19/name = "metalvalley_tileset.png 19"
+19/texture = ExtResource( 18 )
+19/tex_offset = Vector2( 0, 0 )
+19/modulate = Color( 1, 1, 1, 1 )
+19/region = Rect2( 400, 288, 16, 16 )
+19/tile_mode = 0
+19/occluder_offset = Vector2( 0, 0 )
+19/navigation_offset = Vector2( 0, 0 )
+19/shape_offset = Vector2( 0, 0 )
+19/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+19/shape_one_way = false
+19/shape_one_way_margin = 0.0
+19/shapes = [  ]
+19/z_index = 0
+
 [sub_resource type="SpriteFrames" id=54]
 animations = [ {
 "frames": [ ExtResource( 54 ) ],
@@ -224,6 +506,26 @@ animations = [ {
 
 [sub_resource type="RectangleShape2D" id=105]
 extents = Vector2( 3.54164, 16 )
+
+[sub_resource type="Curve" id=1]
+_data = [ Vector2( 0, 1 ), 0.0, -1.40349, 0, 0, Vector2( 1, 0.535227 ), 0.0, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=2]
+curve = SubResource( 1 )
+
+[sub_resource type="ParticlesMaterial" id=117]
+resource_local_to_scene = true
+emission_shape = 1
+emission_sphere_radius = 32.0
+flag_disable_z = true
+direction = Vector3( 0, 0, 0 )
+spread = 0.0
+gravity = Vector3( 0, 0, 0 )
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 7.69
+anim_speed = 0.13
+anim_speed_curve = SubResource( 2 )
 
 [sub_resource type="RectangleShape2D" id=15]
 extents = Vector2( 198, 112 )
@@ -767,12 +1069,12 @@ texture = ExtResource( 28 )
 
 [node name="tileMap" type="TileMap" parent="Objects/DestructibleRocks" index="3"]
 position = Vector2( 0, -6 )
-tile_set = ExtResource( 18 )
+tile_set = SubResource( 116 )
 cell_size = Vector2( 16, 16 )
 collision_layer = 0
 collision_mask = 0
 format = 1
-tile_data = PoolIntArray( -65540, -2147482758, 0, -65539, -1073740891, 0, -65538, -1073740851, 0, -65537, -1073740811, 0, -131072, -536869899, 0, -131071, -536869939, 0, -131070, -536869979, 0, -131069, -1610611846, 0, -4, -2147482756, 0, -3, -1073740892, 0, -2, -1073740852, 0, -1, -1073740812, 0, -65536, -536869900, 0, -65535, -536869940, 0, -65534, -536869980, 0, -65533, -536870020, 0, 65532, -2147482756, 0, 65533, -1073740893, 0, 65534, -1073740853, 0, 65535, -1073740813, 0, 0, -536869901, 0, 1, -536869941, 0, 2, -536869981, 0, 3, -536870021, 0, 131068, -1073740934, 0, 131069, -1073740894, 0, 131070, -1073740854, 0, 131071, -1073740814, 0, 65536, -536869902, 0, 65537, -536869942, 0, 65538, -536869982, 0, 65539, -536870022, 0 )
+tile_data = PoolIntArray( -65540, -2147483648, 0, -65539, -2147483645, 0, -65538, -1610612727, 0, -65537, -1610612730, 0, -131072, -2147483642, 0, -131071, -2147483639, 0, -131070, -1610612733, 0, -131069, -1610612736, 0, -4, -2147483646, 0, -3, -1073741819, 0, -2, -1073741816, 0, -1, -1073741813, 0, -65536, -536870901, 0, -65535, -536870904, 0, -65534, -536870907, 0, -65533, -1610612734, 0, 65532, -2147483646, 0, 65533, -1073741820, 0, 65534, -1073741817, 0, 65535, -1073741814, 0, 0, -536870902, 0, 1, -536870905, 0, 2, -536870908, 0, 3, -1610612734, 0, 131068, -1073741824, 0, 131069, -1073741821, 0, 131070, -1073741818, 0, 131071, -1073741813, 0, 65536, -536870901, 0, 65537, -536870906, 0, 65538, -536870909, 0, 65539, -536870912, 0 )
 
 [node name="Door1" parent="Objects" index="16" instance=ExtResource( 3 )]
 position = Vector2( 4712, -168 )
@@ -1454,13 +1756,7 @@ position = Vector2( 83, -10 )
 frames = SubResource( 54 )
 animation = "side"
 
-[node name="Flamable" parent="Objects" index="22" instance=ExtResource( 60 )]
-position = Vector2( 4400, -512 )
-
-[node name="Flamable2" parent="Objects" index="23" instance=ExtResource( 60 )]
-position = Vector2( 4336, -512 )
-
-[node name="SpikePlane" type="Node2D" parent="Objects" index="24"]
+[node name="SpikePlane" type="Node2D" parent="Objects" index="22"]
 position = Vector2( 4361, -602 )
 scale = Vector2( 24, 1 )
 
@@ -1471,6 +1767,18 @@ script = ExtResource( 19 )
 
 [node name="collisionShape2D" type="CollisionShape2D" parent="Objects/SpikePlane/area2D" index="0"]
 shape = SubResource( 105 )
+
+[node name="FlamableBarrier" parent="Objects" index="23" instance=ExtResource( 60 )]
+position = Vector2( 4336, -512 )
+
+[node name="Explosion Particles" parent="Objects/FlamableBarrier" index="2"]
+process_material = SubResource( 117 )
+
+[node name="FlamableBarrier2" parent="Objects" index="24" instance=ExtResource( 60 )]
+position = Vector2( 4400, -512 )
+
+[node name="Explosion Particles" parent="Objects/FlamableBarrier2" index="2"]
+process_material = SubResource( 117 )
 
 [node name="57" type="Area2D" parent="Limits" index="0"]
 position = Vector2( -874, 560 )
@@ -1990,3 +2298,6 @@ section = "Metal Valley"
 [connection signal="body_entered" from="Objects/SpikePlane/area2D" to="Objects/SpikePlane/area2D" method="_on_area2D_body_entered"]
 [connection signal="body_exited" from="Objects/SpikePlane/area2D" to="Objects/SpikePlane/area2D" method="_on_area2D_body_exited"]
 [connection signal="death" from="Enemies/GiantMechaniloid" to="Objects/BossDoor1" method="_on_Unlock_and_able_to_explode"]
+
+[editable path="Objects/FlamableBarrier"]
+[editable path="Objects/FlamableBarrier2"]

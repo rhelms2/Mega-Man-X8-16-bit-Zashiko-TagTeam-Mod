@@ -1,4 +1,4 @@
-[gd_scene load_steps=97 format=2]
+[gd_scene load_steps=99 format=2]
 
 [ext_resource path="res://src/Levels/base_stage.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Levels/NoahsPark/tiled_noahspark.tmx" type="PackedScene" id=2]
@@ -59,6 +59,7 @@
 [ext_resource path="res://System/Character_Spawner.gd" type="Script" id=57]
 [ext_resource path="res://src/Levels/IGTimer.tscn" type="PackedScene" id=58]
 [ext_resource path="res://src/Levels/BoosterForest/ForegroundObject.gd" type="Script" id=59]
+[ext_resource path="res://src/Levels/NoahsPark/NoahsPark.png" type="Texture" id=60]
 [ext_resource path="res://src/Effects/Materials/mat_backgrouind.tres" type="Material" id=61]
 [ext_resource path="res://src/Objects/Box/BreakableBox.tscn" type="PackedScene" id=62]
 [ext_resource path="res://src/Objects/Door/NewDoor.tscn" type="PackedScene" id=63]
@@ -97,6 +98,176 @@ shader_param/skip_first_row = true
 shader_param/use_palette_alpha = false
 shader_param/fps = 12.0
 shader_param/palette = ExtResource( 52 )
+
+[sub_resource type="TileSet" id=89]
+0/name = "NoahsPark.png 0"
+0/texture = ExtResource( 60 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 480, 240, 16, 16 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "NoahsPark.png 1"
+1/texture = ExtResource( 60 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 480, 224, 16, 16 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "NoahsPark.png 2"
+2/texture = ExtResource( 60 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 464, 240, 16, 16 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "NoahsPark.png 3"
+3/texture = ExtResource( 60 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 464, 224, 16, 16 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "NoahsPark.png 4"
+4/texture = ExtResource( 60 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 496, 224, 16, 16 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "NoahsPark.png 5"
+5/texture = ExtResource( 60 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 496, 240, 16, 16 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "NoahsPark.png 6"
+6/texture = ExtResource( 60 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 480, 256, 16, 16 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "NoahsPark.png 7"
+7/texture = ExtResource( 60 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 464, 256, 16, 16 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "NoahsPark.png 8"
+8/texture = ExtResource( 60 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 496, 256, 16, 16 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "NoahsPark.png 9"
+9/texture = ExtResource( 60 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 464, 272, 16, 16 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "NoahsPark.png 10"
+10/texture = ExtResource( 60 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 480, 272, 16, 16 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "NoahsPark.png 11"
+11/texture = ExtResource( 60 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 496, 272, 16, 16 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
 
 [sub_resource type="RectangleShape2D" id=61]
 extents = Vector2( 67, 10 )
@@ -417,13 +588,13 @@ tile_data = PoolIntArray( 1048672, 732, 0, 1048673, 729, 0, 1048674, 729, 0, 104
 
 [node name="water" type="TileMap" parent="Scenery" index="5"]
 z_index = 20
-tile_set = ExtResource( 18 )
+tile_set = SubResource( 89 )
 cell_size = Vector2( 16, 16 )
 compatibility_mode = true
 collision_layer = 0
 collision_mask = 0
 format = 1
-tile_data = PoolIntArray( 1769519, 477, 0, 1769520, 536871390, 0, 1769521, 478, 0, 1769522, 478, 0, 1769523, 478, 0, 1769524, 536871390, 0, 1769525, 478, 0, 1769526, 478, 0, 1769527, 536871390, 0, 1769528, 479, 0, 1835055, 509, 0, 1835056, 510, 0, 1835057, 510, 0, 1835058, 510, 0, 1835059, 510, 0, 1835060, 510, 0, 1835061, 510, 0, 1835062, 510, 0, 1835063, 510, 0, 1835064, 511, 0, 1900591, 541, 0, 1900592, 542, 0, 1900593, 542, 0, 1900594, 542, 0, 1900595, 542, 0, 1900596, 542, 0, 1900597, 542, 0, 1900598, 542, 0, 1900599, 542, 0, 1900600, 543, 0 )
+tile_data = PoolIntArray( 1769519, 3, 0, 1769520, 1, 0, 1769521, 1, 0, 1769522, 536870913, 0, 1769523, 1, 0, 1769524, 536870913, 0, 1769525, 1, 0, 1769526, 536870913, 0, 1769527, 1, 0, 1769528, 4, 0, 1835055, 2, 0, 1835056, 0, 0, 1835057, 0, 0, 1835058, 0, 0, 1835059, 0, 0, 1835060, 0, 0, 1835061, 0, 0, 1835062, 0, 0, 1835063, 0, 0, 1835064, 5, 0, 1900591, 7, 0, 1900592, 6, 0, 1900593, 6, 0, 1900594, 6, 0, 1900595, 6, 0, 1900596, 6, 0, 1900597, 6, 0, 1900598, 6, 0, 1900599, 6, 0, 1900600, 8, 0 )
 
 [node name="watersplash" type="Area2D" parent="Scenery/water" index="0"]
 position = Vector2( 831, 443 )
@@ -454,12 +625,13 @@ bus = "SFX"
 [node name="shine" type="AnimatedSprite" parent="Scenery/water/watersplash" index="4"]
 position = Vector2( -43, -2 )
 frames = SubResource( 70 )
+frame = 1
 playing = true
 
 [node name="shine2" type="AnimatedSprite" parent="Scenery/water/watersplash" index="5"]
 position = Vector2( -20, -3 )
 frames = SubResource( 70 )
-frame = 2
+frame = 5
 speed_scale = 0.85
 playing = true
 flip_h = true
@@ -467,13 +639,11 @@ flip_h = true
 [node name="shine3" type="AnimatedSprite" parent="Scenery/water/watersplash" index="6"]
 position = Vector2( 18, -2 )
 frames = SubResource( 70 )
-frame = 5
 playing = true
 
 [node name="shine4" type="AnimatedSprite" parent="Scenery/water/watersplash" index="7"]
 position = Vector2( 51, -3 )
 frames = SubResource( 70 )
-frame = 5
 playing = true
 
 [node name="long" type="AnimatedSprite" parent="Scenery/water/watersplash" index="8"]
@@ -481,7 +651,6 @@ modulate = Color( 1, 1, 1, 0.305882 )
 position = Vector2( -5, -4 )
 scale = Vector2( 2, 1 )
 frames = SubResource( 70 )
-frame = 2
 speed_scale = 1.2
 playing = true
 flip_h = true
@@ -491,7 +660,6 @@ modulate = Color( 1, 1, 1, 0.305882 )
 position = Vector2( 45, -1 )
 scale = Vector2( 2, 1 )
 frames = SubResource( 70 )
-frame = 5
 playing = true
 
 [node name="long3" type="AnimatedSprite" parent="Scenery/water/watersplash" index="10"]
@@ -499,7 +667,7 @@ modulate = Color( 1, 1, 1, 0.305882 )
 position = Vector2( -51, 0 )
 scale = Vector2( 2, 1 )
 frames = SubResource( 70 )
-frame = 3
+frame = 2
 speed_scale = 0.75
 playing = true
 

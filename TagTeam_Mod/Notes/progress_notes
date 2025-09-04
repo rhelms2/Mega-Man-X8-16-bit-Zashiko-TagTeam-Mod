@@ -42,16 +42,19 @@ Progress:
 - Added switch cooldown time
 - Added invulnerability duration after character dies and new character is switched in
 
+9/04
+
+- Fixed graphical issues: Invisible walls in trilobyte stage, water not showing correctly on Noah's park, Falling ice invisible
+
 Bugs to fix:
 
-- Falling into void has odd behavior
+- Falling into void sometimes has odd behavior
+
+- When beating beating boss with ride chaser, current character will dash into the wall and die and secondary will be teleported into the ground resulting in a softlock
+
+- Heart pieces equipped saves throughout save files even if the other save doesnt have the same amount of heart tanks in total
 
 - Combo section: double penalty for inactive character taking damage?
-
-- Graphical (might be Linux specific!):
-	- Invisible walls in trilobyte stage
-	- water not showing correctly on Noah's park
-	- Falling ice in Central White is invisible
 
 - Pause menu: 
 	- health bar appears unfilled for characters with lower max health

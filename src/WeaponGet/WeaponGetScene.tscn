@@ -311,6 +311,78 @@ value = 28.0
 texture_progress = ExtResource( 11 )
 fill_mode = 3
 
+[node name="X Bar2" type="NinePatchRect" parent="Hud"]
+material = SubResource( 52 )
+margin_left = 8.0
+margin_top = 56.0
+margin_right = 22.0
+margin_bottom = 108.0
+texture = ExtResource( 9 )
+patch_margin_top = 4
+patch_margin_bottom = 17
+script = ExtResource( 65 )
+
+[node name="textureProgress2" type="TextureProgress" parent="Hud/X Bar2"]
+modulate = Color( 0.737255, 0.0941176, 0.0941176, 1 )
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = -80.0
+margin_right = 10.0
+margin_bottom = -17.0
+max_value = 32.0
+texture_progress = ExtResource( 11 )
+fill_mode = 3
+
+[node name="textureProgress" type="TextureProgress" parent="Hud/X Bar2"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = -80.0
+margin_right = 10.0
+margin_bottom = -17.0
+max_value = 32.0
+value = 16.0
+texture_progress = ExtResource( 11 )
+fill_mode = 3
+
+[node name="WeaponIcon" type="TextureRect" parent="Hud/X Bar2"]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 17.0
+margin_top = -14.0
+margin_right = 33.0
+margin_bottom = 2.0
+rect_clip_content = true
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = SubResource( 2 )
+
+[node name="WeaponBar" type="NinePatchRect" parent="Hud/X Bar2"]
+material = SubResource( 52 )
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 15.0
+margin_top = -76.0
+margin_right = 29.0
+texture = ExtResource( 22 )
+patch_margin_top = 4
+patch_margin_bottom = 17
+script = ExtResource( 40 )
+
+[node name="textureProgress" type="TextureProgress" parent="Hud/X Bar2/WeaponBar"]
+material = SubResource( 3 )
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 4.0
+margin_top = -80.0
+margin_right = 10.0
+margin_bottom = -17.0
+max_value = 32.0
+value = 28.0
+texture_progress = ExtResource( 11 )
+fill_mode = 3
+
 [node name="Ride Bar" type="NinePatchRect" parent="Hud"]
 margin_left = -14.0
 margin_top = 56.0
@@ -495,7 +567,7 @@ script = ExtResource( 42 )
 
 [node name="animatedSprite" parent="Objects/Servbot" index="1"]
 material = SubResource( 69 )
-frame = 2
+frame = 3
 
 [node name="EnemyDeath" parent="Objects/Servbot" index="8"]
 should_spawn_item = false
@@ -505,7 +577,7 @@ position = Vector2( 238, -23 )
 
 [node name="animatedSprite" parent="Objects/Servbot2" index="1"]
 material = SubResource( 70 )
-frame = 2
+frame = 3
 
 [node name="EnemyDeath" parent="Objects/Servbot2" index="8"]
 should_spawn_item = false
@@ -515,7 +587,7 @@ position = Vector2( 286, -35 )
 
 [node name="animatedSprite" parent="Objects/Servbot3" index="1"]
 material = SubResource( 71 )
-frame = 2
+frame = 3
 
 [node name="EnemyDeath" parent="Objects/Servbot3" index="8"]
 should_spawn_item = false
@@ -550,7 +622,7 @@ position = Vector2( 0, -16 )
 z_index = 1
 frames = ExtResource( 46 )
 animation = "idle"
-frame = 4
+frame = 11
 playing = true
 flip_h = true
 
