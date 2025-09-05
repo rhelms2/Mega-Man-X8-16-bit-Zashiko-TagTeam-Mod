@@ -18,7 +18,7 @@ func _ready() -> void :
 
 func _Setup():
 	interrupt_if_needed()
-	reduce_air_jumps(1)
+	reduce_air_jumps(2)
 	reduce_airdash_count(1)
 	jump_particle.emit(1)
 	if character.get_action_pressed("dash"):

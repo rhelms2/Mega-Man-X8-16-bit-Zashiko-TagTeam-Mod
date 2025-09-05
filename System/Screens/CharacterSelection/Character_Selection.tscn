@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://src/Options/CoverScreen.gd" type="Script" id=1]
 [ext_resource path="res://System/SFX/option_b_select.ogg" type="AudioStream" id=2]
@@ -40,6 +40,7 @@
 [ext_resource path="res://System/SFX/player_select.ogg" type="AudioStream" id=38]
 [ext_resource path="res://System/SFX/window_close.ogg" type="AudioStream" id=39]
 [ext_resource path="res://src/Title/title_bg.png" type="Texture" id=40]
+[ext_resource path="res://System/SFX/error.ogg" type="AudioStream" id=41]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -81,6 +82,10 @@ stream = ExtResource( 38 )
 volume_db = -4.0
 bus = "SFX"
 
+[node name="unequip" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 41 )
+bus = "SFX"
+
 [node name="cancel" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 39 )
 volume_db = -4.0
@@ -93,7 +98,6 @@ z_index = -1
 texture = ExtResource( 40 )
 
 [node name="Menu" type="Control" parent="."]
-visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 
@@ -187,25 +191,25 @@ margin_bottom = 214.0
 [node name="wireframe_X" type="TextureRect" parent="Menu/characters/Wireframes"]
 visible = false
 margin_left = 4.0
-margin_top = 11.0
+margin_top = 5.0
 margin_right = 116.0
-margin_bottom = 192.0
+margin_bottom = 186.0
 texture = ExtResource( 26 )
 
 [node name="wireframe_Zero" type="TextureRect" parent="Menu/characters/Wireframes"]
 visible = false
 margin_left = 4.0
-margin_top = 7.0
+margin_top = 1.0
 margin_right = 116.0
-margin_bottom = 192.0
+margin_bottom = 186.0
 texture = ExtResource( 36 )
 
 [node name="wireframe_Axl" type="TextureRect" parent="Menu/characters/Wireframes"]
 visible = false
 margin_left = 4.0
-margin_top = 7.0
+margin_top = 1.0
 margin_right = 116.0
-margin_bottom = 192.0
+margin_bottom = 186.0
 texture = ExtResource( 35 )
 
 [node name="Menu_Frame" type="TextureRect" parent="Menu"]
@@ -247,7 +251,6 @@ margin_bottom = 19.0
 texture = ExtResource( 31 )
 
 [node name="face_Zero" type="TextureRect" parent="Menu/Menu_Frame/Left/char_face_frame"]
-visible = false
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
@@ -357,9 +360,9 @@ A good choice for experienced players."
 modulate = Color( 0.407843, 0.792157, 1, 1 )
 self_modulate = Color( 1, 1, 1, 0 )
 margin_left = 127.0
-margin_top = 198.0
+margin_top = 187.0
 margin_right = 247.0
-margin_bottom = 214.0
+margin_bottom = 203.0
 rect_min_size = Vector2( 10, 16 )
 action_mode = 0
 script = ExtResource( 15 )
@@ -371,16 +374,30 @@ pick_sound = NodePath("../../../pick")
 [node name="text" type="Label" parent="Menu/Menu_Frame/GameStart"]
 anchor_top = 0.5
 anchor_bottom = 0.5
-margin_left = -127.0
-margin_top = -7.0
-margin_right = 247.0
-margin_bottom = 7.0
+margin_top = -4.0
+margin_right = 119.0
+margin_bottom = 10.0
 custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
 custom_constants/shadow_offset_x = 1
 custom_constants/shadow_offset_y = 1
 custom_fonts/font = ExtResource( 6 )
 text = "GAME_START_X"
 align = 1
+autowrap = true
+uppercase = true
+
+[node name="text2" type="Label" parent="Menu/Menu_Frame/GameStart"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_top = 6.0
+margin_right = 119.0
+margin_bottom = 20.0
+custom_colors/font_color_shadow = Color( 0.415686, 0.415686, 0.415686, 1 )
+custom_constants/shadow_offset_x = 1
+custom_constants/shadow_offset_y = 1
+custom_fonts/font = ExtResource( 6 )
+align = 1
+autowrap = true
 uppercase = true
 
 [node name="next_player" type="TextureRect" parent="Menu/Menu_Frame"]
@@ -436,7 +453,6 @@ direction = "left"
 
 [node name="Fader" type="ColorRect" parent="."]
 pause_mode = 2
-visible = false
 margin_right = 398.0
 margin_bottom = 224.0
 mouse_filter = 2

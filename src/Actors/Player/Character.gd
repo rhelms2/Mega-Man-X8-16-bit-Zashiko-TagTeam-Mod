@@ -60,7 +60,7 @@ func check_for_char_switch_input() -> void :
 			Event.emit_signal("character_switch")
 
 func can_switch() -> bool :
-	return is_current_player and CharacterManager.switch_timer <= 0 and CharacterManager.current_team.size() > 1 and CharacterManager.both_alive and not is_executing_special
+	return is_current_player and CharacterManager.switch_timer <= 0 and CharacterManager.team.size() > 1 and CharacterManager.both_alive and not is_executing_special
 
 func max_out_air_abilities() -> void :
 	var airjump = get_node_or_null("AirJump")
@@ -81,6 +81,8 @@ func max_out_air_abilities() -> void :
 func _ready() -> void :
 	connect_cutscene_events()
 	num_equipped_hearts = 0
+	max_health = CharacterManager.starting_max_health
+	current_health = max_health
 
 func connect_cutscene_events() -> void :
 	Event.listen("end_cutscene_start", self, "deactivate")

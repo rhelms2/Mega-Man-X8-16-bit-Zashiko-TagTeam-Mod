@@ -16,7 +16,6 @@ func set_dialogues():
 	
 func _ready() -> void :
 	._ready()
-	set_dialogues()
 
 func connect_start_events() -> void :
 	Event.listen("vile_door_open", self, "prepare_for_intro")
@@ -24,6 +23,7 @@ func connect_start_events() -> void :
 	Event.listen("vile_door_closed", self, "execute_intro")
 
 func prepare_for_intro() -> void:
+	set_dialogues()
 	animatedSprite.position = Vector2(0,-256)
 	animatedSprite.frame = 0
 	

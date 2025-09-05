@@ -8346,7 +8346,7 @@ bus = "SFX"
 pause_mode = 2
 position = Vector2( 1350, -1571 )
 frames = SubResource( 204 )
-frame = 4
+frame = 1
 playing = true
 
 [node name="particles2D" type="Particles2D" parent="Objects/Entrance" index="0"]

@@ -48,6 +48,10 @@ func _ready() -> void :
 	dialogue = CharacterManager._set_correct_dialogues("Secret2Defeated", dialogue)
 	get_parent().listen("zero_health", self, "start_death")
 	reset_shader()
+	Event.listen("character_switch_end", self, "refresh_dialogue")
+	
+func refresh_dialogue() -> void :
+	dialogue = CharacterManager._set_correct_dialogues("Secret2Defeated", dialogue)
 
 func start_death():
 	character.interrupt_all_moves()

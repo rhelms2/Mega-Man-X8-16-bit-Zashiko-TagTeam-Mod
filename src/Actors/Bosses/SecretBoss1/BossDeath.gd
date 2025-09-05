@@ -7,9 +7,14 @@ signal screen_flash
 onready var battle_song: AudioStreamPlayer = $"../Intro/BattleSong"
 
 func unlock_axl_white():
-	if CharacterManager.player_character == "Axl":
-		if is_instance_valid(GameManager.player):
-			var axl = GameManager.player
+	if "Axl" in CharacterManager.alive_team:
+		var player
+		if GameManager.player.name == "Axl":
+			player = GameManager.player
+		else:
+			player = GameManager.inactive_player
+		if is_instance_valid(player):
+			var axl = player
 			CharacterManager.white_axl_armor = true
 			axl.equip_axl_white_parts()
 			CharacterManager.set_axl_colors(axl.animatedSprite)
@@ -25,6 +30,10 @@ func achievement_check() -> void :
 func _ready() -> void :
 	dialogue = CharacterManager._set_correct_dialogues("Secret1Defeated", dialogue)
 	character.listen("zero_health", self, "start")
+	Event.listen("character_switch_end", self, "refresh_dialogue")
+	
+func refresh_dialogue() -> void :
+	dialogue = CharacterManager._set_correct_dialogues("Secret1Defeated", dialogue)
 
 func start() -> void :
 	character.interrupt_all_moves()

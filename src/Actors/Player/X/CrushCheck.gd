@@ -25,6 +25,8 @@ func _physics_process(_delta: float) -> void :
 		check(crush_horizontal2)
 
 func can_be_crushed() -> bool:
+	if not character.is_current_player:
+		return false
 	if not character.colliding:
 		return false
 	if ride != null:

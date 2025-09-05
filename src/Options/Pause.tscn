@@ -737,7 +737,7 @@ flip_h = true
 [node name="lifebar" type="NinePatchRect" parent="pause/Lives"]
 margin_left = 43.0
 margin_top = 46.0
-margin_right = 82.0
+margin_right = 70.0
 margin_bottom = 53.0
 grow_horizontal = 2
 texture = ExtResource( 21 )
@@ -752,7 +752,7 @@ margin_top = 1.0
 margin_right = 68.0
 margin_bottom = 6.0
 max_value = 32.0
-value = 16.0
+value = 10.0
 texture_progress = ExtResource( 20 )
 
 [node name="Weapons" type="VBoxContainer" parent="pause"]

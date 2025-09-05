@@ -521,8 +521,9 @@ func equip_heart() -> void :
 	var i = GameManager.team.find(self)
 	if i == -1:
 		return
-	GameManager.team[i].max_health += 1
-	GameManager.team[i].recover_health(1)
+	var buff = CharacterManager.heart_tank_buff_amt
+	GameManager.team[i].max_health += buff
+	GameManager.team[i].recover_health(buff)
 	num_equipped_hearts += 1
 
 func recover_health(value: float) -> void :

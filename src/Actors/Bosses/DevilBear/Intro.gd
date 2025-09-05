@@ -10,6 +10,7 @@ onready var punch: AudioStreamPlayer2D = $"../punch"
 onready var wind: Sprite = $"../animatedSprite/wind"
 
 func prepare_for_intro() -> void:
+	dialogue = CharacterManager._set_correct_dialogues("Vile Final", dialogue)
 	riding_vile.visible = false
 	flying_vile.visible = false
 	flying_vile.position.y = -160
@@ -24,7 +25,6 @@ func connect_start_events() -> void:
 
 func _ready() -> void:
 	call_deferred("prepare_for_intro")
-	dialogue = CharacterManager._set_correct_dialogues("Vile Final", dialogue)
 
 func _Update(delta):
 	process_gravity(delta)

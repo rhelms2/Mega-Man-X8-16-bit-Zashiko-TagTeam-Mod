@@ -48,10 +48,10 @@ func get_bar_value() -> float:
 func _ready() -> void :
 	Event.listen("changed_weapon", self, "display")
 	hide()
-	if x_bar.team_member_index > 0 and CharacterManager.current_team.size() > 1:
-		char_name = CharacterManager.current_team[x_bar.team_member_index]
+	if x_bar.team_member_index > 0 and CharacterManager.team.size() > 1:
+		char_name = CharacterManager.team[x_bar.team_member_index]
 	else:
-		char_name = CharacterManager.current_team[0]
+		char_name = CharacterManager.team[0]
 
 func hide() -> void :
 	weapon_icon.visible = false

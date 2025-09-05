@@ -129,7 +129,7 @@ func on_level_start():
 	bikes.clear()
 	
 	# TeamMod stuff
-	if CharacterManager.current_team.size() > 1:
+	if CharacterManager.team.size() > 1:
 		CharacterManager.both_alive = true
 	
 	change_state("Normal")

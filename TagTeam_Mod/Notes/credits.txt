@@ -1,0 +1,16 @@
+Temporary credits, so I don't lose track (eventually this will be in the README or credits sequence of the game):
+
+Programming, design, implementation: Rhelms
+
+Art:
+DUO
+
+Testing:
+KamiSquad_X
+himejoon
+JehovahsFitness
+メガ・ロン
+
+Special thanks/inspiration:
+himejoon
+Guru.exe

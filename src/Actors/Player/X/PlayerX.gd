@@ -221,7 +221,7 @@ func equip_icarus_legs_parts():
 	airdash.upgraded = false
 	airdash.max_airdashes = 2
 	airdash.invulnerability_duration = 0
-	airjump.set_max_air_jumps(1)
+	airjump.set_max_air_jumps(2)
 	
 	get_node("Jump").max_jump_time = 0.625
 	get_node("Jump").jump_velocity = 320
@@ -299,8 +299,9 @@ func equip_heart():
 	var i = GameManager.team.find(self)
 	if i == -1:
 		return
-	GameManager.team[i].max_health += 1
-	GameManager.team[i].recover_health(1)
+	var buff = CharacterManager.heart_tank_buff_amt
+	GameManager.team[i].max_health += buff
+	GameManager.team[i].recover_health(buff)
 	num_equipped_hearts += 1
 
 func recover_health(value: float):

@@ -84,7 +84,7 @@ func _ready() -> void :
 		add_child(node)
 
 	Event.listen("character_switch", self, "on_character_switch")
-	CharacterManager.set_player_character(CharacterManager.current_team[0])
+	CharacterManager.set_player_character(CharacterManager.team[0])
 	player = CharacterManager.get_player_character_object(CharacterManager.player_character)
 	player_instance = player.instance()
 	player_instance.is_current_player = true
@@ -92,10 +92,10 @@ func _ready() -> void :
 	player_instance.position = $CharacterPosition.position
 	team_members.append(player_instance)
 
-	if CharacterManager.current_team.size() > 1:
+	if CharacterManager.team.size() > 1:
 
-		for i in range(1, CharacterManager.current_team.size()):
-			var tm_instance = CharacterManager.get_player_character_object(CharacterManager.current_team[i]).instance()
+		for i in range(1, CharacterManager.team.size()):
+			var tm_instance = CharacterManager.get_player_character_object(CharacterManager.team[i]).instance()
 			tm_instance.position = player_instance.position
 			tm_instance.deactivate()
 			tm_instance.hide()

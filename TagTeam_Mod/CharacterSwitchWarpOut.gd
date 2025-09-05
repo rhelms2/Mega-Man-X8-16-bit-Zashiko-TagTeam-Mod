@@ -6,7 +6,6 @@ class_name CharacterSwitchWarpOut
 export  var beam_speed: = 690.0
 var ascending: = false
 onready var animatedSprite = get_parent().get_node("animatedSprite")
-onready var beam_sound = get_node("audioStreamPlayer")
 
 
 func _ready() -> void :
@@ -34,7 +33,6 @@ func on_animation_finished():
 	if executing:
 		if character.get_animation() == "beam_in":
 			play_animation_once("beam")
-			beam_sound.play()
 			timer = 0
 			ascending = true
 

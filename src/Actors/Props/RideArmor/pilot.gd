@@ -9,6 +9,7 @@ onready var axl_ride: Texture = preload("res://Axl_mod/Ride/ride_axl.png")
 
 func set_player_sprite_sheet():
 	var _texture = x_ride
+	material = GameManager.player.animatedSprite.material
 	match CharacterManager.player_character:
 		"Player":
 			_texture = x_ride
@@ -17,7 +18,6 @@ func set_player_sprite_sheet():
 			if CharacterManager.ultimate_x_armor:
 				_texture = x_ultimate_ride
 		"Zero":
-			
 			_texture = zero_ride
 		"Axl":
 			_texture = axl_ride

@@ -54,6 +54,9 @@ func activate(weapon, character) -> void :
 		icarus_fill.visible = false
 		hermes_fill.visible = false
 		ultimate_fill.visible = false
+	
+	if not character.is_current_player:
+		hide()
 
 func deactivate(_weapon, _character) -> void :
 	if not _character == get_team_member():
@@ -182,7 +185,7 @@ func is_team_member_current_player() -> bool:
 	return false
 
 func get_current_set() -> String:
-	if is_instance_valid(GameManager.player):
+	if is_instance_valid(GameManager.player) and is_team_member_current_player():
 		return GameManager.player.is_full_armor()
 	return "none"
 
@@ -192,13 +195,15 @@ func _on_WeaponBar_displayed(weapon, char_name) -> void :
 			hide()
 		else:
 			unhide()
+	else:
+		hide()
 
 func hide_or_show(_d) -> void :
 	call_deferred("check")
 
 func check() -> void :
 	yield(get_tree(), "idle_frame")
-	if is_team_member_current_player() and get_current_set() == "hermes" or get_current_set() == "icarus" or get_current_set() == "ultimate" or get_current_set() == "axl":
+	if get_current_set() == "hermes" or get_current_set() == "icarus" or get_current_set() == "ultimate" or get_current_set() == "axl":
 		call_deferred("unhide")
 	else:
 		call_deferred("hide")

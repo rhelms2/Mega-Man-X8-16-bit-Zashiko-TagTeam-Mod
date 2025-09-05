@@ -6,6 +6,7 @@ onready var tween: TweenController = TweenController.new(self, false)
 onready var x_bar_texture: Texture = preload("res://src/HUD/X_bar.png")
 onready var axl_bar_texture: Texture = preload("res://Axl_mod/HUD/Axl_bar.png")
 onready var zero_bar_texture: Texture = preload("res://Zero_mod/HUD/Zero_bar.png")
+onready var special_bar = $SpecialBar
 
 var fading_out: bool = false
 var fading_in: bool = false
@@ -13,10 +14,10 @@ var fading_in: bool = false
 export var team_member_index: int = 0
 
 func set_player_hud():
-	if team_member_index > 0 and CharacterManager.current_team.size() == 1:
+	if team_member_index > 0 and CharacterManager.team.size() == 1:
 		hide()
 		return
-	match CharacterManager.current_team[team_member_index]:
+	match CharacterManager.team[team_member_index]:
 		"Player":
 			texture = x_bar_texture
 		"X":
@@ -29,6 +30,9 @@ func set_player_hud():
 func _ready() -> void :
 	call_deferred("set_player_hud")
 	Event.connect("player_death", self, "disable")
+	
+	if CharacterManager.team.size() == 1 and team_member_index > 0:
+		special_bar.queue_free()
 	# Event.listen("refresh_hud", self, "set_player_hud")
 
 func disable() -> void :

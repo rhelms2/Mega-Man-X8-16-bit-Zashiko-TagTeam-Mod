@@ -260,6 +260,7 @@ material = ExtResource( 39 )
 position = Vector2( 0, -9 )
 z_index = -1
 frames = SubResource( 72 )
+frame = 1
 playing = true
 
 [node name="Dash Smoke Particles" type="Particles2D" parent="animatedSprite"]

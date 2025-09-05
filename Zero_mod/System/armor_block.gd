@@ -34,7 +34,7 @@ func block_wall() -> void :
 						unlocked = false
 	
 	if character_name != "":
-		if CharacterManager.player_character != character_name:
+		if not character_name in CharacterManager.team:
 			unlocked = false
 	
 	if need_all_weapons and not got_all_boss_weapons():

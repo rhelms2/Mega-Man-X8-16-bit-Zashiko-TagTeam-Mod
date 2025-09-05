@@ -51,23 +51,23 @@ var player_character: String = "X"
 var valid_players: Array = ["X", "Zero", "Axl"]
 
 var equipped_hearts: Dictionary = {"X": 0, "Zero": 0, "Axl": 0}
-var heart_tank_buff_val: int = 1
-var starting_max_health: int = 12
+var heart_tank_buff_amt: int = 2
+var starting_max_health: int = 10
 
 var both_alive = true
 var alive_team: Array = []
 
 # Strings here instead of literal objects
-var current_team: Array = ["X"]
+var team: Array = ["X"]
 var max_team_size: int = 2
 
 var switch_cooldown_duration: float = 0.3
 var switch_timer: float = 0
-var switch_invulnerability_duration: float = 0.3
+var switch_invulnerability_duration: float = 0.75
 var switch_invulnerability_timer: float = 0
 
 func on_character_switch_end():
-	current_team.invert()
+	team.invert()
 	if not GameManager.player.is_on_floor():
 		# Reset horizontal velocity and remove dash/jump/hover abilities from the switching character
 		GameManager.player.dashfall = false
@@ -95,6 +95,9 @@ func get_heart_count() -> int:
 			count += 1
 	return count
 
+func reset_equipped_hearts() -> void:
+	equipped_hearts = {"X": 0, "Zero": 0, "Axl": 0}
+
 func set_player_equipped_hearts(name: String, num_to_equip: int) -> void:
 	var max_hearts = get_heart_count()
 	var new_equipped_heart_count = 0
@@ -115,11 +118,11 @@ func set_player_equipped_hearts(name: String, num_to_equip: int) -> void:
 
 
 func add_player_to_team(new_player: String) -> void:
-	if new_player in valid_players and current_team.size() < max_team_size:
-		current_team.append(new_player)
+	if new_player in valid_players and team.size() < max_team_size:
+		team.append(new_player)
 
 func remove_player_from_team(player_to_remove: String) -> void:
-	current_team.erase(player_to_remove)
+	team.erase(player_to_remove)
 
 
 func set_player_character(character) -> void :
@@ -200,8 +203,6 @@ func _save() -> void :
 	var save_data = {
 		"player_count": player_count, 
 		"player_character": player_character, 
-		"current_team": current_team,
-		"equipped_hearts": equipped_hearts,
 		"credits_seen": credits_seen, 
 		
 		"new_game": new_game, 
@@ -236,8 +237,6 @@ func _load() -> void :
 		if typeof(save_data) == TYPE_DICTIONARY:
 			player_count = int(save_data.get("player_count", 1))
 			player_character = save_data.get("player_character", "X")
-			current_team = save_data.get("current_team", ["X"])
-			equipped_hearts = save_data.get("equipped_hearts", {"X": 0, "Zero": 0, "Axl": 0})
 			credits_seen = bool(save_data.get("credits_seen", false))
 			
 			new_game = bool(save_data.get("new_game", true))

@@ -133,5 +133,7 @@ func got_all_weapons() -> bool:
 
 func is_naked() -> bool:
 	if is_instance_valid(GameManager.player):
+		if CharacterManager.team.size() > 1 and is_instance_valid(GameManager.inactive_player):
+			return not (GameManager.player.using_upgrades and GameManager.inactive_player.using_upgrades)
 		return not GameManager.player.using_upgrades
 	return false

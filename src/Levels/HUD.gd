@@ -140,6 +140,8 @@ func tween_switch_active_hp_bar() -> void:
 		var temp = active_hp_bar
 		active_hp_bar = inactive_hp_bar
 		inactive_hp_bar = temp
+		
+		inactive_hp_bar.special_bar.visible = false
 
 		active_index = player_bar.find(active_hp_bar)
 

@@ -59,7 +59,7 @@ func handle_already_got() -> void :
 		queue_free()
 	
 	if character_name != "":
-		if CharacterManager.player_character != character_name:
+		if not character_name in CharacterManager.team:
 			queue_free()
 
 func _physics_process(delta: float) -> void :

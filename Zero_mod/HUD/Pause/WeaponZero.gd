@@ -65,7 +65,7 @@ func set_pause_icon(_weapon) -> void :
 
 func set_player_weapon() -> void :
 	if weapon_resource and GameManager.player:
-		var i = CharacterManager.current_team.find(character_name)
+		var i = CharacterManager.team.find(character_name)
 		for _weapon in GameManager.team[i].get_node("Shot").get_children():
 			if _weapon is ZeroSpecialWeapon:
 				if _weapon.weapon.collectible == weapon_resource.collectible:

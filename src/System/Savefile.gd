@@ -82,6 +82,8 @@ func set_all_data() -> void :
 		"game_mode_set": CharacterManager.game_mode_set, 
 		"newgame_plus": newgame_plus
 	}
+	game_data["team"] = CharacterManager.team
+	game_data["equipped_hearts"] = CharacterManager.equipped_hearts
 
 func save(slot: int = 0) -> void :
 	
@@ -100,6 +102,9 @@ func write_to_file(slot: int = 0) -> void :
 
 func load_save(slot: int = 0) -> void :
 	
+	CharacterManager.game_mode = 0
+	CharacterManager.team = []
+	CharacterManager.equipped_hearts = {"X": 0, "Zero": 0, "Axl": 0}
 	CharacterManager.game_mode_set = false
 	CharacterManager.game_mode = 0
 	newgame_plus = 0
@@ -209,6 +214,13 @@ func apply_data(_slot: int = 0) -> void :
 		
 		if game_data["variables"].has("igt"):
 			IGT.set_time(GlobalVariables.get("igt"))
+			
+		if game_data.has("team"):
+			CharacterManager.team = game_data["team"]
+		
+		if game_data.has("equipped_hearts"):
+			CharacterManager.equipped_hearts = game_data["equipped_hearts"]
+			
 		call_deferred("emit_signal", "loaded")
 
 func clear_save(slot: int = 0) -> void :
@@ -221,6 +233,8 @@ func clear_save(slot: int = 0) -> void :
 	}
 	CharacterManager.game_mode_set = false
 	CharacterManager.game_mode = 0
+	CharacterManager.team = []
+	CharacterManager.equipped_hearts = {"X": 0, "Zero": 0, "Axl": 0}
 	newgame_plus = 0
 	IGT.reset()
 	GameManager.collectibles = []

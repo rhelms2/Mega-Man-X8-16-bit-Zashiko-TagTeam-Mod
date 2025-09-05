@@ -186,7 +186,7 @@ func equip_ultima_legs_parts():
 	dash.get_node("particles2D").texture = load("res://src/Effects/Textures/follow_shot_ultimate.png")
 	airdash.get_node("particles2D").texture = load("res://src/Effects/Textures/follow_shot_ultimate.png")
 	
-	airjump.set_max_air_jumps(1)
+	airjump.set_max_air_jumps(3)
 	get_node("Jump").max_jump_time = 0.625
 	get_node("Jump").jump_velocity = 320
 	get_node("DashJump").max_jump_time = 0.625
@@ -252,8 +252,9 @@ func equip_heart():
 	var i = GameManager.team.find(self)
 	if i == -1:
 		return
-	GameManager.team[i].max_health += 1
-	GameManager.team[i].recover_health(1)
+	var buff = CharacterManager.heart_tank_buff_amt
+	GameManager.team[i].max_health += buff
+	GameManager.team[i].recover_health(buff)
 	num_equipped_hearts += 1
 
 func recover_health(value: float):

@@ -27,10 +27,10 @@ func _ready() -> void :
 	timer2 = 0.0
 	charge_state = 0
 	finished = false
-	#call_deferred("handle_player_not_x")
+	call_deferred("handle_player_not_x")
 
 func handle_player_not_x() -> void :
-	if CharacterManager.player_character != "X":
+	if not "X" in CharacterManager.team:
 		finished = true
 		call_deferred("disable_glass_collider")
 		sprite.play("finished")

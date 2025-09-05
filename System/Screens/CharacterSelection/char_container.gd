@@ -24,8 +24,10 @@ onready var sprite_axl: TextureRect = get_node("Axl")
 
 onready var game_start: X8TextureButton = menu_frame.get_node("GameStart")
 onready var game_start_label: Label = game_start.get_node("text")
+onready var game_start_label2: Label = game_start.get_node("text2")
 
 onready var equip: AudioStreamPlayer = $"../../../../equip"
+onready var unequip: AudioStreamPlayer = $"../../../../unequip"
 onready var choice: AudioStreamPlayer = $"../../../../choice"
 onready var pick: AudioStreamPlayer = $"../../../../pick"
 
@@ -69,6 +71,9 @@ func _ready() -> void :
 	characters = get_children()
 	for child in characters:
 		child.rect_min_size = Vector2(40, 48)
+		child.modulate = Color("#2c2c2c")
+	
+	CharacterManager.team = []
 	set_menu_visibility()
 
 	CharacterManager.black_zero_armor = false
@@ -76,6 +81,7 @@ func _ready() -> void :
 
 	CharacterManager.white_axl_armor = false
 	CharacterManager.set_axl_colors(sprite_axl)
+
 
 func hide_all_wireframes() -> void :
 	wireframe_x.hide()
@@ -89,7 +95,6 @@ func set_menu_visibility() -> void :
 	hide_all_wireframes()
 	if "X" in characters[1].name:
 		game_start.char_name = "X"
-		game_start_label.text = tr("GAME_START_X")
 		wireframe_x.show()
 		face_x.show()
 		left_desc.bbcode_text = x_left_desc
@@ -98,7 +103,6 @@ func set_menu_visibility() -> void :
 		
 	if "Zero" in characters[1].name:
 		game_start.char_name = "Zero"
-		game_start_label.text = tr("GAME_START_ZERO")
 		wireframe_zero.show()
 		face_zero.show()
 		left_desc.bbcode_text = zero_left_desc
@@ -107,12 +111,35 @@ func set_menu_visibility() -> void :
 		
 	if "Axl" in characters[1].name:
 		game_start.char_name = "Axl"
-		game_start_label.text = tr("GAME_START_AXL")
 		wireframe_axl.show()
 		face_axl.show()
 		left_desc.bbcode_text = axl_left_desc
 		right_name.text = "Axl"
 		right_desc.bbcode_text = axl_right_desc
+		
+	update_game_start_label()
+		
+func update_game_start_label() -> void :
+	if CharacterManager.team.size() == 0:
+		game_start_label.text = "Select team"
+		game_start_label2.text = ""
+		return
+		
+	var char_name
+	if "X" in characters[1].name:
+		char_name = "X"
+	elif "Zero" in characters[1].name:
+		char_name = "Zero"
+	elif "Axl" in characters[1].name:
+		char_name = "Axl"
+		
+	var starting_char = CharacterManager.team[0]
+	if char_name == starting_char:
+		game_start_label.text = "Remove " + char_name
+		game_start_label2.text = "from team"
+	else:
+		game_start_label.text = "Start as " + CharacterManager.team[0]
+		game_start_label2.text = "and " + char_name
 
 func _input(event: InputEvent) -> void :
 	if Input.is_action_just_pressed("move_right"):
@@ -126,7 +153,29 @@ func _input(event: InputEvent) -> void :
 		switch_armor(1)
 		
 	if Input.is_action_just_pressed("ui_accept"):
-		gamestart_button.on_press()
+		
+		var char_name
+		if "X" in characters[1].name:
+			char_name = "X"
+		elif "Zero" in characters[1].name:
+			char_name = "Zero"
+		elif "Axl" in characters[1].name:
+			char_name = "Axl"
+		
+		if char_name in CharacterManager.team:
+			unequip.play()
+			CharacterManager.remove_player_from_team(char_name)
+			characters[1].modulate = Color("#2c2c2c")
+		elif not char_name in CharacterManager.team:
+			pick.play()
+			CharacterManager.add_player_to_team(char_name) 
+			characters[1].modulate = Color("#ffffff")
+		
+		update_game_start_label()
+		 
+		if CharacterManager.team.size() == CharacterManager.max_team_size:
+			gamestart_button.can_start_game = true
+			gamestart_button.on_press()
 
 func has_icarus_armor() -> bool:
 	var part: int = 0

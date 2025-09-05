@@ -27,7 +27,7 @@ func get_bar_value() -> float:
 
 func set_player_weapon() -> void :
 	if weapon_resource and GameManager.player:
-		var i = CharacterManager.current_team.find(character_name)
+		var i = CharacterManager.team.find(character_name)
 		for _weapon in GameManager.team[i].get_node("Shot").get_children():
 			if _weapon is BossWeapon or _weapon.name == "GigaCrash" or _weapon.name == "XDrive" or _weapon.name == "NovaStrike":
 				if _weapon.weapon.collectible == weapon_resource.collectible:

@@ -7,7 +7,7 @@ onready var health_item: PackedScene = preload("res://src/Objects/Heal.tscn")
 
 var timer: float = 0.0
 var last_time_increased: float = 0.0
-var amount_to_increase: int = 1
+var amount_to_increase: int = CharacterManager.heart_tank_buff_amt
 var executing: bool = false
 
 
