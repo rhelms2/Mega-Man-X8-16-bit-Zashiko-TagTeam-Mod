@@ -26,7 +26,7 @@
 [ext_resource path="res://src/Effects/Textures/explosion.png" type="Texture" id=24]
 [ext_resource path="res://src/Effects/Materials/ExplosionParticles.tres" type="Material" id=25]
 [ext_resource path="res://src/Effects/Materials/RemainsParticle.tres" type="Material" id=26]
-[ext_resource path="res://src/Actors/Enemy Collision Detector.gd" type="Script" id=27]
+[ext_resource path="res://src/Actors/RideChaser Enemy Collision Detector.gd" type="Script" id=27]
 [ext_resource path="res://src/Actors/Weapons/AltFire.gd" type="Script" id=28]
 [ext_resource path="res://src/Actors/Player/x_collision_box.tres" type="Shape2D" id=29]
 [ext_resource path="res://src/Sounds/SLIDE.wav" type="AudioStream" id=30]
@@ -356,7 +356,6 @@ material = ExtResource( 18 )
 position = Vector2( 0, -4 )
 z_index = 10
 frames = ExtResource( 23 )
-frame = 2
 playing = true
 
 [node name="Accelerate" type="Node2D" parent="."]

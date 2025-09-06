@@ -110,16 +110,15 @@ custom_fonts/normal_font = ExtResource( 8 )
 text = "MM:SS:MM"
 
 [node name="Bars" type="Control" parent="."]
-visible = false
 margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="X Bar2" type="NinePatchRect" parent="."]
-modulate = Color( 0.588235, 0.588235, 0.588235, 1 )
+modulate = Color( 0.490196, 0.490196, 0.490196, 1 )
 material = SubResource( 1 )
-margin_left = 13.0
+margin_left = 14.0
 margin_top = 64.0
-margin_right = 27.0
+margin_right = 28.0
 margin_bottom = 108.0
 texture = ExtResource( 5 )
 patch_margin_top = 4

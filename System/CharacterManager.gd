@@ -95,6 +95,12 @@ func get_heart_count() -> int:
 			count += 1
 	return count
 
+func are_hearts_equipped() -> bool:
+	var sum = 0
+	for key in equipped_hearts.keys():
+		sum += equipped_hearts[key]
+	return bool(sum)
+
 func reset_equipped_hearts() -> void:
 	equipped_hearts = {"X": 0, "Zero": 0, "Axl": 0}
 

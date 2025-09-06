@@ -15,6 +15,9 @@ onready var player_healable: = [$"X Bar/textureProgress2", $"X Bar2/textureProgr
 onready var active_hp_bar = $"X Bar"
 onready var inactive_hp_bar = $"X Bar2"
 onready var active_index = 0
+onready var orig_active_bar_pos = active_hp_bar.rect_position
+onready var orig_inactive_bar_pos = inactive_hp_bar.rect_position
+onready var inactive_bar_color = inactive_hp_bar.modulate
 
 onready var ride_bar: NinePatchRect = $"Ride Bar"
 onready var ride_hp: TextureProgress = $"Ride Bar/textureProgress"
@@ -127,11 +130,14 @@ func tween_switch_active_hp_bar() -> void:
 		
 		char_switch_hp_tween = create_tween()
 		char_switch_hp_tween.set_parallel()
-		char_switch_hp_tween.tween_property(inactive_hp_bar,"rect_position:x",8,0.2)
-		char_switch_hp_tween.tween_property(active_hp_bar,"rect_position:x",13,0.2)
-		char_switch_hp_tween.tween_property(active_hp_bar,"modulate:r",Color.gray.r,0.2)
-		char_switch_hp_tween.tween_property(active_hp_bar,"modulate:g",Color.gray.g,0.2)
-		char_switch_hp_tween.tween_property(active_hp_bar,"modulate:b",Color.gray.b,0.2)
+		char_switch_hp_tween.tween_property(inactive_hp_bar,"rect_position:x",orig_active_bar_pos.x,0.2)
+		char_switch_hp_tween.tween_property(active_hp_bar,"rect_position:x",orig_inactive_bar_pos.x,0.2)
+		#char_switch_hp_tween.tween_property(inactive_hp_bar,"rect_position:y",orig_active_bar_pos.y,0.2)
+		#char_switch_hp_tween.tween_property(active_hp_bar,"rect_position:y",orig_inactive_bar_pos.y,0.2)
+		
+		char_switch_hp_tween.tween_property(active_hp_bar,"modulate:r",inactive_bar_color.r,0.2)
+		char_switch_hp_tween.tween_property(active_hp_bar,"modulate:g",inactive_bar_color.g,0.2)
+		char_switch_hp_tween.tween_property(active_hp_bar,"modulate:b",inactive_bar_color.b,0.2)
 		
 		char_switch_hp_tween.tween_property(inactive_hp_bar,"modulate:r",Color.white.r,0.2)
 		char_switch_hp_tween.tween_property(inactive_hp_bar,"modulate:g",Color.white.g,0.2)

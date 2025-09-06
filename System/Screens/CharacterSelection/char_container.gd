@@ -142,6 +142,9 @@ func update_game_start_label() -> void :
 		game_start_label2.text = "and " + char_name
 
 func _input(event: InputEvent) -> void :
+	if gamestart_button.game_started:
+		return
+		
 	if Input.is_action_just_pressed("move_right"):
 		emit_signal("switch_character", "right")
 	elif Input.is_action_just_pressed("move_left"):
@@ -162,6 +165,8 @@ func _input(event: InputEvent) -> void :
 		elif "Axl" in characters[1].name:
 			char_name = "Axl"
 		
+		yield(get_tree().create_timer(0.05), "timeout")
+		
 		if char_name in CharacterManager.team:
 			unequip.play()
 			CharacterManager.remove_player_from_team(char_name)
@@ -175,6 +180,7 @@ func _input(event: InputEvent) -> void :
 		 
 		if CharacterManager.team.size() == CharacterManager.max_team_size:
 			gamestart_button.can_start_game = true
+			gamestart_button.game_started = true
 			gamestart_button.on_press()
 
 func has_icarus_armor() -> bool:

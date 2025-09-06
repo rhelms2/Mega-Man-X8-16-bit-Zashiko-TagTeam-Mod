@@ -4,6 +4,7 @@ export  var pick_sound: NodePath
 
 var char_name: String = ""
 var can_start_game: bool = false
+var game_started: bool = false
 
 
 func set_player() -> void :

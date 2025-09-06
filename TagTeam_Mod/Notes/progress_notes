@@ -83,6 +83,10 @@ Bugs to fix:
 - Combo section: double penalty for inactive character taking damage? Also can't be beaten with only zero (MAY BE FIXED, NEEDS TESTING)
 	- Look at ComboSection.gd
 
+- Zero weapons should show up in stage if Zero is in the team (NEEDS TESTING)
+
+- Adjustments to combo section so it is beatable with Zero? (NEEDS TESTING)
+
 - if a character dies after switching, dead character will be playable and invincible, switching is disabled (NEEDS TO BE REPLICATED/CONFIRMED AFTER ADJUSTMENTS TO SWITCH SYSTEM)
 
 - Freeze during fade out on death on dark mantis (NEEDS TO BE REPLICATED/CONFIRMED AFTER ADJUSTMENTS TO SWITCH SYSTEM)

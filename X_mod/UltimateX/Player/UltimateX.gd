@@ -186,7 +186,7 @@ func equip_ultima_legs_parts():
 	dash.get_node("particles2D").texture = load("res://src/Effects/Textures/follow_shot_ultimate.png")
 	airdash.get_node("particles2D").texture = load("res://src/Effects/Textures/follow_shot_ultimate.png")
 	
-	airjump.set_max_air_jumps(3)
+	airjump.set_max_air_jumps(4)
 	get_node("Jump").max_jump_time = 0.625
 	get_node("Jump").jump_velocity = 320
 	get_node("DashJump").max_jump_time = 0.625

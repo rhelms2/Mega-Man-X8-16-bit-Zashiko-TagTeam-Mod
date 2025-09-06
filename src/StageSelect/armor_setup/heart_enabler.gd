@@ -59,6 +59,7 @@ func refresh_equipped_hearts() -> void:
 	refresh_character_name()
 	num_equipped = CharacterManager.equipped_hearts[character]
 	equipped_hearts.text = str(num_equipped) + "/"
+	material.set_shader_param("grayscale", not CharacterManager.are_hearts_equipped())
 	
 func refresh_character_name() -> void:
 	if character_name.text == "Zero (BETA)":
