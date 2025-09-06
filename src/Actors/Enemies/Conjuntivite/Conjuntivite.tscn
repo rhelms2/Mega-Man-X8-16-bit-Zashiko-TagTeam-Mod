@@ -23,12 +23,12 @@ extents = Vector2( 13.5, 15.5 )
 
 [sub_resource type="RectangleShape2D" id=48]
 
-[sub_resource type="Curve" id=240]
+[sub_resource type="Curve" id=247]
 max_value = 3.0
 _data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
 
 [sub_resource type="CurveTexture" id=239]
-curve = SubResource( 240 )
+curve = SubResource( 247 )
 
 [sub_resource type="ParticlesMaterial" id=245]
 resource_local_to_scene = true
@@ -45,12 +45,12 @@ damping = 7.69
 anim_speed = 1.0
 anim_speed_curve = SubResource( 239 )
 
-[sub_resource type="Curve" id=244]
+[sub_resource type="Curve" id=248]
 max_value = 3.0
 _data = [ Vector2( 0, 3 ), 0.0, -6.06097, 0, 0, Vector2( 1, 0 ), 0.0, 0.0, 0, 0 ]
 
 [sub_resource type="CurveTexture" id=243]
-curve = SubResource( 244 )
+curve = SubResource( 248 )
 
 [sub_resource type="ParticlesMaterial" id=246]
 resource_local_to_scene = true
@@ -95,7 +95,6 @@ shape = SubResource( 47 )
 material = ExtResource( 12 )
 frames = ExtResource( 4 )
 animation = "idle"
-frame = 3
 playing = true
 flip_h = true
 
@@ -104,7 +103,7 @@ material = ExtResource( 12 )
 z_index = -1
 frames = ExtResource( 4 )
 animation = "electricity"
-frame = 3
+frame = 11
 playing = true
 
 [node name="collisionShape2D" type="CollisionShape2D" parent="."]

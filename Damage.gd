@@ -43,7 +43,7 @@ func _Setup() -> void:
 	character.remove_invulnerability_shader()
 	zero_bonus_horizontal_speed()
 	character.global_position.y -= 1
-	character.emit_signal("received_damage")
+	character.emit_signal("received_damage", character)
 
 func reduce_health():
 	Log("Received " + str(damage_taken) + " total damage")

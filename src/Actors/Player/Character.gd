@@ -121,25 +121,29 @@ func cutscene_activate() -> void :
 
 
 func spike_touch() -> void :
-	if should_instantly_die() and not is_invulnerable() and not spike_invincibility:
+	if is_current_player and should_instantly_die() and not is_invulnerable() and not spike_invincibility:
 		if CharacterManager.game_mode <= - 1 or not should_die_to_spikes:
 			emit_signal("damage", 1, self)
 			return
-		CharacterManager.both_alive = false
-		emit_signal("zero_health")
+		zero_health_team()
 
 func lava_touch() -> void :
-	if should_instantly_die() and not spike_invincibility:
+	if is_current_player and should_instantly_die() and not spike_invincibility:
 		if CharacterManager.game_mode <= - 1 or not should_die_to_spikes:
 			if not is_invulnerable():
 				emit_signal("damage", 1, self)
 			return
-		CharacterManager.both_alive = false
-		emit_signal("zero_health")
+		zero_health_team()
 
 func void_touch() -> void :
+	if is_current_player:
+		zero_health_team()
+
+func zero_health_team() -> void :
 	CharacterManager.both_alive = false
 	emit_signal("zero_health")
+	if is_instance_valid(GameManager.inactive_player):
+		GameManager.inactive_player.emit_signal("zero_health")
 
 func should_instantly_die() -> bool:
 	return not is_executing("Ride")

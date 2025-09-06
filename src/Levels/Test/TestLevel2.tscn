@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://src/Levels/base_stage.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/Objects/LifeUp.tscn" type="PackedScene" id=2]
@@ -14,6 +14,38 @@
 [ext_resource path="res://src/Sounds/OST - SecretBattle1 - Intro.ogg" type="AudioStream" id=12]
 [ext_resource path="res://src/Actors/Enemies/Turret/Turret.tscn" type="PackedScene" id=13]
 [ext_resource path="res://src/Objects/LifeUpReset.tscn" type="PackedScene" id=14]
+[ext_resource path="res://src/Actors/Enemies/Conjuntivite/Conjuntivite.tscn" type="PackedScene" id=15]
+[ext_resource path="res://src/Objects/Spikes/spike_02.png" type="Texture" id=16]
+[ext_resource path="res://src/Objects/Spikes/spike_00.png" type="Texture" id=17]
+[ext_resource path="res://src/Objects/Spikes/spike_01.png" type="Texture" id=18]
+[ext_resource path="res://src/Objects/Spikes/spike_03.png" type="Texture" id=19]
+[ext_resource path="res://src/Objects/Spikes/DestructibleSpike.tscn" type="PackedScene" id=20]
+[ext_resource path="res://src/Actors/Enemies/Drone/Drone.tscn" type="PackedScene" id=21]
+[ext_resource path="res://src/Actors/Enemies/RidearmorReploid/RidearmorReploid.tscn" type="PackedScene" id=22]
+[ext_resource path="res://src/Objects/Spike.tscn" type="PackedScene" id=23]
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 17 ) ],
+"loop": true,
+"name": "middle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 18 ) ],
+"loop": true,
+"name": "middle_destroyed",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 16 ) ],
+"loop": true,
+"name": "side",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 19 ) ],
+"loop": true,
+"name": "side_destroyed",
+"speed": 5.0
+} ]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 198, 112 )
@@ -95,7 +127,7 @@ position = Vector2( 1346, 125 )
 collectible_name = "life_up_manowar"
 
 [node name="LifeUpReset" parent="Objects" index="12" instance=ExtResource( 14 )]
-position = Vector2( 152, 182 )
+position = Vector2( 26, 252 )
 
 [node name="Capsule" parent="Objects" index="13" instance=ExtResource( 4 )]
 position = Vector2( 712, 208 )
@@ -132,6 +164,102 @@ position = Vector2( 487, 195 )
 position = Vector2( 274, 177 )
 rotation = -1.5708
 
+[node name="Conjuntivite2" parent="Objects" index="21" instance=ExtResource( 15 )]
+position = Vector2( 434, 143 )
+
+[node name="SpikeRow" type="Node2D" parent="Objects" index="22"]
+position = Vector2( 503, 208 )
+
+[node name="DestructibleSpike" parent="Objects/SpikeRow" index="0" instance=ExtResource( 20 )]
+position = Vector2( -51, -10 )
+frames = SubResource( 2 )
+animation = "side"
+flip_h = true
+
+[node name="DestructibleSpike2" parent="Objects/SpikeRow" index="1" instance=ExtResource( 20 )]
+position = Vector2( -38, -10 )
+frames = SubResource( 2 )
+flip_h = true
+
+[node name="DestructibleSpike3" parent="Objects/SpikeRow" index="2" instance=ExtResource( 20 )]
+position = Vector2( -22, -10 )
+frames = SubResource( 2 )
+flip_h = true
+
+[node name="DestructibleSpike4" parent="Objects/SpikeRow" index="3" instance=ExtResource( 20 )]
+position = Vector2( -6, -10 )
+frames = SubResource( 2 )
+flip_h = true
+
+[node name="DestructibleSpike5" parent="Objects/SpikeRow" index="4" instance=ExtResource( 20 )]
+position = Vector2( 10, -10 )
+frames = SubResource( 2 )
+flip_h = true
+
+[node name="DestructibleSpike6" parent="Objects/SpikeRow" index="5" instance=ExtResource( 20 )]
+position = Vector2( 27, -10 )
+frames = SubResource( 2 )
+flip_h = true
+
+[node name="DestructibleSpike8" parent="Objects/SpikeRow" index="6" instance=ExtResource( 20 )]
+position = Vector2( 43, -10 )
+frames = SubResource( 2 )
+flip_h = true
+
+[node name="DestructibleSpike9" parent="Objects/SpikeRow" index="7" instance=ExtResource( 20 )]
+position = Vector2( 59, -10 )
+frames = SubResource( 2 )
+flip_h = true
+
+[node name="DestructibleSpike10" parent="Objects/SpikeRow" index="8" instance=ExtResource( 20 )]
+position = Vector2( 75, -10 )
+frames = SubResource( 2 )
+flip_h = true
+
+[node name="DestructibleSpike11" parent="Objects/SpikeRow" index="9" instance=ExtResource( 20 )]
+position = Vector2( 92, -10 )
+frames = SubResource( 2 )
+flip_h = true
+
+[node name="DestructibleSpike12" parent="Objects/SpikeRow" index="10" instance=ExtResource( 20 )]
+position = Vector2( 108, -10 )
+frames = SubResource( 2 )
+flip_h = true
+
+[node name="DestructibleSpike7" parent="Objects/SpikeRow" index="11" instance=ExtResource( 20 )]
+position = Vector2( 124, -10 )
+frames = SubResource( 2 )
+animation = "side"
+
+[node name="Drone9" parent="Objects" index="23" instance=ExtResource( 21 )]
+position = Vector2( 326, 145 )
+spawn_direction = 1
+
+[node name="RidearmorReploid" parent="Objects" index="24" instance=ExtResource( 22 )]
+position = Vector2( 719, -99 )
+
+[node name="Void" parent="Objects" index="25" instance=ExtResource( 23 )]
+modulate = Color( 0.521569, 1, 0, 1 )
+position = Vector2( -78, 470 )
+scale = Vector2( 50, 1 )
+
+[node name="area2D" parent="Objects/Void" index="0"]
+type = "void"
+
+[node name="collisionShape2D" parent="Objects/Void/area2D" index="0"]
+position = Vector2( 0, 27 )
+
+[node name="Void2" parent="Objects" index="26" instance=ExtResource( 23 )]
+modulate = Color( 0.521569, 1, 0, 1 )
+position = Vector2( 1748, 166 )
+scale = Vector2( 50, 1 )
+
+[node name="area2D" parent="Objects/Void2" index="0"]
+type = "void"
+
+[node name="collisionShape2D" parent="Objects/Void2/area2D" index="0"]
+position = Vector2( 0, 27 )
+
 [node name="Limits" parent="." index="7"]
 visible = false
 
@@ -146,3 +274,6 @@ position = Vector2( 2, 0 )
 shape = SubResource( 1 )
 
 [connection signal="delayed_signal" from="StateCamera/lines" to="StateCamera/lines2" method="start_loop"]
+
+[editable path="Objects/Void"]
+[editable path="Objects/Void2"]

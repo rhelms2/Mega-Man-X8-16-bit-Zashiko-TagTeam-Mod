@@ -54,15 +54,25 @@ func set_values_for_axl() -> void :
 			s_time_limit = 40
 			if self.name == "Section3":
 				s_time_limit = 45
-		
+				
+func set_values_for_zero() -> void :
+	s_time_limit = 45
+	s_ranking = 95.0
+	a_ranking = 70.0
+	b_ranking = 50.0
+	c_ranking = 25.0
+	d_ranking = 10.0
+
 func set_correct_paths() -> void :
 	
 	player = get_player_combo_section()
 	
 	visual = get_player_combo_label_section()
 	visual_ranking = get_node_or_null("../../StateCamera/VisualRanking")
-	if CharacterManager.player_character == "Axl":
+	if "Axl" in CharacterManager.team and CharacterManager.team.size() == 1:
 		call_deferred("set_values_for_axl")
+	if "Zero" in CharacterManager.team and self.name == "Section3":
+		set_values_for_zero()
 
 func get_player_combo_section():
 	match CharacterManager.player_character:
@@ -128,7 +138,7 @@ func prepare() -> void :
 	activate_all_enemies()
 
 func activate() -> void :
-	
+	set_correct_paths()
 	set_physics_process(true)
 	active = true
 	emit_signal("started")
@@ -158,8 +168,8 @@ func killed_enemy() -> void :
 		visual_ranking.set_kills_left(enemies_left_to_kill)
 		Log(current_combo)
 
-func damaged_player() -> void :
-	if active:
+func damaged_player(character) -> void :
+	if active and character == GameManager.player:
 		Log("Player Damaged")
 		reduce_combo_value(combo_decrease_damage)
 		reset_decay()

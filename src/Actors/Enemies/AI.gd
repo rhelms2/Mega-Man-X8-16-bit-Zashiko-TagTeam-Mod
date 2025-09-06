@@ -34,6 +34,7 @@ onready var vision = $vision
 onready var character = get_parent()
 var current_direction := 1
 var target
+var inactive_target
 
 var timer := 0.0
 onready var animated_sprite: AnimatedSprite = $"../animatedSprite"
@@ -59,6 +60,7 @@ func populate_list(path_list,node_list) -> void:
 func _ready() -> void:
 	Event.listen("door_transition_start",self,"deactivate")
 	Event.listen("door_transition_end",self,"activate")
+	Event.listen("character_switch_end", self, "switch_targets")
 	character.listen("guard_break",self,"on_guard_broken")
 	character.listen("zero_health",self,"on_zero_health")
 	character.listen("external_event",self,"on_external_event_heard")
@@ -183,7 +185,11 @@ func stop_abilities(list : Array):
 		for ability in list:
 			character.force_end(ability.name)
 
-func _on_vision_body_entered(player: Node) -> void:
+func _on_vision_body_entered(player: Node) -> void :
+	if is_instance_valid(GameManager.inactive_player):
+		if player.get_parent() == GameManager.inactive_player:
+			inactive_target = player.get_parent()
+			return
 	if player.is_in_group("Props"):
 		target = player.get_parent()
 	elif player.is_in_group("Player"):
@@ -193,9 +199,18 @@ func _on_vision_body_entered(player: Node) -> void:
 		
 		#activate_ability(on_see_player)
 
-func _on_vision_body_exited(player: Node) -> void:
+func _on_vision_body_exited(player: Node) -> void :
+	if is_instance_valid(GameManager.inactive_player):
+		if player.get_parent() == GameManager.inactive_player:
+			return
 	if target == player.get_parent():
 		target = null
+		
+func switch_targets() -> void :
+	if is_instance_valid(inactive_target) and is_instance_valid(target):
+		var temp = target
+		target = inactive_target
+		inactive_target = temp
 
 func is_to_the_right(body):
 	return body.global_position.x > global_position.x

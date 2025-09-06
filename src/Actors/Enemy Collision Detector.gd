@@ -5,7 +5,15 @@ var break_guards = true
 
 func _ready() -> void:
 	character.listen("death",self,"deactivate")
+	character.listen("character_switch_end", self, "activate")
 	character.listen("damage",self,"signal_damage")
+	activate()
+
+func activate() -> void:
+	if GameManager.player == character:
+		$CollisionShape2D.disabled = false
+	else:
+		deactivate()
 
 func deactivate() -> void:
 	$CollisionShape2D.disabled = true

@@ -73,7 +73,7 @@ signal collected_health(amount)
 signal weapon_stasis
 signal end_weapon_stasis
 signal dry_dash
-signal received_damage
+signal received_damage(character)
 signal equipped_armor
 signal at_max_hp
 
