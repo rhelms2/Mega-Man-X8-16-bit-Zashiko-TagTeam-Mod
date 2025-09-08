@@ -242,7 +242,7 @@ position = Vector2( 0, -4 )
 z_index = 1
 frames = ExtResource( 1 )
 animation = "awakened2_loop"
-frame = 3
+frame = 1
 playing = true
 offset = Vector2( 0, 1 )
 

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" load_steps=4 format=2]
+
+[ext_resource path="res://src/DialogSystem/Profiles/DialogueText.gd" type="Script" id=1]
+[ext_resource path="res://Axl_mod/DialogSystem/Profiles/Axl.tres" type="Resource" id=2]
+[ext_resource path="res://Zero_mod/Boss/Dialogue/Zero.tres" type="Resource" id=3]
+
+[resource]
+script = ExtResource( 1 )
+dialog = [ ExtResource( 3 ), "ZEROSECRET1_AXL", ExtResource( 2 ), "ZEROSECRET2_AXL", ExtResource( 3 ), "ZEROSECRET3_AXL", "ZEROSECRET4_AXL", ExtResource( 2 ), "ZEROSECRET5_AXL", ExtResource( 3 ), "ZEROSECRET6_AXL", "ZEROSECRET7_AXL", ExtResource( 2 ), "ZEROSECRET8_AXL", "ZEROSECRET9_AXL", ExtResource( 3 ), "ZEROSECRET10_AXL", "ZEROSECRET11_AXL", ExtResource( 2 ), "ZEROSECRET12_AXL", "ZEROSECRET13_AXL" ]

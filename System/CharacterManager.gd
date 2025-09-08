@@ -1363,4 +1363,18 @@ func _set_correct_dialogues(dialog_starter, dialogue) -> Resource:
 			_dialog = load("res://Zero_mod/DialogSystem/Dialogs/Stages/Secret2_Def_Dialogue.tres")
 		if player_character == "Axl":
 			_dialog = load("res://Axl_mod/DialogSystem/Dialogs/Stages/Secret2_Def_Dialogue.tres")
+
+	if dialog_starter == "Zero_Boss":
+		if player_character == "Zero":
+			_dialog = load("res://Zero_mod/Boss/Dialogue/AwakenedZero_Dialogue_Zero.tres")
+		if player_character == "Axl":
+			_dialog = load("res://Zero_mod/Boss/Dialogue/AwakenedZero_Dialogue_Axl.tres")
+
+	if dialog_starter == "Capsule":
+		if player_character == "Zero":
+			_dialog = load("res://Zero_mod/Boss/Dialogue/AwakenedZero_Dialogue_Zero.tres")
+		if player_character == "Axl":
+			_dialog = load("res://Axl_mod/Boss/Dialogue/AwakenedZero_Dialogue_Axl.tres")
+
+
 	return _dialog
