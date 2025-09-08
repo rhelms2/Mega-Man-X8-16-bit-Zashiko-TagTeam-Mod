@@ -113,7 +113,7 @@ Bugs to fix:
 
 Dire:
 
-- Character select screen still bugged, logic for adding and removing can get triggered almost simultaneously
+- Character select screen still bugged, logic for adding and removing can get triggered almost simultaneously (fixed?)
 - Achievements for no damage on boss fights (might be fixed, needs testing)
 
 Should get around to it:
