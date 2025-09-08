@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=2]
+[gd_scene load_steps=42 format=2]
 
 [ext_resource path="res://src/Actors/Panda.gd" type="Script" id=1]
 [ext_resource path="res://src/Actors/Bosses/Vile/FinalIntro.gd" type="Script" id=2]
@@ -28,6 +28,7 @@
 [ext_resource path="res://src/Sounds/Rooster - Lowkick.ogg" type="AudioStream" id=26]
 [ext_resource path="res://src/Sounds/56 - MMX - Enemy Death.wav" type="AudioStream" id=27]
 [ext_resource path="res://src/Actors/Bosses/DarkMantis/dps_hud.gd" type="Script" id=28]
+[ext_resource path="res://src/DialogSystem/Dialogs/Stages/Vile_final_Dialogue.tres" type="Resource" id=29]
 [ext_resource path="res://src/Actors/Bosses/Vile/VileJump.gd" type="Script" id=31]
 [ext_resource path="res://src/Actors/Bosses/Vile/Idle.gd" type="Script" id=32]
 [ext_resource path="res://src/Sounds/Vile - Defeat.ogg" type="AudioStream" id=34]
@@ -59,7 +60,7 @@ particles_anim_h_frames = 4
 particles_anim_v_frames = 4
 particles_anim_loop = false
 
-[node name="Vile" type="KinematicBody2D" groups=["Bosses", "Enemies"]]
+[node name="Vile Final" type="KinematicBody2D" groups=["Bosses", "Enemies"]]
 z_index = 5
 collision_layer = 8
 collision_mask = 257
@@ -89,7 +90,7 @@ position = Vector2( 0, -19 )
 z_index = 1
 frames = ExtResource( 8 )
 animation = "flight"
-frame = 5
+frame = 4
 playing = true
 
 [node name="visibilityNotifier2D" type="VisibilityNotifier2D" parent="."]
@@ -101,6 +102,7 @@ scale = Vector2( 4.35, 4.25 )
 script = ExtResource( 2 )
 debug_logs = true
 actions = [ "Event" ]
+dialogue = ExtResource( 29 )
 
 [node name="traverse" type="AudioStreamPlayer2D" parent="Intro"]
 stream = ExtResource( 36 )

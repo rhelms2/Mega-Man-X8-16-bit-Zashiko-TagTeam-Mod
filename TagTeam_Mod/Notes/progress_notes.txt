@@ -72,7 +72,19 @@ Progress:
 
 9/07
 
+- Added dialogue for Axl for Awakened Zero fight
+- Fixed Vile Primrose and Booster forest dialogue
+- Fixed mouse issues related to heart tank stuff in ArmorSetup scene
 
+////////////
+
+Features to implement:
+
+- Add Zero dialogue for awakened Zero fight
+- Add dialogue for Zero and Axl collecting X's armor pieces
+- Make sure Zero's weapons can be collected with just X or Axl
+- Make sure Zero and Axl can collect X's armor pieces
+- Adjust character select screen so you can start with just one character?
 
 ////////////
 
@@ -80,12 +92,9 @@ Bugs to fix:
 
 Dire:
 
-- Check: Can Axl get white armor
-- ArmorSetup: using mouse during heart tank selection causes unintended behavior
+- Check: Can Axl get white armor (NEEDS TESTING)
 - Dialogue:
-	- Issues with Vile in booster forest and primrose
-	- Awakened Zero dialogue
-	- Add dialogue for Dr. Light when Zero or Axl trigger the cutscene
+	- All Vile dialogue needs testing after changes to the boss intro logic
 
 Should get around to it:
 
@@ -109,9 +118,3 @@ Potentially fixed:
 - if a character dies after switching, dead character will be playable and invincible, switching is disabled (NEEDS TO BE REPLICATED/CONFIRMED AFTER ADJUSTMENTS TO SWITCH SYSTEM)
 - Freeze during fade out on death on dark mantis (NEEDS TO BE REPLICATED/CONFIRMED AFTER ADJUSTMENTS TO SWITCH SYSTEM)
 - Falling into void sometimes has odd behavior (NEEDS TO BE REPLICATED/CONFIRMED AFTER ADJUSTMENTS TO SWITCH SYSTEM)
-
-////////////
-
-Features to implement:
-
-- Adjust character select screen so you can start with just one character?

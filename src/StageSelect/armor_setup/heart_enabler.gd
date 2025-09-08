@@ -11,8 +11,8 @@ onready var pick: AudioStreamPlayer = $"../../../pick"
 onready var heart_holder = get_parent()
 
 onready var equipped_hearts: Label = $equipped
-onready var up_arrow: Label = $up_arrow 
-onready var down_arrow: Label = $down_arrow 
+onready var increase_button: TextureButton = $increase_button 
+onready var decrease_button: TextureButton = $decrease_button 
 
 onready var character_name = $"../../CharacterName"
 var character = ""
@@ -29,13 +29,14 @@ func change_state():
 	if state == state_enum.unlocked:
 		state = state_enum.locked
 		menu.lock_buttons()
-		up_arrow.visible = true
-		down_arrow.visible = true
+		enable()
+		increase_button.visible = true
+		decrease_button.visible = true
 	else:
 		state = state_enum.unlocked
 		menu.unlock_buttons()
-		up_arrow.visible = false
-		down_arrow.visible = false
+		increase_button.visible = false
+		decrease_button.visible = false
 
 func _input(event: InputEvent) -> void :
 	if state != state_enum.locked:
@@ -78,11 +79,16 @@ func setup() -> void :
 	material.set_shader_param("grayscale", not GameManager.equip_hearts)
 
 func _on_focus_entered() -> void :
-	._on_focus_entered()
-	display_info()
+	if state == state_enum.unlocked:
+		._on_focus_entered()
+		display_info()
+		
+func _on_focus_exited() -> void :
+	if state == state_enum.unlocked:
+		._on_focus_exited()
 
 func on_press() -> void :
-	if !exiting_lock:
+	if not exiting_lock:
 		change_state()
 		equip.play()
 		strong_flash()

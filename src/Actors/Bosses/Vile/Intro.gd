@@ -4,15 +4,6 @@ export var boss_vile := false
 const sprite_y := -19.0
 onready var beam_in: AudioStreamPlayer2D = $beam_in
 
-func set_dialogues():
-	var _level_node = get_parent().get_parent().get_parent()
-	
-	var _level_name = _level_node.name
-	
-	if "BoosterForest" in _level_name:
-		dialogue = CharacterManager._set_correct_dialogues("Vile Booster Forest", dialogue)
-	if "Primrose" in _level_name:
-		dialogue = CharacterManager._set_correct_dialogues("Vile Primrose", dialogue)
 	
 func _ready() -> void :
 	._ready()
@@ -21,9 +12,26 @@ func connect_start_events() -> void :
 	Event.listen("vile_door_open", self, "prepare_for_intro")
 	Event.listen("vile_door_exploded", self, "prepare_for_intro")
 	Event.listen("vile_door_closed", self, "execute_intro")
+	
+func start_dialog_or_go_to_attack_stage(skip_dialog_stage: = 0) -> void :
+	var _level_node = get_parent().get_parent().get_parent()
+	
+	var _level_name = _level_node.name
+	
+	if "BoosterForest" in _level_name:
+		dialogue = CharacterManager._set_correct_dialogues("Vile Booster Forest", dialogue)
+	if "Primrose" in _level_name:
+		dialogue = CharacterManager._set_correct_dialogues("Vile Primrose", dialogue)
+
+	if dialogue:
+		connect_dialogue()
+	if not seen_dialog():
+		GameManager.start_dialog(dialogue)
+		next_attack_stage()
+	elif seen_dialog():
+		go_to_attack_stage(skip_dialog_stage)
 
 func prepare_for_intro() -> void:
-	set_dialogues()
 	animatedSprite.position = Vector2(0,-256)
 	animatedSprite.frame = 0
 	

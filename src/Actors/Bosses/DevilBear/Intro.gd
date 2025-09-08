@@ -10,7 +10,6 @@ onready var punch: AudioStreamPlayer2D = $"../punch"
 onready var wind: Sprite = $"../animatedSprite/wind"
 
 func prepare_for_intro() -> void:
-	dialogue = CharacterManager._set_correct_dialogues("Vile Final", dialogue)
 	riding_vile.visible = false
 	flying_vile.visible = false
 	flying_vile.position.y = -160
