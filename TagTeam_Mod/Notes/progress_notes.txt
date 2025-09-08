@@ -99,6 +99,7 @@ Things to test:
 - Is all the dialogue in the game triggering correctly (focus on Vile)?
 - Does beating Red grant white axl if and only if Axl is in the party and alive at the end of the fight?
 - Does beating Awakened Zero grant ultimate armor X if and only if X is in the party and alive at the end of the fight?
+- Does playing as only one character work throughout the game?
 - Do achievements function as intended?
 - Do different difficulties function as intended?
 
@@ -112,7 +113,8 @@ Bugs to fix:
 
 Dire:
 
-- Achievements for no damage on boss fights buggy
+- Character select screen still bugged, logic for adding and removing can get triggered almost simultaneously
+- Achievements for no damage on boss fights (might be fixed, needs testing)
 
 Should get around to it:
 

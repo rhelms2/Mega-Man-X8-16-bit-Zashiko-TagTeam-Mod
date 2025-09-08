@@ -33,7 +33,7 @@ func _ready() -> void :
 	#call_deferred("handle_player_not_x")
 	
 func set_dialogue() -> void :
-	if CharacterManager.player == "X":
+	if CharacterManager.player_character == "X":
 		dialogue = dialogue_x
 	else:
 		dialogue = dialogue_not_x

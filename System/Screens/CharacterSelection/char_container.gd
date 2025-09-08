@@ -41,6 +41,9 @@ var characters: Array = []
 var animating: bool = false
 var direction: String = ""
 
+var accept_pressed: float = 0
+var accept_timer: float = 0.2
+
 
 
 var x_left_desc: String = "\n\n[color=#47a1fc]" + tr("X_LEFT_TITLE_1") + "[/color]\n" + tr("X_LEFT_DESC_1") + "\n\n[color=#47a1fc]" + tr("X_LEFT_TITLE_2") + "[/color]\n" + tr("X_LEFT_DESC_2") +  "\n\n[color=#47a1fc]" + tr("X_LEFT_TITLE_3") + "[/color]\n" + tr("X_LEFT_DESC_3") + "\n\n[color=#47a1fc]" + tr("X_LEFT_TITLE_4") + "[/color]\n" + tr("X_LEFT_DESC_4")
@@ -140,9 +143,13 @@ func update_game_start_label() -> void :
 	else:
 		game_start_label.text = "Start as " + CharacterManager.team[0]
 		game_start_label2.text = "and " + char_name
+		
+func _process(delta):
+	if accept_pressed > 0:
+		accept_pressed -= delta
 
 func _input(event: InputEvent) -> void :
-	if gamestart_button.game_started:
+	if gamestart_button.game_started or animating:
 		return
 		
 	if Input.is_action_just_pressed("move_right"):
@@ -155,7 +162,8 @@ func _input(event: InputEvent) -> void :
 	elif Input.is_action_just_pressed("move_down"):
 		switch_armor(1)
 		
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("ui_accept") and accept_pressed <= 0:
+		accept_pressed = accept_timer
 		
 		var char_name
 		if "X" in characters[1].name:
@@ -164,8 +172,6 @@ func _input(event: InputEvent) -> void :
 			char_name = "Zero"
 		elif "Axl" in characters[1].name:
 			char_name = "Axl"
-		
-		yield(get_tree().create_timer(0.05), "timeout")
 		
 		if char_name in CharacterManager.team:
 			unequip.play()
