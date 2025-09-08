@@ -8346,6 +8346,7 @@ bus = "SFX"
 pause_mode = 2
 position = Vector2( 1350, -1571 )
 frames = SubResource( 204 )
+frame = 2
 playing = true
 
 [node name="particles2D" type="Particles2D" parent="Objects/Entrance" index="0"]
@@ -8420,7 +8421,6 @@ script = ExtResource( 88 )
 position = Vector2( 200, 113 )
 z_index = -10
 frames = SubResource( 234 )
-frame = 3
 playing = true
 
 [node name="SecretBossTileset" type="TileMap" parent="Objects/SecretBossRoom" index="1"]

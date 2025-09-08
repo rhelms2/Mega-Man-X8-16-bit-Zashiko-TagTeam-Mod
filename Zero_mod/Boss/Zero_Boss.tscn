@@ -242,7 +242,7 @@ position = Vector2( 0, -4 )
 z_index = 1
 frames = ExtResource( 1 )
 animation = "awakened2_loop"
-frame = 1
+frame = 2
 playing = true
 offset = Vector2( 0, 1 )
 
@@ -260,7 +260,6 @@ material = ExtResource( 39 )
 position = Vector2( 0, -9 )
 z_index = -1
 frames = SubResource( 72 )
-frame = 1
 playing = true
 
 [node name="Dash Smoke Particles" type="Particles2D" parent="animatedSprite"]
@@ -588,7 +587,6 @@ _slash = ExtResource( 54 )
 position = Vector2( -44, -32 )
 frames = ExtResource( 1 )
 animation = "d1"
-frame = 1
 playing = true
 offset = Vector2( 0, 1 )
 
@@ -596,6 +594,7 @@ offset = Vector2( 0, 1 )
 position = Vector2( -87, 1 )
 frames = ExtResource( 1 )
 animation = "d3"
+frame = 1
 playing = true
 offset = Vector2( 0, 1 )
 
@@ -603,6 +602,7 @@ offset = Vector2( 0, 1 )
 position = Vector2( -100, -54 )
 frames = ExtResource( 1 )
 animation = "d2"
+frame = 1
 playing = true
 offset = Vector2( 0, 1 )
 
@@ -610,7 +610,6 @@ offset = Vector2( 0, 1 )
 position = Vector2( -151, -7 )
 frames = ExtResource( 1 )
 animation = "d4"
-frame = 1
 playing = true
 offset = Vector2( 0, 1 )
 

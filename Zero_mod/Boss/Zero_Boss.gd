@@ -9,7 +9,7 @@ func _ready() -> void :
 	CharacterManager.set_zero_normal_colors(sprite)
 	CharacterManager.set_saber_green(sprite)
 	
-	if "Zero" in CharacterManager.team:
+	if "Zero" in CharacterManager.alive_team:
 		CharacterManager.set_fake_zero_colors(sprite)
 
 func _on_DamageReflector_shield_broken() -> void :

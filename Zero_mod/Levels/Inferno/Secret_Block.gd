@@ -13,7 +13,7 @@ func _ready() -> void :
 func _on_area2D_body_entered(body: Node) -> void :
 	if not unlocked:
 		if body.is_in_group("Player Projectile"):
-			if "Juuhazan_Charged_B" in body.name:
+			if "Juuhazan_Charged_B" or "SqueezeBombCharged" in body.name:
 				unlock_secret()
 				unlocked = true
 

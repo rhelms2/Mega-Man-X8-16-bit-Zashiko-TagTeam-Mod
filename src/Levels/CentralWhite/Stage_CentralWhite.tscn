@@ -1,4 +1,4 @@
-[gd_scene load_steps=103 format=2]
+[gd_scene load_steps=104 format=2]
 
 [ext_resource path="res://src/Levels/CentralWhite/Music Player.gd" type="Script" id=1]
 [ext_resource path="res://System/Character_Spawner.gd" type="Script" id=2]
@@ -24,6 +24,7 @@
 [ext_resource path="res://src/Levels/IGTimer.tscn" type="PackedScene" id=22]
 [ext_resource path="res://src/Effects/Textures/small_snow.png" type="Texture" id=23]
 [ext_resource path="res://src/Levels/CentralWhite/map_5.tscn" type="PackedScene" id=24]
+[ext_resource path="res://src/DialogSystem/Dialogs/Capsules/HermesHead_not_x.tres" type="Resource" id=25]
 [ext_resource path="res://src/Objects/Door/NewBossDoor.tscn" type="PackedScene" id=27]
 [ext_resource path="res://src/Levels/CentralWhite/map_1.tscn" type="PackedScene" id=29]
 [ext_resource path="res://src/System/CameraLimits.gd" type="Script" id=31]
@@ -471,7 +472,8 @@ collectible_name = "subtank_yeti"
 [node name="Capsule" parent="Objects" instance=ExtResource( 46 )]
 position = Vector2( 3546, -1694 )
 armor_part = "hermes_head"
-dialogue = ExtResource( 45 )
+dialogue_x = ExtResource( 45 )
+dialogue_not_x = ExtResource( 25 )
 
 [node name="VoidDeathPlane" parent="Objects" instance=ExtResource( 51 )]
 position = Vector2( 3248, 354 )
@@ -564,6 +566,7 @@ pause_mode = 2
 position = Vector2( 4406, -1313 )
 z_index = 2
 frames = SubResource( 187 )
+frame = 3
 playing = true
 flip_h = true
 script = ExtResource( 82 )

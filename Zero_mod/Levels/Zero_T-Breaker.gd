@@ -13,10 +13,6 @@ func _ready() -> void :
 	if block_if_collected:
 		if collectible in GameManager.collectibles:
 			blocking_wall.set_deferred("disabled", false)
-			
-	if character_name != "":
-		if not character_name in CharacterManager.team:
-			blocking_wall.set_deferred("disabled", false)
 
 func block_wall() -> void :
 	pass

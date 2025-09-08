@@ -1,4 +1,4 @@
-[gd_scene load_steps=111 format=2]
+[gd_scene load_steps=112 format=2]
 
 [ext_resource path="res://src/HUD/intro_text.gd" type="Script" id=1]
 [ext_resource path="res://src/Levels/music_player.gd" type="Script" id=2]
@@ -87,6 +87,7 @@
 [ext_resource path="res://src/Levels/IGTimer.tscn" type="PackedScene" id=85]
 [ext_resource path="res://Zero_mod/Levels/Zero_T-Breaker.gd" type="Script" id=86]
 [ext_resource path="res://Zero_mod/Player/Weapons/T-Breaker.tres" type="Resource" id=87]
+[ext_resource path="res://src/DialogSystem/Dialogs/Capsules/IcarusHead_not_x.tres" type="Resource" id=88]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 512, 112 )
@@ -1502,7 +1503,8 @@ shape = SubResource( 37 )
 
 [node name="Capsule" parent="Scenery/RoomCapsule" instance=ExtResource( 61 )]
 position = Vector2( 167, 209 )
-dialogue = ExtResource( 60 )
+dialogue_x = ExtResource( 60 )
+dialogue_not_x = ExtResource( 88 )
 
 [node name="Room8" type="Node2D" parent="Scenery"]
 position = Vector2( 3617, 3077 )

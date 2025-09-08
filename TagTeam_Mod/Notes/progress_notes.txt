@@ -76,15 +76,35 @@ Progress:
 - Fixed Vile Primrose and Booster forest dialogue
 - Fixed mouse issues related to heart tank stuff in ArmorSetup scene
 
+9/08
+
+- Added dialogue for Zero for Awakened Zero fight
+- Added dialogue for Zero or Axl collecting X's armor pieces
+- Added knuckles to intro stage so no back tracking is required
+- Fixed boss achievements to check for damage with secondary characters as well (needs testing)
+
 ////////////
 
 Features to implement:
 
-- Add Zero dialogue for awakened Zero fight
-- Add dialogue for Zero and Axl collecting X's armor pieces
-- Make sure Zero's weapons can be collected with just X or Axl
-- Make sure Zero and Axl can collect X's armor pieces
+- Put names in credits
 - Adjust character select screen so you can start with just one character?
+
+////////////
+
+Things to test:
+
+- Can every character collect Zero's weapons?
+- Can every character collect X's armor pieces? Is the correct dialogue triggering?
+- Is all the dialogue in the game triggering correctly (focus on Vile)?
+- Does beating Red grant white axl if and only if Axl is in the party and alive at the end of the fight?
+- Does beating Awakened Zero grant ultimate armor X if and only if X is in the party and alive at the end of the fight?
+- Do achievements function as intended?
+- Do different difficulties function as intended?
+
+Balancing:
+
+- How do different difficulties feel? Does anything need to be adjusted?
 
 ////////////
 
@@ -92,9 +112,7 @@ Bugs to fix:
 
 Dire:
 
-- Check: Can Axl get white armor (NEEDS TESTING)
-- Dialogue:
-	- All Vile dialogue needs testing after changes to the boss intro logic
+- Achievements for no damage on boss fights buggy
 
 Should get around to it:
 

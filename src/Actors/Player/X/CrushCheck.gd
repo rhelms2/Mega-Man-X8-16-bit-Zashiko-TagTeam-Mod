@@ -39,5 +39,5 @@ func check(crush_casts) -> void :
 		if cast.is_colliding():
 			death_hits += 1
 	if death_hits == 2:
-		character.emit_signal(parent_signal)
+		character.zero_health_team()
 		set_physics_process(false)

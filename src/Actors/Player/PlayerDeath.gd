@@ -75,9 +75,12 @@ func _EndCondition() -> bool:
 func _on_zero_health() -> void :
 	if active and not executing:
 		if CharacterManager.both_alive:
-			Event.emit_signal("character_switch")
 			CharacterManager.both_alive = false
-			return 
+			CharacterManager.alive_team.erase(character.name)
+			Event.emit_signal("character_switch")
+			return
+		else:
+			CharacterManager.alive_team.erase(character.name)
 		ExecuteOnce()
 
 func is_high_priority() -> bool:

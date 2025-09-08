@@ -39,11 +39,11 @@ func _ready() -> void :
 	if CharacterManager.game_mode > 1:
 		battle_song.stream = battle_song_enhanced
 		battle_song.get_node("loop").stream = battle_loop_enhanced
+
+func prepare_for_intro() -> void :
 	if CharacterManager.player_character == "Zero":
 		battle_song.stream = zero_song_enhanced
 		battle_song.get_node("loop").stream = zero_loop_enhanced
-
-func prepare_for_intro() -> void :
 	effect.visible = true
 
 func enable_collision():

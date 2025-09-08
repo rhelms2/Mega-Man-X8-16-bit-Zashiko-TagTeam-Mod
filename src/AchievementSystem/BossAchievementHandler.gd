@@ -40,6 +40,8 @@ func _ready() -> void :
 func start(_d = null) -> void :
 	active = true
 	GameManager.player.connect("received_damage", self, "damage_check")
+	if is_instance_valid(GameManager.inactive_player):
+		GameManager.inactive_player.connect("received_damage", self, "damage_check")
 	connect_node("Damage", "got_hit", "buster_check")
 	connect_node("BossDeath", "screen_flash", "fire_achievements")
 	connect_desperation()
@@ -101,6 +103,8 @@ func damage_check() -> void :
 
 func upgrade_check() -> void :
 	has_upgrades = GameManager.player.using_upgrades
+	if is_instance_valid(GameManager.inactive_player):
+		has_upgrades = GameManager.player.using_upgrades and GameManager.inactive_player.using_upgrades
 	if has_upgrades:
 		
 		pass

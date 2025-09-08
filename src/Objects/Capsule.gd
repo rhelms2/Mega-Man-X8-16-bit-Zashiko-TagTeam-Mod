@@ -2,7 +2,10 @@ extends Node2D
 
 export  var debug_logs: bool = false
 export  var armor_part: String = "icarus_head"
-export  var dialogue: Resource
+export  var dialogue_x: Resource
+export  var dialogue_not_x: Resource
+
+var dialogue: Resource
 
 onready var start_area = get_node("area2D")
 onready var sprite = get_node("animatedSprite")
@@ -22,12 +25,18 @@ signal lightning
 
 func _ready() -> void :
 	Event.listen("player_set", self, "call_deferred_got_armor")
-	#Event.listen("character_switch", self, "handle_player_not_x")
+	Event.listen("character_switch_end", self, "set_dialogue")
 	timer = 0.0
 	timer2 = 0.0
 	charge_state = 0
 	finished = false
-	call_deferred("handle_player_not_x")
+	#call_deferred("handle_player_not_x")
+	
+func set_dialogue() -> void :
+	if CharacterManager.player == "X":
+		dialogue = dialogue_x
+	else:
+		dialogue = dialogue_not_x
 
 func handle_player_not_x() -> void :
 	if not "X" in CharacterManager.team:

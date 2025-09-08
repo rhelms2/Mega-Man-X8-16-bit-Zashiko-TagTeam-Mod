@@ -12,6 +12,8 @@ func _ready() -> void :
 func connect_events() -> void :
 	if is_instance_valid(GameManager.player):
 		GameManager.player.connect("received_damage", self, "_on_block_event")
+	if is_instance_valid(GameManager.inactive_player):
+		GameManager.inactive_player.connect("received_damage", self, "_on_block_event")
 
 func block_wall() -> void :
 	if block_if_collected:

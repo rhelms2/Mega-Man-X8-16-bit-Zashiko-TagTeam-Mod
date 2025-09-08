@@ -84,6 +84,7 @@ func _ready() -> void :
 		add_child(node)
 
 	Event.listen("character_switch", self, "on_character_switch")
+	CharacterManager.alive_team = []
 	CharacterManager.set_player_character(CharacterManager.team[0])
 	player = CharacterManager.get_player_character_object(CharacterManager.player_character)
 	player_instance = player.instance()
@@ -91,6 +92,7 @@ func _ready() -> void :
 	add_child(player_instance)
 	player_instance.position = $CharacterPosition.position
 	team_members.append(player_instance)
+
 
 	if CharacterManager.team.size() > 1:
 

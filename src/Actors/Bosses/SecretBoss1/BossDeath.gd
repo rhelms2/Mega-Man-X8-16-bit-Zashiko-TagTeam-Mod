@@ -7,7 +7,7 @@ signal screen_flash
 onready var battle_song: AudioStreamPlayer = $"../Intro/BattleSong"
 
 func unlock_axl_white():
-	if "Axl" in CharacterManager.team:
+	if "Axl" in CharacterManager.alive_team:
 		var player
 		if GameManager.player.name == "Axl":
 			player = GameManager.player

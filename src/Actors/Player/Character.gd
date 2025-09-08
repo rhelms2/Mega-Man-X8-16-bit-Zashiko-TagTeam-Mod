@@ -81,6 +81,8 @@ func max_out_air_abilities() -> void :
 func _ready() -> void :
 	connect_cutscene_events()
 	num_equipped_hearts = 0
+	if not self.name in CharacterManager.alive_team:
+		CharacterManager.alive_team.append(self.name)
 	max_health = CharacterManager.starting_max_health
 	current_health = max_health
 
@@ -141,6 +143,7 @@ func void_touch() -> void :
 
 func zero_health_team() -> void :
 	CharacterManager.both_alive = false
+	CharacterManager.alive_team = []
 	emit_signal("zero_health")
 	if is_instance_valid(GameManager.inactive_player):
 		GameManager.inactive_player.emit_signal("zero_health")

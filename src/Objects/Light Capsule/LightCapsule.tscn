@@ -43,7 +43,8 @@ orbit_velocity_random = 0.0
 [node name="Capsule" type="Node2D"]
 z_index = 10
 script = ExtResource( 1 )
-dialogue = ExtResource( 8 )
+dialogue_x = ExtResource( 8 )
+dialogue_not_x = ExtResource( 8 )
 
 [node name="drLight" type="AnimatedSprite" parent="."]
 position = Vector2( 0, -36 )
@@ -58,7 +59,7 @@ script = ExtResource( 10 )
 position = Vector2( 0, -146 )
 frames = ExtResource( 2 )
 animation = "idle"
-frame = 18
+frame = 19
 playing = true
 
 [node name="staticBody2D" type="StaticBody2D" parent="."]

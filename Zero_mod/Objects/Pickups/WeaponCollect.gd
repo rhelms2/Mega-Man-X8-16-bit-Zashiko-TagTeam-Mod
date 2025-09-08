@@ -57,10 +57,6 @@ func call_deferred_already_got() -> void :
 func handle_already_got() -> void :
 	if collectible_name in GameManager.collectibles:
 		queue_free()
-	
-	if character_name != "":
-		if not character_name in CharacterManager.team:
-			queue_free()
 
 func _physics_process(delta: float) -> void :
 	if not executing:

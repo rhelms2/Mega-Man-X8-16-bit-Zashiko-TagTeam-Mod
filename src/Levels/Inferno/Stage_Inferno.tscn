@@ -1,4 +1,4 @@
-[gd_scene load_steps=126 format=2]
+[gd_scene load_steps=127 format=2]
 
 [ext_resource path="res://System/Character_Spawner.gd" type="Script" id=1]
 [ext_resource path="res://src/HUD/Hud.tscn" type="PackedScene" id=2]
@@ -86,6 +86,7 @@
 [ext_resource path="res://src/Levels/Inferno/DeathShock.tscn" type="PackedScene" id=84]
 [ext_resource path="res://src/Levels/Inferno/GravityPassage.tscn" type="PackedScene" id=85]
 [ext_resource path="res://src/Levels/Inferno/Blockade.gd" type="Script" id=86]
+[ext_resource path="res://src/DialogSystem/Dialogs/Capsules/HermesFoot_not_x.tres" type="Resource" id=87]
 
 [sub_resource type="CanvasItemMaterial" id=92]
 blend_mode = 1
@@ -1590,7 +1591,8 @@ position = Vector2( 6208, 4116 )
 [node name="Capsule" parent="Objects" instance=ExtResource( 12 )]
 position = Vector2( 4424, 3440 )
 armor_part = "hermes_legs"
-dialogue = ExtResource( 20 )
+dialogue_x = ExtResource( 20 )
+dialogue_not_x = ExtResource( 87 )
 
 [node name="animatedSprite" parent="Objects/Capsule" index="1"]
 frame = 21
