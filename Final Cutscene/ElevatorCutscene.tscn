@@ -1,21 +1,19 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://src/Sounds/16 - MMX - X Upgrade Complete.wav" type="AudioStream" id=1]
 [ext_resource path="res://src/Effects/Materials/Player_Material_Shader.tres" type="Material" id=2]
 [ext_resource path="res://src/Levels/SigmaPalace/ElevatorPlatform.gd" type="Script" id=3]
 [ext_resource path="res://src/Levels/JakobElevator/ending_loop.png" type="Texture" id=4]
-[ext_resource path="res://Final Cutscene/Problem_intro.ogg" type="AudioStream" id=5]
-[ext_resource path="res://Final Cutscene/Problem_loop.ogg" type="AudioStream" id=6]
+[ext_resource path="res://Final Cutscene/problem.ogg" type="AudioStream" id=5]
+[ext_resource path="res://Final Cutscene/Fate to Fight.ogg" type="AudioStream" id=6]
 [ext_resource path="res://src/Effects/Materials/jakob_palette_material.tres" type="Material" id=7]
 [ext_resource path="res://src/Levels/JakobElevator/elevator.png" type="Texture" id=8]
 [ext_resource path="res://src/Actors/Player/x_sprites/x.res" type="SpriteFrames" id=9]
 [ext_resource path="res://src/Levels/SigmaPalace/ElevatorWalls.gd" type="Script" id=10]
-[ext_resource path="res://Final Cutscene/Fate_to_Fight_loop.ogg" type="AudioStream" id=11]
 [ext_resource path="res://Final Cutscene/ElevatorCutscene.gd" type="Script" id=12]
 [ext_resource path="res://src/DialogSystem/DialogBox.tscn" type="PackedScene" id=13]
 [ext_resource path="res://Final Cutscene/Final_Elevator.tres" type="Resource" id=14]
 [ext_resource path="res://src/Levels/music_player.gd" type="Script" id=15]
-[ext_resource path="res://Final Cutscene/Fate_to_Fight_intro.ogg" type="AudioStream" id=16]
 [ext_resource path="res://src/Sounds/OST - Capsule.ogg" type="AudioStream" id=17]
 [ext_resource path="res://src/Sounds/OST - TrueSigma - Loop.ogg" type="AudioStream" id=18]
 [ext_resource path="res://src/Sounds/OST - Vile - Loop.ogg" type="AudioStream" id=19]
@@ -31,10 +29,8 @@
 
 [node name="Elevator_Cutscene" type="Node2D"]
 script = ExtResource( 12 )
-song_intro = ExtResource( 5 )
-song_loop = ExtResource( 6 )
-song2_intro = ExtResource( 16 )
-song2_loop = ExtResource( 11 )
+song_loop = ExtResource( 5 )
+song2_loop = ExtResource( 6 )
 text_second_dialog = ExtResource( 26 )
 
 [node name="DialogBox" parent="." instance=ExtResource( 13 )]
@@ -70,14 +66,15 @@ position = Vector2( 19, -30 )
 z_index = 1
 frames = ExtResource( 9 )
 animation = "crouch"
-frame = 1
+frame = 10
 playing = true
 
 [node name="Zero" type="AnimatedSprite" parent="Visuals/ElevatorPlatform"]
 position = Vector2( -53, -31 )
 z_index = 1
 frames = ExtResource( 33 )
-animation = "idle"
+animation = "blink"
+frame = 5
 playing = true
 flip_h = true
 

@@ -57,7 +57,6 @@ var starting_max_health: int = 10
 var both_alive = true
 var alive_team: Array = []
 
-# Strings here instead of literal objects
 var team: Array = ["X"]
 var max_team_size: int = 2
 
