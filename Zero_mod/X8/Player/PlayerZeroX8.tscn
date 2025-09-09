@@ -1,4 +1,4 @@
-[gd_scene load_steps=157 format=2]
+[gd_scene load_steps=158 format=2]
 
 [ext_resource path="res://src/Actors/Player/x_sprites/x.res" type="SpriteFrames" id=1]
 [ext_resource path="res://Zero_mod/X8/Player/PlayerZeroX8.gd" type="Script" id=2]
@@ -145,6 +145,7 @@
 [ext_resource path="res://Zero_mod/X8/Sprites/kknuckle/zerox8knuckle.tres" type="SpriteFrames" id=143]
 [ext_resource path="res://src/Actors/Player/BossWeapons/DriftDiamond/Drift Diamond.tres" type="Resource" id=144]
 [ext_resource path="res://src/Actors/Player/BossWeapons/FireDash/Fire Dash.tres" type="Resource" id=145]
+[ext_resource path="res://TagTeam_Mod/CharSwitchRevive.gd" type="Script" id=146]
 
 [sub_resource type="RectangleShape2D" id=32]
 extents = Vector2( 6.995, 7 )
@@ -394,7 +395,7 @@ script = ExtResource( 48 )
 visible = false
 frames = ExtResource( 93 )
 animation = "raikousen_fan"
-frame = 12
+frame = 3
 playing = true
 
 [node name="B-Fan" type="AnimatedSprite" parent="."]
@@ -434,7 +435,7 @@ position = Vector2( 0, -6 )
 z_index = 5
 frames = ExtResource( 127 )
 animation = "youdantotsu"
-frame = 25
+frame = 14
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -1386,6 +1387,9 @@ volume_db = -6.555
 pitch_scale = 1.19
 max_distance = 600.0
 bus = "SFX"
+
+[node name="CharSwitchRevive" type="Node" parent="."]
+script = ExtResource( 146 )
 
 [connection signal="at_max_hp" from="." to="Damage" method="set_death_protection"]
 [connection signal="zero_health" from="." to="animatedSprite/afterImages" method="deactivate"]

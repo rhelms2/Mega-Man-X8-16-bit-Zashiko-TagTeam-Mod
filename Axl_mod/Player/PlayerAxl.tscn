@@ -1,4 +1,4 @@
-[gd_scene load_steps=232 format=2]
+[gd_scene load_steps=233 format=2]
 
 [ext_resource path="res://src/Actors/Player/x_sprites/x.res" type="SpriteFrames" id=1]
 [ext_resource path="res://Axl_mod/Player/Scripts/PlayerAxl.gd" type="Script" id=2]
@@ -132,6 +132,7 @@
 [ext_resource path="res://Axl_mod/Player/Projectiles/BossWeapons/BlackArrow/ShadowBoomer.tscn" type="PackedScene" id=130]
 [ext_resource path="res://TagTeam_Mod/CharacterSwitchWarpOut.gd" type="Script" id=131]
 [ext_resource path="res://TagTeam_Mod/CharacterSwitchWarpIn.gd" type="Script" id=132]
+[ext_resource path="res://TagTeam_Mod/CharSwitchRevive.gd" type="Script" id=133]
 
 [sub_resource type="RectangleShape2D" id=32]
 extents = Vector2( 6.995, 7 )
@@ -2396,6 +2397,9 @@ volume_db = -6.555
 pitch_scale = 1.19
 max_distance = 600.0
 bus = "SFX"
+
+[node name="CharSwitchRevive" type="Node" parent="."]
+script = ExtResource( 133 )
 
 [connection signal="at_max_hp" from="." to="Damage" method="set_death_protection"]
 [connection signal="zero_health" from="." to="animatedSprite/afterImages" method="deactivate"]

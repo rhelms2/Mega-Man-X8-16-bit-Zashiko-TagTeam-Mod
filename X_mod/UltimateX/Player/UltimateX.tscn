@@ -1,4 +1,4 @@
-[gd_scene load_steps=122 format=2]
+[gd_scene load_steps=123 format=2]
 
 [ext_resource path="res://src/Actors/Player/x_sprites/x.res" type="SpriteFrames" id=1]
 [ext_resource path="res://X_mod/UltimateX/Player/UltimateX.gd" type="Script" id=2]
@@ -100,6 +100,7 @@
 [ext_resource path="res://src/Actors/rotation_particle_disabler.gd" type="Script" id=98]
 [ext_resource path="res://src/Actors/Player/BossWeapons/SqueezeBomb/Squeeze Bomb.tres" type="Resource" id=99]
 [ext_resource path="res://src/Effects/Materials/mat_chargeparticle.tres" type="Material" id=100]
+[ext_resource path="res://TagTeam_Mod/CharSwitchRevive.gd" type="Script" id=101]
 [ext_resource path="res://src/Sounds/MMX - Charge.wav" type="AudioStream" id=103]
 [ext_resource path="res://src/Effects/Materials/wallkick_sprite.tres" type="Material" id=104]
 [ext_resource path="res://src/Sounds/FX - Subtank Charge.ogg" type="AudioStream" id=105]
@@ -1053,6 +1054,9 @@ volume_db = -6.555
 pitch_scale = 1.19
 max_distance = 600.0
 bus = "SFX"
+
+[node name="CharSwitchRevive" type="Node" parent="."]
+script = ExtResource( 101 )
 
 [connection signal="at_max_hp" from="." to="Damage" method="set_death_protection"]
 [connection signal="zero_health" from="." to="animatedSprite/afterImages" method="deactivate"]

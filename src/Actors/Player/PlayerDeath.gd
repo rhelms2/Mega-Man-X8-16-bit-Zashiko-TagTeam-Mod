@@ -77,6 +77,7 @@ func _on_zero_health() -> void :
 		if CharacterManager.both_alive:
 			CharacterManager.both_alive = false
 			CharacterManager.alive_team.erase(character.name)
+			character.emit_signal("activate_revive")
 			Event.emit_signal("character_switch")
 			return
 		else:

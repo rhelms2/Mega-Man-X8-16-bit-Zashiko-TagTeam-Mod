@@ -49,6 +49,7 @@ signal jump
 # TeamMod stuff
 signal character_switch_out
 signal character_switch_in
+signal activate_revive
 var is_current_player: bool = false
 var is_executing_special: bool = false
 

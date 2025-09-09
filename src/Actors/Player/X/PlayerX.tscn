@@ -1,4 +1,4 @@
-[gd_scene load_steps=137 format=2]
+[gd_scene load_steps=138 format=2]
 
 [ext_resource path="res://src/Effects/Materials/mat_x_death.tres" type="Material" id=1]
 [ext_resource path="res://src/Sounds/FX - Subtank Charge.ogg" type="AudioStream" id=2]
@@ -123,6 +123,7 @@
 [ext_resource path="res://X_mod/UltimateX/Sprites/x_ultimate_arm.tres" type="SpriteFrames" id=121]
 [ext_resource path="res://src/Actors/Player/charge_shader.tres" type="Shader" id=122]
 [ext_resource path="res://TagTeam_Mod/CharacterSwitchWarpIn.gd" type="Script" id=123]
+[ext_resource path="res://TagTeam_Mod/CharSwitchRevive.gd" type="Script" id=124]
 
 [sub_resource type="ShaderMaterial" id=46]
 resource_local_to_scene = true
@@ -306,7 +307,7 @@ position = Vector2( 0, -4 )
 z_index = 5
 frames = ExtResource( 88 )
 animation = "idle"
-frame = 55
+frame = 56
 playing = true
 
 [node name="head_armor" type="AnimatedSprite" parent="animatedSprite"]
@@ -1179,6 +1180,9 @@ volume_db = -6.555
 pitch_scale = 1.19
 max_distance = 600.0
 bus = "SFX"
+
+[node name="CharSwitchRevive" type="Node" parent="."]
+script = ExtResource( 124 )
 
 [connection signal="at_max_hp" from="." to="Damage" method="set_death_protection"]
 [connection signal="zero_health" from="." to="animatedSprite/afterImages" method="deactivate"]
