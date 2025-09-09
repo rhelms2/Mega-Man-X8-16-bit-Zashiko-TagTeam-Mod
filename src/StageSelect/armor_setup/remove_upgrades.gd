@@ -41,8 +41,12 @@ func unequip_all_upgrades() -> void :
 	subtank_enabler.on_press()
 	
 	x_head.unequip_full_ultimate()
+	x_head.main_color.visible = CharacterManager.ultimate_x_armor
+	x_head.main_color_head.visible = CharacterManager.ultimate_x_armor
 	zero_head.unequip_black_zero()
+	zero_head.base_black.visible = CharacterManager.black_zero_armor
 	axl_head.unequip_white_axl()
+	axl_head.base_white.visible = CharacterManager.white_axl_armor
 	
 
 func process_inputs() -> void :

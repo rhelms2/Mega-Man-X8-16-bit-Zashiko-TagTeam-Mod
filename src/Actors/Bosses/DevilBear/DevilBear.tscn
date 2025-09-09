@@ -144,7 +144,7 @@ copy_scale_x = true
 z_index = 1
 frames = ExtResource( 43 )
 animation = "flight"
-frame = 1
+frame = 3
 playing = true
 offset = Vector2( 0, -48 )
 

@@ -102,7 +102,6 @@ func write_to_file(slot: int = 0) -> void :
 
 func load_save(slot: int = 0) -> void :
 	
-	CharacterManager.game_mode = 0
 	CharacterManager.team = []
 	CharacterManager.equipped_hearts = {"X": 0, "Zero": 0, "Axl": 0}
 	CharacterManager.game_mode_set = false
@@ -219,7 +218,8 @@ func apply_data(_slot: int = 0) -> void :
 			CharacterManager.team = game_data["team"]
 		
 		if game_data.has("equipped_hearts"):
-			CharacterManager.equipped_hearts = game_data["equipped_hearts"]
+			for key in game_data["equipped_hearts"].keys():
+				CharacterManager.set_player_equipped_hearts(key, (game_data["equipped_hearts"])[key])
 			
 		call_deferred("emit_signal", "loaded")
 

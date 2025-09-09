@@ -296,7 +296,7 @@ position = Vector2( 13, 2 )
 z_index = -1
 frames = ExtResource( 17 )
 animation = "loop"
-frame = 3
+frame = 6
 playing = true
 
 [node name="equip" type="AudioStreamPlayer" parent="."]

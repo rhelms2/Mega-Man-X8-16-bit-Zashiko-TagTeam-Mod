@@ -1,4 +1,4 @@
-[gd_scene load_steps=124 format=2]
+[gd_scene load_steps=125 format=2]
 
 [ext_resource path="res://src/System/CameraLimits.gd" type="Script" id=1]
 [ext_resource path="res://src/Actors/BossSpawner.gd" type="Script" id=2]
@@ -74,6 +74,15 @@
 [ext_resource path="res://src/Levels/SigmaPalace/RechargeHint.gd" type="Script" id=72]
 [ext_resource path="res://System/Character_Spawner.gd" type="Script" id=73]
 [ext_resource path="res://src/Levels/IGTimer.tscn" type="PackedScene" id=74]
+
+[sub_resource type="ShaderMaterial" id=199]
+resource_local_to_scene = true
+shader = ExtResource( 46 )
+shader_param/Flash = 0.0
+shader_param/Should_Blink = 1.0
+shader_param/Darken = 1.0
+shader_param/Alpha = 1.0
+shader_param/Alpha_Blink = 0.0
 
 [sub_resource type="ShaderMaterial" id=92]
 resource_local_to_scene = true
@@ -280,13 +289,19 @@ extents = Vector2( 199, 112 )
 [node name="SigmaPalace" instance=ExtResource( 6 )]
 script = ExtResource( 73 )
 
-[node name="X Bar" parent="Hud" index="8"]
+[node name="X Bar2" parent="Hud" index="8"]
+material = SubResource( 199 )
+
+[node name="WeaponBar" parent="Hud/X Bar2" index="3"]
+material = SubResource( 199 )
+
+[node name="X Bar" parent="Hud" index="9"]
 material = SubResource( 92 )
 
 [node name="WeaponBar" parent="Hud/X Bar" index="3"]
 material = SubResource( 92 )
 
-[node name="DialogBox" parent="Hud" index="15"]
+[node name="DialogBox" parent="Hud" index="16"]
 text = "Test text."
 emit_capsule_signal = false
 

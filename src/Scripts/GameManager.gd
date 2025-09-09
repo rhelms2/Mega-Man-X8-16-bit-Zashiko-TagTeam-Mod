@@ -1,7 +1,7 @@
 extends Node
 
 const codename: String = "X8DMOD"
-var version: String = "1.0.0.4"
+var version: String = "TagTeam v1.0, Zashiko v1.0.0.4"
 var current_demo: String = ""
 
 var player: Character

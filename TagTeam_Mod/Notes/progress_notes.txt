@@ -83,6 +83,12 @@ Progress:
 - Added knuckles to intro stage so no back tracking is required
 - Fixed boss achievements to check for damage with secondary characters as well (needs testing)
 
+9/09
+
+- Fixed Vile's dialogue in Jakob and Palace to play the respective player character's dialogue
+- Fixed equipped heart tanks overflow after saving bug - should work with new game plus now
+- Fixed visual bug from unequip button on armor setup screen
+
 ////////////
 
 Features to implement:

@@ -20,4 +20,4 @@ func _input(event: InputEvent) -> void :
 			Input.parse_input_event(start_event)
 
 func _ready() -> void :
-	info.text = GameManager.current_demo + " V." + GameManager.version
+	info.text = GameManager.version

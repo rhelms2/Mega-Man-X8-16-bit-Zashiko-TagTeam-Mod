@@ -1317,7 +1317,7 @@ func _set_correct_dialogues(dialog_starter, dialogue) -> Resource:
 			_dialog = load("res://Zero_mod/DialogSystem/Dialogs/Stages/Vile_jakob_Dialogue.tres")
 		if player_character == "Axl":
 			_dialog = load("res://Axl_mod/DialogSystem/Dialogs/Stages/Vile_jakob_Dialogue.tres")
-	if dialog_starter == "Vile Final":
+	if dialog_starter == "Vile Final" or dialog_starter == "DevilBear":
 		if player_character == "Zero":
 			_dialog = load("res://Zero_mod/DialogSystem/Dialogs/Stages/Vile_final_Dialogue.tres")
 		if player_character == "Axl":

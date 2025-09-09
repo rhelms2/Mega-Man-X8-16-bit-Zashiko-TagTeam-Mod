@@ -22,6 +22,8 @@ func start_dialog_or_go_to_attack_stage(skip_dialog_stage: = 0) -> void :
 		dialogue = CharacterManager._set_correct_dialogues("Vile Booster Forest", dialogue)
 	if "Primrose" in _level_name:
 		dialogue = CharacterManager._set_correct_dialogues("Vile Primrose", dialogue)
+	if "Jakob" in _level_name:
+		dialogue = CharacterManager._set_correct_dialogues("Vile", dialogue)
 
 	if dialogue:
 		connect_dialogue()
