@@ -1940,7 +1940,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Mega Man X8 Demake (Zashiko + TagTeam Mod)"
+config/name="Mega Man X8 16-bit (Zashiko + TagTeam Mod v0.9.0)"
 run/main_scene="res://src/Title/DisclaimerScreen.tscn"
 boot_splash/show_image=false
 boot_splash/image="res://src/Screens/bootsplash.png"

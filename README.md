@@ -8,6 +8,7 @@ Tag team system:
   - Switch between them on the fly
   - Each character has their own health bar
   - Dieing as one character will spawn the other in
+  - Revive a downed character by damaging enough foes
   - Shared giga attack bars, shared lives
   - Starting health is lower to balance the two health bars
   - Heart tanks have to be rationed between the characters on your team
@@ -18,7 +19,7 @@ Tweaks:
   - Zero's weapons are able to be collected by any character
   - Zero's knuckles are able to be collected right off the bat
   - X's icarus boots function similarly to how they did in the original fangame
-  - Added dialogue to secret battle for encounters with different characters
+  - Added dialogue to a secret boss when encountering it with Zero or Axl 
 
 ## Tag Team Mod Credits
 - Rhelms - Programming, Implementation, Dialogue Tweaks

@@ -88,24 +88,19 @@ Progress:
 - Fixed Vile's dialogue in Jakob and Palace to play the respective player character's dialogue
 - Fixed equipped heart tanks overflow after saving bug - should work with new game plus now
 - Fixed visual bug from unequip button on armor setup screen
+- Implemented revive mechanic where if a team mate is down they will revive if enough damage is dealt 
+- Added ability to only start as one character in character select screen
 
 ////////////
 
 Features to implement:
 
-- Put names in credits
-- Adjust character select screen so you can start with just one character?
+- Done for v1.0
 
 ////////////
 
 Things to test:
 
-- Can every character collect Zero's weapons?
-- Can every character collect X's armor pieces? Is the correct dialogue triggering?
-- Is all the dialogue in the game triggering correctly (focus on Vile)?
-- Does beating Red grant white axl if and only if Axl is in the party and alive at the end of the fight?
-- Does beating Awakened Zero grant ultimate armor X if and only if X is in the party and alive at the end of the fight?
-- Does playing as only one character work throughout the game?
 - Do achievements function as intended?
 - Do different difficulties function as intended?
 
@@ -119,7 +114,7 @@ Bugs to fix:
 
 Dire:
 
-- Character select screen still bugged, logic for adding and removing can get triggered almost simultaneously (fixed?)
+- Softlock dieing on Dark Mantis desperation attack
 - Achievements for no damage on boss fights (might be fixed, needs testing)
 
 Should get around to it:
@@ -139,7 +134,6 @@ Not my bug, not my problem:
 Potentially fixed:
 
 - Combo section: double penalty for inactive character taking damage? Also can't be beaten with only zero (TESTED, FIXED)
-- Zero weapons should show up in stage if Zero is in the team (NEEDS TESTING)
 - Adjustments to combo section so it is beatable with Zero? (TESTED, FIXED)
 - if a character dies after switching, dead character will be playable and invincible, switching is disabled (NEEDS TO BE REPLICATED/CONFIRMED AFTER ADJUSTMENTS TO SWITCH SYSTEM)
 - Freeze during fade out on death on dark mantis (NEEDS TO BE REPLICATED/CONFIRMED AFTER ADJUSTMENTS TO SWITCH SYSTEM)

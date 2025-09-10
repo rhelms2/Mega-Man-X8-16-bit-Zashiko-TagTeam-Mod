@@ -6519,7 +6519,7 @@ dialogue_x = ExtResource( 26 )
 dialogue_not_x = ExtResource( 93 )
 
 [node name="animatedSprite" parent="Objects/Capsule" index="1"]
-frame = 10
+frame = 20
 
 [node name="collisionShape2D" parent="Objects/Capsule/area2D" index="0"]
 shape = SubResource( 49 )

@@ -41,6 +41,8 @@ var characters: Array = []
 var animating: bool = false
 var direction: String = ""
 
+var no_char
+
 var accept_pressed: float = 0
 var accept_timer: float = 0.2
 
@@ -75,6 +77,8 @@ func _ready() -> void :
 	for child in characters:
 		child.rect_min_size = Vector2(40, 48)
 		child.modulate = Color("#2c2c2c")
+		
+	add_blank_char_as_child()
 	
 	CharacterManager.team = []
 	set_menu_visibility()
@@ -96,6 +100,7 @@ func hide_all_wireframes() -> void :
 
 func set_menu_visibility() -> void :
 	hide_all_wireframes()
+	
 	if "X" in characters[1].name:
 		game_start.char_name = "X"
 		wireframe_x.show()
@@ -119,6 +124,14 @@ func set_menu_visibility() -> void :
 		left_desc.bbcode_text = axl_left_desc
 		right_name.text = "Axl"
 		right_desc.bbcode_text = axl_right_desc
+	
+	if "none" in characters[1].name:
+		face_axl.hide()
+		face_zero.hide()
+		face_x.hide()
+		left_desc.bbcode_text = ""
+		right_name.text = ""
+		right_desc.bbcode_text = ""
 		
 	update_game_start_label()
 		
@@ -128,7 +141,7 @@ func update_game_start_label() -> void :
 		game_start_label2.text = ""
 		return
 		
-	var char_name
+	var char_name = "none"
 	if "X" in characters[1].name:
 		char_name = "X"
 	elif "Zero" in characters[1].name:
@@ -142,8 +155,21 @@ func update_game_start_label() -> void :
 		game_start_label2.text = "from team"
 	else:
 		game_start_label.text = "Start as " + CharacterManager.team[0]
-		game_start_label2.text = "and " + char_name
+		if char_name == "none":
+			game_start_label2.text = ""
+		else:
+			game_start_label2.text = "and " + char_name
 		
+func add_blank_char_as_child():
+	var copy_character = characters[0].duplicate()
+	add_child(copy_character)
+	move_child(copy_character, characters.size())
+	copy_character.rect_position = characters[ - 1].rect_position + Vector2(40, 0)
+	no_char = copy_character
+	no_char.name = "none"
+	no_char.texture = null
+	characters.append(no_char)
+
 func _process(delta):
 	if accept_pressed > 0:
 		accept_pressed -= delta
@@ -165,7 +191,7 @@ func _input(event: InputEvent) -> void :
 	if Input.is_action_just_pressed("ui_accept") and accept_pressed <= 0:
 		accept_pressed = accept_timer
 		
-		var char_name
+		var char_name = "none"
 		if "X" in characters[1].name:
 			char_name = "X"
 		elif "Zero" in characters[1].name:
@@ -177,14 +203,14 @@ func _input(event: InputEvent) -> void :
 			unequip.play()
 			CharacterManager.remove_player_from_team(char_name)
 			characters[1].modulate = Color("#2c2c2c")
-		elif not char_name in CharacterManager.team:
+		elif not char_name == "none" and not char_name in CharacterManager.team:
 			pick.play()
 			CharacterManager.add_player_to_team(char_name) 
 			characters[1].modulate = Color("#ffffff")
 		
 		update_game_start_label()
-		 
-		if CharacterManager.team.size() == CharacterManager.max_team_size:
+		
+		if (CharacterManager.team.size() == CharacterManager.max_team_size) or (CharacterManager.team.size() == 1 and char_name == "none"):
 			gamestart_button.can_start_game = true
 			gamestart_button.game_started = true
 			gamestart_button.on_press()

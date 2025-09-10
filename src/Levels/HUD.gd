@@ -242,7 +242,11 @@ func on_healable_amount(param1, param2):
 
 func show_healable_amount(healable_amount, character):
 	var i = GameManager.team.find(character)
-	player_healable[i].value = GameManager.team[i].current_health + healable_amount
+	var show_val = GameManager.team[i].current_health + healable_amount
+	if not show_val > GameManager.team[i].max_health:
+		player_healable[i].value = show_val
+	else:
+		player_healable[i].value = GameManager.team[i].max_health
 
 func hide_healable_amount(character) -> void:
 	var i = GameManager.team.find(character)

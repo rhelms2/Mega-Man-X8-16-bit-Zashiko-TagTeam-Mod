@@ -59,7 +59,7 @@ var dialog_box
 var player_died := false
 var pause_sources: Array
 
-var debug_enabled := true
+var debug_enabled := false
 var last_player_position := Vector2.ZERO
 
 var lumine_boss_order : Array
