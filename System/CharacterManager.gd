@@ -46,8 +46,6 @@ var enkoujin_active: bool = true
 
 # Character/team management stuff
 
-var start_dialogue_seen = false
-
 var player_character: String = "X"
 
 var valid_players: Array = ["X", "Zero", "Axl"]
